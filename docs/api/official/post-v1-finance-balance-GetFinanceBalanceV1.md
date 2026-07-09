@@ -63,13 +63,90 @@ date_to
 ### 示例 4
 
 ```json
-{"date_from": "2019-08-24","date_to": "2019-09-24"}
+{
+  "date_from": "2019-08-24",
+  "date_to": "2019-09-24"
+}
 ```
 
 ### 示例 5
 
 ```json
-{"cashflows": {"returns": {"amount": {"currency_code": "string","value": 0},"amount_details": {"partner_programs": {"currency_code": "string","value": 0},"points_for_discounts": "string","revenue": {"currency_code": "string","value": 0}},"fee": {"currency_code": "string","value": 0}},"sales": {"amount": {"currency_code": "string","value": 0},"amount_details": {"partner_programs": {"currency_code": "string","value": 0},"points_for_discounts": "string","revenue": {"currency_code": "string","value": 0}},"fee": {"currency_code": "string","value": 0}},"services": [{"amount": {"currency_code": "string","value": 0},"name": "string"}]},"total": {"accrued": {"currency_code": "string","value": 0},"closing_balance": {"currency_code": "string","value": 0},"opening_balance": {"currency_code": "string","value": 0},"payments": [{"currency_code": "string","value": 0}]}}
+{
+  "cashflows": {
+    "returns": {
+      "amount": {
+        "currency_code": "string",
+        "value": 0
+      },
+      "amount_details": {
+        "partner_programs": {
+          "currency_code": "string",
+          "value": 0
+        },
+        "points_for_discounts": "string",
+        "revenue": {
+          "currency_code": "string",
+          "value": 0
+        }
+      },
+      "fee": {
+        "currency_code": "string",
+        "value": 0
+      }
+    },
+    "sales": {
+      "amount": {
+        "currency_code": "string",
+        "value": 0
+      },
+      "amount_details": {
+        "partner_programs": {
+          "currency_code": "string",
+          "value": 0
+        },
+        "points_for_discounts": "string",
+        "revenue": {
+          "currency_code": "string",
+          "value": 0
+        }
+      },
+      "fee": {
+        "currency_code": "string",
+        "value": 0
+      }
+    },
+    "services": [
+      {
+        "amount": {
+          "currency_code": "string",
+          "value": 0
+        },
+        "name": "string"
+      }
+    ]
+  },
+  "total": {
+    "accrued": {
+      "currency_code": "string",
+      "value": 0
+    },
+    "closing_balance": {
+      "currency_code": "string",
+      "value": 0
+    },
+    "opening_balance": {
+      "currency_code": "string",
+      "value": 0
+    },
+    "payments": [
+      {
+        "currency_code": "string",
+        "value": 0
+      }
+    ]
+  }
+}
 ```
 
 ## 使用提醒

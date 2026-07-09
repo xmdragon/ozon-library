@@ -41,7 +41,13 @@
 ### 示例 0
 
 ```json
-{"all": 10,"new": 3,"processed": 4,"unprocessed": 1,"viewed": 1}
+{
+  "all": 10,
+  "new": 3,
+  "processed": 4,
+  "unprocessed": 1,
+  "viewed": 1
+}
 ```
 
 ## 使用提醒

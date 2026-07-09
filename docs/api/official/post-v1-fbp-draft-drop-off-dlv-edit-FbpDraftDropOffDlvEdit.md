@@ -49,13 +49,21 @@
 ### 示例 0
 
 ```json
-{"drop_off_date": "string","drop_off_point_id": 0,"drop_off_province_uuid": "string","row_version": 0,"supply_id": "string"}
+{
+  "drop_off_date": "string",
+  "drop_off_point_id": 0,
+  "drop_off_province_uuid": "string",
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"row_version": 0}
+{
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

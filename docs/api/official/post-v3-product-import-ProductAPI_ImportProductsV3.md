@@ -290,13 +290,29 @@ values
 ### 示例 39
 
 ```json
-{ "complex_id": 100001, "id": 21841, "values": [ { "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY" } ] }
+{
+  "complex_id": 100001,
+  "id": 21841,
+  "values": [
+    {
+      "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY"
+    }
+  ]
+}
 ```
 
 ### 示例 40
 
 ```json
-{ "complex_id": 100001, "id": 21841, "values": [ { "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY" } ] }
+{
+  "complex_id": 100001,
+  "id": 21841,
+  "values": [
+    {
+      "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY"
+    }
+  ]
+}
 ```
 
 ### 示例 41
@@ -314,13 +330,29 @@ values
 ### 示例 43
 
 ```json
-{ "complex_id": 100001, "id": 21837, "values": [ { "value": "videoName_1" } ] }
+{
+  "complex_id": 100001,
+  "id": 21837,
+  "values": [
+    {
+      "value": "videoName_1"
+    }
+  ]
+}
 ```
 
 ### 示例 44
 
 ```json
-{ "complex_id": 100001, "id": 21837, "values": [ { "value": "videoName_1" } ] }
+{
+  "complex_id": 100001,
+  "id": 21837,
+  "values": [
+    {
+      "value": "videoName_1"
+    }
+  ]
+}
 ```
 
 ### 示例 45
@@ -374,13 +406,101 @@ id = 13164
 ### 示例 53
 
 ```json
-{"items": [{"attributes": [{"complex_id": 0,"id": 5076,"values": [{"dictionary_value_id": 971082156,"value": "麦克风架"}]},{"complex_id": 0,"id": 9048,"values": [{"value": "一套X3NFC保护膜。 深色棉质"}]},{"complex_id": 0,"id": 8229,"values": [{"dictionary_value_id": 95911,"value": "一套X3NFC保护膜。深色棉质"}]},{"complex_id": 0,"id": 85,"values": [{"dictionary_value_id": 5060050,"value": "Samsung"}]},{"complex_id": 0,"id": 10096,"values": [{"dictionary_value_id": 61576,"value": "灰色的"}]}],"barcode": "112772873170","description_category_id": 17028922,"new_description_category_id": 0,"color_image": "","complex_attributes": [ ],"currency_code": "RUB","depth": 10,"dimension_unit": "mm","height": 250,"images": [ ],"images360": [ ],"name": "一套X3NFC的保护膜。深色棉质","offer_id": "143210608","old_price": "1100","pdf_list": [ ],"price": "1000","primary_image": "","promotions": [{"operation": "UNKNOWN","type": "REVIEWS_PROMO"}],"type_id": 91565,"vat": "0.1","weight": 100,"weight_unit": "g","width": 150}]}
+{
+  "items": [
+    {
+      "attributes": [
+        {
+          "complex_id": 0,
+          "id": 5076,
+          "values": [
+            {
+              "dictionary_value_id": 971082156,
+              "value": "麦克风架"
+            }
+          ]
+        },
+        {
+          "complex_id": 0,
+          "id": 9048,
+          "values": [
+            {
+              "value": "一套X3NFC保护膜。 深色棉质"
+            }
+          ]
+        },
+        {
+          "complex_id": 0,
+          "id": 8229,
+          "values": [
+            {
+              "dictionary_value_id": 95911,
+              "value": "一套X3NFC保护膜。深色棉质"
+            }
+          ]
+        },
+        {
+          "complex_id": 0,
+          "id": 85,
+          "values": [
+            {
+              "dictionary_value_id": 5060050,
+              "value": "Samsung"
+            }
+          ]
+        },
+        {
+          "complex_id": 0,
+          "id": 10096,
+          "values": [
+            {
+              "dictionary_value_id": 61576,
+              "value": "灰色的"
+            }
+          ]
+        }
+      ],
+      "barcode": "112772873170",
+      "description_category_id": 17028922,
+      "new_description_category_id": 0,
+      "color_image": "",
+      "complex_attributes": [],
+      "currency_code": "RUB",
+      "depth": 10,
+      "dimension_unit": "mm",
+      "height": 250,
+      "images": [],
+      "images360": [],
+      "name": "一套X3NFC的保护膜。深色棉质",
+      "offer_id": "143210608",
+      "old_price": "1100",
+      "pdf_list": [],
+      "price": "1000",
+      "primary_image": "",
+      "promotions": [
+        {
+          "operation": "UNKNOWN",
+          "type": "REVIEWS_PROMO"
+        }
+      ],
+      "type_id": 91565,
+      "vat": "0.1",
+      "weight": 100,
+      "weight_unit": "g",
+      "width": 150
+    }
+  ]
+}
 ```
 
 ### 示例 54
 
 ```json
-{"result": {"task_id": 172549793}}
+{
+  "result": {
+    "task_id": 172549793
+  }
+}
 ```
 
 ## 使用提醒

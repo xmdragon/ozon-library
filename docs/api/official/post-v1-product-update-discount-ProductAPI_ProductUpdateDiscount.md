@@ -58,13 +58,18 @@ true
 ### 示例 2
 
 ```json
-{"discount": 10,"product_id": 876763232}
+{
+  "discount": 10,
+  "product_id": 876763232
+}
 ```
 
 ### 示例 3
 
 ```json
-{"result": true}
+{
+  "result": true
+}
 ```
 
 ## 使用提醒

@@ -67,13 +67,39 @@ false
 ### 示例 3
 
 ```json
-{"action_id": 0,"cursor": 0,"limit": 100}
+{
+  "action_id": 0,
+  "cursor": 0,
+  "limit": 100
+}
 ```
 
 ### 示例 4
 
 ```json
-{"cursor": 0,"has_next": true,"products": [{"action_price": 0,"base_price": 0,"currency": "string","discount_percent": 0,"is_active": true,"min_seller_price": 0,"name": "string","offer_id": "string","price": 0,"product_id": 0,"quant_size": 0,"quant_type": "UNSPECIFIED","sku": ["string"]}]}
+{
+  "cursor": 0,
+  "has_next": true,
+  "products": [
+    {
+      "action_price": 0,
+      "base_price": 0,
+      "currency": "string",
+      "discount_percent": 0,
+      "is_active": true,
+      "min_seller_price": 0,
+      "name": "string",
+      "offer_id": "string",
+      "price": 0,
+      "product_id": 0,
+      "quant_size": 0,
+      "quant_type": "UNSPECIFIED",
+      "sku": [
+        "string"
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

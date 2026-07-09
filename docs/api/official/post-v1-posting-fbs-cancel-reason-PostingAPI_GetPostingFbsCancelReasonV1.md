@@ -54,13 +54,40 @@
 ### 示例 0
 
 ```json
-{"related_posting_numbers": ["73837363-0010-3"]}
+{
+  "related_posting_numbers": [
+    "73837363-0010-3"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": [{"posting_number": "73837363-0010-3","reasons": [{"id": 352,"title": "在卖家仓库中已无商品","type_id": "seller"},{"id": 400,"title": "只剩下有缺陷的商品","type_id": "seller"},{"id": 402,"title": "其他（卖家的其他过错）","type_id": "seller"}]}]}
+{
+  "result": [
+    {
+      "posting_number": "73837363-0010-3",
+      "reasons": [
+        {
+          "id": 352,
+          "title": "在卖家仓库中已无商品",
+          "type_id": "seller"
+        },
+        {
+          "id": 400,
+          "title": "只剩下有缺陷的商品",
+          "type_id": "seller"
+        },
+        {
+          "id": 402,
+          "title": "其他（卖家的其他过错）",
+          "type_id": "seller"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

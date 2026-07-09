@@ -40,7 +40,31 @@
 ### 示例 0
 
 ```json
-{"daily_create": {"limit": 0,"reset_at": "2019-08-24T14:15:22Z","usage": 0},"daily_update": {"limit": 0,"reset_at": "2019-08-24T14:15:22Z","usage": 0},"operation_limits": {"limit": 0,"limit_type": "UNSPECIFIED"},"total": {"limit": 0,"usage": 0,"quota_by_category": {"category_id": 0,"limit": 0,"usage": 0}}}
+{
+  "daily_create": {
+    "limit": 0,
+    "reset_at": "2019-08-24T14:15:22Z",
+    "usage": 0
+  },
+  "daily_update": {
+    "limit": 0,
+    "reset_at": "2019-08-24T14:15:22Z",
+    "usage": 0
+  },
+  "operation_limits": {
+    "limit": 0,
+    "limit_type": "UNSPECIFIED"
+  },
+  "total": {
+    "limit": 0,
+    "usage": 0,
+    "quota_by_category": {
+      "category_id": 0,
+      "limit": 0,
+      "usage": 0
+    }
+  }
+}
 ```
 
 ## 使用提醒

@@ -46,13 +46,18 @@
 ### 示例 0
 
 ```json
-{"chat_id": "99feb3fc-a474-469f-95d5-268b470cc607","text": "test"}
+{
+  "chat_id": "99feb3fc-a474-469f-95d5-268b470cc607",
+  "text": "test"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": "success"}
+{
+  "result": "success"
+}
 ```
 
 ## 使用提醒

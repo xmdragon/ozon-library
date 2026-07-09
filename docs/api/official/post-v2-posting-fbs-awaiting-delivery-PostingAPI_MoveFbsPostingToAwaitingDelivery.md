@@ -51,13 +51,19 @@ awaiting_deliver
 ### 示例 1
 
 ```json
-{"posting_number": ["33920143-1195-1"]}
+{
+  "posting_number": [
+    "33920143-1195-1"
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": true}
+{
+  "result": true
+}
 ```
 
 ## 使用提醒

@@ -47,13 +47,26 @@ true
 ### 示例 1
 
 ```json
-{"pickup_details": {"sender_name": "string","sender_phone": "string"},"row_version": 0,"supply_id": "string"}
+{
+  "pickup_details": {
+    "sender_name": "string",
+    "sender_phone": "string"
+  },
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"error": {"order_errors": "ERROR_TYPE_UNSPECIFIED"},"is_error": true,"row_version": 0}
+{
+  "error": {
+    "order_errors": "ERROR_TYPE_UNSPECIFIED"
+  },
+  "is_error": true,
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

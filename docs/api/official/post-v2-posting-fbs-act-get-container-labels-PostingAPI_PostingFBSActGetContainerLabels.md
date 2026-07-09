@@ -47,13 +47,19 @@
 ### 示例 0
 
 ```json
-{"id": 295662811}
+{
+  "id": 295662811
+}
 ```
 
 ### 示例 1
 
 ```json
-{ "content_type": "application/pdf", "file_name": "carriage-containers-20903594.pdf", "file_content": "%PDF-1.4\n%âãÏÓ\n2 0 obj\n<</Length 2992/Filter/FlateDecode>>stream\nxµ}[ێ\u001c·\u0011}¯èç\u0000¦Èb\u0015/ @»+\u0019y0Ë\u0002ù\u0000%q\u0010X\u0001ìü?Ãn²ÉéfÍì(ò®\u001duMÝ/<Å\u0019\u001bòyýY,0Ã?=[ccyýåëå×K¡§\u000bAÂâ؉x\u001dßþqùÛ\u001fÿà-dp¢UÔø\u001aün)¿ùqÙ^üöóåݏùù¿«X¶i\t²JúçåÏøýõÙ$Gxn²\u0011&\u000f¥ÉCj¾§2aæºr&­^,~hI²)F¤ù7¥íu£:oÊ\u0013Ùȹ0ûLdB\u001a\u0018y§xk;ë<^Lv)%¼)í\u0014öcyóÎX:\u0018ÚõIXå\u0015\u0013╏\rõɌ5dýÆ\u0016Ê!6Ñpys\u001aÄXYÃ1­Ô\r:H©(%U´³bR" }
+{
+  "content_type": "application/pdf",
+  "file_name": "carriage-containers-20903594.pdf",
+  "file_content": "%PDF-1.4\n%âãÏÓ\n2 0 obj\n<</Length 2992/Filter/FlateDecode>>stream\nxµ}[ێ\u001c·\u0011}¯èç\u0000¦Èb\u0015/ @»+\u0019y0Ë\u0002ù\u0000%q\u0010X\u0001ìü?Ãn²ÉéfÍì(ò®\u001duMÝ/<Å\u0019\u001bòyýY,0Ã?=[ccyýåëå×K¡§\u000bAÂâ؉x\u001dßþqùÛ\u001fÿà-dp¢UÔø\u001aün)¿ùqÙ^üöóåݏùù¿«X¶i\t²JúçåÏøýõÙ$Gxn²\u0011&\u000f¥ÉCj¾§2aæºr&­^,~hI²)F¤ù7¥íu£:oÊ\u0013Ùȹ0ûLdB\u001a\u0018y§xk;ë<^Lv)%¼)í\u0014öcyóÎX:\u0018ÚõIXå\u0015\u0013╏\rõɌ5dýÆ\u0016Ê!6Ñpys\u001aÄXYÃ1­Ô\r:H©(%U´³bR"
+}
 ```
 
 ## 使用提醒

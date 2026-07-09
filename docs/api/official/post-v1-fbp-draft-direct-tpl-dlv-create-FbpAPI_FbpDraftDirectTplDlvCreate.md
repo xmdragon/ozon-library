@@ -42,13 +42,26 @@
 ### 示例 0
 
 ```json
-{"bundle_id": "string","delivery_details": {"timeslot_start": "2019-08-24T14:15:22Z","tracking_number": "string","transport_company_name": "string"},"package_units_count": 0,"warehouse_id": 0}
+{
+  "bundle_id": "string",
+  "delivery_details": {
+    "timeslot_start": "2019-08-24T14:15:22Z",
+    "tracking_number": "string",
+    "transport_company_name": "string"
+  },
+  "package_units_count": 0,
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"draft_id": 0,"row_version": 0,"supply_id": "string"}
+{
+  "draft_id": 0,
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ## 使用提醒

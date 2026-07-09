@@ -46,13 +46,18 @@
 ### 示例 0
 
 ```json
-{"reason": "Тестовая причина","warehouse_id": 1020002929332000}
+{
+  "reason": "Тестовая причина",
+  "warehouse_id": 1020002929332000
+}
 ```
 
 ### 示例 1
 
 ```json
-{"operation_id": "string"}
+{
+  "operation_id": "string"
+}
 ```
 
 ## 使用提醒

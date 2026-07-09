@@ -83,13 +83,25 @@ UNPROCESSED
 ### 示例 5
 
 ```json
-{"question_id": "string"}
+{
+  "question_id": "string"
+}
 ```
 
 ### 示例 6
 
 ```json
-{"answers_count": "0","author_name": "string","product_url": "https://www.ozon.ru/product/149829950/","sku": 646399170,"id": "0192a009-769f-7ee9-b412-893045171a66","text": "string","question_link": "https://www.ozon.ru/product/149829950/questions/?qid=290125772&utm_campaign=reviews_sc_link&utm_medium=share_button&utm_source=smm","published_at": "2024-10-08T10:09:29.099284Z","status": "VIEWED"}
+{
+  "answers_count": "0",
+  "author_name": "string",
+  "product_url": "https://www.ozon.ru/product/149829950/",
+  "sku": 646399170,
+  "id": "0192a009-769f-7ee9-b412-893045171a66",
+  "text": "string",
+  "question_link": "https://www.ozon.ru/product/149829950/questions/?qid=290125772&utm_campaign=reviews_sc_link&utm_medium=share_button&utm_source=smm",
+  "published_at": "2024-10-08T10:09:29.099284Z",
+  "status": "VIEWED"
+}
 ```
 
 ## 使用提醒

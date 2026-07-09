@@ -168,13 +168,26 @@ failed
 ### 示例 17
 
 ```json
-{"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"}
+{
+  "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"
+}
 ```
 
 ### 示例 18
 
 ```json
-{"result": {"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69","status": "success","error": "","expires_at": "2025-11-12T19:53:08.770Z","file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv","report_type": "seller_products","params": { },"created_at": "2021-11-25T14:54:55.688260Z"}}
+{
+  "result": {
+    "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
+    "status": "success",
+    "error": "",
+    "expires_at": "2025-11-12T19:53:08.770Z",
+    "file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+    "report_type": "seller_products",
+    "params": {},
+    "created_at": "2021-11-25T14:54:55.688260Z"
+  }
+}
 ```
 
 ## 使用提醒

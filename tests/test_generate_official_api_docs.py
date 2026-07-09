@@ -51,7 +51,10 @@ class GenerateOfficialApiDocsTest(unittest.TestCase):
         self.assertIn("- `Api-Key` required string - API-密钥。", doc)
         self.assertIn("- `filter` object - 过滤器。", doc)
         self.assertIn("- `limit` integer - 每页数量。", doc)
-        self.assertIn('```json\n{"filter": {"visibility": "ALL"}, "limit": 10}\n```', doc)
+        self.assertIn(
+            '```json\n{\n  "filter": {\n    "visibility": "ALL"\n  },\n  "limit": 10\n}\n```',
+            doc,
+        )
         self.assertIn("https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList", doc)
 
     def test_render_operation_doc_splits_collapsed_schema_fields(self):

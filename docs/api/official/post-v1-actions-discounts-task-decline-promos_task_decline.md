@@ -60,13 +60,31 @@ SEEN
 ### 示例 2
 
 ```json
-{"tasks": [{"id": 78901,"seller_comment": "Ok"}]}
+{
+  "tasks": [
+    {
+      "id": 78901,
+      "seller_comment": "Ok"
+    }
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"result": {"fail_details": [{"task_id": 78901,"error_for_user": "折扣已拒绝"}],"success_count": 5,"fail_count": 1}}
+{
+  "result": {
+    "fail_details": [
+      {
+        "task_id": 78901,
+        "error_for_user": "折扣已拒绝"
+      }
+    ],
+    "success_count": 5,
+    "fail_count": 1
+  }
+}
 ```
 
 ## 使用提醒

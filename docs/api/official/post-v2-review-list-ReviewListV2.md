@@ -68,13 +68,44 @@ true
 ### 示例 3
 
 ```json
-{"filters": {"sku": [0],"order_status": "NEW","status": "DELIVERED","published_from": "2026-03-10T14:08:00.257Z","published_to": "2026-03-10T14:08:00.257Z"},"last_id": "string","limit": 0,"sort_dir": "ASC"}
+{
+  "filters": {
+    "sku": [
+      0
+    ],
+    "order_status": "NEW",
+    "status": "DELIVERED",
+    "published_from": "2026-03-10T14:08:00.257Z",
+    "published_to": "2026-03-10T14:08:00.257Z"
+  },
+  "last_id": "string",
+  "limit": 0,
+  "sort_dir": "ASC"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"reviews": [{"id": "017c0d1c-66d3-b838-3d29-cf9b95a6ac48","sku": "148591503","text": "string","published_at": "2024-10-10T07:23:55.970Z","rating": 2,"status": "UNPROCESSED","comments_amount": 0,"photos_amount": 0,"videos_amount": 0,"order_status": "DELIVERED","is_rating_participant": true}],"has_next": true,"last_id": "017c0d53-a7c8-81ef-53de-7d32fcbd7421"}
+{
+  "reviews": [
+    {
+      "id": "017c0d1c-66d3-b838-3d29-cf9b95a6ac48",
+      "sku": "148591503",
+      "text": "string",
+      "published_at": "2024-10-10T07:23:55.970Z",
+      "rating": 2,
+      "status": "UNPROCESSED",
+      "comments_amount": 0,
+      "photos_amount": 0,
+      "videos_amount": 0,
+      "order_status": "DELIVERED",
+      "is_rating_participant": true
+    }
+  ],
+  "has_next": true,
+  "last_id": "017c0d53-a7c8-81ef-53de-7d32fcbd7421"
+}
 ```
 
 ## 使用提醒

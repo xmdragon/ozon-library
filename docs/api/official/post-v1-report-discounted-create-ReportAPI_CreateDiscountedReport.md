@@ -39,13 +39,15 @@
 ### 示例 0
 
 ```json
-{ }
+{}
 ```
 
 ### 示例 1
 
 ```json
-{"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"}
+{
+  "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"
+}
 ```
 
 ## 使用提醒

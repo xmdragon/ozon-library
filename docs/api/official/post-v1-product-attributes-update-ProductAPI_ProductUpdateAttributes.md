@@ -69,13 +69,57 @@ Item-Rate-Limit-Remaining
 ### 示例 4
 
 ```json
-{"items": [{"offer_id": "PROD-2023-001","attributes": [{"complex_id": 1,"id": 1,"values": [{"dictionary_value_id": 1001,"value": "蓝色"}]},{"complex_id": 2,"id": 2,"values": [{"dictionary_value_id": 2001,"value": "42"}]},{"complex_id": 3,"id": 3,"values": [{"dictionary_value_id": 3001,"value": "棉"},{"dictionary_value_id": 3002,"value": "聚酯纤维"}]}]}]}
+{
+  "items": [
+    {
+      "offer_id": "PROD-2023-001",
+      "attributes": [
+        {
+          "complex_id": 1,
+          "id": 1,
+          "values": [
+            {
+              "dictionary_value_id": 1001,
+              "value": "蓝色"
+            }
+          ]
+        },
+        {
+          "complex_id": 2,
+          "id": 2,
+          "values": [
+            {
+              "dictionary_value_id": 2001,
+              "value": "42"
+            }
+          ]
+        },
+        {
+          "complex_id": 3,
+          "id": 3,
+          "values": [
+            {
+              "dictionary_value_id": 3001,
+              "value": "棉"
+            },
+            {
+              "dictionary_value_id": 3002,
+              "value": "聚酯纤维"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### 示例 5
 
 ```json
-{"task_id": 0}
+{
+  "task_id": 0
+}
 ```
 
 ## 使用提醒

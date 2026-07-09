@@ -114,6 +114,14 @@ def _looks_like_json(text: str) -> bool:
     )
 
 
+def _format_json_example(text: str) -> str:
+    try:
+        value = json.loads(text)
+    except json.JSONDecodeError:
+        return text
+    return json.dumps(value, ensure_ascii=False, indent=2)
+
+
 def _render_examples(examples: Iterable[Dict[str, Any]]) -> List[str]:
     lines: List[str] = []
     for example in examples:
@@ -121,7 +129,7 @@ def _render_examples(examples: Iterable[Dict[str, Any]]) -> List[str]:
         text = _format_text_block(example.get("text", ""))
         lines.append(f"### 示例 {index}")
         if _looks_like_json(text):
-            lines.extend(["", "```json", text, "```", ""])
+            lines.extend(["", "```json", _format_json_example(text), "```", ""])
         else:
             lines.extend(["", "```text", text, "```", ""])
     if not lines:

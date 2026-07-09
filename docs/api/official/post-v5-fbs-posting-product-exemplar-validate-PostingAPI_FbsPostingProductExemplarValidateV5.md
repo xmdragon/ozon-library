@@ -65,13 +65,60 @@ true
 ### 示例 1
 
 ```json
-{"posting_number": "string","products": [{"exemplars": [{"gtd": "string","marks": [{"mark": "string","mark_type": "string"}],"rnpt": "string"}],"product_id": 0}]}
+{
+  "posting_number": "string",
+  "products": [
+    {
+      "exemplars": [
+        {
+          "gtd": "string",
+          "marks": [
+            {
+              "mark": "string",
+              "mark_type": "string"
+            }
+          ],
+          "rnpt": "string"
+        }
+      ],
+      "product_id": 0
+    }
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"products": [{"error": "string","exemplars": [{"errors": ["string"],"gtd": "string","marks": [{"errors": ["string"],"mark": "string","mark_type": "string","valid": true}],"rnpt": "string","valid": true}],"product_id": 0,"valid": true}]}
+{
+  "products": [
+    {
+      "error": "string",
+      "exemplars": [
+        {
+          "errors": [
+            "string"
+          ],
+          "gtd": "string",
+          "marks": [
+            {
+              "errors": [
+                "string"
+              ],
+              "mark": "string",
+              "mark_type": "string",
+              "valid": true
+            }
+          ],
+          "rnpt": "string",
+          "valid": true
+        }
+      ],
+      "product_id": 0,
+      "valid": true
+    }
+  ]
+}
 ```
 
 ## 使用提醒

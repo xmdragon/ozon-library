@@ -46,13 +46,34 @@
 ### 示例 0
 
 ```json
-{"sku": ["88997766"]}
+{
+  "sku": [
+    "88997766"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"items": [{"availability": "AVAILABLE","deleted_at": "2019-08-24T14:15:22Z","delivery_schema": "SDS","product_id": "door","sku": "88997766"}],"errors": [{"code": "das","sku": "88997766","message": "sku does not exist"}]}
+{
+  "items": [
+    {
+      "availability": "AVAILABLE",
+      "deleted_at": "2019-08-24T14:15:22Z",
+      "delivery_schema": "SDS",
+      "product_id": "door",
+      "sku": "88997766"
+    }
+  ],
+  "errors": [
+    {
+      "code": "das",
+      "sku": "88997766",
+      "message": "sku does not exist"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

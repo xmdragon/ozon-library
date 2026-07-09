@@ -55,13 +55,41 @@ true
 ### 示例 1
 
 ```json
-{"cursor": "string","filter": {"carriage_id": 0,"cutoff_from": "2019-08-24T14:15:22Z","cutoff_to": "2019-08-24T14:15:22Z","delivery_method_id": 0},"limit": 0}
+{
+  "cursor": "string",
+  "filter": {
+    "carriage_id": 0,
+    "cutoff_from": "2019-08-24T14:15:22Z",
+    "cutoff_to": "2019-08-24T14:15:22Z",
+    "delivery_method_id": 0
+  },
+  "limit": 0
+}
 ```
 
 ### 示例 2
 
 ```json
-{"can_print_mass_label": true,"cursor": "string","postings": [{"assembly_code": "string","can_print_label": true,"posting_number": "string","products": [{"offer_id": "string","picture_url": "string","product_name": "string","quantity": 0,"sku": 0}]}]}
+{
+  "can_print_mass_label": true,
+  "cursor": "string",
+  "postings": [
+    {
+      "assembly_code": "string",
+      "can_print_label": true,
+      "posting_number": "string",
+      "products": [
+        {
+          "offer_id": "string",
+          "picture_url": "string",
+          "product_name": "string",
+          "quantity": 0,
+          "sku": 0
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

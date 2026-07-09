@@ -76,13 +76,20 @@ NO_CAPACITY
 ### 示例 6
 
 ```json
-{"row_version": 0,"supply_id": "string","timeslot_start": "2019-08-24T14:15:22Z"}
+{
+  "row_version": 0,
+  "supply_id": "string",
+  "timeslot_start": "2019-08-24T14:15:22Z"
+}
 ```
 
 ### 示例 7
 
 ```json
-{"error_reasons": "RESERVE_FAILURE_TYPE_UNSPECIFIED","row_version": 0}
+{
+  "error_reasons": "RESERVE_FAILURE_TYPE_UNSPECIFIED",
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

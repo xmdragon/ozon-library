@@ -42,13 +42,27 @@
 ### 示例 0
 
 ```json
-{"bundle_id": "string","delivery_details": {"driver_name": "string","timeslot_start": "2019-08-24T14:15:22Z","vehicle_number": "string","vehicle_type": "string"},"package_units_count": 0,"warehouse_id": 0}
+{
+  "bundle_id": "string",
+  "delivery_details": {
+    "driver_name": "string",
+    "timeslot_start": "2019-08-24T14:15:22Z",
+    "vehicle_number": "string",
+    "vehicle_type": "string"
+  },
+  "package_units_count": 0,
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"draft_id": 0,"row_version": 0,"supply_id": "string"}
+{
+  "draft_id": 0,
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ## 使用提醒

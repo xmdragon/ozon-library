@@ -46,13 +46,18 @@
 ### 示例 0
 
 ```json
-{"chat_id": "99feb3fc-a474-469f-95d5-268b470cc607","from_message_id": 3000000000118032000}
+{
+  "chat_id": "99feb3fc-a474-469f-95d5-268b470cc607",
+  "from_message_id": 3000000000118032000
+}
 ```
 
 ### 示例 1
 
 ```json
-{"unread_count": 0}
+{
+  "unread_count": 0
+}
 ```
 
 ## 使用提醒

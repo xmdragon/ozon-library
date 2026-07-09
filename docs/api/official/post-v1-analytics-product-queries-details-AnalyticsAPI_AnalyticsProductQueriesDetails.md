@@ -133,13 +133,45 @@ ASCENDING
 ### 示例 13
 
 ```json
-{"date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","limit_by_sku": 0,"page": 0,"page_size": 1000,"skus": ["string"],"sort_by": "BY_SEARCHES","sort_dir": "DESCENDING"}
+{
+  "date_from": "2019-08-24T14:15:22Z",
+  "date_to": "2019-08-24T14:15:22Z",
+  "limit_by_sku": 0,
+  "page": 0,
+  "page_size": 1000,
+  "skus": [
+    "string"
+  ],
+  "sort_by": "BY_SEARCHES",
+  "sort_dir": "DESCENDING"
+}
 ```
 
 ### 示例 14
 
 ```json
-{"analytics_period": {"date_from": "string","date_to": "string"},"page_count": 0,"queries": [{"currency": "string","gmv": 0,"order_count": 0,"position": 0,"query": "string","query_index": 0,"sku": 0,"unique_search_users": 0,"unique_view_users": 0,"view_conversion": 0}],"total": 0}
+{
+  "analytics_period": {
+    "date_from": "string",
+    "date_to": "string"
+  },
+  "page_count": 0,
+  "queries": [
+    {
+      "currency": "string",
+      "gmv": 0,
+      "order_count": 0,
+      "position": 0,
+      "query": "string",
+      "query_index": 0,
+      "sku": 0,
+      "unique_search_users": 0,
+      "unique_view_users": 0,
+      "view_conversion": 0
+    }
+  ],
+  "total": 0
+}
 ```
 
 ## 使用提醒

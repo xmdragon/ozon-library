@@ -37,13 +37,17 @@
 ### 示例 0
 
 ```json
-{"supply_id": "string"}
+{
+  "supply_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": "string"}
+{
+  "code": "string"
+}
 ```
 
 ## 使用提醒

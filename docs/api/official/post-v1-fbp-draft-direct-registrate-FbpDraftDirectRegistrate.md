@@ -54,13 +54,28 @@ true
 ### 示例 1
 
 ```json
-{"row_version": 0,"supply_id": "string"}
+{
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"error": {"bundle_errors": [{"errors": "BUNDLE_ITEM_ERROR_UNSPECIFIED","sku": 0}],"order_error": "ORDER_ERROR_TYPE_UNSPECIFIED"},"is_error": true,"row_version": 0}
+{
+  "error": {
+    "bundle_errors": [
+      {
+        "errors": "BUNDLE_ITEM_ERROR_UNSPECIFIED",
+        "sku": 0
+      }
+    ],
+    "order_error": "ORDER_ERROR_TYPE_UNSPECIFIED"
+  },
+  "is_error": true,
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

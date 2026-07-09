@@ -39,7 +39,52 @@
 ### 示例 0
 
 ```json
-{"company": {"country": "俄罗斯","currency": "RUB","inn": "7707083893","legal_name": "“Romashka”有限责任公司","name": "“Romashka”有限责任公司","ogrn": "1027700132195","ownership_form": "私人所有制","tax_system": "普通税制"},"ratings": [{"current_value": {"date_from": "2023-01-15T09:00:00Z","date_to": "2023-12-31T23:59:59Z","formatted": "AA+","status": {"danger": false,"premium": true,"warning": false},"value": 85},"name": "财务稳定性","past_value": {"date_from": "2022-01-01T00:00:00Z","date_to": "2022-12-31T23:59:59Z","formatted": "A","status": {"danger": false,"premium": false,"warning": true},"value": 78},"rating": "高水平","status": "活跃","value_type": "定量"}],"subscription": {"is_premium": true,"type": "专业"}}
+{
+  "company": {
+    "country": "俄罗斯",
+    "currency": "RUB",
+    "inn": "7707083893",
+    "legal_name": "“Romashka”有限责任公司",
+    "name": "“Romashka”有限责任公司",
+    "ogrn": "1027700132195",
+    "ownership_form": "私人所有制",
+    "tax_system": "普通税制"
+  },
+  "ratings": [
+    {
+      "current_value": {
+        "date_from": "2023-01-15T09:00:00Z",
+        "date_to": "2023-12-31T23:59:59Z",
+        "formatted": "AA+",
+        "status": {
+          "danger": false,
+          "premium": true,
+          "warning": false
+        },
+        "value": 85
+      },
+      "name": "财务稳定性",
+      "past_value": {
+        "date_from": "2022-01-01T00:00:00Z",
+        "date_to": "2022-12-31T23:59:59Z",
+        "formatted": "A",
+        "status": {
+          "danger": false,
+          "premium": false,
+          "warning": true
+        },
+        "value": 78
+      },
+      "rating": "高水平",
+      "status": "活跃",
+      "value_type": "定量"
+    }
+  ],
+  "subscription": {
+    "is_premium": true,
+    "type": "专业"
+  }
+}
 ```
 
 ## 使用提醒

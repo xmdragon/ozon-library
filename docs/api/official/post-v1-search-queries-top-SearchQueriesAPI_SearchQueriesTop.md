@@ -48,13 +48,30 @@
 ### 示例 0
 
 ```json
-{"limit": "50","offset": "0"}
+{
+  "limit": "50",
+  "offset": "0"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"search_queries": [{"avg_price": 3786.6,"conversion_to_cart": 0.163,"client_count": 165418,"items_views": 140.828,"query": "куртка женская демисезон","add_to_cart": 26977,"sellers_count": 63.833}],"offset": "1","total": "1"}
+{
+  "search_queries": [
+    {
+      "avg_price": 3786.6,
+      "conversion_to_cart": 0.163,
+      "client_count": 165418,
+      "items_views": 140.828,
+      "query": "куртка женская демисезон",
+      "add_to_cart": 26977,
+      "sellers_count": 63.833
+    }
+  ],
+  "offset": "1",
+  "total": "1"
+}
 ```
 
 ## 使用提醒

@@ -33,13 +33,38 @@
 ### 示例 0
 
 ```json
-{"strategy_id": "a3de1826-9c54-40f1-bb6d-1a9e2638b058","strategy_name": "新策略","competitors": [{"competitor_id": 1008426,"coefficient": 1},{"competitor_id": 204,"coefficient": 1},{"competitor_id": 91,"coefficient": 1},{"competitor_id": 48,"coefficient": 1},{"competitor_id": 45,"coefficient": 1}]}
+{
+  "strategy_id": "a3de1826-9c54-40f1-bb6d-1a9e2638b058",
+  "strategy_name": "新策略",
+  "competitors": [
+    {
+      "competitor_id": 1008426,
+      "coefficient": 1
+    },
+    {
+      "competitor_id": 204,
+      "coefficient": 1
+    },
+    {
+      "competitor_id": 91,
+      "coefficient": 1
+    },
+    {
+      "competitor_id": 48,
+      "coefficient": 1
+    },
+    {
+      "competitor_id": 45,
+      "coefficient": 1
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

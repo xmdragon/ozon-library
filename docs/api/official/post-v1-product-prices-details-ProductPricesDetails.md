@@ -62,13 +62,53 @@
 ### 示例 0
 
 ```json
-{"skus": ["string"]}
+{
+  "skus": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"prices": [{"customer_price": {"amount": "string","currency": "string"},"discount_percent": 0,"offer_id": "string","price": {"amount": "string","currency": "string"},"price_indexes": [{"external_index_data": {"min_price": {"amount": "string","currency": "string"},"price_index": 0,"url": "string"},"self_index_data": {"min_price": {"amount": "string","currency": "string"},"price_index": 0,"url": "string"}}],"sku": 0}]}
+{
+  "prices": [
+    {
+      "customer_price": {
+        "amount": "string",
+        "currency": "string"
+      },
+      "discount_percent": 0,
+      "offer_id": "string",
+      "price": {
+        "amount": "string",
+        "currency": "string"
+      },
+      "price_indexes": [
+        {
+          "external_index_data": {
+            "min_price": {
+              "amount": "string",
+              "currency": "string"
+            },
+            "price_index": 0,
+            "url": "string"
+          },
+          "self_index_data": {
+            "min_price": {
+              "amount": "string",
+              "currency": "string"
+            },
+            "price_index": 0,
+            "url": "string"
+          }
+        }
+      ],
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

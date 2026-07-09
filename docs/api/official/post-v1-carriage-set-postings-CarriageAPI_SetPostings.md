@@ -69,13 +69,26 @@ true
 ### 示例 2
 
 ```json
-{"carriage_id": 0,"posting_numbers": ["string"]}
+{
+  "carriage_id": 0,
+  "posting_numbers": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"result": [{"error": "string","posting_number": "string","result": true}]}
+{
+  "result": [
+    {
+      "error": "string",
+      "posting_number": "string",
+      "result": true
+    }
+  ]
+}
 ```
 
 ## 使用提醒

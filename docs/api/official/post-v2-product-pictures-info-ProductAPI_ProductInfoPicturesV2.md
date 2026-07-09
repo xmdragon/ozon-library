@@ -68,13 +68,48 @@ product_id
 ### 示例 1
 
 ```json
-{"product_id": ["89898989"]}
+{
+  "product_id": [
+    "89898989"
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"items": [{"product_id": 100500,"primary_photo": ["https://test-test.ru/images/products/100500/primary.jpg"],"photo": ["https://test-test.ru/images/products/100500/photo1.jpg","https://test-test.ru/images/products/100500/photo2.jpg"],"color_photo": ["https://test-test.ru/images/products/100500/color_red.jpg","https://test-test.ru/images/products/100500/color_blue.jpg"],"photo_360": ["https://test-test.ru/images/products/100500/360_view1.jpg","https://test-test.ru/images/products/100500/360_view2.jpg"],"errors": [{"message": "无法上传附加图片：文件大小超限","url": "https://test-test.ru/api/v1/products/100500/errors/12345"},{"message": "缺少颜色“绿色”的描述","url": "https://test-test.ru/api/v1/products/100500/errors/12346"}]}]}
+{
+  "items": [
+    {
+      "product_id": 100500,
+      "primary_photo": [
+        "https://test-test.ru/images/products/100500/primary.jpg"
+      ],
+      "photo": [
+        "https://test-test.ru/images/products/100500/photo1.jpg",
+        "https://test-test.ru/images/products/100500/photo2.jpg"
+      ],
+      "color_photo": [
+        "https://test-test.ru/images/products/100500/color_red.jpg",
+        "https://test-test.ru/images/products/100500/color_blue.jpg"
+      ],
+      "photo_360": [
+        "https://test-test.ru/images/products/100500/360_view1.jpg",
+        "https://test-test.ru/images/products/100500/360_view2.jpg"
+      ],
+      "errors": [
+        {
+          "message": "无法上传附加图片：文件大小超限",
+          "url": "https://test-test.ru/api/v1/products/100500/errors/12345"
+        },
+        {
+          "message": "缺少颜色“绿色”的描述",
+          "url": "https://test-test.ru/api/v1/products/100500/errors/12346"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

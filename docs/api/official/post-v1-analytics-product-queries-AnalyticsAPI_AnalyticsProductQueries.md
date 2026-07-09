@@ -114,13 +114,44 @@ ASCENDING
 ### 示例 10
 
 ```json
-{"date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","page": 0,"page_size": 1000,"skus": ["string"],"sort_by": "BY_SEARCHES","sort_dir": "DESCENDING"}
+{
+  "date_from": "2019-08-24T14:15:22Z",
+  "date_to": "2019-08-24T14:15:22Z",
+  "page": 0,
+  "page_size": 1000,
+  "skus": [
+    "string"
+  ],
+  "sort_by": "BY_SEARCHES",
+  "sort_dir": "DESCENDING"
+}
 ```
 
 ### 示例 11
 
 ```json
-{"analytics_period": {"date_from": "string","date_to": "string"},"items": [{"category": "string","currency": "string","gmv": 0,"name": "string","offer_id": "string","position": 0,"sku": 0,"unique_search_users": 0,"unique_view_users": 0,"view_conversion": 0}],"page_count": 0,"total": 0}
+{
+  "analytics_period": {
+    "date_from": "string",
+    "date_to": "string"
+  },
+  "items": [
+    {
+      "category": "string",
+      "currency": "string",
+      "gmv": 0,
+      "name": "string",
+      "offer_id": "string",
+      "position": 0,
+      "sku": 0,
+      "unique_search_users": 0,
+      "unique_view_users": 0,
+      "view_conversion": 0
+    }
+  ],
+  "page_count": 0,
+  "total": 0
+}
 ```
 
 ## 使用提醒

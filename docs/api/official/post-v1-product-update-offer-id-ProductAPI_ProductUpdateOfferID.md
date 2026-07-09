@@ -102,13 +102,27 @@ Item-Rate-Limit-Remaining
 ### 示例 8
 
 ```json
-{"update_offer_id": [{"new_offer_id": "haval","offer_id": "chery"}]}
+{
+  "update_offer_id": [
+    {
+      "new_offer_id": "haval",
+      "offer_id": "chery"
+    }
+  ]
+}
 ```
 
 ### 示例 9
 
 ```json
-{"errors": [{"offer_id": "haval","message": "货号为haval的商品已存在。"}]}
+{
+  "errors": [
+    {
+      "offer_id": "haval",
+      "message": "货号为haval的商品已存在。"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

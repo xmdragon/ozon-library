@@ -170,13 +170,36 @@ false
 ### 示例 16
 
 ```json
-{"description_category_id": 200000933,"language": "DEFAULT","type_id": 93080}
+{
+  "description_category_id": 200000933,
+  "language": "DEFAULT",
+  "type_id": 93080
+}
 ```
 
 ### 示例 17
 
 ```json
-{"result": [{"id": 31,"attribute_complex_id": 32,"name": "服装和鞋类品牌","description": "请填写生产该商品所使用的品牌名称。如果商品没有品牌，请使用“无品牌”值","type": "string","is_collection": false,"is_required": true,"is_aspect": false,"max_value_count": 30,"group_name": "","group_id": 33,"dictionary_id": 28732849,"category_dependent": true,"complex_is_collection": true}]}
+{
+  "result": [
+    {
+      "id": 31,
+      "attribute_complex_id": 32,
+      "name": "服装和鞋类品牌",
+      "description": "请填写生产该商品所使用的品牌名称。如果商品没有品牌，请使用“无品牌”值",
+      "type": "string",
+      "is_collection": false,
+      "is_required": true,
+      "is_aspect": false,
+      "max_value_count": 30,
+      "group_name": "",
+      "group_id": 33,
+      "dictionary_id": 28732849,
+      "category_dependent": true,
+      "complex_is_collection": true
+    }
+  ]
+}
 ```
 
 ## 使用提醒

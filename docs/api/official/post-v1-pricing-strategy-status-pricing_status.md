@@ -44,13 +44,16 @@ false
 ### 示例 2
 
 ```json
-{"strategy_id": "c7516438-7124-4e2c-85d3-ccd92b6b9b65","enabled": true}
+{
+  "strategy_id": "c7516438-7124-4e2c-85d3-ccd92b6b9b65",
+  "enabled": true
+}
 ```
 
 ### 示例 3
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

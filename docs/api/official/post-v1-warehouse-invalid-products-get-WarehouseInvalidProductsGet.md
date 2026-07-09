@@ -67,13 +67,46 @@ last_id
 ### 示例 3
 
 ```json
-{"last_id": 0,"warehouse_id": 0}
+{
+  "last_id": 0,
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 4
 
 ```json
-{"has_next": true,"last_id": 0,"validation_results": [{"item": {"size": {"height_mm": 0,"length_mm": 0,"width_mm": 0},"sku": 0,"weight_g": 0},"state": "UNSPECIFIED","validation_errors": [{"characteristic": "UNSPECIFIED","restriction_price": {"currency": "string","value": 0},"restriction_vwc": 0,"template_id": 0,"type": "UNSPECIFIED"}]}],"warehouse_id": 0}
+{
+  "has_next": true,
+  "last_id": 0,
+  "validation_results": [
+    {
+      "item": {
+        "size": {
+          "height_mm": 0,
+          "length_mm": 0,
+          "width_mm": 0
+        },
+        "sku": 0,
+        "weight_g": 0
+      },
+      "state": "UNSPECIFIED",
+      "validation_errors": [
+        {
+          "characteristic": "UNSPECIFIED",
+          "restriction_price": {
+            "currency": "string",
+            "value": 0
+          },
+          "restriction_vwc": 0,
+          "template_id": 0,
+          "type": "UNSPECIFIED"
+        }
+      ]
+    }
+  ],
+  "warehouse_id": 0
+}
 ```
 
 ## 使用提醒

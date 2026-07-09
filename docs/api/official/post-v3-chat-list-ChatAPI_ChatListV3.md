@@ -68,13 +68,37 @@ false
 ### 示例 3
 
 ```json
-{"filter": {"chat_status": "OPENED","unread_only": true},"limit": 1,"cursor": "304000402034"}
+{
+  "filter": {
+    "chat_status": "OPENED",
+    "unread_only": true
+  },
+  "limit": 1,
+  "cursor": "304000402034"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"chats": [{"chat": {"created_at": "2022-07-22T08:07:19.581Z","chat_id": "5e767w03-b400-4y1b-a841-75319ca8a5c8","chat_status": "OPENED","chat_type": "SELLER_SUPPORT"},"first_unread_message_id": "3000000000118021931","last_message_id": "30000000001280042740","unread_count": 1}],"total_unread_count": 5,"cursor": "30000002342123123","has_next": "true"}
+{
+  "chats": [
+    {
+      "chat": {
+        "created_at": "2022-07-22T08:07:19.581Z",
+        "chat_id": "5e767w03-b400-4y1b-a841-75319ca8a5c8",
+        "chat_status": "OPENED",
+        "chat_type": "SELLER_SUPPORT"
+      },
+      "first_unread_message_id": "3000000000118021931",
+      "last_message_id": "30000000001280042740",
+      "unread_count": 1
+    }
+  ],
+  "total_unread_count": 5,
+  "cursor": "30000002342123123",
+  "has_next": "true"
+}
 ```
 
 ## 使用提醒

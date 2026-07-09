@@ -47,13 +47,29 @@
 ### 示例 0
 
 ```json
-{"action_id": 60564,"products": [{"action_price": 356,"product_id": 1389,"stock": 10}]}
+{
+  "action_id": 60564,
+  "products": [
+    {
+      "action_price": 356,
+      "product_id": 1389,
+      "stock": 10
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": {"product_ids": [1389],"rejected": [ ]}}
+{
+  "result": {
+    "product_ids": [
+      1389
+    ],
+    "rejected": []
+  }
+}
 ```
 
 ## 使用提醒

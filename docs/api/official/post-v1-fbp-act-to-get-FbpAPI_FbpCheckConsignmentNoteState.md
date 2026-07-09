@@ -64,13 +64,20 @@ FAILED
 ### 示例 4
 
 ```json
-{"code": "string","supply_id": "string"}
+{
+  "code": "string",
+  "supply_id": "string"
+}
 ```
 
 ### 示例 5
 
 ```json
-{"error_message": "string","label_url": "string","state": "STATE_TYPE_UNSPECIFIED"}
+{
+  "error_message": "string",
+  "label_url": "string",
+  "state": "STATE_TYPE_UNSPECIFIED"
+}
 ```
 
 ## 使用提醒

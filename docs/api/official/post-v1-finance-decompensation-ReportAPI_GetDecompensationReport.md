@@ -63,13 +63,20 @@ EN
 ### 示例 3
 
 ```json
-{"date": "2023-09","language": "RU"}
+{
+  "date": "2023-09",
+  "language": "RU"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"result": {"code": "string"}}
+{
+  "result": {
+    "code": "string"
+  }
+}
 ```
 
 ## 使用提醒

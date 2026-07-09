@@ -78,13 +78,30 @@ Item-Rate-Limit-Remaining
 ### 示例 4
 
 ```json
-{"items": [{"sku": 298789742,"name": "杯子","offer_id": "91132","currency_code": "RUB","old_price": "2590","price": "2300","vat": "0.1"}]}
+{
+  "items": [
+    {
+      "sku": 298789742,
+      "name": "杯子",
+      "offer_id": "91132",
+      "currency_code": "RUB",
+      "old_price": "2590",
+      "price": "2300",
+      "vat": "0.1"
+    }
+  ]
+}
 ```
 
 ### 示例 5
 
 ```json
-{"result": {"task_id": 176594213,"unmatched_sku_list": [ ]}}
+{
+  "result": {
+    "task_id": 176594213,
+    "unmatched_sku_list": []
+  }
+}
 ```
 
 ## 使用提醒

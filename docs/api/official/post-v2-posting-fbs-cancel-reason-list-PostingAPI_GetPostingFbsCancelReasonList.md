@@ -68,7 +68,34 @@ seller
 ### 示例 3
 
 ```json
-{"result": [{"id": 352,"title": "在卖家仓库中已无商品","type_id": "seller","is_available_for_cancellation": true},{"id": 401,"title": "卖家拒绝了仲裁","type_id": "seller","is_available_for_cancellation": false},{"id": 402,"title": "其他（卖家的其他过错）","type_id": "seller","is_available_for_cancellation": true},{"id": 666,"title": "快递服务退货：在该区域没有快递","type_id": "seller","is_available_for_cancellation": false}]}
+{
+  "result": [
+    {
+      "id": 352,
+      "title": "在卖家仓库中已无商品",
+      "type_id": "seller",
+      "is_available_for_cancellation": true
+    },
+    {
+      "id": 401,
+      "title": "卖家拒绝了仲裁",
+      "type_id": "seller",
+      "is_available_for_cancellation": false
+    },
+    {
+      "id": 402,
+      "title": "其他（卖家的其他过错）",
+      "type_id": "seller",
+      "is_available_for_cancellation": true
+    },
+    {
+      "id": 666,
+      "title": "快递服务退货：在该区域没有快递",
+      "type_id": "seller",
+      "is_available_for_cancellation": false
+    }
+  ]
+}
 ```
 
 ## 使用提醒

@@ -40,13 +40,16 @@
 ### 示例 0
 
 ```json
-{"compensation_amount": "string","return_id": 0}
+{
+  "compensation_amount": "string",
+  "return_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

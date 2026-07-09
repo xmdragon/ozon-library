@@ -152,13 +152,23 @@ MANUAL_ARCHIVED
 ### 示例 16
 
 ```json
-{"language": "DEFAULT","offer_id": [ ],"search": "","sku": [ ],"visibility": "ALL"}
+{
+  "language": "DEFAULT",
+  "offer_id": [],
+  "search": "",
+  "sku": [],
+  "visibility": "ALL"
+}
 ```
 
 ### 示例 17
 
 ```json
-{"result": {"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"}}
+{
+  "result": {
+    "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"
+  }
+}
 ```
 
 ## 使用提醒

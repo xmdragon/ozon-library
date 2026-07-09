@@ -52,13 +52,45 @@ exemplars
 ### 示例 2
 
 ```json
-{"multi_box_qty": 0,"posting_number": "string","products": [{"exemplars": [{"exemplar_id": 0,"gtd": "string","is_gtd_absent": true,"is_rnpt_absent": true,"marks": [{"mark": "string","mark_type": "string"}],"rnpt": "string"}],"product_id": 0}]}
+{
+  "multi_box_qty": 0,
+  "posting_number": "string",
+  "products": [
+    {
+      "exemplars": [
+        {
+          "exemplar_id": 0,
+          "gtd": "string",
+          "is_gtd_absent": true,
+          "is_rnpt_absent": true,
+          "marks": [
+            {
+              "mark": "string",
+              "mark_type": "string"
+            }
+          ],
+          "rnpt": "string"
+        }
+      ],
+      "product_id": 0
+    }
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

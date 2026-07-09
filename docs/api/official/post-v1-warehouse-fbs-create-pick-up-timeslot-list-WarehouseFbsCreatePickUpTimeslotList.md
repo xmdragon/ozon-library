@@ -47,13 +47,33 @@
 ### 示例 0
 
 ```json
-{"is_kgt": true,"address_coordinates": {"latitude": 55.7558,"longitude": 37.6173}}
+{
+  "is_kgt": true,
+  "address_coordinates": {
+    "latitude": 55.7558,
+    "longitude": 37.6173
+  }
+}
 ```
 
 ### 示例 1
 
 ```json
-{"is_pickup_supported": true,"timeslots": [{"id": 123456789,"from": "00:00","to": "00:00"},{"id": 987654321,"from": "00:00","to": "00:00"}]}
+{
+  "is_pickup_supported": true,
+  "timeslots": [
+    {
+      "id": 123456789,
+      "from": "00:00",
+      "to": "00:00"
+    },
+    {
+      "id": 987654321,
+      "from": "00:00",
+      "to": "00:00"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

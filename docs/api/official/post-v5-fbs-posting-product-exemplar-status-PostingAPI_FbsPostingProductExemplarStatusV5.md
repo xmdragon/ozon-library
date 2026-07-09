@@ -77,13 +77,50 @@ update_not_available
 ### 示例 5
 
 ```json
-{"posting_number": "string"}
+{
+  "posting_number": "string"
+}
 ```
 
 ### 示例 6
 
 ```json
-{"posting_number": "string","products": [{"exemplars": [{"exemplar_id": 0,"gtd": "string","gtd_check_status": "string","gtd_error_codes": ["string"],"is_gtd_absent": true,"is_rnpt_absent": true,"marks": [{"check_status": "string","error_codes": ["string"],"mark": "string","mark_type": "string"}],"rnpt": "string","rnpt_check_status": "string","rnpt_error_codes": ["string"]}],"product_id": 0}],"status": "string"}
+{
+  "posting_number": "string",
+  "products": [
+    {
+      "exemplars": [
+        {
+          "exemplar_id": 0,
+          "gtd": "string",
+          "gtd_check_status": "string",
+          "gtd_error_codes": [
+            "string"
+          ],
+          "is_gtd_absent": true,
+          "is_rnpt_absent": true,
+          "marks": [
+            {
+              "check_status": "string",
+              "error_codes": [
+                "string"
+              ],
+              "mark": "string",
+              "mark_type": "string"
+            }
+          ],
+          "rnpt": "string",
+          "rnpt_check_status": "string",
+          "rnpt_error_codes": [
+            "string"
+          ]
+        }
+      ],
+      "product_id": 0
+    }
+  ],
+  "status": "string"
+}
 ```
 
 ## 使用提醒

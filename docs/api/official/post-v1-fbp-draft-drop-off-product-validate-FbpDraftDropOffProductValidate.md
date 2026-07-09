@@ -55,13 +55,49 @@ true
 ### 示例 1
 
 ```json
-{"skus": [{"count": 0,"sku": 0}],"warehouse_id": 0}
+{
+  "skus": [
+    {
+      "count": 0,
+      "sku": 0
+    }
+  ],
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 2
 
 ```json
-{"approved_items": [{"barcode": "string","icon_name": "string","name": "string","offer_id": "string","quantity": 0,"sku": 0,"volume": 0}],"bundle_generated": true,"bundle_id": "string","rejected_items": [{"barcode": "string","icon_name": "string","name": "string","offer_id": "string","quantity": 0,"rejection_reasons": ["BUNDLE_ITEM_ERROR_UNSPECIFIED"],"sku": 0,"volume": 0}]}
+{
+  "approved_items": [
+    {
+      "barcode": "string",
+      "icon_name": "string",
+      "name": "string",
+      "offer_id": "string",
+      "quantity": 0,
+      "sku": 0,
+      "volume": 0
+    }
+  ],
+  "bundle_generated": true,
+  "bundle_id": "string",
+  "rejected_items": [
+    {
+      "barcode": "string",
+      "icon_name": "string",
+      "name": "string",
+      "offer_id": "string",
+      "quantity": 0,
+      "rejection_reasons": [
+        "BUNDLE_ITEM_ERROR_UNSPECIFIED"
+      ],
+      "sku": 0,
+      "volume": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

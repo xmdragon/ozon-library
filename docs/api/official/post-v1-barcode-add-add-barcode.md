@@ -50,13 +50,29 @@
 ### 示例 0
 
 ```json
-{"barcodes": [{"barcode": "112772873170","sku": "99887766"}]}
+{
+  "barcodes": [
+    {
+      "barcode": "112772873170",
+      "sku": "99887766"
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"errors": [{"code": "123-123","error": "does not exist","barcode": "112772873170","sku": 99887766}]}
+{
+  "errors": [
+    {
+      "code": "123-123",
+      "error": "does not exist",
+      "barcode": "112772873170",
+      "sku": 99887766
+    }
+  ]
+}
 ```
 
 ## 使用提醒

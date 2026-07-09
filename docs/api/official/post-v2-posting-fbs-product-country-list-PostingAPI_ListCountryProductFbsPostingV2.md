@@ -46,13 +46,30 @@
 ### 示例 0
 
 ```json
-{"name_search": ""}
+{
+  "name_search": ""
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": [{"name": "阿尔及利亚","country_iso_code": "DZ"},{"name": "安圭拉","country_iso_code": "AI"},{"name": "维京群岛 （英国）","country_iso_code": "VG"}]}
+{
+  "result": [
+    {
+      "name": "阿尔及利亚",
+      "country_iso_code": "DZ"
+    },
+    {
+      "name": "安圭拉",
+      "country_iso_code": "AI"
+    },
+    {
+      "name": "维京群岛 （英国）",
+      "country_iso_code": "VG"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

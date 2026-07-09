@@ -172,13 +172,225 @@ delivering_date_to
 ### 示例 19
 
 ```json
-{"dir": "ASC","filter": {"cutoff_from": "2021-08-24T14:15:22Z","cutoff_to": "2021-08-31T14:15:22Z","delivery_method_id": [ ],"provider_id": [ ],"status": "awaiting_packaging","warehouse_id": [ ]},"limit": 100,"offset": 0,"with": {"analytics_data": true,"barcodes": true,"financial_data": true,"legal_info": false,"translit": true}}
+{
+  "dir": "ASC",
+  "filter": {
+    "cutoff_from": "2021-08-24T14:15:22Z",
+    "cutoff_to": "2021-08-31T14:15:22Z",
+    "delivery_method_id": [],
+    "provider_id": [],
+    "status": "awaiting_packaging",
+    "warehouse_id": []
+  },
+  "limit": 100,
+  "offset": 0,
+  "with": {
+    "analytics_data": true,
+    "barcodes": true,
+    "financial_data": true,
+    "legal_info": false,
+    "translit": true
+  }
+}
 ```
 
 ### 示例 20
 
 ```json
-{"has_next": true,"cursor": "eyJmaWVsZHMiOlt7Im5hbWUiOiJvc3AuY3V0b2ZmIiwiZGlyIjoiYXNjIiwidmFsIjoiMjAyNi0wMy0zMVQwOTowMDowMFoifSx7Im5hbWUiOiJvc3AuaW5fcHJvY2Vzc19hdCIsImRpciI6ImFzYyIsInZhbCI6IjIwMjYtMDMtMzBUMTE6MjY6MDhaIn0seyJuYW1lIjoib3NwLmlkIiwiZGlyIjoiYXNjIiwidmFsIjoiMTIwOTM3NTA2MiJ9LHsibmFtZSI6Im9zcC5pZCIsImRpciI6ImFzYyIsInZhbCI6IjEyMDkzNzUwNjIifV19","postings": [{"posting_number": "0132112277-0102-1","order_id": 35566808085,"order_number": "0132112277-0102","pickup_code_verified_at": null,"status": "awaiting_packaging","substatus": "posting_created","delivery_method": {"id": 1020005003107121,"name": "Ozon自发货，诺金斯克","warehouse_id": 1020005003107121,"warehouse": "FBS LikeSK","tpl_provider_id": 24,"tpl_provider": "Ozon配送"},"delivery_schema": "fbs","tracking_number": "","tpl_integration_type": "ozon","in_process_at": "2026-03-30T11:26:08Z","shipment_date": "2026-03-31T09:00:00Z","shipment_date_without_delay": "2026-04-04T16:59:00Z","optional": {"products_with_possible_mandatory_mark": [ ]},"cancellation": {"cancel_reason_id": 0,"cancel_reason": "","cancellation_type": "","cancelled_after_ship": false,"affect_cancellation_rating": false,"cancellation_initiator": ""},"customer": null,"products": [{"is_blr_traceable": false,"is_marketplace_buyout": false,"offer_id": "SK-58（深红色）","name": "Cronier cr-2013专业非洲小卷卷发棒，9毫米","sku": 827098843,"quantity": 1,"imei": [ ],"weight": 0.55,"product_color": "深红色","price": {"amount": "1530","currency": "RUB"}}],"addressee": null,"barcodes": null,"analytics_data": null,"destination_place_id": 0,"destination_place_name": "","financial_data": null,"is_express": false,"legal_info": null,"quantum_id": 0,"require_blr_traceable_attrs": false,"requirements": {"products_requiring_gtd": [ ],"products_requiring_country": [ ],"products_requiring_mandatory_mark": [ ],"products_requiring_rnpt": [ ],"products_requiring_jw_uin": [ ],"products_requiring_change_country": [ ],"products_requiring_imei": [ ],"products_requiring_weight": [ ]},"tariffication": {"current_tariff_rate": 0,"current_tariff_type": "no_discount","current_tariff_charge": {"amount": "0","currency": "RUB"},"current_tariff_min_charge": null,"next_tariff_rate": 1,"next_tariff_type": "commission","next_tariff_charge": {"amount": "50","currency": "RUB"},"next_tariff_min_charge": {"amount": "50","currency": "RUB"},"next_tariff_starts_at": "2026-03-31T09:00:01Z"},"external_order": {"is_external": false,"platform_name": ""},"volume_weight": 0,"is_click_and_collect": false,"delivering_date": null,"is_multibox": false,"multi_box_qty": 1,"is_presortable": false,"prr_option": "","parent_posting_number": "","available_actions": ["cancel","has_barcode_for_printing","product_cancel","ship","ship_async"],"tariffication_steps": [{"min_charge": null,"tariff_charge": {"amount": "0","currency": "RUB"},"tariff_deadline_at": "2026-03-31T09:00:00Z","tariff_rate": 0,"tariff_type": "no_discount"},{"min_charge": {"amount": "50","currency": "RUB"},"tariff_charge": {"amount": "50","currency": "RUB"},"tariff_deadline_at": "2026-03-31T21:00:00Z","tariff_rate": 1,"tariff_type": "commission"},{"min_charge": {"amount": "50","currency": "RUB"},"tariff_charge": {"amount": "50","currency": "RUB"},"tariff_deadline_at": "2026-04-01T09:00:00Z","tariff_rate": 1,"tariff_type": "commission"},{"min_charge": {"amount": "100","currency": "RUB"},"tariff_charge": {"amount": "100","currency": "RUB"},"tariff_deadline_at": "2026-04-01T21:00:00Z","tariff_rate": 2,"tariff_type": "commission"},{"min_charge": {"amount": "100","currency": "RUB"},"tariff_charge": {"amount": "100","currency": "RUB"},"tariff_deadline_at": "2026-04-02T09:00:00Z","tariff_rate": 2,"tariff_type": "commission"},{"min_charge": {"amount": "150","currency": "RUB"},"tariff_charge": {"amount": "150","currency": "RUB"},"tariff_deadline_at": "9999-12-31T23:59:59.999999900Z","tariff_rate": 3,"tariff_type": "commission"}]}],"count": 38}
+{
+  "has_next": true,
+  "cursor": "eyJmaWVsZHMiOlt7Im5hbWUiOiJvc3AuY3V0b2ZmIiwiZGlyIjoiYXNjIiwidmFsIjoiMjAyNi0wMy0zMVQwOTowMDowMFoifSx7Im5hbWUiOiJvc3AuaW5fcHJvY2Vzc19hdCIsImRpciI6ImFzYyIsInZhbCI6IjIwMjYtMDMtMzBUMTE6MjY6MDhaIn0seyJuYW1lIjoib3NwLmlkIiwiZGlyIjoiYXNjIiwidmFsIjoiMTIwOTM3NTA2MiJ9LHsibmFtZSI6Im9zcC5pZCIsImRpciI6ImFzYyIsInZhbCI6IjEyMDkzNzUwNjIifV19",
+  "postings": [
+    {
+      "posting_number": "0132112277-0102-1",
+      "order_id": 35566808085,
+      "order_number": "0132112277-0102",
+      "pickup_code_verified_at": null,
+      "status": "awaiting_packaging",
+      "substatus": "posting_created",
+      "delivery_method": {
+        "id": 1020005003107121,
+        "name": "Ozon自发货，诺金斯克",
+        "warehouse_id": 1020005003107121,
+        "warehouse": "FBS LikeSK",
+        "tpl_provider_id": 24,
+        "tpl_provider": "Ozon配送"
+      },
+      "delivery_schema": "fbs",
+      "tracking_number": "",
+      "tpl_integration_type": "ozon",
+      "in_process_at": "2026-03-30T11:26:08Z",
+      "shipment_date": "2026-03-31T09:00:00Z",
+      "shipment_date_without_delay": "2026-04-04T16:59:00Z",
+      "optional": {
+        "products_with_possible_mandatory_mark": []
+      },
+      "cancellation": {
+        "cancel_reason_id": 0,
+        "cancel_reason": "",
+        "cancellation_type": "",
+        "cancelled_after_ship": false,
+        "affect_cancellation_rating": false,
+        "cancellation_initiator": ""
+      },
+      "customer": null,
+      "products": [
+        {
+          "is_blr_traceable": false,
+          "is_marketplace_buyout": false,
+          "offer_id": "SK-58（深红色）",
+          "name": "Cronier cr-2013专业非洲小卷卷发棒，9毫米",
+          "sku": 827098843,
+          "quantity": 1,
+          "imei": [],
+          "weight": 0.55,
+          "product_color": "深红色",
+          "price": {
+            "amount": "1530",
+            "currency": "RUB"
+          }
+        }
+      ],
+      "addressee": null,
+      "barcodes": null,
+      "analytics_data": null,
+      "destination_place_id": 0,
+      "destination_place_name": "",
+      "financial_data": null,
+      "is_express": false,
+      "legal_info": null,
+      "quantum_id": 0,
+      "require_blr_traceable_attrs": false,
+      "requirements": {
+        "products_requiring_gtd": [],
+        "products_requiring_country": [],
+        "products_requiring_mandatory_mark": [],
+        "products_requiring_rnpt": [],
+        "products_requiring_jw_uin": [],
+        "products_requiring_change_country": [],
+        "products_requiring_imei": [],
+        "products_requiring_weight": []
+      },
+      "tariffication": {
+        "current_tariff_rate": 0,
+        "current_tariff_type": "no_discount",
+        "current_tariff_charge": {
+          "amount": "0",
+          "currency": "RUB"
+        },
+        "current_tariff_min_charge": null,
+        "next_tariff_rate": 1,
+        "next_tariff_type": "commission",
+        "next_tariff_charge": {
+          "amount": "50",
+          "currency": "RUB"
+        },
+        "next_tariff_min_charge": {
+          "amount": "50",
+          "currency": "RUB"
+        },
+        "next_tariff_starts_at": "2026-03-31T09:00:01Z"
+      },
+      "external_order": {
+        "is_external": false,
+        "platform_name": ""
+      },
+      "volume_weight": 0,
+      "is_click_and_collect": false,
+      "delivering_date": null,
+      "is_multibox": false,
+      "multi_box_qty": 1,
+      "is_presortable": false,
+      "prr_option": "",
+      "parent_posting_number": "",
+      "available_actions": [
+        "cancel",
+        "has_barcode_for_printing",
+        "product_cancel",
+        "ship",
+        "ship_async"
+      ],
+      "tariffication_steps": [
+        {
+          "min_charge": null,
+          "tariff_charge": {
+            "amount": "0",
+            "currency": "RUB"
+          },
+          "tariff_deadline_at": "2026-03-31T09:00:00Z",
+          "tariff_rate": 0,
+          "tariff_type": "no_discount"
+        },
+        {
+          "min_charge": {
+            "amount": "50",
+            "currency": "RUB"
+          },
+          "tariff_charge": {
+            "amount": "50",
+            "currency": "RUB"
+          },
+          "tariff_deadline_at": "2026-03-31T21:00:00Z",
+          "tariff_rate": 1,
+          "tariff_type": "commission"
+        },
+        {
+          "min_charge": {
+            "amount": "50",
+            "currency": "RUB"
+          },
+          "tariff_charge": {
+            "amount": "50",
+            "currency": "RUB"
+          },
+          "tariff_deadline_at": "2026-04-01T09:00:00Z",
+          "tariff_rate": 1,
+          "tariff_type": "commission"
+        },
+        {
+          "min_charge": {
+            "amount": "100",
+            "currency": "RUB"
+          },
+          "tariff_charge": {
+            "amount": "100",
+            "currency": "RUB"
+          },
+          "tariff_deadline_at": "2026-04-01T21:00:00Z",
+          "tariff_rate": 2,
+          "tariff_type": "commission"
+        },
+        {
+          "min_charge": {
+            "amount": "100",
+            "currency": "RUB"
+          },
+          "tariff_charge": {
+            "amount": "100",
+            "currency": "RUB"
+          },
+          "tariff_deadline_at": "2026-04-02T09:00:00Z",
+          "tariff_rate": 2,
+          "tariff_type": "commission"
+        },
+        {
+          "min_charge": {
+            "amount": "150",
+            "currency": "RUB"
+          },
+          "tariff_charge": {
+            "amount": "150",
+            "currency": "RUB"
+          },
+          "tariff_deadline_at": "9999-12-31T23:59:59.999999900Z",
+          "tariff_rate": 3,
+          "tariff_type": "commission"
+        }
+      ]
+    }
+  ],
+  "count": 38
+}
 ```
 
 ## 使用提醒

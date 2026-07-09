@@ -46,13 +46,18 @@
 ### 示例 0
 
 ```json
-{"date_start": "2019-08-24T14:15:22Z","title": "string"}
+{
+  "date_start": "2019-08-24T14:15:22Z",
+  "title": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"action_id": 0}
+{
+  "action_id": 0
+}
 ```
 
 ## 使用提醒

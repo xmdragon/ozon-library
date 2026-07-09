@@ -74,13 +74,100 @@ DESC
 ### 示例 4
 
 ```json
-{"cursor": "string","filter": {"name": "string","offer_id": "string","posting_numbers": ["string"],"since": "2019-08-24T14:15:22Z","statuses": ["string"],"to": "2019-08-24T14:15:22Z"},"limit": 1,"sort_by": "string","sort_dir": "ASC"}
+{
+  "cursor": "string",
+  "filter": {
+    "name": "string",
+    "offer_id": "string",
+    "posting_numbers": [
+      "string"
+    ],
+    "since": "2019-08-24T14:15:22Z",
+    "statuses": [
+      "string"
+    ],
+    "to": "2019-08-24T14:15:22Z"
+  },
+  "limit": 1,
+  "sort_by": "string",
+  "sort_dir": "ASC"
+}
 ```
 
 ### 示例 5
 
 ```json
-{"cursor": "string","postings": [{"financial_data": {"cluster_from": "string","cluster_to": "string","delivery_amount": 0,"products": [{"actions": [{"action_id": "string","date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","discount_percent": 0,"discount_value": 0,"is_from_seller": true,"description": "string"}],"commissions_currency_code": "string","old_price": 0,"price": 0,"product_id": 0,"quantity": 0,"total_discount_percent": 0,"posting_commission": {"amount": 0,"payout": 0,"percent": 0},"return_commission": {"amount": 0,"payout": 0,"percent": 0},"total_discount_value": 0}]},"in_process_at": "2019-08-24T14:15:22Z","order_date": "2019-08-24T14:15:22Z","order_id": 0,"order_number": "string","posting_number": "string","products": [{"customer_price": {"amount": "string","currency": "string"},"name": "string","offer_id": "string","price": {"amount": "string","currency": "string"},"quantity": 0,"seller_price": {"amount": "string","currency": "string"},"sku": 0}],"provider_id": 0,"status": "string"}]}
+{
+  "cursor": "string",
+  "postings": [
+    {
+      "financial_data": {
+        "cluster_from": "string",
+        "cluster_to": "string",
+        "delivery_amount": 0,
+        "products": [
+          {
+            "actions": [
+              {
+                "action_id": "string",
+                "date_from": "2019-08-24T14:15:22Z",
+                "date_to": "2019-08-24T14:15:22Z",
+                "discount_percent": 0,
+                "discount_value": 0,
+                "is_from_seller": true,
+                "description": "string"
+              }
+            ],
+            "commissions_currency_code": "string",
+            "old_price": 0,
+            "price": 0,
+            "product_id": 0,
+            "quantity": 0,
+            "total_discount_percent": 0,
+            "posting_commission": {
+              "amount": 0,
+              "payout": 0,
+              "percent": 0
+            },
+            "return_commission": {
+              "amount": 0,
+              "payout": 0,
+              "percent": 0
+            },
+            "total_discount_value": 0
+          }
+        ]
+      },
+      "in_process_at": "2019-08-24T14:15:22Z",
+      "order_date": "2019-08-24T14:15:22Z",
+      "order_id": 0,
+      "order_number": "string",
+      "posting_number": "string",
+      "products": [
+        {
+          "customer_price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "name": "string",
+          "offer_id": "string",
+          "price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "quantity": 0,
+          "seller_price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "sku": 0
+        }
+      ],
+      "provider_id": 0,
+      "status": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

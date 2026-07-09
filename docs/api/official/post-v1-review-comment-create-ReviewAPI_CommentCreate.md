@@ -58,13 +58,20 @@ false
 ### 示例 3
 
 ```json
-{"mark_review_as_processed": true,"parent_comment_id": "string","review_id": "string","text": "string"}
+{
+  "mark_review_as_processed": true,
+  "parent_comment_id": "string",
+  "review_id": "string",
+  "text": "string"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"comment_id": "string"}
+{
+  "comment_id": "string"
+}
 ```
 
 ## 使用提醒

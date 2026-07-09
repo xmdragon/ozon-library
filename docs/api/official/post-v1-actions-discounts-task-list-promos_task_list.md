@@ -186,13 +186,57 @@ true
 ### 示例 13
 
 ```json
-{"status": "UNKNOWN","page": 1,"limit": 50}
+{
+  "status": "UNKNOWN",
+  "page": 1,
+  "limit": 50
+}
 ```
 
 ### 示例 14
 
 ```json
-{"result": [{"id": 12345,"created_at": "2023-10-15T09:30:00Z","end_at": "2023-10-20T18:45:00Z","edited_till": "2023-10-18T12:00:00Z","status": "approved","customer_name": "Ivan Ivanov","sku": 100500,"user_comment": "商品急需，请加快处理","seller_comment": "已与经理确认，折扣已提供","requested_price": 15000,"approved_price": 14500,"original_price": 16000,"discount": 1000,"discount_percent": 6.25,"base_price": 15500,"min_auto_price": 14000,"prev_task_id": 12344,"is_damaged": false,"moderated_at": "2023-10-16T10:15:00Z","approved_discount": 500,"approved_discount_percent": 3.125,"is_purchased": true,"is_auto_moderated": false,"offer_id": "OFFER-2023-1001","email": "ivan.ivanov@example.com","last_name": "Ivanov","first_name": "Ivan","patronymic": "Petrovich","approved_quantity_min": 1,"approved_quantity_max": 5,"requested_quantity_min": 2,"requested_quantity_max": 10,"requested_price_with_fee": 15500,"approved_price_with_fee": 15000,"approved_price_fee_percent": 3.2}]}
+{
+  "result": [
+    {
+      "id": 12345,
+      "created_at": "2023-10-15T09:30:00Z",
+      "end_at": "2023-10-20T18:45:00Z",
+      "edited_till": "2023-10-18T12:00:00Z",
+      "status": "approved",
+      "customer_name": "Ivan Ivanov",
+      "sku": 100500,
+      "user_comment": "商品急需，请加快处理",
+      "seller_comment": "已与经理确认，折扣已提供",
+      "requested_price": 15000,
+      "approved_price": 14500,
+      "original_price": 16000,
+      "discount": 1000,
+      "discount_percent": 6.25,
+      "base_price": 15500,
+      "min_auto_price": 14000,
+      "prev_task_id": 12344,
+      "is_damaged": false,
+      "moderated_at": "2023-10-16T10:15:00Z",
+      "approved_discount": 500,
+      "approved_discount_percent": 3.125,
+      "is_purchased": true,
+      "is_auto_moderated": false,
+      "offer_id": "OFFER-2023-1001",
+      "email": "ivan.ivanov@example.com",
+      "last_name": "Ivanov",
+      "first_name": "Ivan",
+      "patronymic": "Petrovich",
+      "approved_quantity_min": 1,
+      "approved_quantity_max": 5,
+      "requested_quantity_min": 2,
+      "requested_quantity_max": 10,
+      "requested_price_with_fee": 15500,
+      "approved_price_with_fee": 15000,
+      "approved_price_fee_percent": 3.2
+    }
+  ]
+}
 ```
 
 ## 使用提醒

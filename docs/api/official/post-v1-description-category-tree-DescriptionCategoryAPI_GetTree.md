@@ -98,13 +98,38 @@ false
 ### 示例 6
 
 ```json
-{"language": "DEFAULT"}
+{
+  "language": "DEFAULT"
+}
 ```
 
 ### 示例 7
 
 ```json
-{"result": [{"description_category_id": 0,"category_name": "string","disabled": false,"children": [{"description_category_id": 0,"category_name": "string","disabled": false,"children": [{"type_name": "sting","type_id": 0,"disabled": false,"children": [ ]}]}]}]}
+{
+  "result": [
+    {
+      "description_category_id": 0,
+      "category_name": "string",
+      "disabled": false,
+      "children": [
+        {
+          "description_category_id": 0,
+          "category_name": "string",
+          "disabled": false,
+          "children": [
+            {
+              "type_name": "sting",
+              "type_id": 0,
+              "disabled": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

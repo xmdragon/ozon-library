@@ -87,13 +87,45 @@ PROCESSED
 ### 示例 6
 
 ```json
-{"review_id": "string"}
+{
+  "review_id": "string"
+}
 ```
 
 ### 示例 7
 
 ```json
-{"comments_amount": 0,"dislikes_amount": 0,"id": "string","is_rating_participant": true,"likes_amount": 0,"order_status": "string","photos": [{"height": 0,"url": "string","width": 0}],"photos_amount": 0,"published_at": "2019-08-24T14:15:22Z","rating": 0,"sku": 0,"status": "string","text": "string","videos": [{"height": 0,"preview_url": "string","short_video_preview_url": "string","url": "string","width": 0}],"videos_amount": 0}
+{
+  "comments_amount": 0,
+  "dislikes_amount": 0,
+  "id": "string",
+  "is_rating_participant": true,
+  "likes_amount": 0,
+  "order_status": "string",
+  "photos": [
+    {
+      "height": 0,
+      "url": "string",
+      "width": 0
+    }
+  ],
+  "photos_amount": 0,
+  "published_at": "2019-08-24T14:15:22Z",
+  "rating": 0,
+  "sku": 0,
+  "status": "string",
+  "text": "string",
+  "videos": [
+    {
+      "height": 0,
+      "preview_url": "string",
+      "short_video_preview_url": "string",
+      "url": "string",
+      "width": 0
+    }
+  ],
+  "videos_amount": 0
+}
 ```
 
 ## 使用提醒

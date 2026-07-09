@@ -43,13 +43,25 @@ comment
 ### 示例 2
 
 ```json
-{"cancellation_id": 0,"comment": "string"}
+{
+  "cancellation_id": 0,
+  "comment": "string"
+}
 ```
 
 ### 示例 3
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

@@ -60,13 +60,60 @@ true
 ### 示例 2
 
 ```json
-{"stairways": [{"enabled": true,"sku": 0,"stairway": {"steps": [{"discount": 0,"quantity": 0,"step": 0}]}}],"suppress_warnings": true}
+{
+  "stairways": [
+    {
+      "enabled": true,
+      "sku": 0,
+      "stairway": {
+        "steps": [
+          {
+            "discount": 0,
+            "quantity": 0,
+            "step": 0
+          }
+        ]
+      }
+    }
+  ],
+  "suppress_warnings": true
+}
 ```
 
 ### 示例 3
 
 ```json
-{"accepted": true,"errors": [{"data": [{"code": "string","field": "string","message": "string","step": 0,"value": "string"}],"sku": 0}],"warnings": [{"data": [{"code": "string","field": "string","message": "string","step": 0,"value": "string"}],"sku": 0}]}
+{
+  "accepted": true,
+  "errors": [
+    {
+      "data": [
+        {
+          "code": "string",
+          "field": "string",
+          "message": "string",
+          "step": 0,
+          "value": "string"
+        }
+      ],
+      "sku": 0
+    }
+  ],
+  "warnings": [
+    {
+      "data": [
+        {
+          "code": "string",
+          "field": "string",
+          "message": "string",
+          "step": 0,
+          "value": "string"
+        }
+      ],
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

@@ -39,13 +39,31 @@
 ### 示例 0
 
 ```json
-{"action_id": 0,"products": [{"currency": "RUB","discount_percent": 0,"sku": 0}]}
+{
+  "action_id": 0,
+  "products": [
+    {
+      "currency": "RUB",
+      "discount_percent": 0,
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

@@ -64,13 +64,55 @@
 ### 示例 0
 
 ```json
-{"day": 0,"month": 0,"year": 0}
+{
+  "day": 0,
+  "month": 0,
+  "year": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"rows": [{"commission_ratio": 0,"delivery_commission": {"amount": 0,"bonus": 0,"commission": 0,"compensation": 0,"price_per_instance": 0,"quantity": 0,"standard_fee": 0,"bank_coinvestment": 0,"stars": 0,"total": 0},"item": {"barcode": "string","name": "string","offer_id": "string","sku": 0},"return_commission": {"amount": 0,"bonus": 0,"commission": 0,"compensation": 0,"price_per_instance": 0,"quantity": 0,"standard_fee": 0,"bank_coinvestment": 0,"stars": 0,"total": 0},"rowNumber": 0,"seller_price_per_instance": 0}]}
+{
+  "rows": [
+    {
+      "commission_ratio": 0,
+      "delivery_commission": {
+        "amount": 0,
+        "bonus": 0,
+        "commission": 0,
+        "compensation": 0,
+        "price_per_instance": 0,
+        "quantity": 0,
+        "standard_fee": 0,
+        "bank_coinvestment": 0,
+        "stars": 0,
+        "total": 0
+      },
+      "item": {
+        "barcode": "string",
+        "name": "string",
+        "offer_id": "string",
+        "sku": 0
+      },
+      "return_commission": {
+        "amount": 0,
+        "bonus": 0,
+        "commission": 0,
+        "compensation": 0,
+        "price_per_instance": 0,
+        "quantity": 0,
+        "standard_fee": 0,
+        "bank_coinvestment": 0,
+        "stars": 0,
+        "total": 0
+      },
+      "rowNumber": 0,
+      "seller_price_per_instance": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

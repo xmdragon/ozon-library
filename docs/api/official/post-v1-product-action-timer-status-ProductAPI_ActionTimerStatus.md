@@ -74,13 +74,23 @@ product_id
 ### 示例 3
 
 ```json
-{"product_ids": 0}
+{
+  "product_ids": 0
+}
 ```
 
 ### 示例 4
 
 ```json
-{"statuses": [{"expired_at": "2019-08-24T14:15:22Z","min_price_for_auto_actions_enabled": true,"product_id": 0}]}
+{
+  "statuses": [
+    {
+      "expired_at": "2019-08-24T14:15:22Z",
+      "min_price_for_auto_actions_enabled": true,
+      "product_id": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

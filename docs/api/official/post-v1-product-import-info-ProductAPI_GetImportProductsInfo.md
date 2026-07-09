@@ -72,13 +72,27 @@ product_id
 ### 示例 3
 
 ```json
-{"task_id": "172549793"}
+{
+  "task_id": "172549793"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"result": {"items": [{"offer_id": "143210608","product_id": 137285792,"status": "imported","errors": [ ]}],"total": 1}}
+{
+  "result": {
+    "items": [
+      {
+        "offer_id": "143210608",
+        "product_id": 137285792,
+        "status": "imported",
+        "errors": []
+      }
+    ],
+    "total": 1
+  }
+}
 ```
 
 ## 使用提醒

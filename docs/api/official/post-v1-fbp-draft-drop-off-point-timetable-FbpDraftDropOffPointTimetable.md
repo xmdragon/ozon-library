@@ -104,13 +104,34 @@ SUNDAY
 ### 示例 8
 
 ```json
-{"drop_off_point_id": 0,"province_uuid": "string","warehouse_id": 0}
+{
+  "drop_off_point_id": 0,
+  "province_uuid": "string",
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 9
 
 ```json
-{"calendar": [{"calendar_item": {"break_hours": {"timeslot_end": "string","timeslot_start": "string"},"is_holiday": true,"opening_hours": {"timeslot_end": "string","timeslot_start": "string"}},"day_of_week": "DAY_OF_WEEK_UNSPECIFIED"}]}
+{
+  "calendar": [
+    {
+      "calendar_item": {
+        "break_hours": {
+          "timeslot_end": "string",
+          "timeslot_start": "string"
+        },
+        "is_holiday": true,
+        "opening_hours": {
+          "timeslot_end": "string",
+          "timeslot_start": "string"
+        }
+      },
+      "day_of_week": "DAY_OF_WEEK_UNSPECIFIED"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

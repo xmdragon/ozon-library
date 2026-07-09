@@ -45,13 +45,17 @@
 ### 示例 0
 
 ```json
-{"action_id": 0}
+{
+  "action_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"file": "string"}
+{
+  "file": "string"
+}
 ```
 
 ## 使用提醒

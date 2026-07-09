@@ -48,13 +48,24 @@ true
 ### 示例 1
 
 ```json
-{"row_version": 0,"supply_id": "string","tracking_number": "string","transport_company_name": "string"}
+{
+  "row_version": 0,
+  "supply_id": "string",
+  "tracking_number": "string",
+  "transport_company_name": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"errors": ["ERROR_TYPE_UNSPECIFIED"],"is_error": "true","row_version": 0}
+{
+  "errors": [
+    "ERROR_TYPE_UNSPECIFIED"
+  ],
+  "is_error": "true",
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

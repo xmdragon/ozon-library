@@ -266,13 +266,40 @@ offset = 10
 ### 示例 34
 
 ```json
-{"date_from": "2020-09-01","date_to": "2021-10-15","metrics": ["hits_view_search"],"dimension": ["sku","day"],"filters": [ ],"sort": [{"key": "hits_view_search","order": "DESC"}],"limit": 1000,"offset": 0}
+{
+  "date_from": "2020-09-01",
+  "date_to": "2021-10-15",
+  "metrics": [
+    "hits_view_search"
+  ],
+  "dimension": [
+    "sku",
+    "day"
+  ],
+  "filters": [],
+  "sort": [
+    {
+      "key": "hits_view_search",
+      "order": "DESC"
+    }
+  ],
+  "limit": 1000,
+  "offset": 0
+}
 ```
 
 ### 示例 35
 
 ```json
-{"result": {"data": [ ],"totals": [0]},"timestamp": "2021-11-25 15:19:21"}
+{
+  "result": {
+    "data": [],
+    "totals": [
+      0
+    ]
+  },
+  "timestamp": "2021-11-25 15:19:21"
+}
 ```
 
 ## 使用提醒

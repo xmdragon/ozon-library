@@ -112,13 +112,42 @@ SUNDAY
 ### 示例 11
 
 ```json
-{"address_coordinates": {"latitude": 55.69626,"longitude": 37.42686},"first_mile_type": "DROP_OFF","drop_off_point_id": 1020002487458000,"cut_in_time": 0,"timeslot_id": 0,"is_kgt": false,"name": "Warehouse","options": {"comment": "Comment","courier_phones": ["+7(999)999-99-99"],"is_auto_assembly": true,"is_waybill_enabled": true},"phone": "+7(999)999-99-99","working_days": ["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"]}
+{
+  "address_coordinates": {
+    "latitude": 55.69626,
+    "longitude": 37.42686
+  },
+  "first_mile_type": "DROP_OFF",
+  "drop_off_point_id": 1020002487458000,
+  "cut_in_time": 0,
+  "timeslot_id": 0,
+  "is_kgt": false,
+  "name": "Warehouse",
+  "options": {
+    "comment": "Comment",
+    "courier_phones": [
+      "+7(999)999-99-99"
+    ],
+    "is_auto_assembly": true,
+    "is_waybill_enabled": true
+  },
+  "phone": "+7(999)999-99-99",
+  "working_days": [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY"
+  ]
+}
 ```
 
 ### 示例 12
 
 ```json
-{"operation_id": "a0cfefee-9a5a-4580-bc32-2f9a6c7973e3"}
+{
+  "operation_id": "a0cfefee-9a5a-4580-bc32-2f9a6c7973e3"
+}
 ```
 
 ## 使用提醒

@@ -38,13 +38,24 @@
 ### 示例 0
 
 ```json
-{"posting_number": "string"}
+{
+  "posting_number": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

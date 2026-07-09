@@ -77,13 +77,29 @@ returns.rejection_reason
 ### 示例 8
 
 ```json
-{"comment": "string","compensation_amount": 0,"id": 0,"rejection_reason_id": 0,"return_for_back_way": 0,"return_id": 0}
+{
+  "comment": "string",
+  "compensation_amount": 0,
+  "id": 0,
+  "rejection_reason_id": 0,
+  "return_for_back_way": 0,
+  "return_id": 0
+}
 ```
 
 ### 示例 9
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

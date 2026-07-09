@@ -80,13 +80,38 @@ true
 ### 示例 5
 
 ```json
-{"filter": {"date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","status": "ALL"},"limit": 100,"last_id": "","sort_dir": "ASC"}
+{
+  "filter": {
+    "date_from": "2019-08-24T14:15:22Z",
+    "date_to": "2019-08-24T14:15:22Z",
+    "status": "ALL"
+  },
+  "limit": 100,
+  "last_id": "",
+  "sort_dir": "ASC"
+}
 ```
 
 ### 示例 6
 
 ```json
-{"has_next": true,"questions": [{"answers_count": 1,"author_name": "string","id": "019294ff-6888-7009-89d8-26569e4e450d","sku": 646399170,"product_url": "https://www.ozon.ru/product/1649246352/","published_at": "2024-08-14T12:02:01.889Z","question_link": "https://www.ozon.ru/product/1649246352/questions/?qid=290180206&utm_campaign=reviews_sc_link&utm_medium=share_button&utm_source=smm","text": "string","status": "PROCESSED"}],"last_id": "019228a7-91d8-76af-a73a-e989dfac7ac8"}
+{
+  "has_next": true,
+  "questions": [
+    {
+      "answers_count": 1,
+      "author_name": "string",
+      "id": "019294ff-6888-7009-89d8-26569e4e450d",
+      "sku": 646399170,
+      "product_url": "https://www.ozon.ru/product/1649246352/",
+      "published_at": "2024-08-14T12:02:01.889Z",
+      "question_link": "https://www.ozon.ru/product/1649246352/questions/?qid=290180206&utm_campaign=reviews_sc_link&utm_medium=share_button&utm_source=smm",
+      "text": "string",
+      "status": "PROCESSED"
+    }
+  ],
+  "last_id": "019228a7-91d8-76af-a73a-e989dfac7ac8"
+}
 ```
 
 ## 使用提醒

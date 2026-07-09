@@ -60,13 +60,30 @@ last_id
 ### 示例 2
 
 ```json
-{"last_id": "","question_id": "019228a7-91d8-76af-a73a-e989dfac7ac8","sku": 646399170}
+{
+  "last_id": "",
+  "question_id": "019228a7-91d8-76af-a73a-e989dfac7ac8",
+  "sku": 646399170
+}
 ```
 
 ### 示例 3
 
 ```json
-{"answers": [{"author_name": "string","id": "string","published_at": "2024-08-14T11:44:35.352Z","question_id": "string","sku": 646399170,"status_publication": "","text": "string"}],"last_id": "string"}
+{
+  "answers": [
+    {
+      "author_name": "string",
+      "id": "string",
+      "published_at": "2024-08-14T11:44:35.352Z",
+      "question_id": "string",
+      "sku": 646399170,
+      "status_publication": "",
+      "text": "string"
+    }
+  ],
+  "last_id": "string"
+}
 ```
 
 ## 使用提醒

@@ -107,13 +107,19 @@ cancel_reason_id = 402
 ### 示例 10
 
 ```json
-{"cancel_reason_id": 352,"cancel_reason_message": "Product is out of stock","posting_number": "33920113-1231-1"}
+{
+  "cancel_reason_id": 352,
+  "cancel_reason_message": "Product is out of stock",
+  "posting_number": "33920113-1231-1"
+}
 ```
 
 ### 示例 11
 
 ```json
-{"result": true}
+{
+  "result": true
+}
 ```
 
 ## 使用提醒

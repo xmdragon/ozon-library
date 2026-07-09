@@ -45,13 +45,25 @@ true
 ### 示例 1
 
 ```json
-{"action_id": 0,"is_turn_on": true}
+{
+  "action_id": 0,
+  "is_turn_on": true
+}
 ```
 
 ### 示例 2
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

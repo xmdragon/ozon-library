@@ -39,13 +39,25 @@
 ### 示例 0
 
 ```json
-{"pickup_details": {"address": "string","comment": "string","date": "2019-08-24T14:15:22Z","sender_name": "string","sender_phone": "string"},"row_version": 0,"supply_id": "string"}
+{
+  "pickup_details": {
+    "address": "string",
+    "comment": "string",
+    "date": "2019-08-24T14:15:22Z",
+    "sender_name": "string",
+    "sender_phone": "string"
+  },
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"row_version": 0}
+{
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

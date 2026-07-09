@@ -68,13 +68,59 @@ true
 ### 示例 3
 
 ```json
-{"cursor": "string","filter": {"delivery_method_ids": ["string"],"provider_ids": ["string"],"status": ["NEW"],"warehouse_ids": ["string"]},"limit": 1,"sort_dir": "ASC"}
+{
+  "cursor": "string",
+  "filter": {
+    "delivery_method_ids": [
+      "string"
+    ],
+    "provider_ids": [
+      "string"
+    ],
+    "status": [
+      "NEW"
+    ],
+    "warehouse_ids": [
+      "string"
+    ]
+  },
+  "limit": 1,
+  "sort_dir": "ASC"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"cursor": "string","has_next": true,"delivery_methods": [{"created_at": "2019-08-24T14:15:22Z","cutoff": "string","id": 0,"is_express": true,"name": "string","provider_id": 0,"sla_cut_in": 0,"status": "NEW","template_id": 0,"tpl_dropoff_point": {"address": "string","address_coordinates": {"latitude": 0,"longitude": 0},"code": "string","name": "string"},"tpl_integration_type": "string","updated_at": "2019-08-24T14:15:22Z","warehouse_id": 0}]}
+{
+  "cursor": "string",
+  "has_next": true,
+  "delivery_methods": [
+    {
+      "created_at": "2019-08-24T14:15:22Z",
+      "cutoff": "string",
+      "id": 0,
+      "is_express": true,
+      "name": "string",
+      "provider_id": 0,
+      "sla_cut_in": 0,
+      "status": "NEW",
+      "template_id": 0,
+      "tpl_dropoff_point": {
+        "address": "string",
+        "address_coordinates": {
+          "latitude": 0,
+          "longitude": 0
+        },
+        "code": "string",
+        "name": "string"
+      },
+      "tpl_integration_type": "string",
+      "updated_at": "2019-08-24T14:15:22Z",
+      "warehouse_id": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

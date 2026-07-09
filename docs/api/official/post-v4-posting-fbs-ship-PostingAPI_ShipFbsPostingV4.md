@@ -78,37 +78,138 @@ packages
 ### 示例 5
 
 ```json
-{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 2 } ] } ], "posting_number": "89491381-0072-1" }
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1"
+}
 ```
 
 ### 示例 6
 
 ```json
-{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 2 } ] } ], "posting_number": "89491381-0072-1" }
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1"
+}
 ```
 
 ### 示例 7
 
 ```json
-{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 1 } ] }, { "products": [ { "product_id": 185479045, "quantity": 1 } ] } ], "posting_number": "89491381-0072-1" }
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1"
+}
 ```
 
 ### 示例 8
 
 ```json
-{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 1 } ] }, { "products": [ { "product_id": 185479045, "quantity": 1 } ] } ], "posting_number": "89491381-0072-1" }
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1"
+}
 ```
 
 ### 示例 9
 
 ```json
-{"packages": [{"products": [{"product_id": 185479045,"quantity": 1}]}],"posting_number": "89491381-0072-1","with": {"additional_data": true}}
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1",
+  "with": {
+    "additional_data": true
+  }
+}
 ```
 
 ### 示例 10
 
 ```json
-{"additional_data": [{"posting_number": "89491381-0072-1","products": [{"currency_code": "RUB","mandatory_mark": ["123"],"name": "string","offer_id": "17125","price": "2000","quantity": 1,"sku": 149618972}]}],"result": ["89491381-0072-1"]}
+{
+  "additional_data": [
+    {
+      "posting_number": "89491381-0072-1",
+      "products": [
+        {
+          "currency_code": "RUB",
+          "mandatory_mark": [
+            "123"
+          ],
+          "name": "string",
+          "offer_id": "17125",
+          "price": "2000",
+          "quantity": 1,
+          "sku": 149618972
+        }
+      ]
+    }
+  ],
+  "result": [
+    "89491381-0072-1"
+  ]
+}
 ```
 
 ## 使用提醒

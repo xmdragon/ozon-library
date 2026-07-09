@@ -62,13 +62,87 @@ DESC
 ### 示例 2
 
 ```json
-{"filter": {"cutoff_from": "2026-03-01T00:00:00Z","cutoff_to": "2026-03-07T23:59:59Z","delivery_method_id": 323123321},"limit": 50,"sort_dir": "ASC","cursor": ""}
+{
+  "filter": {
+    "cutoff_from": "2026-03-01T00:00:00Z",
+    "cutoff_to": "2026-03-07T23:59:59Z",
+    "delivery_method_id": 323123321
+  },
+  "limit": 50,
+  "sort_dir": "ASC",
+  "cursor": ""
+}
 ```
 
 ### 示例 3
 
 ```json
-{"cutoff": "2026-03-07T10:00:00Z","postings": [{"posting_number": "789456123-0002-3","assembly_code": "test-assembly-code-12345","products": [{"sku": 1000123456,"offer_id": "test-offer-123456","product_name": "string","picture_url": "https://test-example.com/images/product-123456.jpg","quantity": 2},{"sku": 1000123457,"offer_id": "test-offer-123457","product_name": "string","picture_url": "https://test-example.com/images/product-123457.jpg","quantity": 1}]},{"posting_number": "123456789-0001-1","assembly_code": "test-assembly-code-12346","products": [{"sku": 1000123458,"offer_id": "test-offer-123458","product_name": "string","picture_url": "https://test-example.com/images/product-123458.jpg","quantity": 3}]},{"posting_number": "456123789-0003-5","assembly_code": "test-assembly-code-12347","products": [{"sku": 1000123459,"offer_id": "test-offer-123459","product_name": "string","picture_url": "https://test-example.com/images/product-123459.jpg","quantity": 1},{"sku": 1000123460,"offer_id": "test-offer-123460","product_name": "string","picture_url": "https://test-example.com/images/product-123460.jpg","quantity": 2},{"sku": 1000123461,"offer_id": "test-offer-123461","product_name": "string","picture_url": "https://test-example.com/images/product-123461.jpg","quantity": 1}]}],"cursor": "test-cursor-next-page-67890"}
+{
+  "cutoff": "2026-03-07T10:00:00Z",
+  "postings": [
+    {
+      "posting_number": "789456123-0002-3",
+      "assembly_code": "test-assembly-code-12345",
+      "products": [
+        {
+          "sku": 1000123456,
+          "offer_id": "test-offer-123456",
+          "product_name": "string",
+          "picture_url": "https://test-example.com/images/product-123456.jpg",
+          "quantity": 2
+        },
+        {
+          "sku": 1000123457,
+          "offer_id": "test-offer-123457",
+          "product_name": "string",
+          "picture_url": "https://test-example.com/images/product-123457.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "posting_number": "123456789-0001-1",
+      "assembly_code": "test-assembly-code-12346",
+      "products": [
+        {
+          "sku": 1000123458,
+          "offer_id": "test-offer-123458",
+          "product_name": "string",
+          "picture_url": "https://test-example.com/images/product-123458.jpg",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "posting_number": "456123789-0003-5",
+      "assembly_code": "test-assembly-code-12347",
+      "products": [
+        {
+          "sku": 1000123459,
+          "offer_id": "test-offer-123459",
+          "product_name": "string",
+          "picture_url": "https://test-example.com/images/product-123459.jpg",
+          "quantity": 1
+        },
+        {
+          "sku": 1000123460,
+          "offer_id": "test-offer-123460",
+          "product_name": "string",
+          "picture_url": "https://test-example.com/images/product-123460.jpg",
+          "quantity": 2
+        },
+        {
+          "sku": 1000123461,
+          "offer_id": "test-offer-123461",
+          "product_name": "string",
+          "picture_url": "https://test-example.com/images/product-123461.jpg",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "cursor": "test-cursor-next-page-67890"
+}
 ```
 
 ## 使用提醒

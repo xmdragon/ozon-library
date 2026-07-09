@@ -39,13 +39,28 @@
 ### 示例 0
 
 ```json
-{"action_id": 0,"action_parameters": {"date_start": "2019-08-24T14:15:22Z","title": "string"}}
+{
+  "action_id": 0,
+  "action_parameters": {
+    "date_start": "2019-08-24T14:15:22Z",
+    "title": "string"
+  }
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

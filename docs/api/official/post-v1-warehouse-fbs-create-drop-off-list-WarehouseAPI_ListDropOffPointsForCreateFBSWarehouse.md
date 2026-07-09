@@ -81,13 +81,45 @@ SC
 ### 示例 4
 
 ```json
-{"country_code": "RU","is_kgt": false,"coordinates": {"latitude": 55,"longitude": 37},"search": {"address": "москва","types": ["PPZ"]}}
+{
+  "country_code": "RU",
+  "is_kgt": false,
+  "coordinates": {
+    "latitude": 55,
+    "longitude": 37
+  },
+  "search": {
+    "address": "москва",
+    "types": [
+      "PPZ"
+    ]
+  }
+}
 ```
 
 ### 示例 5
 
 ```json
-{"points": [{"address": "Россия, Москва, Москва, Россия, г. Москва, Никольская улица, 7-9 строение 4","discount_percent": 1,"id": "1020002487458000","last_transit_time_local": {"hours": 12,"minutes": 0,"nanos": 0,"seconds": 0},"coordinates": {"latitude": 55.756107,"longitude": 37.620426},"type": "PVZ"}]}
+{
+  "points": [
+    {
+      "address": "Россия, Москва, Москва, Россия, г. Москва, Никольская улица, 7-9 строение 4",
+      "discount_percent": 1,
+      "id": "1020002487458000",
+      "last_transit_time_local": {
+        "hours": 12,
+        "minutes": 0,
+        "nanos": 0,
+        "seconds": 0
+      },
+      "coordinates": {
+        "latitude": 55.756107,
+        "longitude": 37.620426
+      },
+      "type": "PVZ"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

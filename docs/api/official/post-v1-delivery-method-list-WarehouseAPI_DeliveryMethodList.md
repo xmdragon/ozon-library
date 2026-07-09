@@ -123,13 +123,38 @@ DISABLED
 ### 示例 8
 
 ```json
-{"filter": {"provider_id": 424,"status": "ACTIVE","warehouse_id": 15588127982000},"limit": 100,"offset": 0}
+{
+  "filter": {
+    "provider_id": 424,
+    "status": "ACTIVE",
+    "warehouse_id": 15588127982000
+  },
+  "limit": 100,
+  "offset": 0
+}
 ```
 
 ### 示例 9
 
 ```json
-{"result": [{"id": 15588127982000,"company_id": 1,"name": "Ozon物流快递员，Yesipovo","status": "ACTIVE","cutoff": "13:00","provider_id": 24,"template_id": 0,"warehouse_id": 15588127982000,"created_at": "2019-04-04T15:22:31.048202Z","updated_at": "2021-08-15T10:21:44.854209Z","sla_cut_in": 1440}],"has_next": false}
+{
+  "result": [
+    {
+      "id": 15588127982000,
+      "company_id": 1,
+      "name": "Ozon物流快递员，Yesipovo",
+      "status": "ACTIVE",
+      "cutoff": "13:00",
+      "provider_id": 24,
+      "template_id": 0,
+      "warehouse_id": 15588127982000,
+      "created_at": "2019-04-04T15:22:31.048202Z",
+      "updated_at": "2021-08-15T10:21:44.854209Z",
+      "sla_cut_in": 1440
+    }
+  ],
+  "has_next": false
+}
 ```
 
 ## 使用提醒

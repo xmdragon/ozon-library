@@ -40,13 +40,16 @@
 ### 示例 0
 
 ```json
-{"return_id": 0,"return_for_back_way": 0}
+{
+  "return_id": 0,
+  "return_for_back_way": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

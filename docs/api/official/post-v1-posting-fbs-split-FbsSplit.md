@@ -39,13 +39,46 @@
 ### 示例 0
 
 ```json
-{"posting_number": "string","postings": [{"products": [{"product_id": 0,"quantity": 0}]}]}
+{
+  "posting_number": "string",
+  "postings": [
+    {
+      "products": [
+        {
+          "product_id": 0,
+          "quantity": 0
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"parent_posting": {"posting_number": "string","products": [{"product_id": 0,"quantity": 0}]},"postings": [{"posting_number": "string","products": [{"product_id": 0,"quantity": 0}]}]}
+{
+  "parent_posting": {
+    "posting_number": "string",
+    "products": [
+      {
+        "product_id": 0,
+        "quantity": 0
+      }
+    ]
+  },
+  "postings": [
+    {
+      "posting_number": "string",
+      "products": [
+        {
+          "product_id": 0,
+          "quantity": 0
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

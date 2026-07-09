@@ -76,13 +76,39 @@ barcodes
 ### 示例 1
 
 ```json
-{"barcode": "20325804886000"}
+{
+  "barcode": "20325804886000"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": {"order_id": 47558522075,"order_number": "2130415463-0013","posting_number": "2130415463-0013-1","status": "delivered","cancel_reason_id": 0,"created_at": "2025-01-29T08:58:07Z","in_process_at": "2025-01-29T08:59:40Z","shipment_date": "2025-01-29T18:00:00Z","products": [{"sku": 498274975,"name": "","quantity": 1,"offer_id": "6460551001","price": "2300.0000"}],"barcodes": {"upper_barcode": "%101%10293145035","lower_barcode": "201864523528000"}}}
+{
+  "result": {
+    "order_id": 47558522075,
+    "order_number": "2130415463-0013",
+    "posting_number": "2130415463-0013-1",
+    "status": "delivered",
+    "cancel_reason_id": 0,
+    "created_at": "2025-01-29T08:58:07Z",
+    "in_process_at": "2025-01-29T08:59:40Z",
+    "shipment_date": "2025-01-29T18:00:00Z",
+    "products": [
+      {
+        "sku": 498274975,
+        "name": "",
+        "quantity": 1,
+        "offer_id": "6460551001",
+        "price": "2300.0000"
+      }
+    ],
+    "barcodes": {
+      "upper_barcode": "%101%10293145035",
+      "lower_barcode": "201864523528000"
+    }
+  }
+}
 ```
 
 ## 使用提醒

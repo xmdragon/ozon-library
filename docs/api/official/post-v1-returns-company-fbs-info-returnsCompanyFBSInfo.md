@@ -47,13 +47,41 @@
 ### 示例 0
 
 ```json
-{"filter": {"place_id": 0},"pagination": {"last_id": 0,"limit": 500}}
+{
+  "filter": {
+    "place_id": 0
+  },
+  "pagination": {
+    "last_id": 0,
+    "limit": 500
+  }
+}
 ```
 
 ### 示例 1
 
 ```json
-{"drop_off_points": [{"address": "string","box_count": 0,"id": 0,"name": "string","pass_info": {"count": 0,"is_required": true},"place_id": 0,"returns_count": 0,"utc_offset": "string","warehouses_ids": ["string"]}],"has_next": true}
+{
+  "drop_off_points": [
+    {
+      "address": "string",
+      "box_count": 0,
+      "id": 0,
+      "name": "string",
+      "pass_info": {
+        "count": 0,
+        "is_required": true
+      },
+      "place_id": 0,
+      "returns_count": 0,
+      "utc_offset": "string",
+      "warehouses_ids": [
+        "string"
+      ]
+    }
+  ],
+  "has_next": true
+}
 ```
 
 ## 使用提醒

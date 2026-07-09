@@ -123,13 +123,83 @@ PAUSED
 ### 示例 12
 
 ```json
-{"action_ids": ["string"],"action_type": ["DISCOUNT"],"limit": 1,"offset": 0,"search": "string","status": ["ACTIVE"]}
+{
+  "action_ids": [
+    "string"
+  ],
+  "action_type": [
+    "DISCOUNT"
+  ],
+  "limit": 1,
+  "offset": 0,
+  "search": "string",
+  "status": [
+    "ACTIVE"
+  ]
+}
 ```
 
 ### 示例 13
 
 ```json
-{"actions": [{"action_id": 0,"action_parameters": {"addresses": ["string"],"auto_stop_action_reason": "UNSPECIFIED","budget": 0,"budget_spent": 0,"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","discount_levels": [{"discount_value": 0,"order_amount": 0}],"discount_type": "UNSPECIFIED","discount_value": 0,"is_legal_entities_segment": true,"min_action_percent": 0,"min_order_amount": 0,"picked_segments": [{"segments": [{"description": "string","id": 0,"name": "string","type": "UNSPECIFIED"}]}],"status": "ACTIVE","title": "string","type": "DISCOUNT","voucher_parameters": {"count_codes": 0,"is_private": true,"type": "UNSPECIFIED"},"warehouses": ["string"]},"allow_delete": true,"highlight_url": "string","is_editable": true,"is_participated": true,"is_turn_on": true,"sku_count": 0}],"total": 0}
+{
+  "actions": [
+    {
+      "action_id": 0,
+      "action_parameters": {
+        "addresses": [
+          "string"
+        ],
+        "auto_stop_action_reason": "UNSPECIFIED",
+        "budget": 0,
+        "budget_spent": 0,
+        "date_end": "2019-08-24T14:15:22Z",
+        "date_start": "2019-08-24T14:15:22Z",
+        "discount_levels": [
+          {
+            "discount_value": 0,
+            "order_amount": 0
+          }
+        ],
+        "discount_type": "UNSPECIFIED",
+        "discount_value": 0,
+        "is_legal_entities_segment": true,
+        "min_action_percent": 0,
+        "min_order_amount": 0,
+        "picked_segments": [
+          {
+            "segments": [
+              {
+                "description": "string",
+                "id": 0,
+                "name": "string",
+                "type": "UNSPECIFIED"
+              }
+            ]
+          }
+        ],
+        "status": "ACTIVE",
+        "title": "string",
+        "type": "DISCOUNT",
+        "voucher_parameters": {
+          "count_codes": 0,
+          "is_private": true,
+          "type": "UNSPECIFIED"
+        },
+        "warehouses": [
+          "string"
+        ]
+      },
+      "allow_delete": true,
+      "highlight_url": "string",
+      "is_editable": true,
+      "is_participated": true,
+      "is_turn_on": true,
+      "sku_count": 0
+    }
+  ],
+  "total": 0
+}
 ```
 
 ## 使用提醒

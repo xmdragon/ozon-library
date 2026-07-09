@@ -49,13 +49,25 @@ true
 ### 示例 1
 
 ```json
-{"driver_name": "string","row_version": 0,"supply_id": "string","vehicle_number": "string","vehicle_type": "string"}
+{
+  "driver_name": "string",
+  "row_version": 0,
+  "supply_id": "string",
+  "vehicle_number": "string",
+  "vehicle_type": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"error": {"errors": "ERROR_TYPE_UNSPECIFIED"},"is_error": true,"row_version": 0}
+{
+  "error": {
+    "errors": "ERROR_TYPE_UNSPECIFIED"
+  },
+  "is_error": true,
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

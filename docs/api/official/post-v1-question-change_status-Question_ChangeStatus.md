@@ -57,13 +57,22 @@ PROCESSED
 ### 示例 3
 
 ```json
-{"question_ids": ["string"],"status": "VIEWED"}
+{
+  "question_ids": [
+    "string"
+  ],
+  "status": "VIEWED"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"code": 0,"details": "string","message": "string"}
+{
+  "code": 0,
+  "details": "string",
+  "message": "string"
+}
 ```
 
 ## 使用提醒

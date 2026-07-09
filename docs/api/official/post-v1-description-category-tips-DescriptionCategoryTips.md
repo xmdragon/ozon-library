@@ -56,13 +56,27 @@
 ### 示例 0
 
 ```json
-{"type_id": ["string"]}
+{
+  "type_id": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": [{"images_url": ["string"],"info_url": "string","type_id": 0}]}
+{
+  "result": [
+    {
+      "images_url": [
+        "string"
+      ],
+      "info_url": "string",
+      "type_id": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

@@ -138,13 +138,195 @@ last_id
 ### 示例 7
 
 ```json
-{"filter": {"product_id": ["213761435"],"visibility": "ALL"},"limit": 100,"last_id": "okVsfA==«","sort_dir": "ASC"}
+{
+  "filter": {
+    "product_id": [
+      "213761435"
+    ],
+    "visibility": "ALL"
+  },
+  "limit": 100,
+  "last_id": "okVsfA==«",
+  "sort_dir": "ASC"
+}
 ```
 
 ### 示例 8
 
 ```json
-{"result": [{"id": 213761435,"barcode": "","category_id": 17038062,"name": "Пленка защитная для Xiaomi Redmi Note 10 Pro 5G","offer_id": "21470","height": 10,"depth": 210,"width": 140,"dimension_unit": "mm","weight": 50,"weight_unit": "g","images": [{"file_name": "https://ir-21.ozonru.cn/s3/multimedia-f/6190456071.jpg","default": true,"index": 0},{"file_name": "https://ir-21.ozonru.cn/s3/multimedia-7/6190456099.jpg","default": false,"index": 1},{"file_name": "https://ir-21.ozonru.cn/s3/multimedia-9/6190456065.jpg","default": false,"index": 2}],"images360": [ ],"pdf_list": [ ],"attributes": [{"attribute_id": 5219,"complex_id": 0,"values": [{"dictionary_value_id": 970718176,"value": "универсальный"}]},{"attribute_id": 11051,"complex_id": 0,"values": [{"dictionary_value_id": 970736931,"value": "Прозрачный"}]},{"attribute_id": 10100,"complex_id": 0,"values": [{"dictionary_value_id": 0,"value": "false"}]},{"attribute_id": 11794,"complex_id": 0,"values": [{"dictionary_value_id": 970860783,"value": "safe"}]},{"attribute_id": 9048,"complex_id": 0,"values": [{"dictionary_value_id": 0,"value": "Пленка защитная для Xiaomi Redmi Note 10 Pro 5G"}]},{"attribute_id": 5076,"complex_id": 0,"values": [{"dictionary_value_id": 39638,"value": "Xiaomi"}]},{"attribute_id": 9024,"complex_id": 0,"values": [{"dictionary_value_id": 0,"value": "21470"}]},{"attribute_id": 10015,"complex_id": 0,"values": [{"dictionary_value_id": 0,"value": "false"}]},{"attribute_id": 85,"complex_id": 0,"values": [{"dictionary_value_id": 971034861,"value": "Brand"}]},{"attribute_id": 9461,"complex_id": 0,"values": [{"dictionary_value_id": 349824787,"value": "Защитная пленка для смартфона"}]},{"attribute_id": 4180,"complex_id": 0,"values": [{"dictionary_value_id": 0,"value": "Пленка защитная для Xiaomi Redmi Note 10 Pro 5G"}]},{"attribute_id": 4191,"complex_id": 0,"values": [{"dictionary_value_id": 0,"value": "Пленка предназначена для модели Xiaomi Redmi Note 10 Pro 5G. Защитная гидрогелевая пленка обеспечит защиту вашего смартфона от царапин, пыли, сколов и потертостей."}]},{"attribute_id": 8229,"complex_id": 0,"values": [{"dictionary_value_id": 91521,"value": "Защитная пленка"}]}],"complex_attributes": [ ],"color_image": "","last_id": ""}],"total": 1,"last_id": "onVsfA=="}
+{
+  "result": [
+    {
+      "id": 213761435,
+      "barcode": "",
+      "category_id": 17038062,
+      "name": "Пленка защитная для Xiaomi Redmi Note 10 Pro 5G",
+      "offer_id": "21470",
+      "height": 10,
+      "depth": 210,
+      "width": 140,
+      "dimension_unit": "mm",
+      "weight": 50,
+      "weight_unit": "g",
+      "images": [
+        {
+          "file_name": "https://ir-21.ozonru.cn/s3/multimedia-f/6190456071.jpg",
+          "default": true,
+          "index": 0
+        },
+        {
+          "file_name": "https://ir-21.ozonru.cn/s3/multimedia-7/6190456099.jpg",
+          "default": false,
+          "index": 1
+        },
+        {
+          "file_name": "https://ir-21.ozonru.cn/s3/multimedia-9/6190456065.jpg",
+          "default": false,
+          "index": 2
+        }
+      ],
+      "images360": [],
+      "pdf_list": [],
+      "attributes": [
+        {
+          "attribute_id": 5219,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 970718176,
+              "value": "универсальный"
+            }
+          ]
+        },
+        {
+          "attribute_id": 11051,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 970736931,
+              "value": "Прозрачный"
+            }
+          ]
+        },
+        {
+          "attribute_id": 10100,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 0,
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "attribute_id": 11794,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 970860783,
+              "value": "safe"
+            }
+          ]
+        },
+        {
+          "attribute_id": 9048,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 0,
+              "value": "Пленка защитная для Xiaomi Redmi Note 10 Pro 5G"
+            }
+          ]
+        },
+        {
+          "attribute_id": 5076,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 39638,
+              "value": "Xiaomi"
+            }
+          ]
+        },
+        {
+          "attribute_id": 9024,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 0,
+              "value": "21470"
+            }
+          ]
+        },
+        {
+          "attribute_id": 10015,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 0,
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "attribute_id": 85,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 971034861,
+              "value": "Brand"
+            }
+          ]
+        },
+        {
+          "attribute_id": 9461,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 349824787,
+              "value": "Защитная пленка для смартфона"
+            }
+          ]
+        },
+        {
+          "attribute_id": 4180,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 0,
+              "value": "Пленка защитная для Xiaomi Redmi Note 10 Pro 5G"
+            }
+          ]
+        },
+        {
+          "attribute_id": 4191,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 0,
+              "value": "Пленка предназначена для модели Xiaomi Redmi Note 10 Pro 5G. Защитная гидрогелевая пленка обеспечит защиту вашего смартфона от царапин, пыли, сколов и потертостей."
+            }
+          ]
+        },
+        {
+          "attribute_id": 8229,
+          "complex_id": 0,
+          "values": [
+            {
+              "dictionary_value_id": 91521,
+              "value": "Защитная пленка"
+            }
+          ]
+        }
+      ],
+      "complex_attributes": [],
+      "color_image": "",
+      "last_id": ""
+    }
+  ],
+  "total": 1,
+  "last_id": "onVsfA=="
+}
 ```
 
 ## 使用提醒

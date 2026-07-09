@@ -121,13 +121,54 @@ DELIVERY
 ### 示例 8
 
 ```json
-{"filters": {"cancellation_initiator": ["CLIENT"],"posting_number": ["34009011-0094-1"],"state": "ALL"},"limit": 500,"last_id": 0,"with": {"counter": true}}
+{
+  "filters": {
+    "cancellation_initiator": [
+      "CLIENT"
+    ],
+    "posting_number": [
+      "34009011-0094-1"
+    ],
+    "state": "ALL"
+  },
+  "limit": 500,
+  "last_id": 0,
+  "with": {
+    "counter": true
+  }
+}
 ```
 
 ### 示例 9
 
 ```json
-{"result": [{"approve_comment": "string","approve_date": "2024-11-27T12:31:43.621Z","auto_approve_date": "2024-11-27T12:31:43.621Z","cancellation_id": 0,"cancellation_initiator": "OZON","cancellation_reason": {"id": 0,"name": "string"},"cancellation_reason_message": "string","cancelled_at": "2024-11-27T12:31:43.621Z","order_date": "2024-11-27T12:31:43.621Z","posting_number": "string","state": {"id": 0,"name": "string","state": "ALL"},"tpl_integration_type": "string"}],"counter": "1","last_id": 283784254}
+{
+  "result": [
+    {
+      "approve_comment": "string",
+      "approve_date": "2024-11-27T12:31:43.621Z",
+      "auto_approve_date": "2024-11-27T12:31:43.621Z",
+      "cancellation_id": 0,
+      "cancellation_initiator": "OZON",
+      "cancellation_reason": {
+        "id": 0,
+        "name": "string"
+      },
+      "cancellation_reason_message": "string",
+      "cancelled_at": "2024-11-27T12:31:43.621Z",
+      "order_date": "2024-11-27T12:31:43.621Z",
+      "posting_number": "string",
+      "state": {
+        "id": 0,
+        "name": "string",
+        "state": "ALL"
+      },
+      "tpl_integration_type": "string"
+    }
+  ],
+  "counter": "1",
+  "last_id": 283784254
+}
 ```
 
 ## 使用提醒

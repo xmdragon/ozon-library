@@ -84,13 +84,67 @@
 ### 示例 0
 
 ```json
-{"return_id": 0}
+{
+  "return_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"returns": {"available_actions": [{"action": {"id": 0,"name": "string"}}],"client_name": "string","client_photo": ["string"],"client_return_method_type": {"id": 0,"name": "string"},"comment": "string","created_at": "2025-09-04T13:49:20.340Z","order_number": "string","posting_number": "string","product": {"currency_code": "string","name": "string","offer_id": "string","price": 0,"sku": 0},"rejection_comment": "string","rejection_reason": [{"hint": "string","id": 0,"is_comment_required": true,"name": "string"}],"return_method_description": "string","return_number": "string","return_reason": {"id": 0,"is_defect": true,"name": "string"},"ru_post_tracking_number": "string","state": {"state": "string","state_name": "string"},"warehouse_id": 0}}
+{
+  "returns": {
+    "available_actions": [
+      {
+        "action": {
+          "id": 0,
+          "name": "string"
+        }
+      }
+    ],
+    "client_name": "string",
+    "client_photo": [
+      "string"
+    ],
+    "client_return_method_type": {
+      "id": 0,
+      "name": "string"
+    },
+    "comment": "string",
+    "created_at": "2025-09-04T13:49:20.340Z",
+    "order_number": "string",
+    "posting_number": "string",
+    "product": {
+      "currency_code": "string",
+      "name": "string",
+      "offer_id": "string",
+      "price": 0,
+      "sku": 0
+    },
+    "rejection_comment": "string",
+    "rejection_reason": [
+      {
+        "hint": "string",
+        "id": 0,
+        "is_comment_required": true,
+        "name": "string"
+      }
+    ],
+    "return_method_description": "string",
+    "return_number": "string",
+    "return_reason": {
+      "id": 0,
+      "is_defect": true,
+      "name": "string"
+    },
+    "ru_post_tracking_number": "string",
+    "state": {
+      "state": "string",
+      "state_name": "string"
+    },
+    "warehouse_id": 0
+  }
+}
 ```
 
 ## 使用提醒

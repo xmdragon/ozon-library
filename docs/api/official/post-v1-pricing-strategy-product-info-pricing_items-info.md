@@ -74,13 +74,24 @@ true
 ### 示例 2
 
 ```json
-{"product_id": 7856197312}
+{
+  "product_id": 7856197312
+}
 ```
 
 ### 示例 3
 
 ```json
-{"result": {"strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477","is_enabled": true,"strategy_product_price": 500,"price_downloaded_at": "2022-11-17T15:33:53.936Z","strategy_competitor_id": "b7cd30e6-5667-424d-b105-fbec30a52477","strategy_competitor_product_url": "http://primerurl/pricing-strategy/product/info.ru"}}
+{
+  "result": {
+    "strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477",
+    "is_enabled": true,
+    "strategy_product_price": 500,
+    "price_downloaded_at": "2022-11-17T15:33:53.936Z",
+    "strategy_competitor_id": "b7cd30e6-5667-424d-b105-fbec30a52477",
+    "strategy_competitor_product_url": "http://primerurl/pricing-strategy/product/info.ru"
+  }
+}
 ```
 
 ## 使用提醒

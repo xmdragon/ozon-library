@@ -56,13 +56,40 @@ last_id
 ### 示例 1
 
 ```json
-{"action_id": 66011,"limit": 10,"last_id": "bnVсbA=="}
+{
+  "action_id": 66011,
+  "limit": 10,
+  "last_id": "bnVсbA=="
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": {"products": [{"id": 28745,"price": 99,"action_price": 50,"alert_max_action_price_failed": true,"alert_max_action_price": 31,"max_action_price": 32,"add_mode": "MANUAL","stock": 20,"min_stock": 3,"current_boost": 1,"price_min_elastic": 2,"price_max_elastic": 5,"min_boost": 10,"max_boost": 15}],"total": 263,"last_id": "bnVсbA=="}}
+{
+  "result": {
+    "products": [
+      {
+        "id": 28745,
+        "price": 99,
+        "action_price": 50,
+        "alert_max_action_price_failed": true,
+        "alert_max_action_price": 31,
+        "max_action_price": 32,
+        "add_mode": "MANUAL",
+        "stock": 20,
+        "min_stock": 3,
+        "current_boost": 1,
+        "price_min_elastic": 2,
+        "price_max_elastic": 5,
+        "min_boost": 10,
+        "max_boost": 15
+      }
+    ],
+    "total": 263,
+    "last_id": "bnVсbA=="
+  }
+}
 ```
 
 ## 使用提醒

@@ -89,13 +89,32 @@ product_id
 ### 示例 4
 
 ```json
-{"sku": ["string"],"offer_id": ["string"]}
+{
+  "sku": [
+    "string"
+  ],
+  "offer_id": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 5
 
 ```json
-{"result": [{"sku": 0,"offer_id": "string","present": 0,"product_id": 0,"reserved": 0,"warehouse_id": 0,"warehouse_name": "string"}]}
+{
+  "result": [
+    {
+      "sku": 0,
+      "offer_id": "string",
+      "present": 0,
+      "product_id": 0,
+      "reserved": 0,
+      "warehouse_id": 0,
+      "warehouse_name": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

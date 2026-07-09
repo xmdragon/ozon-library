@@ -114,13 +114,32 @@ strategyItemsListChanged
 ### 示例 9
 
 ```json
-{"strategy_id": "2fb3e6a3-3db5-4bb4-8430-b2de39fc3265"}
+{
+  "strategy_id": "2fb3e6a3-3db5-4bb4-8430-b2de39fc3265"
+}
 ```
 
 ### 示例 10
 
 ```json
-{"result": {"strategy_name": "策略_来自_CID7","enabled": true,"update_type": "strategyItemsListChanged","type": "COMP_PRICE","competitors": [{"competitor_id": 204,"coefficient": 1},{"competitor_id": 1008426,"coefficient": 1}]}}
+{
+  "result": {
+    "strategy_name": "策略_来自_CID7",
+    "enabled": true,
+    "update_type": "strategyItemsListChanged",
+    "type": "COMP_PRICE",
+    "competitors": [
+      {
+        "competitor_id": 204,
+        "coefficient": 1
+      },
+      {
+        "competitor_id": 1008426,
+        "coefficient": 1
+      }
+    ]
+  }
+}
 ```
 
 ## 使用提醒

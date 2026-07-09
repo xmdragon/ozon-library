@@ -66,13 +66,101 @@
 ### 示例 0
 
 ```json
-{"posting_number": "string"}
+{
+  "posting_number": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"posting": {"analytics_data": {"city": "string","delivery_date_begin": "2019-08-24T14:15:22Z","delivery_date_end": "2019-08-24T14:15:22Z","delivery_type": "string","region": "string","warehouse_id": 0},"cancellation": {"cancel_reason": "string","cancel_reason_id": 0,"cancellation_initiator": "string","cancellation_type": "string"},"financial_data": {"cluster_from": "string","cluster_to": "string","delivery_amount": 0,"products": [{"actions": [{"action_id": 0,"action_type": "string","date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","description": "string","discount_percent": 0,"discount_value": 0}],"commissions_price": {"amount": "string","currency": "string"},"customer_price": {"amount": "string","currency": "string"},"old_price": 0,"posting_commission": {"amount": 0,"payout": 0,"percent": 0},"quantity": 0,"return_commission": {"amount": 0,"payout": 0,"percent": 0},"seller_price": {"amount": "string","currency": "string"},"sku": 0,"total_discount_percent": 0,"total_discount_value": 0}]},"in_process_at": "2019-08-24T14:15:22Z","order_date": "2019-08-24T14:15:22Z","order_id": 0,"order_number": "string","posting_number": "string","products": [{"has_imei": true,"marketplace_seller_price": {"amount": "string","currency": "string"},"name": "string","offer_id": "string","quantity": 0,"sku": 0,"weight_max": 0}],"status": 0,"substatus": "string","tpl_provider_id": 0}}
+{
+  "posting": {
+    "analytics_data": {
+      "city": "string",
+      "delivery_date_begin": "2019-08-24T14:15:22Z",
+      "delivery_date_end": "2019-08-24T14:15:22Z",
+      "delivery_type": "string",
+      "region": "string",
+      "warehouse_id": 0
+    },
+    "cancellation": {
+      "cancel_reason": "string",
+      "cancel_reason_id": 0,
+      "cancellation_initiator": "string",
+      "cancellation_type": "string"
+    },
+    "financial_data": {
+      "cluster_from": "string",
+      "cluster_to": "string",
+      "delivery_amount": 0,
+      "products": [
+        {
+          "actions": [
+            {
+              "action_id": 0,
+              "action_type": "string",
+              "date_from": "2019-08-24T14:15:22Z",
+              "date_to": "2019-08-24T14:15:22Z",
+              "description": "string",
+              "discount_percent": 0,
+              "discount_value": 0
+            }
+          ],
+          "commissions_price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "customer_price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "old_price": 0,
+          "posting_commission": {
+            "amount": 0,
+            "payout": 0,
+            "percent": 0
+          },
+          "quantity": 0,
+          "return_commission": {
+            "amount": 0,
+            "payout": 0,
+            "percent": 0
+          },
+          "seller_price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "sku": 0,
+          "total_discount_percent": 0,
+          "total_discount_value": 0
+        }
+      ]
+    },
+    "in_process_at": "2019-08-24T14:15:22Z",
+    "order_date": "2019-08-24T14:15:22Z",
+    "order_id": 0,
+    "order_number": "string",
+    "posting_number": "string",
+    "products": [
+      {
+        "has_imei": true,
+        "marketplace_seller_price": {
+          "amount": "string",
+          "currency": "string"
+        },
+        "name": "string",
+        "offer_id": "string",
+        "quantity": 0,
+        "sku": 0,
+        "weight_max": 0
+      }
+    ],
+    "status": 0,
+    "substatus": "string",
+    "tpl_provider_id": 0
+  }
+}
 ```
 
 ## 使用提醒

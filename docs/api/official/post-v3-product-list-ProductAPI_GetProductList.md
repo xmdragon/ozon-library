@@ -94,13 +94,41 @@ last_id
 ### 示例 6
 
 ```json
-{"filter": {"offer_id": ["136748"],"product_id": ["223681945"],"visibility": "ALL"},"last_id": "","limit": 100}
+{
+  "filter": {
+    "offer_id": [
+      "136748"
+    ],
+    "product_id": [
+      "223681945"
+    ],
+    "visibility": "ALL"
+  },
+  "last_id": "",
+  "limit": 100
+}
 ```
 
 ### 示例 7
 
 ```json
-{"result": {"items": [{"product_id": 3397917680,"offer_id": "2026-01-13 16:56:03 PDF","has_fbo_stocks": false,"has_fbs_stocks": false,"archived": false,"is_discounted": false,"quants": [ ]}],"total": 1,"last_id": "WzMzOTc5MTc2ODAsMzM5NzkxNzY4MF0="}}
+{
+  "result": {
+    "items": [
+      {
+        "product_id": 3397917680,
+        "offer_id": "2026-01-13 16:56:03 PDF",
+        "has_fbo_stocks": false,
+        "has_fbs_stocks": false,
+        "archived": false,
+        "is_discounted": false,
+        "quants": []
+      }
+    ],
+    "total": 1,
+    "last_id": "WzMzOTc5MTc2ODAsMzM5NzkxNzY4MF0="
+  }
+}
 ```
 
 ## 使用提醒

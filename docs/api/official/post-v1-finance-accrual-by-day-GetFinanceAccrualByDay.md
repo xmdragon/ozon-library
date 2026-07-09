@@ -53,13 +53,108 @@ last_id
 ### 示例 1
 
 ```json
-{"date": "string","last_id": "string"}
+{
+  "date": "string",
+  "last_id": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"accruals": [{"accrued_category": "UNSPECIFIED","date": "string","item_fees": {"fees": [{"fees": [{"accrued": {"amount": "string","currency": "string"},"type_id": 0}],"sku": 0}]},"non_item_fee": {"accrued": {"amount": "string","currency": "string"},"type_id": 0},"posting": {"delivery_schema": "string","delivery_speed": 0,"products": [{"commission": {"bonus": {"amount": "string","currency": "string"},"coinvestment": {"amount": "string","currency": "string"},"commission": {"amount": "string","currency": "string"},"commission_ratio": "string","sale_amount": {"amount": "string","currency": "string"},"sale_commission": {"amount": "string","currency": "string"},"sale_price": {"amount": "string","currency": "string"},"seller_price": {"amount": "string","currency": "string"}},"delivery": {"services": [{"accrued": {"amount": null,"currency": null},"type_id": 0}],"total_accrued": {"amount": "string","currency": "string"}},"sku": 0}]},"total_amount": {"amount": "string","currency": "string"},"accrual_id": 0,"unit_number": "string"}],"last_id": "string"}
+{
+  "accruals": [
+    {
+      "accrued_category": "UNSPECIFIED",
+      "date": "string",
+      "item_fees": {
+        "fees": [
+          {
+            "fees": [
+              {
+                "accrued": {
+                  "amount": "string",
+                  "currency": "string"
+                },
+                "type_id": 0
+              }
+            ],
+            "sku": 0
+          }
+        ]
+      },
+      "non_item_fee": {
+        "accrued": {
+          "amount": "string",
+          "currency": "string"
+        },
+        "type_id": 0
+      },
+      "posting": {
+        "delivery_schema": "string",
+        "delivery_speed": 0,
+        "products": [
+          {
+            "commission": {
+              "bonus": {
+                "amount": "string",
+                "currency": "string"
+              },
+              "coinvestment": {
+                "amount": "string",
+                "currency": "string"
+              },
+              "commission": {
+                "amount": "string",
+                "currency": "string"
+              },
+              "commission_ratio": "string",
+              "sale_amount": {
+                "amount": "string",
+                "currency": "string"
+              },
+              "sale_commission": {
+                "amount": "string",
+                "currency": "string"
+              },
+              "sale_price": {
+                "amount": "string",
+                "currency": "string"
+              },
+              "seller_price": {
+                "amount": "string",
+                "currency": "string"
+              }
+            },
+            "delivery": {
+              "services": [
+                {
+                  "accrued": {
+                    "amount": null,
+                    "currency": null
+                  },
+                  "type_id": 0
+                }
+              ],
+              "total_accrued": {
+                "amount": "string",
+                "currency": "string"
+              }
+            },
+            "sku": 0
+          }
+        ]
+      },
+      "total_amount": {
+        "amount": "string",
+        "currency": "string"
+      },
+      "accrual_id": 0,
+      "unit_number": "string"
+    }
+  ],
+  "last_id": "string"
+}
 ```
 
 ## 使用提醒

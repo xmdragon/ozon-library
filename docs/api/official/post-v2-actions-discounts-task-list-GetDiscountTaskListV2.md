@@ -156,13 +156,52 @@ DECLINED
 ### 示例 10
 
 ```json
-{"last_id": 0,"limit": 50,"status": "ALL"}
+{
+  "last_id": 0,
+  "limit": 50,
+  "status": "ALL"
+}
 ```
 
 ### 示例 11
 
 ```json
-{"tasks": [{"approved_discount": 0,"approved_price": 0,"approved_quantity_max": 0,"auto_moderated_info": {"max_percent": 0,"max_price": 0,"min_percent": 0,"min_price": 0},"created_at": "2019-08-24T14:15:22Z","edited_till": "2019-08-24T14:15:22Z","edited_till_duration": 0,"email": "string","end_at": "2019-08-24T14:15:22Z","end_at_duration": 0,"first_name": "string","id": 0,"is_auto_moderated": true,"last_name": "string","min_auto_price": 0,"moderated_at": "2019-08-24T14:15:22Z","name": "string","original_price": 0,"patronymic": "string","reduction_factor": 0,"requested_discount": 0,"requested_price": 0,"requested_quantity_max": 0,"sku": 0,"status": "ALL"}]}
+{
+  "tasks": [
+    {
+      "approved_discount": 0,
+      "approved_price": 0,
+      "approved_quantity_max": 0,
+      "auto_moderated_info": {
+        "max_percent": 0,
+        "max_price": 0,
+        "min_percent": 0,
+        "min_price": 0
+      },
+      "created_at": "2019-08-24T14:15:22Z",
+      "edited_till": "2019-08-24T14:15:22Z",
+      "edited_till_duration": 0,
+      "email": "string",
+      "end_at": "2019-08-24T14:15:22Z",
+      "end_at_duration": 0,
+      "first_name": "string",
+      "id": 0,
+      "is_auto_moderated": true,
+      "last_name": "string",
+      "min_auto_price": 0,
+      "moderated_at": "2019-08-24T14:15:22Z",
+      "name": "string",
+      "original_price": 0,
+      "patronymic": "string",
+      "reduction_factor": 0,
+      "requested_discount": 0,
+      "requested_price": 0,
+      "requested_quantity_max": 0,
+      "sku": 0,
+      "status": "ALL"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

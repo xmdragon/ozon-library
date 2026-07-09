@@ -94,13 +94,39 @@ true
 ### 示例 6
 
 ```json
-{"prices": [{"auto_action_enabled": "UNKNOWN","currency_code": "RUB","manage_elastic_boosting_through_price": true,"min_price": "800","min_price_for_auto_actions_enabled": true,"net_price": "650","offer_id": "","old_price": "0","price": "1448","price_strategy_enabled": "UNKNOWN","product_id": 1386,"vat": "0.1"}]}
+{
+  "prices": [
+    {
+      "auto_action_enabled": "UNKNOWN",
+      "currency_code": "RUB",
+      "manage_elastic_boosting_through_price": true,
+      "min_price": "800",
+      "min_price_for_auto_actions_enabled": true,
+      "net_price": "650",
+      "offer_id": "",
+      "old_price": "0",
+      "price": "1448",
+      "price_strategy_enabled": "UNKNOWN",
+      "product_id": 1386,
+      "vat": "0.1"
+    }
+  ]
+}
 ```
 
 ### 示例 7
 
 ```json
-{"result": [{"product_id": 1386,"offer_id": "PH8865","updated": true,"errors": [ ]}]}
+{
+  "result": [
+    {
+      "product_id": 1386,
+      "offer_id": "PH8865",
+      "updated": true,
+      "errors": []
+    }
+  ]
+}
 ```
 
 ## 使用提醒

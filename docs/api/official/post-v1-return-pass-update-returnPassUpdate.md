@@ -38,13 +38,33 @@
 ### 示例 0
 
 ```json
-{"arrival_passes": [{"arrival_pass_id": 6000123456,"arrival_time": "2026-03-17T14:30:00Z","driver_name": "string","driver_phone": "+79991234567","vehicle_license_plate": "А123БВ777","vehicle_model": "string"}]}
+{
+  "arrival_passes": [
+    {
+      "arrival_pass_id": 6000123456,
+      "arrival_time": "2026-03-17T14:30:00Z",
+      "driver_name": "string",
+      "driver_phone": "+79991234567",
+      "vehicle_license_plate": "А123БВ777",
+      "vehicle_model": "string"
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

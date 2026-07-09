@@ -68,13 +68,28 @@ value
 ### 示例 1
 
 ```json
-{"attribute_id": 85,"description_category_id": 17054869,"limit": 100,"type_id": 97311,"value": "Name"}
+{
+  "attribute_id": 85,
+  "description_category_id": 17054869,
+  "limit": 100,
+  "type_id": 97311,
+  "value": "Name"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": [{"id": 1,"info": "黑色商品","picture": "https://example.com/images/color_black.jpg","value": "黑色"}]}
+{
+  "result": [
+    {
+      "id": 1,
+      "info": "黑色商品",
+      "picture": "https://example.com/images/color_black.jpg",
+      "value": "黑色"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

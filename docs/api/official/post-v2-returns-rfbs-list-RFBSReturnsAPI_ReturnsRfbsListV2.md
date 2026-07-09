@@ -74,13 +74,50 @@ return_id
 ### 示例 1
 
 ```json
-{"filter": {"offer_id": "test-offer-123456","posting_number": "789456123-0002-3","group_state": ["New","Approved"],"created_at": {"from": "2026-02-01T00:00:00Z","to": "2026-03-01T23:59:59Z"}},"last_id": 0,"limit": 1000}
+{
+  "filter": {
+    "offer_id": "test-offer-123456",
+    "posting_number": "789456123-0002-3",
+    "group_state": [
+      "New",
+      "Approved"
+    ],
+    "created_at": {
+      "from": "2026-02-01T00:00:00Z",
+      "to": "2026-03-01T23:59:59Z"
+    }
+  },
+  "last_id": 0,
+  "limit": 1000
+}
 ```
 
 ### 示例 2
 
 ```json
-{"returns": [{"return_id": 8000123456,"return_number": "RET-2026-00123","posting_number": "789456123-0002-3","order_number": "123456789","created_at": "2026-02-15T10:30:00Z","product": {"sku": 1000123456,"offer_id": "test-offer-123456","name": "string","price": 2999,"currency_code": "RUB"},"state": {"group_state": "New","state": "ON_APPROVAL","state_name": "string"}}]}
+{
+  "returns": [
+    {
+      "return_id": 8000123456,
+      "return_number": "RET-2026-00123",
+      "posting_number": "789456123-0002-3",
+      "order_number": "123456789",
+      "created_at": "2026-02-15T10:30:00Z",
+      "product": {
+        "sku": 1000123456,
+        "offer_id": "test-offer-123456",
+        "name": "string",
+        "price": 2999,
+        "currency_code": "RUB"
+      },
+      "state": {
+        "group_state": "New",
+        "state": "ON_APPROVAL",
+        "state_name": "string"
+      }
+    }
+  ]
+}
 ```
 
 ## 使用提醒

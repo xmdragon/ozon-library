@@ -54,13 +54,39 @@
 ### 示例 0
 
 ```json
-{"posting_numbers": ["string"]}
+{
+  "posting_numbers": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"posting_accruals": [{"accruals": [{"accrual_date": "string","accrued": {"amount": "string","currency": "string"},"quantity": 0,"seller_price": {"amount": "string","currency": "string"},"sku": 0,"type_id": 0}],"posting_number": "string"}]}
+{
+  "posting_accruals": [
+    {
+      "accruals": [
+        {
+          "accrual_date": "string",
+          "accrued": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "quantity": 0,
+          "seller_price": {
+            "amount": "string",
+            "currency": "string"
+          },
+          "sku": 0,
+          "type_id": 0
+        }
+      ],
+      "posting_number": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

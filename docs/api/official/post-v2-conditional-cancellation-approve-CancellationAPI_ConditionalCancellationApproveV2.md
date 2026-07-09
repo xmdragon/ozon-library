@@ -37,13 +37,25 @@ ON_APPROVAL
 ### 示例 1
 
 ```json
-{"cancellation_id": 0,"comment": "string"}
+{
+  "cancellation_id": 0,
+  "comment": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

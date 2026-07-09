@@ -107,13 +107,28 @@ SCHEDULE_RESERVE_MISSING
 ### 示例 11
 
 ```json
-{"interval_end": "2019-08-24T14:15:22Z","interval_start": "2019-08-24T14:15:22Z","supply_id": "string"}
+{
+  "interval_end": "2019-08-24T14:15:22Z",
+  "interval_start": "2019-08-24T14:15:22Z",
+  "supply_id": "string"
+}
 ```
 
 ### 示例 12
 
 ```json
-{"reasons": ["EMPTY_TIMESLOTS_REASON_UNSPECIFIED"],"timeslots": [{"timeslot_end": "2019-08-24T14:15:22Z","timeslot_start": "2019-08-24T14:15:22Z"}],"warehouse_timezone_name": "string"}
+{
+  "reasons": [
+    "EMPTY_TIMESLOTS_REASON_UNSPECIFIED"
+  ],
+  "timeslots": [
+    {
+      "timeslot_end": "2019-08-24T14:15:22Z",
+      "timeslot_start": "2019-08-24T14:15:22Z"
+    }
+  ],
+  "warehouse_timezone_name": "string"
+}
 ```
 
 ## 使用提醒

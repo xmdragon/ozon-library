@@ -53,13 +53,23 @@ true
 ### 示例 1
 
 ```json
-{"supply_id": "string"}
+{
+  "supply_id": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"error": {"order_errors": ["ERROR_TYPE_UNSPECIFIED"]},"is_error": true,"row_version": 0}
+{
+  "error": {
+    "order_errors": [
+      "ERROR_TYPE_UNSPECIFIED"
+    ]
+  },
+  "is_error": true,
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

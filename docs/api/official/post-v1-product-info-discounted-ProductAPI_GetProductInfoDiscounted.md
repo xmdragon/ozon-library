@@ -76,13 +76,35 @@
 ### 示例 0
 
 ```json
-{"discounted_skus": ["635548518"]}
+{
+  "discounted_skus": [
+    "635548518"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"items": [{"discounted_sku": 635548518,"sku": 320067758,"condition_estimation": "4","packaging_violation": "","warranty_type": "","reason_damaged": "Механическое повреждение","comment_reason_damaged": "повреждена заводская упаковка","defects": "","mechanical_damage": "","package_damage": "","shortage": "","repair": "","condition": ""}]}
+{
+  "items": [
+    {
+      "discounted_sku": 635548518,
+      "sku": 320067758,
+      "condition_estimation": "4",
+      "packaging_violation": "",
+      "warranty_type": "",
+      "reason_damaged": "Механическое повреждение",
+      "comment_reason_damaged": "повреждена заводская упаковка",
+      "defects": "",
+      "mechanical_damage": "",
+      "package_damage": "",
+      "shortage": "",
+      "repair": "",
+      "condition": ""
+    }
+  ]
+}
 ```
 
 ## 使用提醒

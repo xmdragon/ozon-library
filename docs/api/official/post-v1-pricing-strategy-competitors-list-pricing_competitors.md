@@ -45,13 +45,24 @@
 ### 示例 3
 
 ```json
-{"page": 1,"limit": 20}
+{
+  "page": 1,
+  "limit": 20
+}
 ```
 
 ### 示例 4
 
 ```json
-{"competitor": [{"id": 7820251,"name": "grenmarketshop.ru"}],"total": 33}
+{
+  "competitor": [
+    {
+      "id": 7820251,
+      "name": "grenmarketshop.ru"
+    }
+  ],
+  "total": 33
+}
 ```
 
 ## 使用提醒

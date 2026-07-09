@@ -39,13 +39,28 @@
 ### 示例 0
 
 ```json
-{"carriage_id": 5000123456,"arrival_pass_ids": [6000123456,6000123457]}
+{
+  "carriage_id": 5000123456,
+  "arrival_pass_ids": [
+    6000123456,
+    6000123457
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

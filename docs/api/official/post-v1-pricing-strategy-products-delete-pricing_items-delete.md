@@ -52,13 +52,21 @@
 ### 示例 0
 
 ```json
-{"product_id": ["29209"]}
+{
+  "product_id": [
+    "29209"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": {"failed_product_count": 2}}
+{
+  "result": {
+    "failed_product_count": 2
+  }
+}
 ```
 
 ## 使用提醒

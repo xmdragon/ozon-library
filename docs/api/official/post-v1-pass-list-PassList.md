@@ -48,13 +48,65 @@
 ### 示例 0
 
 ```json
-{"cursor": "","filter": {"arrival_pass_ids": ["5000123456","5000123457"],"arrival_reason": "FBS_DELIVERY","dropoff_point_ids": ["7000123456","7000123457"],"only_active_passes": true,"warehouse_ids": ["3000007863","3000007864"]},"limit": 1000}
+{
+  "cursor": "",
+  "filter": {
+    "arrival_pass_ids": [
+      "5000123456",
+      "5000123457"
+    ],
+    "arrival_reason": "FBS_DELIVERY",
+    "dropoff_point_ids": [
+      "7000123456",
+      "7000123457"
+    ],
+    "only_active_passes": true,
+    "warehouse_ids": [
+      "3000007863",
+      "3000007864"
+    ]
+  },
+  "limit": 1000
+}
 ```
 
 ### 示例 1
 
 ```json
-{"arrival_passes": [{"arrival_pass_id": 5000123456,"arrival_reasons": ["FBS_DELIVERY","FBS_RETURN"],"arrival_time": "2026-03-16T10:00:00Z","driver_name": "string","driver_phone": "+79991234567","dropoff_point_id": 7000123456,"is_active": true,"vehicle_license_plate": "string","vehicle_model": "string","warehouse_id": 3000007863},{"arrival_pass_id": 5000123457,"arrival_reasons": ["FBS_RETURN"],"arrival_time": "2026-03-16T14:30:00Z","driver_name": "string","driver_phone": "+79997654321","dropoff_point_id": 7000123457,"is_active": true,"vehicle_license_plate": "string","vehicle_model": "Ford Transit","warehouse_id": 3000007864}],"cursor": "next-page-cursor-12345"}
+{
+  "arrival_passes": [
+    {
+      "arrival_pass_id": 5000123456,
+      "arrival_reasons": [
+        "FBS_DELIVERY",
+        "FBS_RETURN"
+      ],
+      "arrival_time": "2026-03-16T10:00:00Z",
+      "driver_name": "string",
+      "driver_phone": "+79991234567",
+      "dropoff_point_id": 7000123456,
+      "is_active": true,
+      "vehicle_license_plate": "string",
+      "vehicle_model": "string",
+      "warehouse_id": 3000007863
+    },
+    {
+      "arrival_pass_id": 5000123457,
+      "arrival_reasons": [
+        "FBS_RETURN"
+      ],
+      "arrival_time": "2026-03-16T14:30:00Z",
+      "driver_name": "string",
+      "driver_phone": "+79997654321",
+      "dropoff_point_id": 7000123457,
+      "is_active": true,
+      "vehicle_license_plate": "string",
+      "vehicle_model": "Ford Transit",
+      "warehouse_id": 3000007864
+    }
+  ],
+  "cursor": "next-page-cursor-12345"
+}
 ```
 
 ## 使用提醒

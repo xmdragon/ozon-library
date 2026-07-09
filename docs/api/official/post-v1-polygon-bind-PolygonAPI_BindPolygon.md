@@ -41,13 +41,25 @@
 ### 示例 0
 
 ```json
-{"delivery_method_id": 0,"polygons": [{"polygon_id": "1323","time": "30"}],"warehouse_location": {"lat": "58.52391272075821","lon": "31.236791610717773"}}
+{
+  "delivery_method_id": 0,
+  "polygons": [
+    {
+      "polygon_id": "1323",
+      "time": "30"
+    }
+  ],
+  "warehouse_location": {
+    "lat": "58.52391272075821",
+    "lon": "31.236791610717773"
+  }
+}
 ```
 
 ### 示例 1
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

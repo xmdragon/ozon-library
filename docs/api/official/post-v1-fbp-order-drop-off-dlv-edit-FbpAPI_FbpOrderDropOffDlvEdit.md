@@ -47,13 +47,19 @@
 ### 示例 0
 
 ```json
-{"drop_off_date": "string","row_version": 0,"supply_id": "string"}
+{
+  "drop_off_date": "string",
+  "row_version": 0,
+  "supply_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"row_version": 0}
+{
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

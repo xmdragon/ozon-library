@@ -107,13 +107,79 @@ SUPPLY_NOT_CONFIRMED
 ### 示例 9
 
 ```json
-{"supply_id": "string"}
+{
+  "supply_id": "string"
+}
 ```
 
 ### 示例 10
 
 ```json
-{"bundle_id": "string","cancellation_state": {"cancellation_error": {"error_code": "CODE_UNSPECIFIED","message": "string"},"cancellation_status": "STATUS_UNSPECIFIED"},"created_at": "2019-08-24T14:15:22Z","decline_reason": {"failed_sku_ids": ["string"],"message": "string"},"deleted_at": "2019-08-24T14:15:22Z","delivery_details": {"direct_details": {"by_seller_details": {"driver_name": "string","vehicle_registration_number": "string","vehicle_type": "string"},"by_tpl_details": {"tracking_number": "string","transport_company_name": "string"},"timeslot_details": {"timeslot": {"timeslot_end": "2019-08-24T14:15:22Z","timeslot_start": "2019-08-24T14:15:22Z"},"timeslot_reservation_id": "string"}},"drop_off_point": {"id": 0,"province_uuid": "string","timeslot": {"timeslot_end": "2019-08-24T14:15:22Z","timeslot_start": "2019-08-24T14:15:22Z"}},"pickup_details": {"address": "string","comment": "string","date": "2019-08-24T14:15:22Z","sender_name": "string","sender_phone": "string"},"supply_type": "SUPPLY_TYPE_UNSPECIFIED"},"editable": true,"id": 0,"is_cancelable": true,"is_deletable": true,"is_registration_available": true,"locked": true,"package_units_count": 0,"row_version": 0,"status": "DRAFT_STATUS_UNSPECIFIED","supply_id": "string","warehouse_id": 0}
+{
+  "bundle_id": "string",
+  "cancellation_state": {
+    "cancellation_error": {
+      "error_code": "CODE_UNSPECIFIED",
+      "message": "string"
+    },
+    "cancellation_status": "STATUS_UNSPECIFIED"
+  },
+  "created_at": "2019-08-24T14:15:22Z",
+  "decline_reason": {
+    "failed_sku_ids": [
+      "string"
+    ],
+    "message": "string"
+  },
+  "deleted_at": "2019-08-24T14:15:22Z",
+  "delivery_details": {
+    "direct_details": {
+      "by_seller_details": {
+        "driver_name": "string",
+        "vehicle_registration_number": "string",
+        "vehicle_type": "string"
+      },
+      "by_tpl_details": {
+        "tracking_number": "string",
+        "transport_company_name": "string"
+      },
+      "timeslot_details": {
+        "timeslot": {
+          "timeslot_end": "2019-08-24T14:15:22Z",
+          "timeslot_start": "2019-08-24T14:15:22Z"
+        },
+        "timeslot_reservation_id": "string"
+      }
+    },
+    "drop_off_point": {
+      "id": 0,
+      "province_uuid": "string",
+      "timeslot": {
+        "timeslot_end": "2019-08-24T14:15:22Z",
+        "timeslot_start": "2019-08-24T14:15:22Z"
+      }
+    },
+    "pickup_details": {
+      "address": "string",
+      "comment": "string",
+      "date": "2019-08-24T14:15:22Z",
+      "sender_name": "string",
+      "sender_phone": "string"
+    },
+    "supply_type": "SUPPLY_TYPE_UNSPECIFIED"
+  },
+  "editable": true,
+  "id": 0,
+  "is_cancelable": true,
+  "is_deletable": true,
+  "is_registration_available": true,
+  "locked": true,
+  "package_units_count": 0,
+  "row_version": 0,
+  "status": "DRAFT_STATUS_UNSPECIFIED",
+  "supply_id": "string",
+  "warehouse_id": 0
+}
 ```
 
 ## 使用提醒

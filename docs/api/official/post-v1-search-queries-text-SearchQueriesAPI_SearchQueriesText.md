@@ -87,13 +87,42 @@ DESC
 ### 示例 6
 
 ```json
-{"limit": "50","offset": "0","sort_by": "CLIENT_COUNT","sort_dir": "ASC","text": "string"}
+{
+  "limit": "50",
+  "offset": "0",
+  "sort_by": "CLIENT_COUNT",
+  "sort_dir": "ASC",
+  "text": "string"
+}
 ```
 
 ### 示例 7
 
 ```json
-{"search_queries": [{"avg_price": 3786.6,"conversion_to_cart": 0.163,"client_count": 165418,"items_views": 140.828,"query": "куртка женская демисезон","add_to_cart": 26977,"sellers_count": 63.833},{"avg_price": 3786.6,"conversion_to_cart": 0.163,"client_count": 165418,"items_views": 140.828,"query": "куртка женская демисезон","add_to_cart": 26977,"sellers_count": 63.833}],"offset": "string","total": "string"}
+{
+  "search_queries": [
+    {
+      "avg_price": 3786.6,
+      "conversion_to_cart": 0.163,
+      "client_count": 165418,
+      "items_views": 140.828,
+      "query": "куртка женская демисезон",
+      "add_to_cart": 26977,
+      "sellers_count": 63.833
+    },
+    {
+      "avg_price": 3786.6,
+      "conversion_to_cart": 0.163,
+      "client_count": 165418,
+      "items_views": 140.828,
+      "query": "куртка женская демисезон",
+      "add_to_cart": 26977,
+      "sellers_count": 63.833
+    }
+  ],
+  "offset": "string",
+  "total": "string"
+}
 ```
 
 ## 使用提醒

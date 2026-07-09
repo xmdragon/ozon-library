@@ -66,13 +66,39 @@ EN
 ### 示例 2
 
 ```json
-{"filter": {"processed_at_from": "2021-09-02T17:10:54.861Z","processed_at_to": "2021-11-02T17:10:54.861Z","delivery_schema": ["fbs"],"is_express": true,"sku": [ ],"cancel_reason_id": [ ],"offer_id": "","status_alias": [ ],"statuses": [ ],"title": ""},"language": "DEFAULT","with": {"additional_data": false,"analytics_data": false,"customer_data": false,"jewelry_codes": false}}
+{
+  "filter": {
+    "processed_at_from": "2021-09-02T17:10:54.861Z",
+    "processed_at_to": "2021-11-02T17:10:54.861Z",
+    "delivery_schema": [
+      "fbs"
+    ],
+    "is_express": true,
+    "sku": [],
+    "cancel_reason_id": [],
+    "offer_id": "",
+    "status_alias": [],
+    "statuses": [],
+    "title": ""
+  },
+  "language": "DEFAULT",
+  "with": {
+    "additional_data": false,
+    "analytics_data": false,
+    "customer_data": false,
+    "jewelry_codes": false
+  }
+}
 ```
 
 ### 示例 3
 
 ```json
-{"result": {"code": "REPORT_seller_postings_514893_1722847571_32a3508c-6b53-408c-a212-6c97138d23ed"}}
+{
+  "result": {
+    "code": "REPORT_seller_postings_514893_1722847571_32a3508c-6b53-408c-a212-6c97138d23ed"
+  }
+}
 ```
 
 ## 使用提醒

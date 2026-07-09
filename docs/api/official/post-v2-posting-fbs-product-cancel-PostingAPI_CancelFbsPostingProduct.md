@@ -54,13 +54,25 @@ cancel_reason_id
 ### 示例 1
 
 ```json
-{"cancel_reason_id": 352,"cancel_reason_message": "Product is out of stock","items": [{"quantity": 5,"sku": 150587396}],"posting_number": "33920113-1231-1"}
+{
+  "cancel_reason_id": 352,
+  "cancel_reason_message": "Product is out of stock",
+  "items": [
+    {
+      "quantity": 5,
+      "sku": 150587396
+    }
+  ],
+  "posting_number": "33920113-1231-1"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": ""}
+{
+  "result": ""
+}
 ```
 
 ## 使用提醒

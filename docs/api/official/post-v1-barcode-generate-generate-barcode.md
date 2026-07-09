@@ -50,13 +50,26 @@
 ### 示例 0
 
 ```json
-{"product_ids": ["99887766"]}
+{
+  "product_ids": [
+    "99887766"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"errors": [{"code": "123-123","error": "does not exist","barcode": "112772873170","product_id": 9988776612}]}
+{
+  "errors": [
+    {
+      "code": "123-123",
+      "error": "does not exist",
+      "barcode": "112772873170",
+      "product_id": 9988776612
+    }
+  ]
+}
 ```
 
 ## 使用提醒

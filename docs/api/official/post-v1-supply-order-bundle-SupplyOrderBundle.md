@@ -94,13 +94,54 @@ false
 ### 示例 8
 
 ```json
-{"bundle_ids": ["string"],"is_asc": true,"item_tags_calculation": {"dropoff_warehouse_id": 0,"storage_warehouse_ids": ["string"]},"last_id": "string","limit": 100,"query": "string","sort_field": "NAME"}
+{
+  "bundle_ids": [
+    "string"
+  ],
+  "is_asc": true,
+  "item_tags_calculation": {
+    "dropoff_warehouse_id": 0,
+    "storage_warehouse_ids": [
+      "string"
+    ]
+  },
+  "last_id": "string",
+  "limit": 100,
+  "query": "string",
+  "sort_field": "NAME"
+}
 ```
 
 ### 示例 9
 
 ```json
-{"items": [{"icon_path": "string","sku": 0,"name": "string","offer_id": "string","quantity": 0,"barcode": "string","product_id": 0,"quant": 0,"is_quant_editable": true,"volume_in_litres": 0,"total_volume_in_litres": 0,"contractor_item_code": "string","sfbo_attribute": "ITEM_SFBO_ATTRIBUTE_UNSPECIFIED","shipment_type": "BUNDLE_ITEM_SHIPMENT_TYPE_UNSPECIFIED","tags": ["EVSD_REQUIRED"],"placement_zone": "UNSPECIFIED"}],"total_count": 0,"has_next": true,"last_id": "string"}
+{
+  "items": [
+    {
+      "icon_path": "string",
+      "sku": 0,
+      "name": "string",
+      "offer_id": "string",
+      "quantity": 0,
+      "barcode": "string",
+      "product_id": 0,
+      "quant": 0,
+      "is_quant_editable": true,
+      "volume_in_litres": 0,
+      "total_volume_in_litres": 0,
+      "contractor_item_code": "string",
+      "sfbo_attribute": "ITEM_SFBO_ATTRIBUTE_UNSPECIFIED",
+      "shipment_type": "BUNDLE_ITEM_SHIPMENT_TYPE_UNSPECIFIED",
+      "tags": [
+        "EVSD_REQUIRED"
+      ],
+      "placement_zone": "UNSPECIFIED"
+    }
+  ],
+  "total_count": 0,
+  "has_next": true,
+  "last_id": "string"
+}
 ```
 
 ## 使用提醒

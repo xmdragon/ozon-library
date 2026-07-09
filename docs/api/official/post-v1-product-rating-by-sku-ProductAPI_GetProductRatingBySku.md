@@ -56,13 +56,53 @@
 ### 示例 0
 
 ```json
-{"skus": ["179737222"]}
+{
+  "skus": [
+    "179737222"
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"products": [{"sku": 179737222,"rating": 42.5,"groups": [{"key": "media","name": "媒体","rating": 70,"weight": 25,"conditions": [{"key": "media_images_2","description": "已添加2张图片","fulfilled": true,"cost": 50},{"key": "media_video","description": "已添加视频","fulfilled": false,"cost": 15}],"improve_attributes": [{"id": 4074,"name": "视频码"}],"improve_at_least": 2}]}]}
+{
+  "products": [
+    {
+      "sku": 179737222,
+      "rating": 42.5,
+      "groups": [
+        {
+          "key": "media",
+          "name": "媒体",
+          "rating": 70,
+          "weight": 25,
+          "conditions": [
+            {
+              "key": "media_images_2",
+              "description": "已添加2张图片",
+              "fulfilled": true,
+              "cost": 50
+            },
+            {
+              "key": "media_video",
+              "description": "已添加视频",
+              "fulfilled": false,
+              "cost": 15
+            }
+          ],
+          "improve_attributes": [
+            {
+              "id": 4074,
+              "name": "视频码"
+            }
+          ],
+          "improve_at_least": 2
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

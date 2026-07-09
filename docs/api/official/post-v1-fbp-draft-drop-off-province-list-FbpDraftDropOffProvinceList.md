@@ -56,13 +56,23 @@
 ### 示例 0
 
 ```json
-{"warehouse_id": 0}
+{
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"provinces": [{"name": "string","points_count": 0,"province_uuid": "string"}]}
+{
+  "provinces": [
+    {
+      "name": "string",
+      "points_count": 0,
+      "province_uuid": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

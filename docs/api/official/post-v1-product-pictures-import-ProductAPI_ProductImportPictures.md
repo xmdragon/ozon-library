@@ -133,13 +133,43 @@ product_id
 ### 示例 13
 
 ```json
-{"color_image": "https://example.com/cloud-storage/color/marketing-color-red.jpg","images": ["https://example.com/cloud-storage/images/main-image-front.jpg","https://example.com/cloud-storage/images/secondary-image-side.jpg","https://example.com/cloud-storage/images/secondary-image-back.jpg","https://example.com/cloud-storage/images/secondary-image-detail1.jpg","https://example.com/cloud-storage/images/secondary-image-detail2.jpg"],"images360": ["https://example.com/cloud-storage/images360/360-view-001.jpg","https://example.com/cloud-storage/images360/360-view-002.jpg","https://example.com/cloud-storage/images360/360-view-003.jpg","https://example.com/cloud-storage/images360/360-view-004.jpg","https://example.com/cloud-storage/images360/360-view-005.jpg"],"product_id": 123456789}
+{
+  "color_image": "https://example.com/cloud-storage/color/marketing-color-red.jpg",
+  "images": [
+    "https://example.com/cloud-storage/images/main-image-front.jpg",
+    "https://example.com/cloud-storage/images/secondary-image-side.jpg",
+    "https://example.com/cloud-storage/images/secondary-image-back.jpg",
+    "https://example.com/cloud-storage/images/secondary-image-detail1.jpg",
+    "https://example.com/cloud-storage/images/secondary-image-detail2.jpg"
+  ],
+  "images360": [
+    "https://example.com/cloud-storage/images360/360-view-001.jpg",
+    "https://example.com/cloud-storage/images360/360-view-002.jpg",
+    "https://example.com/cloud-storage/images360/360-view-003.jpg",
+    "https://example.com/cloud-storage/images360/360-view-004.jpg",
+    "https://example.com/cloud-storage/images360/360-view-005.jpg"
+  ],
+  "product_id": 123456789
+}
 ```
 
 ### 示例 14
 
 ```json
-{"result": {"pictures": [{"is_360": true,"is_color": true,"is_primary": true,"product_id": 123456789,"state": "uploaded","url": "https://example.com/cloud-storage/images360/360-view-001.jpg"}]}}
+{
+  "result": {
+    "pictures": [
+      {
+        "is_360": true,
+        "is_color": true,
+        "is_primary": true,
+        "product_id": 123456789,
+        "state": "uploaded",
+        "url": "https://example.com/cloud-storage/images360/360-view-001.jpg"
+      }
+    ]
+  }
+}
 ```
 
 ## 使用提醒

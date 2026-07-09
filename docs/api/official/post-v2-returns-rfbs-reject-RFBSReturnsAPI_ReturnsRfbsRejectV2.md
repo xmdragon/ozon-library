@@ -65,13 +65,17 @@ rejection_reason
 ### 示例 4
 
 ```json
-{"return_id": 0,"comment": "string","rejection_reason_id": 0}
+{
+  "return_id": 0,
+  "comment": "string",
+  "rejection_reason_id": 0
+}
 ```
 
 ### 示例 5
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

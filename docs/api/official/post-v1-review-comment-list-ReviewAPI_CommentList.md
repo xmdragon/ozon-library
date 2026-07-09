@@ -59,13 +59,30 @@ DESC
 ### 示例 3
 
 ```json
-{"limit": 100,"offset": 0,"review_id": "0187310a-97d9-dfcf-3039-82d809f0e233","sort_dir": "ASC"}
+{
+  "limit": 100,
+  "offset": 0,
+  "review_id": "0187310a-97d9-dfcf-3039-82d809f0e233",
+  "sort_dir": "ASC"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"comments": [{"id": "string","is_official": true,"is_owner": true,"parent_comment_id": "string","published_at": "2019-08-24T14:15:22Z","text": "string"}],"offset": 0}
+{
+  "comments": [
+    {
+      "id": "string",
+      "is_official": true,
+      "is_owner": true,
+      "parent_comment_id": "string",
+      "published_at": "2019-08-24T14:15:22Z",
+      "text": "string"
+    }
+  ],
+  "offset": 0
+}
 ```
 
 ## 使用提醒

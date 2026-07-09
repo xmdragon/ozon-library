@@ -73,13 +73,21 @@ DROP_OFF
 ### 示例 4
 
 ```json
-{"first_mile_type": "DROP_OFF","drop_off_point_id": 0,"cut_in_time": 0,"timeslot_id": 0,"warehouse_id": 0}
+{
+  "first_mile_type": "DROP_OFF",
+  "drop_off_point_id": 0,
+  "cut_in_time": 0,
+  "timeslot_id": 0,
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 5
 
 ```json
-{"operation_id": "string"}
+{
+  "operation_id": "string"
+}
 ```
 
 ## 使用提醒

@@ -45,13 +45,30 @@
 ### 示例 3
 
 ```json
-{"page": 1,"limit": 20}
+{
+  "page": 1,
+  "limit": 20
+}
 ```
 
 ### 示例 4
 
 ```json
-{"strategies": [{"id": "2fb3e6a3-3db5-4bb4-8430-b2de39fc3265","name": "策略_来自_CID7","type": "COMP_PRICE","update_type": "strategyEnabled","updated_at": "2024-05-02 14:47:02.594774+00","products_count": 1,"competitors_count": 1,"enabled": true}],"total": 5}
+{
+  "strategies": [
+    {
+      "id": "2fb3e6a3-3db5-4bb4-8430-b2de39fc3265",
+      "name": "策略_来自_CID7",
+      "type": "COMP_PRICE",
+      "update_type": "strategyEnabled",
+      "updated_at": "2024-05-02 14:47:02.594774+00",
+      "products_count": 1,
+      "competitors_count": 1,
+      "enabled": true
+    }
+  ],
+  "total": 5
+}
 ```
 
 ## 使用提醒

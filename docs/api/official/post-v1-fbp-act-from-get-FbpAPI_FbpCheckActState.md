@@ -99,13 +99,19 @@ ERROR
 ### 示例 10
 
 ```json
-{"file_uuid": "string"}
+{
+  "file_uuid": "string"
+}
 ```
 
 ### 示例 11
 
 ```json
-{"cdn_url": "string","error": "ERROR_REASON_UNSPECIFIED","status": "STATUS_UNSPECIFIED"}
+{
+  "cdn_url": "string",
+  "error": "ERROR_REASON_UNSPECIFIED",
+  "status": "STATUS_UNSPECIFIED"
+}
 ```
 
 ## 使用提醒

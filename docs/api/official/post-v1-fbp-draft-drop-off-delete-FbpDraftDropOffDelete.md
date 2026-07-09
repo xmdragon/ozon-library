@@ -46,13 +46,24 @@
 ### 示例 0
 
 ```json
-{"supply_id": "string"}
+{
+  "supply_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"cancellation_state": {"cancellation_error": {"error_code": "NO_RESPONSE_FROM_3PF","message": "string"},"cancellation_status": "CONFIRMATION"},"row_version": 0}
+{
+  "cancellation_state": {
+    "cancellation_error": {
+      "error_code": "NO_RESPONSE_FROM_3PF",
+      "message": "string"
+    },
+    "cancellation_status": "CONFIRMATION"
+  },
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

@@ -44,13 +44,18 @@ UNPROCESSED
 ### 示例 2
 
 ```json
-{"review_ids": ["string"],"status": "string"}
+{
+  "review_ids": [
+    "string"
+  ],
+  "status": "string"
+}
 ```
 
 ### 示例 3
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

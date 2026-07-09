@@ -78,13 +78,36 @@ true
 ### 示例 6
 
 ```json
-{"last_id": "","limit": 100,"sort_dir": "ASC","status": "ALL"}
+{
+  "last_id": "",
+  "limit": 100,
+  "sort_dir": "ASC",
+  "status": "ALL"
+}
 ```
 
 ### 示例 7
 
 ```json
-{"has_next": true,"last_id": "string","reviews": [{"comments_amount": 0,"id": "string","is_rating_participant": true,"order_status": "string","photos_amount": 0,"published_at": "2019-08-24T14:15:22Z","rating": 0,"sku": 0,"status": "string","text": "string","videos_amount": 0}]}
+{
+  "has_next": true,
+  "last_id": "string",
+  "reviews": [
+    {
+      "comments_amount": 0,
+      "id": "string",
+      "is_rating_participant": true,
+      "order_status": "string",
+      "photos_amount": 0,
+      "published_at": "2019-08-24T14:15:22Z",
+      "rating": 0,
+      "sku": 0,
+      "status": "string",
+      "text": "string",
+      "videos_amount": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

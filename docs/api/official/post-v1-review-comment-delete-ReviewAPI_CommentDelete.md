@@ -31,13 +31,15 @@
 ### 示例 0
 
 ```json
-{"comment_id": "string"}
+{
+  "comment_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{ }
+{}
 ```
 
 ## 使用提醒

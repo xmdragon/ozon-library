@@ -68,13 +68,31 @@ true
 ### 示例 3
 
 ```json
-{"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","discount_levels": [{"discount_value": 0,"order_amount": 0},{"discount_value": 0,"order_amount": 0}],"discount_type": "PERCENT","is_legal_entities_segment": true,"title": "string"}
+{
+  "date_end": "2019-08-24T14:15:22Z",
+  "date_start": "2019-08-24T14:15:22Z",
+  "discount_levels": [
+    {
+      "discount_value": 0,
+      "order_amount": 0
+    },
+    {
+      "discount_value": 0,
+      "order_amount": 0
+    }
+  ],
+  "discount_type": "PERCENT",
+  "is_legal_entities_segment": true,
+  "title": "string"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"action_id": 0}
+{
+  "action_id": 0
+}
 ```
 
 ## 使用提醒

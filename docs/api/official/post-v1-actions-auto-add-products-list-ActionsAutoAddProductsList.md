@@ -61,13 +61,37 @@ offset = 10
 ### 示例 2
 
 ```json
-{"action_id": "250204","auto_add_date": "2035-08-28T14:00:00Z","limit": "1","offset": "0"}
+{
+  "action_id": "250204",
+  "auto_add_date": "2035-08-28T14:00:00Z",
+  "limit": "1",
+  "offset": "0"
+}
 ```
 
 ### 示例 3
 
 ```json
-{"products": [{"produсt_id": "14903","offer_id": "PS0007","sku": "146279508","name": "香薰 / 浴用油 / 精油 \"冷杉\"，250毫升","price": 114,"max_discount_price": 79,"min_seller_price:": 50,"marketplace_seller_price": 59,"action_price_to_auto_add": 79,"min_action_quantity": "0","quantity_to_auto_add": "10","currency": "RUB","add_mode": "MANUAL"}],"total": "443"}
+{
+  "products": [
+    {
+      "produсt_id": "14903",
+      "offer_id": "PS0007",
+      "sku": "146279508",
+      "name": "香薰 / 浴用油 / 精油 \"冷杉\"，250毫升",
+      "price": 114,
+      "max_discount_price": 79,
+      "min_seller_price:": 50,
+      "marketplace_seller_price": 59,
+      "action_price_to_auto_add": 79,
+      "min_action_quantity": "0",
+      "quantity_to_auto_add": "10",
+      "currency": "RUB",
+      "add_mode": "MANUAL"
+    }
+  ],
+  "total": "443"
+}
 ```
 
 ## 使用提醒

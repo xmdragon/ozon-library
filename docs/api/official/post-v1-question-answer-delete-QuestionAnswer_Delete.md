@@ -39,13 +39,20 @@
 ### 示例 0
 
 ```json
-{"answer_id": "0192e7ce-e12c-7a74-afc7-26e877799204","sku": 646399170}
+{
+  "answer_id": "0192e7ce-e12c-7a74-afc7-26e877799204",
+  "sku": 646399170
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": "string","message": "string"}
+{
+  "code": 0,
+  "details": "string",
+  "message": "string"
+}
 ```
 
 ## 使用提醒

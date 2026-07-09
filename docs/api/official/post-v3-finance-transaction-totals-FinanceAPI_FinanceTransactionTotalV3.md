@@ -110,13 +110,31 @@ other
 ### 示例 7
 
 ```json
-{"date": {"from": "2021-11-01T00:00:00.000Z","to": "2021-11-02T00:00:00.000Z"},"posting_number": "","transaction_type": "all"}
+{
+  "date": {
+    "from": "2021-11-01T00:00:00.000Z",
+    "to": "2021-11-02T00:00:00.000Z"
+  },
+  "posting_number": "",
+  "transaction_type": "all"
+}
 ```
 
 ### 示例 8
 
 ```json
-{"result": {"accruals_for_sale": 96647.58,"sale_commission": -11456.65,"processing_and_delivery": -24405.68,"refunds_and_cancellations": -330,"services_amount": -1307.57,"compensation_amount": 0,"money_transfer": 0,"others_amount": 113.05}}
+{
+  "result": {
+    "accruals_for_sale": 96647.58,
+    "sale_commission": -11456.65,
+    "processing_and_delivery": -24405.68,
+    "refunds_and_cancellations": -330,
+    "services_amount": -1307.57,
+    "compensation_amount": 0,
+    "money_transfer": 0,
+    "others_amount": 113.05
+  }
+}
 ```
 
 ## 使用提醒

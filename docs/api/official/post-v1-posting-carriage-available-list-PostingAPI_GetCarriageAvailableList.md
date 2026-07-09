@@ -89,13 +89,45 @@
 ### 示例 0
 
 ```json
-{"delivery_method_id": 0,"departure_date": "2019-08-24T14:15:22Z"}
+{
+  "delivery_method_id": 0,
+  "departure_date": "2019-08-24T14:15:22Z"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": [{"carriage_id": 0,"carriage_postings_count": 0,"carriage_status": "string","cutoff_at": "2019-08-24T14:15:22Z","delivery_method_id": 0,"delivery_method_name": "string","errors": [{"code": "string","status": "string"}],"first_mile_type": "string","has_entrusted_acceptance": true,"mandatory_postings_count": 0,"mandatory_packaged_count": 0,"recommended_time_local": "string","recommended_time_utc_offset_in_minutes": 0,"tpl_provider_icon_url": "string","tpl_provider_name": "string","warehouse_city": "string","warehouse_id": 0,"warehouse_name": "string","warehouse_timezone": "string"}]}
+{
+  "result": [
+    {
+      "carriage_id": 0,
+      "carriage_postings_count": 0,
+      "carriage_status": "string",
+      "cutoff_at": "2019-08-24T14:15:22Z",
+      "delivery_method_id": 0,
+      "delivery_method_name": "string",
+      "errors": [
+        {
+          "code": "string",
+          "status": "string"
+        }
+      ],
+      "first_mile_type": "string",
+      "has_entrusted_acceptance": true,
+      "mandatory_postings_count": 0,
+      "mandatory_packaged_count": 0,
+      "recommended_time_local": "string",
+      "recommended_time_utc_offset_in_minutes": 0,
+      "tpl_provider_icon_url": "string",
+      "tpl_provider_name": "string",
+      "warehouse_city": "string",
+      "warehouse_id": 0,
+      "warehouse_name": "string",
+      "warehouse_timezone": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

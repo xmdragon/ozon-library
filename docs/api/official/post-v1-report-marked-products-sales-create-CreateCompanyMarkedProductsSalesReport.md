@@ -52,13 +52,22 @@
 ### 示例 0
 
 ```json
-{"date": {"from": "string","to": "string"}}
+{
+  "date": {
+    "from": "string",
+    "to": "string"
+  }
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": {"code": "string"}}
+{
+  "result": {
+    "code": "string"
+  }
+}
 ```
 
 ## 使用提醒

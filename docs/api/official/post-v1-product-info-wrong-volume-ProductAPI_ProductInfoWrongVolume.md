@@ -47,13 +47,30 @@
 ### 示例 0
 
 ```json
-{"cursor": "","limit": 1000}
+{
+  "cursor": "",
+  "limit": 1000
+}
 ```
 
 ### 示例 1
 
 ```json
-{"cursor": "string","products": [{"height": 0,"length": 0,"name": "string","offer_id": "string","product_id": 0,"sku": 0,"weight": 0,"width": 0}]}
+{
+  "cursor": "string",
+  "products": [
+    {
+      "height": 0,
+      "length": 0,
+      "name": "string",
+      "offer_id": "string",
+      "product_id": 0,
+      "sku": 0,
+      "weight": 0,
+      "width": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

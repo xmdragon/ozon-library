@@ -52,13 +52,18 @@ true
 ### 示例 1
 
 ```json
-{"posting_number": "789456123-0002-3","new_cutoff_date": "2026-03-16T10:00:00Z"}
+{
+  "posting_number": "789456123-0002-3",
+  "new_cutoff_date": "2026-03-16T10:00:00Z"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": true}
+{
+  "result": true
+}
 ```
 
 ## 使用提醒

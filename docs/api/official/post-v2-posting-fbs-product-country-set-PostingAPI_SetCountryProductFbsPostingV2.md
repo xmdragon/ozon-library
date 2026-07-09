@@ -40,13 +40,20 @@
 ### 示例 0
 
 ```json
-{"country_iso_code": "NO","posting_number": "57195475-0050-3","product_id": 180550365}
+{
+  "country_iso_code": "NO",
+  "posting_number": "57195475-0050-3",
+  "product_id": 180550365
+}
 ```
 
 ### 示例 1
 
 ```json
-{"product_id": 180550365,"is_gtd_needed": true}
+{
+  "product_id": 180550365,
+  "is_gtd_needed": true
+}
 ```
 
 ## 使用提醒

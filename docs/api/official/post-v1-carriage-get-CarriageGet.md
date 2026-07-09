@@ -99,13 +99,44 @@ true
 ### 示例 7
 
 ```json
-{"carriage_id": 0}
+{
+  "carriage_id": 0
+}
 ```
 
 ### 示例 8
 
 ```json
-{"act_type": "string","arrival_pass_ids": ["string"],"available_actions": ["string"],"cancel_availability": {"is_cancel_available": true,"reason": "string"},"carriage_id": 0,"company_id": 0,"containers_count": 0,"created_at": "2019-08-24T14:15:22Z","delivery_method_id": 0,"departure_date": "string","first_mile_type": "string","has_postings_for_next_carriage": true,"integration_type": "string","is_container_label_printed": true,"is_partial": true,"partial_num": 0,"retry_count": 0,"status": "string","tpl_provider_id": 0,"updated_at": "2019-08-24T14:15:22Z","warehouse_id": 0}
+{
+  "act_type": "string",
+  "arrival_pass_ids": [
+    "string"
+  ],
+  "available_actions": [
+    "string"
+  ],
+  "cancel_availability": {
+    "is_cancel_available": true,
+    "reason": "string"
+  },
+  "carriage_id": 0,
+  "company_id": 0,
+  "containers_count": 0,
+  "created_at": "2019-08-24T14:15:22Z",
+  "delivery_method_id": 0,
+  "departure_date": "string",
+  "first_mile_type": "string",
+  "has_postings_for_next_carriage": true,
+  "integration_type": "string",
+  "is_container_label_printed": true,
+  "is_partial": true,
+  "partial_num": 0,
+  "retry_count": 0,
+  "status": "string",
+  "tpl_provider_id": 0,
+  "updated_at": "2019-08-24T14:15:22Z",
+  "warehouse_id": 0
+}
 ```
 
 ## 使用提醒

@@ -58,13 +58,21 @@ product_id
 ### 示例 1
 
 ```json
-{"strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477"}
+{
+  "strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": {"product_id": ["29209"]}}
+{
+  "result": {
+    "product_id": [
+      "29209"
+    ]
+  }
+}
 ```
 
 ## 使用提醒

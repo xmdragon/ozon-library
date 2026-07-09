@@ -108,13 +108,32 @@ true
 ### 示例 8
 
 ```json
-{"stocks": [{"offer_id": "PH11042","product_id": 313455276,"stock": 100,"warehouse_id": 22142605386000}]}
+{
+  "stocks": [
+    {
+      "offer_id": "PH11042",
+      "product_id": 313455276,
+      "stock": 100,
+      "warehouse_id": 22142605386000
+    }
+  ]
+}
 ```
 
 ### 示例 9
 
 ```json
-{"result": [{"warehouse_id": 22142605386000,"product_id": 118597312,"offer_id": "PH11042","updated": true,"errors": [ ]}]}
+{
+  "result": [
+    {
+      "warehouse_id": 22142605386000,
+      "product_id": 118597312,
+      "offer_id": "PH11042",
+      "updated": true,
+      "errors": []
+    }
+  ]
+}
 ```
 
 ## 使用提醒

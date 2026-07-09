@@ -59,13 +59,23 @@ product_id
 ### 示例 2
 
 ```json
-{"action_id": "250204","auto_add_date": "2035-08-28T14:00:00Z","product_ids": ["14914"]}
+{
+  "action_id": "250204",
+  "auto_add_date": "2035-08-28T14:00:00Z",
+  "product_ids": [
+    "14914"
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"product_ids": ["14914"]}
+{
+  "product_ids": [
+    "14914"
+  ]
+}
 ```
 
 ## 使用提醒

@@ -62,7 +62,28 @@ true
 ### 示例 1
 
 ```json
-{"warehouses": [{"address_detailing": {"city": "string","country": "string","house": "string","region": "string","street": "string","zipcode": "string"},"id": 0,"is_bonded": true,"name": "string","partner_name": "string","supply_types": [0],"timezone_name": "string"}]}
+{
+  "warehouses": [
+    {
+      "address_detailing": {
+        "city": "string",
+        "country": "string",
+        "house": "string",
+        "region": "string",
+        "street": "string",
+        "zipcode": "string"
+      },
+      "id": 0,
+      "is_bonded": true,
+      "name": "string",
+      "partner_name": "string",
+      "supply_types": [
+        0
+      ],
+      "timezone_name": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

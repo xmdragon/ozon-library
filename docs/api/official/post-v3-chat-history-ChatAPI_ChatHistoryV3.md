@@ -92,13 +92,45 @@ direction
 ### 示例 7
 
 ```json
-{"chat_id": "18b8e1f9-4ae7-461c-84ea-8e1f54d1a45e","direction": "Forward","filter": {"message_ids": ["3000000300211559667"]},"from_message_id": 3000000000118032000,"limit": 1}
+{
+  "chat_id": "18b8e1f9-4ae7-461c-84ea-8e1f54d1a45e",
+  "direction": "Forward",
+  "filter": {
+    "message_ids": [
+      "3000000300211559667"
+    ]
+  },
+  "from_message_id": 3000000000118032000,
+  "limit": 1
+}
 ```
 
 ### 示例 8
 
 ```json
-{"has_next": true,"messages": [{"context": {"order_number": "123456789","sku": "987654321"},"created_at": "2019-08-24T14:15:22Z","data": ["Здравствуйте, у меня вопрос по вашему товару \"Стекло защитное для смартфонов\", артикул 11223. Подойдет ли он на данную [ модель ](https://www.ozon.ru/product/smartfon-samsung-galaxy-a03s-4-64-gb-chernyy) телефона?"],"is_image": true,"is_read": true,"message_id": "3000000000817031942","moderate_image_status": "SUCCESS","user": {"id": "115568","type": "Сustomer"}}]}
+{
+  "has_next": true,
+  "messages": [
+    {
+      "context": {
+        "order_number": "123456789",
+        "sku": "987654321"
+      },
+      "created_at": "2019-08-24T14:15:22Z",
+      "data": [
+        "Здравствуйте, у меня вопрос по вашему товару \"Стекло защитное для смартфонов\", артикул 11223. Подойдет ли он на данную [ модель ](https://www.ozon.ru/product/smartfon-samsung-galaxy-a03s-4-64-gb-chernyy) телефона?"
+      ],
+      "is_image": true,
+      "is_read": true,
+      "message_id": "3000000000817031942",
+      "moderate_image_status": "SUCCESS",
+      "user": {
+        "id": "115568",
+        "type": "Сustomer"
+      }
+    }
+  ]
+}
 ```
 
 ## 使用提醒

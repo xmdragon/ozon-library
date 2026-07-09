@@ -45,13 +45,17 @@
 ### 示例 0
 
 ```json
-{"warehouse_id": 1020002929332000}
+{
+  "warehouse_id": 1020002929332000
+}
 ```
 
 ### 示例 1
 
 ```json
-{"operation_id": "string"}
+{
+  "operation_id": "string"
+}
 ```
 
 ## 使用提醒

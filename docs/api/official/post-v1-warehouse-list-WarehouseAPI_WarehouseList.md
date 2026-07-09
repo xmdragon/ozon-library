@@ -202,13 +202,55 @@ error
 ### 示例 15
 
 ```json
-{"limit": 1,"offset": 1,"with": {"able_to_set_price": true}}
+{
+  "limit": 1,
+  "offset": 1,
+  "with": {
+    "able_to_set_price": true
+  }
+}
 ```
 
 ### 示例 16
 
 ```json
-{"result": [{"warehouse_id": 17777777788000,"name": "BlueMarketplace","is_rfbs": false,"is_able_to_set_price": false,"has_entrusted_acceptance": true,"first_mile_type": {"dropoff_point_id": "1121111996024111","dropoff_timeslot_id": 294144,"first_mile_is_changing": false,"first_mile_type": "DropOff"},"is_kgt": false,"can_print_act_in_advance": false,"min_working_days": 5,"is_karantin": false,"has_postings_limit": false,"postings_limit": -1,"working_days": [1,2,3,4,5,6,7],"min_postings_limit": 2,"is_timetable_editable": false,"status": "created","is_economy": false,"is_presorted": false}]}
+{
+  "result": [
+    {
+      "warehouse_id": 17777777788000,
+      "name": "BlueMarketplace",
+      "is_rfbs": false,
+      "is_able_to_set_price": false,
+      "has_entrusted_acceptance": true,
+      "first_mile_type": {
+        "dropoff_point_id": "1121111996024111",
+        "dropoff_timeslot_id": 294144,
+        "first_mile_is_changing": false,
+        "first_mile_type": "DropOff"
+      },
+      "is_kgt": false,
+      "can_print_act_in_advance": false,
+      "min_working_days": 5,
+      "is_karantin": false,
+      "has_postings_limit": false,
+      "postings_limit": -1,
+      "working_days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "min_postings_limit": 2,
+      "is_timetable_editable": false,
+      "status": "created",
+      "is_economy": false,
+      "is_presorted": false
+    }
+  ]
+}
 ```
 
 ## 使用提醒

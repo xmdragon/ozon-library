@@ -84,13 +84,24 @@ NONE
 ### 示例 5
 
 ```json
-{"skus": ["string"]}
+{
+  "skus": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 6
 
 ```json
-{"items": [{"showcases_visibility": "UNSPECIFIED","sku": 0}]}
+{
+  "items": [
+    {
+      "showcases_visibility": "UNSPECIFIED",
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

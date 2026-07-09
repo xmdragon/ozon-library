@@ -92,13 +92,38 @@ SUNDAY
 ### 示例 7
 
 ```json
-{"address_coordinates": {"latitude": 55.69626,"longitude": 37.42686},"name": "Склад Балашиха","options": {"comment": "Заезд на склад через главные ворота","courier_phones": ["+7(999)999-99-99"],"is_auto_assembly": true,"is_waybill_enabled": true},"phone": "+7(XXX)XXX-XX-XX","warehouse_id": 1020002929332000,"working_days": ["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"]}
+{
+  "address_coordinates": {
+    "latitude": 55.69626,
+    "longitude": 37.42686
+  },
+  "name": "Склад Балашиха",
+  "options": {
+    "comment": "Заезд на склад через главные ворота",
+    "courier_phones": [
+      "+7(999)999-99-99"
+    ],
+    "is_auto_assembly": true,
+    "is_waybill_enabled": true
+  },
+  "phone": "+7(XXX)XXX-XX-XX",
+  "warehouse_id": 1020002929332000,
+  "working_days": [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY"
+  ]
+}
 ```
 
 ### 示例 8
 
 ```json
-{"operation_id": "string"}
+{
+  "operation_id": "string"
+}
 ```
 
 ## 使用提醒

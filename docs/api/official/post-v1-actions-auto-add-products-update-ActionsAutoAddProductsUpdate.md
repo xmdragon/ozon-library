@@ -57,13 +57,37 @@ result.auto_add_dates
 ### 示例 1
 
 ```json
-{"action_id": "250204","auto_add_dates": "2035-08-28T14:00:00Z","to_update": [{"currency": "RUB","product_id": "14914","quantity": 10,"action_price": 100}]}
+{
+  "action_id": "250204",
+  "auto_add_dates": "2035-08-28T14:00:00Z",
+  "to_update": [
+    {
+      "currency": "RUB",
+      "product_id": "14914",
+      "quantity": 10,
+      "action_price": 100
+    }
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"updated_ids": ["14914"],"rejected": [ ],"below_min_price": [{"key": "14914","value": 100}],"extremely_low_price": [ ],"failed_price": [ ]}
+{
+  "updated_ids": [
+    "14914"
+  ],
+  "rejected": [],
+  "below_min_price": [
+    {
+      "key": "14914",
+      "value": 100
+    }
+  ],
+  "extremely_low_price": [],
+  "failed_price": []
+}
 ```
 
 ## 使用提醒

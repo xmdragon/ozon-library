@@ -49,13 +49,67 @@
 ### 示例 0
 
 ```json
-{"cursor": "","filter": {"offer_id": ["1233213232"],"product_id": ["313455276"],"visibility": "ALL","with_quant": {"created": true,"exists": true}},"limit": 100}
+{
+  "cursor": "",
+  "filter": {
+    "offer_id": [
+      "1233213232"
+    ],
+    "product_id": [
+      "313455276"
+    ],
+    "visibility": "ALL",
+    "with_quant": {
+      "created": true,
+      "exists": true
+    }
+  },
+  "limit": 100
+}
 ```
 
 ### 示例 1
 
 ```json
-{"items": [{"offer_id": "test-offer-123456","product_id": 1000123456,"stocks": [{"sku": 1000123456,"type": "fbs","present": 150,"reserved": 25,"shipment_type": "SHIPMENT_TYPE_GENERAL"},{"sku": 1000123456,"type": "fbo","present": 75,"reserved": 10,"shipment_type": "SHIPMENT_TYPE_GENERAL"}]},{"offer_id": "test-offer-123457","product_id": 1000123457,"stocks": [{"sku": 1000123457,"type": "fbs","present": 45,"reserved": 5,"shipment_type": "SHIPMENT_TYPE_BOX"}]}],"cursor": "next-cursor-12345","total": 2}
+{
+  "items": [
+    {
+      "offer_id": "test-offer-123456",
+      "product_id": 1000123456,
+      "stocks": [
+        {
+          "sku": 1000123456,
+          "type": "fbs",
+          "present": 150,
+          "reserved": 25,
+          "shipment_type": "SHIPMENT_TYPE_GENERAL"
+        },
+        {
+          "sku": 1000123456,
+          "type": "fbo",
+          "present": 75,
+          "reserved": 10,
+          "shipment_type": "SHIPMENT_TYPE_GENERAL"
+        }
+      ]
+    },
+    {
+      "offer_id": "test-offer-123457",
+      "product_id": 1000123457,
+      "stocks": [
+        {
+          "sku": 1000123457,
+          "type": "fbs",
+          "present": 45,
+          "reserved": 5,
+          "shipment_type": "SHIPMENT_TYPE_BOX"
+        }
+      ]
+    }
+  ],
+  "cursor": "next-cursor-12345",
+  "total": 2
+}
 ```
 
 ## 使用提醒

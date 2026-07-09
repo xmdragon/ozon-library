@@ -38,7 +38,23 @@
 ### 示例 0
 
 ```json
-{"expires_at": "2026-02-18T09:54:23.296Z","roles": [{"name": "Admin","methods": ["/v1/actions"]},{"name": "Posting FBS","methods": ["/v1/posting"]}]}
+{
+  "expires_at": "2026-02-18T09:54:23.296Z",
+  "roles": [
+    {
+      "name": "Admin",
+      "methods": [
+        "/v1/actions"
+      ]
+    },
+    {
+      "name": "Posting FBS",
+      "methods": [
+        "/v1/posting"
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

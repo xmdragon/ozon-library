@@ -134,13 +134,46 @@ SELLER_PLACEMENT_BY_SUPPLIES
 ### 示例 13
 
 ```json
-{"page": 1,"page_size": 1000,"report_type": "ALL"}
+{
+  "page": 1,
+  "page_size": 1000,
+  "report_type": "ALL"
+}
 ```
 
 ### 示例 14
 
 ```json
-{"result": {"reports": [{"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69","status": "success","error": "","expires_at": "2025-11-12T19:55:28.249Z","file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv","report_type": "seller_products","params": {"visibility": "3"},"created_at": "2019-02-06T12:09:47.258062Z"},{"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69","status": "success","error": "","file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv","report_type": "seller_products","params": {"visibility": "3"},"created_at": "2019-02-15T08:34:32.267178Z"}],"total": 2}}
+{
+  "result": {
+    "reports": [
+      {
+        "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
+        "status": "success",
+        "error": "",
+        "expires_at": "2025-11-12T19:55:28.249Z",
+        "file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+        "report_type": "seller_products",
+        "params": {
+          "visibility": "3"
+        },
+        "created_at": "2019-02-06T12:09:47.258062Z"
+      },
+      {
+        "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
+        "status": "success",
+        "error": "",
+        "file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+        "report_type": "seller_products",
+        "params": {
+          "visibility": "3"
+        },
+        "created_at": "2019-02-15T08:34:32.267178Z"
+      }
+    ],
+    "total": 2
+  }
+}
 ```
 
 ## 使用提醒

@@ -50,13 +50,24 @@ product_id
 ### 示例 2
 
 ```json
-{"product_ids": 88787267123}
+{
+  "product_ids": 88787267123
+}
 ```
 
 ### 示例 3
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

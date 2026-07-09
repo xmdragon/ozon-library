@@ -33,13 +33,17 @@
 ### 示例 0
 
 ```json
-{ }
+{}
 ```
 
 ### 示例 1
 
 ```json
-{"processed": 0,"total": 0,"unprocessed": 0}
+{
+  "processed": 0,
+  "total": 0,
+  "unprocessed": 0
+}
 ```
 
 ## 使用提醒

@@ -47,13 +47,19 @@
 ### 示例 0
 
 ```json
-{"question_id": "string","sku": 0,"text": "string"}
+{
+  "question_id": "string",
+  "sku": 0,
+  "text": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"answer_id": "0192e7ce-e12c-7a74-afc7-26e877799204"}
+{
+  "answer_id": "0192e7ce-e12c-7a74-afc7-26e877799204"
+}
 ```
 
 ## 使用提醒

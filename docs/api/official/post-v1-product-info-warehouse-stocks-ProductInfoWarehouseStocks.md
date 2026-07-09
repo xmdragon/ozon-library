@@ -59,13 +59,32 @@ false
 ### 示例 3
 
 ```json
-{"cursor": "","limit": 10,"warehouse_id": 1020003080073000}
+{
+  "cursor": "",
+  "limit": 10,
+  "warehouse_id": 1020003080073000
+}
 ```
 
 ### 示例 4
 
 ```json
-{"stocks": [{"sku": 147035011,"product_id": 28743,"offer_id": "02105020-35","warehouse_id": 1020003080073000,"present": 1000,"reserved": 0,"free_stock": 1000,"updated_at": "2025-09-15T10:36:24.417498Z"}],"has_next": false,"cursor": "147035011"}
+{
+  "stocks": [
+    {
+      "sku": 147035011,
+      "product_id": 28743,
+      "offer_id": "02105020-35",
+      "warehouse_id": 1020003080073000,
+      "present": 1000,
+      "reserved": 0,
+      "free_stock": 1000,
+      "updated_at": "2025-09-15T10:36:24.417498Z"
+    }
+  ],
+  "has_next": false,
+  "cursor": "147035011"
+}
 ```
 
 ## 使用提醒

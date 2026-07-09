@@ -56,13 +56,37 @@ true
 ### 示例 1
 
 ```json
-{"cursor": "string","limit": 0,"offer_id": ["string"],"sku": ["string"]}
+{
+  "cursor": "string",
+  "limit": 0,
+  "offer_id": [
+    "string"
+  ],
+  "sku": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"cursor": "string","has_next": true,"products": [{"free_stock": 0,"offer_id": "string","present": 0,"product_id": 0,"reserved": 0,"sku": 0,"warehouse_id": 0,"warehouse_name": "string"}]}
+{
+  "cursor": "string",
+  "has_next": true,
+  "products": [
+    {
+      "free_stock": 0,
+      "offer_id": "string",
+      "present": 0,
+      "product_id": 0,
+      "reserved": 0,
+      "sku": 0,
+      "warehouse_id": 0,
+      "warehouse_name": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

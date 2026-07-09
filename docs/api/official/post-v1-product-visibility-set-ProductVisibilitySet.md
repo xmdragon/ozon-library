@@ -38,13 +38,44 @@
 ### 示例 0
 
 ```json
-{"item_placement": [{"placement": "OZON","sku": 0}]}
+{
+  "item_placement": [
+    {
+      "placement": "OZON",
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
 ```json
-{"items": [{"select_permission": "UNSPECIFIED","seller_item_placement": "UNSPECIFIED","seller_item_placement_list": ["UNSPECIFIED"],"showcases_visibility": "UNSPECIFIED","showcases_visibility_list": ["UNSPECIFIED"],"sku": 0,"warnings": ["string"]}],"items_errors": [{"code": "string","sku": 0}]}
+{
+  "items": [
+    {
+      "select_permission": "UNSPECIFIED",
+      "seller_item_placement": "UNSPECIFIED",
+      "seller_item_placement_list": [
+        "UNSPECIFIED"
+      ],
+      "showcases_visibility": "UNSPECIFIED",
+      "showcases_visibility_list": [
+        "UNSPECIFIED"
+      ],
+      "sku": 0,
+      "warnings": [
+        "string"
+      ]
+    }
+  ],
+  "items_errors": [
+    {
+      "code": "string",
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

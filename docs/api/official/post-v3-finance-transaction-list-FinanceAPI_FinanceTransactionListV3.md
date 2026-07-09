@@ -64,13 +64,52 @@ posting_number
 ### 示例 1
 
 ```json
-{"filter": {"date": {"from": "2021-11-01T00:00:00.000Z","to": "2021-11-02T00:00:00.000Z"},"operation_type": [ ],"posting_number": "","transaction_type": "all"},"page": 1,"page_size": 1000}
+{
+  "filter": {
+    "date": {
+      "from": "2021-11-01T00:00:00.000Z",
+      "to": "2021-11-02T00:00:00.000Z"
+    },
+    "operation_type": [],
+    "posting_number": "",
+    "transaction_type": "all"
+  },
+  "page": 1,
+  "page_size": 1000
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": {"operations": [{"operation_id": 11401182187840,"operation_type": "MarketplaceMarketingActionCostOperation","operation_date": "2021-11-01 00:00:00","operation_type_name": "商品推销服务","delivery_charge": 0,"return_delivery_charge": 0,"accruals_for_sale": 0,"sale_commission": 0,"amount": -6.46,"type": "services","posting": {"delivery_schema": "","order_date": "","posting_number": "","warehouse_id": 0},"items": [ ],"services": [ ]}],"page_count": 1,"row_count": 355}}
+{
+  "result": {
+    "operations": [
+      {
+        "operation_id": 11401182187840,
+        "operation_type": "MarketplaceMarketingActionCostOperation",
+        "operation_date": "2021-11-01 00:00:00",
+        "operation_type_name": "商品推销服务",
+        "delivery_charge": 0,
+        "return_delivery_charge": 0,
+        "accruals_for_sale": 0,
+        "sale_commission": 0,
+        "amount": -6.46,
+        "type": "services",
+        "posting": {
+          "delivery_schema": "",
+          "order_date": "",
+          "posting_number": "",
+          "warehouse_id": 0
+        },
+        "items": [],
+        "services": []
+      }
+    ],
+    "page_count": 1,
+    "row_count": 355
+  }
+}
 ```
 
 ## 使用提醒

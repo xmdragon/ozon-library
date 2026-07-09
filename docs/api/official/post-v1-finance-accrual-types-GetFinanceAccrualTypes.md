@@ -48,7 +48,15 @@
 ### 示例 0
 
 ```json
-{"accrual_types": [{"description": "string","id": 0,"name": "string"}]}
+{
+  "accrual_types": [
+    {
+      "description": "string",
+      "id": 0,
+      "name": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

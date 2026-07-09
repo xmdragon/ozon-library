@@ -48,13 +48,20 @@
 ### 示例 0
 
 ```json
-{"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","min_action_percent": 0,"title": "string"}
+{
+  "date_end": "2019-08-24T14:15:22Z",
+  "date_start": "2019-08-24T14:15:22Z",
+  "min_action_percent": 0,
+  "title": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"action_id": 0}
+{
+  "action_id": 0
+}
 ```
 
 ## 使用提醒

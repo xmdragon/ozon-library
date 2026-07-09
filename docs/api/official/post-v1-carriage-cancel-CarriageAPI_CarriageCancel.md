@@ -46,13 +46,18 @@
 ### 示例 0
 
 ```json
-{"carriage_id": 0}
+{
+  "carriage_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"error": "string","carriage_status": "string"}
+{
+  "error": "string",
+  "carriage_status": "string"
+}
 ```
 
 ## 使用提醒

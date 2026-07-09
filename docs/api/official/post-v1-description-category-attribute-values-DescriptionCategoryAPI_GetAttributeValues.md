@@ -112,13 +112,36 @@ false
 ### 示例 8
 
 ```json
-{"attribute_id": 85,"description_category_id": 17054869,"language": "DEFAULT","last_value_id": 100,"limit": 100,"type_id": 97311}
+{
+  "attribute_id": 85,
+  "description_category_id": 17054869,
+  "language": "DEFAULT",
+  "last_value_id": 100,
+  "limit": 100,
+  "type_id": 97311
+}
 ```
 
 ### 示例 9
 
 ```json
-{"result": [{"id": 5055881,"value": "Sunshine","info": "美容与健康","picture": "https://ir-21.ozonru.cn/s3/multimedia-i/6010930878.jpg"},{"id": 5056737,"value": "Essence","info": "美容与健康","picture": "https://ir-21.ozonru.cn/s3/multimedia-v/6088253599.jpg"}],"has_next": true}
+{
+  "result": [
+    {
+      "id": 5055881,
+      "value": "Sunshine",
+      "info": "美容与健康",
+      "picture": "https://ir-21.ozonru.cn/s3/multimedia-i/6010930878.jpg"
+    },
+    {
+      "id": 5056737,
+      "value": "Essence",
+      "info": "美容与健康",
+      "picture": "https://ir-21.ozonru.cn/s3/multimedia-v/6088253599.jpg"
+    }
+  ],
+  "has_next": true
+}
 ```
 
 ## 使用提醒

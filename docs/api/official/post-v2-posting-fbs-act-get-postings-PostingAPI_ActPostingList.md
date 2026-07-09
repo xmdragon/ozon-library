@@ -66,13 +66,36 @@
 ### 示例 0
 
 ```json
-{"id": 900000250859000}
+{
+  "id": 900000250859000
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": [{"id": 0,"multi_box_qty": 0,"posting_number": "string","status": "string","seller_error": "string","updated_at": "2019-08-24T14:15:22Z","created_at": "2019-08-24T14:15:22Z","products": [{"name": "string","offer_id": "string","price": "string","quantity": 0,"sku": 0}]}]}
+{
+  "result": [
+    {
+      "id": 0,
+      "multi_box_qty": 0,
+      "posting_number": "string",
+      "status": "string",
+      "seller_error": "string",
+      "updated_at": "2019-08-24T14:15:22Z",
+      "created_at": "2019-08-24T14:15:22Z",
+      "products": [
+        {
+          "name": "string",
+          "offer_id": "string",
+          "price": "string",
+          "quantity": 0,
+          "sku": 0
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 使用提醒

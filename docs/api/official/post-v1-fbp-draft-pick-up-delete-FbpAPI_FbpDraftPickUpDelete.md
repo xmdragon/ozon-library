@@ -38,13 +38,24 @@
 ### 示例 0
 
 ```json
-{"supply_id": "string"}
+{
+  "supply_id": "string"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"cancellation_state": {"cancellation_error": {"error_code": "CODE_UNSPECIFIED","message": "string"},"cancellation_status": "STATUS_UNSPECIFIED"},"row_version": 0}
+{
+  "cancellation_state": {
+    "cancellation_error": {
+      "error_code": "CODE_UNSPECIFIED",
+      "message": "string"
+    },
+    "cancellation_status": "STATUS_UNSPECIFIED"
+  },
+  "row_version": 0
+}
 ```
 
 ## 使用提醒

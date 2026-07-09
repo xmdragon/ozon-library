@@ -55,13 +55,71 @@
 ### 示例 0
 
 ```json
-{"month": 0,"year": 0}
+{
+  "month": 0,
+  "year": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": {"header": {"contract_date": "string","contract_number": "string","currency_sys_name": "string","doc_date": "string","number": "string","payer_inn": "string","payer_kpp": "string","payer_name": "string","receiver_inn": "string","receiver_kpp": "string","receiver_name": "string","start_date": "string","stop_date": "string"},"rows": [{"commission_ratio": 0,"delivery_commission": {"amount": 0,"bonus": 0,"commission": 0,"compensation": 0,"price_per_instance": 0,"quantity": 0,"standard_fee": 0,"bank_coinvestment": 0,"stars": 0,"total": 0},"item": {"barcode": "string","name": "string","offer_id": "string","sku": 0},"return_commission": {"amount": 0,"bonus": 0,"commission": 0,"compensation": 0,"price_per_instance": 0,"quantity": 0,"standard_fee": 0,"bank_coinvestment": 0,"stars": 0,"total": 0},"rowNumber": 0,"seller_price_per_instance": 0}]}}
+{
+  "result": {
+    "header": {
+      "contract_date": "string",
+      "contract_number": "string",
+      "currency_sys_name": "string",
+      "doc_date": "string",
+      "number": "string",
+      "payer_inn": "string",
+      "payer_kpp": "string",
+      "payer_name": "string",
+      "receiver_inn": "string",
+      "receiver_kpp": "string",
+      "receiver_name": "string",
+      "start_date": "string",
+      "stop_date": "string"
+    },
+    "rows": [
+      {
+        "commission_ratio": 0,
+        "delivery_commission": {
+          "amount": 0,
+          "bonus": 0,
+          "commission": 0,
+          "compensation": 0,
+          "price_per_instance": 0,
+          "quantity": 0,
+          "standard_fee": 0,
+          "bank_coinvestment": 0,
+          "stars": 0,
+          "total": 0
+        },
+        "item": {
+          "barcode": "string",
+          "name": "string",
+          "offer_id": "string",
+          "sku": 0
+        },
+        "return_commission": {
+          "amount": 0,
+          "bonus": 0,
+          "commission": 0,
+          "compensation": 0,
+          "price_per_instance": 0,
+          "quantity": 0,
+          "standard_fee": 0,
+          "bank_coinvestment": 0,
+          "stars": 0,
+          "total": 0
+        },
+        "rowNumber": 0,
+        "seller_price_per_instance": 0
+      }
+    ]
+  }
+}
 ```
 
 ## 使用提醒

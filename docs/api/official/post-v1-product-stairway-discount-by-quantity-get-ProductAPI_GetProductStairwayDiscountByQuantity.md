@@ -82,13 +82,34 @@ SUCCESS
 ### 示例 4
 
 ```json
-{"skus": ["string"]}
+{
+  "skus": [
+    "string"
+  ]
+}
 ```
 
 ### 示例 5
 
 ```json
-{"stairways": [{"enabled": true,"sku": 0,"stairway": {"steps": [{"discount": 0,"quantity": 0,"step": 0}]},"status": "IN_PROCESS"}]}
+{
+  "stairways": [
+    {
+      "enabled": true,
+      "sku": 0,
+      "stairway": {
+        "steps": [
+          {
+            "discount": 0,
+            "quantity": 0,
+            "step": 0
+          }
+        ]
+      },
+      "status": "IN_PROCESS"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

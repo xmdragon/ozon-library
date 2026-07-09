@@ -68,13 +68,27 @@ true
 ### 示例 2
 
 ```json
-{"products": [{"offer_id": "033"}]}
+{
+  "products": [
+    {
+      "offer_id": "033"
+    }
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"status": [{"offer_id": "033","is_deleted": true,"error": ""}]}
+{
+  "status": [
+    {
+      "offer_id": "033",
+      "is_deleted": true,
+      "error": ""
+    }
+  ]
+}
 ```
 
 ## 使用提醒

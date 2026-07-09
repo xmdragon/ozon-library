@@ -47,13 +47,22 @@
 ### 示例 0
 
 ```json
-{"product_id": ["29209"],"strategy_id": "e29114f0-177d-4160-8d06-2bc528470dda"}
+{
+  "product_id": [
+    "29209"
+  ],
+  "strategy_id": "e29114f0-177d-4160-8d06-2bc528470dda"
+}
 ```
 
 ### 示例 1
 
 ```json
-{"result": {"failed_product_count": 0}}
+{
+  "result": {
+    "failed_product_count": 0
+  }
+}
 ```
 
 ## 使用提醒

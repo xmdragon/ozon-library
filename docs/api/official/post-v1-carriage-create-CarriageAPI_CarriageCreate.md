@@ -65,13 +65,19 @@ true
 ### 示例 3
 
 ```json
-{"all_blr_traceable": true,"delivery_method_id": 0,"departure_date": "2019-08-24T14:15:22Z"}
+{
+  "all_blr_traceable": true,
+  "delivery_method_id": 0,
+  "departure_date": "2019-08-24T14:15:22Z"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"carriage_id": 0}
+{
+  "carriage_id": 0
+}
 ```
 
 ## 使用提醒

@@ -57,13 +57,21 @@ true
 ### 示例 3
 
 ```json
-{"supply_id": "string"}
+{
+  "supply_id": "string"
+}
 ```
 
 ### 示例 4
 
 ```json
-{"errors": ["CREATE_ACT_ERROR_REASON_UNSPECIFIED"],"file_uuid": "string","is_success": true}
+{
+  "errors": [
+    "CREATE_ACT_ERROR_REASON_UNSPECIFIED"
+  ],
+  "file_uuid": "string",
+  "is_success": true
+}
 ```
 
 ## 使用提醒

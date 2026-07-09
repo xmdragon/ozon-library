@@ -65,13 +65,20 @@ EN
 ### 示例 2
 
 ```json
-{"language": "DEFAULT","warehouseId": ["1020002425123000"]}
+{
+  "language": "DEFAULT",
+  "warehouseId": [
+    "1020002425123000"
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"}
+{
+  "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"
+}
 ```
 
 ## 使用提醒

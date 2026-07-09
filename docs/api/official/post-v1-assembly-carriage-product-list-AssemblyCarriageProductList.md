@@ -48,13 +48,36 @@
 ### 示例 0
 
 ```json
-{"cursor": "string","filter": {"carriage_id": 0,"cutoff_from": "2019-08-24T14:15:22Z","cutoff_to": "2019-08-24T14:15:22Z","delivery_method_id": 0},"limit": 0}
+{
+  "cursor": "string",
+  "filter": {
+    "carriage_id": 0,
+    "cutoff_from": "2019-08-24T14:15:22Z",
+    "cutoff_to": "2019-08-24T14:15:22Z",
+    "delivery_method_id": 0
+  },
+  "limit": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"cursor": "string","products": [{"offer_id": "string","picture_url": "string","posting_numbers": ["string"],"product_name": "string","quantity": 0,"sku": 0}]}
+{
+  "cursor": "string",
+  "products": [
+    {
+      "offer_id": "string",
+      "picture_url": "string",
+      "posting_numbers": [
+        "string"
+      ],
+      "product_name": "string",
+      "quantity": 0,
+      "sku": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

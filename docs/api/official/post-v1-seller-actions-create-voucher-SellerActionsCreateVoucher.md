@@ -64,13 +64,30 @@ CURRENCY
 ### 示例 2
 
 ```json
-{"budget": 0,"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","discount_type": "PERCENT","discount_value": 0,"title": "string","user_ids": ["string"],"voucher_parameters": {"count_codes": 0,"is_private": true,"type": "ONE"}}
+{
+  "budget": 0,
+  "date_end": "2019-08-24T14:15:22Z",
+  "date_start": "2019-08-24T14:15:22Z",
+  "discount_type": "PERCENT",
+  "discount_value": 0,
+  "title": "string",
+  "user_ids": [
+    "string"
+  ],
+  "voucher_parameters": {
+    "count_codes": 0,
+    "is_private": true,
+    "type": "ONE"
+  }
+}
 ```
 
 ### 示例 3
 
 ```json
-{"action_id": 0}
+{
+  "action_id": 0
+}
 ```
 
 ## 使用提醒

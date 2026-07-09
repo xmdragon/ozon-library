@@ -60,13 +60,34 @@ SEEN
 ### 示例 2
 
 ```json
-{"tasks": [{"id": 78901,"approved_price": 12500,"seller_comment": "ok","approved_quantity_min": 3,"approved_quantity_max": 7}]}
+{
+  "tasks": [
+    {
+      "id": 78901,
+      "approved_price": 12500,
+      "seller_comment": "ok",
+      "approved_quantity_min": 3,
+      "approved_quantity_max": 7
+    }
+  ]
+}
 ```
 
 ### 示例 3
 
 ```json
-{"result": {"fail_details": [{"task_id": 78901,"error_for_user": "折扣已拒绝"}],"success_count": 5,"fail_count": 1}}
+{
+  "result": {
+    "fail_details": [
+      {
+        "task_id": 78901,
+        "error_for_user": "折扣已拒绝"
+      }
+    ],
+    "success_count": 5,
+    "fail_count": 1
+  }
+}
 ```
 
 ## 使用提醒

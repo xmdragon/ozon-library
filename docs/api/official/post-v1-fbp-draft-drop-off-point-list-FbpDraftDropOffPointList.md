@@ -63,13 +63,28 @@
 ### 示例 0
 
 ```json
-{"next_page_number": 0,"page_size": 0,"province_uuid": "string","warehouse_id": 0}
+{
+  "next_page_number": 0,
+  "page_size": 0,
+  "province_uuid": "string",
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"drop_off_points": [{"city": "string","drop_off_point_id": 0,"nearest_drop_off_date": "2019-08-24T14:15:22Z","point_address": "string","province_uuid": "string"}]}
+{
+  "drop_off_points": [
+    {
+      "city": "string",
+      "drop_off_point_id": 0,
+      "nearest_drop_off_date": "2019-08-24T14:15:22Z",
+      "point_address": "string",
+      "province_uuid": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

@@ -62,7 +62,12 @@ true
 ### 示例 4
 
 ```json
-{"available_schemas": ["UNKNOWN"],"ozon_logistics_enabled": true}
+{
+  "available_schemas": [
+    "UNKNOWN"
+  ],
+  "ozon_logistics_enabled": true
+}
 ```
 
 ## 使用提醒

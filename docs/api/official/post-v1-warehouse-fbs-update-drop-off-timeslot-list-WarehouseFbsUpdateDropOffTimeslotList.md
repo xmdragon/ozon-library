@@ -61,13 +61,26 @@
 ### 示例 0
 
 ```json
-{"drop_off_point_id": 0,"warehouse_id": 0}
+{
+  "drop_off_point_id": 0,
+  "warehouse_id": 0
+}
 ```
 
 ### 示例 1
 
 ```json
-{"timeslots": [{"acceptance_end_time_local": "string","acceptance_start_time_local": "string","from": "string","id": 0,"to": "string"}]}
+{
+  "timeslots": [
+    {
+      "acceptance_end_time_local": "string",
+      "acceptance_start_time_local": "string",
+      "from": "string",
+      "id": 0,
+      "to": "string"
+    }
+  ]
+}
 ```
 
 ## 使用提醒

@@ -53,13 +53,45 @@ exemplar_id
 ### 示例 1
 
 ```json
-{"posting_number": "string"}
+{
+  "posting_number": "string"
+}
 ```
 
 ### 示例 2
 
 ```json
-{"multi_box_qty": 0,"posting_number": "string","products": [{"exemplars": [{"exemplar_id": 0,"gtd": "string","is_gtd_absent": true,"is_rnpt_absent": true,"marks": [{"mark": "string","mark_type": "string"}],"rnpt": "string"}],"has_imei": true,"is_gtd_needed": true,"is_jw_uin_needed": true,"is_mandatory_mark_needed": true,"is_mandatory_mark_possible": true,"is_rnpt_needed": true,"product_id": 0,"quantity": 0}]}
+{
+  "multi_box_qty": 0,
+  "posting_number": "string",
+  "products": [
+    {
+      "exemplars": [
+        {
+          "exemplar_id": 0,
+          "gtd": "string",
+          "is_gtd_absent": true,
+          "is_rnpt_absent": true,
+          "marks": [
+            {
+              "mark": "string",
+              "mark_type": "string"
+            }
+          ],
+          "rnpt": "string"
+        }
+      ],
+      "has_imei": true,
+      "is_gtd_needed": true,
+      "is_jw_uin_needed": true,
+      "is_mandatory_mark_needed": true,
+      "is_mandatory_mark_possible": true,
+      "is_rnpt_needed": true,
+      "product_id": 0,
+      "quantity": 0
+    }
+  ]
+}
 ```
 
 ## 使用提醒

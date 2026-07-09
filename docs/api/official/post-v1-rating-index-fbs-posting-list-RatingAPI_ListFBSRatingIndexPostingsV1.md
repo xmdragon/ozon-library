@@ -55,13 +55,41 @@ true
 ### 示例 1
 
 ```json
-{"cursor": "string","filter": {"date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","posting_numbers": ["string"]},"limit": 0}
+{
+  "cursor": "string",
+  "filter": {
+    "date_from": "2019-08-24T14:15:22Z",
+    "date_to": "2019-08-24T14:15:22Z",
+    "posting_numbers": [
+      "string"
+    ]
+  },
+  "limit": 0
+}
 ```
 
 ### 示例 2
 
 ```json
-{"cursor": "string","errors": [{"charge_percent": 0,"charge_price": 0,"charge_price_currency_code": "string","delivery_schema": "string","error_at": "2019-08-24T14:15:22Z","has_grace_status": true,"index": 0,"posting_error_type": "UNSPECIFIED","posting_number": "string","product_price": 0,"product_price_currency_code": "string"}],"has_next": true}
+{
+  "cursor": "string",
+  "errors": [
+    {
+      "charge_percent": 0,
+      "charge_price": 0,
+      "charge_price_currency_code": "string",
+      "delivery_schema": "string",
+      "error_at": "2019-08-24T14:15:22Z",
+      "has_grace_status": true,
+      "index": 0,
+      "posting_error_type": "UNSPECIFIED",
+      "posting_number": "string",
+      "product_price": 0,
+      "product_price_currency_code": "string"
+    }
+  ],
+  "has_next": true
+}
 ```
 
 ## 使用提醒

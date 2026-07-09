@@ -62,13 +62,25 @@ true
 ### 示例 1
 
 ```json
-{"posting_number": ["33920157-0018-1"]}
+{
+  "posting_number": [
+    "33920157-0018-1"
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": [{"error": [ ],"posting_number": "33920157-0018-1","result": true}]}
+{
+  "result": [
+    {
+      "error": [],
+      "posting_number": "33920157-0018-1",
+      "result": true
+    }
+  ]
+}
 ```
 
 ## 使用提醒

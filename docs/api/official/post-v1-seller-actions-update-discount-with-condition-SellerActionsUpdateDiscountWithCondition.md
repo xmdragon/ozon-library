@@ -39,13 +39,31 @@
 ### 示例 0
 
 ```json
-{"action_id": 0,"action_parameters": {"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","discount_value": 0,"min_order_amount": 0,"title": "string"}}
+{
+  "action_id": 0,
+  "action_parameters": {
+    "date_end": "2019-08-24T14:15:22Z",
+    "date_start": "2019-08-24T14:15:22Z",
+    "discount_value": 0,
+    "min_order_amount": 0,
+    "title": "string"
+  }
+}
 ```
 
 ### 示例 1
 
 ```json
-{"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}
+{
+  "code": 0,
+  "details": [
+    {
+      "typeUrl": "string",
+      "value": "string"
+    }
+  ],
+  "message": "string"
+}
 ```
 
 ## 使用提醒

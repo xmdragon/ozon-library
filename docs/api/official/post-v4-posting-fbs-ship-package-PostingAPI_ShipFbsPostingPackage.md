@@ -52,13 +52,26 @@ awaiting_packaging
 ### 示例 1
 
 ```json
-{"posting_number": "string","products": [{"exemplarsIds": ["string"],"product_id": 0,"quantity": 0}]}
+{
+  "posting_number": "string",
+  "products": [
+    {
+      "exemplarsIds": [
+        "string"
+      ],
+      "product_id": 0,
+      "quantity": 0
+    }
+  ]
+}
 ```
 
 ### 示例 2
 
 ```json
-{"result": "string"}
+{
+  "result": "string"
+}
 ```
 
 ## 使用提醒

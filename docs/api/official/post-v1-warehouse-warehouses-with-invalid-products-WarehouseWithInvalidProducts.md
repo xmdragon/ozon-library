@@ -37,7 +37,11 @@
 ### 示例 0
 
 ```json
-{"warehouse_ids": ["string"]}
+{
+  "warehouse_ids": [
+    "string"
+  ]
+}
 ```
 
 ## 使用提醒

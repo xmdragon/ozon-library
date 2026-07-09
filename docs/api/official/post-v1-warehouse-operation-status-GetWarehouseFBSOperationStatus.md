@@ -115,13 +115,25 @@ WAREHOUSE_ENABLE_DISABLE
 ### 示例 10
 
 ```json
-{"operation_id": "a0cfefee-9a5a-4580-bc32-2f9a6c7973e3"}
+{
+  "operation_id": "a0cfefee-9a5a-4580-bc32-2f9a6c7973e3"
+}
 ```
 
 ### 示例 11
 
 ```json
-{"error": {"code": "string","message": "string"},"result": {"warehouse_id": 1020005000219156},"status": "SUCCESS","type": "CREATE_FBS_WAREHOUSE"}
+{
+  "error": {
+    "code": "string",
+    "message": "string"
+  },
+  "result": {
+    "warehouse_id": 1020005000219156
+  },
+  "status": "SUCCESS",
+  "type": "CREATE_FBS_WAREHOUSE"
+}
 ```
 
 ## 使用提醒
