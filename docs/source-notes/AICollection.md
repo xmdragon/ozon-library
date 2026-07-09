@@ -8,6 +8,8 @@
 
 AICollection 是当前最重要的 Ozon scraper/WebView/recovery 来源。它提供较新的页面状态分类、NoConnection/block/antibot incident 识别、滑块处理、成人验证、队列恢复、Seller web 内部 API 和批量采集流程。
 
+AICollection 的项目经验以 scraper/recovery、队列、WebView、扩展桥和 incident changelog 为主；官方 API 参数本身不从项目副本提取，只用源码中的实际调用方式和异常处理策略。
+
 ## 当前来源
 
 - 路径：`/Users/eric/works/AICollection`

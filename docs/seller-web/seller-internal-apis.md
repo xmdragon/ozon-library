@@ -8,6 +8,8 @@
 
 Seller web 内部 API 不是官方 Seller API。它们通常需要浏览器登录态、同源页面上下文和 `credentials: include`。AICollection 和 ZhiPin 都使用过 `/api/v1/search`、`/api/site/seller-prototype/create-bundle-by-variant-id`、`/api/site/seller-analytics/what_to_sell/data/v3`、`/api/site/seller-analytics/what_to_sell/get_sellers`。这些接口按不稳定观察值记录，不应当作长期契约。
 
+浏览器扩展中调用 Seller web 内部 API 时，还要参考 `docs/seller-web/browser-extension-seller-context.md`。该文档整理了 ZhiPin 扩展里 MAIN world fetch、Seller tab 复用、Cookie/company id、动态 Ozon header 和 MV3 后台任务的实现经验。
+
 ## 关键接口
 
 | URL | 用途 | 来源 |
@@ -48,4 +50,6 @@ what_to_sell：
 - `/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs`
 - `/Users/eric/works/AICollection/src-tauri/crates/scraper/src/browser/seller.rs`
 - `/Users/eric/works/ZhiPin/ozon_spider/seller_login.py`
+- `/Users/eric/works/ZhiPin/extension/src/shared/api/ozon-seller-api.ts`
+- `/Users/eric/works/ZhiPin/extension/src/shared/seller-tab-context.ts`
 - `indexes/endpoint-cross-reference.json`

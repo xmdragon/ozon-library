@@ -44,6 +44,19 @@ AICollection 的 `PageStateProbe` 是当前最完整的状态模型。它输出 
 - `docs/buyer-page/adult-verification.md`
 - `docs/buyer-page/no-connection-and-block.md`
 
+## 项目提炼要点
+
+AICollection 中的恢复链路把状态分为“可在页内处理”和“需要重建/暂停”的两类：
+
+| 状态 | 处理倾向 | 说明 |
+| --- | --- | --- |
+| `is_antibot_incident` | 先 reload，再按 page timeout 处理 | incident 不是普通 slider；识别时必须看 `/incidents/`、support 链接或 `fab_...timestamp` 等窄 marker。 |
+| `is_no_connection` | 重建 WebView/profile 或进入网络 incident 恢复 | 这是 Ozon 自渲染无连接页，不等同于 `chrome-error://`；incident 命中时会抑制 NoConnection，避免误判。 |
+| `is_chrome_error` | 重建或重新导航 | 属于浏览器加载错误，和 Ozon 页面内容状态分开。 |
+| `has_slider_captcha_dom` | 进入 slider gate | slider/bg/puzzle/captcha 同时可见才算强信号，避免把 incident 页面误当滑块。 |
+| `has_adult_birthdate_form` / `has_adult_confirm18` | 成人验证流程 | 属于可解决门禁，处理完再重新提取页面内容。 |
+| Ozon 403/429 | 暂停同组请求 | AICollection 将 buyer 和 seller 请求按组暂停，第一处 403 会阻止其他 worker 继续打同类请求，减少级联封禁。 |
+
 ## 来源引用
 
 - `/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/page_state.rs`

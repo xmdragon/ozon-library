@@ -8,6 +8,8 @@
 
 商品页价格锚点已从旧 `webPrice` 变化到 `data-widget="webSale"`。ZhiPin 当前商品页扩展优先用 `webSale`，在其中通过 `span[class*="tsHeadline"]` 和俄文标签区分绿价/黑价。AICollection page state 仍把 `webPrice`、`webGallery`、`webProductHeading` 等作为“有商品内容”的信号之一。DOM selector 应视为观察值，必须保留 fallback。
 
+商品页也可通过 `entrypoint-api.bx` 里的 `widgetStates` 补充 DOM 取不到的字段，尤其是 `webSale`、`webAspects`、`webAspectsModal` 和成人弹窗状态。详见 `docs/buyer-page/widgetstates-entrypoint-api.md`。
+
 ## 关键 DOM
 
 | Selector/标记 | 用途 | 说明 |
@@ -42,5 +44,6 @@
 
 - `/Users/eric/works/ZhiPin/extension/src/content/product-page/index.ts`
 - `/Users/eric/works/ZhiPin/extension/src/content/product-page/calculator.ts`
+- `/Users/eric/works/ZhiPin/extension/src/content/parsers/product-detail.ts`
 - `/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/page_state.rs`
 - `indexes/dom-selectors.json`

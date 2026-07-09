@@ -8,6 +8,8 @@
 
 ZhiPin 是 Ozon 后端模型、官方 Seller API client、Seller 登录、旧 spider、浏览器扩展和 Web 管理端的重要来源。它适合补齐字段模型、API payload、数据库结构、业务流程和旧版 fallback。
 
+ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不作为本资料库的项目经验来源。官方 Seller API 以 Chrome 官方文档抓取和 News 更新为准；ZhiPin 只贡献调用实现、字段映射、登录态、扩展上下文、页面结构和历史 fallback。
+
 ## 当前来源
 
 - 路径：`/Users/eric/works/ZhiPin`
@@ -24,12 +26,15 @@ ZhiPin 是 Ozon 后端模型、官方 Seller API client、Seller 登录、旧 sp
 | Seller 登录和内部 API | 登录、验证码、Seller search、create-bundle、what_to_sell、delivery template | `ozon_spider/seller_login.py` |
 | 买家页 spider | 商品页抓取、滑块、成人验证、稳定页检测 | `ozon_spider/spider.py`、`ozon_spider/slider_solver.py` |
 | 浏览器扩展 DOM | 商品页、列表增强、Seller 页面、店铺绑定、通知配置 | `extension/src/content/` |
+| 浏览器扩展请求上下文 | Cookie/company id、Seller tab MAIN world fetch、动态 Ozon header、MV3 后台任务 | `extension/src/shared/`、`extension/src/background/` |
 | Web 管理端流程 | 商品、仓库、订单、刊登、库存、报表页面 | `web/src/pages/ozon/`、`web/src/services/ozon/` |
 | 测试约束 | API 行为、桌面路由、同步、权限、字段转换 | `tests/` |
 
 ## 合并规则
 
 ZhiPin 的后端 client 和模型适合补齐字段、payload、数据状态；旧 spider 适合记录历史 fallback 和异常路径。若与 AICollection 新实现冲突，主题文档同时记录“当前推荐行为”和“历史兼容行为”。
+
+若 ZhiPin 的本地官方文档副本与 Chrome 官方文档或 News 冲突，Chrome 官方文档优先。项目副本只保留为历史线索，不直接进入 `docs/api/official/`。
 
 ## 来源引用
 

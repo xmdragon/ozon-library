@@ -8,6 +8,8 @@
 
 列表页常见内容锚点包括 `data-widget="searchResultsV2"`、`data-widget="tileGridDesktop"`、`data-widget="megaPaginator"`。simple-collection 用 `div[data-component*="shortCard"], div.tile-root` 扫卡片，并从 `a[href*="/product/"]` 提取 SKU。ZhiPin list-enhancer 也以商品链接和容器 MutationObserver 处理 SPA 重渲染。
 
+列表页不能只依赖 DOM selector。simple-collection 的 API capture 会解析页面请求里的 `widgetStates`，尤其是 `tileGridDesktop` 和四列布局商品卡片，可作为 DOM 缺字段时的补充路径。详见 `docs/buyer-page/widgetstates-entrypoint-api.md`。
+
 ## 关键 DOM
 
 | Selector/标记 | 用途 | 来源 |
@@ -40,6 +42,8 @@
 ## 来源引用
 
 - `/Users/eric/works/simple-collection/extension/src/content.js`
+- `/Users/eric/works/simple-collection/extension/src/api_parser.js`
+- `/Users/eric/works/simple-collection/extension/src/page_capture.js`
 - `/Users/eric/works/ZhiPin/extension/src/content/list-enhancer/index.ts`
 - `/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/page_state.rs`
 - `indexes/dom-selectors.json`

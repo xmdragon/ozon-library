@@ -8,6 +8,8 @@
 
 simple-collection 是一个轻量浏览器扩展/API 捕获来源。它适合补充 Ozon 列表页卡片解析、API 捕获、页面捕获、币种语言入口、登录状态检测和运行时韧性测试。
 
+simple-collection 中有价值的是扩展实现和测试暴露出的行为，不是官方 API 的重复说明。列表页和商品页的 `entrypoint-api.bx` 捕获已整理到 buyer-page 主题文档。
+
 ## 当前来源
 
 - 路径：`/Users/eric/works/simple-collection`
