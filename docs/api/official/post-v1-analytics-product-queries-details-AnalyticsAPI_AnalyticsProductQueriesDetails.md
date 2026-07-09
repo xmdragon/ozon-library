@@ -9,6 +9,14 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AnalyticsAPI_AnalyticsProductQueriesDetails
 - 分组：`analytics`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-09-24 | `updated` | /v1/analytics/product-queries/details 更新了方法请求中的 page 和 page_size 参数描述。更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-03-20 | `updated` | /v1/analytics/product-queries/details 更新了方法请求中 limit_by_sku，page 和 page_size 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025320) |
+| 2025-03-14 | `new_method` | /v1/analytics/product-queries/details 我们添加了获得特定商品查询数据的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025314) |
+
 ## 页面标题结构
 
 - 有关特定商品查询的信息

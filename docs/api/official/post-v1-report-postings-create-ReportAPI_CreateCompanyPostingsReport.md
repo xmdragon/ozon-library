@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_CreateCompanyPostingsReport
 - 分组：`report`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-28 | `updated` | /v1/report/postings/create 更新了方法请求中的 filter.is_express 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251028) |
+| 2025-09-29 | `added_field` | /v1/report/postings/create 已添加以下参数filter.warehouse_id、filter.delivery_method_id、filter.is_express、with.additional_data、with.analytics_data、with.customer_data 和 with.jewelry_codes 到方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
+
 ## 页面标题结构
 
 - 发货报告

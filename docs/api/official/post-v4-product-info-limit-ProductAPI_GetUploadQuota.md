@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetUploadQuota
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-09 | `added_field` | /v4/product/info/limit 在方法的响应中添加了参数 operation_limits和total.quota_by_category的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202669) |
+| 2025-09-24 | `updated` | /v4/product/info/limit 更新了方法响应中的 total.limit、daily_create.limit 和 daily_update.limit 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+
 ## 页面标题结构
 
 - 品类限制、商品的创建和更新

@@ -2,12 +2,27 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-04-30。替代方法：`/v4/posting/fbs/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026430
+> News 原文摘要：/v3/posting/fbs/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/list
+
 ## 方法
 
 - 请求：`POST /v3/posting/fbs/list`
 - Operation ID：`PostingAPI_GetFbsPostingListV3`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingListV3
 - 分组：`posting`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-04-30 | `deprecated_method`, `added_field` | /v3/posting/fbs/list 在方式的响应中添加了参数result.postings.is_presortable、result.postings.destination_place_id、result.postings.destination_place_name和result.postings.customer.customer_email。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2025-10-23 | `updated` | /v3/posting/fbs/list 更新了方法响应中的 result.postings.substatus 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
+| 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中： • 添加了参数 result.postings.financial_data.products.customer_price； • 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-07-02 | `added_field` | /v3/posting/fbs/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202572) |
+| 2025-06-05 | `added_field` | /v3/posting/fbs/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202565) |
+| 2025-02-26 | `updated` | /v3/posting/fbs/list 更新了方法响应中 result.postings.analytics_data.city 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025226) |
 
 ## 页面标题结构
 

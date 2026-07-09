@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CarriageGet
 - 分组：`carriage`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-04-30 | `updated` | /v1/carriage/get 更新了方法响应中 available_actions 参数的描。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2026-03-12 | `updated` | /v1/carriage/get 已更新方法响应中 available_actions 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026312) |
+
 ## 页面标题结构
 
 - 运输信息

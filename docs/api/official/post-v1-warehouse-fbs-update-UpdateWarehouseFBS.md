@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/UpdateWarehouseFBS
 - 分组：`warehouse`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/fbs/update 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
+
 ## 页面标题结构
 
 - 更新仓库

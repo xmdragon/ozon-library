@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CancellationAPI_ConditionalCancellationRejectV2
 - 分组：`conditional-cancellation`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-06-03 | `graduated`, `updated` | /v2/conditional-cancellation/reject 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202563) |
+
 ## 页面标题结构
 
 - 拒绝 rFBS 取消申请

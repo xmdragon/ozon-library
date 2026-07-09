@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseListV2
 - 分组：`warehouse`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。在方法的响应中添加了参数 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+| 2025-12-16 | `added_field` | /v2/warehouse/list 在方法的响应中添加了参数 has_next 和 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
+
 ## 页面标题结构
 
 - 仓库列表

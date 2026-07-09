@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_CreateCompanyProductsReport
 - 分组：`report`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-01-22 | `updated` | /v1/report/products/create 更新了方法请求中的 visibility 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026122) |
+
 ## 页面标题结构
 
 - 商品报告

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductUpdateAttributes
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-11-25 | `updated` | /v1/product/attributes/update 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251125) |
+
 ## 页面标题结构
 
 - 更新商品特征

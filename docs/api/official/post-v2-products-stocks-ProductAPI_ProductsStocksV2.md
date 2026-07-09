@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductsStocksV2
 - 分组：`products`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-07-28 | `updated` | /v2/products/stocks 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025728) |
+
 ## 页面标题结构
 
 - 更新库存商品的数量

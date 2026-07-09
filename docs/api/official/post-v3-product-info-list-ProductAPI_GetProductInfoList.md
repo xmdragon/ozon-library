@@ -9,6 +9,18 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoList
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-14 | `updated` | /v3/product/info/list 已更新方法响应中items.promotions.type参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
+| 2026-02-26 | `updated` | /v3/product/info/list 已更新方法响应中 items.is_kgt 参数的描述。 — 在 方法操作顺序 → 获取库存信息 部分，更新了有关方法操作的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026226) |
+| 2025-11-12 | `removed_field` | /v3/product/info/list 在方法回答该items.marketing_price参数已过期，我们已将其从文件中删除。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251112) |
+| 2025-10-06 | `deprecated_field`, `added_field` | /v3/product/info/list 参数 items.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025106) |
+| 2025-08-14 | `added_field` | /v3/product/info/list 在方法的响应中新增了参数 items.promotions、items.promotions.is_enabled、items.promotions.type 和 items.sku。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025814) |
+| 2025-08-05 | `deprecated_field` | /v3/product/info/list 已将参数 items.is_prepayment_allowed 标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202585) |
+| 2025-02-11 | `graduated` | /v3/product/info/list 已将此方法从测试版移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025211) |
+
 ## 页面标题结构
 
 - 根据标识符获取商品信息

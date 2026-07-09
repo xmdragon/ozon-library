@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseAPI_DeliveryMethodListV2
 - 分组：`delivery-method`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-22 | `added_field` | /v2/delivery-method/list 在方法响应中新增了参数delivery_methods.tpl_dropoff_point。 — 在错误板块中，已为 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026522) |
+| 2026-03-04 | `new_method` | /v2/delivery-method/list 新增了用于获取rFBS仓库配送方式的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
+
 ## 页面标题结构
 
 - realFBS仓库的配送方式列表

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseFbsUpdatePickUpTimeslotList
 - 分组：`warehouse`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-17 | `new_method` | /v1/warehouse/fbs/update/pick-up/timeslot/list 新增了与时间段相关的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
+
 ## 页面标题结构
 
 - 获取用于更新pick-up发运仓库的时间段列表

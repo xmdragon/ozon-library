@@ -6,7 +6,7 @@
 
 ## AI 摘要
 
-官方 Seller API 资料必须通过 Chrome 当前页面抽取。当前索引文件为 `indexes/official-seller-api.operations.json`，来源页面标题为 `Ozon Seller API 文件`，本次从已渲染 DOM 中抽取到 264 个 `div[id^="operation/"]` operation block。
+官方 Seller API 资料必须通过 Chrome 当前页面抽取。当前索引文件为 `indexes/official-seller-api.operations.json`，来源页面标题为 `Ozon Seller API 文件`，本次从已渲染 DOM 中抽取到 264 个 `div[id^="operation/"]` operation block，并从 `#tag/News` 抽取到 149 条官方更新记录。
 
 ## 抽取方式
 
@@ -16,6 +16,9 @@
 - 抽取字段：`operationId`、`title`、`method`、`path`、`headings`、`tables`、`examples`、`sourceUrl`。
 - `tables` 保留两种形态：`rows` 为 Chrome DOM 中 `tr` 的直接单元格结构，`text` 为兼容旧生成器的压平文本。
 - 输出文件：`indexes/official-seller-api.operations.json`。
+- News 输出文件：`indexes/official-seller-api.news.json`。
+- News 合并脚本：`tools/apply_official_api_news.py`。
+- News 总览文档：`docs/api/seller-api-news.md`。
 - 展开文档：`docs/api/official/README.md` 和 264 个逐方法 Markdown 文件。
 - 展开生成器：`tools/generate_official_api_docs.py`。
 
@@ -32,7 +35,9 @@
   - 请求/回复范例。
 - Redoc 嵌套表格会产生父行和子行；生成 Markdown 时优先使用 `rows`，并跳过没有字段/说明两列的单列父行，避免 GitHub 上出现长段压缩文本。
 - 当前渲染 DOM 抽取到 264 个 operation block。导航锚点数量可能更多，后续刷新时应记录 operation count 是否变化。
-- 当前已从索引展开 264 个逐方法文档；重新抽取官方页面后，应运行 `python3 tools/generate_official_api_docs.py` 更新方法页。
+- 当前已从索引展开 264 个逐方法文档；重新抽取官方页面后，应先运行 `python3 tools/apply_official_api_news.py` 合并 News 生命周期与字段变更，再运行 `python3 tools/generate_official_api_docs.py` 更新方法页。
+- News 当前识别出 9 个当前方法页的废弃标记，以及 30 个 News 中已移除或当前 operation 索引缺失的旧方法；这些旧方法应避免在新实现中使用。
+- 参数或字段级别的弃用、移除、新增会保留在对应方法页的 `News 更新标记` 表格中，不会自动把整个方法标为废弃。
 
 ## 优先整理主题
 
@@ -51,5 +56,8 @@
 ## 来源引用
 
 - Chrome 页面：`https://docs.ozon.ru/api/seller/zh/?__rr=1`
+- Chrome News：`https://docs.ozon.ru/api/seller/zh/#tag/News`
 - 索引：`indexes/official-seller-api.operations.json`
+- News 索引：`indexes/official-seller-api.news.json`
+- News 总览：`docs/api/seller-api-news.md`
 - 全量方法目录：`docs/api/official/README.md`

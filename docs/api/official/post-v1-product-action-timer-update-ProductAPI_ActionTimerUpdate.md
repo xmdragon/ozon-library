@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ActionTimerUpdate
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-08-21 | `updated` | /v1/product/action/timer/update 已为最低价格时效性计时器更新添加方式。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025821) |
+
 ## 页面标题结构
 
 - 最低价格时效性计时器更新

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerAPI_SellerInfo
 - 分组：`seller`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-02 | `updated` | /v1/seller/info 更新了方法响应中company.currency参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202662) |
+
 ## 页面标题结构
 
 - 卖家个人中心信息

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetDiscountTaskListV2
 - 分组：`actions`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-01-29 | `new_method` | /v2/actions/discounts-task/list 新增用于获取折扣申请列表的 beta 方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026129) |
+
 ## 页面标题结构
 
 - 获取折扣申请列表

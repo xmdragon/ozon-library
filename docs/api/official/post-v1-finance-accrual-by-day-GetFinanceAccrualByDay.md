@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFinanceAccrualByDay
 - 分组：`finance`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-09 | `updated` | /v1/finance/accrual/by-day 在方法响应中，将参数名称accruals.type_id改为accruals.accrual_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202669) |
+
 ## 页面标题结构
 
 - 获取某日应计项目

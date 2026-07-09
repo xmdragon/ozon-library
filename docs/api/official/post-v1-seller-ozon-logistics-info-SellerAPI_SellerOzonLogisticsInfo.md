@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerAPI_SellerOzonLogisticsInfo
 - 分组：`seller`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-05 | `updated` | /v1/seller/ozon-logistics/info 更新了方法名称。更新了方法响应中参数ozon_logistics_enabled的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
+
 ## 页面标题结构
 
 - Ozon配送开通信息

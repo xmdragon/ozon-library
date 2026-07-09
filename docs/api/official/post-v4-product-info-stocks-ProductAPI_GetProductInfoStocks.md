@@ -9,6 +9,17 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoStocks
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-01-27 | `updated` | /v4/product/info/stocks 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026127) |
+| 2025-12-18 | `deprecated_field` | /v4/product/info/stocks 已将方法响应中的参数 items.stocks.warehouse_ids 标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+| 2025-11-21 | `updated` | /v4/product/info/stocks 更新了方法响应中的 items.stocks.type 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251121) |
+| 2025-09-24 | `updated` | /v4/product/info/stocks 已更新响应示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-06-11 | `added_field` | /v4/product/info/stocks 在方法的响应中新增了参数items.stocks.warehouse_ids。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025611) |
+| 2025-02-10 | `graduated` | /v4/product/info/stocks 已将此方法从测试版移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025210) |
+
 ## 页面标题结构
 
 - 关于商品数量的信息

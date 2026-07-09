@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_FinanceCashFlowStatementList
 - 分组：`finance`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-14 | `updated` | /v1/finance/cash-flow-statement/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
+| 2025-12-12 | `updated` | /v1/finance/cash-flow-statement/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251212) |
+
 ## 页面标题结构
 
 - 财务报告

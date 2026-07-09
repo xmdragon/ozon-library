@@ -2,12 +2,23 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-03-24。替代方法：`/v2/delivery-method/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026324
+> News 原文摘要：/v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/delivery-method/list
+
 ## 方法
 
 - 请求：`POST /v1/delivery-method/list`
 - Operation ID：`WarehouseAPI_DeliveryMethodList`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseAPI_DeliveryMethodList
 - 分组：`delivery-method`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-24 | `deprecated_method` | /v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/delivery-method/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
+| 2024-12-26 | `added_field` | /v1/delivery-method/list 添加字段 result.sla_cut_in 在方法响应。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20241226) |
 
 ## 页面标题结构
 

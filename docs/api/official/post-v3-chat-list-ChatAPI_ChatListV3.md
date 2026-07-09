@@ -9,6 +9,17 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ChatAPI_ChatListV3
 - 分组：`chat`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-30 | `updated` | /v3/chat/list 更新了方法响应中chats.chat.chat_type参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026630) |
+| 2026-05-05 | `updated` | /v3/chat/list 更新了方法响应中参数chats.chat.chat_type的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
+| 2026-03-19 | `updated` | /v3/chat/list 更新了方法响应中 chats.chat.chat_type 参数的描。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026319) |
+| 2026-03-11 | `updated` | /v3/chat/list 更新了方法响应中的 chats.chat.chat_type 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026311) |
+| 2025-10-16 | `updated` | /v3/chat/list 更新了该方法请求中参数 limit 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-07-28 | `new_method` | /v3/chat/list 新增了新版本方法，用于通过指定筛选器获取聊天信息。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025728) |
+
 ## 页面标题结构
 
 - 聊天清单

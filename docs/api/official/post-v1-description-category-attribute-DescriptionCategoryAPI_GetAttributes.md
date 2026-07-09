@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/DescriptionCategoryAPI_GetAttributes
 - 分组：`description-category`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-07-22 | `updated` | /v1/description-category/attribute 更新了方法响应中 result.id 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025722) |
+| 2025-03-19 | `added_field` | /v1/description-category/attribute 在方法响应中添加了参数 result.complex_is_collection。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025319) |
+
 ## 页面标题结构
 
 - 类别特征列表

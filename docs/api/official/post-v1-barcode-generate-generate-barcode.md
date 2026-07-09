@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/generate-barcode
 - 分组：`barcode`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-06-20 | `new_method`, `graduated` | /v1/barcode/generate 新增了为商品生成条形码的方法。 v1/returns/rfbs/action/set 已将该方法从Beta版迁移至正式版。 — 在 方法操作顺序 → 管理rFBS订单退货申请 部分，更新了有关方法操作的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+
 ## 页面标题结构
 
 - 创建商品条形码

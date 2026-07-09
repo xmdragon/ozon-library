@@ -2,12 +2,32 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-04-30。替代方法：`/v4/posting/fbs/unfulfilled/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026430
+> News 原文摘要：/v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/unfulfilled/list
+
 ## 方法
 
 - 请求：`POST /v3/posting/fbs/unfulfilled/list`
 - Operation ID：`PostingAPI_GetFbsPostingUnfulfilledList`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingUnfulfilledList
 - 分组：`posting`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-05 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了各方法响应中参数 result.postings.analytics_data.client_delivery_date_begin和 result.postings.analytics_data.client_delivery_date_end的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
+| 2026-04-30 | `deprecated_method` | /v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/unfulfilled/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2026-04-17 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法响应中新增参数result.postings.tariffication_steps。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
+| 2026-03-17 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.analytics_data.client_delivery_date_begin 和 result.postings.analytics_data.client_delivery_date_end 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
+| 2025-11-27 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法的响应中：更新了参数 result.analytics_data.payment_type_group_name 的描述；新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| 2025-10-21 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
+| 2025-10-16 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.financial_data.products.product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-09-24 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.customer.phone、result.postings.addressee.phone、result.postings.products.is_marketplace_buyout 和 result.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-07-22 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.requirements.products_requiring_change_country 和 result.postings.financial_data.products.actions 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025722) |
+| 2025-05-22 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了该方法请求中参数 filter.fbpFilter 的描述。 — 在接口使用规范模块中，已提升接口请求限额 —— 现在每个 Client ID 每秒最多可发起50次请求。此前每秒最多只能发起10次请求。 替代方法：/v3/product/import | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
+| 2025-05-06 | `removed_field` | /v3/posting/fbs/unfulfilled/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 
 ## 页面标题结构
 

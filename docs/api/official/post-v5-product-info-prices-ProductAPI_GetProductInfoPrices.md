@@ -9,6 +9,20 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoPrices
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-28 | `updated` | /v5/product/info/prices 更新了方法响应中items.marketing_actions、items.marketing_actions.actions、items.marketing_actions.actions.date_from、items.marketing_actions.actions.date_to、items.marketing_actions.actions.title和items.marketing_actions.actions.value参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026528) |
+| 2026-05-12 | `new_method` | /v5/product/info/prices 已新增方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+| 2026-05-05 | `updated` | /v5/product/info/prices 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
+| 2026-02-10 | `updated` | /v5/product/info/prices 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026210) |
+| 2025-12-25 | `updated` | /v5/product/info/prices 已更新方法响应中参数 items.price.retail_price 的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
+| 2025-11-12 | `removed_field` | /v5/product/info/prices 在方法回答该price.marketing_price参数已过期，我们已将其从文件中删除。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251112) |
+| 2025-10-06 | `deprecated_field` | /v5/product/info/prices 参数 items.price.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025106) |
+| 2025-05-28 | `added_field` | /v5/product/info/prices 在方法的响应中新增了参数items.price.net_price。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025528) |
+| 2025-03-07 | `graduated` | /v5/product/info/prices 已将该方法从 Beta 版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202537) |
+
 ## 页面标题结构
 
 - 获取商品价格信息

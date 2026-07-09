@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductStocksByWarehouseFbs
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-23 | `added_field` | /v1/product/info/stocks-by-warehouse/fbs 在请求中添加了参数 offer_id，并在方法响应中添加了参数 results.offer_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
+
 ## 页面标题结构
 
 - 关于卖家库存余额的信息

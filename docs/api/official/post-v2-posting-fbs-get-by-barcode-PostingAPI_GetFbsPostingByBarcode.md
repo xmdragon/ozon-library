@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingByBarcode
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-16 | `removed_field` | /v2/posting/fbs/get-by-barcode 已从方法响应中移除参数 result.analytics_data 和 result.financial_data。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-05-06 | `removed_field` | /v2/posting/fbs/get-by-barcode 已从方法响应中移除参数 result.financial_data.products.client_price，result.financial_data.products.picking 和 result.products.mandatory_mark。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
+
 ## 页面标题结构
 
 - 按条形码获取有关货件的信息

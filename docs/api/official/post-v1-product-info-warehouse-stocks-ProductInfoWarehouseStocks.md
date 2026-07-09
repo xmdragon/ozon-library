@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductInfoWarehouseStocks
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-07 | `new_method` | /v1/product/info/warehouse/stocks 新增了用于获取FBS和rFBS仓库库存的测试方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025107) |
+
 ## 页面标题结构
 
 - 获取FBS和rFBS仓库库存信息

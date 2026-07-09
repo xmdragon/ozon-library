@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarValidateV5
 - 分组：`fbs`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-16 | `updated` | /v5/fbs/posting/product/exemplar/validate 更新了方法响应中的 products.exemplars.marks 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+
 ## 页面标题结构
 
 - 标志代码验证

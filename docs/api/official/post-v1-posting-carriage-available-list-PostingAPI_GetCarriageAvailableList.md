@@ -2,12 +2,22 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-02-16。替代方法：`/v2/carriage/delivery/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026216
+> News 原文摘要：/v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/carriage/delivery/list
+
 ## 方法
 
 - 请求：`POST /v1/posting/carriage-available/list`
 - Operation ID：`PostingAPI_GetCarriageAvailableList`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetCarriageAvailableList
 - 分组：`posting`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-16 | `deprecated_method` | /v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/carriage/delivery/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
 
 ## 页面标题结构
 

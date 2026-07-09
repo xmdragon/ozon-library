@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ActionTimerStatus
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-12 | `updated` | /v1/product/action/timer/status 已更新方法响应中statuses.expired_at参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+
 ## 页面标题结构
 
 - 获取已设置计时器状态

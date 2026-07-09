@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFbpPosting
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-01 | `new_method` | /v1/posting/fbp/get 新增了用于按标识符获取FBP货件信息的beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202671) |
+
 ## 页面标题结构
 
 - 按标识符获取货件信息

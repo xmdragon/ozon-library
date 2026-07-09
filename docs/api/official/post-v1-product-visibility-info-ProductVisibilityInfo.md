@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductVisibilityInfo
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-12 | `new_method` | /v1/product/visibility/info 新增了用于获取商品可见性信息的Beta版方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+
 ## 页面标题结构
 
 - 获取商品可见性信息

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SearchQueriesAPI_SearchQueriesTop
 - 分组：`search-queries`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-11-11 | `new_method` | /v1/search-queries/top 已新增用于处理搜索查询的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
+
 ## 页面标题结构
 
 - 获取热门搜索查询列表

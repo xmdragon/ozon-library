@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_PostingFBSActGetContainerLabels
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-03 | `new_method` | /v2/posting/fbs/act/get-container-labels 新增了方法，用于创建货位标签。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202663) |
+
 ## 页面标题结构
 
 - 货位标签

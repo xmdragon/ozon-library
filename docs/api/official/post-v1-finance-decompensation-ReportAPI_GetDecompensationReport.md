@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_GetDecompensationReport
 - 分组：`finance`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-07-23 | `graduated` | /v1/finance/decompensation 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025723) |
+
 ## 页面标题结构
 
 - 赔偿返还报告

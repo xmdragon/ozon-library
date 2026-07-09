@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AnalyticsAPI_AnalyticsGetData
 - 分组：`analytics`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-19 | `updated` | /v1/analytics/data 更新了该方法请求中参数dimension的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+
 ## 页面标题结构
 
 - 分析数据

@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingFbpList
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-30 | `added_field` | /v1/posting/fbp/list 已在方法响应中添加参数postings.financial_data.products.posting_commission和postings.financial_data.products.return_commission。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026630) |
+| 2026-04-30 | `new_method` | /v1/posting/fbp/list 新增了用于获取FBP货件列表的新的beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+
 ## 页面标题结构
 
 - 获取货件列表

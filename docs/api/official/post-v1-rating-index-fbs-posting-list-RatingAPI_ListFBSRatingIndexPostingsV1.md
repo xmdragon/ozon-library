@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RatingAPI_ListFBSRatingIndexPostingsV1
 - 分组：`rating`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-11-20 | `new_method` | /v1/rating/index/fbs/posting/list 新增了用于处理错误指数的测试版方法：FBS 和 rFBS。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
+
 ## 页面标题结构
 
 - 影响错误指数的货件列表：FBS 和 rFBS

@@ -26,7 +26,7 @@ description: Use when maintaining the ozon-library repository, refreshing Ozon S
 ## 更新流程
 
 1. 按 `workflows/ozon-library-update.md` 确认来源路径和 Git revision。
-2. 需要官方 API 时，按 `workflows/chrome-official-seller-api-extract.md` 抽取 Chrome DOM，并运行 `python3 tools/generate_official_api_docs.py` 刷新逐方法文档。
+2. 需要官方 API 时，按 `workflows/chrome-official-seller-api-extract.md` 抽取 Chrome DOM 和 News，运行 `python3 tools/apply_official_api_news.py` 合并废弃/字段变更，再运行 `python3 tools/generate_official_api_docs.py` 刷新逐方法文档。
 3. 需要项目更新时，按 `workflows/project-source-extract.md` 扫描源码。
 4. 按 `workflows/dedupe-and-merge.md` 合并重复知识。
 5. 更新主题文档和 source notes。

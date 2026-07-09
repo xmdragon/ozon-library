@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/DescriptionCategoryTips
 - 分组：`description-category`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-17 | `new_method` | /v1/description-category/tips 我们新增了用于获取商品类目提示的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
+
 ## 页面标题结构
 
 - 获取用于确定商品类目的提示

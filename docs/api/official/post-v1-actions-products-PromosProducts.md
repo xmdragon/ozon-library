@@ -9,6 +9,14 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PromosProducts
 - 分组：`actions`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-23 | `added_field` | /v1/actions/products 添加了参数 result.products.current_boost、result.products.price_min_elastic、result.products.price_max_elastic、result.products.min_boost 和 result.products.max_boost 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251223) |
+| 2025-05-15 | `added_field` | /v1/actions/products 添加了参数 result.products.alert_max_action_price_failed 和 result.products.alert_max_action_price 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025515) |
+| 2025-03-13 | `added_field`, `deprecated_field` | /v1/actions/products 我们已将 offset 参数标记为已弃用，并添加了 last_id分页参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025313) |
+
 ## 页面标题结构
 
 - 参与 活动的商品列表

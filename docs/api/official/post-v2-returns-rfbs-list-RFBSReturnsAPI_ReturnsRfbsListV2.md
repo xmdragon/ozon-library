@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RFBSReturnsAPI_ReturnsRfbsListV2
 - 分组：`returns`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-26 | `deprecated_field` | /v2/returns/rfbs/list 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251226) |
+| 2025-09-24 | `updated` | /v2/returns/rfbs/list 更新了该方法请求中参数 last_id 的描述。已更新回答示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+
 ## 页面标题结构
 
 - 退货申请列表

@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ImportProductsBySKU
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-12 | `updated` | /v1/product/import-by-sku 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026212) |
+| 2025-05-06 | `removed_field` | /v1/product/import-by-sku 已从方法请求中移除参数 items.premium_price。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
+
 ## 页面标题结构
 
 - 通过SKU创建商品

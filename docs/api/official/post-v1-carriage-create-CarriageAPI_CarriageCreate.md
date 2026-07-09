@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CarriageAPI_CarriageCreate
 - 分组：`carriage`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-03 | `new_method` | /v1/carriage/create 新增了用于创建发运的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202663) |
+
 ## 页面标题结构
 
 - 创建发运

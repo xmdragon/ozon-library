@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/Question_List
 - 分组：`question`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-19 | `added_field` | /v1/question/list 在方法请求中新增了sort_dir和limit参数。在方法响应中新增了has_next参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+
 ## 页面标题结构
 
 - 问题列表

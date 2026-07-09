@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RFBSReturnsAPI_ReturnsRfbsGetV2
 - 分组：`returns`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-09-24 | `updated` | /v2/returns/rfbs/get 更新了方法请求中的 return_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+
 ## 页面标题结构
 
 - 退货申请信息

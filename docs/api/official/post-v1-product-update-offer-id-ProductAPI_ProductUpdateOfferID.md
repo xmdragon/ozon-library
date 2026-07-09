@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductUpdateOfferID
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-12 | `updated` | /v1/product/update/offer-id 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+| 2026-03-17 | `updated` | /v1/product/update/offer-id 更新了方法描述。为方法请求中的 update_offer_id 参数添加了限制。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
+
 ## 页面标题结构
 
 - 从卖家的系统中改变商品货号

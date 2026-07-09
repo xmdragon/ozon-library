@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/carriagePassUpdate
 - 分组：`carriage`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-07 | `added_field` | /v1/carriage/pass/update 在方法请求中添加了参数arrival_passes.arrival_time、arrival_passes.tracking_number和arrival_passes.tracking_url。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202677) |
+
 ## 页面标题结构
 
 - 更新通行证

@@ -9,6 +9,15 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ChatAPI_ChatHistoryV3
 - 分组：`chat`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-19 | `updated` | /v3/chat/history 更新了方法响应中 messages.user.type 参数的描。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026319) |
+| 2025-09-24 | `updated` | /v3/chat/history 更新了方法请求中的 from_message_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-05-13 | `graduated` | /v3/chat/history 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025513) |
+| 2025-03-11 | `new_method` | /v3/chat/history 添加了新版本的聊天记录查看方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025311) |
+
 ## 页面标题结构
 
 - 聊天历史记录

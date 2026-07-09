@@ -122,6 +122,61 @@ def _format_json_example(text: str) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2)
 
 
+def _format_label_list(labels: Any) -> str:
+    if not isinstance(labels, list) or not labels:
+        return "无"
+    return ", ".join(f"`{label}`" for label in labels)
+
+
+def _format_replacement_paths(paths: Any) -> str:
+    if not isinstance(paths, list) or not paths:
+        return "无"
+    return ", ".join(f"`{path}`" for path in paths)
+
+
+def _render_lifecycle_notice(operation: Operation) -> List[str]:
+    lifecycle = operation.get("lifecycle")
+    if not isinstance(lifecycle, dict):
+        return []
+
+    status = str(lifecycle.get("status") or "unknown")
+    date = str(lifecycle.get("date") or "未知日期")
+    replacements = _format_replacement_paths(lifecycle.get("replacement_paths"))
+    source_url = str(lifecycle.get("sourceUrl") or "")
+    source = f" 官方 News：{source_url}" if source_url else ""
+    text = _format_text_block(lifecycle.get("text", ""))
+
+    return [
+        "> [!WARNING]",
+        f"> 官方 News 标记此方法为 `{status}`，日期：{date}。替代方法：{replacements}。{source}",
+        f"> News 原文摘要：{text}",
+        "",
+    ]
+
+
+def _render_news_updates(updates: Any) -> List[str]:
+    if not isinstance(updates, list) or not updates:
+        return []
+
+    lines = [
+        "## News 更新标记",
+        "",
+        "| 日期 | 标记 | 摘要 | 来源 |",
+        "| --- | --- | --- | --- |",
+    ]
+    for update in updates:
+        if not isinstance(update, dict):
+            continue
+        date = _escape_markdown_table_cell(str(update.get("date") or "无"))
+        labels = _escape_markdown_table_cell(_format_label_list(update.get("labels")))
+        text = _escape_markdown_table_cell(_format_text_block(update.get("text", "")))
+        source_url = str(update.get("sourceUrl") or "")
+        source = f"[官方 News]({source_url})" if source_url else "无"
+        lines.append(f"| {date} | {labels} | {text} | {source} |")
+    lines.append("")
+    return lines
+
+
 def _render_examples(examples: Iterable[Dict[str, Any]]) -> List[str]:
     lines: List[str] = []
     for example in examples:
@@ -152,6 +207,7 @@ def render_operation_doc(operation: Operation) -> str:
         "",
         "> 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。",
         "",
+        *_render_lifecycle_notice(operation),
         "## 方法",
         "",
         f"- 请求：`{method} {path}`",
@@ -160,6 +216,8 @@ def render_operation_doc(operation: Operation) -> str:
         f"- 分组：`{operation_group(operation)}`",
         "",
     ]
+
+    lines.extend(_render_news_updates(operation.get("news_updates")))
 
     if headings:
         lines.extend(["## 页面标题结构", ""])
@@ -231,7 +289,9 @@ def _render_readme(operations: List[Operation], file_names: Dict[int, str]) -> s
             method = str(operation.get("method") or "").upper()
             path = str(operation.get("path") or "")
             label = title if title != operation_id else operation_id
-            lines.append(f"- [{label}]({filename}) - `{method} {path}` - `{operation_id}`")
+            lifecycle = operation.get("lifecycle") if isinstance(operation.get("lifecycle"), dict) else {}
+            lifecycle_label = f" - **{lifecycle.get('status')}**" if lifecycle else ""
+            lines.append(f"- [{label}]({filename}) - `{method} {path}` - `{operation_id}`{lifecycle_label}")
         lines.append("")
 
     return "\n".join(lines)

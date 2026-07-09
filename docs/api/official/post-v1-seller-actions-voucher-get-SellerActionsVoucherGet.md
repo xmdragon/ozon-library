@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerActionsVoucherGet
 - 分组：`seller-actions`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-24 | `new_method` | /v1/seller-actions/voucher/get 新增了用于管理卖家促销活动的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
+
 ## 页面标题结构
 
 - 获取CSV格式的促销码文件

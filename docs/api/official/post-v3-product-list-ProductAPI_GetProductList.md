@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductList
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-25 | `updated` | /v3/product/list 更新了方法响应中的 result.items.quants 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
+| 2025-02-21 | `new_method` | /v3/product/list 新增获取所有商品列表的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025221) |
+
 ## 页面标题结构
 
 - 品列表的

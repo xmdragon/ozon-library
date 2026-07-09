@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_MoveFbsPostingToAwaitingDelivery
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-02-06 | `updated` | /v2/posting/fbs/awaiting-delivery 更新了该方法请求中参数 posting_number 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202526) |
+
 ## 页面标题结构
 
 - 货件装运

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/UpdateWarehouseFBSFirstMile
 - 分组：`warehouse`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-17 | `added_field` | /v1/warehouse/fbs/first-mile/update 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
+
 ## 页面标题结构
 
 - 更新头程物流

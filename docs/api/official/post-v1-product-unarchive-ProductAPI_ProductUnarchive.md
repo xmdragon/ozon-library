@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductUnarchive
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-23 | `updated` | /v1/product/unarchive 更新了方法请求中的 product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251223) |
+
 ## 页面标题结构
 
 - 从档案中还原商品

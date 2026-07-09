@@ -2,12 +2,23 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-05-06。替代方法：`/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/202656
+> News 原文摘要：/v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day
+
 ## 方法
 
 - 请求：`POST /v3/finance/transaction/totals`
 - Operation ID：`FinanceAPI_FinanceTransactionTotalV3`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_FinanceTransactionTotalV3
 - 分组：`finance`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-06 | `deprecated_method` | /v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202656) |
+| 2025-08-01 | `updated` | /v3/finance/transaction/totals 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202581) |
 
 ## 页面标题结构
 

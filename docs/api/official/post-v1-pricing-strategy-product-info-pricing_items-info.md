@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_items-info
 - 分组：`pricing-strategy`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-06-19 | `deprecated_field` | /v1/pricing-strategy/product/info 并将参数 result.strategy_competitor_id 标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025619) |
+
 ## 页面标题结构
 
 - 竞争对手 的商品价格

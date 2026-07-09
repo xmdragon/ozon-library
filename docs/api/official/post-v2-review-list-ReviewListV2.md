@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReviewListV2
 - 分组：`review`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-11 | `new_method` | /v2/review/list 新增了用于获取评价列表的方法版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026611) |
+
 ## 页面标题结构
 
 - 获取评价列表

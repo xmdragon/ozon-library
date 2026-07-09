@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingFbsUnfulfilledList
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-04-30 | `new_method` | /v4/posting/fbs/unfulfilled/list 新增了用于获取FBS未处理货件列表的方法新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+
 ## 页面标题结构
 
 - 获取未处理货件列表

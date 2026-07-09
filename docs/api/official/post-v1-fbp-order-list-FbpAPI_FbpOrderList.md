@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpOrderList
 - 分组：`fbp`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-28 | `updated` | /v1/fbp/order/list 更新了方法响应中items.delivery_details.direct_details.timeslot_details.timeslot.timeslot_end、items.delivery_details.direct_details.timeslot_details.timeslot.timeslot_start、items.delivery_details.drop_off_point.timeslot.timeslot_end和items.delivery_details.drop_off_point.timeslot.timeslot_start参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026528) |
+
 ## 页面标题结构
 
 - 获取交货列表

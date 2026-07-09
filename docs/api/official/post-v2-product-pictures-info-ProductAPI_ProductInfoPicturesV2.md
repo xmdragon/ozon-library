@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductInfoPicturesV2
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-06-04 | `added_field` | /v2/product/pictures/info 在方法的响应中新增了参数items.errors。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202564) |
+| 2025-01-14 | `graduated` | /v2/product/pictures/info 已将此方法从测试版移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025114) |
+
 ## 页面标题结构
 
 - 获取商品图片

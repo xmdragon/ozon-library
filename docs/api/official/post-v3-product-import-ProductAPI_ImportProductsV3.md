@@ -9,6 +9,19 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ImportProductsV3
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-14 | `updated` | /v3/product/import 更新了该方法请求中参数items.promotions.type的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
+| 2025-12-30 | `updated` | /v3/product/import 更新了方法请求中的 items.vat 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
+| 2025-10-08 | `updated` | /v3/product/import 更新了该方法请求中参数 items.images 的描述。更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
+| 2025-10-01 | `updated` | /v3/product/import 更新了该方法请求中参数 items.name 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025101) |
+| 2025-09-24 | `updated` | /v3/product/import 将方法请求中的 items.price 参数标记为必需。 更新了方法响应中的 result.task_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-05-22 | `added_field` | /v3/product/import 添加字段 items.promotions 在方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
+| 2025-05-06 | `removed_field` | /v3/product/import 已从方法请求中移除参数 items.image_group_id 和 items.premium_price。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
+| 2024-12-24 | `updated` | /v3/product/import 更新了方法请求中参数 items.vat 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20241224) |
+
 ## 页面标题结构
 
 - 创建或更新商品

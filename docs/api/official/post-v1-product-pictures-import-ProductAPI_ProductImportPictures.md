@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductImportPictures
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-08 | `updated` | /v1/product/pictures/import 更新了该方法请求中参数 images 的描述。更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
+
 ## 页面标题结构
 
 - 上传或更新商品图片

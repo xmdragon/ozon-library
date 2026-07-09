@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductVisibilitySet
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-22 | `updated` | /v1/product/visibility/set 已更新方法描述。更新了该方法请求中参数item_placement.placement的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026622) |
+| 2026-04-06 | `new_method` | /v1/product/visibility/set 新增了用于设置商品在Ozon和Ozon Select橱窗可见性的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202646) |
+
 ## 页面标题结构
 
 - 新增了用于设置商品在Ozon和Ozon Select橱窗可见性的Beta方法。

@@ -2,12 +2,22 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-01-29。替代方法：`/v2/actions/discounts-task/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026129
+> News 原文摘要：/v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 替代方法：/v2/actions/discounts-task/list
+
 ## 方法
 
 - 请求：`POST /v1/actions/discounts-task/list`
 - Operation ID：`promos_task_list`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/promos_task_list
 - 分组：`actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-01-29 | `deprecated_method` | /v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 替代方法：/v2/actions/discounts-task/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026129) |
 
 ## 页面标题结构
 

@@ -2,12 +2,26 @@
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-06-11。替代方法：`/v2/review/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026611
+> News 原文摘要：/v1/review/list 该方法已弃用，并将在未来停用。请切换到 替代方法：/v2/review/list
+
 ## 方法
 
 - 请求：`POST /v1/review/list`
 - Operation ID：`ReviewAPI_ReviewList`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReviewAPI_ReviewList
 - 分组：`review`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-11 | `deprecated_method` | /v1/review/list 该方法已弃用，并将在未来停用。请切换到 替代方法：/v2/review/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026611) |
+| 2026-03-31 | `updated` | /v1/review/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026331) |
+| 2025-11-11 | `updated` | /v1/review/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
+| 2025-06-20 | `updated` | /v1/review/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+| 2025-01-16 | `new_method` | /v1/review/list 已添加管理评价的测试方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025116) |
 
 ## 页面标题结构
 

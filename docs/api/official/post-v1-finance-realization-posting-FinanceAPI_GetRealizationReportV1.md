@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_GetRealizationReportV1
 - 分组：`finance`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-25 | `removed_field` | /v1/finance/realization/posting 已从方法响应中移除参数 header.doc_amount 和 header.vat_amount。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
+| 2025-06-05 | `graduated` | /v1/finance/realization/posting 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202565) |
+
 ## 页面标题结构
 
 - 按订单细分的商品销售报告

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ActionsAutoAddProductsUpdate
 - 分组：`actions`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-12 | `new_method` | /v1/actions/auto-add/products/update 新增了用于处理商品自动添加到促销活动中的beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+
 ## 页面标题结构
 
 - 在促销活动自动添加列表中添加或更新商品

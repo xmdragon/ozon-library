@@ -134,6 +134,39 @@ class GenerateOfficialApiDocsTest(unittest.TestCase):
         self.assertNotIn("resultArray of objects", doc)
         self.assertNotIn("Array ()idnumber", doc)
 
+    def test_render_operation_doc_shows_lifecycle_and_news_updates(self):
+        operation = sample_operation("/v1/review/list", "ReviewAPI_ReviewList", "评价列表")
+        operation["lifecycle"] = {
+            "status": "deprecated",
+            "date": "2026-06-11",
+            "replacement_paths": ["/v2/review/list"],
+            "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026611",
+            "text": "/v1/review/list 该方法已弃用，并将在未来停用。请切换到/v2/review/list。",
+        }
+        operation["news_updates"] = [
+            {
+                "date": "2026-06-11",
+                "labels": ["deprecated_method"],
+                "text": "/v1/review/list 该方法已弃用，并将在未来停用。请切换到/v2/review/list。",
+                "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026611",
+            },
+            {
+                "date": "2026-07-08",
+                "labels": ["graduated"],
+                "text": "/v1/review/list 已将该方法从Beta版迁移至正式版。",
+                "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202678",
+            },
+        ]
+
+        doc = render_operation_doc(operation)
+
+        self.assertIn("> [!WARNING]", doc)
+        self.assertIn("官方 News 标记此方法为 `deprecated`", doc)
+        self.assertIn("替代方法：`/v2/review/list`", doc)
+        self.assertIn("## News 更新标记", doc)
+        self.assertIn("| 2026-06-11 | `deprecated_method` |", doc)
+        self.assertIn("/v1/review/list 该方法已弃用", doc)
+
     def test_generate_docs_writes_readme_and_one_file_per_operation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

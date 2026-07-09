@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PolygonAPI_CreatePolygon
 - 分组：`polygon`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-02 | `updated` | /v1/polygon/create 已更新方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202662) |
+
 ## 页面标题结构
 
 - 创建一个快递的设施

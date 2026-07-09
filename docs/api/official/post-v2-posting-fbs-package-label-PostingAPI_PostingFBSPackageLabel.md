@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_PostingFBSPackageLabel
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-10 | `updated` | /v2/posting/fbs/package-label 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026310) |
+| 2025-09-24 | `updated` | /v2/posting/fbs/package-label 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+
 ## 页面标题结构
 
 - 打印标签

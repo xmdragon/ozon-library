@@ -50,7 +50,25 @@
           "text": "expires_at string <date-time> 密钥到期日期。 roles Array of objects 可用角色和方式信息。"
         }
       ],
-      "title": "使用API密钥获取角色和方式列表"
+      "title": "使用API密钥获取角色和方式列表",
+      "news_updates": [
+        {
+          "date": "2026-03-04",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/roles 在方法的响应中新增了参数 expires_at。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202634"
+        },
+        {
+          "date": "2025-09-12",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/roles 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025912"
+        }
+      ]
     },
     {
       "examples": [
@@ -104,7 +122,17 @@
           "text": "company object 公司。 ratings Array of objects 评级列表。 subscription object 订阅。"
         }
       ],
-      "title": "卖家个人中心信息"
+      "title": "卖家个人中心信息",
+      "news_updates": [
+        {
+          "date": "2026-06-02",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/seller/info 更新了方法响应中company.currency参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202662"
+        }
+      ]
     },
     {
       "examples": [
@@ -170,7 +198,17 @@
           "text": "available_schemas Array of strings Default: \"UNKNOWN\"Items Enum: \"UNKNOWN\" \"FBO\" \"FBS\" 可用模式类型： UNKNOWN——未指定； FBO——从Ozon仓库配送； FBS——从自有仓库配送。 ozon_logistics_enabled boolean true，表示Ozon配送已开通。"
         }
       ],
-      "title": "Ozon配送开通信息"
+      "title": "Ozon配送开通信息",
+      "news_updates": [
+        {
+          "date": "2026-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/seller/ozon-logistics/info 更新了方法名称。更新了方法响应中参数ozon_logistics_enabled的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202655"
+        }
+      ]
     },
     {
       "examples": [
@@ -564,7 +602,25 @@
           "text": "category_dependent boolean 字典属性值取决于类别的标志： true — 该属性对每个类别都有不一样的值。 false — 该属性对所有类别都有相同的值。 description string 特征描述。 dictionary_id integer <int64> 目录ID。 group_id integer <int64> 组别特征ID。 group_name string 特征组别名称。 id integer <int64> 特性ID。 is_aspect boolean 方面属性特征。方面属性：用于区分同类商品不同特征的属性。 例如，同款衣服和鞋子具有不同的颜色和尺寸，即：颜色、尺寸为方面属性。 字段值： true — 方面属性，在货物交付到仓库或出仓销售后不能更改。 false — 非方面属性，可在任何时间改变。 is_collection boolean 标志、特征 — 值集： true — 特征 — 值集, false — 特性由单个值组成。 is_required boolean 强制性特征标志: true — 强制性特征, false — 可不指出特征。 name string 名称。 type string 特征类型。 attribute_complex_id integer <int64> 复合属性的标识符。 max_value_count integer <int64> 属性的最大值数量。 complex_is_collection boolean 标志某个复合特征是否为值集合： true 表示该复合特征是一个值集合； false 表示该复合特征只有一个值。"
         }
       ],
-      "title": "类别特征列表"
+      "title": "类别特征列表",
+      "news_updates": [
+        {
+          "date": "2025-07-22",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/description-category/attribute 更新了方法响应中 result.id 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025722"
+        },
+        {
+          "date": "2025-03-19",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/description-category/attribute 在方法响应中添加了参数 result.complex_is_collection。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025319"
+        }
+      ]
     },
     {
       "examples": [
@@ -1141,7 +1197,73 @@
           "text": "task_id integer <int64> 装卸任务的编号。"
         }
       ],
-      "title": "创建或更新商品"
+      "title": "创建或更新商品",
+      "news_updates": [
+        {
+          "date": "2026-05-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 更新了该方法请求中参数items.promotions.type的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026514"
+        },
+        {
+          "date": "2025-12-30",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 更新了方法请求中的 items.vat 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251230"
+        },
+        {
+          "date": "2025-10-08",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 更新了该方法请求中参数 items.images 的描述。更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025108"
+        },
+        {
+          "date": "2025-10-01",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 更新了该方法请求中参数 items.name 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025101"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 将方法请求中的 items.price 参数标记为必需。 更新了方法响应中的 result.task_id 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-05-22",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/product/import 添加字段 items.promotions 在方法请求。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025522"
+        },
+        {
+          "date": "2025-05-06",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v3/product/import 已从方法请求中移除参数 items.image_group_id 和 items.premium_price。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556"
+        },
+        {
+          "date": "2024-12-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 更新了方法请求中参数 items.vat 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20241224"
+        }
+      ]
     },
     {
       "examples": [
@@ -1240,7 +1362,25 @@
           "text": "items Array of objects 商品有关信息。 total integer <int32> 在卖方系统中的卖家系统中的商品标识符 — product_id。"
         }
       ],
-      "title": "查询商品添加或更新状态"
+      "title": "查询商品添加或更新状态",
+      "news_updates": [
+        {
+          "date": "2025-05-06",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v1/product/import/info 已从方法响应中移除参数 result.items.errors.optional_description_elements。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556"
+        },
+        {
+          "date": "2025-03-19",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import/info 更新了方法描述。 在方法响应的 result.items.status 参数中，新增可能的值 skipped。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025319"
+        }
+      ]
     },
     {
       "examples": [
@@ -1343,7 +1483,25 @@
           "text": "task_id integer <int64> 进口货物任务代码。 unmatched_sku_list Array of integers <int64> 商品Id列表。"
         }
       ],
-      "title": "通过SKU创建商品"
+      "title": "通过SKU创建商品",
+      "news_updates": [
+        {
+          "date": "2026-02-12",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import-by-sku 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026212"
+        },
+        {
+          "date": "2025-05-06",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v1/product/import-by-sku 已从方法请求中移除参数 items.premium_price。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556"
+        }
+      ]
     },
     {
       "examples": [
@@ -1421,7 +1579,17 @@
           "text": "task_id integer <int64> 商品更新任务号码。 为检查更新状态，请将接收到的值传至方法 /v1/product/import/info。"
         }
       ],
-      "title": "更新商品特征"
+      "title": "更新商品特征",
+      "news_updates": [
+        {
+          "date": "2025-11-25",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/attributes/update 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251125"
+        }
+      ]
     },
     {
       "examples": [
@@ -1564,7 +1732,17 @@
           "text": "pictures Array of objects"
         }
       ],
-      "title": "上传或更新商品图片"
+      "title": "上传或更新商品图片",
+      "news_updates": [
+        {
+          "date": "2025-10-08",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/pictures/import 更新了该方法请求中参数 images 的描述。更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025108"
+        }
+      ]
     },
     {
       "examples": [
@@ -1691,7 +1869,25 @@
           "text": "items Array of objects 品列表的。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 total integer <int32> 品牌总数。"
         }
       ],
-      "title": "品列表的"
+      "title": "品列表的",
+      "news_updates": [
+        {
+          "date": "2025-12-25",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/list 更新了方法响应中的 result.items.quants 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251225"
+        },
+        {
+          "date": "2025-02-21",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v3/product/list 新增获取所有商品列表的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025221"
+        }
+      ]
     },
     {
       "examples": [
@@ -2209,7 +2405,66 @@
           "text": "availabilities Array of objects 商品可售数量信息。 barcodes Array of strings 商品的所有条形码。 color_image Array of strings 商品颜色图片。 commissions Array of objects 佣金信息。 created_at string <date-time> 商品的创建日期和时间。 currency_code string 货币单位。 description_category_id integer <int64> 类目标识符。 可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 discounted_fbo_stocks integer <int32> Ozon 仓库中减价商品的库存。 errors Array of objects 创建或验证商品时的错误信息。 has_discounted_fbo_item boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 id integer <int64> 商品标识符。 images Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 images360 Array of strings 360° 商品图片数组。 is_archived boolean 如果商品是手动归档的，则为 true。 is_autoarchived boolean 如果商品是自动归档的，则为 true。 is_discounted boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true。 如果商品不是减价商品或是由Ozon减价的，则为 false。 is_kgt boolean true，表示商品为超大。仅适用于FBS模式。 is_prepayment_allowed boolean Deprecated 如果支持预付款，则为 true。 is_super boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 min_price string 应用促销后的最低价格。 model_info object 商品型号信息。 name string 名称。 offer_id string 商品在卖家系统中的标识符 — 货号。 old_price string 不含折扣价格。在商品卡片上显示为划线价。 price string 商品的含折扣价格。该值将在商品卡片上显示。 price_indexes object 商品价格指数。 primary_image Array of strings 商品的主图。 promotions Array of objects 促销活动。 sku integer <int64> 商品在 Ozon 系统中的标识符 — SKU。 sources Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。 statuses object 商品状态信息。 stocks object 商品库存信息。 type_id integer <int64> 商品类型标识符。 updated_at string <date-time> 商品的最后更新时间。 vat string 商品的增值税税率。 visibility_details object 商品的可见性设置。 volume_weight number <double> 商品的体积重量。"
         }
       ],
-      "title": "根据标识符获取商品信息"
+      "title": "根据标识符获取商品信息",
+      "news_updates": [
+        {
+          "date": "2026-05-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/info/list 已更新方法响应中items.promotions.type参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026514"
+        },
+        {
+          "date": "2026-02-26",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/info/list 已更新方法响应中 items.is_kgt 参数的描述。 — 在 方法操作顺序 → 获取库存信息 部分，更新了有关方法操作的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026226"
+        },
+        {
+          "date": "2025-11-12",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v3/product/info/list 在方法回答该items.marketing_price参数已过期，我们已将其从文件中删除。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251112"
+        },
+        {
+          "date": "2025-10-06",
+          "labels": [
+            "deprecated_field",
+            "added_field"
+          ],
+          "text": "/v3/product/info/list 参数 items.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025106"
+        },
+        {
+          "date": "2025-08-14",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/product/info/list 在方法的响应中新增了参数 items.promotions、items.promotions.is_enabled、items.promotions.type 和 items.sku。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025814"
+        },
+        {
+          "date": "2025-08-05",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v3/product/info/list 已将参数 items.is_prepayment_allowed 标记为已弃用。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202585"
+        },
+        {
+          "date": "2025-02-11",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v3/product/info/list 已将此方法从测试版移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025211"
+        }
+      ]
     },
     {
       "examples": [
@@ -2992,7 +3247,25 @@
           "text": "daily_create object 创建商品的每日限制。 daily_update object 商品更新的每日限制。 operation_limits object 商品操作的可用限额。 total object 品类限制。"
         }
       ],
-      "title": "品类限制、商品的创建和更新"
+      "title": "品类限制、商品的创建和更新",
+      "news_updates": [
+        {
+          "date": "2026-06-09",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v4/product/info/limit 在方法的响应中添加了参数 operation_limits和total.quota_by_category的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202669"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v4/product/info/limit 更新了方法响应中的 total.limit、daily_create.limit 和 daily_update.limit 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        }
+      ]
     },
     {
       "examples": [
@@ -3111,7 +3384,25 @@
           "text": "message string 错误信息。 offer_id string 无法更改的卖家系统中的商品标识符是商品货号。"
         }
       ],
-      "title": "从卖家的系统中改变商品货号"
+      "title": "从卖家的系统中改变商品货号",
+      "news_updates": [
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/update/offer-id 已更新方法说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        },
+        {
+          "date": "2026-03-17",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/update/offer-id 更新了方法描述。为方法请求中的 update_offer_id 参数添加了限制。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026317"
+        }
+      ]
     },
     {
       "examples": [
@@ -3255,7 +3546,17 @@
           "text": "result boolean 查询的处理结果。true，如果查询的执行无误。"
         }
       ],
-      "title": "从档案中还原商品"
+      "title": "从档案中还原商品",
+      "news_updates": [
+        {
+          "date": "2025-12-23",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/unarchive 更新了方法请求中的 product_id 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251223"
+        }
+      ]
     },
     {
       "examples": [
@@ -3619,7 +3920,25 @@
           "text": "product_id integer <int64> Ozon系统中商品的标识符 — product_id。 primary_photo Array of strings 主图链接。 photo Array of strings 商品照片链接。 color_photo Array of strings 上传的颜色样本链接。 photo_360 Array of strings 360度图片链接。 errors Array of objects 商品图片相关错误列表。"
         }
       ],
-      "title": "获取商品图片"
+      "title": "获取商品图片",
+      "news_updates": [
+        {
+          "date": "2025-06-04",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v2/product/pictures/info 在方法的响应中新增了参数items.errors。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202564"
+        },
+        {
+          "date": "2025-01-14",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v2/product/pictures/info 已将此方法从测试版移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025114"
+        }
+      ]
     },
     {
       "examples": [
@@ -3689,7 +4008,25 @@
           "text": "cursor string 用于获取下一批数据的指针。 products Array of objects 商品列表。"
         }
       ],
-      "title": "体积重量特征不正确的商品列表"
+      "title": "体积重量特征不正确的商品列表",
+      "news_updates": [
+        {
+          "date": "2026-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/info/wrong-volume 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202655"
+        },
+        {
+          "date": "2025-03-26",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/product/info/wrong-volume 我们已为获取体积重量特征不正确的商品的列表添加了Beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025326"
+        }
+      ]
     },
     {
       "examples": [
@@ -3777,7 +4114,25 @@
           "text": "code string 错误代码。 error string 错误描述。 barcode string 未能绑定的条形码。 sku integer <int64> 未能绑定条形码的商品标识符。"
         }
       ],
-      "title": "为商品绑定条形码"
+      "title": "为商品绑定条形码",
+      "news_updates": [
+        {
+          "date": "2026-05-15",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/barcode/add 已更新方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026515"
+        },
+        {
+          "date": "2025-06-20",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/barcode/add 新增了为商品绑定条形码的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025620"
+        }
+      ]
     },
     {
       "examples": [
@@ -3865,7 +4220,18 @@
           "text": "code string 错误代码。 error string 错误描述。 barcode string 生成条形码时出错的条形码。 product_id integer <int64> 未能成功生成条形码的商品标识符。"
         }
       ],
-      "title": "创建商品条形码"
+      "title": "创建商品条形码",
+      "news_updates": [
+        {
+          "date": "2025-06-20",
+          "labels": [
+            "new_method",
+            "graduated"
+          ],
+          "text": "/v1/barcode/generate 新增了为商品生成条形码的方法。 v1/returns/rfbs/action/set 已将该方法从Beta版迁移至正式版。 — 在 方法操作顺序 → 管理rFBS订单退货申请 部分，更新了有关方法操作的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025620"
+        }
+      ]
     },
     {
       "examples": [
@@ -4008,7 +4374,17 @@
           "text": "errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id。 updated boolean 如果商品信息已被成功更新 — true。 warehouse_id integer <int64> 仓库编号。"
         }
       ],
-      "title": "更新库存商品的数量"
+      "title": "更新库存商品的数量",
+      "news_updates": [
+        {
+          "date": "2025-07-28",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/products/stocks 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025728"
+        }
+      ]
     },
     {
       "examples": [
@@ -4086,7 +4462,57 @@
           "text": "cursor string 后续数据的选择标志。 items Array of objects 商品信息。 total integer <int32> 显示库存信息的独特商品数量。"
         }
       ],
-      "title": "关于商品数量的信息"
+      "title": "关于商品数量的信息",
+      "news_updates": [
+        {
+          "date": "2026-01-27",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v4/product/info/stocks 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026127"
+        },
+        {
+          "date": "2025-12-18",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v4/product/info/stocks 已将方法响应中的参数 items.stocks.warehouse_ids 标记为已弃用。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251218"
+        },
+        {
+          "date": "2025-11-21",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v4/product/info/stocks 更新了方法响应中的 items.stocks.type 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251121"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v4/product/info/stocks 已更新响应示例。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-06-11",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v4/product/info/stocks 在方法的响应中新增了参数items.stocks.warehouse_ids。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025611"
+        },
+        {
+          "date": "2025-02-10",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v4/product/info/stocks 已将此方法从测试版移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025210"
+        }
+      ]
     },
     {
       "examples": [
@@ -4172,7 +4598,17 @@
           "text": "cursor string 用于获取下一批数据的指针。 has_next boolean 如果响应中未返回所有商品，则为true。 products Array of objects 商品库存。"
         }
       ],
-      "title": "获取卖家仓库库存信息"
+      "title": "获取卖家仓库库存信息",
+      "news_updates": [
+        {
+          "date": "2026-05-14",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v2/product/info/stocks-by-warehouse/fbs 新增了用于处理卖家仓库库存的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026514"
+        }
+      ]
     },
     {
       "examples": [
@@ -4319,7 +4755,17 @@
           "text": "sku integer <int64> Ozon系统中的商品识别码是SKU。 offer_id string <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 present integer <int64> 库存商品总量。 product_id integer <int64> 卖家系统中的Ozon系统中商品的标识符 — product_id。 reserved integer <int64> 仓库中的保留商品的数量。 warehouse_id integer <int64> 仓库编号。 warehouse_name string 仓库名称。"
         }
       ],
-      "title": "关于卖家库存余额的信息"
+      "title": "关于卖家库存余额的信息",
+      "news_updates": [
+        {
+          "date": "2025-10-23",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/product/info/stocks-by-warehouse/fbs 在请求中添加了参数 offer_id，并在方法响应中添加了参数 results.offer_id。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251023"
+        }
+      ]
     },
     {
       "examples": [
@@ -4446,7 +4892,57 @@
           "text": "errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id。 updated boolean 如果商品信息已被成功更新 — true。"
         }
       ],
-      "title": "更新价格"
+      "title": "更新价格",
+      "news_updates": [
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import/prices 更新了该方法请求中参数prices.min_price的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        },
+        {
+          "date": "2025-12-30",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import/prices 更新了方法请求中的 prices.vat 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251230"
+        },
+        {
+          "date": "2025-10-22",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/product/import/prices 已添加参数 prices.manage_elastic_boosting_through_price 到方法请求。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251022"
+        },
+        {
+          "date": "2025-02-24",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/product/import/prices 在方法请求中添加了参数 prices.net_price，用于指定商品的成本价。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025224"
+        },
+        {
+          "date": "2025-01-15",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/product/import/prices 添加字段 prices.min_price_for_auto_actions_enabled 在方法请求。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025115"
+        },
+        {
+          "date": "2024-12-24",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/product/import/prices 在方法请求中添加了参数 prices.vat。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20241224"
+        }
+      ]
     },
     {
       "examples": [
@@ -4505,7 +5001,17 @@
           "text": "product_ids Array of strings <int64> <= 1000 items 卖家系统中的商品识别符列表——product_id。"
         }
       ],
-      "title": "最低价格时效性计时器更新"
+      "title": "最低价格时效性计时器更新",
+      "news_updates": [
+        {
+          "date": "2025-08-21",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/action/timer/update 已为最低价格时效性计时器更新添加方式。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025821"
+        }
+      ]
     },
     {
       "examples": [
@@ -4612,7 +5118,17 @@
           "text": "expired_at string <date-time> 计时器结束时间。如果该参数为空，则没有有效的计时器。 min_price_for_auto_actions_enabled boolean 如果Ozon在添加商品至促销活动时会参考最低价格，则返回值为true。 product_id integer <int64> 卖家系统中的商品识别符——product_id。"
         }
       ],
-      "title": "获取已设置计时器状态"
+      "title": "获取已设置计时器状态",
+      "news_updates": [
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/action/timer/status 已更新方法响应中statuses.expired_at参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        }
+      ]
     },
     {
       "examples": [
@@ -4690,7 +5206,81 @@
           "text": "cursor string 用于选择数据的指针。 items Array of objects 商品列表。 total integer <int32> 商品列表中的商品数量。"
         }
       ],
-      "title": "获取商品价格信息"
+      "title": "获取商品价格信息",
+      "news_updates": [
+        {
+          "date": "2026-05-28",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/product/info/prices 更新了方法响应中items.marketing_actions、items.marketing_actions.actions、items.marketing_actions.actions.date_from、items.marketing_actions.actions.date_to、items.marketing_actions.actions.title和items.marketing_actions.actions.value参数的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026528"
+        },
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v5/product/info/prices 已新增方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        },
+        {
+          "date": "2026-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/product/info/prices 更新了方法请求中参数 filter.visibility 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202655"
+        },
+        {
+          "date": "2026-02-10",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/product/info/prices 更新了方法请求中参数 filter.visibility 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026210"
+        },
+        {
+          "date": "2025-12-25",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/product/info/prices 已更新方法响应中参数 items.price.retail_price 的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251225"
+        },
+        {
+          "date": "2025-11-12",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v5/product/info/prices 在方法回答该price.marketing_price参数已过期，我们已将其从文件中删除。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251112"
+        },
+        {
+          "date": "2025-10-06",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v5/product/info/prices 参数 items.price.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025106"
+        },
+        {
+          "date": "2025-05-28",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v5/product/info/prices 在方法的响应中新增了参数items.price.net_price。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025528"
+        },
+        {
+          "date": "2025-03-07",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v5/product/info/prices 已将该方法从 Beta 版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202537"
+        }
+      ]
     },
     {
       "examples": [
@@ -5115,7 +5705,25 @@
           "text": "id number <double> 活动识别号。 title string 活动名称。 action_type string 活动类型。 description string 活动描述。 date_start string 活动开始日期。 date_end string 活动结束日期。 auto_add_dates Array of strings <date-time> 商品自动添加到促销活动中的日期和时间。 freeze_date string 活动暂停的日期。 如果该空白被填写，卖家就不能提高价格，改变商品清单或减少促销活动的单位数量。 卖方可以降低价格，增加促销的单位数量。 potential_products_count number <double> 可供活动的商品数量。 participating_products_count number <double> 参加促销的商品数量。 is_participating boolean 无论你是否参加这项活动。 is_voucher_action boolean 此迹象表明买家需要促销代码才能参加。 banned_products_count number <double> 被封商品数量。 with_targeting boolean 此迹象表明该活动是与目标受众一起进行的。 order_amount number <double> 预定金额。 discount_type string 折扣类型。 discount_value number <double> 折扣力度。"
         }
       ],
-      "title": "活动清单"
+      "title": "活动清单",
+      "news_updates": [
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/actions 新增了参数result.auto_add_dates至方法响应中。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        },
+        {
+          "date": "2025-02-27",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/actions 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025227"
+        }
+      ]
     },
     {
       "examples": [
@@ -5299,7 +5907,34 @@
           "text": "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
         }
       ],
-      "title": "参与 活动的商品列表"
+      "title": "参与 活动的商品列表",
+      "news_updates": [
+        {
+          "date": "2025-12-23",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/actions/products 添加了参数 result.products.current_boost、result.products.price_min_elastic、result.products.price_max_elastic、result.products.min_boost 和 result.products.max_boost 到方法的响应中。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251223"
+        },
+        {
+          "date": "2025-05-15",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/actions/products 添加了参数 result.products.alert_max_action_price_failed 和 result.products.alert_max_action_price 到方法的响应中。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025515"
+        },
+        {
+          "date": "2025-03-13",
+          "labels": [
+            "added_field",
+            "deprecated_field"
+          ],
+          "text": "/v1/actions/products 我们已将 offset 参数标记为已弃用，并添加了 last_id分页参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025313"
+        }
+      ]
     },
     {
       "examples": [
@@ -5843,7 +6478,29 @@
           "text": "id integer <uint64> 申请ID。 created_at string <date-time> 申请创建日期。 end_at string <date-time> 申请到期时间。 edited_till string <date-time> 决定改变时间。 status string 申请状态。 customer_name string 买家姓名。 sku integer <uint64> Ozon系统中的商品ID —— SKU。 user_comment string 买家对申请的评论。 seller_comment string 卖家对申请的评论。 requested_price number <double> 申请价格。 approved_price number <double> 批准的价格。 original_price number <double> 折扣前的商品价格。 discount number <double> 卢布折扣。 discount_percent number <double> 折扣百分比。 base_price number <double> 如果不参与促销活动，商品在Ozon上销售的基础价。 min_auto_price number <double> 自动应用折扣和促销后的最低价格值。 prev_task_id integer <uint64> 该商品买家先前申请ID。 is_damaged boolean 商品是否打折。如果打折，true。 moderated_at string <date-time> 审核日期：审核、批准或拒绝申请。 approved_discount number <double> 卖家同意的以卢布显示的折扣。 如果卖家不批准订单，则传递值“0”。 approved_discount_percent number <double> 卖家批准的折扣百分比。请传递值 0，如果卖家不批准申请。 is_purchased boolean 用户是否购买了商品。 true，如果购买。 is_auto_moderated boolean 申请是否自动审核。 true，如果自动审核。 offer_id string 卖家系统中的商品标识符是商品货号。 email string 处理请求的卖家员工电子邮件地址。 last_name string 处理申请的卖家员工姓氏。 first_name string 处理请求的卖家员工姓名。 patronymic string 处理请求的卖家员工父称。 approved_quantity_min integer <uint64> 商品数量批准的最小值。 approved_quantity_max integer <uint64> 商品数量批准的最大值。 requested_quantity_min integer <uint64> 商品请求数量最小值。 requested_quantity_max integer <uint64> 商品请求数量最大值。 requested_price_with_fee number <double> 带有区域加价的价格申请。 approved_price_with_fee number <double> 批准的含区域加价的价格。 approved_price_fee_percent number <double> 按百分比显示的区域加价。"
         }
       ],
-      "title": "申请折扣列表"
+      "title": "申请折扣列表",
+      "news_updates": [
+        {
+          "date": "2026-01-29",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 替代方法：/v2/actions/discounts-task/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026129",
+          "replacement_paths": [
+            "/v2/actions/discounts-task/list"
+          ]
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-01-29",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026129",
+        "text": "/v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 替代方法：/v2/actions/discounts-task/list",
+        "replacement_paths": [
+          "/v2/actions/discounts-task/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -6762,7 +7419,17 @@
           "text": "strategy_id string 策略ID。 is_enabled boolean true, 如果商品参与定价策略。 strategy_product_price integer <int32> 定价策略。 price_downloaded_at string 定价策略设定日期。 strategy_competitor_id integer <int64> Deprecated 竞争对手ID。 strategy_competitor_product_url string 竞争对手商品链接。"
         }
       ],
-      "title": "竞争对手 的商品价格"
+      "title": "竞争对手 的商品价格",
+      "news_updates": [
+        {
+          "date": "2025-06-19",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v1/pricing-strategy/product/info 并将参数 result.strategy_competitor_id 标记为已弃用。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025619"
+        }
+      ]
     },
     {
       "examples": [
@@ -7024,7 +7691,25 @@
           "text": "cursor string 后续数据的选择标志。 warehouses Array of objects 仓库列表。 has_next boolean true，前提是本次响应未返回所有数据。"
         }
       ],
-      "title": "仓库列表"
+      "title": "仓库列表",
+      "news_updates": [
+        {
+          "date": "2025-12-18",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。在方法的响应中添加了参数 cursor。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251218"
+        },
+        {
+          "date": "2025-12-16",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v2/warehouse/list 在方法的响应中添加了参数 has_next 和 cursor。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251216"
+        }
+      ]
     },
     {
       "examples": [
@@ -7389,7 +8074,56 @@
           "text": "状态 Seller API 个人账户中的状态 new 正在激活 created 已激活 disabled 存档 blocked 已封禁 disabled_due_to_limit 暂停中 error 错误"
         }
       ],
-      "title": "仓库清单"
+      "title": "仓库清单",
+      "news_updates": [
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430"
+        },
+        {
+          "date": "2026-03-24",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/warehouse/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026324",
+          "replacement_paths": [
+            "/v2/warehouse/list"
+          ]
+        },
+        {
+          "date": "2026-02-16",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/warehouse/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/warehouse/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026216",
+          "replacement_paths": [
+            "/v2/warehouse/list"
+          ]
+        },
+        {
+          "date": "2025-12-18",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/warehouse/list 在方法请求中添加了参数 limit 和 offset。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251218"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-03-24",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026324",
+        "text": "/v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/warehouse/list",
+        "replacement_paths": [
+          "/v2/warehouse/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -7483,7 +8217,25 @@
           "text": "cursor string 用于选择下一批数据的指针。 has_next boolean true，表示响应中未返回全部配送方式。 delivery_methods Array of objects 配送方式。"
         }
       ],
-      "title": "realFBS仓库的配送方式列表"
+      "title": "realFBS仓库的配送方式列表",
+      "news_updates": [
+        {
+          "date": "2026-05-22",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v2/delivery-method/list 在方法响应中新增了参数delivery_methods.tpl_dropoff_point。 — 在错误板块中，已为",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026522"
+        },
+        {
+          "date": "2026-03-04",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v2/delivery-method/list 新增了用于获取rFBS仓库配送方式的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202634"
+        }
+      ]
     },
     {
       "examples": [
@@ -7686,7 +8438,37 @@
           "text": "company_id integer <int64> 卖家识别号。 created_at string <date-time> 创建快递方式的日期和时间。 cutoff string 卖方必须在此之前备货的时间。 id integer <int64> 快递方式识别号。 name string 快递方式名称。 provider_id integer <int64> 快递服务识别号。 sla_cut_in integer <int64> 根据仓库设置，订单备货的最短时间（以分钟为单位）。 status string 快递方式状态: NEW — 已创建, EDITED — 正在编辑, ACTIVE — 已激活, DISABLED — 未激活。 template_id integer <int64> 订单快递服务识别号。 updated_at string <date-time> 快递方式最后更新的日期和时间。 warehouse_id integer <int64> 仓库识别号。"
         }
       ],
-      "title": "仓库物流方式清单"
+      "title": "仓库物流方式清单",
+      "news_updates": [
+        {
+          "date": "2026-03-24",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/delivery-method/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026324",
+          "replacement_paths": [
+            "/v2/delivery-method/list"
+          ]
+        },
+        {
+          "date": "2024-12-26",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/delivery-method/list 添加字段 result.sla_cut_in 在方法响应。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20241226"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-03-24",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026324",
+        "text": "/v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/delivery-method/list",
+        "replacement_paths": [
+          "/v2/delivery-method/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -8724,7 +9506,17 @@
           "text": "from string 时间段开始时间。 id integer <int64> 时间段标识符。 to string 时间段结束时间。"
         }
       ],
-      "title": "获取用于更新pick-up发运仓库的时间段列表"
+      "title": "获取用于更新pick-up发运仓库的时间段列表",
+      "news_updates": [
+        {
+          "date": "2025-10-17",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/warehouse/fbs/update/pick-up/timeslot/list 新增了与时间段相关的Beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251017"
+        }
+      ]
     },
     {
       "examples": [
@@ -8961,7 +9753,17 @@
           "text": "operation_id string 操作ID。通过方法 /v1/warehouse/operation/status 获取操作状态。"
         }
       ],
-      "title": "更新仓库"
+      "title": "更新仓库",
+      "news_updates": [
+        {
+          "date": "2026-02-02",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/warehouse/fbs/update 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202622"
+        }
+      ]
     },
     {
       "examples": [
@@ -9055,7 +9857,17 @@
           "text": "operation_id string 操作ID。通过方法 /v1/warehouse/operation/status 获取操作状态。"
         }
       ],
-      "title": "更新头程物流"
+      "title": "更新头程物流",
+      "news_updates": [
+        {
+          "date": "2025-10-17",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/warehouse/fbs/first-mile/update 在方法请求中新增了参数 cut_in_time 和 timeslot_id。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251017"
+        }
+      ]
     },
     {
       "examples": [
@@ -9229,7 +10041,17 @@
           "text": "count integer <int64> 在响应中的元素计数器。 cursor string 用于选择下一批数据的指针。 has_next boolean 若响应中未返回全部货件，则为true。 postings Array of objects 货件列表。"
         }
       ],
-      "title": "获取未处理货件列表"
+      "title": "获取未处理货件列表",
+      "news_updates": [
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v4/posting/fbs/unfulfilled/list 新增了用于获取FBS未处理货件列表的方法新版本。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430"
+        }
+      ]
     },
     {
       "examples": [
@@ -9408,7 +10230,112 @@
           "text": "count integer <int64> 在响应中的元素计数器。 postings Array of objects 货件清单和每个货物的详细信息。"
         }
       ],
-      "title": "未处理货件列表 Deprecated"
+      "title": "未处理货件列表 Deprecated",
+      "news_updates": [
+        {
+          "date": "2026-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 更新了各方法响应中参数 result.postings.analytics_data.client_delivery_date_begin和 result.postings.analytics_data.client_delivery_date_end的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202655"
+        },
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/unfulfilled/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430",
+          "replacement_paths": [
+            "/v4/posting/fbs/unfulfilled/list"
+          ]
+        },
+        {
+          "date": "2026-04-17",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 在各方法响应中新增参数result.postings.tariffication_steps。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026417"
+        },
+        {
+          "date": "2026-03-17",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.analytics_data.client_delivery_date_begin 和 result.postings.analytics_data.client_delivery_date_end 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026317"
+        },
+        {
+          "date": "2025-11-27",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 在各方法的响应中：更新了参数 result.analytics_data.payment_type_group_name 的描述；新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251127"
+        },
+        {
+          "date": "2025-10-21",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251021"
+        },
+        {
+          "date": "2025-10-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.financial_data.products.product_id 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251016"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.customer.phone、result.postings.addressee.phone、result.postings.products.is_marketplace_buyout 和 result.products.is_marketplace_buyout 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-07-22",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.requirements.products_requiring_change_country 和 result.postings.financial_data.products.actions 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025722"
+        },
+        {
+          "date": "2025-05-22",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 更新了该方法请求中参数 filter.fbpFilter 的描述。 — 在接口使用规范模块中，已提升接口请求限额 —— 现在每个 Client ID 每秒最多可发起50次请求。此前每秒最多只能发起10次请求。 替代方法：/v3/product/import",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025522",
+          "replacement_paths": [
+            "/v3/product/import"
+          ]
+        },
+        {
+          "date": "2025-05-06",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v3/posting/fbs/unfulfilled/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-04-30",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430",
+        "text": "/v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/unfulfilled/list",
+        "replacement_paths": [
+          "/v4/posting/fbs/unfulfilled/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -9514,7 +10441,17 @@
           "text": "cursor string 用于选择下一批数据的指针。 has_next boolean 若响应中未返回全部货件，则为true。 postings Array of objects 货件列表。"
         }
       ],
-      "title": "获取货件列表"
+      "title": "获取货件列表",
+      "news_updates": [
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v4/posting/fbs/list 新增了用于获取FBS货件列表的方法新版本。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430"
+        }
+      ]
     },
     {
       "examples": [
@@ -9645,7 +10582,70 @@
           "text": "has_next boolean 响应中未返回整个货运数组的标志: true — 必须提出含其他值 offset的新请求，以获得其他货运信息； false — 响应中返回了在请求中提出的整个用于过滤的货运数组。 postings Array of objects 货运信息。"
         }
       ],
-      "title": "货件列表 Deprecated"
+      "title": "货件列表 Deprecated",
+      "news_updates": [
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "deprecated_method",
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/list 在方式的响应中添加了参数result.postings.is_presortable、result.postings.destination_place_id、result.postings.destination_place_name和result.postings.customer.customer_email。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430",
+          "replacement_paths": [
+            "/v4/posting/fbs/list"
+          ]
+        },
+        {
+          "date": "2025-10-23",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/list 更新了方法响应中的 result.postings.substatus 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251023"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/list 在方法响应中： • 添加了参数 result.postings.financial_data.products.customer_price； • 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-07-02",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202572"
+        },
+        {
+          "date": "2025-06-05",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202565"
+        },
+        {
+          "date": "2025-02-26",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/list 更新了方法响应中 result.postings.analytics_data.city 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025226"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-04-30",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430",
+        "text": "/v3/posting/fbs/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/list",
+        "replacement_paths": [
+          "/v4/posting/fbs/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -10424,7 +11424,121 @@
           "text": "additional_data Array of objects addressee object 收件人联系方式。 analytics_data object 分析数据。 available_actions Array of strings 可用的操作和货件信息包括： arbitration — 提出争议； awaiting_delivery — 转为“等待发运”状态； can_create_chat — 与买家开启聊天； cancel — 取消货件； click_track_number — 在个人中心通过追踪号查看状态历史； customer_phone_available — 获取买家电话号码； has_weight_products — 货件中包含以重量结算； hide_region_and_city — 在报告中隐藏买家的地区和城市； invoice_get — 获取发票信息； invoice_send — 创建发票； invoice_update — 编辑发票； label_download_big — 下载大标签； label_download_small — 下载小标签； label_download — 下载标签； non_int_delivered — 转为“可能已收”状态； non_int_delivering — 转为“运输中”状态； non_int_last_mile — 转为“快递员派件中”状态； product_cancel — 取消部分货件中的商品； set_cutoff — 需要指定发货日期，请使用方法/v1/posting/cutoff/set； set_timeslot — 修改买家的送货时间； set_track_number — 指定或更改追踪号； ship_async_in_process — 货件备货中； ship_async_retry — 发生错误后重新发货； ship_async — 备货货件； ship_with_additional_info — 需要填写额外信息； ship — 备货货件; update_cis — 修改附加信息。 barcodes object 货件条码。 cancellation object 取消原因。 courier object 快递员信息。 customer object 买家信息。 delivering_date string <date-time> 货件交付物流的时间。 delivery_method object 快递方式。 delivery_price string 物流价格。 fact_delivery_date string <date-time> 货件实际转移配送的日期。 financial_data object 有关商品成本、折扣幅度、付款和佣金的信息。 in_process_at string <date-time> 开始处理货件的日期和时间。 is_express boolean 如果使用了快速物流Ozon Express —— true。 legal_info object 买方的法律信息。 optional object 带有附加特征的商品列表。 order_id integer <int64> 货件所属的订单ID。 order_number string 货件所属的订单号。 parent_posting_number string 母件编号，由该母件拆分出了该货件。 posting_number string 货件号。 product_exemplars object 有关产品及其副本的信息。 响应包含 product_exemplars字段, 如果在请求中传递标志 with.product_exemplars = true。 products Array of objects 货物装运的数组。 provider_status string 快递服务状态。 related_postings object 相关货件。 requirements object 需提供制造国、货运报关单号、商品批次登记号、“诚实标志”、其他标识或重量的商品列表，以便将货件状态更新至下一阶段。 shipment_date string <date-time> 必须收取货件的日期和时间。 超出该时间后将适用新费率，相关信息请查看字段 tariffication。 shipment_date_without_delay string <date-time> 不逾期发运日期和时间。 status string 货运状态: acceptance_in_progress —— 正在验收， arbitration —— 仲裁， awaiting_approve —— 等待确认， awaiting_deliver —— 等待装运， awaiting_packaging —— 等待包装， awaiting_registration —— 等待注册， awaiting_verification —— 已创建， cancelled —— 已取消， cancelled_from_split_pending——因货件拆分而取消， client_arbitration —— 快递客户仲裁， delivered —— 已送达， delivering —— 运输中， driver_pickup —— 司机处， not_accepted —— 分拣中心未接受， substatus string 发货子状态： posting_acceptance_in_progress —— 正在验收， posting_in_arbitration —— 仲裁， posting_created —— 已创建， posting_in_carriage —— 在运输途中， posting_not_in_carriage —— 未在运输中， posting_registered —— 已登记， posting_transferring_to_delivery (status=awaiting_deliver) —— 移交给快递， posting_awaiting_passport_data —— 等待护照资料， posting_created —— 已创建， posting_awaiting_registration —— 等待注册， posting_registration_error —— 注册错误， posting_transferring_to_delivery (status=awaiting_registration) —— 交给快递员, posting_split_pending —— 已创建， posting_canceled —— 已取消， posting_in_client_arbitration —— 快递会员仲裁， posting_delivered —— 已送达， posting_received —— 已收到， posting_conditionally_delivered —— 暂时送到， posting_in_courier_service —— 快递员正在路上， posting_in_pickup_point —— 在取货点， posting_on_way_to_city —— 发往城市途中， posting_on_way_to_pickup_point —— 正发往取货点， posting_returned_to_warehouse —— 返回仓库， posting_transferred_to_courier_service —— 转交给快递员， posting_driver_pick_up —— 在司机那儿， posting_not_in_sort_center —— 集散中心未收到， ship_failed —— 备货失败。 previous_substatus string 货件的前一个子状态。可能的取值： posting_acceptance_in_progress —— 正在验收， posting_in_arbitration —— 仲裁， posting_created —— 已创建， posting_in_carriage —— 在运输途中， posting_not_in_carriage —— 未在运输中， posting_registered —— 已登记， posting_transferring_to_delivery (status=awaiting_deliver) —— 移交给快递， posting_awaiting_passport_data —— 等待护照资料， posting_created —— 已创建， posting_awaiting_registration —— 等待注册， posting_registration_error —— 注册错误， posting_transferring_to_delivery (status=awaiting_registration) —— 交给快递员, posting_split_pending —— 已创建， posting_canceled —— 已取消， posting_in_client_arbitration —— 快递会员仲裁， posting_delivered —— 已送达， posting_received —— 已收到， posting_conditionally_delivered —— 暂时送到， posting_in_courier_service —— 快递员正在路上， posting_in_pickup_point —— 在取货点， posting_on_way_to_city —— 发往城市途中， posting_on_way_to_pickup_point —— 正发往取货点， posting_returned_to_warehouse —— 返回仓库， posting_transferred_to_courier_service —— 转交给快递员， posting_driver_pick_up —— 在司机那儿， posting_not_in_sort_center —— 集散中心未收到。 tpl_integration_type string 快递服务集成类型： ozon —— 通过Ozon物流的快递。 aggregator —— 外部服务快递，Ozon注册订单。 3pl_tracking —— 外部服务快递，卖家注册订单。 non_integrated —— 卖家自行配送物流。 tracking_number string 货件跟踪号。 tariffication object 发运的计费信息。 tariffication_steps Array of objects 计费阶段。"
         }
       ],
-      "title": "按照ID获取货件信息"
+      "title": "按照ID获取货件信息",
+      "news_updates": [
+        {
+          "date": "2026-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 更新了方法响应中参数result.analytics_data.client_delivery_date_begin和result.analytics_data.client_delivery_date_end的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202655"
+        },
+        {
+          "date": "2026-04-17",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法响应中新增参数result.tariffication_steps。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026417"
+        },
+        {
+          "date": "2026-03-17",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 已更新方式响应中 result.analytics_data.client_delivery_date_begin 和 result.analytics_data.client_delivery_date_end 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026317"
+        },
+        {
+          "date": "2025-11-27",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法的响应中：更新了参数 result.analytics_data.payment_type_group_name 的描述；新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251127"
+        },
+        {
+          "date": "2025-10-23",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 更新了方法响应中的 result.substatus 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251023"
+        },
+        {
+          "date": "2025-10-21",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法的响应中添加了参数 result.shipment_date_without_delay。 — 在 Ozon发送的通知 → 新的发货 部分中，更新了新发货通知的示例。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251021"
+        },
+        {
+          "date": "2025-10-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 更新了方法响应中的 result.financial_data.products.product_id 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251016"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法响应中： • 添加了参数 result.financial_data.products.customer_price； • 更新了 result.requirements.products_requiring_gtd、result.requirements.products_requiring_mandatory_mark、result.requirements.products_requiring_jw_uin、result.requirements.products_requiring_rnpt、result.status、result.substatus、result.previous_substatus、result.financial_data.products.price、result.financial_data.products.old_price、result.customer.phone、result.addressee.phone 和 result.products.is_marketplace_buyout 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-07-22",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 更新了方法响应中 result.requirements.products_requiring_change_country 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025722"
+        },
+        {
+          "date": "2025-07-02",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法的响应中新增了参数result.requirements.products_requiring_change_country。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202572"
+        },
+        {
+          "date": "2025-06-23",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 新了方法响应中result.shipment_date参数的描述。 常见错误 已新增错误 Stock is updated too frequently 的说明，并更新了",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025623"
+        },
+        {
+          "date": "2025-06-05",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法请求中添加了参数 with.legal_info 参数的 和 result.legal_info 到方法的响应中。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202565"
+        },
+        {
+          "date": "2025-02-27",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v3/posting/fbs/get 在方法响应中添加了参数 result.previous_substatus。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025227"
+        },
+        {
+          "date": "2025-02-26",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 更新了方法响应中 result.analytics_data.city参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025226"
+        }
+      ]
     },
     {
       "examples": [
@@ -10579,7 +11693,25 @@
           "text": "barcodes object 货件条形码。 cancel_reason_id integer <int64> 取消装运原因ID。 created_at string <date-time> 创建装运日期和时间。 in_process_at string <date-time> 开始处理货件的日期和时间。 order_id integer <int64> 货运所属订单ID。 order_number string 货运所属的订单号。 posting_number string 货运号。 products Array of objects 货运商品列表。 shipment_date string <date-time> 必须收取货件的日期和时间。 如果在此日期之前未完成配货，则货运自动取消。 status string 货运状态。"
         }
       ],
-      "title": "按条形码获取有关货件的信息"
+      "title": "按条形码获取有关货件的信息",
+      "news_updates": [
+        {
+          "date": "2025-10-16",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v2/posting/fbs/get-by-barcode 已从方法响应中移除参数 result.analytics_data 和 result.financial_data。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251016"
+        },
+        {
+          "date": "2025-05-06",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v2/posting/fbs/get-by-barcode 已从方法响应中移除参数 result.financial_data.products.client_price，result.financial_data.products.picking 和 result.products.mandatory_mark。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556"
+        }
+      ]
     },
     {
       "examples": [
@@ -10784,7 +11916,25 @@
           "text": "file_content string <byte> 二进制形式的文件内容。 file_name string 文件名称。 content_type string 文件类型。"
         }
       ],
-      "title": "打印标签"
+      "title": "打印标签",
+      "news_updates": [
+        {
+          "date": "2026-03-10",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/posting/fbs/package-label 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026310"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/posting/fbs/package-label 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        }
+      ]
     },
     {
       "examples": [
@@ -10850,7 +12000,17 @@
           "text": "result boolean 处理请求的结果。 如果请求执行时无误，则为“true”。"
         }
       ],
-      "title": "货件装运"
+      "title": "货件装运",
+      "news_updates": [
+        {
+          "date": "2025-02-06",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/posting/fbs/awaiting-delivery 更新了该方法请求中参数 posting_number 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202526"
+        }
+      ]
     },
     {
       "examples": [
@@ -11294,7 +12454,17 @@
           "text": "polygon_id integer <int64> 设施识别号。"
         }
       ],
-      "title": "创建一个快递的设施"
+      "title": "创建一个快递的设施",
+      "news_updates": [
+        {
+          "date": "2026-06-02",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/polygon/create 已更新方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202662"
+        }
+      ]
     },
     {
       "examples": [
@@ -11469,7 +12639,17 @@
           "text": "items Array of objects 交货申请中的商品列表。 total_count integer <int32> 申请中的商品数量。 has_next boolean 响应中是否未返回全部商品： true——请使用不同的 last_id 值再次请求，以获取其余数据； false——响应已包含全部商品数据。 last_id string 当前页面最后一个值的标识符。"
         }
       ],
-      "title": "交货或交货申请的商品组成"
+      "title": "交货或交货申请的商品组成",
+      "news_updates": [
+        {
+          "date": "2026-01-27",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/supply-order/bundle 增加了获取交付物成分的方法。 — 在 管理订单 → FBP 方案 部分，更新了有关方法操作的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026127"
+        }
+      ]
     },
     {
       "examples": [
@@ -11649,7 +12829,17 @@
           "text": "result string 备货后生成的货件号码。"
         }
       ],
-      "title": "货件的部分装配 (第4方案)"
+      "title": "货件的部分装配 (第4方案)",
+      "news_updates": [
+        {
+          "date": "2025-10-23",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v4/posting/fbs/ship/package 更新了方法描述。 — 在错误板块中，已为",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251023"
+        }
+      ]
     },
     {
       "examples": [
@@ -11731,7 +12921,17 @@
           "text": "carriage_id integer <int64> 运输标识符。"
         }
       ],
-      "title": "创建发运"
+      "title": "创建发运",
+      "news_updates": [
+        {
+          "date": "2026-06-03",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/carriage/create 新增了用于创建发运的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202663"
+        }
+      ]
     },
     {
       "examples": [
@@ -11786,7 +12986,17 @@
           "text": "carriage_id required integer <int64> 发运标识符。 containers_count integer <int32> 货位数量。 如果您已开通信任验收，并按货位发运订单，请使用该参数。如果您未开通信任验收，请跳过该参数。"
         }
       ],
-      "title": "发运确认"
+      "title": "发运确认",
+      "news_updates": [
+        {
+          "date": "2026-06-03",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/carriage/approve 新增了用于确认发运的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202663"
+        }
+      ]
     },
     {
       "examples": [
@@ -11941,7 +13151,25 @@
           "text": "act_type string 交接单类型。针对FBS卖家。 arrival_pass_ids Array of strings <int64> 为运输生成的通行证标识符列表。 available_actions Array of strings 运输的可用操作： get_shipping_list——获取发运清单； get_act_of_acceptance——获取验收证明书； get_waybill——获取 PDF 格式的货单； set_arrival_passes——创建通行证。 cancel_availability object 是否可以取消。 carriage_id integer <int64> 运输标识符。 company_id integer <int64> 卖家标识符。 containers_count integer <int32> 货位数量。 created_at string <date-time> 运输创建日期。 delivery_method_id integer <int64> 物流方式标识符。 departure_date string 运输完成日期。 first_mile_type string 头程物流类型。 has_postings_for_next_carriage boolean true, 如果有未能进行运输，但需要发运的货件。 integration_type string 运输类型。 is_container_label_printed boolean true, 如果您已经打印了货位标签。 is_partial boolean true, 如果是部分运输。 partial_num integer <int64> 部分运输序列号。 retry_count integer <int32> 运输创建重复尝试数量。 status string 运输状态。 tpl_provider_id integer <int64> 配送服务商标识符。 updated_at string <date-time> 运输信息最后一次更新日期。 warehouse_id integer <int64> 仓库标识符。"
         }
       ],
-      "title": "运输信息"
+      "title": "运输信息",
+      "news_updates": [
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/carriage/get 更新了方法响应中 available_actions 参数的描。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430"
+        },
+        {
+          "date": "2026-03-12",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/carriage/get 已更新方法响应中 available_actions 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026312"
+        }
+      ]
     },
     {
       "examples": [
@@ -12168,7 +13396,29 @@
           "text": "carriage_id integer <int64> 运输ID（也是文件形成的任务编号）。 carriage_postings_count integer <int32> 运输中的货件数量。 carriage_status string 所请求的交付方式和装运日期的运输状态。 cutoff_at string <date-time> 需要收取货件的日期和时间。 delivery_method_id integer <int64> 快递方式ID。 delivery_method_name string 快递方式名称。 errors Array of objects 错误列表。 first_mile_type string 第一英里类型。 has_entrusted_acceptance boolean 信任接收的标志。 如果在仓库中启用了信任接收，则为“true”。 mandatory_postings_count integer <int32> 需要收取的货件数量。 mandatory_packaged_count integer <int32> 收取货件数量。 recommended_time_local string 推荐的本地发运时间（订单接收点）。 recommended_time_utc_offset_in_minutes number <int32> 推荐发运时间与UTC-0的时区偏移量（以分钟为单位）。 tpl_provider_icon_url string 快递服务图标的链接。 tpl_provider_name string 快递服务名称。 warehouse_city string 仓库所在城市。 warehouse_id integer <int64> 仓库ID。 warehouse_name string 仓库名称。 warehouse_timezone string 仓库所在时区。"
         }
       ],
-      "title": "可供运输的列表"
+      "title": "可供运输的列表",
+      "news_updates": [
+        {
+          "date": "2026-02-16",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/carriage/delivery/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026216",
+          "replacement_paths": [
+            "/v2/carriage/delivery/list"
+          ]
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-02-16",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026216",
+        "text": "/v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/carriage/delivery/list",
+        "replacement_paths": [
+          "/v2/carriage/delivery/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -12275,7 +13525,17 @@
           "text": "error string 错误描述。 posting_number string 货件编号。 result boolean 请求处理结果：若请求处理成功，返回值为true。"
         }
       ],
-      "title": "发运组成商品更改"
+      "title": "发运组成商品更改",
+      "news_updates": [
+        {
+          "date": "2025-08-21",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/carriage/set-postings 已添加发运组成商品更改方式。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025821"
+        }
+      ]
     },
     {
       "examples": [
@@ -12476,7 +13736,17 @@
           "text": "id integer <int64> 单据标识符。 multi_box_qty integer <int32> 商品包装所用箱数。 posting_number string 货件编号。 status string 货件状态。 seller_error string 错误代码说明。 updated_at string <date-time> 货件记录的更新日期和时间。 created_at string <date-time> 货件记录的创建日期和时间。 products Array of objects 货件中商品列表。"
         }
       ],
-      "title": "单据中的货件列表"
+      "title": "单据中的货件列表",
+      "news_updates": [
+        {
+          "date": "2026-06-03",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v2/posting/fbs/act/get-postings 新增了用于获取单据中货件列表的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202663"
+        }
+      ]
     },
     {
       "examples": [
@@ -12546,7 +13816,17 @@
           "text": "file_content string <byte> 文件内容，以二进制形式。 file_name string 文件名称。 content_type string 文件类型。"
         }
       ],
-      "title": "货位标签"
+      "title": "货位标签",
+      "news_updates": [
+        {
+          "date": "2026-06-03",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v2/posting/fbs/act/get-container-labels 新增了方法，用于创建货位标签。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202663"
+        }
+      ]
     },
     {
       "examples": [
@@ -12898,7 +14178,17 @@
           "text": "has_next boolean 响应中是否包含全部商品： true——请使用新的 offset值重新请求以获取剩余数据； false——响应中已包含所有值。 products Array of objects 商品列表。 products_count integer <int32> 商品数量。"
         }
       ],
-      "title": "获取货件中的商品列表"
+      "title": "获取货件中的商品列表",
+      "news_updates": [
+        {
+          "date": "2025-12-30",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/assembly/fbs/product/list 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251230"
+        }
+      ]
     },
     {
       "examples": [
@@ -13559,7 +14849,17 @@
           "text": "arrival_passes required Array of objects 通行证列表。 carriage_id required integer <int64> 运输ID。"
         }
       ],
-      "title": "更新通行证"
+      "title": "更新通行证",
+      "news_updates": [
+        {
+          "date": "2026-07-07",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/carriage/pass/update 在方法请求中添加了参数arrival_passes.arrival_time、arrival_passes.tracking_number和arrival_passes.tracking_url。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202677"
+        }
+      ]
     },
     {
       "examples": [
@@ -13923,7 +15223,33 @@
           "text": "returns Array of objects 退货信息。 has_next boolean 如果卖家有其他退货，显示true。"
         }
       ],
-      "title": "FBO和FBS退货信息"
+      "title": "FBO和FBS退货信息",
+      "news_updates": [
+        {
+          "date": "2025-12-12",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v1/returns/list 移除了方法请求中参数 filter.visual_status_name 的值 ReturnCompensated。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251212"
+        },
+        {
+          "date": "2025-11-20",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。在方法的响应中添加了参数 returns.compensation_status。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251120"
+        },
+        {
+          "date": "2025-01-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/returns/list 更新了方法请求中 filter 和 filter.posting_numbers 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025114"
+        }
+      ]
     },
     {
       "examples": [
@@ -14070,7 +15396,25 @@
           "text": "client_name string Deprecated 买家姓名。 created_at string <date-time> 创建日期。 order_number string 订单号。 posting_number string 货件编号。 product object 商品信息。 return_id integer <int64> 退货申请的标识符。 return_number string 退货申请编号。 state object 退货申请和退款状态。"
         }
       ],
-      "title": "退货申请列表"
+      "title": "退货申请列表",
+      "news_updates": [
+        {
+          "date": "2025-12-26",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v2/returns/rfbs/list 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251226"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/returns/rfbs/list 更新了该方法请求中参数 last_id 的描述。已更新回答示例。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        }
+      ]
     },
     {
       "examples": [
@@ -14277,7 +15621,17 @@
           "text": "available_actions Array of objects 申请的可用操作的信息。 client_name string Deprecated 买家姓名。 client_photo Array of strings 商品照片链接。 client_return_method_type object 退货方式信息。 comment string 买家评论。 created_at string <date-time> 申请创建日期。 order_number string 订单号。 posting_number string 货件编号。 product object 商品信息。 rejection_comment string 有关申请被拒绝的备注。 rejection_reason Array of objects 申请被拒绝的原因的信息。 return_method_description string 商品退货方式。 return_number string 退货申请编号。 return_reason object 退货原因信息。 ru_post_tracking_number string 跟踪号码。 state object 退货状态信息。 warehouse_id integer <int64> 仓库标识符。"
         }
       ],
-      "title": "退货申请信息"
+      "title": "退货申请信息",
+      "news_updates": [
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/returns/rfbs/get 更新了方法请求中的 return_id 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        }
+      ]
     },
     {
       "examples": [
@@ -14869,7 +16223,17 @@
           "text": "approve_comment string 在确认或拒绝取消申请时填写的备注。 approve_date string <date-time> 取消申请确认或拒绝的日期。 auto_approve_date string <date-time> 申请将在此日期后自动确认。 cancellation_id integer <int64> 取消申请标识符。 cancellation_initiator string Enum: \"OZON\" \"SELLER\" \"CLIENT\" \"SYSTEM\" \"DELIVERY\" 取消发起人： SELLER — 卖家， CLIENT — 买家， OZON — Ozon, SYSTEM — 系统， DELIVERY — 配送服务。 cancellation_reason object 取消原因。 cancellation_reason_message string 取消申请中由取消发起人手动填写的备注。 cancelled_at string <date-time> 取消申请的创建日期。 order_date string <date-time> 订单的创建日期。 posting_number string 货件编号。 source_id integer <int64> 上一次取消申请的标识符。 用于保持向后兼容性。 state object 取消申请的状态。 tpl_integration_type string 与配送服务的集成类型。"
         }
       ],
-      "title": "获取 rFBS 取消申请列表"
+      "title": "获取 rFBS 取消申请列表",
+      "news_updates": [
+        {
+          "date": "2025-06-19",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/conditional-cancellation/list。 — 在 管理取消订单 模块，更新了获取rFBS取消申请的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025619"
+        }
+      ]
     },
     {
       "examples": [
@@ -14961,7 +16325,18 @@
           "text": "cancellation_id required integer <int64> 取消申请标识符。 comment string 备注。"
         }
       ],
-      "title": "拒绝 rFBS 取消申请"
+      "title": "拒绝 rFBS 取消申请",
+      "news_updates": [
+        {
+          "date": "2025-06-03",
+          "labels": [
+            "graduated",
+            "updated"
+          ],
+          "text": "/v2/conditional-cancellation/reject 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202563"
+        }
+      ]
     },
     {
       "examples": [
@@ -15270,7 +16645,57 @@
           "text": "chats Array of objects 聊天数据。 total_unread_count integer <int64> 未读信息总数。 cursor string 后续数据的选择标志。 has_next boolean 表示响应中未包含全部聊天: true — 使用新的 cursor 参数重新发送请求以获取剩余聊天; false — 响应中已包含匹配请求筛选器的所有聊天。"
         }
       ],
-      "title": "聊天清单"
+      "title": "聊天清单",
+      "news_updates": [
+        {
+          "date": "2026-06-30",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/list 更新了方法响应中chats.chat.chat_type参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026630"
+        },
+        {
+          "date": "2026-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/list 更新了方法响应中参数chats.chat.chat_type的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202655"
+        },
+        {
+          "date": "2026-03-19",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/list 更新了方法响应中 chats.chat.chat_type 参数的描。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026319"
+        },
+        {
+          "date": "2026-03-11",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/list 更新了方法响应中的 chats.chat.chat_type 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026311"
+        },
+        {
+          "date": "2025-10-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/list 更新了该方法请求中参数 limit 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251016"
+        },
+        {
+          "date": "2025-07-28",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v3/chat/list 新增了新版本方法，用于通过指定筛选器获取聊天信息。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025728"
+        }
+      ]
     },
     {
       "examples": [
@@ -15380,7 +16805,41 @@
           "text": "has_next boolean 表示不是所有信息都在答复中返回。 messages Array of objects 根据请求正文中的direction参数排序的信息数组。"
         }
       ],
-      "title": "聊天历史记录"
+      "title": "聊天历史记录",
+      "news_updates": [
+        {
+          "date": "2026-03-19",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/history 更新了方法响应中 messages.user.type 参数的描。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026319"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/history 更新了方法请求中的 from_message_id 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-05-13",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v3/chat/history 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025513"
+        },
+        {
+          "date": "2025-03-11",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v3/chat/history 添加了新版本的聊天记录查看方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025311"
+        }
+      ]
     },
     {
       "examples": [
@@ -15649,7 +17108,41 @@
           "text": "code string 报告的唯一识别码。 created_at string <date-time> 报告创建日期。 error string 生成报告时的错误代码。 expires_at string <date-time> 报告链接的有效日期和时间。 如果报告生成于 2025 年 10 月 14 日之前，该字段将为空。 file string XLSX文件的链接。 SELLER_RETURNS 类型的报告，链接有效期为5分钟。 params object 一个数组，包含卖家创建报告时指定的过滤器。 report_type string 报告类型： SELLER_PRODUCTS — 商品报告， SELLER_STOCK — 商品库存报告， SELLER_RETURNS — 退货报告， SELLER_POSTINGS — 发货报告， SELLER_DISCOUNTED — 减价商品报告， MUTUAL_SETTLEMENT — 结算报告， DOCUMENT_B2B_SALES — 面向法人客户的销售报告， COMPENSATION_REPORT — 赔偿报告， DECOMPENSATION_REPORT — 赔偿返还报告， MARKED_PRODUCTS_SALES — 标签销售报告， SELLER_PLACEMENT_BY_PRODUCTS — 按商品维度的存储服务费用报告， SELLER_PLACEMENT_BY_SUPPLIES — 按交货维度的存储服务费用报告。 status string 报告生成状态： waiting—在等待队列中待处理， processing—正在处理， success， failed。"
         }
       ],
-      "title": "报告信息"
+      "title": "报告信息",
+      "news_updates": [
+        {
+          "date": "2026-02-03",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/info 已更新方法响应中 result.report_type 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202623"
+        },
+        {
+          "date": "2026-01-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/info 已更新方法响应中 result.report_type 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026116"
+        },
+        {
+          "date": "2025-11-18",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/report/info 在方法的响应中新增参数result.expires_at。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251118"
+        },
+        {
+          "date": "2025-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/info 更新了 report_type 参数在方法响应中的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202555"
+        }
+      ]
     },
     {
       "examples": [
@@ -15796,7 +17289,41 @@
           "text": "reports Array of objects 包含所有生成的报告的数组。 total integer <int32> 累计报告数。"
         }
       ],
-      "title": "报告清单"
+      "title": "报告清单",
+      "news_updates": [
+        {
+          "date": "2026-02-03",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/list 更新了方法请求中的 report_type 参数描述。已更新方法响应中 result.reports.report_type 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202623"
+        },
+        {
+          "date": "2026-01-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/list 已更新方法请求中 report_type 参数以及方法响应中 result.reports.report_type 的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026116"
+        },
+        {
+          "date": "2025-11-18",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/report/list 在方法的响应中新增参数result.reports.expires_at。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251118"
+        },
+        {
+          "date": "2025-05-05",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/list 更新了 report_type 参数在方法请求和响应中的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202555"
+        }
+      ]
     },
     {
       "examples": [
@@ -15955,7 +17482,17 @@
           "text": "code string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。"
         }
       ],
-      "title": "商品报告"
+      "title": "商品报告",
+      "news_updates": [
+        {
+          "date": "2026-01-22",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/products/create 更新了方法请求中的 visibility 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026122"
+        }
+      ]
     },
     {
       "examples": [
@@ -16050,7 +17587,25 @@
           "text": "code string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。"
         }
       ],
-      "title": "发货报告"
+      "title": "发货报告",
+      "news_updates": [
+        {
+          "date": "2025-10-28",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/postings/create 更新了方法请求中的 filter.is_express 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251028"
+        },
+        {
+          "date": "2025-09-29",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/report/postings/create 已添加以下参数filter.warehouse_id、filter.delivery_method_id、filter.is_express、with.additional_data、with.analytics_data、with.customer_data 和 with.jewelry_codes 到方法请求。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025929"
+        }
+      ]
     },
     {
       "examples": [
@@ -16161,7 +17716,25 @@
           "text": "cash_flows Array of objects 报告清单。 details Array of objects 细节信息。 page_count integer <int64> 含有报告的页数。"
         }
       ],
-      "title": "财务报告"
+      "title": "财务报告",
+      "news_updates": [
+        {
+          "date": "2026-05-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/finance/cash-flow-statement/list 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026514"
+        },
+        {
+          "date": "2025-12-12",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/finance/cash-flow-statement/list 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251212"
+        }
+      ]
     },
     {
       "examples": [
@@ -16304,7 +17877,17 @@
           "text": "code string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。"
         }
       ],
-      "title": "关于FBS仓库库存报告"
+      "title": "关于FBS仓库库存报告",
+      "news_updates": [
+        {
+          "date": "2025-12-18",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/report/warehouse/stock 更新了方法请求中的 warehouseId 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251218"
+        }
+      ]
     },
     {
       "examples": [
@@ -16474,7 +18057,33 @@
           "text": "header object 报告标题页。 rows Array of objects 报告表格。"
         }
       ],
-      "title": "商品销售报告 （第2版）"
+      "title": "商品销售报告 （第2版）",
+      "news_updates": [
+        {
+          "date": "2026-05-21",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/finance/realization 已更新方法说明。 — 在错误部分中，为方法",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026521"
+        },
+        {
+          "date": "2025-12-25",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v2/finance/realization 已从方法响应中移除参数 result.header.doc_amount 和 result.header.vat_amount。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251225"
+        },
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v2/finance/realization 更新了方法响应中的 result.rows.delivery_commission.commission、result.rows.delivery_commission.compensation、result.rows.return_commission.commission 和 result.rows.return_commission.compensation 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        }
+      ]
     },
     {
       "examples": [
@@ -16544,7 +18153,25 @@
           "text": "header object 报告标题页。 rows Array of objects 报告表格。"
         }
       ],
-      "title": "按订单细分的商品销售报告"
+      "title": "按订单细分的商品销售报告",
+      "news_updates": [
+        {
+          "date": "2025-12-25",
+          "labels": [
+            "removed_field"
+          ],
+          "text": "/v1/finance/realization/posting 已从方法响应中移除参数 header.doc_amount 和 header.vat_amount。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251225"
+        },
+        {
+          "date": "2025-06-05",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/finance/realization/posting 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202565"
+        }
+      ]
     },
     {
       "examples": [
@@ -16651,7 +18278,41 @@
           "text": "operations Array of objects 操作信息。 page_count integer <int64> 页数。如果为0，则说明已无页面。 row_count integer <int64> 所有页面上的交易数量。如果为0，说明已无交易。"
         }
       ],
-      "title": "交易清单"
+      "title": "交易清单",
+      "news_updates": [
+        {
+          "date": "2026-05-06",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v3/finance/transaction/list 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202656",
+          "replacement_paths": [
+            "/v1/finance/accrual/postings",
+            "/v1/finance/accrual/types",
+            "/v1/finance/accrual/by-day"
+          ]
+        },
+        {
+          "date": "2025-02-27",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/finance/transaction/list 更新了方法响应中result.operations.posting.delivery_schema参数的描述 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025227"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-05-06",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202656",
+        "text": "/v3/finance/transaction/list 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day",
+        "replacement_paths": [
+          "/v1/finance/accrual/postings",
+          "/v1/finance/accrual/types",
+          "/v1/finance/accrual/by-day"
+        ]
+      }
     },
     {
       "examples": [
@@ -16822,7 +18483,41 @@
           "text": "accruals_for_sale number <double> 指定期间内商品的总成本和退货。 compensation_amount number <double> 补贴。 money_transfer number <double> 根据“卖方选择交货”计划工作时的交货和退货费用。 others_amount number <double> 其他应计费用。 processing_and_delivery number <double> 运输处理、订单装配、干线、最后一英里以及自2021年2月1日起引入新的佣金和费率前的快递服务费。 干线 —— 集群之间的货物交付。 最后一英里 —— 从订单交付点、自提点和快递员到买家处的快递。 refunds_and_cancellations number <double> 干线返回、退货处理、取消和非赎回、2021年2月1日起引入新佣金和税率之前退货价格。 干线 —— 集群之间的货物交付。 最后一英里 —— 从订单交付点、自提点和快递员到买家处的快递。 sale_commission number <double> 商品预售时预扣的佣金数额，退货时返还的佣金数。 services_amount number <double> 与商品交付和退货没有直接关系的附加服务成本。例如，促销或商品放置。"
         }
       ],
-      "title": "清单数目"
+      "title": "清单数目",
+      "news_updates": [
+        {
+          "date": "2026-05-06",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202656",
+          "replacement_paths": [
+            "/v1/finance/accrual/postings",
+            "/v1/finance/accrual/types",
+            "/v1/finance/accrual/by-day"
+          ]
+        },
+        {
+          "date": "2025-08-01",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/finance/transaction/totals 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202581"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-05-06",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202656",
+        "text": "/v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day",
+        "replacement_paths": [
+          "/v1/finance/accrual/postings",
+          "/v1/finance/accrual/types",
+          "/v1/finance/accrual/by-day"
+        ]
+      }
     },
     {
       "examples": [
@@ -16982,7 +18677,17 @@
           "text": "code string 报告的唯一标识符。要获取报告，请将该值传递到方法 /v1/report/info。"
         }
       ],
-      "title": "赔偿返还报告"
+      "title": "赔偿返还报告",
+      "news_updates": [
+        {
+          "date": "2025-07-23",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/finance/decompensation 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025723"
+        }
+      ]
     },
     {
       "examples": [
@@ -17138,7 +18843,17 @@
           "text": "cursor string 用于获取下一批数据的指针。 errors Array of objects 影响错误指数的货件。 has_next boolean true，表示查询结果未包含所有货件。"
         }
       ],
-      "title": "影响错误指数的货件列表：FBS 和 rFBS"
+      "title": "影响错误指数的货件列表：FBS 和 rFBS",
+      "news_updates": [
+        {
+          "date": "2025-11-20",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/rating/index/fbs/posting/list 新增了用于处理错误指数的测试版方法：FBS 和 rFBS。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251120"
+        }
+      ]
     },
     {
       "examples": [
@@ -17636,7 +19351,17 @@
           "text": "has_next boolean true，表示响应中未返回全部评价。 last_id string 页面中最后一个评价的标识符。 reviews Array of objects 评价列表。"
         }
       ],
-      "title": "获取评价列表"
+      "title": "获取评价列表",
+      "news_updates": [
+        {
+          "date": "2026-06-11",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v2/review/list 新增了用于获取评价列表的方法版本。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026611"
+        }
+      ]
     },
     {
       "examples": [
@@ -17727,7 +19452,61 @@
           "text": "has_next boolean true：回复中未返回所有评价。 last_id string 页面中最后一个评价的标识符。 reviews Array of objects 评价信息。"
         }
       ],
-      "title": "获取评价列表 Deprecated"
+      "title": "获取评价列表 Deprecated",
+      "news_updates": [
+        {
+          "date": "2026-06-11",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/review/list 该方法已弃用，并将在未来停用。请切换到 替代方法：/v2/review/list",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026611",
+          "replacement_paths": [
+            "/v2/review/list"
+          ]
+        },
+        {
+          "date": "2026-03-31",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/review/list 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026331"
+        },
+        {
+          "date": "2025-11-11",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/review/list 更新了方法描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251111"
+        },
+        {
+          "date": "2025-06-20",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/review/list 更新了请求示例。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025620"
+        },
+        {
+          "date": "2025-01-16",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/review/list 已添加管理评价的测试方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025116"
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-06-11",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026611",
+        "text": "/v1/review/list 该方法已弃用，并将在未来停用。请切换到 替代方法：/v2/review/list",
+        "replacement_paths": [
+          "/v2/review/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -17934,7 +19713,17 @@
           "text": "answers Array of objects 回答。 last_id string 页面上最后一个值的标识符。 要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。"
         }
       ],
-      "title": "问题回答列表"
+      "title": "问题回答列表",
+      "news_updates": [
+        {
+          "date": "2026-05-19",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/question/answer/list 在方法响应中新增了answers.status_publication参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026519"
+        }
+      ]
     },
     {
       "examples": [
@@ -18279,7 +20068,17 @@
           "text": "questions Array of objects [ 0 .. 10 ] items 问题。 last_id string 页面上最后一个值的标识符。 要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。 has_next boolean 如果响应中未返回所有问题，则为true。"
         }
       ],
-      "title": "问题列表"
+      "title": "问题列表",
+      "news_updates": [
+        {
+          "date": "2026-05-19",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/question/list 在方法请求中新增了sort_dir和limit参数。在方法响应中新增了has_next参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026519"
+        }
+      ]
     },
     {
       "examples": [
@@ -18471,7 +20270,17 @@
           "text": "cursor string 用于选择下一批数据的指针。 如果该参数为空，则没有更多数据了。 has_next boolean 标记是否返回了所有商品： true——请使用不同的cursor值重新请求，以获取剩余的值； false——响应中已包含所有值。 stocks Array of objects 商品库存信息。"
         }
       ],
-      "title": "获取FBS和rFBS仓库库存信息"
+      "title": "获取FBS和rFBS仓库库存信息",
+      "news_updates": [
+        {
+          "date": "2025-10-07",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/product/info/warehouse/stocks 新增了用于获取FBS和rFBS仓库库存的测试方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025107"
+        }
+      ]
     },
     {
       "examples": [
@@ -18743,7 +20552,25 @@
           "text": "cashflows object 收入和支出信息。 total object 周期内的余额总体数据。"
         }
       ],
-      "title": "获取余额报告"
+      "title": "获取余额报告",
+      "news_updates": [
+        {
+          "date": "2026-05-20",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/finance/balance 更新了请求示例。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026520"
+        },
+        {
+          "date": "2025-12-12",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/finance/balance 新增了用于获取余额报告的测试版方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251212"
+        }
+      ]
     },
     {
       "examples": [
@@ -18838,7 +20665,17 @@
           "text": "images_url Array of strings 相似商品图片链接。 info_url string 指向Ozon商品橱窗的链接，其中包含相似商品及其信息。 type_id integer <int64> 商品类型标识符。"
         }
       ],
-      "title": "获取用于确定商品类目的提示"
+      "title": "获取用于确定商品类目的提示",
+      "news_updates": [
+        {
+          "date": "2026-03-17",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/description-category/tips 我们新增了用于获取商品类目提示的Beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026317"
+        }
+      ]
     },
     {
       "examples": [
@@ -19153,7 +20990,17 @@
           "text": "approved_discount number <double> 卖家批准的折扣金额（卢布）。如果卖家未批准申请，请传入 0。 approved_price number <double> 批准价格。 approved_quantity_max integer <uint64> 批准的最大商品数量。 auto_moderated_info object 申请自动审核信息。 created_at string <date-time> 申请创建日期。 edited_till string <date-time> YYYY-MM-DD 可修改决定的时间。 edited_till_duration integer <uint64> 可修改决定的时间（秒）。 email string 处理申请的卖家员工邮箱地址。 end_at string <date-time> 申请有效期结束时间。 end_at_duration integer <uint64> 申请有效期结束时间（秒）。 first_name string 处理申请的卖家员工名字。 id integer <uint64> 申请标识符。 is_auto_moderated boolean true，表示审核为自动审核。 last_name string 处理申请的卖家员工姓氏。 min_auto_price number <double> 自动应用折扣与促销后的最低价格值。 moderated_at string <date-time> 审核日期：查看、批准或拒绝申请的日期。 name string 商品名称。 original_price number <double> 商品在所有折扣前的价格。 patronymic string 处理申请的卖家员工父名（中间名）。 reduction_factor number <double> 创建申请时买家价格与卖家价格之间的差值。 requested_discount number <double> 折扣百分比。 requested_price number <double> 申请价格。 requested_quantity_max integer <uint64> 请求的最大商品数量。 sku integer <uint64> Ozon 系统中的商品标识符——SKU。 status string Default: \"ALL\" Enum: \"ALL\" \"NEW\" \"APPROVED\" \"DECLINED\" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。"
         }
       ],
-      "title": "获取折扣申请列表"
+      "title": "获取折扣申请列表",
+      "news_updates": [
+        {
+          "date": "2026-01-29",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v2/actions/discounts-task/list 新增用于获取折扣申请列表的 beta 方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026129"
+        }
+      ]
     },
     {
       "examples": [
@@ -19204,7 +21051,25 @@
           "text": "items Array of objects 商品可见性信息。 items_errors Array of objects 存在错误的商品。"
         }
       ],
-      "title": "新增了用于设置商品在Ozon和Ozon Select橱窗可见性的Beta方法。"
+      "title": "新增了用于设置商品在Ozon和Ozon Select橱窗可见性的Beta方法。",
+      "news_updates": [
+        {
+          "date": "2026-06-22",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/visibility/set 已更新方法描述。更新了该方法请求中参数item_placement.placement的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026622"
+        },
+        {
+          "date": "2026-04-06",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/product/visibility/set 新增了用于设置商品在Ozon和Ozon Select橱窗可见性的Beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202646"
+        }
+      ]
     },
     {
       "examples": [
@@ -19444,7 +21309,17 @@
           "text": "accruals Array of objects 应计项目列表。 last_id string 页面中最后一个值的标识符。"
         }
       ],
-      "title": "获取某日应计项目"
+      "title": "获取某日应计项目",
+      "news_updates": [
+        {
+          "date": "2026-06-09",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/finance/accrual/by-day 在方法响应中，将参数名称accruals.type_id改为accruals.accrual_id。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202669"
+        }
+      ]
     },
     {
       "examples": [
@@ -19551,7 +21426,17 @@
           "text": "showcases_visibility string Default: \"UNSPECIFIED\" Enum: \"UNSPECIFIED\" \"OZON\" \"SELECT\" \"OZON_SELECT\" \"NONE\" 商品展示在哪些橱窗中： UNSPECIFIED——未指定； OZON——仅在Ozon展示； SELECT——仅在Select展示； OZON_SELECT——在Select和Ozon展示； NONE——商品在所有橱窗均隐藏。 sku integer <int64> 商品在Ozon系统中的标识符——SKU。"
         }
       ],
-      "title": "获取商品可见性信息"
+      "title": "获取商品可见性信息",
+      "news_updates": [
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/product/visibility/info 新增了用于获取商品可见性信息的Beta版方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        }
+      ]
     },
     {
       "examples": [
@@ -19703,7 +21588,17 @@
           "text": "analytics_data object 分析数据。 cancellation object 取消信息。 financial_data object 财务数据。 in_process_at string <date-time> 货件开始处理的日期和时间。 order_date string <date-time> 订单的创建日期。 order_id integer <int64> 该货件所属订单的标识符。 order_number string 该货件所属订单的编号。 posting_number string 货件标识符。 products Array of objects 货件中商品列表。 status integer <int64> 货件状态。 substatus string 货件子状态。 tpl_provider_id integer <int64> 配送服务商标识符。"
         }
       ],
-      "title": "按标识符获取货件信息"
+      "title": "按标识符获取货件信息",
+      "news_updates": [
+        {
+          "date": "2026-07-01",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/posting/fbp/get 新增了用于按标识符获取FBP货件信息的beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202671"
+        }
+      ]
     },
     {
       "examples": [
@@ -19770,7 +21665,17 @@
           "text": "multi_box_qty integer <int32> 商品包装的箱子数量。 posting_number required string 发货号。 products required Array of objects 商品清单。"
         }
       ],
-      "title": "检查并保存份数数据"
+      "title": "检查并保存份数数据",
+      "news_updates": [
+        {
+          "date": "2025-10-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v6/fbs/posting/product/exemplar/set 更新了方法请求中的 products.exemplars.marks 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251016"
+        }
+      ]
     },
     {
       "examples": [
@@ -19934,7 +21839,25 @@
           "text": "posting_number string 发货号。 products Array of objects 商品清单。 status string 所有样件和备货可用性的验证状态： ship_available——可以备货， ship_not_available——无法备货， validation_in_process——样件正在验证中， update_available——可以编辑商品实例信息， update_not_available——无法编辑商品实例信息。"
         }
       ],
-      "title": "获取样件添加状态"
+      "title": "获取样件添加状态",
+      "news_updates": [
+        {
+          "date": "2025-12-25",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/fbs/posting/product/exemplar/status 已更新方法响应中参数 products.exemplars.marks.check_status 的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251225"
+        },
+        {
+          "date": "2025-12-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/fbs/posting/product/exemplar/status 更新了方法响应中的 status 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251216"
+        }
+      ]
     },
     {
       "examples": [
@@ -20045,7 +21968,17 @@
           "text": "error string 错误代码。 exemplars Array of objects 副本信息。 product_id integer <int64> Ozon系统中的商品ID — SKU。 valid boolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。"
         }
       ],
-      "title": "标志代码验证"
+      "title": "标志代码验证",
+      "news_updates": [
+        {
+          "date": "2025-10-16",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/fbs/posting/product/exemplar/validate 更新了方法响应中的 products.exemplars.marks 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251016"
+        }
+      ]
     },
     {
       "examples": [
@@ -20096,7 +22029,17 @@
           "text": "posting_number required string 发货号。"
         }
       ],
-      "title": "Обновить данные экземпляров"
+      "title": "Обновить данные экземпляров",
+      "news_updates": [
+        {
+          "date": "2025-02-17",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/fbs/posting/product/exemplar/update 新增 Beta 方法用于管理标志代码。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025217"
+        }
+      ]
     },
     {
       "examples": [
@@ -20993,7 +22936,17 @@
           "text": "action_id required integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 skus required Array of strings <uint64> <= 100 items Ozon系统中的商品标识符——SKU。"
         }
       ],
-      "title": "从促销活动中移除商品"
+      "title": "从促销活动中移除商品",
+      "news_updates": [
+        {
+          "date": "2026-05-20",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/seller-actions/products/delete 更新了该方法请求中参数skus的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026520"
+        }
+      ]
     },
     {
       "examples": [
@@ -21389,7 +23342,17 @@
           "text": "file string 促销码CSV文件链接。"
         }
       ],
-      "title": "获取CSV格式的促销码文件"
+      "title": "获取CSV格式的促销码文件",
+      "news_updates": [
+        {
+          "date": "2026-03-24",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/seller-actions/voucher/get 新增了用于管理卖家促销活动的Beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026324"
+        }
+      ]
     },
     {
       "examples": [
@@ -21729,7 +23692,17 @@
           "text": "below_min_price Array of objects 价格低于最低价格的商品列表。 extremely_low_price Array of objects 折扣幅度超过70%的商品列表。 failed_price Array of objects 未通过价格校验的商品列表。 rejected Array of objects 未能添加或更新的商品ID。 updated_ids Array of strings <uint64> 已成功添加或更新的商品ID。"
         }
       ],
-      "title": "在促销活动自动添加列表中添加或更新商品"
+      "title": "在促销活动自动添加列表中添加或更新商品",
+      "news_updates": [
+        {
+          "date": "2026-05-12",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/actions/auto-add/products/update 新增了用于处理商品自动添加到促销活动中的beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
+        }
+      ]
     },
     {
       "examples": [
@@ -25397,7 +27370,17 @@
           "text": "attention_reasons Array of strings Default: \"ORDER_ATTENTION_TYPE_UNSPECIFIED\"Items Enum: \"ORDER_ATTENTION_TYPE_UNSPECIFIED\" \"OLD\" \"TIME_SLOT_EXPIRED\" 警告原因： ORDER_ATTENTION_TYPE_UNSPECIFIED——未指定； OLD——过期申请； TIME_SLOT_EXPIRED——时间段已过期。 bundle_uuid string 组成商品标识符。 can_be_cancelled boolean true，如果申请可以取消。 cancellation_state object 取消原因。 created_date string <date-time> 交货创建日期。 delivery_details object 配送详情。 draft_id integer <int64> 草稿标识符。 has_consignment_note boolean true，如果有已签署的文件。 has_label boolean true，如果有标签。 id integer <int64> 交货申请标识符。 locked boolean true，如果无法编辑交货。 order_number string 交货编号。 package_units_count integer <int32> 货位数量。 receive_date string <date-time> 交货接收日期和时间。 row_version integer <int64> 草稿的当前版本标识符。 status string Default: \"ORDER_STATUS_UNSPECIFIED\" Enum: \"ORDER_STATUS_UNSPECIFIED\" \"READY_TO_SUPPLY\" \"FILLING_DELIVERY_DETAILS\" \"COURIER_ASSIGNED\" \"COURIER_PICKED_UP\" \"ACCEPTANCE_AT_DROP_OFF_POINT\" \"IN_TRANSIT_TO_STORAGE_WAREHOUSE\" \"ACCEPTANCE_AT_STORAGE_WAREHOUSE\" \"CANCELLED\" 订单状态： ORDER_STATUS_UNSPECIFIED——未指定； READY_TO_SUPPLY——准备发运； FILLING_DELIVERY_DETAILS——填写交货数据； COURIER_ASSIGNED——已分配快递员； COURIER_PICKED_UP——快递员已取件； ACCEPTANCE_AT_DROP_OFF_POINT——已在揽收点接收； IN_TRANSIT_TO_STORAGE_WAREHOUSE——在运往存储仓库的途中； ACCEPTANCE_AT_STORAGE_WAREHOUSE——仓库验收中； CANCELLED——申请已取消。 supply_id string 交货申请标识符。 warehouse_id integer <int64> 仓库标识符。"
         }
       ],
-      "title": "获取关于特定交货的信息"
+      "title": "获取关于特定交货的信息",
+      "news_updates": [
+        {
+          "date": "2026-05-28",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/fbp/order/get 更新了方法响应中delivery_details.direct_details.timeslot_details.timeslot.timeslot_end、delivery_details.direct_details.timeslot_details.timeslot.timeslot_start、delivery_details.drop_off_point.timeslot.timeslot_end和delivery_details.drop_off_point.timeslot.timeslot_start参数的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026528"
+        }
+      ]
     },
     {
       "examples": [
@@ -25464,7 +27447,17 @@
           "text": "has_next boolean true，如果响应中未返回所有交货。 items Array of objects 交货。 last_id integer <int64> 页面上最后一次交货的标识符。"
         }
       ],
-      "title": "获取交货列表"
+      "title": "获取交货列表",
+      "news_updates": [
+        {
+          "date": "2026-05-28",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/fbp/order/list 更新了方法响应中items.delivery_details.direct_details.timeslot_details.timeslot.timeslot_end、items.delivery_details.direct_details.timeslot_details.timeslot.timeslot_start、items.delivery_details.drop_off_point.timeslot.timeslot_end和items.delivery_details.drop_off_point.timeslot.timeslot_start参数的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026528"
+        }
+      ]
     },
     {
       "examples": [
@@ -25562,7 +27555,25 @@
           "text": "cursor string 用于选择下一批数据的指针。 postings Array of objects 货件列表。"
         }
       ],
-      "title": "获取货件列表"
+      "title": "获取货件列表",
+      "news_updates": [
+        {
+          "date": "2026-06-30",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/posting/fbp/list 已在方法响应中添加参数postings.financial_data.products.posting_commission和postings.financial_data.products.return_commission。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026630"
+        },
+        {
+          "date": "2026-04-30",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/posting/fbp/list 新增了用于获取FBP货件列表的新的beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026430"
+        }
+      ]
     },
     {
       "examples": [
@@ -25817,7 +27828,17 @@
           "text": "data Array of objects 数据组。 totals Array of numbers <double> 指标总计和平均值。"
         }
       ],
-      "title": "分析数据"
+      "title": "分析数据",
+      "news_updates": [
+        {
+          "date": "2026-05-19",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/analytics/data 更新了该方法请求中参数dimension的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026519"
+        }
+      ]
     },
     {
       "examples": [
@@ -26109,7 +28130,33 @@
           "text": "analytics_period object 数据分析的时间范围。 page_count integer <int64> 总页数。 queries Array of objects 查询列表。 total integer <int64> 搜索请求的总数。"
         }
       ],
-      "title": "有关特定商品查询的信息"
+      "title": "有关特定商品查询的信息",
+      "news_updates": [
+        {
+          "date": "2025-09-24",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/analytics/product-queries/details 更新了方法请求中的 page 和 page_size 参数描述。更新了请求示例。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025924"
+        },
+        {
+          "date": "2025-03-20",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/analytics/product-queries/details 更新了方法请求中 limit_by_sku，page 和 page_size 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025320"
+        },
+        {
+          "date": "2025-03-14",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/analytics/product-queries/details 我们添加了获得特定商品查询数据的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025314"
+        }
+      ]
     },
     {
       "examples": [
@@ -26236,7 +28283,17 @@
           "text": "commission_ratio number <double> 按类目划分的销售佣金比例。 delivery_commission object 配送佣金。 item object 商品信息。 return_commission object 商品退货佣金。 rowNumber integer <int32> 报告中的行号。 seller_price_per_instance number <double> 考虑折扣后的卖家价格。"
         }
       ],
-      "title": "每日商品销售报告"
+      "title": "每日商品销售报告",
+      "news_updates": [
+        {
+          "date": "2025-07-15",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/finance/realization/by-day 已将该方法从Beta版迁移至正式版。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025715"
+        }
+      ]
     },
     {
       "examples": [
@@ -26420,7 +28477,17 @@
           "text": "offset string <int64> 每页显示的搜索查询数量。 search_queries Array of objects 搜索查询信息。 total string <int64> 搜索查询总数。"
         }
       ],
-      "title": "获取热门搜索查询列表"
+      "title": "获取热门搜索查询列表",
+      "news_updates": [
+        {
+          "date": "2025-11-11",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/search-queries/top 已新增用于处理搜索查询的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251111"
+        }
+      ]
     },
     {
       "examples": [
@@ -26539,9 +28606,416 @@
           "text": "customer_price object 网站上的商品价格。 discount_percent number <float> Deprecated 由 Ozon 承担的折扣比例。 offer_id string 卖家系统中的商品标识符（商品货号）。 price object 商品价格（已包含促销活动或推广优惠）。 price_indexes Array of objects 价格指数。 sku integer <int64> Ozon 系统中的商品标识符——SKU。"
         }
       ],
-      "title": "获取商品价格的详细信息"
+      "title": "获取商品价格的详细信息",
+      "news_updates": [
+        {
+          "date": "2026-05-19",
+          "labels": [
+            "added_field",
+            "deprecated_field"
+          ],
+          "text": "/v1/product/prices/details 在方法响应中：新增了prices.price_indexes参数；将prices.discount_percent参数标记为已弃用；更新了prices.customer_price参数的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026519"
+        },
+        {
+          "date": "2026-03-04",
+          "labels": [
+            "graduated"
+          ],
+          "text": "/v1/product/prices/details 已将该方法从Beta版迁移至正式版。 — 在 授权 模块，我们更新了关于API密钥使用的信息。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202634"
+        }
+      ]
     }
   ],
   "source_url": "https://docs.ozon.ru/api/seller/zh/?__rr=1",
-  "title": "Ozon Seller API 文件"
+  "title": "Ozon Seller API 文件",
+  "news_entry_count": 149,
+  "news_captured_at": "2026-07-09T05:52:08.483Z",
+  "news_label_counts": {
+    "added_field": 50,
+    "deprecated_field": 9,
+    "deprecated_method": 23,
+    "graduated": 16,
+    "new_method": 33,
+    "removed_field": 11,
+    "removed_method": 22,
+    "updated": 104
+  },
+  "news_removed_or_missing_methods": [
+    {
+      "date": "2026-06-09",
+      "path": "/v2/chat/list",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v3/chat/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202669",
+      "text": "/v2/chat/list 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v3/chat/list",
+      "lifecycle_text": "/v2/chat/list 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v3/chat/list"
+    },
+    {
+      "date": "2026-05-19",
+      "path": "/v1/analytics/average-delivery-time/summary",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026519",
+      "text": "/v1/analytics/average-delivery-time/summary 该方式已过期，我们已将其从文件中删除。",
+      "lifecycle_text": "/v1/analytics/average-delivery-time/summary 该方式已过期，我们已将其从文件中删除。"
+    },
+    {
+      "date": "2026-04-14",
+      "path": "/v1/seller-actions/update/ozon-card-discount",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026414",
+      "text": "/v1/seller-actions/update/ozon-card-discount 该促销活动已无法使用，相关方法已从文档中删除。",
+      "lifecycle_text": "/v1/seller-actions/update/ozon-card-discount 该促销活动已无法使用，相关方法已从文档中删除。"
+    },
+    {
+      "date": "2026-02-20",
+      "path": "/v2/chat/history",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v3/chat/history"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026220",
+      "text": "/v2/chat/history 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v3/chat/history",
+      "lifecycle_text": "/v2/chat/history 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v3/chat/history"
+    },
+    {
+      "date": "2026-01-20",
+      "path": "/v2/fbs/posting/sent-by-seller",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026120",
+      "text": "/v2/fbs/posting/sent-by-seller 该方式已过期，我们已将其从文件中删除。 — 在 方法操作顺序 → 管理订单 → rFBS Crossborder 模式 和 方法操作顺序 → 管理订单 → rFBS Crossborder 模式含集成物流服务 部分，更新了有关方法操作的描述。",
+      "lifecycle_text": "/v2/fbs/posting/sent-by-seller 该方式已过期，我们已将其从文件中删除。 — 在 方法操作顺序 → 管理订单 → rFBS Crossborder 模式 和 方法操作顺序 → 管理订单 → rFBS Crossborder 模式含集成物流服务 部分，更新了有关方法操作的描述。"
+    },
+    {
+      "date": "2026-01-13",
+      "path": "/v4/fbs/posting/product/exemplar/validate",
+      "labels": [
+        "deprecated_method",
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026113",
+      "text": "/v4/fbs/posting/product/exemplar/validate 方法已过时， 已从 文档中移除。",
+      "lifecycle_text": "/v4/fbs/posting/product/exemplar/validate 方法已过时， 已从 文档中移除。"
+    },
+    {
+      "date": "2025-12-25",
+      "path": "/v2/posting/fbs/product/change",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251225",
+      "text": "/v2/posting/fbs/product/change 该方式已过期，我们已将其从文件中删除。",
+      "lifecycle_text": "/v2/posting/fbs/product/change 该方式已过期，我们已将其从文件中删除。"
+    },
+    {
+      "date": "2025-09-03",
+      "path": "/v1/conditional-cancellation/list",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202593",
+      "text": "/v1/conditional-cancellation/list 这些方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/conditional-cancellation/list",
+      "lifecycle_text": "/v1/conditional-cancellation/list 这些方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/conditional-cancellation/list"
+    },
+    {
+      "date": "2025-09-03",
+      "path": "/v1/conditional-cancellation/approve",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/approve"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202593",
+      "text": "/v1/conditional-cancellation/approve 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/conditional-cancellation/approve",
+      "lifecycle_text": "/v1/conditional-cancellation/approve 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/conditional-cancellation/approve"
+    },
+    {
+      "date": "2025-09-03",
+      "path": "/v1/conditional-cancellation/reject",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/reject"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202593",
+      "text": "/v1/conditional-cancellation/reject 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/conditional-cancellation/reject",
+      "lifecycle_text": "/v1/conditional-cancellation/reject 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/conditional-cancellation/reject"
+    },
+    {
+      "date": "2025-07-28",
+      "path": "/v2/chat/list",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v3/chat/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025728",
+      "text": "/v2/chat/list 该方法将于未来停用。请改用 替代方法：/v3/chat/list",
+      "lifecycle_text": "/v2/chat/list 该方法将于未来停用。请改用 替代方法：/v3/chat/list"
+    },
+    {
+      "date": "2025-07-01",
+      "path": "/v1/product/upload_digital_codes/info",
+      "labels": [
+        "deprecated_method",
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202571",
+      "text": "/v1/product/upload_digital_codes/info 方法已过时， 已从 文档中移除。 — 在 方法操作顺序 → 上传和更新商品 部分，更新了有关方法操作的描述。",
+      "lifecycle_text": "/v1/product/upload_digital_codes/info 方法已过时， 已从 文档中移除。 — 在 方法操作顺序 → 上传和更新商品 部分，更新了有关方法操作的描述。"
+    },
+    {
+      "date": "2025-06-19",
+      "path": "/v3/product/info/attributes",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v4/product/info/attributes"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025619",
+      "text": "/v3/product/info/attributes 该方法已过时。请切换到新版本 替代方法：/v4/product/info/attributes",
+      "lifecycle_text": "/v3/product/info/attributes 该方法已过时。请切换到新版本 替代方法：/v4/product/info/attributes"
+    },
+    {
+      "date": "2025-06-19",
+      "path": "/v1/conditional-cancellation/get",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025619",
+      "text": "/v1/conditional-cancellation/get 方法即将过时，并将于2025年8月3日停用。请改用 替代方法：/v2/conditional-cancellation/list",
+      "lifecycle_text": "/v1/conditional-cancellation/get 方法即将过时，并将于2025年8月3日停用。请改用 替代方法：/v2/conditional-cancellation/list"
+    },
+    {
+      "date": "2025-06-03",
+      "path": "/v1/conditional-cancellation/list",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202563",
+      "text": "/v1/conditional-cancellation/list 方法即将过时，并将于2025年8月3日停用。请切换到新版本 替代方法：/v2/conditional-cancellation/list",
+      "lifecycle_text": "/v1/conditional-cancellation/list 方法即将过时，并将于2025年8月3日停用。请切换到新版本 替代方法：/v2/conditional-cancellation/list"
+    },
+    {
+      "date": "2025-06-03",
+      "path": "/v1/conditional-cancellation/approve",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/approve"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202563",
+      "text": "/v1/conditional-cancellation/approve 方法即将过时，并将于2025年8月3日停用。请切换到新版本 替代方法：/v2/conditional-cancellation/approve",
+      "lifecycle_text": "/v1/conditional-cancellation/approve 方法即将过时，并将于2025年8月3日停用。请切换到新版本 替代方法：/v2/conditional-cancellation/approve"
+    },
+    {
+      "date": "2025-06-03",
+      "path": "/v1/conditional-cancellation/reject",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v2/conditional-cancellation/reject"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202563",
+      "text": "/v1/conditional-cancellation/reject 方法即将过时，并将于2025年8月3日停用。请切换到新版本 替代方法：/v2/conditional-cancellation/reject",
+      "lifecycle_text": "/v1/conditional-cancellation/reject 方法即将过时，并将于2025年8月3日停用。请切换到新版本 替代方法：/v2/conditional-cancellation/reject"
+    },
+    {
+      "date": "2025-05-27",
+      "path": "/v1/product/import/stocks",
+      "labels": [
+        "deprecated_method",
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v2/products/stock"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025527",
+      "text": "/v1/product/import/stocks 该方法已过时，已从文档中删除。请改用 替代方法：/v2/products/stock",
+      "lifecycle_text": "/v1/product/import/stocks 该方法已过时，已从文档中删除。请改用 替代方法：/v2/products/stock"
+    },
+    {
+      "date": "2025-05-13",
+      "path": "/v2/chat/history",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v3/chat/history"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025513",
+      "text": "/v2/chat/history 方法即将过时，并将于2025年7月13日停用。请切换到新版本 替代方法：/v3/chat/history",
+      "lifecycle_text": "/v2/chat/history 方法即将过时，并将于2025年7月13日停用。请切换到新版本 替代方法：/v3/chat/history"
+    },
+    {
+      "date": "2025-05-06",
+      "path": "/v1/finance/realization",
+      "labels": [
+        "deprecated_method",
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v2/finance/realization"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556",
+      "text": "/v1/finance/realization 该方法已过时，已从文档中删除。 请改用 替代方法：/v2/finance/realization",
+      "lifecycle_text": "/v1/finance/realization 该方法已过时，已从文档中删除。 请改用 替代方法：/v2/finance/realization"
+    },
+    {
+      "date": "2025-05-06",
+      "path": "/v1/product/import/stocks",
+      "labels": [
+        "deprecated_method"
+      ],
+      "replacement_paths": [
+        "/v2/products/stocks"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202556",
+      "text": "/v1/product/import/stocks 方法将于2025年5月27日停用。请改用 替代方法：/v2/products/stocks",
+      "lifecycle_text": "/v1/product/import/stocks 方法将于2025年5月27日停用。请改用 替代方法：/v2/products/stocks"
+    },
+    {
+      "date": "2025-03-11",
+      "path": "/v1/actions/hotsales/products",
+      "labels": [
+        "deprecated_method",
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025311",
+      "text": "/v1/actions/hotsales/products 方法已过时，已从文档中移除。",
+      "lifecycle_text": "/v1/actions/hotsales/products 方法已过时，已从文档中移除。"
+    },
+    {
+      "date": "2025-03-10",
+      "path": "/v2/product/info",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v3/product/info/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025310",
+      "text": "/v2/product/info 该方法已过期，我们已将其从文件中删除。请使用 替代方法：/v3/product/info/list",
+      "lifecycle_text": "/v2/product/info 该方法已过期，我们已将其从文件中删除。请使用 替代方法：/v3/product/info/list"
+    },
+    {
+      "date": "2025-02-18",
+      "path": "/v4/product/info/prices",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025218",
+      "text": "/v4/product/info/prices 该方式已过期，我们已将其从文件中删除。",
+      "lifecycle_text": "/v4/product/info/prices 该方式已过期，我们已将其从文件中删除。"
+    },
+    {
+      "date": "2025-02-18",
+      "path": "/v3/returns/company/fbs",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v1/returns/list",
+        "/v1/report/returns/create"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025218",
+      "text": "/v3/returns/company/fbs 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v1/returns/list, /v1/report/returns/create",
+      "lifecycle_text": "/v3/returns/company/fbs 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v1/returns/list, /v1/report/returns/create"
+    },
+    {
+      "date": "2025-02-18",
+      "path": "/v1/report/returns/create",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025218",
+      "text": "/v1/report/returns/create 该方式已过期，我们已将其从文件中删除。",
+      "lifecycle_text": "/v1/report/returns/create 该方式已过期，我们已将其从文件中删除。"
+    },
+    {
+      "date": "2025-02-17",
+      "path": "/v2/product/info/list",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v3/product/info/list"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025217",
+      "text": "/v2/product/info/list 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v3/product/info/list",
+      "lifecycle_text": "/v2/product/info/list 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v3/product/info/list"
+    },
+    {
+      "date": "2025-02-11",
+      "path": "/v2/product/list",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025211",
+      "text": "/v2/product/list 该方式已过期，我们已将其从文件中删除。",
+      "lifecycle_text": "/v2/product/list 该方式已过期，我们已将其从文件中删除。"
+    },
+    {
+      "date": "2025-02-10",
+      "path": "/v3/product/info/stocks",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025210",
+      "text": "/v3/product/info/stocks 该方式已过期，我们已将其从文件中删除。",
+      "lifecycle_text": "/v3/product/info/stocks 该方式已过期，我们已将其从文件中删除。"
+    },
+    {
+      "date": "2025-02-10",
+      "path": "/v1/product/pictures/info",
+      "labels": [
+        "removed_method"
+      ],
+      "replacement_paths": [
+        "/v2/product/pictures/info"
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025210",
+      "text": "/v1/product/pictures/info 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/product/pictures/info",
+      "lifecycle_text": "/v1/product/pictures/info 该方式已过期，我们已将其从文件中删除。请使用 替代方法：/v2/product/pictures/info"
+    }
+  ]
 }

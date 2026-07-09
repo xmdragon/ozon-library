@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/add-barcode
 - 分组：`barcode`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-15 | `updated` | /v1/barcode/add 已更新方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026515) |
+| 2025-06-20 | `new_method` | /v1/barcode/add 新增了为商品绑定条形码的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+
 ## 页面标题结构
 
 - 为商品绑定条形码

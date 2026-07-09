@@ -23,7 +23,7 @@
 - [可用的促销商品清单](post-v1-actions-candidates-PromosCandidates.md) - `POST /v1/actions/candidates` - `PromosCandidates`
 - [同意折扣申请](post-v1-actions-discounts-task-approve-promos_task_approve.md) - `POST /v1/actions/discounts-task/approve` - `promos_task_approve`
 - [取消折扣申请](post-v1-actions-discounts-task-decline-promos_task_decline.md) - `POST /v1/actions/discounts-task/decline` - `promos_task_decline`
-- [申请折扣列表](post-v1-actions-discounts-task-list-promos_task_list.md) - `POST /v1/actions/discounts-task/list` - `promos_task_list`
+- [申请折扣列表](post-v1-actions-discounts-task-list-promos_task_list.md) - `POST /v1/actions/discounts-task/list` - `promos_task_list` - **deprecated**
 - [参与 活动的商品列表](post-v1-actions-products-PromosProducts.md) - `POST /v1/actions/products` - `PromosProducts`
 - [在促销活动中增加一个商品](post-v1-actions-products-activate-PromosProductsActivate.md) - `POST /v1/actions/products/activate` - `PromosProductsActivate`
 - [从活动中删除商品](post-v1-actions-products-deactivate-PromosProductsDeactivate.md) - `POST /v1/actions/products/deactivate` - `PromosProductsDeactivate`
@@ -75,7 +75,7 @@
 
 ### delivery-method
 
-- [仓库物流方式清单](post-v1-delivery-method-list-WarehouseAPI_DeliveryMethodList.md) - `POST /v1/delivery-method/list` - `WarehouseAPI_DeliveryMethodList`
+- [仓库物流方式清单](post-v1-delivery-method-list-WarehouseAPI_DeliveryMethodList.md) - `POST /v1/delivery-method/list` - `WarehouseAPI_DeliveryMethodList` - **deprecated**
 - [realFBS仓库的配送方式列表](post-v2-delivery-method-list-WarehouseAPI_DeliveryMethodListV2.md) - `POST /v2/delivery-method/list` - `WarehouseAPI_DeliveryMethodListV2`
 
 ### description-category
@@ -158,8 +158,8 @@
 - [每日商品销售报告](post-v1-finance-realization-by-day-FinanceAPI_GetRealizationByDayReportV1.md) - `POST /v1/finance/realization/by-day` - `FinanceAPI_GetRealizationByDayReportV1`
 - [按订单细分的商品销售报告](post-v1-finance-realization-posting-FinanceAPI_GetRealizationReportV1.md) - `POST /v1/finance/realization/posting` - `FinanceAPI_GetRealizationReportV1`
 - [商品销售报告 （第2版）](post-v2-finance-realization-FinanceAPI_GetRealizationReportV2.md) - `POST /v2/finance/realization` - `FinanceAPI_GetRealizationReportV2`
-- [交易清单](post-v3-finance-transaction-list-FinanceAPI_FinanceTransactionListV3.md) - `POST /v3/finance/transaction/list` - `FinanceAPI_FinanceTransactionListV3`
-- [清单数目](post-v3-finance-transaction-totals-FinanceAPI_FinanceTransactionTotalV3.md) - `POST /v3/finance/transaction/totals` - `FinanceAPI_FinanceTransactionTotalV3`
+- [交易清单](post-v3-finance-transaction-list-FinanceAPI_FinanceTransactionListV3.md) - `POST /v3/finance/transaction/list` - `FinanceAPI_FinanceTransactionListV3` - **deprecated**
+- [清单数目](post-v3-finance-transaction-totals-FinanceAPI_FinanceTransactionTotalV3.md) - `POST /v3/finance/transaction/totals` - `FinanceAPI_FinanceTransactionTotalV3` - **deprecated**
 
 ### pass
 
@@ -172,7 +172,7 @@
 
 ### posting
 
-- [可供运输的列表](post-v1-posting-carriage-available-list-PostingAPI_GetCarriageAvailableList.md) - `POST /v1/posting/carriage-available/list` - `PostingAPI_GetCarriageAvailableList`
+- [可供运输的列表](post-v1-posting-carriage-available-list-PostingAPI_GetCarriageAvailableList.md) - `POST /v1/posting/carriage-available/list` - `PostingAPI_GetCarriageAvailableList` - **deprecated**
 - [确认货件发运日期](post-v1-posting-cutoff-set-PostingAPI_SetPostingCutoff.md) - `POST /v1/posting/cutoff/set` - `PostingAPI_SetPostingCutoff`
 - [按标识符获取货件信息](post-v1-posting-fbp-get-GetFbpPosting.md) - `POST /v1/posting/fbp/get` - `GetFbpPosting`
 - [获取货件列表](post-v1-posting-fbp-list-PostingFbpList.md) - `POST /v1/posting/fbp/list` - `PostingFbpList`
@@ -189,8 +189,8 @@
 - [可用产地名单](post-v2-posting-fbs-product-country-list-PostingAPI_ListCountryProductFbsPostingV2.md) - `POST /v2/posting/fbs/product/country/list` - `PostingAPI_ListCountryProductFbsPostingV2`
 - [添加商品产地信息](post-v2-posting-fbs-product-country-set-PostingAPI_SetCountryProductFbsPostingV2.md) - `POST /v2/posting/fbs/product/country/set` - `PostingAPI_SetCountryProductFbsPostingV2`
 - [按照ID获取货件信息](post-v3-posting-fbs-get-PostingAPI_GetFbsPostingV3.md) - `POST /v3/posting/fbs/get` - `PostingAPI_GetFbsPostingV3`
-- [货件列表 Deprecated](post-v3-posting-fbs-list-PostingAPI_GetFbsPostingListV3.md) - `POST /v3/posting/fbs/list` - `PostingAPI_GetFbsPostingListV3`
-- [未处理货件列表 Deprecated](post-v3-posting-fbs-unfulfilled-list-PostingAPI_GetFbsPostingUnfulfilledList.md) - `POST /v3/posting/fbs/unfulfilled/list` - `PostingAPI_GetFbsPostingUnfulfilledList`
+- [货件列表 Deprecated](post-v3-posting-fbs-list-PostingAPI_GetFbsPostingListV3.md) - `POST /v3/posting/fbs/list` - `PostingAPI_GetFbsPostingListV3` - **deprecated**
+- [未处理货件列表 Deprecated](post-v3-posting-fbs-unfulfilled-list-PostingAPI_GetFbsPostingUnfulfilledList.md) - `POST /v3/posting/fbs/unfulfilled/list` - `PostingAPI_GetFbsPostingUnfulfilledList` - **deprecated**
 - [获取货件列表](post-v4-posting-fbs-list-PostingFbsList.md) - `POST /v4/posting/fbs/list` - `PostingFbsList`
 - [搜集订单 (第4方案)](post-v4-posting-fbs-ship-PostingAPI_ShipFbsPostingV4.md) - `POST /v4/posting/fbs/ship` - `PostingAPI_ShipFbsPostingV4`
 - [货件的部分装配 (第4方案)](post-v4-posting-fbs-ship-package-PostingAPI_ShipFbsPostingPackage.md) - `POST /v4/posting/fbs/ship/package` - `PostingAPI_ShipFbsPostingPackage`
@@ -306,7 +306,7 @@
 - [评价的评论列表](post-v1-review-comment-list-ReviewAPI_CommentList.md) - `POST /v1/review/comment/list` - `ReviewAPI_CommentList`
 - [根据状态统计的评价数量](post-v1-review-count-ReviewAPI_ReviewCount.md) - `POST /v1/review/count` - `ReviewAPI_ReviewCount`
 - [获取评价信息](post-v1-review-info-ReviewAPI_ReviewInfo.md) - `POST /v1/review/info` - `ReviewAPI_ReviewInfo`
-- [获取评价列表 Deprecated](post-v1-review-list-ReviewAPI_ReviewList.md) - `POST /v1/review/list` - `ReviewAPI_ReviewList`
+- [获取评价列表 Deprecated](post-v1-review-list-ReviewAPI_ReviewList.md) - `POST /v1/review/list` - `ReviewAPI_ReviewList` - **deprecated**
 - [获取评价列表](post-v2-review-list-ReviewListV2.md) - `POST /v2/review/list` - `ReviewListV2`
 
 ### roles
@@ -361,7 +361,7 @@
 - [获取用于更新drop-off发运仓库的时间段列表](post-v1-warehouse-fbs-update-drop-off-timeslot-list-WarehouseFbsUpdateDropOffTimeslotList.md) - `POST /v1/warehouse/fbs/update/drop-off/timeslot/list` - `WarehouseFbsUpdateDropOffTimeslotList`
 - [获取用于更新pick-up发运仓库的时间段列表](post-v1-warehouse-fbs-update-pick-up-timeslot-list-WarehouseFbsUpdatePickUpTimeslotList.md) - `POST /v1/warehouse/fbs/update/pick-up/timeslot/list` - `WarehouseFbsUpdatePickUpTimeslotList`
 - [获取配送受限商品列表](post-v1-warehouse-invalid-products-get-WarehouseInvalidProductsGet.md) - `POST /v1/warehouse/invalid-products/get` - `WarehouseInvalidProductsGet`
-- [仓库清单](post-v1-warehouse-list-WarehouseAPI_WarehouseList.md) - `POST /v1/warehouse/list` - `WarehouseAPI_WarehouseList`
+- [仓库清单](post-v1-warehouse-list-WarehouseAPI_WarehouseList.md) - `POST /v1/warehouse/list` - `WarehouseAPI_WarehouseList` - **deprecated**
 - [获取操作状态](post-v1-warehouse-operation-status-GetWarehouseFBSOperationStatus.md) - `POST /v1/warehouse/operation/status` - `GetWarehouseFBSOperationStatus`
 - [将仓库解除归档](post-v1-warehouse-unarchive-UnarchiveWarehouseFBS.md) - `POST /v1/warehouse/unarchive` - `UnarchiveWarehouseFBS`
 - [获取含有配送受限商品的仓库列表](post-v1-warehouse-warehouses-with-invalid-products-WarehouseWithInvalidProducts.md) - `POST /v1/warehouse/warehouses-with-invalid-products` - `WarehouseWithInvalidProducts`

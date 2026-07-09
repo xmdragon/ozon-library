@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_CreateStockByWarehouseReport
 - 分组：`report`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-18 | `updated` | /v1/report/warehouse/stock 更新了方法请求中的 warehouseId 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+
 ## 页面标题结构
 
 - 关于FBS仓库库存报告

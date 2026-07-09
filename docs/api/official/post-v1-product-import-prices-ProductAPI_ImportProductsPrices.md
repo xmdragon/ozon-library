@@ -9,6 +9,17 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ImportProductsPrices
 - 分组：`product`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-12 | `updated` | /v1/product/import/prices 更新了该方法请求中参数prices.min_price的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+| 2025-12-30 | `updated` | /v1/product/import/prices 更新了方法请求中的 prices.vat 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
+| 2025-10-22 | `added_field` | /v1/product/import/prices 已添加参数 prices.manage_elastic_boosting_through_price 到方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251022) |
+| 2025-02-24 | `added_field` | /v1/product/import/prices 在方法请求中添加了参数 prices.net_price，用于指定商品的成本价。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025224) |
+| 2025-01-15 | `added_field` | /v1/product/import/prices 添加字段 prices.min_price_for_auto_actions_enabled 在方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025115) |
+| 2024-12-24 | `added_field` | /v1/product/import/prices 在方法请求中添加了参数 prices.vat。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20241224) |
+
 ## 页面标题结构
 
 - 更新价格

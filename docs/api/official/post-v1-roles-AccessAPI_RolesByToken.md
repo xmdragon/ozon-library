@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AccessAPI_RolesByToken
 - 分组：`roles`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-04 | `added_field` | /v1/roles 在方法的响应中新增了参数 expires_at。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
+| 2025-09-12 | `graduated` | /v1/roles 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025912) |
+
 ## 页面标题结构
 
 - 使用API密钥获取角色和方式列表

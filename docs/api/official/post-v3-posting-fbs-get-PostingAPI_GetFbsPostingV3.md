@@ -9,6 +9,25 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingV3
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-05 | `updated` | /v3/posting/fbs/get 更新了方法响应中参数result.analytics_data.client_delivery_date_begin和result.analytics_data.client_delivery_date_end的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
+| 2026-04-17 | `added_field` | /v3/posting/fbs/get 在方法响应中新增参数result.tariffication_steps。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
+| 2026-03-17 | `updated` | /v3/posting/fbs/get 已更新方式响应中 result.analytics_data.client_delivery_date_begin 和 result.analytics_data.client_delivery_date_end 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
+| 2025-11-27 | `added_field` | /v3/posting/fbs/get 在方法的响应中：更新了参数 result.analytics_data.payment_type_group_name 的描述；新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| 2025-10-23 | `updated` | /v3/posting/fbs/get 更新了方法响应中的 result.substatus 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
+| 2025-10-21 | `added_field` | /v3/posting/fbs/get 在方法的响应中添加了参数 result.shipment_date_without_delay。 — 在 Ozon发送的通知 → 新的发货 部分中，更新了新发货通知的示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
+| 2025-10-16 | `updated` | /v3/posting/fbs/get 更新了方法响应中的 result.financial_data.products.product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-09-24 | `added_field` | /v3/posting/fbs/get 在方法响应中： • 添加了参数 result.financial_data.products.customer_price； • 更新了 result.requirements.products_requiring_gtd、result.requirements.products_requiring_mandatory_mark、result.requirements.products_requiring_jw_uin、result.requirements.products_requiring_rnpt、result.status、result.substatus、result.previous_substatus、result.financial_data.products.price、result.financial_data.products.old_price、result.customer.phone、result.addressee.phone 和 result.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-07-22 | `updated` | /v3/posting/fbs/get 更新了方法响应中 result.requirements.products_requiring_change_country 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025722) |
+| 2025-07-02 | `added_field` | /v3/posting/fbs/get 在方法的响应中新增了参数result.requirements.products_requiring_change_country。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202572) |
+| 2025-06-23 | `updated` | /v3/posting/fbs/get 新了方法响应中result.shipment_date参数的描述。 常见错误 已新增错误 Stock is updated too frequently 的说明，并更新了 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025623) |
+| 2025-06-05 | `added_field` | /v3/posting/fbs/get 在方法请求中添加了参数 with.legal_info 参数的 和 result.legal_info 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202565) |
+| 2025-02-27 | `added_field` | /v3/posting/fbs/get 在方法响应中添加了参数 result.previous_substatus。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025227) |
+| 2025-02-26 | `updated` | /v3/posting/fbs/get 更新了方法响应中 result.analytics_data.city参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025226) |
+
 ## 页面标题结构
 
 - 按照ID获取货件信息

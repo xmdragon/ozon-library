@@ -9,6 +9,15 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_ReportInfo
 - 分组：`report`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-03 | `updated` | /v1/report/info 已更新方法响应中 result.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202623) |
+| 2026-01-16 | `updated` | /v1/report/info 已更新方法响应中 result.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026116) |
+| 2025-11-18 | `added_field` | /v1/report/info 在方法的响应中新增参数result.expires_at。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
+| 2025-05-05 | `updated` | /v1/report/info 更新了 report_type 参数在方法响应中的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202555) |
+
 ## 页面标题结构
 
 - 报告信息

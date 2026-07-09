@@ -9,6 +9,13 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarStatusV5
 - 分组：`fbs`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-25 | `updated` | /v5/fbs/posting/product/exemplar/status 已更新方法响应中参数 products.exemplars.marks.check_status 的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
+| 2025-12-16 | `updated` | /v5/fbs/posting/product/exemplar/status 更新了方法响应中的 status 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
+
 ## 页面标题结构
 
 - 获取样件添加状态

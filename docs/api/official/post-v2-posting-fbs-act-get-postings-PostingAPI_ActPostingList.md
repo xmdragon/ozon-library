@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_ActPostingList
 - 分组：`posting`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-06-03 | `new_method` | /v2/posting/fbs/act/get-postings 新增了用于获取单据中货件列表的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202663) |
+
 ## 页面标题结构
 
 - 单据中的货件列表
