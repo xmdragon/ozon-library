@@ -21,11 +21,21 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-currency_codestring 错误处理费用的币种代码。 defectsArray of objects 按天计算的错误指数。 indexnumber <double> 周期内的错误指数数值。 period_fromstring 计算周期开始日期（格式YYYY-MM-DD）。 period_tostring 计算周期结束日期（格式YYYY-MM-DD）。 processing_costs_sumnumber <double> 周期内的错误处理费用。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `currency_code` | string 错误处理费用的币种代码。 |
+| `defects` | Array of objects 按天计算的错误指数。 |
+| `index` | number <double> 周期内的错误指数数值。 |
+| `period_from` | string 计算周期开始日期（格式YYYY-MM-DD）。 |
+| `period_to` | string 计算周期结束日期（格式YYYY-MM-DD）。 |
+| `processing_costs_sum` | number <double> 周期内的错误处理费用。 |
 
 ## 示例
 

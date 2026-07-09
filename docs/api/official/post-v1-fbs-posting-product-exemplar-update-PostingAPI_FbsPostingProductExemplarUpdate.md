@@ -22,11 +22,16 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required string 发货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 发货号。 |
 
 ## 示例
 

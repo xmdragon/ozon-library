@@ -23,25 +23,54 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-action_id required integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 cursorinteger <uint64> 用于选择下一批数据的指针。 limit required integer <int64> [ 1 .. 100 ] Default: 100 响应中的最大元素数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` required | integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 |
+| `cursor` | integer <uint64> 用于选择下一批数据的指针。 |
+| `limit` required | integer <int64> [ 1 .. 100 ] Default: 100 响应中的最大元素数量。 |
 
 ### 表格 2
 
-cursorinteger <uint64> 用于选择下一批数据的指针。 has_nextboolean 响应中仅返回了部分值的标志： true——请使用新的cursor参数重复请求，以获取其余值； false——响应中已包含所有值。 productsArray of objects 商品信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | integer <uint64> 用于选择下一批数据的指针。 |
+| `has_next` | boolean 响应中仅返回了部分值的标志： true——请使用新的cursor参数重复请求，以获取其余值； false——响应中已包含所有值。 |
+| `products` | Array of objects 商品信息。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
+```text
+cursor
+```
+
+### 示例 2
+
+```text
+false
+```
+
+### 示例 3
+
 ```json
 {"action_id": 0,"cursor": 0,"limit": 100}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"cursor": 0,"has_next": true,"products": [{"action_price": 0,"base_price": 0,"currency": "string","discount_percent": 0,"is_active": true,"min_seller_price": 0,"name": "string","offer_id": "string","price": 0,"product_id": 0,"quant_size": 0,"quant_type": "UNSPECIFIED","sku": ["string"]}]}

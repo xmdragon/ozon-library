@@ -22,15 +22,28 @@
 
 ### 表格 0
 
-barcodes required Array of objects <= 100 items 条形码与商品的列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `barcodes` required | Array of objects <= 100 items 条形码与商品的列表。 |
 
 ### 表格 1
 
-errorsArray of objects 错误列表。 Array ()codestring 错误代码。 errorstring 错误描述。 barcodestring 未能绑定的条形码。 skuinteger <int64> 未能绑定条形码的商品标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `errors` | Array of objects 错误列表。 |
+| `code` | string 错误代码。 |
+| `error` | string 错误描述。 |
+| `barcode` | string 未能绑定的条形码。 |
+| `sku` | integer <int64> 未能绑定条形码的商品标识符。 |
 
 ### 表格 2
 
-codestring 错误代码。 errorstring 错误描述。 barcodestring 未能绑定的条形码。 skuinteger <int64> 未能绑定条形码的商品标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 错误代码。 |
+| `error` | string 错误描述。 |
+| `barcode` | string 未能绑定的条形码。 |
+| `sku` | integer <int64> 未能绑定条形码的商品标识符。 |
 
 ## 示例
 

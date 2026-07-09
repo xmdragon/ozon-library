@@ -21,7 +21,10 @@
 
 ### 表格 0
 
-cancellation_id required integer <int64> 取消申请标识符。 commentstring 备注。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cancellation_id` required | integer <int64> 取消申请标识符。 |
+| `comment` | string 备注。 |
 
 ## 示例
 
@@ -33,11 +36,17 @@ ON_APPROVAL
 
 ### 示例 1
 
+```text
+comment
+```
+
+### 示例 2
+
 ```json
 {"cancellation_id": 0,"comment": "string"}
 ```
 
-### 示例 2
+### 示例 3
 
 ```json
 {"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}

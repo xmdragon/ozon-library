@@ -21,11 +21,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-available_schemasArray of strings Default: "UNKNOWN"Items Enum: "UNKNOWN" "FBO" "FBS" 可用模式类型： UNKNOWN——未指定； FBO——从Ozon仓库配送； FBS——从自有仓库配送。 ozon_logistics_enabledboolean true，表示Ozon配送已开通。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `available_schemas` | Array of strings Default: "UNKNOWN"Items Enum: "UNKNOWN" "FBO" "FBS" 可用模式类型： UNKNOWN——未指定； FBO——从Ozon仓库配送； FBS——从自有仓库配送。 |
+| `ozon_logistics_enabled` | boolean true，表示Ozon配送已开通。 |
 
 ## 示例
 
@@ -48,6 +54,12 @@ FBS
 ```
 
 ### 示例 3
+
+```text
+true
+```
+
+### 示例 4
 
 ```json
 {"available_schemas": ["UNKNOWN"],"ozon_logistics_enabled": true}

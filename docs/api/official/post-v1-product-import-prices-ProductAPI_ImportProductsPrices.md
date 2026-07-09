@@ -23,29 +23,81 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-pricesArray of objects <= 1000 items 商品价格信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `prices` | Array of objects <= 1000 items 商品价格信息。 |
 
 ### 表格 2
 
-resultArray of objects 搜索结果。 Array ()errorsArray of objects 在搜索处理过程中发生的数组错误。 offer_idstring 卖家系统中的商品编号是 — 商品代码。 product_idinteger <int64> Ozon系统中商品的标识符 — product_id。 updatedboolean 如果商品信息已被成功更新 — true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 搜索结果。 |
+| `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
+| `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `updated` | boolean 如果商品信息已被成功更新 — true。 |
 
 ### 表格 3
 
-errorsArray of objects 在搜索处理过程中发生的数组错误。 offer_idstring 卖家系统中的商品编号是 — 商品代码。 product_idinteger <int64> Ozon系统中商品的标识符 — product_id。 updatedboolean 如果商品信息已被成功更新 — true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
+| `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `updated` | boolean 如果商品信息已被成功更新 — true。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+old_price
+```
+
+### 示例 1
+
+```text
+offer_id
+```
+
+### 示例 2
+
+```text
+product_id
+```
+
+### 示例 3
+
+```text
+offer_id
+```
+
+### 示例 4
+
+```text
+product_id
+```
+
+### 示例 5
+
+```text
+true
+```
+
+### 示例 6
+
 ```json
 {"prices": [{"auto_action_enabled": "UNKNOWN","currency_code": "RUB","manage_elastic_boosting_through_price": true,"min_price": "800","min_price_for_auto_actions_enabled": true,"net_price": "650","offer_id": "","old_price": "0","price": "1448","price_strategy_enabled": "UNKNOWN","product_id": 1386,"vat": "0.1"}]}
 ```
 
-### 示例 1
+### 示例 7
 
 ```json
 {"result": [{"product_id": 1386,"offer_id": "PH8865","updated": true,"errors": [ ]}]}

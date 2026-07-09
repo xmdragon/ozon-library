@@ -23,25 +23,64 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required string 发货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 发货号。 |
 
 ### 表格 2
 
-posting_numberstring 发货号。 productsArray of objects 商品清单。 statusstring 所有样件和备货可用性的验证状态： ship_available——可以备货， ship_not_available——无法备货， validation_in_process——样件正在验证中， update_available——可以编辑商品实例信息， update_not_available——无法编辑商品实例信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` | string 发货号。 |
+| `products` | Array of objects 商品清单。 |
+| `status` | string 所有样件和备货可用性的验证状态： ship_available——可以备货， ship_not_available——无法备货， validation_in_process——样件正在验证中， update_available——可以编辑商品实例信息， update_not_available——无法编辑商品实例信息。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+ship_available
+```
+
+### 示例 1
+
+```text
+ship_not_available
+```
+
+### 示例 2
+
+```text
+validation_in_process
+```
+
+### 示例 3
+
+```text
+update_available
+```
+
+### 示例 4
+
+```text
+update_not_available
+```
+
+### 示例 5
+
 ```json
 {"posting_number": "string"}
 ```
 
-### 示例 1
+### 示例 6
 
 ```json
 {"posting_number": "string","products": [{"exemplars": [{"exemplar_id": 0,"gtd": "string","gtd_check_status": "string","gtd_error_codes": ["string"],"is_gtd_absent": true,"is_rnpt_absent": true,"marks": [{"check_status": "string","error_codes": ["string"],"mark": "string","mark_type": "string"}],"rnpt": "string","rnpt_check_status": "string","rnpt_error_codes": ["string"]}],"product_id": 0}],"status": "string"}

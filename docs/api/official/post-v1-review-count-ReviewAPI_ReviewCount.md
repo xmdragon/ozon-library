@@ -22,7 +22,11 @@
 
 ### 表格 0
 
-processedinteger <int32> 已处理评价的数量。 totalinteger <int32> 评价的总数量。 unprocessedinteger <int32> 未处理评价的数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `processed` | integer <int32> 已处理评价的数量。 |
+| `total` | integer <int32> 评价的总数量。 |
+| `unprocessed` | integer <int32> 未处理评价的数量。 |
 
 ## 示例
 

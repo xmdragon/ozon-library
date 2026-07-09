@@ -23,35 +23,85 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-languagestring Default: "DEFAULT" Enum: "DEFAULT" "RU" "EN" "TR" "ZH_HANS" 回复语言： EN — 英语， RU — 俄语， TR — 土耳其语， ZH_HANS — 中文。 默认情况下，使用俄语。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `language` | string Default: "DEFAULT" Enum: "DEFAULT" "RU" "EN" "TR" "ZH_HANS" 回复语言： EN — 英语， RU — 俄语， TR — 土耳其语， ZH_HANS — 中文。 默认情况下，使用俄语。 |
 
 ### 表格 2
 
-resultArray of objects 类别清单。 Array ()description_category_idinteger <int64> 类别ID。 category_namestring 类别名称。 childrenArray of objects 子类别树形图。 disabledboolean 如果无法在类别中创建商品，则为true。 如果可能，为false。 type_idinteger <int64> 商品类型ID。 type_namestring 商品类型名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 类别清单。 |
+| `description_category_id` | integer <int64> 类别ID。 |
+| `category_name` | string 类别名称。 |
+| `children` | Array of objects 子类别树形图。 |
+| `disabled` | boolean 如果无法在类别中创建商品，则为true。 如果可能，为false。 |
+| `type_id` | integer <int64> 商品类型ID。 |
+| `type_name` | string 商品类型名称。 |
 
 ### 表格 3
 
-description_category_idinteger <int64> 类别ID。 category_namestring 类别名称。 childrenArray of objects 子类别树形图。 disabledboolean 如果无法在类别中创建商品，则为true。 如果可能，为false。 type_idinteger <int64> 商品类型ID。 type_namestring 商品类型名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `description_category_id` | integer <int64> 类别ID。 |
+| `category_name` | string 类别名称。 |
+| `children` | Array of objects 子类别树形图。 |
+| `disabled` | boolean 如果无法在类别中创建商品，则为true。 如果可能，为false。 |
+| `type_id` | integer <int64> 商品类型ID。 |
+| `type_name` | string 商品类型名称。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-ZH_HANS
+EN
 ```
 
 ### 示例 1
+
+```text
+RU
+```
+
+### 示例 2
+
+```text
+TR
+```
+
+### 示例 3
+
+```text
+ZH_HANS
+```
+
+### 示例 4
+
+```text
+true
+```
+
+### 示例 5
+
+```text
+false
+```
+
+### 示例 6
 
 ```json
 {"language": "DEFAULT"}
 ```
 
-### 示例 2
+### 示例 7
 
 ```json
 {"result": [{"description_category_id": 0,"category_name": "string","disabled": false,"children": [{"description_category_id": 0,"category_name": "string","disabled": false,"children": [{"type_name": "sting","type_id": 0,"disabled": false,"children": [ ]}]}]}]}

@@ -23,25 +23,38 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required Array of strings 货运ID。一次请求中的最大数量——100。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | Array of strings 货运ID。一次请求中的最大数量——100。 |
 
 ### 表格 2
 
-resultboolean 处理请求的结果。 如果请求执行时无误，则为“true”。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | boolean 处理请求的结果。 如果请求执行时无误，则为“true”。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+awaiting_deliver
+```
+
+### 示例 1
+
 ```json
 {"posting_number": ["33920143-1195-1"]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": true}

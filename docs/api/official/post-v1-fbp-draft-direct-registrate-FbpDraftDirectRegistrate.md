@@ -23,25 +23,41 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-row_version required integer <int64> 草稿的当前版本标识符。 supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `row_version` required | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 2
 
-errorobject 错误。 is_errorboolean true，前提是有错误。 row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | object 错误。 |
+| `is_error` | boolean true，前提是有错误。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"row_version": 0,"supply_id": "string"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"error": {"bundle_errors": [{"errors": "BUNDLE_ITEM_ERROR_UNSPECIFIED","sku": 0}],"order_error": "ORDER_ERROR_TYPE_UNSPECIFIED"},"is_error": true,"row_version": 0}

@@ -23,47 +23,69 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-skus required Array of strings <int64> <= 5000 items 需要返回内容评级的商品SKU列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `skus` required | Array of strings <int64> <= 5000 items 需要返回内容评级的商品SKU列表。 |
 
 ### 表格 2
 
-stairwaysArray of objects 单个商品的按数量折扣信息。 Array ()enabledboolean true，表示数量折扣已启用。 skuinteger <int64> Ozon系统中的商品标识符——SKU。 stairwayobject 按数量折扣等级信息。 statusstring Enum: "IN_PROCESS" "ERROR" "SUCCESS" 按数量折扣变更状态。可能的取值： ERROR——修改折扣时出错。请再次调用方法 /v1/product/stairway-discount/by-quantity/set。 IN_PROCESS——修正正在处理中。 SUCCESS——折扣修改已成功应用到商品。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `stairways` | Array of objects 单个商品的按数量折扣信息。 |
+| `enabled` | boolean true，表示数量折扣已启用。 |
+| `sku` | integer <int64> Ozon系统中的商品标识符——SKU。 |
+| `stairway` | object 按数量折扣等级信息。 |
+| `status` | string Enum: "IN_PROCESS" "ERROR" "SUCCESS" 按数量折扣变更状态。可能的取值： ERROR——修改折扣时出错。请再次调用方法 /v1/product/stairway-discount/by-quantity/set。 IN_PROCESS——修正正在处理中。 SUCCESS——折扣修改已成功应用到商品。 |
 
 ### 表格 3
 
-enabledboolean true，表示数量折扣已启用。 skuinteger <int64> Ozon系统中的商品标识符——SKU。 stairwayobject 按数量折扣等级信息。 statusstring Enum: "IN_PROCESS" "ERROR" "SUCCESS" 按数量折扣变更状态。可能的取值： ERROR——修改折扣时出错。请再次调用方法 /v1/product/stairway-discount/by-quantity/set。 IN_PROCESS——修正正在处理中。 SUCCESS——折扣修改已成功应用到商品。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `enabled` | boolean true，表示数量折扣已启用。 |
+| `sku` | integer <int64> Ozon系统中的商品标识符——SKU。 |
+| `stairway` | object 按数量折扣等级信息。 |
+| `status` | string Enum: "IN_PROCESS" "ERROR" "SUCCESS" 按数量折扣变更状态。可能的取值： ERROR——修改折扣时出错。请再次调用方法 /v1/product/stairway-discount/by-quantity/set。 IN_PROCESS——修正正在处理中。 SUCCESS——折扣修改已成功应用到商品。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-ERROR
+true
 ```
 
 ### 示例 1
 
 ```text
-IN_PROCESS
+ERROR
 ```
 
 ### 示例 2
 
 ```text
-SUCCESS
+IN_PROCESS
 ```
 
 ### 示例 3
+
+```text
+SUCCESS
+```
+
+### 示例 4
 
 ```json
 {"skus": ["string"]}
 ```
 
-### 示例 4
+### 示例 5
 
 ```json
 {"stairways": [{"enabled": true,"sku": 0,"stairway": {"steps": [{"discount": 0,"quantity": 0,"step": 0}]},"status": "IN_PROCESS"}]}

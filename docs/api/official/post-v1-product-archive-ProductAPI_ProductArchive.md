@@ -23,25 +23,44 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_id required Array of integers <int64> Ozon系统中商品的标识符 — product_id。您一次最多可以传递100个标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` required | Array of integers <int64> Ozon系统中商品的标识符 — product_id。您一次最多可以传递100个标识符。 |
 
 ### 表格 2
 
-resultboolean 查询的处理结果。true，如果查询的执行无误。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | boolean 查询的处理结果。true，如果查询的执行无误。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
 ```json
 {"product_id": ["125529926","987654321"]}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"result": true}

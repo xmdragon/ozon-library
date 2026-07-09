@@ -23,19 +23,33 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-page required integer <int32> 页数。 page_size required integer <int32> 每页的值的数量： 默认值 — 100， 最大值 — 1,000。 report_typestring Default: "ALL" 报告类型： ALL— 所有报告， SELLER_PRODUCTS — 商品报告， SELLER_STOCK — 商品库存报告， SELLER_RETURNS — 退货报告， SELLER_POSTINGS — 发货报告， SELLER_DISCOUNTED — 减价商品报告， MUTUAL_SETTLEMENT — 结算报告， DOCUMENT_B2B_SALES — 面向法人客户的销售报告， COMPENSATION_REPORT — 赔偿报告， DECOMPENSATION_REPORT — 赔偿返还报告， MARKED_PRODUCTS_SALES — 标签销售报告， SELLER_PLACEMENT_BY_PRODUCTS — 按商品维度的存储服务费用报告， SELLER_PLACEMENT_BY_SUPPLIES — 按交货维度的存储服务费用报告。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `page` required | integer <int32> 页数。 |
+| `page_size` required | integer <int32> 每页的值的数量： 默认值 — 100， 最大值 — 1,000。 |
+| `report_type` | string Default: "ALL" 报告类型： ALL— 所有报告， SELLER_PRODUCTS — 商品报告， SELLER_STOCK — 商品库存报告， SELLER_RETURNS — 退货报告， SELLER_POSTINGS — 发货报告， SELLER_DISCOUNTED — 减价商品报告， MUTUAL_SETTLEMENT — 结算报告， DOCUMENT_B2B_SALES — 面向法人客户的销售报告， COMPENSATION_REPORT — 赔偿报告， DECOMPENSATION_REPORT — 赔偿返还报告， MARKED_PRODUCTS_SALES — 标签销售报告， SELLER_PLACEMENT_BY_PRODUCTS — 按商品维度的存储服务费用报告， SELLER_PLACEMENT_BY_SUPPLIES — 按交货维度的存储服务费用报告。 |
 
 ### 表格 2
 
-resultobject 请求结果。 reportsArray of objects 包含所有生成的报告的数组。 totalinteger <int32> 累计报告数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `reports` | Array of objects 包含所有生成的报告的数组。 |
+| `total` | integer <int32> 累计报告数。 |
 
 ### 表格 3
 
-reportsArray of objects 包含所有生成的报告的数组。 totalinteger <int32> 累计报告数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `reports` | Array of objects 包含所有生成的报告的数组。 |
+| `total` | integer <int32> 累计报告数。 |
 
 ## 示例
 

@@ -22,33 +22,47 @@
 
 ### 表格 0
 
-limit required integer <int32> 限制回复中的值数量。 最少 — 20；最多 — 100。 offsetinteger <int32> 从列表开头跳过的元素数量：例如，如果 offset = 10，那么回复将从找到的第11个元素开始。 review_id required string 评价标识符。 sort_dirstring Default: "ASC" Enum: "ASC" "DESC" 排序方向： ASC — 按升序。 DESC — 按降序。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `limit` required | integer <int32> 限制回复中的值数量。 最少 — 20；最多 — 100。 |
+| `offset` | integer <int32> 从列表开头跳过的元素数量：例如，如果 offset = 10，那么回复将从找到的第11个元素开始。 |
+| `review_id` required | string 评价标识符。 |
+| `sort_dir` | string Default: "ASC" Enum: "ASC" "DESC" 排序方向： ASC — 按升序。 DESC — 按降序。 |
 
 ### 表格 1
 
-commentsArray of objects 评论信息。 offsetinteger <int32> 搜索结果中的元素数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `comments` | Array of objects 评论信息。 |
+| `offset` | integer <int32> 搜索结果中的元素数量。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-ASC
+offset = 10
 ```
 
 ### 示例 1
 
 ```text
-DESC
+ASC
 ```
 
 ### 示例 2
+
+```text
+DESC
+```
+
+### 示例 3
 
 ```json
 {"limit": 100,"offset": 0,"review_id": "0187310a-97d9-dfcf-3039-82d809f0e233","sort_dir": "ASC"}
 ```
 
-### 示例 3
+### 示例 4
 
 ```json
 {"comments": [{"id": "string","is_official": true,"is_owner": true,"parent_comment_id": "string","published_at": "2019-08-24T14:15:22Z","text": "string"}],"offset": 0}

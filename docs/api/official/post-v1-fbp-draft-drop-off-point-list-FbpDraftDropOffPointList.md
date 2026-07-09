@@ -23,19 +23,40 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-next_page_numberinteger <int32> 下一页页码。 page_size required integer <int32> 每页包含的商品数量。 province_uuid required string 省份唯一标识符。 warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `next_page_number` | integer <int32> 下一页页码。 |
+| `page_size` required | integer <int32> 每页包含的商品数量。 |
+| `province_uuid` required | string 省份唯一标识符。 |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 2
 
-drop_off_pointsArray of objects 接收点列表。 Array ()citystring 城市。 drop_off_point_idinteger <int64> 揽收点标识符。 nearest_drop_off_datestring <date-time> 最近的发运日期。 point_addressstring 接收点地址。 province_uuidstring 省份唯一标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `drop_off_points` | Array of objects 接收点列表。 |
+| `city` | string 城市。 |
+| `drop_off_point_id` | integer <int64> 揽收点标识符。 |
+| `nearest_drop_off_date` | string <date-time> 最近的发运日期。 |
+| `point_address` | string 接收点地址。 |
+| `province_uuid` | string 省份唯一标识符。 |
 
 ### 表格 3
 
-citystring 城市。 drop_off_point_idinteger <int64> 揽收点标识符。 nearest_drop_off_datestring <date-time> 最近的发运日期。 point_addressstring 接收点地址。 province_uuidstring 省份唯一标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `city` | string 城市。 |
+| `drop_off_point_id` | integer <int64> 揽收点标识符。 |
+| `nearest_drop_off_date` | string <date-time> 最近的发运日期。 |
+| `point_address` | string 接收点地址。 |
+| `province_uuid` | string 省份唯一标识符。 |
 
 ## 示例
 

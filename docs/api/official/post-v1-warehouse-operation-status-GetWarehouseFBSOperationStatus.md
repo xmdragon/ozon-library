@@ -23,19 +23,32 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-operation_id required string 操作ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `operation_id` required | string 操作ID。 |
 
 ### 表格 2
 
-errorobject 处理操作时出错。 resultobject 操作结果。 entity_idinteger <int64> 正在处理的实体ID。如果操作为 CREATE_FBS_WAREHOUSE，则返回仓库ID。 statusstring Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "IN_PROGRESS" "SUCCESS" "ERROR" 操作状态： UNSPECIFIED — 未定义； IN_PROGRESS — 进行中； SUCCESS — 已完成； ERROR — 出错结束。 typestring Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "CREATE_FBS_WAREHOUSE" "UPDATE_FBS_WAREHOUSE" "SET_FIRST_MILE" "WAREHOUSE_ENABLE_DISABLE" 操作类型： UNSPECIFIED — 未定义； CREATE_FBS_WAREHOUSE — 创建FBS仓库； UPDATE_FBS_WAREHOUSE — 更新FBS仓库； SET_FIRST_MILE — 设置头程物流； WAREHOUSE_ENABLE_DISABLE — 归档或取消归档FBS仓库。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | object 处理操作时出错。 |
+| `result` | object 操作结果。 |
+| `entity_id` | integer <int64> 正在处理的实体ID。如果操作为 CREATE_FBS_WAREHOUSE，则返回仓库ID。 |
+| `status` | string Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "IN_PROGRESS" "SUCCESS" "ERROR" 操作状态： UNSPECIFIED — 未定义； IN_PROGRESS — 进行中； SUCCESS — 已完成； ERROR — 出错结束。 |
+| `type` | string Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "CREATE_FBS_WAREHOUSE" "UPDATE_FBS_WAREHOUSE" "SET_FIRST_MILE" "WAREHOUSE_ENABLE_DISABLE" 操作类型： UNSPECIFIED — 未定义； CREATE_FBS_WAREHOUSE — 创建FBS仓库； UPDATE_FBS_WAREHOUSE — 更新FBS仓库； SET_FIRST_MILE — 设置头程物流； WAREHOUSE_ENABLE_DISABLE — 归档或取消归档FBS仓库。 |
 
 ### 表格 3
 
-entity_idinteger <int64> 正在处理的实体ID。如果操作为 CREATE_FBS_WAREHOUSE，则返回仓库ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `entity_id` | integer <int64> 正在处理的实体ID。如果操作为 CREATE_FBS_WAREHOUSE，则返回仓库ID。 |
 
 ## 示例
 

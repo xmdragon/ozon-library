@@ -23,35 +23,120 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-color_imagestring 市场营销色彩。 imagesArray of strings 数组图片链接。 最多30件。 数组中的图像是按照它们在网站上出现的顺序排列的。 数组中的第一个图像将是主图像。 images360Array of strings 360图片的数组。多达70张图片。 格式：公共云存储中的图像链接地址。链接图片的格式是JPG。 product_id required integer <int64> Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `color_image` | string 市场营销色彩。 |
+| `images` | Array of strings 数组图片链接。 最多30件。 数组中的图像是按照它们在网站上出现的顺序排列的。 数组中的第一个图像将是主图像。 |
+| `images360` | Array of strings 360图片的数组。多达70张图片。 格式：公共云存储中的图像链接地址。链接图片的格式是JPG。 |
+| `product_id` required | integer <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 2
 
-resultobject 该方法的结果。 picturesArray of objects
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 该方法的结果。 |
+| `pictures` | Array of objects |
 
 ### 表格 3
 
-picturesArray of objects
+| 字段 | 类型/说明 |
+| --- | --- |
+| `pictures` | Array of objects |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-429
+images
 ```
 
 ### 示例 1
+
+```text
+images360
+```
+
+### 示例 2
+
+```text
+color_image
+```
+
+### 示例 3
+
+```text
+images
+```
+
+### 示例 4
+
+```text
+images360
+```
+
+### 示例 5
+
+```text
+color_image
+```
+
+### 示例 6
+
+```text
+result.items.status
+```
+
+### 示例 7
+
+```text
+skipped
+```
+
+### 示例 8
+
+```text
+429
+```
+
+### 示例 9
+
+```text
+message
+```
+
+### 示例 10
+
+```text
+Item-Retry-After
+```
+
+### 示例 11
+
+```text
+Item-Rate-Limit-Remaining
+```
+
+### 示例 12
+
+```text
+product_id
+```
+
+### 示例 13
 
 ```json
 {"color_image": "https://example.com/cloud-storage/color/marketing-color-red.jpg","images": ["https://example.com/cloud-storage/images/main-image-front.jpg","https://example.com/cloud-storage/images/secondary-image-side.jpg","https://example.com/cloud-storage/images/secondary-image-back.jpg","https://example.com/cloud-storage/images/secondary-image-detail1.jpg","https://example.com/cloud-storage/images/secondary-image-detail2.jpg"],"images360": ["https://example.com/cloud-storage/images360/360-view-001.jpg","https://example.com/cloud-storage/images360/360-view-002.jpg","https://example.com/cloud-storage/images360/360-view-003.jpg","https://example.com/cloud-storage/images360/360-view-004.jpg","https://example.com/cloud-storage/images360/360-view-005.jpg"],"product_id": 123456789}
 ```
 
-### 示例 2
+### 示例 14
 
 ```json
 {"result": {"pictures": [{"is_360": true,"is_color": true,"is_primary": true,"product_id": 123456789,"state": "uploaded","url": "https://example.com/cloud-storage/images360/360-view-001.jpg"}]}}

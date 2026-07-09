@@ -47,10 +47,89 @@ class GenerateOfficialApiDocsTest(unittest.TestCase):
         self.assertIn("# 商品列表", doc)
         self.assertIn("`POST /v3/product/list`", doc)
         self.assertIn("`ProductAPI_GetProductList`", doc)
-        self.assertIn("Client-Id required string 用户识别号。 Api-Key required string API-密钥。", doc)
-        self.assertIn("filter object 过滤器。 limit integer 每页数量。", doc)
+        self.assertIn("- `Client-Id` required string - 用户识别号。", doc)
+        self.assertIn("- `Api-Key` required string - API-密钥。", doc)
+        self.assertIn("- `filter` object - 过滤器。", doc)
+        self.assertIn("- `limit` integer - 每页数量。", doc)
         self.assertIn('```json\n{"filter": {"visibility": "ALL"}, "limit": 10}\n```', doc)
         self.assertIn("https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList", doc)
+
+    def test_render_operation_doc_splits_collapsed_schema_fields(self):
+        operation = sample_operation()
+        operation["tables"] = [
+            {
+                "index": 0,
+                "text": (
+                    "resultArray of objects 请求结果。 Array ()idnumber 活动识别号。 "
+                    "titlestring 活动名称。 action_typestring 活动类型。 "
+                    "is_participatingboolean 无论你是否参加这项活动。"
+                ),
+            }
+        ]
+
+        doc = render_operation_doc(operation)
+
+        self.assertIn("- `result` Array of objects - 请求结果。", doc)
+        self.assertIn("- `id` number - 活动识别号。", doc)
+        self.assertIn("- `title` string - 活动名称。", doc)
+        self.assertIn("- `action_type` string - 活动类型。", doc)
+        self.assertIn("- `is_participating` boolean - 无论你是否参加这项活动。", doc)
+        self.assertNotIn("resultArray of objects 请求结果。 Array ()idnumber", doc)
+        self.assertNotIn("Array ()", doc)
+
+    def test_render_operation_doc_splits_required_schema_fields(self):
+        operation = sample_operation()
+        operation["tables"] = [
+            {
+                "index": 0,
+                "text": (
+                    "date_end required string <date-time> 促销活动结束日期与时间。 "
+                    "date_start required string <date-time> 促销活动开始日期与时间。 "
+                    "min_action_percent required number <double> 最低折扣百分比。 "
+                    "titlestring [ 1 .. 256 ] characters 促销活动名称。"
+                ),
+            }
+        ]
+
+        doc = render_operation_doc(operation)
+
+        self.assertIn("- `date_end` required string <date-time> - 促销活动结束日期与时间。", doc)
+        self.assertIn("- `date_start` required string <date-time> - 促销活动开始日期与时间。", doc)
+        self.assertIn("- `min_action_percent` required number <double> - 最低折扣百分比。", doc)
+        self.assertIn("- `title` string - [ 1 .. 256 ] characters 促销活动名称。", doc)
+        self.assertNotIn("titlestring", doc)
+
+    def test_render_operation_doc_prefers_structured_table_rows(self):
+        operation = sample_operation()
+        operation["tables"] = [
+            {
+                "index": 0,
+                "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。",
+                "rows": [
+                    ["Client-Id required", "string 用户识别号。"],
+                    ["Api-Key required", "string API-密钥。"],
+                ],
+            },
+            {
+                "index": 1,
+                "text": "resultArray of objects 请求结果。 Array ()idnumber 活动识别号。",
+                "rows": [
+                    ["result", "Array of objects 请求结果。"],
+                    ["Array ()idnumber <double> 活动识别号。 titlestring 活动名称。"],
+                    ["id", "number <double> 活动识别号。"],
+                ],
+            },
+        ]
+
+        doc = render_operation_doc(operation)
+
+        self.assertIn("| 字段 | 类型/说明 |", doc)
+        self.assertIn("| `Client-Id` required | string 用户识别号。 |", doc)
+        self.assertIn("| `Api-Key` required | string API-密钥。 |", doc)
+        self.assertIn("| `result` | Array of objects 请求结果。 |", doc)
+        self.assertIn("| `id` | number <double> 活动识别号。 |", doc)
+        self.assertNotIn("resultArray of objects", doc)
+        self.assertNotIn("Array ()idnumber", doc)
 
     def test_generate_docs_writes_readme_and_one_file_per_operation(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -22,15 +22,26 @@
 
 ### 表格 0
 
-tasks required Array of objects 申请列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `tasks` required | Array of objects 申请列表。 |
 
 ### 表格 1
 
-resultobject 方法操作结果。 fail_detailsArray of objects 创建申请时的错误。 success_countinteger <int32> 状态更改成功的申请数量。 fail_countinteger <int32> 未能更改状态的申请数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法操作结果。 |
+| `fail_details` | Array of objects 创建申请时的错误。 |
+| `success_count` | integer <int32> 状态更改成功的申请数量。 |
+| `fail_count` | integer <int32> 未能更改状态的申请数量。 |
 
 ### 表格 2
 
-fail_detailsArray of objects 创建申请时的错误。 success_countinteger <int32> 状态更改成功的申请数量。 fail_countinteger <int32> 未能更改状态的申请数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `fail_details` | Array of objects 创建申请时的错误。 |
+| `success_count` | integer <int32> 状态更改成功的申请数量。 |
+| `fail_count` | integer <int32> 未能更改状态的申请数量。 |
 
 ## 示例
 

@@ -23,19 +23,31 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-itemsArray of objects <= 1000 items 商品信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects <= 1000 items 商品信息。 |
 
 ### 表格 2
 
-resultobject task_idinteger <int64> 进口货物任务代码。 unmatched_sku_listArray of integers <int64> 商品Id列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object |
+| `task_id` | integer <int64> 进口货物任务代码。 |
+| `unmatched_sku_list` | Array of integers <int64> 商品Id列表。 |
 
 ### 表格 3
 
-task_idinteger <int64> 进口货物任务代码。 unmatched_sku_listArray of integers <int64> 商品Id列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `task_id` | integer <int64> 进口货物任务代码。 |
+| `unmatched_sku_list` | Array of integers <int64> 商品Id列表。 |
 
 ## 示例
 
@@ -47,11 +59,29 @@ task_idinteger <int64> 进口货物任务代码。 unmatched_sku_listArray of in
 
 ### 示例 1
 
+```text
+message
+```
+
+### 示例 2
+
+```text
+Item-Retry-After
+```
+
+### 示例 3
+
+```text
+Item-Rate-Limit-Remaining
+```
+
+### 示例 4
+
 ```json
 {"items": [{"sku": 298789742,"name": "杯子","offer_id": "91132","currency_code": "RUB","old_price": "2590","price": "2300","vat": "0.1"}]}
 ```
 
-### 示例 2
+### 示例 5
 
 ```json
 {"result": {"task_id": 176594213,"unmatched_sku_list": [ ]}}

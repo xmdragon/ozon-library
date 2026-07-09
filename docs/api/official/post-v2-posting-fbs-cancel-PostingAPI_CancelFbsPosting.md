@@ -23,67 +23,94 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cancel_reason_id required integer <int64> 取消运输的原因ID。 cancel_reason_messagestring 关于取消的附加信息。如果cancel_reason_id = 402，参数是必须的。 posting_number required string 货件ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cancel_reason_id` required | integer <int64> 取消运输的原因ID。 |
+| `cancel_reason_message` | string 关于取消的附加信息。如果cancel_reason_id = 402，参数是必须的。 |
+| `posting_number` required | string 货件ID。 |
 
 ### 表格 2
 
-resultboolean 处理请求的结果。 如果请求执行时无误，则为“true”。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | boolean 处理请求的结果。 如果请求执行时无误，则为“true”。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-352
+cancelled
 ```
 
 ### 示例 1
 
 ```text
-400
+cancel_reason_id
 ```
 
 ### 示例 2
 
 ```text
-401
+352
 ```
 
 ### 示例 3
 
 ```text
-402
+400
 ```
 
 ### 示例 4
 
 ```text
-665
+401
 ```
 
 ### 示例 5
 
 ```text
-666
+402
 ```
 
 ### 示例 6
 
 ```text
-667
+665
 ```
 
 ### 示例 7
+
+```text
+666
+```
+
+### 示例 8
+
+```text
+667
+```
+
+### 示例 9
+
+```text
+cancel_reason_id = 402
+```
+
+### 示例 10
 
 ```json
 {"cancel_reason_id": 352,"cancel_reason_message": "Product is out of stock","posting_number": "33920113-1231-1"}
 ```
 
-### 示例 8
+### 示例 11
 
 ```json
 {"result": true}

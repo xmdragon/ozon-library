@@ -23,29 +23,52 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-languagestring Default: "DEFAULT" 回答所用语言： RU — 俄语， EN — 英语。 warehouseId required Array of strings <int64> <= 50 characters 仓库ID。 请求中参数值的限制。 最大值为 50。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `language` | string Default: "DEFAULT" 回答所用语言： RU — 俄语， EN — 英语。 |
+| `warehouseId` required | Array of strings <int64> <= 50 characters 仓库ID。 请求中参数值的限制。 最大值为 50。 |
 
 ### 表格 2
 
-resultobject 请求结果。 codestring 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ### 表格 3
 
-codestring 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+RU
+```
+
+### 示例 1
+
+```text
+EN
+```
+
+### 示例 2
+
 ```json
 {"language": "DEFAULT","warehouseId": ["1020002425123000"]}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"}

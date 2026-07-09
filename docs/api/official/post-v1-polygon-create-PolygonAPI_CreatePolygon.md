@@ -23,15 +23,22 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-coordinates required string 快递设施的坐标，格式为 [[[lat long]]]。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `coordinates` required | string 快递设施的坐标，格式为 [[[lat long]]]。 |
 
 ### 表格 2
 
-polygon_idinteger <int64> 设施识别号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `polygon_id` | integer <int64> 设施识别号。 |
 
 ## 示例
 

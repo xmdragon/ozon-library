@@ -23,19 +23,31 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-skusArray of strings <int64> [ 1 .. 350 ] items Ozon系统中的商品标识符—— SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `skus` | Array of strings <int64> [ 1 .. 350 ] items Ozon系统中的商品标识符—— SKU。 |
 
 ### 表格 2
 
-itemsArray of objects 商品列表。 Array ()showcases_visibilitystring Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "OZON" "SELECT" "OZON_SELECT" "NONE" 商品展示在哪些橱窗中： UNSPECIFIED——未指定； OZON——仅在Ozon展示； SELECT——仅在Select展示； OZON_SELECT——在Select和Ozon展示； NONE——商品在所有橱窗均隐藏。 skuinteger <int64> 商品在Ozon系统中的标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects 商品列表。 |
+| `showcases_visibility` | string Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "OZON" "SELECT" "OZON_SELECT" "NONE" 商品展示在哪些橱窗中： UNSPECIFIED——未指定； OZON——仅在Ozon展示； SELECT——仅在Select展示； OZON_SELECT——在Select和Ozon展示； NONE——商品在所有橱窗均隐藏。 |
+| `sku` | integer <int64> 商品在Ozon系统中的标识符——SKU。 |
 
 ### 表格 3
 
-showcases_visibilitystring Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "OZON" "SELECT" "OZON_SELECT" "NONE" 商品展示在哪些橱窗中： UNSPECIFIED——未指定； OZON——仅在Ozon展示； SELECT——仅在Select展示； OZON_SELECT——在Select和Ozon展示； NONE——商品在所有橱窗均隐藏。 skuinteger <int64> 商品在Ozon系统中的标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `showcases_visibility` | string Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "OZON" "SELECT" "OZON_SELECT" "NONE" 商品展示在哪些橱窗中： UNSPECIFIED——未指定； OZON——仅在Ozon展示； SELECT——仅在Select展示； OZON_SELECT——在Select和Ozon展示； NONE——商品在所有橱窗均隐藏。 |
+| `sku` | integer <int64> 商品在Ozon系统中的标识符——SKU。 |
 
 ## 示例
 

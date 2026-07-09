@@ -23,25 +23,50 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_id required Array of integers <int64> Ozon系统中商品的标识符 — product_id。您一次最多可以传递100个标识符。 在一天内，您最多可以从档案中恢复100件自动归档的商品。 限额在莫斯科时间03：00更新。 手动归档的商品没有解除归档的限制。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` required | Array of integers <int64> Ozon系统中商品的标识符 — product_id。您一次最多可以传递100个标识符。 在一天内，您最多可以从档案中恢复100件自动归档的商品。 限额在莫斯科时间03：00更新。 手动归档的商品没有解除归档的限制。 |
 
 ### 表格 2
 
-resultboolean 查询的处理结果。true，如果查询的执行无误。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | boolean 查询的处理结果。true，如果查询的执行无误。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+autoarchive_restore_failed
+```
+
+### 示例 1
+
+```text
+product_id
+```
+
+### 示例 2
+
+```text
+true
+```
+
+### 示例 3
+
 ```json
 {"product_id": ["125529926","987654321"]}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"result": true}

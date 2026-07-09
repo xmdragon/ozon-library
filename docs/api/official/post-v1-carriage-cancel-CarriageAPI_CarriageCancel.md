@@ -23,15 +23,23 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-carriage_id required integer <int64> 发运识别符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `carriage_id` required | integer <int64> 发运识别符。 |
 
 ### 表格 2
 
-errorstring 错误描述。 carriage_statusstring 发运状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | string 错误描述。 |
+| `carriage_status` | string 发运状态。 |
 
 ## 示例
 

@@ -23,15 +23,28 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-action_idsArray of strings <uint64> <= 100 items 促销活动标识符列表。 action_typeArray of stringsItems Enum: "DISCOUNT" "VOUCHER_DISCOUNT" "DISCOUNT_WITH_CONDITION" "INSTALLMENT" "INDIVIDUAL_DISCOUNT_BY_PRODUCTS" "OZON_ACCOUNT_DISCOUNT" "MULTI_LEVEL_DISCOUNT_ON_AMOUNT" 促销活动机制： DISCOUNT——折扣； VOUCHER_DISCOUNT——促销码折扣； DISCOUNT_WITH_CONDITION——基于订单总额的折扣； INSTALLMENT——免息分期付款； INDIVIDUAL_DISCOUNT_BY_PRODUCTS——卖家积分； OZON_ACCOUNT_DISCOUNT——Ozon银行卡专享额外折扣； MULTI_LEVEL_DISCOUNT_ON_AMOUNT——多级满额折扣。 limit required integer <uint64> [ 1 .. 100 ] 每页显示的数量。 offsetinteger <uint64> 在响应中将被跳过的项目数量。例如，当offset = 10时，响应将从第11个找到的元素开始。 searchstring >= 3 characters 按促销活动名称搜索。 statusArray of stringsItems Enum: "ACTIVE" "ENDED" "PLANNED" "PAUSED" 促销活动状态： ACTIVE—— 活跃； ENDED——已结束； PLANNED——已计划； PAUSED——已暂停。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_ids` | Array of strings <uint64> <= 100 items 促销活动标识符列表。 |
+| `action_type` | Array of stringsItems Enum: "DISCOUNT" "VOUCHER_DISCOUNT" "DISCOUNT_WITH_CONDITION" "INSTALLMENT" "INDIVIDUAL_DISCOUNT_BY_PRODUCTS" "OZON_ACCOUNT_DISCOUNT" "MULTI_LEVEL_DISCOUNT_ON_AMOUNT" 促销活动机制： DISCOUNT——折扣； VOUCHER_DISCOUNT——促销码折扣； DISCOUNT_WITH_CONDITION——基于订单总额的折扣； INSTALLMENT——免息分期付款； INDIVIDUAL_DISCOUNT_BY_PRODUCTS——卖家积分； OZON_ACCOUNT_DISCOUNT——Ozon银行卡专享额外折扣； MULTI_LEVEL_DISCOUNT_ON_AMOUNT——多级满额折扣。 |
+| `limit` required | integer <uint64> [ 1 .. 100 ] 每页显示的数量。 |
+| `offset` | integer <uint64> 在响应中将被跳过的项目数量。例如，当offset = 10时，响应将从第11个找到的元素开始。 |
+| `search` | string >= 3 characters 按促销活动名称搜索。 |
+| `status` | Array of stringsItems Enum: "ACTIVE" "ENDED" "PLANNED" "PAUSED" 促销活动状态： ACTIVE—— 活跃； ENDED——已结束； PLANNED——已计划； PAUSED——已暂停。 |
 
 ### 表格 2
 
-actionsArray of objects 促销活动列表。 totalinteger <uint64> 促销活动总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `actions` | Array of objects 促销活动列表。 |
+| `total` | integer <uint64> 促销活动总数。 |
 
 ## 示例
 
@@ -80,34 +93,40 @@ MULTI_LEVEL_DISCOUNT_ON_AMOUNT
 ### 示例 7
 
 ```text
-ACTIVE
+offset = 10
 ```
 
 ### 示例 8
 
 ```text
-ENDED
+ACTIVE
 ```
 
 ### 示例 9
 
 ```text
-PLANNED
+ENDED
 ```
 
 ### 示例 10
 
 ```text
-PAUSED
+PLANNED
 ```
 
 ### 示例 11
+
+```text
+PAUSED
+```
+
+### 示例 12
 
 ```json
 {"action_ids": ["string"],"action_type": ["DISCOUNT"],"limit": 1,"offset": 0,"search": "string","status": ["ACTIVE"]}
 ```
 
-### 示例 12
+### 示例 13
 
 ```json
 {"actions": [{"action_id": 0,"action_parameters": {"addresses": ["string"],"auto_stop_action_reason": "UNSPECIFIED","budget": 0,"budget_spent": 0,"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","discount_levels": [{"discount_value": 0,"order_amount": 0}],"discount_type": "UNSPECIFIED","discount_value": 0,"is_legal_entities_segment": true,"min_action_percent": 0,"min_order_amount": 0,"picked_segments": [{"segments": [{"description": "string","id": 0,"name": "string","type": "UNSPECIFIED"}]}],"status": "ACTIVE","title": "string","type": "DISCOUNT","voucher_parameters": {"count_codes": 0,"is_private": true,"type": "UNSPECIFIED"},"warehouses": ["string"]},"allow_delete": true,"highlight_url": "string","is_editable": true,"is_participated": true,"is_turn_on": true,"sku_count": 0}],"total": 0}

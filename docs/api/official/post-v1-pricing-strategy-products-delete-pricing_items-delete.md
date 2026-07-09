@@ -23,19 +23,29 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_id required Array of strings <int64> 商品ID列表。最大数量 —— 50。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` required | Array of strings <int64> 商品ID列表。最大数量 —— 50。 |
 
 ### 表格 2
 
-resultobject 方法操作列表。 failed_product_countinteger <int32> 有错误的商品数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法操作列表。 |
+| `failed_product_count` | integer <int32> 有错误的商品数量。 |
 
 ### 表格 3
 
-failed_product_countinteger <int32> 有错误的商品数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `failed_product_count` | integer <int32> 有错误的商品数量。 |
 
 ## 示例
 

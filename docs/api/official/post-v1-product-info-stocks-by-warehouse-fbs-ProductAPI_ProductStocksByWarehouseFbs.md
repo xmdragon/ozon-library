@@ -23,29 +23,76 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-sku required Array of strings <int64> Ozon系统中的商品识别码是SKU。 offer_idArray of strings <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `sku` required | Array of strings <int64> Ozon系统中的商品识别码是SKU。 |
+| `offer_id` | Array of strings <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 2
 
-resultArray of objects 该处理方法的结果。 Array ()skuinteger <int64> Ozon系统中的商品识别码是SKU。 offer_idstring <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 presentinteger <int64> 库存商品总量。 product_idinteger <int64> 卖家系统中的Ozon系统中商品的标识符 — product_id。 reservedinteger <int64> 仓库中的保留商品的数量。 warehouse_idinteger <int64> 仓库编号。 warehouse_namestring 仓库名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 该处理方法的结果。 |
+| `sku` | integer <int64> Ozon系统中的商品识别码是SKU。 |
+| `offer_id` | string <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
+| `present` | integer <int64> 库存商品总量。 |
+| `product_id` | integer <int64> 卖家系统中的Ozon系统中商品的标识符 — product_id。 |
+| `reserved` | integer <int64> 仓库中的保留商品的数量。 |
+| `warehouse_id` | integer <int64> 仓库编号。 |
+| `warehouse_name` | string 仓库名称。 |
 
 ### 表格 3
 
-skuinteger <int64> Ozon系统中的商品识别码是SKU。 offer_idstring <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 presentinteger <int64> 库存商品总量。 product_idinteger <int64> 卖家系统中的Ozon系统中商品的标识符 — product_id。 reservedinteger <int64> 仓库中的保留商品的数量。 warehouse_idinteger <int64> 仓库编号。 warehouse_namestring 仓库名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `sku` | integer <int64> Ozon系统中的商品识别码是SKU。 |
+| `offer_id` | string <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
+| `present` | integer <int64> 库存商品总量。 |
+| `product_id` | integer <int64> 卖家系统中的Ozon系统中商品的标识符 — product_id。 |
+| `reserved` | integer <int64> 仓库中的保留商品的数量。 |
+| `warehouse_id` | integer <int64> 仓库编号。 |
+| `warehouse_name` | string 仓库名称。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+offer_id
+```
+
+### 示例 1
+
+```text
+sku
+```
+
+### 示例 2
+
+```text
+sku
+```
+
+### 示例 3
+
+```text
+product_id
+```
+
+### 示例 4
+
 ```json
 {"sku": ["string"],"offer_id": ["string"]}
 ```
 
-### 示例 1
+### 示例 5
 
 ```json
 {"result": [{"sku": 0,"offer_id": "string","present": 0,"product_id": 0,"reserved": 0,"warehouse_id": 0,"warehouse_name": "string"}]}

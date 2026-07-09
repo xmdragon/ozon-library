@@ -22,21 +22,35 @@
 
 ### 表格 0
 
-skus required Array of objects 商品标识符（SKU）列表。 warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `skus` required | Array of objects 商品标识符（SKU）列表。 |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 1
 
-approved_itemsArray of objects 已确认商品。 bundle_generatedboolean true，前提是已创建校验商品列表。 bundle_idstring 校验商品列表标识符。 rejected_itemsArray of objects 被拒绝的商品。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `approved_items` | Array of objects 已确认商品。 |
+| `bundle_generated` | boolean true，前提是已创建校验商品列表。 |
+| `bundle_id` | string 校验商品列表标识符。 |
+| `rejected_items` | Array of objects 被拒绝的商品。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"skus": [{"count": 0,"sku": 0}],"warehouse_id": 0}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"approved_items": [{"barcode": "string","icon_name": "string","name": "string","offer_id": "string","quantity": 0,"sku": 0,"volume": 0}],"bundle_generated": true,"bundle_id": "string","rejected_items": [{"barcode": "string","icon_name": "string","name": "string","offer_id": "string","quantity": 0,"rejection_reasons": ["BUNDLE_ITEM_ERROR_UNSPECIFIED"],"sku": 0,"volume": 0}]}

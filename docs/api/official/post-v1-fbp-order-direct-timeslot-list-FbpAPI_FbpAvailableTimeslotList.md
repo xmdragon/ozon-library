@@ -22,11 +22,19 @@
 
 ### 表格 0
 
-interval_end required string <date-time> 可用时间段所需区间的结束日期。 interval_start required string <date-time> 可用时间段所需区间的开始日期。 supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `interval_end` required | string <date-time> 可用时间段所需区间的结束日期。 |
+| `interval_start` required | string <date-time> 可用时间段所需区间的开始日期。 |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 1
 
-reasonsArray of stringsItems Enum: "EMPTY_TIMESLOTS_REASON_UNSPECIFIED" "LOGISTICS_UNKNOWN" "NO_ROUTE" "NO_ROUTE_SCHEDULES" "NO_LOGISTICS_CAPACITY" "SCHEDULE_UNKNOWN" "NOT_ENOUGH_CAPACITY" "NOT_ENOUGH_TRUCKS" "LIMITS_NOT_AVAILABLE" "CROSS_DOCK_RESERVE_MISSING" "SCHEDULE_RESERVE_MISSING" 缺少时间段的原因： EMPTY_TIMESLOTS_REASON_UNSPECIFIED——未定义； LOGISTICS_UNKNOWN——物流方未知错误； NO_ROUTE——没有路线； NO_ROUTE_SCHEDULES——路线上没有排期； NO_LOGISTICS_CAPACITY——路线上可用的时段不足； SCHEDULE_UNKNOWN——排期方未知错误； NOT_ENOUGH_CAPACITY——仓库可用时段不足； NOT_ENOUGH_TRUCKS——车辆车位不足； LIMITS_NOT_AVAILABLE——仓库未设置限制； CROSS_DOCK_RESERVE_MISSING——仓库未预留越库配送容量； SCHEDULE_RESERVE_MISSING——缺少必要的排期预留。 timeslotsArray of objects 可用时间段列表。 warehouse_timezone_namestring 卖家仓库的时区。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `reasons` | Array of stringsItems Enum: "EMPTY_TIMESLOTS_REASON_UNSPECIFIED" "LOGISTICS_UNKNOWN" "NO_ROUTE" "NO_ROUTE_SCHEDULES" "NO_LOGISTICS_CAPACITY" "SCHEDULE_UNKNOWN" "NOT_ENOUGH_CAPACITY" "NOT_ENOUGH_TRUCKS" "LIMITS_NOT_AVAILABLE" "CROSS_DOCK_RESERVE_MISSING" "SCHEDULE_RESERVE_MISSING" 缺少时间段的原因： EMPTY_TIMESLOTS_REASON_UNSPECIFIED——未定义； LOGISTICS_UNKNOWN——物流方未知错误； NO_ROUTE——没有路线； NO_ROUTE_SCHEDULES——路线上没有排期； NO_LOGISTICS_CAPACITY——路线上可用的时段不足； SCHEDULE_UNKNOWN——排期方未知错误； NOT_ENOUGH_CAPACITY——仓库可用时段不足； NOT_ENOUGH_TRUCKS——车辆车位不足； LIMITS_NOT_AVAILABLE——仓库未设置限制； CROSS_DOCK_RESERVE_MISSING——仓库未预留越库配送容量； SCHEDULE_RESERVE_MISSING——缺少必要的排期预留。 |
+| `timeslots` | Array of objects 可用时间段列表。 |
+| `warehouse_timezone_name` | string 卖家仓库的时区。 |
 
 ## 示例
 

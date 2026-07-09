@@ -23,11 +23,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-compensation_amountstring 赔偿金额。 return_id required integer <int64> 退货申请的标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `compensation_amount` | string 赔偿金额。 |
+| `return_id` required | integer <int64> 退货申请的标识符。 |
 
 ## 示例
 

@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-pickup_details required object Детали доставки. row_version required integer <int64> 草稿的当前版本标识符。 supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `pickup_details` required | object Детали доставки. |
+| `row_version` required | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 1
 
-row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 

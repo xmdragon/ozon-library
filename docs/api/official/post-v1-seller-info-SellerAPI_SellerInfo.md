@@ -21,11 +21,18 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-companyobject 公司。 ratingsArray of objects 评级列表。 subscriptionobject 订阅。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `company` | object 公司。 |
+| `ratings` | Array of objects 评级列表。 |
+| `subscription` | object 订阅。 |
 
 ## 示例
 

@@ -23,53 +23,110 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filterobject 查找快递方式的过滤器。 limit required integer <int64> 回答中的元素数量。最多50，最少1。 offsetinteger <int64> 回答中会被略过的元素数量。例如，如果offset = 10，回答将从发现的第11个元素开始。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` | object 查找快递方式的过滤器。 |
+| `limit` required | integer <int64> 回答中的元素数量。最多50，最少1。 |
+| `offset` | integer <int64> 回答中会被略过的元素数量。例如，如果offset = 10，回答将从发现的第11个元素开始。 |
 
 ### 表格 2
 
-has_nextboolean 以下该迹象会表明在查询中只送回了部分快递方式。 true — 请用新的 offset 参数重新请求，以获得剩余的方式； false — 回答中包含了所有应要求的快递方式。 resultArray of objects 查询结果。 Array ()company_idinteger <int64> 卖家识别号。 created_atstring <date-time> 创建快递方式的日期和时间。 cutoffstring 卖方必须在此之前备货的时间。 idinteger <int64> 快递方式识别号。 namestring 快递方式名称。 provider_idinteger <int64> 快递服务识别号。 sla_cut_ininteger <int64> 根据仓库设置，订单备货的最短时间（以分钟为单位）。 statusstring 快递方式状态: NEW — 已创建, EDITED — 正在编辑, ACTIVE — 已激活, DISABLED — 未激活。 template_idinteger <int64> 订单快递服务识别号。 updated_atstring <date-time> 快递方式最后更新的日期和时间。 warehouse_idinteger <int64> 仓库识别号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `has_next` | boolean 以下该迹象会表明在查询中只送回了部分快递方式。 true — 请用新的 offset 参数重新请求，以获得剩余的方式； false — 回答中包含了所有应要求的快递方式。 |
+| `result` | Array of objects 查询结果。 |
+| `company_id` | integer <int64> 卖家识别号。 |
+| `created_at` | string <date-time> 创建快递方式的日期和时间。 |
+| `cutoff` | string 卖方必须在此之前备货的时间。 |
+| `id` | integer <int64> 快递方式识别号。 |
+| `name` | string 快递方式名称。 |
+| `provider_id` | integer <int64> 快递服务识别号。 |
+| `sla_cut_in` | integer <int64> 根据仓库设置，订单备货的最短时间（以分钟为单位）。 |
+| `status` | string 快递方式状态: NEW — 已创建, EDITED — 正在编辑, ACTIVE — 已激活, DISABLED — 未激活。 |
+| `template_id` | integer <int64> 订单快递服务识别号。 |
+| `updated_at` | string <date-time> 快递方式最后更新的日期和时间。 |
+| `warehouse_id` | integer <int64> 仓库识别号。 |
 
 ### 表格 3
 
-company_idinteger <int64> 卖家识别号。 created_atstring <date-time> 创建快递方式的日期和时间。 cutoffstring 卖方必须在此之前备货的时间。 idinteger <int64> 快递方式识别号。 namestring 快递方式名称。 provider_idinteger <int64> 快递服务识别号。 sla_cut_ininteger <int64> 根据仓库设置，订单备货的最短时间（以分钟为单位）。 statusstring 快递方式状态: NEW — 已创建, EDITED — 正在编辑, ACTIVE — 已激活, DISABLED — 未激活。 template_idinteger <int64> 订单快递服务识别号。 updated_atstring <date-time> 快递方式最后更新的日期和时间。 warehouse_idinteger <int64> 仓库识别号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `company_id` | integer <int64> 卖家识别号。 |
+| `created_at` | string <date-time> 创建快递方式的日期和时间。 |
+| `cutoff` | string 卖方必须在此之前备货的时间。 |
+| `id` | integer <int64> 快递方式识别号。 |
+| `name` | string 快递方式名称。 |
+| `provider_id` | integer <int64> 快递服务识别号。 |
+| `sla_cut_in` | integer <int64> 根据仓库设置，订单备货的最短时间（以分钟为单位）。 |
+| `status` | string 快递方式状态: NEW — 已创建, EDITED — 正在编辑, ACTIVE — 已激活, DISABLED — 未激活。 |
+| `template_id` | integer <int64> 订单快递服务识别号。 |
+| `updated_at` | string <date-time> 快递方式最后更新的日期和时间。 |
+| `warehouse_id` | integer <int64> 仓库识别号。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-NEW
+offset = 10
 ```
 
 ### 示例 1
 
 ```text
-EDITED
+true
 ```
 
 ### 示例 2
 
 ```text
-ACTIVE
+offset
 ```
 
 ### 示例 3
 
 ```text
-DISABLED
+false
 ```
 
 ### 示例 4
+
+```text
+NEW
+```
+
+### 示例 5
+
+```text
+EDITED
+```
+
+### 示例 6
+
+```text
+ACTIVE
+```
+
+### 示例 7
+
+```text
+DISABLED
+```
+
+### 示例 8
 
 ```json
 {"filter": {"provider_id": 424,"status": "ACTIVE","warehouse_id": 15588127982000},"limit": 100,"offset": 0}
 ```
 
-### 示例 5
+### 示例 9
 
 ```json
 {"result": [{"id": 15588127982000,"company_id": 1,"name": "Ozon物流快递员，Yesipovo","status": "ACTIVE","cutoff": "13:00","provider_id": 24,"template_id": 0,"warehouse_id": 15588127982000,"created_at": "2019-04-04T15:22:31.048202Z","updated_at": "2021-08-15T10:21:44.854209Z","sla_cut_in": 1440}],"has_next": false}

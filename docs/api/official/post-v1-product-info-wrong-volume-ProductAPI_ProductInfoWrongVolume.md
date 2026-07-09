@@ -23,15 +23,24 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于获取下一批数据的指针。 limit required integer <int64> [ 1 .. 1000 ] 响应中记录数量的限制。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于获取下一批数据的指针。 |
+| `limit` required | integer <int64> [ 1 .. 1000 ] 响应中记录数量的限制。 |
 
 ### 表格 2
 
-cursorstring 用于获取下一批数据的指针。 productsArray of objects 商品列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于获取下一批数据的指针。 |
+| `products` | Array of objects 商品列表。 |
 
 ## 示例
 

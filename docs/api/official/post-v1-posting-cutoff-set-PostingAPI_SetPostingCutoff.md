@@ -23,25 +23,39 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-new_cutoff_date required string <date-time> 新发运日期。 posting_number required string 货件编号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `new_cutoff_date` required | string <date-time> 新发运日期。 |
+| `posting_number` required | string 货件编号。 |
 
 ### 表格 2
 
-resultboolean true表示已设置新日期。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | boolean true表示已设置新日期。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"posting_number": "789456123-0002-3","new_cutoff_date": "2026-03-16T10:00:00Z"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": true}

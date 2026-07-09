@@ -22,15 +22,44 @@
 
 ### 表格 0
 
-posting_number required string 货件标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 货件标识符。 |
 
 ### 表格 1
 
-postingobject 货件信息。 analytics_dataobject 分析数据。 cancellationobject 取消信息。 financial_dataobject 财务数据。 in_process_atstring <date-time> 货件开始处理的日期和时间。 order_datestring <date-time> 订单的创建日期。 order_idinteger <int64> 该货件所属订单的标识符。 order_numberstring 该货件所属订单的编号。 posting_numberstring 货件标识符。 productsArray of objects 货件中商品列表。 statusinteger <int64> 货件状态。 substatusstring 货件子状态。 tpl_provider_idinteger <int64> 配送服务商标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting` | object 货件信息。 |
+| `analytics_data` | object 分析数据。 |
+| `cancellation` | object 取消信息。 |
+| `financial_data` | object 财务数据。 |
+| `in_process_at` | string <date-time> 货件开始处理的日期和时间。 |
+| `order_date` | string <date-time> 订单的创建日期。 |
+| `order_id` | integer <int64> 该货件所属订单的标识符。 |
+| `order_number` | string 该货件所属订单的编号。 |
+| `posting_number` | string 货件标识符。 |
+| `products` | Array of objects 货件中商品列表。 |
+| `status` | integer <int64> 货件状态。 |
+| `substatus` | string 货件子状态。 |
+| `tpl_provider_id` | integer <int64> 配送服务商标识符。 |
 
 ### 表格 2
 
-analytics_dataobject 分析数据。 cancellationobject 取消信息。 financial_dataobject 财务数据。 in_process_atstring <date-time> 货件开始处理的日期和时间。 order_datestring <date-time> 订单的创建日期。 order_idinteger <int64> 该货件所属订单的标识符。 order_numberstring 该货件所属订单的编号。 posting_numberstring 货件标识符。 productsArray of objects 货件中商品列表。 statusinteger <int64> 货件状态。 substatusstring 货件子状态。 tpl_provider_idinteger <int64> 配送服务商标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `analytics_data` | object 分析数据。 |
+| `cancellation` | object 取消信息。 |
+| `financial_data` | object 财务数据。 |
+| `in_process_at` | string <date-time> 货件开始处理的日期和时间。 |
+| `order_date` | string <date-time> 订单的创建日期。 |
+| `order_id` | integer <int64> 该货件所属订单的标识符。 |
+| `order_number` | string 该货件所属订单的编号。 |
+| `posting_number` | string 货件标识符。 |
+| `products` | Array of objects 货件中商品列表。 |
+| `status` | integer <int64> 货件状态。 |
+| `substatus` | string 货件子状态。 |
+| `tpl_provider_id` | integer <int64> 配送服务商标识符。 |
 
 ## 示例
 

@@ -22,21 +22,37 @@
 
 ### 表格 0
 
-driver_name required string 司机姓名。 row_version required integer <int64> 草稿的当前版本标识符。 supply_id required string 供货申请标识符。 vehicle_number required string 车牌号。 vehicle_type required string 车辆类型。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `driver_name` required | string 司机姓名。 |
+| `row_version` required | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` required | string 供货申请标识符。 |
+| `vehicle_number` required | string 车牌号。 |
+| `vehicle_type` required | string 车辆类型。 |
 
 ### 表格 1
 
-errorobject 错误信息。 is_errorboolean true，前提是有错误。 row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | object 错误信息。 |
+| `is_error` | boolean true，前提是有错误。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"driver_name": "string","row_version": 0,"supply_id": "string","vehicle_number": "string","vehicle_type": "string"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"error": {"errors": "ERROR_TYPE_UNSPECIFIED"},"is_error": true,"row_version": 0}

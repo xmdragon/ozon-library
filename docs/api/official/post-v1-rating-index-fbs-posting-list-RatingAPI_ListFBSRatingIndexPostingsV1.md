@@ -23,25 +23,42 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于获取下一批数据的指针。 filter required object 筛选器。 limit required integer <int64> <= 1000 返回结果中的数值数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于获取下一批数据的指针。 |
+| `filter` required | object 筛选器。 |
+| `limit` required | integer <int64> <= 1000 返回结果中的数值数量。 |
 
 ### 表格 2
 
-cursorstring 用于获取下一批数据的指针。 errorsArray of objects 影响错误指数的货件。 has_nextboolean true，表示查询结果未包含所有货件。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于获取下一批数据的指针。 |
+| `errors` | Array of objects 影响错误指数的货件。 |
+| `has_next` | boolean true，表示查询结果未包含所有货件。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"cursor": "string","filter": {"date_from": "2019-08-24T14:15:22Z","date_to": "2019-08-24T14:15:22Z","posting_numbers": ["string"]},"limit": 0}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"cursor": "string","errors": [{"charge_percent": 0,"charge_price": 0,"charge_price_currency_code": "string","delivery_schema": "string","error_at": "2019-08-24T14:15:22Z","has_grace_status": true,"index": 0,"posting_error_type": "UNSPECIFIED","posting_number": "string","product_price": 0,"product_price_currency_code": "string"}],"has_next": true}

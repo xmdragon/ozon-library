@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-code required string 标签生成任务标识符。 supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` required | string 标签生成任务标识符。 |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 1
 
-label_urlstring 交货标签链接。 statestring Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "IN_PROGRESS" "FINISHED" "FAILED" 标签生成任务状态： UNSPECIFIED：未指定； IN_PROGRESS：生成中； FINISHED：生成成功； FAILED：生成失败。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `label_url` | string 交货标签链接。 |
+| `state` | string Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "IN_PROGRESS" "FINISHED" "FAILED" 标签生成任务状态： UNSPECIFIED：未指定； IN_PROGRESS：生成中； FINISHED：生成成功； FAILED：生成失败。 |
 
 ## 示例
 

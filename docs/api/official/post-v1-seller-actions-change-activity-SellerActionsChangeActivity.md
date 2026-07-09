@@ -22,21 +22,33 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-action_id required integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 is_turn_on required boolean true，用于启用促销活动。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` required | integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 |
+| `is_turn_on` required | boolean true，用于启用促销活动。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"action_id": 0,"is_turn_on": true}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}

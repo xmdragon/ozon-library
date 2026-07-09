@@ -21,17 +21,66 @@
 
 ### 表格 0
 
-commentstring 卖家评论。 对于 id: -1 和 id: -10，备注为必填项。 compensation_amountnumber <double> 赔偿金额。 对于 id: 1020，备注也为必填项。 idinteger <int32> 操作标识符。 获取可用操作 returns.available_actions ，请使用方法 /v2/returns/rfbs/get。 rejection_reason_idinteger <int32> 取消原因的标识符。 对于 id: -1 和 id: -10，备注为必填项。 获取可用取消原因 returns.rejection_reason，请使用方法 /v2/returns/rfbs/get。 return_for_back_waynumber <double> 退还给买家的商品运费金额。 负值将被视为 0。 return_id required integer <int64> 退货申请的标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `comment` | string 卖家评论。 对于 id: -1 和 id: -10，备注为必填项。 |
+| `compensation_amount` | number <double> 赔偿金额。 对于 id: 1020，备注也为必填项。 |
+| `id` | integer <int32> 操作标识符。 获取可用操作 returns.available_actions ，请使用方法 /v2/returns/rfbs/get。 |
+| `rejection_reason_id` | integer <int32> 取消原因的标识符。 对于 id: -1 和 id: -10，备注为必填项。 获取可用取消原因 returns.rejection_reason，请使用方法 /v2/returns/rfbs/get。 |
+| `return_for_back_way` | number <double> 退还给买家的商品运费金额。 负值将被视为 0。 |
+| `return_id` required | integer <int64> 退货申请的标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+id: -1
+```
+
+### 示例 1
+
+```text
+id: -10
+```
+
+### 示例 2
+
+```text
+id: 1020
+```
+
+### 示例 3
+
+```text
+returns.available_actions
+```
+
+### 示例 4
+
+```text
+id: -1
+```
+
+### 示例 5
+
+```text
+id: -10
+```
+
+### 示例 6
+
+```text
+returns.rejection_reason
+```
+
+### 示例 8
+
 ```json
 {"comment": "string","compensation_amount": 0,"id": 0,"rejection_reason_id": 0,"return_for_back_way": 0,"return_id": 0}
 ```
 
-### 示例 1
+### 示例 9
 
 ```json
 {"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}

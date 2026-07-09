@@ -23,19 +23,79 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-last_idinteger <int64> 页面上最后一个值的标识符。首次请求请留空。 limitinteger <int64> <= 50 Default: 50 Enum: 5 10 15 20 30 50 每页最大申请数量。 statusstring Default: "ALL" Enum: "ALL" "NEW" "APPROVED" "DECLINED" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `last_id` | integer <int64> 页面上最后一个值的标识符。首次请求请留空。 |
+| `limit` | integer <int64> <= 50 Default: 50 Enum: 5 10 15 20 30 50 每页最大申请数量。 |
+| `status` | string Default: "ALL" Enum: "ALL" "NEW" "APPROVED" "DECLINED" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。 |
 
 ### 表格 2
 
-tasksArray of objects 申请列表。 Array ()approved_discountnumber <double> 卖家批准的折扣金额（卢布）。如果卖家未批准申请，请传入 0。 approved_pricenumber <double> 批准价格。 approved_quantity_maxinteger <uint64> 批准的最大商品数量。 auto_moderated_infoobject 申请自动审核信息。 created_atstring <date-time> 申请创建日期。 edited_tillstring <date-time> YYYY-MM-DD 可修改决定的时间。 edited_till_durationinteger <uint64> 可修改决定的时间（秒）。 emailstring 处理申请的卖家员工邮箱地址。 end_atstring <date-time> 申请有效期结束时间。 end_at_durationinteger <uint64> 申请有效期结束时间（秒）。 first_namestring 处理申请的卖家员工名字。 idinteger <uint64> 申请标识符。 is_auto_moderatedboolean true，表示审核为自动审核。 last_namestring 处理申请的卖家员工姓氏。 min_auto_pricenumber <double> 自动应用折扣与促销后的最低价格值。 moderated_atstring <date-time> 审核日期：查看、批准或拒绝申请的日期。 namestring 商品名称。 original_pricenumber <double> 商品在所有折扣前的价格。 patronymicstring 处理申请的卖家员工父名（中间名）。 reduction_factornumber <double> 创建申请时买家价格与卖家价格之间的差值。 requested_discountnumber <double> 折扣百分比。 requested_pricenumber <double> 申请价格。 requested_quantity_maxinteger <uint64> 请求的最大商品数量。 skuinteger <uint64> Ozon 系统中的商品标识符——SKU。 statusstring Default: "ALL" Enum: "ALL" "NEW" "APPROVED" "DECLINED" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `tasks` | Array of objects 申请列表。 |
+| `approved_discount` | number <double> 卖家批准的折扣金额（卢布）。如果卖家未批准申请，请传入 0。 |
+| `approved_price` | number <double> 批准价格。 |
+| `approved_quantity_max` | integer <uint64> 批准的最大商品数量。 |
+| `auto_moderated_info` | object 申请自动审核信息。 |
+| `created_at` | string <date-time> 申请创建日期。 |
+| `edited_till` | string <date-time> YYYY-MM-DD 可修改决定的时间。 |
+| `edited_till_duration` | integer <uint64> 可修改决定的时间（秒）。 |
+| `email` | string 处理申请的卖家员工邮箱地址。 |
+| `end_at` | string <date-time> 申请有效期结束时间。 |
+| `end_at_duration` | integer <uint64> 申请有效期结束时间（秒）。 |
+| `first_name` | string 处理申请的卖家员工名字。 |
+| `id` | integer <uint64> 申请标识符。 |
+| `is_auto_moderated` | boolean true，表示审核为自动审核。 |
+| `last_name` | string 处理申请的卖家员工姓氏。 |
+| `min_auto_price` | number <double> 自动应用折扣与促销后的最低价格值。 |
+| `moderated_at` | string <date-time> 审核日期：查看、批准或拒绝申请的日期。 |
+| `name` | string 商品名称。 |
+| `original_price` | number <double> 商品在所有折扣前的价格。 |
+| `patronymic` | string 处理申请的卖家员工父名（中间名）。 |
+| `reduction_factor` | number <double> 创建申请时买家价格与卖家价格之间的差值。 |
+| `requested_discount` | number <double> 折扣百分比。 |
+| `requested_price` | number <double> 申请价格。 |
+| `requested_quantity_max` | integer <uint64> 请求的最大商品数量。 |
+| `sku` | integer <uint64> Ozon 系统中的商品标识符——SKU。 |
+| `status` | string Default: "ALL" Enum: "ALL" "NEW" "APPROVED" "DECLINED" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。 |
 
 ### 表格 3
 
-approved_discountnumber <double> 卖家批准的折扣金额（卢布）。如果卖家未批准申请，请传入 0。 approved_pricenumber <double> 批准价格。 approved_quantity_maxinteger <uint64> 批准的最大商品数量。 auto_moderated_infoobject 申请自动审核信息。 created_atstring <date-time> 申请创建日期。 edited_tillstring <date-time> YYYY-MM-DD 可修改决定的时间。 edited_till_durationinteger <uint64> 可修改决定的时间（秒）。 emailstring 处理申请的卖家员工邮箱地址。 end_atstring <date-time> 申请有效期结束时间。 end_at_durationinteger <uint64> 申请有效期结束时间（秒）。 first_namestring 处理申请的卖家员工名字。 idinteger <uint64> 申请标识符。 is_auto_moderatedboolean true，表示审核为自动审核。 last_namestring 处理申请的卖家员工姓氏。 min_auto_pricenumber <double> 自动应用折扣与促销后的最低价格值。 moderated_atstring <date-time> 审核日期：查看、批准或拒绝申请的日期。 namestring 商品名称。 original_pricenumber <double> 商品在所有折扣前的价格。 patronymicstring 处理申请的卖家员工父名（中间名）。 reduction_factornumber <double> 创建申请时买家价格与卖家价格之间的差值。 requested_discountnumber <double> 折扣百分比。 requested_pricenumber <double> 申请价格。 requested_quantity_maxinteger <uint64> 请求的最大商品数量。 skuinteger <uint64> Ozon 系统中的商品标识符——SKU。 statusstring Default: "ALL" Enum: "ALL" "NEW" "APPROVED" "DECLINED" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `approved_discount` | number <double> 卖家批准的折扣金额（卢布）。如果卖家未批准申请，请传入 0。 |
+| `approved_price` | number <double> 批准价格。 |
+| `approved_quantity_max` | integer <uint64> 批准的最大商品数量。 |
+| `auto_moderated_info` | object 申请自动审核信息。 |
+| `created_at` | string <date-time> 申请创建日期。 |
+| `edited_till` | string <date-time> YYYY-MM-DD 可修改决定的时间。 |
+| `edited_till_duration` | integer <uint64> 可修改决定的时间（秒）。 |
+| `email` | string 处理申请的卖家员工邮箱地址。 |
+| `end_at` | string <date-time> 申请有效期结束时间。 |
+| `end_at_duration` | integer <uint64> 申请有效期结束时间（秒）。 |
+| `first_name` | string 处理申请的卖家员工名字。 |
+| `id` | integer <uint64> 申请标识符。 |
+| `is_auto_moderated` | boolean true，表示审核为自动审核。 |
+| `last_name` | string 处理申请的卖家员工姓氏。 |
+| `min_auto_price` | number <double> 自动应用折扣与促销后的最低价格值。 |
+| `moderated_at` | string <date-time> 审核日期：查看、批准或拒绝申请的日期。 |
+| `name` | string 商品名称。 |
+| `original_price` | number <double> 商品在所有折扣前的价格。 |
+| `patronymic` | string 处理申请的卖家员工父名（中间名）。 |
+| `reduction_factor` | number <double> 创建申请时买家价格与卖家价格之间的差值。 |
+| `requested_discount` | number <double> 折扣百分比。 |
+| `requested_price` | number <double> 申请价格。 |
+| `requested_quantity_max` | integer <uint64> 请求的最大商品数量。 |
+| `sku` | integer <uint64> Ozon 系统中的商品标识符——SKU。 |
+| `status` | string Default: "ALL" Enum: "ALL" "NEW" "APPROVED" "DECLINED" 折扣申请状态： ALL——全部状态， NEW——新建， APPROVED——已批准， DECLINED——已拒绝。 |
 
 ## 示例
 
@@ -63,37 +123,43 @@ APPROVED
 DECLINED
 ```
 
-### 示例 4
-
-```text
-ALL
-```
-
 ### 示例 5
 
 ```text
-NEW
+true
 ```
 
 ### 示例 6
 
 ```text
-APPROVED
+ALL
 ```
 
 ### 示例 7
 
 ```text
-DECLINED
+NEW
 ```
 
 ### 示例 8
+
+```text
+APPROVED
+```
+
+### 示例 9
+
+```text
+DECLINED
+```
+
+### 示例 10
 
 ```json
 {"last_id": 0,"limit": 50,"status": "ALL"}
 ```
 
-### 示例 9
+### 示例 11
 
 ```json
 {"tasks": [{"approved_discount": 0,"approved_price": 0,"approved_quantity_max": 0,"auto_moderated_info": {"max_percent": 0,"max_price": 0,"min_percent": 0,"min_price": 0},"created_at": "2019-08-24T14:15:22Z","edited_till": "2019-08-24T14:15:22Z","edited_till_duration": 0,"email": "string","end_at": "2019-08-24T14:15:22Z","end_at_duration": 0,"first_name": "string","id": 0,"is_auto_moderated": true,"last_name": "string","min_auto_price": 0,"moderated_at": "2019-08-24T14:15:22Z","name": "string","original_price": 0,"patronymic": "string","reduction_factor": 0,"requested_discount": 0,"requested_price": 0,"requested_quantity_max": 0,"sku": 0,"status": "ALL"}]}

@@ -23,29 +23,45 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-strategy_id required string 策略ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `strategy_id` required | string 策略ID。 |
 
 ### 表格 2
 
-resultobject 商品列表。 product_idArray of strings <int64> Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 商品列表。 |
+| `product_id` | Array of strings <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 3
 
-product_idArray of strings <int64> Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` | Array of strings <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
 ```json
 {"strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": {"product_id": ["29209"]}}

@@ -22,15 +22,24 @@
 
 ### 表格 0
 
-skus required Array of strings <int64> Ozon 系统中的 SKU、商品标识符列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `skus` required | Array of strings <int64> Ozon 系统中的 SKU、商品标识符列表。 |
 
 ### 表格 1
 
-resultArray of objects 操作方法结果。 Array ()countinteger <int64> 订阅用户的数量。 skuinteger <int64> Ozon 系统中的商品ID、SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 操作方法结果。 |
+| `count` | integer <int64> 订阅用户的数量。 |
+| `sku` | integer <int64> Ozon 系统中的商品ID、SKU。 |
 
 ### 表格 2
 
-countinteger <int64> 订阅用户的数量。 skuinteger <int64> Ozon 系统中的商品ID、SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `count` | integer <int64> 订阅用户的数量。 |
+| `sku` | integer <int64> Ozon 系统中的商品ID、SKU。 |
 
 ## 示例
 

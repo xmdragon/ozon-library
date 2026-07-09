@@ -39,6 +39,74 @@ def _format_text_block(text: str) -> str:
     return text if text else "无"
 
 
+FIELD_TYPE_PATTERN = re.compile(
+    r"(?<![A-Za-z0-9_-])([A-Za-z][A-Za-z0-9_-]*)(?:\s+(required|optional))?\s*(Array of objects|Array of strings|Array of integers|Array of numbers|"
+    r"Array of booleans|Array \(\)|string|number|integer(?: <[^>]+>)?|boolean|object)"
+)
+
+
+def _format_schema_text(text: str) -> str:
+    text = _format_text_block(text)
+    if text == "无":
+        return text
+
+    matches = list(FIELD_TYPE_PATTERN.finditer(text))
+    if len(matches) < 2:
+        return text
+
+    lines: List[str] = []
+    prefix = text[: matches[0].start()].strip()
+    if prefix:
+        lines.append(prefix)
+
+    for index, match in enumerate(matches):
+        field_name = match.group(1)
+        required_marker = match.group(2)
+        field_type = match.group(3)
+        if required_marker:
+            field_type = f"{required_marker} {field_type}"
+        description_start = match.end()
+        description_end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        description = text[description_start:description_end].strip()
+        description = description.replace("Array ()", "").strip()
+        format_match = re.match(r"(<[^>]+>)\s+(.*)", description)
+        if format_match:
+            field_type = f"{field_type} {format_match.group(1)}"
+            description = format_match.group(2).strip()
+        description = description or "无说明。"
+        if field_name == "Array":
+            lines.append(description)
+        else:
+            lines.append(f"- `{field_name}` {field_type} - {description}")
+
+    return "\n".join(lines)
+
+
+def _escape_markdown_table_cell(value: str) -> str:
+    return _format_text_block(value).replace("|", "\\|")
+
+
+def _format_table_field(value: str) -> str:
+    value = _format_text_block(value)
+    match = re.match(r"(.+?)\s+(required|optional)$", value)
+    if match:
+        return f"`{match.group(1)}` {match.group(2)}"
+    return f"`{value}`"
+
+
+def _format_table_rows(rows: Any) -> str:
+    if not isinstance(rows, list) or not rows:
+        return ""
+    lines = ["| 字段 | 类型/说明 |", "| --- | --- |"]
+    for row in rows:
+        if not isinstance(row, list) or len(row) < 2:
+            continue
+        first = _format_table_field(str(row[0]))
+        rest = " ".join(str(cell).strip() for cell in row[1:] if str(cell).strip())
+        lines.append(f"| {_escape_markdown_table_cell(first)} | {_escape_markdown_table_cell(rest)} |")
+    return "\n".join(lines)
+
+
 def _looks_like_json(text: str) -> bool:
     stripped = text.strip()
     return (stripped.startswith("{") and stripped.endswith("}")) or (
@@ -95,11 +163,12 @@ def render_operation_doc(operation: Operation) -> str:
     if tables:
         for table in tables:
             table_index = table.get("index", 0)
+            table_body = _format_table_rows(table.get("rows")) or _format_schema_text(table.get("text", ""))
             lines.extend(
                 [
                     f"### 表格 {table_index}",
                     "",
-                    _format_text_block(table.get("text", "")),
+                    table_body,
                     "",
                 ]
             )

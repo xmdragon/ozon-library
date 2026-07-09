@@ -23,11 +23,16 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-strategy_id required string 策略ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `strategy_id` required | string 策略ID。 |
 
 ## 示例
 

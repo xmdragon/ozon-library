@@ -23,15 +23,26 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于选择数据的指针。 filter required object 商品筛选器。 limit required integer <int32> [ 1 .. 1000 ] 每页显示的数值数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择数据的指针。 |
+| `filter` required | object 商品筛选器。 |
+| `limit` required | integer <int32> [ 1 .. 1000 ] 每页显示的数值数量。 |
 
 ### 表格 2
 
-cursorstring 用于选择数据的指针。 itemsArray of objects 商品列表。 totalinteger <int32> 商品列表中的商品数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择数据的指针。 |
+| `items` | Array of objects 商品列表。 |
+| `total` | integer <int32> 商品列表中的商品数量。 |
 
 ## 示例
 

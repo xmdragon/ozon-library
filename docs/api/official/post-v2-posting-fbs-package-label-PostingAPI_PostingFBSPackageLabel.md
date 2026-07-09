@@ -23,32 +23,43 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required Array of strings 货运ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | Array of strings 货运ID。 |
 
 ### 表格 2
 
-file_contentstring <byte> 二进制形式的文件内容。 file_namestring 文件名称。 content_typestring 文件类型。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `file_content` | string <byte> 二进制形式的文件内容。 |
+| `file_name` | string 文件名称。 |
+| `content_type` | string 文件类型。 |
 
 ## 示例
 
 ### 示例 0
 
-```json
-{"posting_number": ["48173252-0034-4"]}
+```text
+The next postings aren't ready
 ```
 
 ### 示例 1
 
 ```json
-{
-  "content_type": "application/pdf",
-  "file_name": "ticket-170660-2023-07-13T13:17:06Z.pdf",
-  "file_content": "%PDF-1.7\n%âãÏÓ\n53 0 obj\n<</MarkInfo<</Marked true/Type/MarkInfo>>/Pages 9 0 R/StructTreeRoot 10 0 R/Type/Catalog>>\nendobj\n8 0 obj\n<</Filter/FlateDecode/Length 2888>>\nstream\nxå[[ݶ\u0011~?¿BÏ\u0005Bs\u001c^\u0000Àwí5ú\u0010 m\u0016Èsà¦)\n;hÒ\u0014èÏïG\u0014)<{äµ] ]?¬¬oIÎ}¤F±óϤñï\u001bÕü×X­´OÏï?^~¹$<ø¨È9q\u0013Y\u0012åñì§_¼|ÿégü\t+\u0012\u001bxª}Æxҿ¿¼_º¼xg¦þ5OkuÌ3ýíògüûå\"Ni\u0016C\u0001°\u000fA9g'r¢\"\u0013YóĪ\u0018NÑ{\u001dÕóZ¬\\Ô\""
-}
+{"posting_number": ["48173252-0034-4"]}
+```
+
+### 示例 2
+
+```json
+{ "content_type": "application/pdf", "file_name": "ticket-170660-2023-07-13T13:17:06Z.pdf", "file_content": "%PDF-1.7\n%âãÏÓ\n53 0 obj\n<</MarkInfo<</Marked true/Type/MarkInfo>>/Pages 9 0 R/StructTreeRoot 10 0 R/Type/Catalog>>\nendobj\n8 0 obj\n<</Filter/FlateDecode/Length 2888>>\nstream\nxå[[ݶ\u0011~?¿BÏ\u0005Bs\u001c^\u0000Àwí5ú\u0010 m\u0016Èsà¦)\n;hÒ\u0014èÏïG\u0014)<{äµ] ]?¬¬oIÎ}¤F±óϤñï\u001bÕü×X­´OÏï?^~¹$<ø¨È9q\u0013Y\u0012åñì§_¼|ÿégü\t+\u0012\u001bxª}Æxҿ¿¼_º¼xg¦þ5OkuÌ3ýíògüûå\"Ni\u0016C\u0001°\u000fA9g'r¢\"\u0013YóĪ\u0018NÑ{\u001dÕóZ¬\\Ô\"" }
 ```
 
 ## 使用提醒

@@ -21,15 +21,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-accrual_typesArray of objects 应计项目相关信息。 Array ()descriptionstring 应计项目说明。 idinteger <int32> 应计项目标识符。 namestring 应计项目名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `accrual_types` | Array of objects 应计项目相关信息。 |
+| `description` | string 应计项目说明。 |
+| `id` | integer <int32> 应计项目标识符。 |
+| `name` | string 应计项目名称。 |
 
 ### 表格 2
 
-descriptionstring 应计项目说明。 idinteger <int32> 应计项目标识符。 namestring 应计项目名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `description` | string 应计项目说明。 |
+| `id` | integer <int32> 应计项目标识符。 |
+| `name` | string 应计项目名称。 |
 
 ## 示例
 

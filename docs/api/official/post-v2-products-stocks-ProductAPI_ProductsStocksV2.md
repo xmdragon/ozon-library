@@ -23,35 +23,95 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-stocks required Array of objects 仓库中商品的信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `stocks` required | Array of objects 仓库中商品的信息。 |
 
 ### 表格 2
 
-resultArray of objects Array ()errorsArray of objects 在搜索处理过程中发生的数组错误。 offer_idstring 卖家系统中的商品编号是 — 商品代码。 product_idinteger <int64> Ozon系统中商品的标识符 — product_id。 updatedboolean 如果商品信息已被成功更新 — true。 warehouse_idinteger <int64> 仓库编号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects |
+| `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
+| `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `updated` | boolean 如果商品信息已被成功更新 — true。 |
+| `warehouse_id` | integer <int64> 仓库编号。 |
 
 ### 表格 3
 
-errorsArray of objects 在搜索处理过程中发生的数组错误。 offer_idstring 卖家系统中的商品编号是 — 商品代码。 product_idinteger <int64> Ozon系统中商品的标识符 — product_id。 updatedboolean 如果商品信息已被成功更新 — true。 warehouse_idinteger <int64> 仓库编号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
+| `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `updated` | boolean 如果商品信息已被成功更新 — true。 |
+| `warehouse_id` | integer <int64> 仓库编号。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-TOO_MANY_REQUESTS
+result.errors
 ```
 
 ### 示例 1
+
+```text
+TOO_MANY_REQUESTS
+```
+
+### 示例 2
+
+```text
+price_sent
+```
+
+### 示例 3
+
+```text
+offer_id
+```
+
+### 示例 4
+
+```text
+product_id
+```
+
+### 示例 5
+
+```text
+offer_id
+```
+
+### 示例 6
+
+```text
+product_id
+```
+
+### 示例 7
+
+```text
+true
+```
+
+### 示例 8
 
 ```json
 {"stocks": [{"offer_id": "PH11042","product_id": 313455276,"stock": 100,"warehouse_id": 22142605386000}]}
 ```
 
-### 示例 2
+### 示例 9
 
 ```json
 {"result": [{"warehouse_id": 22142605386000,"product_id": 118597312,"offer_id": "PH11042","updated": true,"errors": [ ]}]}

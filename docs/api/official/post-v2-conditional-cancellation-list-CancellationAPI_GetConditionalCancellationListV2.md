@@ -22,61 +22,109 @@
 
 ### 表格 0
 
-filtersobject 过滤器。 last_idinteger <int64> 页面上最后一个值的标识符。在首次请求时此字段留空。 要获取后续值，请指定上一次请求响应中的 last_id。 limit required integer <int32> <= 500 响应中包含的申请总数。 withobject 附加信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filters` | object 过滤器。 |
+| `last_id` | integer <int64> 页面上最后一个值的标识符。在首次请求时此字段留空。 要获取后续值，请指定上一次请求响应中的 last_id。 |
+| `limit` required | integer <int32> <= 500 响应中包含的申请总数。 |
+| `with` | object 附加信息。 |
 
 ### 表格 1
 
-counterinteger <int64> ON_APPROVAL 状态申请的计数器。 last_idinteger <int64> 页面上最后一个值的标识符。 要获取后续值，请指定上一次请求响应中的 last_id。 resultArray of objects 取消申请的详细信息。 Array ()approve_commentstring 在确认或拒绝取消申请时填写的备注。 approve_datestring <date-time> 取消申请确认或拒绝的日期。 auto_approve_datestring <date-time> 申请将在此日期后自动确认。 cancellation_idinteger <int64> 取消申请标识符。 cancellation_initiatorstring Enum: "OZON" "SELLER" "CLIENT" "SYSTEM" "DELIVERY" 取消发起人： SELLER — 卖家， CLIENT — 买家， OZON — Ozon, SYSTEM — 系统， DELIVERY — 配送服务。 cancellation_reasonobject 取消原因。 cancellation_reason_messagestring 取消申请中由取消发起人手动填写的备注。 cancelled_atstring <date-time> 取消申请的创建日期。 order_datestring <date-time> 订单的创建日期。 posting_numberstring 货件编号。 source_idinteger <int64> 上一次取消申请的标识符。 用于保持向后兼容性。 stateobject 取消申请的状态。 tpl_integration_typestring 与配送服务的集成类型。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `counter` | integer <int64> ON_APPROVAL 状态申请的计数器。 |
+| `last_id` | integer <int64> 页面上最后一个值的标识符。 要获取后续值，请指定上一次请求响应中的 last_id。 |
+| `result` | Array of objects 取消申请的详细信息。 |
+| `approve_comment` | string 在确认或拒绝取消申请时填写的备注。 |
+| `approve_date` | string <date-time> 取消申请确认或拒绝的日期。 |
+| `auto_approve_date` | string <date-time> 申请将在此日期后自动确认。 |
+| `cancellation_id` | integer <int64> 取消申请标识符。 |
+| `cancellation_initiator` | string Enum: "OZON" "SELLER" "CLIENT" "SYSTEM" "DELIVERY" 取消发起人： SELLER — 卖家， CLIENT — 买家， OZON — Ozon, SYSTEM — 系统， DELIVERY — 配送服务。 |
+| `cancellation_reason` | object 取消原因。 |
+| `cancellation_reason_message` | string 取消申请中由取消发起人手动填写的备注。 |
+| `cancelled_at` | string <date-time> 取消申请的创建日期。 |
+| `order_date` | string <date-time> 订单的创建日期。 |
+| `posting_number` | string 货件编号。 |
+| `source_id` | integer <int64> 上一次取消申请的标识符。 用于保持向后兼容性。 |
+| `state` | object 取消申请的状态。 |
+| `tpl_integration_type` | string 与配送服务的集成类型。 |
 
 ### 表格 2
 
-approve_commentstring 在确认或拒绝取消申请时填写的备注。 approve_datestring <date-time> 取消申请确认或拒绝的日期。 auto_approve_datestring <date-time> 申请将在此日期后自动确认。 cancellation_idinteger <int64> 取消申请标识符。 cancellation_initiatorstring Enum: "OZON" "SELLER" "CLIENT" "SYSTEM" "DELIVERY" 取消发起人： SELLER — 卖家， CLIENT — 买家， OZON — Ozon, SYSTEM — 系统， DELIVERY — 配送服务。 cancellation_reasonobject 取消原因。 cancellation_reason_messagestring 取消申请中由取消发起人手动填写的备注。 cancelled_atstring <date-time> 取消申请的创建日期。 order_datestring <date-time> 订单的创建日期。 posting_numberstring 货件编号。 source_idinteger <int64> 上一次取消申请的标识符。 用于保持向后兼容性。 stateobject 取消申请的状态。 tpl_integration_typestring 与配送服务的集成类型。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `approve_comment` | string 在确认或拒绝取消申请时填写的备注。 |
+| `approve_date` | string <date-time> 取消申请确认或拒绝的日期。 |
+| `auto_approve_date` | string <date-time> 申请将在此日期后自动确认。 |
+| `cancellation_id` | integer <int64> 取消申请标识符。 |
+| `cancellation_initiator` | string Enum: "OZON" "SELLER" "CLIENT" "SYSTEM" "DELIVERY" 取消发起人： SELLER — 卖家， CLIENT — 买家， OZON — Ozon, SYSTEM — 系统， DELIVERY — 配送服务。 |
+| `cancellation_reason` | object 取消原因。 |
+| `cancellation_reason_message` | string 取消申请中由取消发起人手动填写的备注。 |
+| `cancelled_at` | string <date-time> 取消申请的创建日期。 |
+| `order_date` | string <date-time> 订单的创建日期。 |
+| `posting_number` | string 货件编号。 |
+| `source_id` | integer <int64> 上一次取消申请的标识符。 用于保持向后兼容性。 |
+| `state` | object 取消申请的状态。 |
+| `tpl_integration_type` | string 与配送服务的集成类型。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-ON_APPROVAL
+last_id
 ```
 
 ### 示例 1
 
 ```text
-SELLER
+ON_APPROVAL
 ```
 
 ### 示例 2
 
 ```text
-CLIENT
+last_id
 ```
 
 ### 示例 3
 
 ```text
-OZON
+SELLER
 ```
 
 ### 示例 4
 
 ```text
-SYSTEM
+CLIENT
 ```
 
 ### 示例 5
 
 ```text
-DELIVERY
+OZON
 ```
 
 ### 示例 6
+
+```text
+SYSTEM
+```
+
+### 示例 7
+
+```text
+DELIVERY
+```
+
+### 示例 8
 
 ```json
 {"filters": {"cancellation_initiator": ["CLIENT"],"posting_number": ["34009011-0094-1"],"state": "ALL"},"limit": 500,"last_id": 0,"with": {"counter": true}}
 ```
 
-### 示例 7
+### 示例 9
 
 ```json
 {"result": [{"approve_comment": "string","approve_date": "2024-11-27T12:31:43.621Z","auto_approve_date": "2024-11-27T12:31:43.621Z","cancellation_id": 0,"cancellation_initiator": "OZON","cancellation_reason": {"id": 0,"name": "string"},"cancellation_reason_message": "string","cancelled_at": "2024-11-27T12:31:43.621Z","order_date": "2024-11-27T12:31:43.621Z","posting_number": "string","state": {"id": 0,"name": "string","state": "ALL"},"tpl_integration_type": "string"}],"counter": "1","last_id": 283784254}

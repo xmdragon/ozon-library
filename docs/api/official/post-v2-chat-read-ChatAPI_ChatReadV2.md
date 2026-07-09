@@ -23,15 +23,23 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-chat_id required string 聊天识别码。 from_message_idinteger <uint64> 信息识别码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `chat_id` required | string 聊天识别码。 |
+| `from_message_id` | integer <uint64> 信息识别码。 |
 
 ### 表格 2
 
-unread_countinteger <int64> 聊天中未读消息的数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `unread_count` | integer <int64> 聊天中未读消息的数量。 |
 
 ## 示例
 

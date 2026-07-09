@@ -23,29 +23,52 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-offer_id required string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 product_idinteger <int64> Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `offer_id` required | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 2
 
-resultobject descriptionstring 描述。 idinteger <int64> 识别码。 namestring 名称。 offer_idstring 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object |
+| `description` | string 描述。 |
+| `id` | integer <int64> 识别码。 |
+| `name` | string 名称。 |
+| `offer_id` | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 3
 
-descriptionstring 描述。 idinteger <int64> 识别码。 namestring 名称。 offer_idstring 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `description` | string 描述。 |
+| `id` | integer <int64> 识别码。 |
+| `name` | string 名称。 |
+| `offer_id` | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
 ```json
 {"offer_id": "5","product_id": 73453843}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": {"id": 73453843,"offer_id": "5","name": "狗狗训练课程 \"三周内拥有乖顺的狗\"","description": "快速课程为全课程的缩减版 \"狗： 训练教程\", 给予最基础的知识、技能、能力。这是迈出训狗教学第一步的最佳选择！<br/><br/>快速课程带来什么:<ul><li>与狗狗交流 </li></ul>快速课程将要结束之时，您将获得在任何时候都伴您左右的温顺小狗陪伴者。<ul><li>安全信心</li></ul>理想狗狗: 再也不会挣脱狗绳、追赶猫猫、吃街上的食物等。<ul><li>Комфортная жизнь</li></ul>更高水平的沟通、对动物行为没有愤怒、喊叫、不满。"}}

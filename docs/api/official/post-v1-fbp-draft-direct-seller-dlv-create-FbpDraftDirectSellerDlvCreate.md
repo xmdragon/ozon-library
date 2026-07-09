@@ -22,11 +22,20 @@
 
 ### 表格 0
 
-bundle_id required string 已验证商品清单的标识符。 delivery_details required object 配送详情。 package_units_count required integer <int32> 货位数量。 warehouse_id required integer <int64> 卖家仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `bundle_id` required | string 已验证商品清单的标识符。 |
+| `delivery_details` required | object 配送详情。 |
+| `package_units_count` required | integer <int32> 货位数量。 |
+| `warehouse_id` required | integer <int64> 卖家仓库标识符。 |
 
 ### 表格 1
 
-draft_idinteger <int64> 草稿标识符。 row_versioninteger <int64> 草稿的当前版本标识符。 supply_idstring 供货申请标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `draft_id` | integer <int64> 草稿标识符。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` | string 供货申请标识符。 |
 
 ## 示例
 

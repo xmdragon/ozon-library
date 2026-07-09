@@ -23,15 +23,25 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于获取下一批数据的指针。 filterobject 筛选器。 limit required integer <int32> [ 1 .. 1000 ] Default: 1000 响应中记录数量的限制。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于获取下一批数据的指针。 |
+| `filter` | object 筛选器。 |
+| `limit` required | integer <int32> [ 1 .. 1000 ] Default: 1000 响应中记录数量的限制。 |
 
 ### 表格 2
 
-arrival_passesArray of objects 运输通行证列表。 cursorstring 用于获取下一批数据的指针。 如果此参数为空，则没有更多数据。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `arrival_passes` | Array of objects 运输通行证列表。 |
+| `cursor` | string 用于获取下一批数据的指针。 如果此参数为空，则没有更多数据。 |
 
 ## 示例
 

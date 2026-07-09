@@ -22,17 +22,32 @@
 
 ### 表格 0
 
-enabledboolean 策略状态： true —— 打开， false —— 关闭。 strategy_id required string 策略ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `enabled` | boolean 策略状态： true —— 打开， false —— 关闭。 |
+| `strategy_id` required | string 策略ID。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
+```text
+false
+```
+
+### 示例 2
+
 ```json
 {"strategy_id": "c7516438-7124-4e2c-85d3-ccd92b6b9b65","enabled": true}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 { }

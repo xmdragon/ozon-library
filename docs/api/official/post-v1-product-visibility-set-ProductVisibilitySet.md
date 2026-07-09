@@ -22,11 +22,16 @@
 
 ### 表格 0
 
-item_placement required Array of objects 商品可见性信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `item_placement` required | Array of objects 商品可见性信息。 |
 
 ### 表格 1
 
-itemsArray of objects 商品可见性信息。 items_errorsArray of objects 存在错误的商品。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects 商品可见性信息。 |
+| `items_errors` | Array of objects 存在错误的商品。 |
 
 ## 示例
 

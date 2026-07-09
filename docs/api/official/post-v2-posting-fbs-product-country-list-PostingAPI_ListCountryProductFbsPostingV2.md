@@ -22,15 +22,24 @@
 
 ### 表格 0
 
-name_searchstring 按行过滤。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `name_search` | string 按行过滤。 |
 
 ### 表格 1
 
-resultArray of objects 制造国和ISO代码列表。 Array ()namestring 国家俄语名称 country_iso_codestring ISO国家代码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 制造国和ISO代码列表。 |
+| `name` | string 国家俄语名称 |
+| `country_iso_code` | string ISO国家代码。 |
 
 ### 表格 2
 
-namestring 国家俄语名称 country_iso_codestring ISO国家代码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `name` | string 国家俄语名称 |
+| `country_iso_code` | string ISO国家代码。 |
 
 ## 示例
 

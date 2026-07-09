@@ -21,11 +21,20 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-allinteger <int64> 问题总数。 newinteger <int64> 新问题数量。 processedinteger <int64> 已处理问题数量。 unprocessedinteger <int64> 未处理问题数量。 viewedinteger <int64> 已查看问题数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `all` | integer <int64> 问题总数。 |
+| `new` | integer <int64> 新问题数量。 |
+| `processed` | integer <int64> 已处理问题数量。 |
+| `unprocessed` | integer <int64> 未处理问题数量。 |
+| `viewed` | integer <int64> 已查看问题数量。 |
 
 ## 示例
 

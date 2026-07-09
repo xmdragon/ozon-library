@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-date_end required string <date-time> 促销活动结束日期与时间。 date_start required string <date-time> 促销活动开始日期与时间。 discount_type required string Enum: "PERCENT" "CURRENCY" 折扣类型： PERCENT——百分比折扣； CURRENCY——按金额折扣。 discount_value required number <float> 折扣幅度。 min_order_amount required number <double> 折扣生效的订单金额门槛。 titlestring [ 1 .. 256 ] characters 促销活动名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `date_end` required | string <date-time> 促销活动结束日期与时间。 |
+| `date_start` required | string <date-time> 促销活动开始日期与时间。 |
+| `discount_type` required | string Enum: "PERCENT" "CURRENCY" 折扣类型： PERCENT——百分比折扣； CURRENCY——按金额折扣。 |
+| `discount_value` required | number <float> 折扣幅度。 |
+| `min_order_amount` required | number <double> 折扣生效的订单金额门槛。 |
+| `title` | string [ 1 .. 256 ] characters 促销活动名称。 |
 
 ### 表格 2
 
-action_idinteger <uint64> 促销活动标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` | integer <uint64> 促销活动标识符。 |
 
 ## 示例
 

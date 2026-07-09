@@ -23,29 +23,52 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required string 发货号。 products required Array of objects 商品清单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 发货号。 |
+| `products` required | Array of objects 商品清单。 |
 
 ### 表格 2
 
-productsArray of objects 商品清单。 Array ()errorstring 错误代码。 exemplarsArray of objects 副本信息。 product_idinteger <int64> Ozon系统中的商品ID — SKU。 validboolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `products` | Array of objects 商品清单。 |
+| `error` | string 错误代码。 |
+| `exemplars` | Array of objects 副本信息。 |
+| `product_id` | integer <int64> Ozon系统中的商品ID — SKU。 |
+| `valid` | boolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。 |
 
 ### 表格 3
 
-errorstring 错误代码。 exemplarsArray of objects 副本信息。 product_idinteger <int64> Ozon系统中的商品ID — SKU。 validboolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | string 错误代码。 |
+| `exemplars` | Array of objects 副本信息。 |
+| `product_id` | integer <int64> Ozon系统中的商品ID — SKU。 |
+| `valid` | boolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"posting_number": "string","products": [{"exemplars": [{"gtd": "string","marks": [{"mark": "string","mark_type": "string"}],"rnpt": "string"}],"product_id": 0}]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"products": [{"error": "string","exemplars": [{"errors": ["string"],"gtd": "string","marks": [{"errors": ["string"],"mark": "string","mark_type": "string","valid": true}],"rnpt": "string","valid": true}],"product_id": 0,"valid": true}]}

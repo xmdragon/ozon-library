@@ -23,15 +23,25 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-limit required string <int64> <= 50 每页的结果数量。 offset required string <int64> <= 1000 响应中将被跳过的项目数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `limit` required | string <int64> <= 50 每页的结果数量。 |
+| `offset` required | string <int64> <= 1000 响应中将被跳过的项目数量。 |
 
 ### 表格 2
 
-offsetstring <int64> 每页显示的搜索查询数量。 search_queriesArray of objects 搜索查询信息。 totalstring <int64> 搜索查询总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `offset` | string <int64> 每页显示的搜索查询数量。 |
+| `search_queries` | Array of objects 搜索查询信息。 |
+| `total` | string <int64> 搜索查询总数。 |
 
 ## 示例
 

@@ -23,25 +23,43 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 后续数据的选择标志。 limit required integer <uint64> <= 1000 响应中返回的值数量。 offer_idArray of strings <= 1000 items 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 sku required Array of strings <int64> <= 1000 items Ozon系统中的商品标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 后续数据的选择标志。 |
+| `limit` required | integer <uint64> <= 1000 响应中返回的值数量。 |
+| `offer_id` | Array of strings <= 1000 items 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
+| `sku` required | Array of strings <int64> <= 1000 items Ozon系统中的商品标识符——SKU。 |
 
 ### 表格 2
 
-cursorstring 用于获取下一批数据的指针。 has_nextboolean 如果响应中未返回所有商品，则为true。 productsArray of objects 商品库存。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于获取下一批数据的指针。 |
+| `has_next` | boolean 如果响应中未返回所有商品，则为true。 |
+| `products` | Array of objects 商品库存。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"cursor": "string","limit": 0,"offer_id": ["string"],"sku": ["string"]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"cursor": "string","has_next": true,"products": [{"free_stock": 0,"offer_id": "string","present": 0,"product_id": 0,"reserved": 0,"sku": 0,"warehouse_id": 0,"warehouse_name": "string"}]}

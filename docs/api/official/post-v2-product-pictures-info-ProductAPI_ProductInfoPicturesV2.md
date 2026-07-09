@@ -23,29 +23,55 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_id required Array of strings <int64> <= 1000 items 商品识别码的清单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` required | Array of strings <int64> <= 1000 items 商品识别码的清单。 |
 
 ### 表格 2
 
-itemsArray of objects 商品图片。 Array ()product_idinteger <int64> Ozon系统中商品的标识符 — product_id。 primary_photoArray of strings 主图链接。 photoArray of strings 商品照片链接。 color_photoArray of strings 上传的颜色样本链接。 photo_360Array of strings 360度图片链接。 errorsArray of objects 商品图片相关错误列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects 商品图片。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `primary_photo` | Array of strings 主图链接。 |
+| `photo` | Array of strings 商品照片链接。 |
+| `color_photo` | Array of strings 上传的颜色样本链接。 |
+| `photo_360` | Array of strings 360度图片链接。 |
+| `errors` | Array of objects 商品图片相关错误列表。 |
 
 ### 表格 3
 
-product_idinteger <int64> Ozon系统中商品的标识符 — product_id。 primary_photoArray of strings 主图链接。 photoArray of strings 商品照片链接。 color_photoArray of strings 上传的颜色样本链接。 photo_360Array of strings 360度图片链接。 errorsArray of objects 商品图片相关错误列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `primary_photo` | Array of strings 主图链接。 |
+| `photo` | Array of strings 商品照片链接。 |
+| `color_photo` | Array of strings 上传的颜色样本链接。 |
+| `photo_360` | Array of strings 360度图片链接。 |
+| `errors` | Array of objects 商品图片相关错误列表。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
 ```json
 {"product_id": ["89898989"]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"items": [{"product_id": 100500,"primary_photo": ["https://test-test.ru/images/products/100500/primary.jpg"],"photo": ["https://test-test.ru/images/products/100500/photo1.jpg","https://test-test.ru/images/products/100500/photo2.jpg"],"color_photo": ["https://test-test.ru/images/products/100500/color_red.jpg","https://test-test.ru/images/products/100500/color_blue.jpg"],"photo_360": ["https://test-test.ru/images/products/100500/360_view1.jpg","https://test-test.ru/images/products/100500/360_view2.jpg"],"errors": [{"message": "无法上传附加图片：文件大小超限","url": "https://test-test.ru/api/v1/products/100500/errors/12345"},{"message": "缺少颜色“绿色”的描述","url": "https://test-test.ru/api/v1/products/100500/errors/12346"}]}]}

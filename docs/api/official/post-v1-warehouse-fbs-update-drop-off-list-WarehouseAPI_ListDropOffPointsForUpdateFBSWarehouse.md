@@ -22,15 +22,33 @@
 
 ### 表格 0
 
-searchobject 搜索参数。 warehouse_id required integer <int64> 现有FBS仓库的筛选条件。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `search` | object 搜索参数。 |
+| `warehouse_id` required | integer <int64> 现有FBS仓库的筛选条件。 |
 
 ### 表格 1
 
-pointsArray of objects 点位列表。 Array ()addressstring 揽收点地址。 coordinatesobject 揽收点坐标。 discount_percentnumber <float> 交付货件的折扣百分比。 idstring 揽收点标识符。 last_transit_time_localobject 为获得发运折扣，需要在此时间前交付货件。 typestring Enum: "PVZ" "PPZ" "SC" 揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `points` | Array of objects 点位列表。 |
+| `address` | string 揽收点地址。 |
+| `coordinates` | object 揽收点坐标。 |
+| `discount_percent` | number <float> 交付货件的折扣百分比。 |
+| `id` | string 揽收点标识符。 |
+| `last_transit_time_local` | object 为获得发运折扣，需要在此时间前交付货件。 |
+| `type` | string Enum: "PVZ" "PPZ" "SC" 揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。 |
 
 ### 表格 2
 
-addressstring 揽收点地址。 coordinatesobject 揽收点坐标。 discount_percentnumber <float> 交付货件的折扣百分比。 idstring 揽收点标识符。 last_transit_time_localobject 为获得发运折扣，需要在此时间前交付货件。 typestring Enum: "PVZ" "PPZ" "SC" 揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `address` | string 揽收点地址。 |
+| `coordinates` | object 揽收点坐标。 |
+| `discount_percent` | number <float> 交付货件的折扣百分比。 |
+| `id` | string 揽收点标识符。 |
+| `last_transit_time_local` | object 为获得发运折扣，需要在此时间前交付货件。 |
+| `type` | string Enum: "PVZ" "PPZ" "SC" 揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。 |
 
 ## 示例
 
@@ -48,11 +66,17 @@ PPZ
 
 ### 示例 2
 
+```text
+SC
+```
+
+### 示例 3
+
 ```json
 {"search": {"address": "москва","types": ["PPZ"]},"warehouse_id": 0}
 ```
 
-### 示例 3
+### 示例 4
 
 ```json
 {"points": [{"address": "Россия, Москва, Москва, Россия, г. Москва, Никольская улица, 7-9 строение 4","discount_percent": 1,"id": "1020002487458000","last_transit_time_local": {"hours": 12,"minutes": 0,"nanos": 0,"seconds": 0},"coordinates": {"latitude": 55.756107,"longitude": 37.620426},"type": "PVZ"}]}

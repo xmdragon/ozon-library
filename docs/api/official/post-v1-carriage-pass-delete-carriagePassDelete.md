@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-arrival_pass_ids required Array of strings <int64> 通行证列表。 carriage_id required integer <int64> 运输ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `arrival_pass_ids` required | Array of strings <int64> 通行证列表。 |
+| `carriage_id` required | integer <int64> 运输ID。 |
 
 ## 示例
 

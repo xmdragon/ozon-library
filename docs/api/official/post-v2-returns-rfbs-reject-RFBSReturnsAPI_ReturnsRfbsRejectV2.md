@@ -23,21 +23,52 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-return_id required integer <int64> 退货申请的标识符。 commentstring 备注。 如果 /v2/returns/rfbs/get 方法的响应中 rejection_reason.is_comment_required 参数为 true，则传递备注。 rejection_reason_id required integer <int64> 取消原因的标识符。 从 /v2/returns/rfbs/get 响应中获取的原因列表中传递标识符，参数为 rejection_reason。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `return_id` required | integer <int64> 退货申请的标识符。 |
+| `comment` | string 备注。 如果 /v2/returns/rfbs/get 方法的响应中 rejection_reason.is_comment_required 参数为 true，则传递备注。 |
+| `rejection_reason_id` required | integer <int64> 取消原因的标识符。 从 /v2/returns/rfbs/get 响应中获取的原因列表中传递标识符，参数为 rejection_reason。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+comment
+```
+
+### 示例 1
+
+```text
+rejection_reason.is_comment_required
+```
+
+### 示例 2
+
+```text
+true
+```
+
+### 示例 3
+
+```text
+rejection_reason
+```
+
+### 示例 4
+
 ```json
 {"return_id": 0,"comment": "string","rejection_reason_id": 0}
 ```
 
-### 示例 1
+### 示例 5
 
 ```json
 { }

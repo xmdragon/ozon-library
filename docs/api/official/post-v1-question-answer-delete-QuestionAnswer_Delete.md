@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-answer_id required string 回答标识符。 sku required integer <int64> Ozon 系统中的商品标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `answer_id` required | string 回答标识符。 |
+| `sku` required | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ## 示例
 

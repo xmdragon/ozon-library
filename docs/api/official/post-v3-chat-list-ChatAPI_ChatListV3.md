@@ -23,25 +23,55 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filterobject 按聊天过滤。 limit required integer <int64> 回答中值的数量。默认值为30。最大值是100。 cursorstring 后续数据的选择标志。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` | object 按聊天过滤。 |
+| `limit` required | integer <int64> 回答中值的数量。默认值为30。最大值是100。 |
+| `cursor` | string 后续数据的选择标志。 |
 
 ### 表格 2
 
-chatsArray of objects 聊天数据。 total_unread_countinteger <int64> 未读信息总数。 cursorstring 后续数据的选择标志。 has_nextboolean 表示响应中未包含全部聊天: true — 使用新的 cursor 参数重新发送请求以获取剩余聊天; false — 响应中已包含匹配请求筛选器的所有聊天。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `chats` | Array of objects 聊天数据。 |
+| `total_unread_count` | integer <int64> 未读信息总数。 |
+| `cursor` | string 后续数据的选择标志。 |
+| `has_next` | boolean 表示响应中未包含全部聊天: true — 使用新的 cursor 参数重新发送请求以获取剩余聊天; false — 响应中已包含匹配请求筛选器的所有聊天。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
+```text
+cursor
+```
+
+### 示例 2
+
+```text
+false
+```
+
+### 示例 3
+
 ```json
 {"filter": {"chat_status": "OPENED","unread_only": true},"limit": 1,"cursor": "304000402034"}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"chats": [{"chat": {"created_at": "2022-07-22T08:07:19.581Z","chat_id": "5e767w03-b400-4y1b-a841-75319ca8a5c8","chat_status": "OPENED","chat_type": "SELLER_SUPPORT"},"first_unread_message_id": "3000000000118021931","last_message_id": "30000000001280042740","unread_count": 1}],"total_unread_count": 5,"cursor": "30000002342123123","has_next": "true"}

@@ -22,21 +22,33 @@
 
 ### 表格 0
 
-page required integer <int64> 卸载策略的列表页面。 最小值为1。 limit required integer <int64> 每页的最大策略数。有效值是从1到50。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `page` required | integer <int64> 卸载策略的列表页面。 最小值为1。 |
+| `limit` required | integer <int64> 每页的最大策略数。有效值是从1到50。 |
 
 ### 表格 1
 
-strategiesArray of objects 策略列表。 totalinteger <int32> 策略总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `strategies` | Array of objects 策略列表。 |
+| `total` | integer <int32> 策略总数。 |
 
 ## 示例
 
-### 示例 0
+### 示例 2
+
+```text
+50
+```
+
+### 示例 3
 
 ```json
 {"page": 1,"limit": 20}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"strategies": [{"id": "2fb3e6a3-3db5-4bb4-8430-b2de39fc3265","name": "策略_来自_CID7","type": "COMP_PRICE","update_type": "strategyEnabled","updated_at": "2024-05-02 14:47:02.594774+00","products_count": 1,"competitors_count": 1,"enabled": true}],"total": 5}

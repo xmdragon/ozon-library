@@ -23,37 +23,73 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filter required object 筛选器。 limit required integer <int64> <= 1000 每页显示的数量。 offsetinteger <int64> 在响应中将被跳过的项目数量。例如，如果 offset = 10，则响应将从第 11 个找到的项目开始。 sort_dirstring Enum: "ASC" "DESC" 排序方向： ASC——升序， DESC——降序。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` required | object 筛选器。 |
+| `limit` required | integer <int64> <= 1000 每页显示的数量。 |
+| `offset` | integer <int64> 在响应中将被跳过的项目数量。例如，如果 offset = 10，则响应将从第 11 个找到的项目开始。 |
+| `sort_dir` | string Enum: "ASC" "DESC" 排序方向： ASC——升序， DESC——降序。 |
 
 ### 表格 2
 
-has_nextboolean 响应中是否包含全部商品： true——请使用新的 offset值重新请求以获取剩余数据； false——响应中已包含所有值。 productsArray of objects 商品列表。 products_countinteger <int32> 商品数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `has_next` | boolean 响应中是否包含全部商品： true——请使用新的 offset值重新请求以获取剩余数据； false——响应中已包含所有值。 |
+| `products` | Array of objects 商品列表。 |
+| `products_count` | integer <int32> 商品数量。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-ASC
+offset = 10
 ```
 
 ### 示例 1
 
 ```text
-DESC
+ASC
 ```
 
 ### 示例 2
+
+```text
+DESC
+```
+
+### 示例 3
+
+```text
+true
+```
+
+### 示例 4
+
+```text
+offset
+```
+
+### 示例 5
+
+```text
+false
+```
+
+### 示例 6
 
 ```json
 {"filter": {"cutoff_from": "2019-08-24T14:15:22Z","cutoff_to": "2019-08-24T14:15:22Z","delivery_method_id": 0},"limit": 0,"offset": 0,"sort_dir": "ASC"}
 ```
 
-### 示例 3
+### 示例 7
 
 ```json
 {"products": [{"sku": 1000123456,"offer_id": "test-offer-123456","product_name": "string","picture_url": "https://test-example.com/images/product-123456.jpg","quantity": 15,"postings": [{"posting_number": "789456123-0002-3","quantity": 2},{"posting_number": "123456789-0001-1","quantity": 3},{"posting_number": "456123789-0003-5","quantity": 1}]},{"sku": 1000123457,"offer_id": "test-offer-123457","product_name": "string","picture_url": "https://test-example.com/images/product-123457.jpg","quantity": 8,"postings": [{"posting_number": "321654987-0004-2","quantity": 2},{"posting_number": "987321654-0005-7","quantity": 1},{"posting_number": "789456123-0006-8","quantity": 3},{"posting_number": "123456789-0007-9","quantity": 2}]},{"sku": 1000123458,"offer_id": "test-offer-123458","product_name": "string","picture_url": "https://test-example.com/images/product-123458.jpg","quantity": 23,"postings": [{"posting_number": "456123789-0008-1","quantity": 5},{"posting_number": "321654987-0009-3","quantity": 4},{"posting_number": "987321654-0010-2","quantity": 3},{"posting_number": "789456123-0011-4","quantity": 6},{"posting_number": "123456789-0012-6","quantity": 5}]},{"sku": 1000123459,"offer_id": "test-offer-123459","product_name": "string","picture_url": "https://test-example.com/images/product-123459.jpg","quantity": 5,"postings": [{"posting_number": "456123789-0013-8","quantity": 2},{"posting_number": "321654987-0014-1","quantity": 3}]},{"sku": 1000123460,"offer_id": "test-offer-123460","product_name": "string","picture_url": "https://test-example.com/images/product-123460.jpg","quantity": 12,"postings": [{"posting_number": "987321654-0015-3","quantity": 4},{"posting_number": "789456123-0016-5","quantity": 3},{"posting_number": "123456789-0017-7","quantity": 5}]}],"products_count": 5,"has_next": true}

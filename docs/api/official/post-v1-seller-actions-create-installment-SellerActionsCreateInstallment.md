@@ -23,15 +23,23 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-date_start required string <date-time> 促销活动开始日期与时间。 title required string [ 1 .. 256 ] characters 促销活动名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `date_start` required | string <date-time> 促销活动开始日期与时间。 |
+| `title` required | string [ 1 .. 256 ] characters 促销活动名称。 |
 
 ### 表格 2
 
-action_idinteger <uint64> 促销活动标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` | integer <uint64> 促销活动标识符。 |
 
 ## 示例
 

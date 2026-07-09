@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-posting_number required string 货件编号。 postings required Array of objects 要拆分订单的货件项列表。每个请求只能拆分一个订单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 货件编号。 |
+| `postings` required | Array of objects 要拆分订单的货件项列表。每个请求只能拆分一个订单。 |
 
 ### 表格 1
 
-parent_postingobject 原始货件的信息。 postingsArray of objects 订单被拆分后的货件列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `parent_posting` | object 原始货件的信息。 |
+| `postings` | Array of objects 订单被拆分后的货件列表。 |
 
 ## 示例
 

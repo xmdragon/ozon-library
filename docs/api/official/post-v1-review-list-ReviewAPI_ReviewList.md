@@ -22,11 +22,20 @@
 
 ### 表格 0
 
-last_idstring 页面中最后一个评价的标识符。 limit required integer <int32> 限制回复中的值数量。最少 — 20；最多 — 100。 sort_dirstring 排序方向： ASC — 按升序。 DESC — 按降序。 statusstring 评价状态： ALL — 全部， UNPROCESSED — 未处理的， PROCESSED — 已处理的。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `last_id` | string 页面中最后一个评价的标识符。 |
+| `limit` required | integer <int32> 限制回复中的值数量。最少 — 20；最多 — 100。 |
+| `sort_dir` | string 排序方向： ASC — 按升序。 DESC — 按降序。 |
+| `status` | string 评价状态： ALL — 全部， UNPROCESSED — 未处理的， PROCESSED — 已处理的。 |
 
 ### 表格 1
 
-has_nextboolean true：回复中未返回所有评价。 last_idstring 页面中最后一个评价的标识符。 reviewsArray of objects 评价信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `has_next` | boolean true：回复中未返回所有评价。 |
+| `last_id` | string 页面中最后一个评价的标识符。 |
+| `reviews` | Array of objects 评价信息。 |
 
 ## 示例
 
@@ -62,11 +71,17 @@ PROCESSED
 
 ### 示例 5
 
+```text
+true
+```
+
+### 示例 6
+
 ```json
 {"last_id": "","limit": 100,"sort_dir": "ASC","status": "ALL"}
 ```
 
-### 示例 6
+### 示例 7
 
 ```json
 {"has_next": true,"last_id": "string","reviews": [{"comments_amount": 0,"id": "string","is_rating_participant": true,"order_status": "string","photos_amount": 0,"published_at": "2019-08-24T14:15:22Z","rating": 0,"sku": 0,"status": "string","text": "string","videos_amount": 0}]}

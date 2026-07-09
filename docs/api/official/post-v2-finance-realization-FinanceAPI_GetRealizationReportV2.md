@@ -23,19 +23,32 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-month required integer <int32> 月。 year required integer <int32> 年。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `month` required | integer <int32> 月。 |
+| `year` required | integer <int32> 年。 |
 
 ### 表格 2
 
-resultobject 请求结果。 headerobject 报告标题页。 rowsArray of objects 报告表格。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `header` | object 报告标题页。 |
+| `rows` | Array of objects 报告表格。 |
 
 ### 表格 3
 
-headerobject 报告标题页。 rowsArray of objects 报告表格。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `header` | object 报告标题页。 |
+| `rows` | Array of objects 报告表格。 |
 
 ## 示例
 

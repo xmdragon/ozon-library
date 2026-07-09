@@ -23,25 +23,42 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于选择下一批数据的指针。 filter required object 筛选器。 limit required integer <int64> <= 100 每页显示的数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。 |
+| `filter` required | object 筛选器。 |
+| `limit` required | integer <int64> <= 100 每页显示的数量。 |
 
 ### 表格 2
 
-can_print_mass_labelboolean true，前提是可以批量打印标签。 cursorstring 用于选择下一批数据的指针。如果该参数为空，则没有更多数据了。 postingsArray of objects 货件列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `can_print_mass_label` | boolean true，前提是可以批量打印标签。 |
+| `cursor` | string 用于选择下一批数据的指针。如果该参数为空，则没有更多数据了。 |
+| `postings` | Array of objects 货件列表。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"cursor": "string","filter": {"carriage_id": 0,"cutoff_from": "2019-08-24T14:15:22Z","cutoff_to": "2019-08-24T14:15:22Z","delivery_method_id": 0},"limit": 0}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"can_print_mass_label": true,"cursor": "string","postings": [{"assembly_code": "string","can_print_label": true,"posting_number": "string","products": [{"offer_id": "string","picture_url": "string","product_name": "string","quantity": 0,"sku": 0}]}]}

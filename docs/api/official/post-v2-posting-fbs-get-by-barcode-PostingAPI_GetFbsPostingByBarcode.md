@@ -23,29 +23,63 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-barcode required string 货运条形码。可以使用以下方法获取： /v3/posting/fbs/get、/v3/posting/fbs/list 和 /v3/posting/fbs/unfulfilled/list， 在barcodes数组中获取数据。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `barcode` required | string 货运条形码。可以使用以下方法获取： /v3/posting/fbs/get、/v3/posting/fbs/list 和 /v3/posting/fbs/unfulfilled/list， 在barcodes数组中获取数据。 |
 
 ### 表格 2
 
-resultobject 请求结果。 barcodesobject 货件条形码。 cancel_reason_idinteger <int64> 取消装运原因ID。 created_atstring <date-time> 创建装运日期和时间。 in_process_atstring <date-time> 开始处理货件的日期和时间。 order_idinteger <int64> 货运所属订单ID。 order_numberstring 货运所属的订单号。 posting_numberstring 货运号。 productsArray of objects 货运商品列表。 shipment_datestring <date-time> 必须收取货件的日期和时间。 如果在此日期之前未完成配货，则货运自动取消。 statusstring 货运状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `barcodes` | object 货件条形码。 |
+| `cancel_reason_id` | integer <int64> 取消装运原因ID。 |
+| `created_at` | string <date-time> 创建装运日期和时间。 |
+| `in_process_at` | string <date-time> 开始处理货件的日期和时间。 |
+| `order_id` | integer <int64> 货运所属订单ID。 |
+| `order_number` | string 货运所属的订单号。 |
+| `posting_number` | string 货运号。 |
+| `products` | Array of objects 货运商品列表。 |
+| `shipment_date` | string <date-time> 必须收取货件的日期和时间。 如果在此日期之前未完成配货，则货运自动取消。 |
+| `status` | string 货运状态。 |
 
 ### 表格 3
 
-barcodesobject 货件条形码。 cancel_reason_idinteger <int64> 取消装运原因ID。 created_atstring <date-time> 创建装运日期和时间。 in_process_atstring <date-time> 开始处理货件的日期和时间。 order_idinteger <int64> 货运所属订单ID。 order_numberstring 货运所属的订单号。 posting_numberstring 货运号。 productsArray of objects 货运商品列表。 shipment_datestring <date-time> 必须收取货件的日期和时间。 如果在此日期之前未完成配货，则货运自动取消。 statusstring 货运状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `barcodes` | object 货件条形码。 |
+| `cancel_reason_id` | integer <int64> 取消装运原因ID。 |
+| `created_at` | string <date-time> 创建装运日期和时间。 |
+| `in_process_at` | string <date-time> 开始处理货件的日期和时间。 |
+| `order_id` | integer <int64> 货运所属订单ID。 |
+| `order_number` | string 货运所属的订单号。 |
+| `posting_number` | string 货运号。 |
+| `products` | Array of objects 货运商品列表。 |
+| `shipment_date` | string <date-time> 必须收取货件的日期和时间。 如果在此日期之前未完成配货，则货运自动取消。 |
+| `status` | string 货运状态。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+barcodes
+```
+
+### 示例 1
+
 ```json
 {"barcode": "20325804886000"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": {"order_id": 47558522075,"order_number": "2130415463-0013","posting_number": "2130415463-0013-1","status": "delivered","cancel_reason_id": 0,"created_at": "2025-01-29T08:58:07Z","in_process_at": "2025-01-29T08:59:40Z","shipment_date": "2025-01-29T18:00:00Z","products": [{"sku": 498274975,"name": "","quantity": 1,"offer_id": "6460551001","price": "2300.0000"}],"barcodes": {"upper_barcode": "%101%10293145035","lower_barcode": "201864523528000"}}}

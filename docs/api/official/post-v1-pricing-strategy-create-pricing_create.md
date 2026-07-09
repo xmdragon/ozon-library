@@ -22,15 +22,23 @@
 
 ### 表格 0
 
-competitors required Array of objects 竞争对手名单。 strategy_name required string 策略名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `competitors` required | Array of objects 竞争对手名单。 |
+| `strategy_name` required | string 策略名称。 |
 
 ### 表格 1
 
-resultobject 方法操作结果。 strategy_idstring 策略ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法操作结果。 |
+| `strategy_id` | string 策略ID。 |
 
 ### 表格 2
 
-strategy_idstring 策略ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `strategy_id` | string 策略ID。 |
 
 ## 示例
 

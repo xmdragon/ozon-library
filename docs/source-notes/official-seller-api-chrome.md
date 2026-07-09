@@ -14,6 +14,7 @@
 - 抽取工具：Chrome browser control + Playwright DOM evaluation。
 - 抽取 selector：`div[id^="operation/"]`。
 - 抽取字段：`operationId`、`title`、`method`、`path`、`headings`、`tables`、`examples`、`sourceUrl`。
+- `tables` 保留两种形态：`rows` 为 Chrome DOM 中 `tr` 的直接单元格结构，`text` 为兼容旧生成器的压平文本。
 - 输出文件：`indexes/official-seller-api.operations.json`。
 - 展开文档：`docs/api/official/README.md` 和 264 个逐方法 Markdown 文件。
 - 展开生成器：`tools/generate_official_api_docs.py`。
@@ -22,13 +23,14 @@
 
 - 页面由 Redoc 渲染。
 - operation block 的 DOM id 形如 `operation/ProductAPI_ProductsStocksV2`。
-- 每个 block 的文本中通常包含：
+- 每个 block 的 DOM 中通常包含：
   - 中文标题；
   - HTTP method 和 endpoint；
   - `header Parameters`；
   - `Request Body schema`；
   - `Response Schema`；
   - 请求/回复范例。
+- Redoc 嵌套表格会产生父行和子行；生成 Markdown 时优先使用 `rows`，并跳过没有字段/说明两列的单列父行，避免 GitHub 上出现长段压缩文本。
 - 当前渲染 DOM 抽取到 264 个 operation block。导航锚点数量可能更多，后续刷新时应记录 operation count 是否变化。
 - 当前已从索引展开 264 个逐方法文档；重新抽取官方页面后，应运行 `python3 tools/generate_official_api_docs.py` 更新方法页。
 

@@ -23,25 +23,42 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-limit required integer <= 200 响应中返回的值数量。 cursorstring 后续数据的选择标志。 warehouse_idsArray of strings <int64> <= 200 仓库识别符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `limit` required | integer <= 200 响应中返回的值数量。 |
+| `cursor` | string 后续数据的选择标志。 |
+| `warehouse_ids` | Array of strings <int64> <= 200 仓库识别符。 |
 
 ### 表格 2
 
-cursorstring 后续数据的选择标志。 warehousesArray of objects 仓库列表。 has_nextboolean true，前提是本次响应未返回所有数据。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 后续数据的选择标志。 |
+| `warehouses` | Array of objects 仓库列表。 |
+| `has_next` | boolean true，前提是本次响应未返回所有数据。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"cursor": "string","limit": 0,"warehouse_ids": [20605650762000]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"cursor": "string","warehouses": [{"address_info": {"address": "Россия, Московская Область, Софьино, промзона ССТ, к2, 2","latitude": 55.495093,"longitude": 38.172731,"utc": "UTC+03:00"},"carriage_label_type": "BIG","courier_comment": "","courier_phones": ["+7(999)999-99-99"],"created_at": "2025-03-11T11:57:51.811Z","first_mile": {"type": "PICK_UP","dropoff_point_id": "1020002075314000","timeslot_from": "20:59","timeslot_id": 287231,"timeslot_to": "21:00","first_mile_is_changing": false},"has_entrusted_acceptance": true,"has_postings_limit": false,"is_auto_assembly": true,"is_kgt": true,"is_rfbs": true,"is_waybill_enabled": true,"min_postings_limit": 2,"is_comfort": true,"is_express": true,"warehouse_type": "string","cut_in_time": 0,"name": "17023","phone": "+7(999)999-99-99","postings_limit": -1,"sla_cut_in": 2939,"status": "created","timetable": {"timetable_from": "2025-03-11T11:57:51.811Z","timetable_to": "2025-03-11T11:57:51.811Z","working_hours": [{"time_from": "2025-03-11T11:57:51.811Z","time_to": "2025-03-11T11:57:51.811Z"}]},"updated_at": "2025-03-11T11:57:51.811Z","warehouse_id": 20605650762000,"with_item_list": true,"working_days": ["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"]}],"has_next": "string"}

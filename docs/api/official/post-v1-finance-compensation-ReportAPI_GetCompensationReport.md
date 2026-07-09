@@ -22,15 +22,23 @@
 
 ### 表格 0
 
-date required string 报告周期格式为 YYYY-MM。 languagestring Default: "RU" 报告语言： RU — 俄语， EN — 英语。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `date` required | string 报告周期格式为 YYYY-MM。 |
+| `language` | string Default: "RU" 报告语言： RU — 俄语， EN — 英语。 |
 
 ### 表格 1
 
-resultobject 请求结果。 codestring 报告的唯一标识符。要获取报告，请将该值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `code` | string 报告的唯一标识符。要获取报告，请将该值传递到方法 /v1/report/info。 |
 
 ### 表格 2
 
-codestring 报告的唯一标识符。要获取报告，请将该值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 报告的唯一标识符。要获取报告，请将该值传递到方法 /v1/report/info。 |
 
 ## 示例
 
@@ -42,11 +50,23 @@ YYYY-MM
 
 ### 示例 1
 
+```text
+RU
+```
+
+### 示例 2
+
+```text
+EN
+```
+
+### 示例 3
+
 ```json
 {"date": "2023-09","language": "RU"}
 ```
 
-### 示例 2
+### 示例 4
 
 ```json
 {"result": {"code": "string"}}

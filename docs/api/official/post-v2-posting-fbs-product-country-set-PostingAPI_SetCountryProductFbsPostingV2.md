@@ -22,11 +22,18 @@
 
 ### 表格 0
 
-posting_number required string 货运号。 product_id required integer <int64> 产品ID。 country_iso_code required string 根据标准ISO_3166-1添加的国家的两个字母代码 制造国家列表及其ISO代码可以使用该方法获得/v2/posting/fbs/product/country/list。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 货运号。 |
+| `product_id` required | integer <int64> 产品ID。 |
+| `country_iso_code` required | string 根据标准ISO_3166-1添加的国家的两个字母代码 制造国家列表及其ISO代码可以使用该方法获得/v2/posting/fbs/product/country/list。 |
 
 ### 表格 1
 
-product_idinteger <int64> 产品ID。 is_gtd_neededboolean 有必要传送产品和货运的货物报关单（Cargo Customs Declaration）编号的标志。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` | integer <int64> 产品ID。 |
+| `is_gtd_needed` | boolean 有必要传送产品和货运的货物报关单（Cargo Customs Declaration）编号的标志。 |
 
 ## 示例
 

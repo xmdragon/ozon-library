@@ -22,11 +22,18 @@
 
 ### 表格 0
 
-code required string 货物运单标识符。 supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` required | string 货物运单标识符。 |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 1
 
-error_messagestring 错误描述。 label_urlstring 交货标签链接。 statestring Default: "STATE_TYPE_UNSPECIFIED" Enum: "STATE_TYPE_UNSPECIFIED" "IN_PROGRESS" "FINISHED" "FAILED" 生成状态： STATE_TYPE_UNSPECIFIED ——未定义； IN_PROGRESS ——进行中； FINISHED ——成功完成； FAILED ——错误。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error_message` | string 错误描述。 |
+| `label_url` | string 交货标签链接。 |
+| `state` | string Default: "STATE_TYPE_UNSPECIFIED" Enum: "STATE_TYPE_UNSPECIFIED" "IN_PROGRESS" "FINISHED" "FAILED" 生成状态： STATE_TYPE_UNSPECIFIED ——未定义； IN_PROGRESS ——进行中； FINISHED ——成功完成； FAILED ——错误。 |
 
 ## 示例
 

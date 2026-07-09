@@ -23,19 +23,53 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-discounted_skus required Array of strings <int64> 降价的商品SKU清单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `discounted_skus` required | Array of strings <int64> 降价的商品SKU清单。 |
 
 ### 表格 2
 
-itemsArray of objects 关于减价和主要商品的信息。 Array ()comment_reason_damagedstring 对损坏原因的评论。 conditionstring 商品的状态 — 新的或二手的。 condition_estimationstring 商品的状况，以1至7分为标准。 1 — 令人满意。 2 — 良好。 3 — 非常好。 4 — 优秀。 5-7 — 像新的一样。 defectsstring 商品缺陷。 discounted_skuinteger <int64> 折扣商品的SKU。 mechanical_damagestring 机械性损坏的说明。 package_damagestring 包装损坏的说明。 packaging_violationstring 篡改包装的痕迹。 reason_damagedstring 损害原因。 repairstring 商品已被修理的痕迹。 shortagestring 表示商品不完整。 skuinteger <int64> 主要商品的SKU。 warranty_typestring 商品有有效保修的证明。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects 关于减价和主要商品的信息。 |
+| `comment_reason_damaged` | string 对损坏原因的评论。 |
+| `condition` | string 商品的状态 — 新的或二手的。 |
+| `condition_estimation` | string 商品的状况，以1至7分为标准。 1 — 令人满意。 2 — 良好。 3 — 非常好。 4 — 优秀。 5-7 — 像新的一样。 |
+| `defects` | string 商品缺陷。 |
+| `discounted_sku` | integer <int64> 折扣商品的SKU。 |
+| `mechanical_damage` | string 机械性损坏的说明。 |
+| `package_damage` | string 包装损坏的说明。 |
+| `packaging_violation` | string 篡改包装的痕迹。 |
+| `reason_damaged` | string 损害原因。 |
+| `repair` | string 商品已被修理的痕迹。 |
+| `shortage` | string 表示商品不完整。 |
+| `sku` | integer <int64> 主要商品的SKU。 |
+| `warranty_type` | string 商品有有效保修的证明。 |
 
 ### 表格 3
 
-comment_reason_damagedstring 对损坏原因的评论。 conditionstring 商品的状态 — 新的或二手的。 condition_estimationstring 商品的状况，以1至7分为标准。 1 — 令人满意。 2 — 良好。 3 — 非常好。 4 — 优秀。 5-7 — 像新的一样。 defectsstring 商品缺陷。 discounted_skuinteger <int64> 折扣商品的SKU。 mechanical_damagestring 机械性损坏的说明。 package_damagestring 包装损坏的说明。 packaging_violationstring 篡改包装的痕迹。 reason_damagedstring 损害原因。 repairstring 商品已被修理的痕迹。 shortagestring 表示商品不完整。 skuinteger <int64> 主要商品的SKU。 warranty_typestring 商品有有效保修的证明。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `comment_reason_damaged` | string 对损坏原因的评论。 |
+| `condition` | string 商品的状态 — 新的或二手的。 |
+| `condition_estimation` | string 商品的状况，以1至7分为标准。 1 — 令人满意。 2 — 良好。 3 — 非常好。 4 — 优秀。 5-7 — 像新的一样。 |
+| `defects` | string 商品缺陷。 |
+| `discounted_sku` | integer <int64> 折扣商品的SKU。 |
+| `mechanical_damage` | string 机械性损坏的说明。 |
+| `package_damage` | string 包装损坏的说明。 |
+| `packaging_violation` | string 篡改包装的痕迹。 |
+| `reason_damaged` | string 损害原因。 |
+| `repair` | string 商品已被修理的痕迹。 |
+| `shortage` | string 表示商品不完整。 |
+| `sku` | integer <int64> 主要商品的SKU。 |
+| `warranty_type` | string 商品有有效保修的证明。 |
 
 ## 示例
 

@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于选择下一批数据的指针。 filterobject 用于搜索配送方式的筛选条件。 limit required integer <int64> [ 1 .. 100 ] 响应中返回的值数量。 sort_dirstring Enum: "ASC" "DESC" 排序方向： ASC：升序， DESC：降序。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。 |
+| `filter` | object 用于搜索配送方式的筛选条件。 |
+| `limit` required | integer <int64> [ 1 .. 100 ] 响应中返回的值数量。 |
+| `sort_dir` | string Enum: "ASC" "DESC" 排序方向： ASC：升序， DESC：降序。 |
 
 ### 表格 2
 
-cursorstring 用于选择下一批数据的指针。 has_nextboolean true，表示响应中未返回全部配送方式。 delivery_methodsArray of objects 配送方式。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。 |
+| `has_next` | boolean true，表示响应中未返回全部配送方式。 |
+| `delivery_methods` | Array of objects 配送方式。 |
 
 ## 示例
 
@@ -49,11 +61,17 @@ DESC
 
 ### 示例 2
 
+```text
+true
+```
+
+### 示例 3
+
 ```json
 {"cursor": "string","filter": {"delivery_method_ids": ["string"],"provider_ids": ["string"],"status": ["NEW"],"warehouse_ids": ["string"]},"limit": 1,"sort_dir": "ASC"}
 ```
 
-### 示例 3
+### 示例 4
 
 ```json
 {"cursor": "string","has_next": true,"delivery_methods": [{"created_at": "2019-08-24T14:15:22Z","cutoff": "string","id": 0,"is_express": true,"name": "string","provider_id": 0,"sla_cut_in": 0,"status": "NEW","template_id": 0,"tpl_dropoff_point": {"address": "string","address_coordinates": {"latitude": 0,"longitude": 0},"code": "string","name": "string"},"tpl_integration_type": "string","updated_at": "2019-08-24T14:15:22Z","warehouse_id": 0}]}

@@ -21,11 +21,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-expires_atstring <date-time> 密钥到期日期。 rolesArray of objects 可用角色和方式信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `expires_at` | string <date-time> 密钥到期日期。 |
+| `roles` | Array of objects 可用角色和方式信息。 |
 
 ## 示例
 

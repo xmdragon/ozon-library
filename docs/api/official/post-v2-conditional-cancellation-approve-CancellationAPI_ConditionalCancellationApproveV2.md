@@ -21,7 +21,10 @@
 
 ### 表格 0
 
-cancellation_id required integer <int64> 取消申请标识符。 commentstring 备注。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cancellation_id` required | integer <int64> 取消申请标识符。 |
+| `comment` | string 备注。 |
 
 ## 示例
 

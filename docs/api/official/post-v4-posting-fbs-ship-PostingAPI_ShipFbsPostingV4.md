@@ -23,113 +23,89 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-packages required Array of objects 包装清单。 每个包装都包含订单分成的发货清单。 posting_number required string 发货号。 withobject 附加信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `packages` required | Array of objects 包装清单。 每个包装都包含订单分成的发货清单。 |
+| `posting_number` required | string 发货号。 |
+| `with` | object 附加信息。 |
 
 ### 表格 2
 
-additional_dataArray of objects 与发货有关的附加信息。 resultArray of strings 货运装配结果。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `additional_data` | Array of objects 与发货有关的附加信息。 |
+| `result` | Array of strings 货运装配结果。 |
 
 ## 示例
 
 ### 示例 0
 
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 2
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
+```text
+awaiting_deliver
 ```
 
 ### 示例 1
 
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 2
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
+```text
+packages
 ```
 
 ### 示例 2
 
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
+```text
+products
 ```
 
 ### 示例 3
 
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
+```text
+products
 ```
 
 ### 示例 4
+
+```text
+packages
+```
+
+### 示例 5
+
+```json
+{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 2 } ] } ], "posting_number": "89491381-0072-1" }
+```
+
+### 示例 6
+
+```json
+{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 2 } ] } ], "posting_number": "89491381-0072-1" }
+```
+
+### 示例 7
+
+```json
+{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 1 } ] }, { "products": [ { "product_id": 185479045, "quantity": 1 } ] } ], "posting_number": "89491381-0072-1" }
+```
+
+### 示例 8
+
+```json
+{ "packages": [ { "products": [ { "product_id": 185479045, "quantity": 1 } ] }, { "products": [ { "product_id": 185479045, "quantity": 1 } ] } ], "posting_number": "89491381-0072-1" }
+```
+
+### 示例 9
 
 ```json
 {"packages": [{"products": [{"product_id": 185479045,"quantity": 1}]}],"posting_number": "89491381-0072-1","with": {"additional_data": true}}
 ```
 
-### 示例 5
+### 示例 10
 
 ```json
 {"additional_data": [{"posting_number": "89491381-0072-1","products": [{"currency_code": "RUB","mandatory_mark": ["123"],"name": "string","offer_id": "17125","price": "2000","quantity": 1,"sku": 149618972}]}],"result": ["89491381-0072-1"]}

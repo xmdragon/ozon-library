@@ -23,11 +23,18 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-delivery_method_id required integer <int32> 快递方法识别号。 polygons required Array of objects 设施清单。 warehouse_location required object 仓库位置。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `delivery_method_id` required | integer <int32> 快递方法识别号。 |
+| `polygons` required | Array of objects 设施清单。 |
+| `warehouse_location` required | object 仓库位置。 |
 
 ## 示例
 

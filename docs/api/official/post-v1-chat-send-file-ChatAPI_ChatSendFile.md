@@ -23,15 +23,24 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-base64_content required string 文件为 base64 行形式。 chat_id required string 聊天识别码。 name required string 带有扩展名的文件名。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `base64_content` required | string 文件为 base64 行形式。 |
+| `chat_id` required | string 聊天识别码。 |
+| `name` required | string 带有扩展名的文件名。 |
 
 ### 表格 2
 
-resultstring 请求的处理结果。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | string 请求的处理结果。 |
 
 ## 示例
 

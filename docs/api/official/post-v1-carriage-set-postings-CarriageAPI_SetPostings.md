@@ -23,29 +23,56 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-carriage_id required integer <int64> 发运识别符。 posting_numbers required Array of strings 最新货件列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `carriage_id` required | integer <int64> 发运识别符。 |
+| `posting_numbers` required | Array of strings 最新货件列表。 |
 
 ### 表格 2
 
-resultArray of objects Array ()errorstring 错误描述。 posting_numberstring 货件编号。 resultboolean 请求处理结果：若请求处理成功，返回值为true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects |
+| `error` | string 错误描述。 |
+| `posting_number` | string 货件编号。 |
+| `result` | boolean 请求处理结果：若请求处理成功，返回值为true。 |
 
 ### 表格 3
 
-errorstring 错误描述。 posting_numberstring 货件编号。 resultboolean 请求处理结果：若请求处理成功，返回值为true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | string 错误描述。 |
+| `posting_number` | string 货件编号。 |
+| `result` | boolean 请求处理结果：若请求处理成功，返回值为true。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+等待发运
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
 ```json
 {"carriage_id": 0,"posting_numbers": ["string"]}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"result": [{"error": "string","posting_number": "string","result": true}]}

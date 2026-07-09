@@ -23,19 +23,39 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-skus required Array of strings <int64> [ 1 .. 1000 ] items SKU列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `skus` required | Array of strings <int64> [ 1 .. 1000 ] items SKU列表。 |
 
 ### 表格 2
 
-pricesArray of objects 商品价格。 Array ()customer_priceobject 网站上的商品价格。 discount_percentnumber <float> Deprecated 由 Ozon 承担的折扣比例。 offer_idstring 卖家系统中的商品标识符（商品货号）。 priceobject 商品价格（已包含促销活动或推广优惠）。 price_indexesArray of objects 价格指数。 skuinteger <int64> Ozon 系统中的商品标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `prices` | Array of objects 商品价格。 |
+| `customer_price` | object 网站上的商品价格。 |
+| `discount_percent` | number <float> Deprecated 由 Ozon 承担的折扣比例。 |
+| `offer_id` | string 卖家系统中的商品标识符（商品货号）。 |
+| `price` | object 商品价格（已包含促销活动或推广优惠）。 |
+| `price_indexes` | Array of objects 价格指数。 |
+| `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ### 表格 3
 
-customer_priceobject 网站上的商品价格。 discount_percentnumber <float> Deprecated 由 Ozon 承担的折扣比例。 offer_idstring 卖家系统中的商品标识符（商品货号）。 priceobject 商品价格（已包含促销活动或推广优惠）。 price_indexesArray of objects 价格指数。 skuinteger <int64> Ozon 系统中的商品标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `customer_price` | object 网站上的商品价格。 |
+| `discount_percent` | number <float> Deprecated 由 Ozon 承担的折扣比例。 |
+| `offer_id` | string 卖家系统中的商品标识符（商品货号）。 |
+| `price` | object 商品价格（已包含促销活动或推广优惠）。 |
+| `price_indexes` | Array of objects 价格指数。 |
+| `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ## 示例
 

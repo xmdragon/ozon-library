@@ -23,19 +23,41 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-day required integer <int32> 日。 month required integer <int32> 月。 year required integer <int32> 年。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `day` required | integer <int32> 日。 |
+| `month` required | integer <int32> 月。 |
+| `year` required | integer <int32> 年。 |
 
 ### 表格 2
 
-rowsArray of objects 报告表格。 Array ()commission_rationumber <double> 按类目划分的销售佣金比例。 delivery_commissionobject 配送佣金。 itemobject 商品信息。 return_commissionobject 商品退货佣金。 rowNumberinteger <int32> 报告中的行号。 seller_price_per_instancenumber <double> 考虑折扣后的卖家价格。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `rows` | Array of objects 报告表格。 |
+| `commission_ratio` | number <double> 按类目划分的销售佣金比例。 |
+| `delivery_commission` | object 配送佣金。 |
+| `item` | object 商品信息。 |
+| `return_commission` | object 商品退货佣金。 |
+| `rowNumber` | integer <int32> 报告中的行号。 |
+| `seller_price_per_instance` | number <double> 考虑折扣后的卖家价格。 |
 
 ### 表格 3
 
-commission_rationumber <double> 按类目划分的销售佣金比例。 delivery_commissionobject 配送佣金。 itemobject 商品信息。 return_commissionobject 商品退货佣金。 rowNumberinteger <int32> 报告中的行号。 seller_price_per_instancenumber <double> 考虑折扣后的卖家价格。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `commission_ratio` | number <double> 按类目划分的销售佣金比例。 |
+| `delivery_commission` | object 配送佣金。 |
+| `item` | object 商品信息。 |
+| `return_commission` | object 商品退货佣金。 |
+| `rowNumber` | integer <int32> 报告中的行号。 |
+| `seller_price_per_instance` | number <double> 考虑折扣后的卖家价格。 |
 
 ## 示例
 

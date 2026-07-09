@@ -23,25 +23,54 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-last_idinteger <int64> 页面上最后一个值的标识符。首次请求时请将此字段留空。 如需获取后续数据，请填写上次响应中的 last_id。 warehouse_id required integer <int64> 仓库标识符。请通过方法/v1/warehouse/warehouses-with-invalid-products获取该参数值。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `last_id` | integer <int64> 页面上最后一个值的标识符。首次请求时请将此字段留空。 如需获取后续数据，请填写上次响应中的 last_id。 |
+| `warehouse_id` required | integer <int64> 仓库标识符。请通过方法/v1/warehouse/warehouses-with-invalid-products获取该参数值。 |
 
 ### 表格 2
 
-has_nextboolean 若响应中未包含全部商品，则为true。 last_idinteger <int64> 页面上最后一个值的标识符。要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。 validation_resultsArray of objects 检查结果。 warehouse_idinteger <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `has_next` | boolean 若响应中未包含全部商品，则为true。 |
+| `last_id` | integer <int64> 页面上最后一个值的标识符。要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。 |
+| `validation_results` | Array of objects 检查结果。 |
+| `warehouse_id` | integer <int64> 仓库标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+last_id
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
+```text
+last_id
+```
+
+### 示例 3
+
 ```json
 {"last_id": 0,"warehouse_id": 0}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"has_next": true,"last_id": 0,"validation_results": [{"item": {"size": {"height_mm": 0,"length_mm": 0,"width_mm": 0},"sku": 0,"weight_g": 0},"state": "UNSPECIFIED","validation_errors": [{"characteristic": "UNSPECIFIED","restriction_price": {"currency": "string","value": 0},"restriction_vwc": 0,"template_id": 0,"type": "UNSPECIFIED"}]}],"warehouse_id": 0}

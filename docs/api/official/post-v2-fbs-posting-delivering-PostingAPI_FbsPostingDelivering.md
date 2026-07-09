@@ -23,29 +23,49 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required Array of strings 货件ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | Array of strings 货件ID。 |
 
 ### 表格 2
 
-resultArray of objects 方法操作结果。 Array ()errorstring 处理请求时出错。 posting_numberstring 发货号。 resultboolean 如果执行请求无误 — true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 方法操作结果。 |
+| `error` | string 处理请求时出错。 |
+| `posting_number` | string 发货号。 |
+| `result` | boolean 如果执行请求无误 — true。 |
 
 ### 表格 3
 
-errorstring 处理请求时出错。 posting_numberstring 发货号。 resultboolean 如果执行请求无误 — true。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | string 处理请求时出错。 |
+| `posting_number` | string 发货号。 |
+| `result` | boolean 如果执行请求无误 — true。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"posting_number": ["33920157-0018-1"]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": [{"error": [ ],"posting_number": "33920157-0018-1","result": true}]}

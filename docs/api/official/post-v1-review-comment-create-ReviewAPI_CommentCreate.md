@@ -22,21 +22,46 @@
 
 ### 表格 0
 
-mark_review_as_processedboolean 更新评论状态： true — 状态将变更为 Processed（已处理）； false — 状态不变。 parent_comment_idstring 父级评论的标识符（您要回复的评论）。 review_id required string 评价标识符。 text required string 评论内容。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `mark_review_as_processed` | boolean 更新评论状态： true — 状态将变更为 Processed（已处理）； false — 状态不变。 |
+| `parent_comment_id` | string 父级评论的标识符（您要回复的评论）。 |
+| `review_id` required | string 评价标识符。 |
+| `text` required | string 评论内容。 |
 
 ### 表格 1
 
-comment_idstring 评论标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `comment_id` | string 评论标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
+```text
+Processed
+```
+
+### 示例 2
+
+```text
+false
+```
+
+### 示例 3
+
 ```json
 {"mark_review_as_processed": true,"parent_comment_id": "string","review_id": "string","text": "string"}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"comment_id": "string"}

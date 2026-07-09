@@ -21,19 +21,51 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-resultArray of objects 方法操作结果。 Array ()idinteger <int64> 取消原因ID。 is_available_for_cancellationboolean 取消装运结果。 true, 如果请求可以取消。 titlestring 类别名称。 type_idstring 取消货件ID： buyer — 买家， seller — 卖家。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 方法操作结果。 |
+| `id` | integer <int64> 取消原因ID。 |
+| `is_available_for_cancellation` | boolean 取消装运结果。 true, 如果请求可以取消。 |
+| `title` | string 类别名称。 |
+| `type_id` | string 取消货件ID： buyer — 买家， seller — 卖家。 |
 
 ### 表格 2
 
-idinteger <int64> 取消原因ID。 is_available_for_cancellationboolean 取消装运结果。 true, 如果请求可以取消。 titlestring 类别名称。 type_idstring 取消货件ID： buyer — 买家， seller — 卖家。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `id` | integer <int64> 取消原因ID。 |
+| `is_available_for_cancellation` | boolean 取消装运结果。 true, 如果请求可以取消。 |
+| `title` | string 类别名称。 |
+| `type_id` | string 取消货件ID： buyer — 买家， seller — 卖家。 |
 
 ## 示例
 
 ### 示例 0
+
+```text
+true
+```
+
+### 示例 1
+
+```text
+buyer
+```
+
+### 示例 2
+
+```text
+seller
+```
+
+### 示例 3
 
 ```json
 {"result": [{"id": 352,"title": "在卖家仓库中已无商品","type_id": "seller","is_available_for_cancellation": true},{"id": 401,"title": "卖家拒绝了仲裁","type_id": "seller","is_available_for_cancellation": false},{"id": 402,"title": "其他（卖家的其他过错）","type_id": "seller","is_available_for_cancellation": true},{"id": 666,"title": "快递服务退货：在该区域没有快递","type_id": "seller","is_available_for_cancellation": false}]}

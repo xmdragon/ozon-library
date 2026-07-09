@@ -23,25 +23,47 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-stairways required Array of objects 多个商品的按数量折扣信息。 suppress_warningsboolean 传递 true 可忽略警告并设置折扣。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `stairways` required | Array of objects 多个商品的按数量折扣信息。 |
+| `suppress_warnings` | boolean 传递 true 可忽略警告并设置折扣。 |
 
 ### 表格 2
 
-acceptedboolean true，表示请求已接收。请使用方法/v1/product/stairway-discount/by-quantity/get来查看折扣修改结果。 errorsArray of objects 错误描述。 warningsArray of objects 警告描述。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `accepted` | boolean true，表示请求已接收。请使用方法/v1/product/stairway-discount/by-quantity/get来查看折扣修改结果。 |
+| `errors` | Array of objects 错误描述。 |
+| `warnings` | Array of objects 警告描述。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
 ```json
 {"stairways": [{"enabled": true,"sku": 0,"stairway": {"steps": [{"discount": 0,"quantity": 0,"step": 0}]}}],"suppress_warnings": true}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"accepted": true,"errors": [{"data": [{"code": "string","field": "string","message": "string","step": 0,"value": "string"}],"sku": 0}],"warnings": [{"data": [{"code": "string","field": "string","message": "string","step": 0,"value": "string"}],"sku": 0}]}

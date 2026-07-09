@@ -23,15 +23,23 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-chat_id required string 聊天识别码。 text required string plain文本格式的信息文本1到1000个字符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `chat_id` required | string 聊天识别码。 |
+| `text` required | string plain文本格式的信息文本1到1000个字符。 |
 
 ### 表格 2
 
-resultstring 请求的处理结果。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | string 请求的处理结果。 |
 
 ## 示例
 

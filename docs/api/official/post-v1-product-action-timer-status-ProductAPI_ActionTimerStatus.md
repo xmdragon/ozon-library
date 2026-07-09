@@ -23,29 +23,61 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_idsnumber <= 1000 卖家系统中的商品识别符列表——product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_ids` | number <= 1000 卖家系统中的商品识别符列表——product_id。 |
 
 ### 表格 2
 
-statusesArray of objects Array ()expired_atstring <date-time> 计时器结束时间。如果该参数为空，则没有有效的计时器。 min_price_for_auto_actions_enabledboolean 如果Ozon在添加商品至促销活动时会参考最低价格，则返回值为true。 product_idinteger <int64> 卖家系统中的商品识别符——product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `statuses` | Array of objects |
+| `expired_at` | string <date-time> 计时器结束时间。如果该参数为空，则没有有效的计时器。 |
+| `min_price_for_auto_actions_enabled` | boolean 如果Ozon在添加商品至促销活动时会参考最低价格，则返回值为true。 |
+| `product_id` | integer <int64> 卖家系统中的商品识别符——product_id。 |
 
 ### 表格 3
 
-expired_atstring <date-time> 计时器结束时间。如果该参数为空，则没有有效的计时器。 min_price_for_auto_actions_enabledboolean 如果Ozon在添加商品至促销活动时会参考最低价格，则返回值为true。 product_idinteger <int64> 卖家系统中的商品识别符——product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `expired_at` | string <date-time> 计时器结束时间。如果该参数为空，则没有有效的计时器。 |
+| `min_price_for_auto_actions_enabled` | boolean 如果Ozon在添加商品至促销活动时会参考最低价格，则返回值为true。 |
+| `product_id` | integer <int64> 卖家系统中的商品识别符——product_id。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
+```text
+product_id
+```
+
+### 示例 3
+
 ```json
 {"product_ids": 0}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"statuses": [{"expired_at": "2019-08-24T14:15:22Z","min_price_for_auto_actions_enabled": true,"product_id": 0}]}

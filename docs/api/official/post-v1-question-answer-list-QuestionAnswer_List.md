@@ -23,25 +23,47 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-last_id 页面上最后一个值的标识符。 如果是首次请求，请将该字段留空。 后续请求中，请传入上一次请求返回的 last_id。 question_id required string 问题标识符。 sku required integer <int64> Ozon 系统中的商品标识符——SKU。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `last_id` | 页面上最后一个值的标识符。 如果是首次请求，请将该字段留空。 后续请求中，请传入上一次请求返回的 last_id。 |
+| `question_id` required | string 问题标识符。 |
+| `sku` required | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ### 表格 2
 
-answersArray of objects 回答。 last_idstring 页面上最后一个值的标识符。 要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `answers` | Array of objects 回答。 |
+| `last_id` | string 页面上最后一个值的标识符。 要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+last_id
+```
+
+### 示例 1
+
+```text
+last_id
+```
+
+### 示例 2
+
 ```json
 {"last_id": "","question_id": "019228a7-91d8-76af-a73a-e989dfac7ac8","sku": 646399170}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"answers": [{"author_name": "string","id": "string","published_at": "2024-08-14T11:44:35.352Z","question_id": "string","sku": 646399170,"status_publication": "","text": "string"}],"last_id": "string"}

@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-file_uuid required string 验收证明书标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `file_uuid` required | string 验收证明书标识符。 |
 
 ### 表格 1
 
-cdn_urlstring 验收证明书链接。 errorstring Default: "ERROR_REASON_UNSPECIFIED" Enum: "ERROR_REASON_UNSPECIFIED" "INVALID_COMPANY" "FILE_NOT_FOUND" "GENERATE_TIMEOUT_REACHED" "GENERATION_ERROR" 生成错误： ERROR_REASON_UNSPECIFIED ——未定义； INVALID_COMPANY ——公司无效； FILE_NOT_FOUND ——文件未找到； GENERATE_TIMEOUT_REACHED ——超出生成时间； GENERATION_ERROR ——生成过程中出错。 statusstring Default: "STATUS_UNSPECIFIED" Enum: "STATUS_UNSPECIFIED" "NOT_EXIST" "PROCESSING" "EXIST" "ERROR" 生成状态： STATUS_UNSPECIFIED ——未定义； NOT_EXIST ——不存在； PROCESSING ——处理中； EXIST ——已完成； ERROR ——错误。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cdn_url` | string 验收证明书链接。 |
+| `error` | string Default: "ERROR_REASON_UNSPECIFIED" Enum: "ERROR_REASON_UNSPECIFIED" "INVALID_COMPANY" "FILE_NOT_FOUND" "GENERATE_TIMEOUT_REACHED" "GENERATION_ERROR" 生成错误： ERROR_REASON_UNSPECIFIED ——未定义； INVALID_COMPANY ——公司无效； FILE_NOT_FOUND ——文件未找到； GENERATE_TIMEOUT_REACHED ——超出生成时间； GENERATION_ERROR ——生成过程中出错。 |
+| `status` | string Default: "STATUS_UNSPECIFIED" Enum: "STATUS_UNSPECIFIED" "NOT_EXIST" "PROCESSING" "EXIST" "ERROR" 生成状态： STATUS_UNSPECIFIED ——未定义； NOT_EXIST ——不存在； PROCESSING ——处理中； EXIST ——已完成； ERROR ——错误。 |
 
 ## 示例
 

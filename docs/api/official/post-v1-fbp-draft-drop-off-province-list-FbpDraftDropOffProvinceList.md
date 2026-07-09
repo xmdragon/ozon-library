@@ -23,19 +23,33 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 2
 
-provincesArray of objects 省份列表。 Array ()namestring 省份名称。 points_countinteger <int32> 地图上接收点数量。 province_uuidstring 省份唯一标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `provinces` | Array of objects 省份列表。 |
+| `name` | string 省份名称。 |
+| `points_count` | integer <int32> 地图上接收点数量。 |
+| `province_uuid` | string 省份唯一标识符。 |
 
 ### 表格 3
 
-namestring 省份名称。 points_countinteger <int32> 地图上接收点数量。 province_uuidstring 省份唯一标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `name` | string 省份名称。 |
+| `points_count` | integer <int32> 地图上接收点数量。 |
+| `province_uuid` | string 省份唯一标识符。 |
 
 ## 示例
 

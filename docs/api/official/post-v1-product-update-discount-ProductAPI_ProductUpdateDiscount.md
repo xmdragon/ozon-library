@@ -23,25 +23,45 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-discount required integer <int32> 折扣力度：从3%到99%。 product_id required integer <int64> Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `discount` required | integer <int32> 折扣力度：从3%到99%。 |
+| `product_id` required | integer <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 2
 
-resultboolean 方式工作结果 true, 如果正确完成请求。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | boolean 方式工作结果 true, 如果正确完成请求。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
 ```json
 {"discount": 10,"product_id": 876763232}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"result": true}

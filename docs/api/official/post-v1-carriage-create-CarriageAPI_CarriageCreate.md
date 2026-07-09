@@ -23,25 +23,52 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-all_blr_traceableboolean true，表示需要创建包含可追溯商品的发运。 delivery_method_idinteger <int64> 配送方式标识符。 departure_datestring <date-time> 发运日期。默认值为当前日期。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `all_blr_traceable` | boolean true，表示需要创建包含可追溯商品的发运。 |
+| `delivery_method_id` | integer <int64> 配送方式标识符。 |
+| `departure_date` | string <date-time> 发运日期。默认值为当前日期。 |
 
 ### 表格 2
 
-carriage_idinteger <int64> 运输标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `carriage_id` | integer <int64> 运输标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+new
+```
+
+### 示例 1
+
+```text
+new
+```
+
+### 示例 2
+
+```text
+true
+```
+
+### 示例 3
+
 ```json
 {"all_blr_traceable": true,"delivery_method_id": 0,"departure_date": "2019-08-24T14:15:22Z"}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"carriage_id": 0}

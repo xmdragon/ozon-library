@@ -39,7 +39,7 @@
 2. 从 `id` 去掉 `operation/` 得到 `operationId`。
 3. 从块文本中匹配 `get|post|put|delete|patch` 和 `/vN/...` 路径。
 4. 收集块内 `h1` 到 `h5` 作为 headings。
-5. 收集前几个 `table` 的纯文本作为 schema/参数表。
+5. 收集 `table` 的 `tr` 直接子单元格为 `rows`，同时保留纯文本 `text` 作为兼容字段。
 6. 收集 `pre, code` 中较长的 JSON 示例和重要错误码。
 7. 写入 `indexes/official-seller-api.operations.json`。
 8. 运行 `python3 tools/generate_official_api_docs.py`，把索引展开到 `docs/api/official/`。

@@ -23,19 +23,33 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-type_idArray of strings <int64> 商品类型标识符。可通过方法 /v1/description-category/tree获取。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `type_id` | Array of strings <int64> 商品类型标识符。可通过方法 /v1/description-category/tree获取。 |
 
 ### 表格 2
 
-resultArray of objects 提示列表。 Array ()images_urlArray of strings 相似商品图片链接。 info_urlstring 指向Ozon商品橱窗的链接，其中包含相似商品及其信息。 type_idinteger <int64> 商品类型标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 提示列表。 |
+| `images_url` | Array of strings 相似商品图片链接。 |
+| `info_url` | string 指向Ozon商品橱窗的链接，其中包含相似商品及其信息。 |
+| `type_id` | integer <int64> 商品类型标识符。 |
 
 ### 表格 3
 
-images_urlArray of strings 相似商品图片链接。 info_urlstring 指向Ozon商品橱窗的链接，其中包含相似商品及其信息。 type_idinteger <int64> 商品类型标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `images_url` | Array of strings 相似商品图片链接。 |
+| `info_url` | string 指向Ozon商品橱窗的链接，其中包含相似商品及其信息。 |
+| `type_id` | integer <int64> 商品类型标识符。 |
 
 ## 示例
 

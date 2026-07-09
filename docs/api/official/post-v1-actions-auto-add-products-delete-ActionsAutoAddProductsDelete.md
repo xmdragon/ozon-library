@@ -23,25 +23,46 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-action_idinteger <uint64> 促销活动标识符。 auto_add_datestring <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 product_idsArray of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` | integer <uint64> 促销活动标识符。 |
+| `auto_add_date` | string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 |
+| `product_ids` | Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即product_id。 |
 
 ### 表格 2
 
-product_idsArray of strings <uint64> 已从自动添加中删除的商品ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_ids` | Array of strings <uint64> 已从自动添加中删除的商品ID。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+result.auto_add_dates
+```
+
+### 示例 1
+
+```text
+product_id
+```
+
+### 示例 2
+
 ```json
 {"action_id": "250204","auto_add_date": "2035-08-28T14:00:00Z","product_ids": ["14914"]}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"product_ids": ["14914"]}

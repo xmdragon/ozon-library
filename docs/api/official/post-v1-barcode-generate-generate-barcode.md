@@ -22,15 +22,28 @@
 
 ### 表格 0
 
-product_ids required Array of strings <int64> 需要生成条形码的商品标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_ids` required | Array of strings <int64> 需要生成条形码的商品标识符。 |
 
 ### 表格 1
 
-errorsArray of objects 生成条形码时出现的错误。 Array ()codestring 错误代码。 errorstring 错误描述。 barcodestring 生成条形码时出错的条形码。 product_idinteger <int64> 未能成功生成条形码的商品标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `errors` | Array of objects 生成条形码时出现的错误。 |
+| `code` | string 错误代码。 |
+| `error` | string 错误描述。 |
+| `barcode` | string 生成条形码时出错的条形码。 |
+| `product_id` | integer <int64> 未能成功生成条形码的商品标识符。 |
 
 ### 表格 2
 
-codestring 错误代码。 errorstring 错误描述。 barcodestring 生成条形码时出错的条形码。 product_idinteger <int64> 未能成功生成条形码的商品标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 错误代码。 |
+| `error` | string 错误描述。 |
+| `barcode` | string 生成条形码时出错的条形码。 |
+| `product_id` | integer <int64> 未能成功生成条形码的商品标识符。 |
 
 ## 示例
 

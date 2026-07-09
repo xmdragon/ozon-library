@@ -22,37 +22,69 @@
 
 ### 表格 0
 
-coordinatesobject 坐标。 country_code required string ISO 2格式的国家代码。 is_kgt required boolean true表示商品为超大。 searchobject 搜索参数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `coordinates` | object 坐标。 |
+| `country_code` required | string ISO 2格式的国家代码。 |
+| `is_kgt` required | boolean true表示商品为超大。 |
+| `search` | object 搜索参数。 |
 
 ### 表格 1
 
-pointsArray of objects 点位列表。 Array ()addressstring 揽收点地址。 coordinatesobject 揽收点坐标。 discount_percentnumber <float> 交付货件的折扣百分比。 idstring 揽收点标识符。 last_transit_time_localobject 为获得发运折扣，需要在此时间前交付货件。 typestring Enum: "PVZ" "PPZ" "SC" D揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `points` | Array of objects 点位列表。 |
+| `address` | string 揽收点地址。 |
+| `coordinates` | object 揽收点坐标。 |
+| `discount_percent` | number <float> 交付货件的折扣百分比。 |
+| `id` | string 揽收点标识符。 |
+| `last_transit_time_local` | object 为获得发运折扣，需要在此时间前交付货件。 |
+| `type` | string Enum: "PVZ" "PPZ" "SC" D揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。 |
 
 ### 表格 2
 
-addressstring 揽收点地址。 coordinatesobject 揽收点坐标。 discount_percentnumber <float> 交付货件的折扣百分比。 idstring 揽收点标识符。 last_transit_time_localobject 为获得发运折扣，需要在此时间前交付货件。 typestring Enum: "PVZ" "PPZ" "SC" D揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `address` | string 揽收点地址。 |
+| `coordinates` | object 揽收点坐标。 |
+| `discount_percent` | number <float> 交付货件的折扣百分比。 |
+| `id` | string 揽收点标识符。 |
+| `last_transit_time_local` | object 为获得发运折扣，需要在此时间前交付货件。 |
+| `type` | string Enum: "PVZ" "PPZ" "SC" D揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-PVZ
+true
 ```
 
 ### 示例 1
 
 ```text
-PPZ
+PVZ
 ```
 
 ### 示例 2
+
+```text
+PPZ
+```
+
+### 示例 3
+
+```text
+SC
+```
+
+### 示例 4
 
 ```json
 {"country_code": "RU","is_kgt": false,"coordinates": {"latitude": 55,"longitude": 37},"search": {"address": "москва","types": ["PPZ"]}}
 ```
 
-### 示例 3
+### 示例 5
 
 ```json
 {"points": [{"address": "Россия, Москва, Москва, Россия, г. Москва, Никольская улица, 7-9 строение 4","discount_percent": 1,"id": "1020002487458000","last_transit_time_local": {"hours": 12,"minutes": 0,"nanos": 0,"seconds": 0},"coordinates": {"latitude": 55.756107,"longitude": 37.620426},"type": "PVZ"}]}

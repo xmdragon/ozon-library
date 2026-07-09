@@ -23,19 +23,33 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 2
 
-timeslotsArray of objects 时间段列表。 Array ()fromstring 时间段开始时间。 idinteger <int64> 时间段标识符。 tostring 时间段结束时间。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `timeslots` | Array of objects 时间段列表。 |
+| `from` | string 时间段开始时间。 |
+| `id` | integer <int64> 时间段标识符。 |
+| `to` | string 时间段结束时间。 |
 
 ### 表格 3
 
-fromstring 时间段开始时间。 idinteger <int64> 时间段标识符。 tostring 时间段结束时间。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `from` | string 时间段开始时间。 |
+| `id` | integer <int64> 时间段标识符。 |
+| `to` | string 时间段结束时间。 |
 
 ## 示例
 

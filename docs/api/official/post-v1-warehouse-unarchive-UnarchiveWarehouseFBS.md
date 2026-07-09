@@ -23,15 +23,22 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-warehouse_id required integer <int64> 仓库识别符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `warehouse_id` required | integer <int64> 仓库识别符。 |
 
 ### 表格 2
 
-operation_idstring 操作识别符。请使用 /v1/warehouse/operation/status 方式获取操作状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `operation_id` | string 操作识别符。请使用 /v1/warehouse/operation/status 方式获取操作状态。 |
 
 ## 示例
 

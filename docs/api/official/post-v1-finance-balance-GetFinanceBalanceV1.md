@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-date_from required string <date-time> 报告期开始日期，格式为 YYYY-MM-DD。 date_to required string <date-time> 报告期结束日期，格式为 YYYY-MM-DD。date_from 与 date_to 之间的最⻓间隔为30 天。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `date_from` required | string <date-time> 报告期开始日期，格式为 YYYY-MM-DD。 |
+| `date_to` required | string <date-time> 报告期结束日期，格式为 YYYY-MM-DD。date_from 与 date_to 之间的最⻓间隔为30 天。 |
 
 ### 表格 1
 
-cashflowsobject 收入和支出信息。 totalobject 周期内的余额总体数据。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cashflows` | object 收入和支出信息。 |
+| `total` | object 周期内的余额总体数据。 |
 
 ## 示例
 
@@ -44,11 +50,23 @@ YYYY-MM-DD
 
 ### 示例 2
 
+```text
+date_from
+```
+
+### 示例 3
+
+```text
+date_to
+```
+
+### 示例 4
+
 ```json
 {"date_from": "2019-08-24","date_to": "2019-09-24"}
 ```
 
-### 示例 3
+### 示例 5
 
 ```json
 {"cashflows": {"returns": {"amount": {"currency_code": "string","value": 0},"amount_details": {"partner_programs": {"currency_code": "string","value": 0},"points_for_discounts": "string","revenue": {"currency_code": "string","value": 0}},"fee": {"currency_code": "string","value": 0}},"sales": {"amount": {"currency_code": "string","value": 0},"amount_details": {"partner_programs": {"currency_code": "string","value": 0},"points_for_discounts": "string","revenue": {"currency_code": "string","value": 0}},"fee": {"currency_code": "string","value": 0}},"services": [{"amount": {"currency_code": "string","value": 0},"name": "string"}]},"total": {"accrued": {"currency_code": "string","value": 0},"closing_balance": {"currency_code": "string","value": 0},"opening_balance": {"currency_code": "string","value": 0},"payments": [{"currency_code": "string","value": 0}]}}

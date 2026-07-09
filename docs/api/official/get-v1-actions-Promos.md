@@ -20,11 +20,48 @@
 
 ### 表格 0
 
-resultArray of objects 请求结果。 Array ()idnumber <double> 活动识别号。 titlestring 活动名称。 action_typestring 活动类型。 descriptionstring 活动描述。 date_startstring 活动开始日期。 date_endstring 活动结束日期。 auto_add_datesArray of strings <date-time> 商品自动添加到促销活动中的日期和时间。 freeze_datestring 活动暂停的日期。 如果该空白被填写，卖家就不能提高价格，改变商品清单或减少促销活动的单位数量。 卖方可以降低价格，增加促销的单位数量。 potential_products_countnumber <double> 可供活动的商品数量。 participating_products_countnumber <double> 参加促销的商品数量。 is_participatingboolean 无论你是否参加这项活动。 is_voucher_actionboolean 此迹象表明买家需要促销代码才能参加。 banned_products_countnumber <double> 被封商品数量。 with_targetingboolean 此迹象表明该活动是与目标受众一起进行的。 order_amountnumber <double> 预定金额。 discount_typestring 折扣类型。 discount_valuenumber <double> 折扣力度。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 请求结果。 |
+| `id` | number <double> 活动识别号。 |
+| `title` | string 活动名称。 |
+| `action_type` | string 活动类型。 |
+| `description` | string 活动描述。 |
+| `date_start` | string 活动开始日期。 |
+| `date_end` | string 活动结束日期。 |
+| `auto_add_dates` | Array of strings <date-time> 商品自动添加到促销活动中的日期和时间。 |
+| `freeze_date` | string 活动暂停的日期。 如果该空白被填写，卖家就不能提高价格，改变商品清单或减少促销活动的单位数量。 卖方可以降低价格，增加促销的单位数量。 |
+| `potential_products_count` | number <double> 可供活动的商品数量。 |
+| `participating_products_count` | number <double> 参加促销的商品数量。 |
+| `is_participating` | boolean 无论你是否参加这项活动。 |
+| `is_voucher_action` | boolean 此迹象表明买家需要促销代码才能参加。 |
+| `banned_products_count` | number <double> 被封商品数量。 |
+| `with_targeting` | boolean 此迹象表明该活动是与目标受众一起进行的。 |
+| `order_amount` | number <double> 预定金额。 |
+| `discount_type` | string 折扣类型。 |
+| `discount_value` | number <double> 折扣力度。 |
 
 ### 表格 1
 
-idnumber <double> 活动识别号。 titlestring 活动名称。 action_typestring 活动类型。 descriptionstring 活动描述。 date_startstring 活动开始日期。 date_endstring 活动结束日期。 auto_add_datesArray of strings <date-time> 商品自动添加到促销活动中的日期和时间。 freeze_datestring 活动暂停的日期。 如果该空白被填写，卖家就不能提高价格，改变商品清单或减少促销活动的单位数量。 卖方可以降低价格，增加促销的单位数量。 potential_products_countnumber <double> 可供活动的商品数量。 participating_products_countnumber <double> 参加促销的商品数量。 is_participatingboolean 无论你是否参加这项活动。 is_voucher_actionboolean 此迹象表明买家需要促销代码才能参加。 banned_products_countnumber <double> 被封商品数量。 with_targetingboolean 此迹象表明该活动是与目标受众一起进行的。 order_amountnumber <double> 预定金额。 discount_typestring 折扣类型。 discount_valuenumber <double> 折扣力度。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `id` | number <double> 活动识别号。 |
+| `title` | string 活动名称。 |
+| `action_type` | string 活动类型。 |
+| `description` | string 活动描述。 |
+| `date_start` | string 活动开始日期。 |
+| `date_end` | string 活动结束日期。 |
+| `auto_add_dates` | Array of strings <date-time> 商品自动添加到促销活动中的日期和时间。 |
+| `freeze_date` | string 活动暂停的日期。 如果该空白被填写，卖家就不能提高价格，改变商品清单或减少促销活动的单位数量。 卖方可以降低价格，增加促销的单位数量。 |
+| `potential_products_count` | number <double> 可供活动的商品数量。 |
+| `participating_products_count` | number <double> 参加促销的商品数量。 |
+| `is_participating` | boolean 无论你是否参加这项活动。 |
+| `is_voucher_action` | boolean 此迹象表明买家需要促销代码才能参加。 |
+| `banned_products_count` | number <double> 被封商品数量。 |
+| `with_targeting` | boolean 此迹象表明该活动是与目标受众一起进行的。 |
+| `order_amount` | number <double> 预定金额。 |
+| `discount_type` | string 折扣类型。 |
+| `discount_value` | number <double> 折扣力度。 |
 
 ## 示例
 

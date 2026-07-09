@@ -23,19 +23,61 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-return_id required integer <int64> 退货申请标识符。通过方法 /v2/returns/rfbs/list 获取。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `return_id` required | integer <int64> 退货申请标识符。通过方法 /v2/returns/rfbs/list 获取。 |
 
 ### 表格 2
 
-returnsobject 申请信息。 available_actionsArray of objects 申请的可用操作的信息。 client_namestring Deprecated 买家姓名。 client_photoArray of strings 商品照片链接。 client_return_method_typeobject 退货方式信息。 commentstring 买家评论。 created_atstring <date-time> 申请创建日期。 order_numberstring 订单号。 posting_numberstring 货件编号。 productobject 商品信息。 rejection_commentstring 有关申请被拒绝的备注。 rejection_reasonArray of objects 申请被拒绝的原因的信息。 return_method_descriptionstring 商品退货方式。 return_numberstring 退货申请编号。 return_reasonobject 退货原因信息。 ru_post_tracking_numberstring 跟踪号码。 stateobject 退货状态信息。 warehouse_idinteger <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `returns` | object 申请信息。 |
+| `available_actions` | Array of objects 申请的可用操作的信息。 |
+| `client_name` | string Deprecated 买家姓名。 |
+| `client_photo` | Array of strings 商品照片链接。 |
+| `client_return_method_type` | object 退货方式信息。 |
+| `comment` | string 买家评论。 |
+| `created_at` | string <date-time> 申请创建日期。 |
+| `order_number` | string 订单号。 |
+| `posting_number` | string 货件编号。 |
+| `product` | object 商品信息。 |
+| `rejection_comment` | string 有关申请被拒绝的备注。 |
+| `rejection_reason` | Array of objects 申请被拒绝的原因的信息。 |
+| `return_method_description` | string 商品退货方式。 |
+| `return_number` | string 退货申请编号。 |
+| `return_reason` | object 退货原因信息。 |
+| `ru_post_tracking_number` | string 跟踪号码。 |
+| `state` | object 退货状态信息。 |
+| `warehouse_id` | integer <int64> 仓库标识符。 |
 
 ### 表格 3
 
-available_actionsArray of objects 申请的可用操作的信息。 client_namestring Deprecated 买家姓名。 client_photoArray of strings 商品照片链接。 client_return_method_typeobject 退货方式信息。 commentstring 买家评论。 created_atstring <date-time> 申请创建日期。 order_numberstring 订单号。 posting_numberstring 货件编号。 productobject 商品信息。 rejection_commentstring 有关申请被拒绝的备注。 rejection_reasonArray of objects 申请被拒绝的原因的信息。 return_method_descriptionstring 商品退货方式。 return_numberstring 退货申请编号。 return_reasonobject 退货原因信息。 ru_post_tracking_numberstring 跟踪号码。 stateobject 退货状态信息。 warehouse_idinteger <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `available_actions` | Array of objects 申请的可用操作的信息。 |
+| `client_name` | string Deprecated 买家姓名。 |
+| `client_photo` | Array of strings 商品照片链接。 |
+| `client_return_method_type` | object 退货方式信息。 |
+| `comment` | string 买家评论。 |
+| `created_at` | string <date-time> 申请创建日期。 |
+| `order_number` | string 订单号。 |
+| `posting_number` | string 货件编号。 |
+| `product` | object 商品信息。 |
+| `rejection_comment` | string 有关申请被拒绝的备注。 |
+| `rejection_reason` | Array of objects 申请被拒绝的原因的信息。 |
+| `return_method_description` | string 商品退货方式。 |
+| `return_number` | string 退货申请编号。 |
+| `return_reason` | object 退货原因信息。 |
+| `ru_post_tracking_number` | string 跟踪号码。 |
+| `state` | object 退货状态信息。 |
+| `warehouse_id` | integer <int64> 仓库标识符。 |
 
 ## 示例
 

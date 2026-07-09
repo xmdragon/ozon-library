@@ -23,41 +23,89 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-update_offer_id required Array of objects [ 1 .. 25 ] items 具有新旧货号价值的配对列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `update_offer_id` required | Array of objects [ 1 .. 25 ] items 具有新旧货号价值的配对列表。 |
 
 ### 表格 2
 
-errorsArray of objects 错误清单。 Array ()messagestring 错误信息。 offer_idstring 无法更改的卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `errors` | Array of objects 错误清单。 |
+| `message` | string 错误信息。 |
+| `offer_id` | string 无法更改的卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 3
 
-messagestring 错误信息。 offer_idstring 无法更改的卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `message` | string 错误信息。 |
+| `offer_id` | string 无法更改的卖家系统中的商品标识符是商品货号。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-OFFER_ID_ALREADY_EXISTS
+offer_id
 ```
 
 ### 示例 1
 
 ```text
-429
+offer_id
 ```
 
 ### 示例 2
+
+```text
+offer_id
+```
+
+### 示例 3
+
+```text
+OFFER_ID_ALREADY_EXISTS
+```
+
+### 示例 4
+
+```text
+429
+```
+
+### 示例 5
+
+```text
+message
+```
+
+### 示例 6
+
+```text
+Item-Retry-After
+```
+
+### 示例 7
+
+```text
+Item-Rate-Limit-Remaining
+```
+
+### 示例 8
 
 ```json
 {"update_offer_id": [{"new_offer_id": "haval","offer_id": "chery"}]}
 ```
 
-### 示例 3
+### 示例 9
 
 ```json
 {"errors": [{"offer_id": "haval","message": "货号为haval的商品已存在。"}]}

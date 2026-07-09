@@ -23,89 +23,139 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-languagestring Default: "DEFAULT" 回答所用语言： RU — 俄语， EN — 英语。 offer_idArray of strings 卖家系统中的商品标识符是商品货号。 searchstring 在记录内容中搜索，检查现货。 skuArray of integers <int64> Ozon 系统中的商品标识符（SKU）。 visibilitystring Default: "ALL" Enum: "ALL" "VALIDATION_STATE_FAIL" "TO_SUPPLY" "IN_SALE" "REMOVED_FROM_SALE" "PARTIAL_APPROVED" "IMAGE_ABSENT" "ARCHIVED" "AUTO_ARCHIVED" "MANUAL_ARCHIVED" 按商品可见度过滤。 ALL——除了档案中的所有商品； VALIDATION_STATE_FAIL——预审时未被验证器检查的商品； TO_SUPPLY——准备出售的货物； IN_SALE——正在销售的商品； REMOVED_FROM_SALE——对买家隐藏的商品； PARTIAL_APPROVED——商品存在警告，需要修改； IMAGE_ABSENT——无图片的商品； ARCHIVED——已归档商品； AUTO_ARCHIVED——自动归档的商品； MANUAL_ARCHIVED——手动归档的商品。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `language` | string Default: "DEFAULT" 回答所用语言： RU — 俄语， EN — 英语。 |
+| `offer_id` | Array of strings 卖家系统中的商品标识符是商品货号。 |
+| `search` | string 在记录内容中搜索，检查现货。 |
+| `sku` | Array of integers <int64> Ozon 系统中的商品标识符（SKU）。 |
+| `visibility` | string Default: "ALL" Enum: "ALL" "VALIDATION_STATE_FAIL" "TO_SUPPLY" "IN_SALE" "REMOVED_FROM_SALE" "PARTIAL_APPROVED" "IMAGE_ABSENT" "ARCHIVED" "AUTO_ARCHIVED" "MANUAL_ARCHIVED" 按商品可见度过滤。 ALL——除了档案中的所有商品； VALIDATION_STATE_FAIL——预审时未被验证器检查的商品； TO_SUPPLY——准备出售的货物； IN_SALE——正在销售的商品； REMOVED_FROM_SALE——对买家隐藏的商品； PARTIAL_APPROVED——商品存在警告，需要修改； IMAGE_ABSENT——无图片的商品； ARCHIVED——已归档商品； AUTO_ARCHIVED——自动归档的商品； MANUAL_ARCHIVED——手动归档的商品。 |
 
 ### 表格 2
 
-resultobject 请求结果。 codestring 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ### 表格 3
 
-codestring 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ## 示例
 
 ### 示例 0
 
 ```text
-ALL
+product_id
 ```
 
 ### 示例 1
 
 ```text
-VALIDATION_STATE_FAIL
+product_id
 ```
 
 ### 示例 2
 
 ```text
-TO_SUPPLY
+product_id
 ```
 
 ### 示例 3
 
 ```text
-IN_SALE
+product_id
 ```
 
 ### 示例 4
 
 ```text
-REMOVED_FROM_SALE
+RU
 ```
 
 ### 示例 5
 
 ```text
-PARTIAL_APPROVED
+EN
 ```
 
 ### 示例 6
 
 ```text
-IMAGE_ABSENT
+ALL
 ```
 
 ### 示例 7
 
 ```text
-ARCHIVED
+VALIDATION_STATE_FAIL
 ```
 
 ### 示例 8
 
 ```text
-AUTO_ARCHIVED
+TO_SUPPLY
 ```
 
 ### 示例 9
 
 ```text
-MANUAL_ARCHIVED
+IN_SALE
 ```
 
 ### 示例 10
+
+```text
+REMOVED_FROM_SALE
+```
+
+### 示例 11
+
+```text
+PARTIAL_APPROVED
+```
+
+### 示例 12
+
+```text
+IMAGE_ABSENT
+```
+
+### 示例 13
+
+```text
+ARCHIVED
+```
+
+### 示例 14
+
+```text
+AUTO_ARCHIVED
+```
+
+### 示例 15
+
+```text
+MANUAL_ARCHIVED
+```
+
+### 示例 16
 
 ```json
 {"language": "DEFAULT","offer_id": [ ],"search": "","sku": [ ],"visibility": "ALL"}
 ```
 
-### 示例 11
+### 示例 17
 
 ```json
 {"result": {"code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"}}

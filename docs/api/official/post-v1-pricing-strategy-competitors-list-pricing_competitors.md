@@ -22,21 +22,33 @@
 
 ### 表格 0
 
-page required integer <int64> 需要下载竞争对手的列表页面。 最小值为1。 limit required integer <int64> 每页的最大竞争对手数。有效值是从1到50。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `page` required | integer <int64> 需要下载竞争对手的列表页面。 最小值为1。 |
+| `limit` required | integer <int64> 每页的最大竞争对手数。有效值是从1到50。 |
 
 ### 表格 1
 
-competitorArray of objects 竞争对手列表。 totalinteger <int32> 竞争对手总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `competitor` | Array of objects 竞争对手列表。 |
+| `total` | integer <int32> 竞争对手总数。 |
 
 ## 示例
 
-### 示例 0
+### 示例 2
+
+```text
+50
+```
+
+### 示例 3
 
 ```json
 {"page": 1,"limit": 20}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"competitor": [{"id": 7820251,"name": "grenmarketshop.ru"}],"total": 33}

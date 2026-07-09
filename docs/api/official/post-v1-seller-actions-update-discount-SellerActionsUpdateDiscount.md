@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-action_idinteger <uint64> 促销活动标识符。 action_parametersobject 促销活动参数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` | integer <uint64> 促销活动标识符。 |
+| `action_parameters` | object 促销活动参数。 |
 
 ## 示例
 

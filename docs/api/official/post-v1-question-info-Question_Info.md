@@ -23,15 +23,30 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-question_id required string 问题标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `question_id` required | string 问题标识符。 |
 
 ### 表格 2
 
-answers_countinteger <int64> 问题的回答数量。 author_namestring 问题作者。 idstring 问题标识符。 product_urlstring 商品链接。 published_attimestamp 问题发布日期。 question_linkstring 问题链接。 skuinteger <int64> Ozon 系统中的商品标识符——SKU。 statusenum 问题状态： NEW——新的， ALL——全部问题， VIEWED——已查看， PROCESSED——已处理， UNPROCESSED——未处理。 textstring 问题文本。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `answers_count` | integer <int64> 问题的回答数量。 |
+| `author_name` | string 问题作者。 |
+| `id` | string 问题标识符。 |
+| `product_url` | string 商品链接。 |
+| `published_at` | timestamp 问题发布日期。 |
+| `question_link` | string 问题链接。 |
+| `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
+| `status` | enum 问题状态： NEW——新的， ALL——全部问题， VIEWED——已查看， PROCESSED——已处理， UNPROCESSED——未处理。 |
+| `text` | string 问题文本。 |
 
 ## 示例
 

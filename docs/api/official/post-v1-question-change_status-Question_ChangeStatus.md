@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-question_ids required Array of strings 问题标识符。 status required string 问题状态： NEW——新的， VIEWED——已查看， PROCESSED——已处理。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `question_ids` required | Array of strings 问题标识符。 |
+| `status` required | string 问题状态： NEW——新的， VIEWED——已查看， PROCESSED——已处理。 |
 
 ## 示例
 

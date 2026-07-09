@@ -23,19 +23,31 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_numbers required Array of strings [ 1 .. 200 ] items 货件编号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_numbers` required | Array of strings [ 1 .. 200 ] items 货件编号。 |
 
 ### 表格 2
 
-posting_accrualsArray of objects 按货件统计的应计项目列表。 Array ()accrualsArray of objects 应计项目列表。 posting_numberstring 货件编号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_accruals` | Array of objects 按货件统计的应计项目列表。 |
+| `accruals` | Array of objects 应计项目列表。 |
+| `posting_number` | string 货件编号。 |
 
 ### 表格 3
 
-accrualsArray of objects 应计项目列表。 posting_numberstring 货件编号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `accruals` | Array of objects 应计项目列表。 |
+| `posting_number` | string 货件编号。 |
 
 ## 示例
 

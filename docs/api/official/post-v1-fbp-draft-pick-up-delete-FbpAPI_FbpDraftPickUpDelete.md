@@ -22,11 +22,16 @@
 
 ### 表格 0
 
-supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 1
 
-cancellation_stateobject 取消原因。 row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cancellation_state` | object 取消原因。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 

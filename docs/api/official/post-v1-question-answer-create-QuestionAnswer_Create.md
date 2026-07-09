@@ -23,15 +23,24 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-question_id required string 问题标识符。 sku required integer <int64> Ozon 系统中的商品标识符——SKU。 text required string 回答文本，长度为 2 至 3000 个字符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `question_id` required | string 问题标识符。 |
+| `sku` required | integer <int64> Ozon 系统中的商品标识符——SKU。 |
+| `text` required | string 回答文本，长度为 2 至 3000 个字符。 |
 
 ### 表格 2
 
-answer_idstring 问题回答标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `answer_id` | string 问题回答标识符。 |
 
 ## 示例
 

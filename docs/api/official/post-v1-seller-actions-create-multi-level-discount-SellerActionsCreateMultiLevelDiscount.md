@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-date_end required string <date-time> 促销活动结束日期与时间。 date_start required string <date-time> 促销活动开始日期与时间。 discount_levels required Array of objects [ 2 .. 4 ] items 折扣等级。 discount_type required string Enum: "PERCENT" "CURRENCY" 折扣类型： PERCENT——百分比折扣； CURRENCY——按金额折扣。 is_legal_entities_segmentboolean true，表示促销活动仅面向法人实体。 titlestring [ 1 .. 256 ] characters 促销活动名称。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `date_end` required | string <date-time> 促销活动结束日期与时间。 |
+| `date_start` required | string <date-time> 促销活动开始日期与时间。 |
+| `discount_levels` required | Array of objects [ 2 .. 4 ] items 折扣等级。 |
+| `discount_type` required | string Enum: "PERCENT" "CURRENCY" 折扣类型： PERCENT——百分比折扣； CURRENCY——按金额折扣。 |
+| `is_legal_entities_segment` | boolean true，表示促销活动仅面向法人实体。 |
+| `title` | string [ 1 .. 256 ] characters 促销活动名称。 |
 
 ### 表格 2
 
-action_idinteger <uint64> 促销活动标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` | integer <uint64> 促销活动标识符。 |
 
 ## 示例
 
@@ -49,11 +61,17 @@ CURRENCY
 
 ### 示例 2
 
+```text
+true
+```
+
+### 示例 3
+
 ```json
 {"date_end": "2019-08-24T14:15:22Z","date_start": "2019-08-24T14:15:22Z","discount_levels": [{"discount_value": 0,"order_amount": 0},{"discount_value": 0,"order_amount": 0}],"discount_type": "PERCENT","is_legal_entities_segment": true,"title": "string"}
 ```
 
-### 示例 3
+### 示例 4
 
 ```json
 {"action_id": 0}

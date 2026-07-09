@@ -21,11 +21,19 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-daily_createobject 创建商品的每日限制。 daily_updateobject 商品更新的每日限制。 operation_limitsobject 商品操作的可用限额。 totalobject 品类限制。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `daily_create` | object 创建商品的每日限制。 |
+| `daily_update` | object 商品更新的每日限制。 |
+| `operation_limits` | object 商品操作的可用限额。 |
+| `total` | object 品类限制。 |
 
 ## 示例
 

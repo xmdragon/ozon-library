@@ -23,25 +23,39 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required string 发货号。 productsArray of objects 商品清单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 发货号。 |
+| `products` | Array of objects 商品清单。 |
 
 ### 表格 2
 
-resultstring 备货后生成的货件号码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | string 备货后生成的货件号码。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+awaiting_packaging
+```
+
+### 示例 1
+
 ```json
 {"posting_number": "string","products": [{"exemplarsIds": ["string"],"product_id": 0,"quantity": 0}]}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": "string"}

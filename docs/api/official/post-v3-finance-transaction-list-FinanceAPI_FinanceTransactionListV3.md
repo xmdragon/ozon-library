@@ -23,29 +23,51 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filterposting_number (object) or date (object) 过滤器。 page required integer <int64> 请求中返回的页码。 page_size required integer <int64> <= 1000 每页的元素数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` | posting_number (object) or date (object) 过滤器。 |
+| `page` required | integer <int64> 请求中返回的页码。 |
+| `page_size` required | integer <int64> <= 1000 每页的元素数。 |
 
 ### 表格 2
 
-resultobject 询问结果。 operationsArray of objects 操作信息。 page_countinteger <int64> 页数。如果为0，则说明已无页面。 row_countinteger <int64> 所有页面上的交易数量。如果为0，说明已无交易。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 询问结果。 |
+| `operations` | Array of objects 操作信息。 |
+| `page_count` | integer <int64> 页数。如果为0，则说明已无页面。 |
+| `row_count` | integer <int64> 所有页面上的交易数量。如果为0，说明已无交易。 |
 
 ### 表格 3
 
-operationsArray of objects 操作信息。 page_countinteger <int64> 页数。如果为0，则说明已无页面。 row_countinteger <int64> 所有页面上的交易数量。如果为0，说明已无交易。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `operations` | Array of objects 操作信息。 |
+| `page_count` | integer <int64> 页数。如果为0，则说明已无页面。 |
+| `row_count` | integer <int64> 所有页面上的交易数量。如果为0，说明已无交易。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+posting_number
+```
+
+### 示例 1
+
 ```json
 {"filter": {"date": {"from": "2021-11-01T00:00:00.000Z","to": "2021-11-02T00:00:00.000Z"},"operation_type": [ ],"posting_number": "","transaction_type": "all"},"page": 1,"page_size": 1000}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": {"operations": [{"operation_id": 11401182187840,"operation_type": "MarketplaceMarketingActionCostOperation","operation_date": "2021-11-01 00:00:00","operation_type_name": "商品推销服务","delivery_charge": 0,"return_delivery_charge": 0,"accruals_for_sale": 0,"sale_commission": 0,"amount": -6.46,"type": "services","posting": {"delivery_schema": "","order_date": "","posting_number": "","warehouse_id": 0},"items": [ ],"services": [ ]}],"page_count": 1,"row_count": 355}}

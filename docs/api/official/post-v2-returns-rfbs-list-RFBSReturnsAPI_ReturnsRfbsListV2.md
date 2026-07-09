@@ -23,29 +23,61 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filterobject 筛选器。 last_idinteger <int32> 页面上最后一个值的标识符——return_id。在第一次请求时，请将此字段留空。 limit required integer <int32> 响应中的值数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` | object 筛选器。 |
+| `last_id` | integer <int32> 页面上最后一个值的标识符——return_id。在第一次请求时，请将此字段留空。 |
+| `limit` required | integer <int32> 响应中的值数量。 |
 
 ### 表格 2
 
-returnsobject 申请信息。 client_namestring Deprecated 买家姓名。 created_atstring <date-time> 创建日期。 order_numberstring 订单号。 posting_numberstring 货件编号。 productobject 商品信息。 return_idinteger <int64> 退货申请的标识符。 return_numberstring 退货申请编号。 stateobject 退货申请和退款状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `returns` | object 申请信息。 |
+| `client_name` | string Deprecated 买家姓名。 |
+| `created_at` | string <date-time> 创建日期。 |
+| `order_number` | string 订单号。 |
+| `posting_number` | string 货件编号。 |
+| `product` | object 商品信息。 |
+| `return_id` | integer <int64> 退货申请的标识符。 |
+| `return_number` | string 退货申请编号。 |
+| `state` | object 退货申请和退款状态。 |
 
 ### 表格 3
 
-client_namestring Deprecated 买家姓名。 created_atstring <date-time> 创建日期。 order_numberstring 订单号。 posting_numberstring 货件编号。 productobject 商品信息。 return_idinteger <int64> 退货申请的标识符。 return_numberstring 退货申请编号。 stateobject 退货申请和退款状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `client_name` | string Deprecated 买家姓名。 |
+| `created_at` | string <date-time> 创建日期。 |
+| `order_number` | string 订单号。 |
+| `posting_number` | string 货件编号。 |
+| `product` | object 商品信息。 |
+| `return_id` | integer <int64> 退货申请的标识符。 |
+| `return_number` | string 退货申请编号。 |
+| `state` | object 退货申请和退款状态。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+return_id
+```
+
+### 示例 1
+
 ```json
 {"filter": {"offer_id": "test-offer-123456","posting_number": "789456123-0002-3","group_state": ["New","Approved"],"created_at": {"from": "2026-02-01T00:00:00Z","to": "2026-03-01T23:59:59Z"}},"last_id": 0,"limit": 1000}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"returns": [{"return_id": 8000123456,"return_number": "RET-2026-00123","posting_number": "789456123-0002-3","order_number": "123456789","created_at": "2026-02-15T10:30:00Z","product": {"sku": 1000123456,"offer_id": "test-offer-123456","name": "string","price": 2999,"currency_code": "RUB"},"state": {"group_state": "New","state": "ON_APPROVAL","state_name": "string"}}]}

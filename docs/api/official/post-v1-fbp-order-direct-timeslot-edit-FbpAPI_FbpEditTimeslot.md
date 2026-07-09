@@ -22,11 +22,18 @@
 
 ### 表格 0
 
-row_version required integer <int64> 草稿的当前版本标识符。 supply_id required string 供货申请标识符。 timeslot_start required string <date-time> 时间段开始时间。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `row_version` required | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` required | string 供货申请标识符。 |
+| `timeslot_start` required | string <date-time> 时间段开始时间。 |
 
 ### 表格 1
 
-error_reasonsArray of stringsItems Enum: "RESERVE_FAILURE_TYPE_UNSPECIFIED" "REQUEST_VALIDATION" "INVALID_RESERVE" "LOGISTICS_REASON" "SCHEDULE_REASON" 错误原因： RESERVE_FAILURE_TYPE_UNSPECIFIED——未定义； REQUEST_VALIDATION——请求中填写了过去的预定日期； INVALID_RESERVE——原始预留未找到、已失效或已包含申请，但尝试覆盖； LOGISTICS_REASON——物流方错误； SCHEDULE_REASON——排期方错误； NO_CAPACITY——无可用预定时段。 row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error_reasons` | Array of stringsItems Enum: "RESERVE_FAILURE_TYPE_UNSPECIFIED" "REQUEST_VALIDATION" "INVALID_RESERVE" "LOGISTICS_REASON" "SCHEDULE_REASON" 错误原因： RESERVE_FAILURE_TYPE_UNSPECIFIED——未定义； REQUEST_VALIDATION——请求中填写了过去的预定日期； INVALID_RESERVE——原始预留未找到、已失效或已包含申请，但尝试覆盖； LOGISTICS_REASON——物流方错误； SCHEDULE_REASON——排期方错误； NO_CAPACITY——无可用预定时段。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 

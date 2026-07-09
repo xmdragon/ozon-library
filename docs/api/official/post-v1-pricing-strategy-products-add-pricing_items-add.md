@@ -22,15 +22,25 @@
 
 ### 表格 0
 
-product_id required Array of strings <int64> 商品ID列表。 最大数量为 50。 strategy_id required string 策略ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` required | Array of strings <int64> 商品ID列表。 最大数量为 50。 |
+| `strategy_id` required | string 策略ID。 |
 
 ### 表格 1
 
-resultobject 方法操作结果。 errorsArray of objects 有错误的商品。 failed_product_countinteger <int32> 有错误的商品数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法操作结果。 |
+| `errors` | Array of objects 有错误的商品。 |
+| `failed_product_count` | integer <int32> 有错误的商品数量。 |
 
 ### 表格 2
 
-errorsArray of objects 有错误的商品。 failed_product_countinteger <int32> 有错误的商品数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `errors` | Array of objects 有错误的商品。 |
+| `failed_product_count` | integer <int32> 有错误的商品数量。 |
 
 ## 示例
 

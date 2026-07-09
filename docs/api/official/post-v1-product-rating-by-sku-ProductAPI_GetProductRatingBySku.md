@@ -23,19 +23,33 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-skus required Array of strings <int64> 需要返回内容评级的商品SKU列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `skus` required | Array of strings <int64> 需要返回内容评级的商品SKU列表。 |
 
 ### 表格 2
 
-productsArray of objects 商品内容分级。 Array ()skuinteger <int64> Ozon 系统中的商品标识符（SKU）。 ratingnumber <float> 产品内容评级: 从0到100。 groupsArray of objects 构成内容评级的各组特征。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `products` | Array of objects 商品内容分级。 |
+| `sku` | integer <int64> Ozon 系统中的商品标识符（SKU）。 |
+| `rating` | number <float> 产品内容评级: 从0到100。 |
+| `groups` | Array of objects 构成内容评级的各组特征。 |
 
 ### 表格 3
 
-skuinteger <int64> Ozon 系统中的商品标识符（SKU）。 ratingnumber <float> 产品内容评级: 从0到100。 groupsArray of objects 构成内容评级的各组特征。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `sku` | integer <int64> Ozon 系统中的商品标识符（SKU）。 |
+| `rating` | number <float> 产品内容评级: 从0到100。 |
+| `groups` | Array of objects 构成内容评级的各组特征。 |
 
 ## 示例
 

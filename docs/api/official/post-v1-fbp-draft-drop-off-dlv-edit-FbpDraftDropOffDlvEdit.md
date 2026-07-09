@@ -23,15 +23,26 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-drop_off_date required string 送货日期。 drop_off_point_id required integer <int64> 揽收点标识符。 drop_off_province_uuid required string 省份唯一标识符。 row_version required integer <int64> 草稿的当前版本标识符。 supply_id required string 交货申请标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `drop_off_date` required | string 送货日期。 |
+| `drop_off_point_id` required | integer <int64> 揽收点标识符。 |
+| `drop_off_province_uuid` required | string 省份唯一标识符。 |
+| `row_version` required | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` required | string 交货申请标识符。 |
 
 ### 表格 2
 
-row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 

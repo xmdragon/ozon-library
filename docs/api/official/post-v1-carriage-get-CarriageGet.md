@@ -22,21 +22,87 @@
 
 ### 表格 0
 
-carriage_id required integer <int64> 运输标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `carriage_id` required | integer <int64> 运输标识符。 |
 
 ### 表格 1
 
-act_typestring 交接单类型。针对FBS卖家。 arrival_pass_idsArray of strings <int64> 为运输生成的通行证标识符列表。 available_actionsArray of strings 运输的可用操作： get_shipping_list——获取发运清单； get_act_of_acceptance——获取验收证明书； get_waybill——获取 PDF 格式的货单； set_arrival_passes——创建通行证。 cancel_availabilityobject 是否可以取消。 carriage_idinteger <int64> 运输标识符。 company_idinteger <int64> 卖家标识符。 containers_countinteger <int32> 货位数量。 created_atstring <date-time> 运输创建日期。 delivery_method_idinteger <int64> 物流方式标识符。 departure_datestring 运输完成日期。 first_mile_typestring 头程物流类型。 has_postings_for_next_carriageboolean true, 如果有未能进行运输，但需要发运的货件。 integration_typestring 运输类型。 is_container_label_printedboolean true, 如果您已经打印了货位标签。 is_partialboolean true, 如果是部分运输。 partial_numinteger <int64> 部分运输序列号。 retry_countinteger <int32> 运输创建重复尝试数量。 statusstring 运输状态。 tpl_provider_idinteger <int64> 配送服务商标识符。 updated_atstring <date-time> 运输信息最后一次更新日期。 warehouse_idinteger <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `act_type` | string 交接单类型。针对FBS卖家。 |
+| `arrival_pass_ids` | Array of strings <int64> 为运输生成的通行证标识符列表。 |
+| `available_actions` | Array of strings 运输的可用操作： get_shipping_list——获取发运清单； get_act_of_acceptance——获取验收证明书； get_waybill——获取 PDF 格式的货单； set_arrival_passes——创建通行证。 |
+| `cancel_availability` | object 是否可以取消。 |
+| `carriage_id` | integer <int64> 运输标识符。 |
+| `company_id` | integer <int64> 卖家标识符。 |
+| `containers_count` | integer <int32> 货位数量。 |
+| `created_at` | string <date-time> 运输创建日期。 |
+| `delivery_method_id` | integer <int64> 物流方式标识符。 |
+| `departure_date` | string 运输完成日期。 |
+| `first_mile_type` | string 头程物流类型。 |
+| `has_postings_for_next_carriage` | boolean true, 如果有未能进行运输，但需要发运的货件。 |
+| `integration_type` | string 运输类型。 |
+| `is_container_label_printed` | boolean true, 如果您已经打印了货位标签。 |
+| `is_partial` | boolean true, 如果是部分运输。 |
+| `partial_num` | integer <int64> 部分运输序列号。 |
+| `retry_count` | integer <int32> 运输创建重复尝试数量。 |
+| `status` | string 运输状态。 |
+| `tpl_provider_id` | integer <int64> 配送服务商标识符。 |
+| `updated_at` | string <date-time> 运输信息最后一次更新日期。 |
+| `warehouse_id` | integer <int64> 仓库标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+get_shipping_list
+```
+
+### 示例 1
+
+```text
+get_act_of_acceptance
+```
+
+### 示例 2
+
+```text
+get_waybill
+```
+
+### 示例 3
+
+```text
+set_arrival_passes
+```
+
+### 示例 4
+
+```text
+true
+```
+
+### 示例 5
+
+```text
+true
+```
+
+### 示例 6
+
+```text
+true
+```
+
+### 示例 7
+
 ```json
 {"carriage_id": 0}
 ```
 
-### 示例 1
+### 示例 8
 
 ```json
 {"act_type": "string","arrival_pass_ids": ["string"],"available_actions": ["string"],"cancel_availability": {"is_cancel_available": true,"reason": "string"},"carriage_id": 0,"company_id": 0,"containers_count": 0,"created_at": "2019-08-24T14:15:22Z","delivery_method_id": 0,"departure_date": "string","first_mile_type": "string","has_postings_for_next_carriage": true,"integration_type": "string","is_container_label_printed": true,"is_partial": true,"partial_num": 0,"retry_count": 0,"status": "string","tpl_provider_id": 0,"updated_at": "2019-08-24T14:15:22Z","warehouse_id": 0}

@@ -23,19 +23,37 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-drop_off_point_id required integer <int64> 揽收点标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `drop_off_point_id` required | integer <int64> 揽收点标识符。 |
 
 ### 表格 2
 
-timeslotsArray of objects 时间段列表。 Array ()acceptance_end_time_localstring 订单接收结束本地时间。 acceptance_start_time_localstring 订单接收开始本地时间。 fromstring 时间段开始时间。 idinteger <int64> 时间段标识符。 tostring 时间段结束时间。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `timeslots` | Array of objects 时间段列表。 |
+| `acceptance_end_time_local` | string 订单接收结束本地时间。 |
+| `acceptance_start_time_local` | string 订单接收开始本地时间。 |
+| `from` | string 时间段开始时间。 |
+| `id` | integer <int64> 时间段标识符。 |
+| `to` | string 时间段结束时间。 |
 
 ### 表格 3
 
-acceptance_end_time_localstring 订单接收结束本地时间。 acceptance_start_time_localstring 订单接收开始本地时间。 fromstring 时间段开始时间。 idinteger <int64> 时间段标识符。 tostring 时间段结束时间。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `acceptance_end_time_local` | string 订单接收结束本地时间。 |
+| `acceptance_start_time_local` | string 订单接收开始本地时间。 |
+| `from` | string 时间段开始时间。 |
+| `id` | integer <int64> 时间段标识符。 |
+| `to` | string 时间段结束时间。 |
 
 ## 示例
 

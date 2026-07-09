@@ -23,15 +23,24 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filterobject 筛选器。 pagination required object 方法响应的分割。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` | object 筛选器。 |
+| `pagination` required | object 方法响应的分割。 |
 
 ### 表格 2
 
-drop_off_pointsArray of objects 揽收点信息。 has_nextboolean 是否还有其他揽收点等待卖家退货的标志。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `drop_off_points` | Array of objects 揽收点信息。 |
+| `has_next` | boolean 是否还有其他揽收点等待卖家退货的标志。 |
 
 ## 示例
 

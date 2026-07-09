@@ -23,29 +23,81 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filterobject 商品过滤。 last_idstring 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id。 limitinteger <int64> 答复的信息数量。默认设置为1。最大值是1000。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filter` | object 商品过滤。 |
+| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
+| `limit` | integer <int64> 答复的信息数量。默认设置为1。最大值是1000。 |
 
 ### 表格 2
 
-resultobject 结果。 itemsArray of objects 品列表的。 last_idstring 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 totalinteger <int32> 品牌总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 结果。 |
+| `items` | Array of objects 品列表的。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
+| `total` | integer <int32> 品牌总数。 |
 
 ### 表格 3
 
-itemsArray of objects 品列表的。 last_idstring 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 totalinteger <int32> 品牌总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects 品列表的。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
+| `total` | integer <int32> 品牌总数。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+offer_id
+```
+
+### 示例 1
+
+```text
+product_id
+```
+
+### 示例 2
+
+```text
+limit
+```
+
+### 示例 3
+
+```text
+last_id
+```
+
+### 示例 4
+
+```text
+last_id
+```
+
+### 示例 5
+
+```text
+last_id
+```
+
+### 示例 6
+
 ```json
 {"filter": {"offer_id": ["136748"],"product_id": ["223681945"],"visibility": "ALL"},"last_id": "","limit": 100}
 ```
 
-### 示例 1
+### 示例 7
 
 ```json
 {"result": {"items": [{"product_id": 3397917680,"offer_id": "2026-01-13 16:56:03 PDF","has_fbo_stocks": false,"has_fbs_stocks": false,"archived": false,"is_discounted": false,"quants": [ ]}],"total": 1,"last_id": "WzMzOTc5MTc2ODAsMzM5NzkxNzY4MF0="}}

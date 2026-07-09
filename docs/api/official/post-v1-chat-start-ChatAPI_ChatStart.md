@@ -23,19 +23,29 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required string 发货识别码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 发货识别码。 |
 
 ### 表格 2
 
-resultobject 方法运行结果。 chat_idstring 聊天识别码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法运行结果。 |
+| `chat_id` | string 聊天识别码。 |
 
 ### 表格 3
 
-chat_idstring 聊天识别码。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `chat_id` | string 聊天识别码。 |
 
 ## 示例
 

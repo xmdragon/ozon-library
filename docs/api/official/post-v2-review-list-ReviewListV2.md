@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-filtersobject 用于搜索评价的筛选条件。 last_idstring 响应中最后一条评价的标识符。 limit required integer <int32> [ 20 .. 100 ] 响应中的评价数量。 sort_dirstring Enum: "ASC" "DESC" 排序方向： ASC——升序； DESC——降序。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `filters` | object 用于搜索评价的筛选条件。 |
+| `last_id` | string 响应中最后一条评价的标识符。 |
+| `limit` required | integer <int32> [ 20 .. 100 ] 响应中的评价数量。 |
+| `sort_dir` | string Enum: "ASC" "DESC" 排序方向： ASC——升序； DESC——降序。 |
 
 ### 表格 2
 
-has_nextboolean true，表示响应中未返回全部评价。 last_idstring 页面中最后一个评价的标识符。 reviewsArray of objects 评价列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `has_next` | boolean true，表示响应中未返回全部评价。 |
+| `last_id` | string 页面中最后一个评价的标识符。 |
+| `reviews` | Array of objects 评价列表。 |
 
 ## 示例
 
@@ -49,11 +61,17 @@ DESC
 
 ### 示例 2
 
+```text
+true
+```
+
+### 示例 3
+
 ```json
 {"filters": {"sku": [0],"order_status": "NEW","status": "DELIVERED","published_from": "2026-03-10T14:08:00.257Z","published_to": "2026-03-10T14:08:00.257Z"},"last_id": "string","limit": 0,"sort_dir": "ASC"}
 ```
 
-### 示例 3
+### 示例 4
 
 ```json
 {"reviews": [{"id": "017c0d1c-66d3-b838-3d29-cf9b95a6ac48","sku": "148591503","text": "string","published_at": "2024-10-10T07:23:55.970Z","rating": 2,"status": "UNPROCESSED","comments_amount": 0,"photos_amount": 0,"videos_amount": 0,"order_status": "DELIVERED","is_rating_participant": true}],"has_next": true,"last_id": "017c0d53-a7c8-81ef-53de-7d32fcbd7421"}

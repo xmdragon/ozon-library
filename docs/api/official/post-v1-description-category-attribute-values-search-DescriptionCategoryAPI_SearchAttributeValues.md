@@ -23,29 +23,55 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-attribute_id required integer <int64> 属性的标识符。可以使用方法 /v1/description-category/attribute获取。 description_category_id required integer <int64> 类目的标识符。可以使用方法 /v1/description-category/tree获取。 limit required integer <int64> 返回结果中的值数量：: 最大值 — 100， 最小值 — 1。 type_id required integer <int64> 商品类型的标识符。可以使用方法 /v1/description-category/tree获取。 value required string 系统将根据此值搜索参考值。最少需要2个字符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `attribute_id` required | integer <int64> 属性的标识符。可以使用方法 /v1/description-category/attribute获取。 |
+| `description_category_id` required | integer <int64> 类目的标识符。可以使用方法 /v1/description-category/tree获取。 |
+| `limit` required | integer <int64> 返回结果中的值数量：: 最大值 — 100， 最小值 — 1。 |
+| `type_id` required | integer <int64> 商品类型的标识符。可以使用方法 /v1/description-category/tree获取。 |
+| `value` required | string 系统将根据此值搜索参考值。最少需要2个字符。 |
 
 ### 表格 2
 
-resultArray of objects 属性值。 Array ()idinteger <int64> 属性值的标识符。 infostring 额外信息。 picturestring 图片链接。 valuestring
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 属性值。 |
+| `id` | integer <int64> 属性值的标识符。 |
+| `info` | string 额外信息。 |
+| `picture` | string 图片链接。 |
+| `value` | string |
 
 ### 表格 3
 
-idinteger <int64> 属性值的标识符。 infostring 额外信息。 picturestring 图片链接。 valuestring
+| 字段 | 类型/说明 |
+| --- | --- |
+| `id` | integer <int64> 属性值的标识符。 |
+| `info` | string 额外信息。 |
+| `picture` | string 图片链接。 |
+| `value` | string |
 
 ## 示例
 
 ### 示例 0
 
+```text
+value
+```
+
+### 示例 1
+
 ```json
 {"attribute_id": 85,"description_category_id": 17054869,"limit": 100,"type_id": 97311,"value": "Name"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": [{"id": 1,"info": "黑色商品","picture": "https://example.com/images/color_black.jpg","value": "黑色"}]}

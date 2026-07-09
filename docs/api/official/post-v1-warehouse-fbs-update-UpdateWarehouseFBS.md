@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-address_coordinates required object 仓库坐标。 namestring >= 100 characters 仓库名称。 optionsobject 仓库参数。 phonestring+7(XXX)XXX-XX-XX 仓库电话号码。 warehouse_id required integer <int64> 仓库ID。 working_daysArray of strings [ 5 .. 7 ] Items Enum: "MONDAY" "TUESDAY" "WEDNESDAY" "THURSDAY" "FRIDAY" "SATURDAY" "SUNDAY" 仓库工作日： MONDAY — 周一； TUESDAY — 周二； WEDNESDAY — 周三； THURSDAY — 周四； FRIDAY — 周五； SATURDAY — 周六； SUNDAY — 周日。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `address_coordinates` required | object 仓库坐标。 |
+| `name` | string >= 100 characters 仓库名称。 |
+| `options` | object 仓库参数。 |
+| `phone` | string+7(XXX)XXX-XX-XX 仓库电话号码。 |
+| `warehouse_id` required | integer <int64> 仓库ID。 |
+| `working_days` | Array of strings [ 5 .. 7 ] Items Enum: "MONDAY" "TUESDAY" "WEDNESDAY" "THURSDAY" "FRIDAY" "SATURDAY" "SUNDAY" 仓库工作日： MONDAY — 周一； TUESDAY — 周二； WEDNESDAY — 周三； THURSDAY — 周四； FRIDAY — 周五； SATURDAY — 周六； SUNDAY — 周日。 |
 
 ### 表格 2
 
-operation_idstring 操作ID。通过方法 /v1/warehouse/operation/status 获取操作状态。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `operation_id` | string 操作ID。通过方法 /v1/warehouse/operation/status 获取操作状态。 |
 
 ## 示例
 

@@ -22,21 +22,38 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_idsArray of strings <int64> <= 1000 items 卖家系统中的商品识别符列表——product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_ids` | Array of strings <int64> <= 1000 items 卖家系统中的商品识别符列表——product_id。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_ids
+```
+
+### 示例 1
+
+```text
+product_id
+```
+
+### 示例 2
+
 ```json
 {"product_ids": 88787267123}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"code": 0,"details": [{"typeUrl": "string","value": "string"}],"message": "string"}

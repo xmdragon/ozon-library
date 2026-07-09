@@ -22,7 +22,9 @@
 
 ### 表格 0
 
-comment_id required string 评论标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `comment_id` required | string 评论标识符。 |
 
 ## 示例
 

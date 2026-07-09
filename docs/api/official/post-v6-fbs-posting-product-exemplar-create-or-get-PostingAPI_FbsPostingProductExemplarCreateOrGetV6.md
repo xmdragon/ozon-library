@@ -23,25 +23,40 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-posting_number required string 发货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` required | string 发货号。 |
 
 ### 表格 2
 
-multi_box_qtyinteger <int32> 商品包装的箱子数量。 posting_numberstring 发货号。 productsArray of objects 商品清单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `multi_box_qty` | integer <int32> 商品包装的箱子数量。 |
+| `posting_number` | string 发货号。 |
+| `products` | Array of objects 商品清单。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+exemplar_id
+```
+
+### 示例 1
+
 ```json
 {"posting_number": "string"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"multi_box_qty": 0,"posting_number": "string","products": [{"exemplars": [{"exemplar_id": 0,"gtd": "string","is_gtd_absent": true,"is_rnpt_absent": true,"marks": [{"mark": "string","mark_type": "string"}],"rnpt": "string"}],"has_imei": true,"is_gtd_needed": true,"is_jw_uin_needed": true,"is_mandatory_mark_needed": true,"is_mandatory_mark_possible": true,"is_rnpt_needed": true,"product_id": 0,"quantity": 0}]}

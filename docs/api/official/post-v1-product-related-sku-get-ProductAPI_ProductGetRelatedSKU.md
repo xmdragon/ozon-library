@@ -23,15 +23,23 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-sku required Array of strings <int64> SKU列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `sku` required | Array of strings <int64> SKU列表。 |
 
 ### 表格 2
 
-itemsArray of objects 相关SKU信息。 errorsArray of objects 错误。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `items` | Array of objects 相关SKU信息。 |
+| `errors` | Array of objects 错误。 |
 
 ## 示例
 

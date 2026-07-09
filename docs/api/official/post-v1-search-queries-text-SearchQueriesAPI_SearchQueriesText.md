@@ -23,15 +23,28 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-limit required string <int64> <= 50 每页的结果数量。 offset required string <int64> <= 50 响应中将被跳过的项目数量。 sort_bystring Enum: "CLIENT_COUNT" "ADD_TO_CART" "CONVERSION_TO_CART" "AVG_PRICE" 排序搜索查询的参数： CLIENT_COUNT——查询的受欢迎程度； ADD_TO_CART——添加到购物车的次数； CONVERSION_TO_CART——购物车转化率； AVG_PRICE——平均价格。 sort_dirstring Enum: "ASC" "DESC" 排序方向： ASC——升序； DESC——降序。 text required string 按文本搜索。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `limit` required | string <int64> <= 50 每页的结果数量。 |
+| `offset` required | string <int64> <= 50 响应中将被跳过的项目数量。 |
+| `sort_by` | string Enum: "CLIENT_COUNT" "ADD_TO_CART" "CONVERSION_TO_CART" "AVG_PRICE" 排序搜索查询的参数： CLIENT_COUNT——查询的受欢迎程度； ADD_TO_CART——添加到购物车的次数； CONVERSION_TO_CART——购物车转化率； AVG_PRICE——平均价格。 |
+| `sort_dir` | string Enum: "ASC" "DESC" 排序方向： ASC——升序； DESC——降序。 |
+| `text` required | string 按文本搜索。 |
 
 ### 表格 2
 
-offsetstring <int64> К每页显示的搜索查询数量。 search_queriesArray of objects 搜索查询信息。 totalstring <int64> 搜索查询总数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `offset` | string <int64> К每页显示的搜索查询数量。 |
+| `search_queries` | Array of objects 搜索查询信息。 |
+| `total` | string <int64> 搜索查询总数。 |
 
 ## 示例
 

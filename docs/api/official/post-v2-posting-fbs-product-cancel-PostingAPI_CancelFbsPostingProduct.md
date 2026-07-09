@@ -23,25 +23,41 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cancel_reason_id required integer <int64> 货物取消发货原因ID。 cancel_reason_message required string 必填字段。关于取消的其他信息。 items required Array of objects 商品信息。 posting_number required string 货运ID。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cancel_reason_id` required | integer <int64> 货物取消发货原因ID。 |
+| `cancel_reason_message` required | string 必填字段。关于取消的其他信息。 |
+| `items` required | Array of objects 商品信息。 |
+| `posting_number` required | string 货运ID。 |
 
 ### 表格 2
 
-resultstring 货运号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | string 货运号。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+cancel_reason_id
+```
+
+### 示例 1
+
 ```json
 {"cancel_reason_id": 352,"cancel_reason_message": "Product is out of stock","items": [{"quantity": 5,"sku": 150587396}],"posting_number": "33920113-1231-1"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": ""}

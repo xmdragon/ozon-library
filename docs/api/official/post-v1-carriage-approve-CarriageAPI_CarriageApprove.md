@@ -22,11 +22,17 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-carriage_id required integer <int64> 发运标识符。 containers_countinteger <int32> 货位数量。 如果您已开通信任验收，并按货位发运订单，请使用该参数。如果您未开通信任验收，请跳过该参数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `carriage_id` required | integer <int64> 发运标识符。 |
+| `containers_count` | integer <int32> 货位数量。 如果您已开通信任验收，并按货位发运订单，请使用该参数。如果您未开通信任验收，请跳过该参数。 |
 
 ## 示例
 

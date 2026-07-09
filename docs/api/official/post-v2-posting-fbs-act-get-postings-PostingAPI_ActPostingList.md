@@ -23,19 +23,43 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-id required int <int64> 单据标识符。请通过方法/v1/carriage/create获取参数值。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `id` required | int <int64> 单据标识符。请通过方法/v1/carriage/create获取参数值。 |
 
 ### 表格 2
 
-resultArray of objects 货件信息。 Array ()idinteger <int64> 单据标识符。 multi_box_qtyinteger <int32> 商品包装所用箱数。 posting_numberstring 货件编号。 statusstring 货件状态。 seller_errorstring 错误代码说明。 updated_atstring <date-time> 货件记录的更新日期和时间。 created_atstring <date-time> 货件记录的创建日期和时间。 productsArray of objects 货件中商品列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 货件信息。 |
+| `id` | integer <int64> 单据标识符。 |
+| `multi_box_qty` | integer <int32> 商品包装所用箱数。 |
+| `posting_number` | string 货件编号。 |
+| `status` | string 货件状态。 |
+| `seller_error` | string 错误代码说明。 |
+| `updated_at` | string <date-time> 货件记录的更新日期和时间。 |
+| `created_at` | string <date-time> 货件记录的创建日期和时间。 |
+| `products` | Array of objects 货件中商品列表。 |
 
 ### 表格 3
 
-idinteger <int64> 单据标识符。 multi_box_qtyinteger <int32> 商品包装所用箱数。 posting_numberstring 货件编号。 statusstring 货件状态。 seller_errorstring 错误代码说明。 updated_atstring <date-time> 货件记录的更新日期和时间。 created_atstring <date-time> 货件记录的创建日期和时间。 productsArray of objects 货件中商品列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `id` | integer <int64> 单据标识符。 |
+| `multi_box_qty` | integer <int32> 商品包装所用箱数。 |
+| `posting_number` | string 货件编号。 |
+| `status` | string 货件状态。 |
+| `seller_error` | string 错误代码说明。 |
+| `updated_at` | string <date-time> 货件记录的更新日期和时间。 |
+| `created_at` | string <date-time> 货件记录的创建日期和时间。 |
+| `products` | Array of objects 货件中商品列表。 |
 
 ## 示例
 

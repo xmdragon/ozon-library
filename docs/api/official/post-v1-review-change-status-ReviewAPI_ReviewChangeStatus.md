@@ -22,7 +22,10 @@
 
 ### 表格 0
 
-review_ids required Array of strings 包含评价标识符的数组（数量在1到100之间）。 status required string 评价状态： PROCESSED — 已处理。 UNPROCESSED — 未处理。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `review_ids` required | Array of strings 包含评价标识符的数组（数量在1到100之间）。 |
+| `status` required | string 评价状态： PROCESSED — 已处理。 UNPROCESSED — 未处理。 |
 
 ## 示例
 

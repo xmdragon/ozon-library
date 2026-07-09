@@ -22,21 +22,47 @@
 
 ### 表格 0
 
-cursorstring 用于选择下一批数据的指针。 limit required integer <int64> [ 1 .. 1000 ] 每页显示的数量。 warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。 |
+| `limit` required | integer <int64> [ 1 .. 1000 ] 每页显示的数量。 |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 1
 
-cursorstring 用于选择下一批数据的指针。 如果该参数为空，则没有更多数据了。 has_nextboolean 标记是否返回了所有商品： true——请使用不同的cursor值重新请求，以获取剩余的值； false——响应中已包含所有值。 stocksArray of objects 商品库存信息。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。 如果该参数为空，则没有更多数据了。 |
+| `has_next` | boolean 标记是否返回了所有商品： true——请使用不同的cursor值重新请求，以获取剩余的值； false——响应中已包含所有值。 |
+| `stocks` | Array of objects 商品库存信息。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
+```text
+cursor
+```
+
+### 示例 2
+
+```text
+false
+```
+
+### 示例 3
+
 ```json
 {"cursor": "","limit": 10,"warehouse_id": 1020003080073000}
 ```
 
-### 示例 1
+### 示例 4
 
 ```json
 {"stocks": [{"sku": 147035011,"product_id": 28743,"offer_id": "02105020-35","warehouse_id": 1020003080073000,"present": 1000,"reserved": 0,"free_stock": 1000,"updated_at": "2025-09-15T10:36:24.417498Z"}],"has_next": false,"cursor": "147035011"}

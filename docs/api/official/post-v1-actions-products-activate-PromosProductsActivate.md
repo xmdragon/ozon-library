@@ -22,15 +22,25 @@
 
 ### 表格 0
 
-action_id required number <double> 活动识别号。可以使用方法 /v1/actions获取。 products required Array of objects <= 1000 items 商品清单。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_id` required | number <double> 活动识别号。可以使用方法 /v1/actions获取。 |
+| `products` required | Array of objects <= 1000 items 商品清单。 |
 
 ### 表格 1
 
-resultobject 请求结果。 product_idsArray of numbers <double> 已添加到促销活动中的商品ID列表。 rejectedArray of objects 无法添加到促销活动中的商品列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 请求结果。 |
+| `product_ids` | Array of numbers <double> 已添加到促销活动中的商品ID列表。 |
+| `rejected` | Array of objects 无法添加到促销活动中的商品列表。 |
 
 ### 表格 2
 
-product_idsArray of numbers <double> 已添加到促销活动中的商品ID列表。 rejectedArray of objects 无法添加到促销活动中的商品列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_ids` | Array of numbers <double> 已添加到促销活动中的商品ID列表。 |
+| `rejected` | Array of objects 无法添加到促销活动中的商品列表。 |
 
 ## 示例
 

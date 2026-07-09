@@ -23,29 +23,61 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-product_id required integer <int64> Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `product_id` required | integer <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 2
 
-resultobject 方法操作结果。 strategy_idstring 策略ID。 is_enabledboolean true, 如果商品参与定价策略。 strategy_product_priceinteger <int32> 定价策略。 price_downloaded_atstring 定价策略设定日期。 strategy_competitor_idinteger <int64> Deprecated 竞争对手ID。 strategy_competitor_product_urlstring 竞争对手商品链接。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法操作结果。 |
+| `strategy_id` | string 策略ID。 |
+| `is_enabled` | boolean true, 如果商品参与定价策略。 |
+| `strategy_product_price` | integer <int32> 定价策略。 |
+| `price_downloaded_at` | string 定价策略设定日期。 |
+| `strategy_competitor_id` | integer <int64> Deprecated 竞争对手ID。 |
+| `strategy_competitor_product_url` | string 竞争对手商品链接。 |
 
 ### 表格 3
 
-strategy_idstring 策略ID。 is_enabledboolean true, 如果商品参与定价策略。 strategy_product_priceinteger <int32> 定价策略。 price_downloaded_atstring 定价策略设定日期。 strategy_competitor_idinteger <int64> Deprecated 竞争对手ID。 strategy_competitor_product_urlstring 竞争对手商品链接。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `strategy_id` | string 策略ID。 |
+| `is_enabled` | boolean true, 如果商品参与定价策略。 |
+| `strategy_product_price` | integer <int32> 定价策略。 |
+| `price_downloaded_at` | string 定价策略设定日期。 |
+| `strategy_competitor_id` | integer <int64> Deprecated 竞争对手ID。 |
+| `strategy_competitor_product_url` | string 竞争对手商品链接。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
 ```json
 {"product_id": 7856197312}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"result": {"strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477","is_enabled": true,"strategy_product_price": 500,"price_downloaded_at": "2022-11-17T15:33:53.936Z","strategy_competitor_id": "b7cd30e6-5667-424d-b105-fbec30a52477","strategy_competitor_product_url": "http://primerurl/pricing-strategy/product/info.ru"}}

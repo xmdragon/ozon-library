@@ -22,21 +22,33 @@
 
 ### 表格 0
 
-supply_id required string 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `supply_id` required | string 交货标识符。 |
 
 ### 表格 1
 
-errorobject 错误信息。 is_errorboolean true，前提是有错误。 row_versioninteger <int64> 草稿的当前版本标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | object 错误信息。 |
+| `is_error` | boolean true，前提是有错误。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"supply_id": "string"}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"error": {"order_errors": "ERROR_TYPE_UNSPECIFIED"},"is_error": true,"row_version": 0}

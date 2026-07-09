@@ -23,19 +23,38 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-drop_off_point_id required integer <int64> 揽收点标识符。 warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `drop_off_point_id` required | integer <int64> 揽收点标识符。 |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 2
 
-timeslotsArray of objects 时间段列表。 Array ()acceptance_end_time_localstring Sipariş kabul işleminin sona erdiği yerel saat. acceptance_start_time_localstring Sipariş kabul işleminin başladığı yerel saat. fromstring Zaman aralığı başlangıç saati. idinteger <int64> Zaman aralığı kimliği. tostring Zaman aralığı bitiş saati.
+| 字段 | 类型/说明 |
+| --- | --- |
+| `timeslots` | Array of objects 时间段列表。 |
+| `acceptance_end_time_local` | string Sipariş kabul işleminin sona erdiği yerel saat. |
+| `acceptance_start_time_local` | string Sipariş kabul işleminin başladığı yerel saat. |
+| `from` | string Zaman aralığı başlangıç saati. |
+| `id` | integer <int64> Zaman aralığı kimliği. |
+| `to` | string Zaman aralığı bitiş saati. |
 
 ### 表格 3
 
-acceptance_end_time_localstring Sipariş kabul işleminin sona erdiği yerel saat. acceptance_start_time_localstring Sipariş kabul işleminin başladığı yerel saat. fromstring Zaman aralığı başlangıç saati. idinteger <int64> Zaman aralığı kimliği. tostring Zaman aralığı bitiş saati.
+| 字段 | 类型/说明 |
+| --- | --- |
+| `acceptance_end_time_local` | string Sipariş kabul işleminin sona erdiği yerel saat. |
+| `acceptance_start_time_local` | string Sipariş kabul işleminin başladığı yerel saat. |
+| `from` | string Zaman aralığı başlangıç saati. |
+| `id` | integer <int64> Zaman aralığı kimliği. |
+| `to` | string Zaman aralığı bitiş saati. |
 
 ## 示例
 

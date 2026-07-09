@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-bundle_id required string 已校验商品列表的标识符。要获取，请使用方法/v1/fbp/draft/direct/product/validate。 delivery_details required object 配送详细信息。 package_units_count required integer <int32> 包装单位数量。 warehouse_id required integer <int64> 仓库标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `bundle_id` required | string 已校验商品列表的标识符。要获取，请使用方法/v1/fbp/draft/direct/product/validate。 |
+| `delivery_details` required | object 配送详细信息。 |
+| `package_units_count` required | integer <int32> 包装单位数量。 |
+| `warehouse_id` required | integer <int64> 仓库标识符。 |
 
 ### 表格 2
 
-draft_idinteger <int64> 草稿标识符。 row_versioninteger <int64> 草稿的当前版本标识符。 supply_idstring 交货标识符。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `draft_id` | integer <int64> 草稿标识符。 |
+| `row_version` | integer <int64> 草稿的当前版本标识符。 |
+| `supply_id` | string 交货标识符。 |
 
 ## 示例
 

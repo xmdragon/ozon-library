@@ -21,11 +21,16 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-warehouse_idsArray of strings <int64> 包含至少 1 件无法从该仓库发运的受限商品的仓库标识符列表。如需获取受限商品列表，请使用方法 /v1/warehouse/invalid-products/get。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `warehouse_ids` | Array of strings <int64> 包含至少 1 件无法从该仓库发运的受限商品的仓库标识符列表。如需获取受限商品列表，请使用方法 /v1/warehouse/invalid-products/get。 |
 
 ## 示例
 

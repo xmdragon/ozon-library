@@ -23,29 +23,52 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-date required object 报告期限。 page required integer <int32> 请求返回中的页码。 with_detailsboolean true，如果需要在响应中添加附加参数。 page_size required integer <int32> 页面上的元素数量。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `date` required | object 报告期限。 |
+| `page` required | integer <int32> 请求返回中的页码。 |
+| `with_details` | boolean true，如果需要在响应中添加附加参数。 |
+| `page_size` required | integer <int32> 页面上的元素数量。 |
 
 ### 表格 2
 
-resultobject 方法操作结果。 cash_flowsArray of objects 报告清单。 detailsArray of objects 细节信息。 page_countinteger <int64> 含有报告的页数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | object 方法操作结果。 |
+| `cash_flows` | Array of objects 报告清单。 |
+| `details` | Array of objects 细节信息。 |
+| `page_count` | integer <int64> 含有报告的页数。 |
 
 ### 表格 3
 
-cash_flowsArray of objects 报告清单。 detailsArray of objects 细节信息。 page_countinteger <int64> 含有报告的页数。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cash_flows` | Array of objects 报告清单。 |
+| `details` | Array of objects 细节信息。 |
+| `page_count` | integer <int64> 含有报告的页数。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+true
+```
+
+### 示例 1
+
 ```json
 {"date": {"from": "2022-01-01T00:00:00.000Z","to": "2022-12-31T00:00:00.000Z"},"with_details": true,"page": 1,"page_size": 1}
 ```
 
-### 示例 1
+### 示例 2
 
 ```json
 {"result": {"cash_flows": [{"commission_amount": 1437,"currency_code": "string","item_delivery_and_return_amount": 1991,"orders_amount": 1000,"period": {"begin": "2023-04-03T09:12:10.239Z","end": "2023-04-03T09:12:10.239Z","id": 11567022278500},"returns_amount": -3000,"services_amount": 8471.28}],"details": {"period": {"begin": "2023-04-03T09:12:10.239Z","end": "2023-04-03T09:12:10.239Z","id": 11567022278500},"payments": [{"payment": 0,"currency_code": "string"}],"begin_balance_amount": 0,"delivery": {"total": 0,"amount": 0,"delivery_services": {"total": 0,"items": [{"name": "string","price": 0}]}},"return": {"total": 0,"amount": 0,"return_services": {"total": 0,"items": [{"name": "string","price": 0}]}},"loan": 0,"invoice_transfer": 0,"rfbs": {"total": 0,"transfer_delivery": 0,"transfer_delivery_return": 0,"compensation_delivery_return": 0,"partial_compensation": 0,"partial_compensation_return": 0},"services": {"total": 0,"items": [{"name": "string","price": 0}]},"others": {"total": 0,"items": [{"name": "string","price": 0}]},"end_balance_amount": 0}},"page_count": 15}

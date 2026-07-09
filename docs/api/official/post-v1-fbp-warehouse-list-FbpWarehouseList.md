@@ -21,19 +21,45 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-warehousesArray of objects 仓库列表。 Array ()address_detailingobject 地址详情。 idinteger <int64> 仓库标识符。 is_bondedboolean true，表示该仓库为保税仓。 namestring 仓库名称。 partner_namestring 合作伙伴名称。 supply_typesArray of integers <int32> 交货类型。 timezone_namestring 仓库所在时区。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `warehouses` | Array of objects 仓库列表。 |
+| `address_detailing` | object 地址详情。 |
+| `id` | integer <int64> 仓库标识符。 |
+| `is_bonded` | boolean true，表示该仓库为保税仓。 |
+| `name` | string 仓库名称。 |
+| `partner_name` | string 合作伙伴名称。 |
+| `supply_types` | Array of integers <int32> 交货类型。 |
+| `timezone_name` | string 仓库所在时区。 |
 
 ### 表格 2
 
-address_detailingobject 地址详情。 idinteger <int64> 仓库标识符。 is_bondedboolean true，表示该仓库为保税仓。 namestring 仓库名称。 partner_namestring 合作伙伴名称。 supply_typesArray of integers <int32> 交货类型。 timezone_namestring 仓库所在时区。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `address_detailing` | object 地址详情。 |
+| `id` | integer <int64> 仓库标识符。 |
+| `is_bonded` | boolean true，表示该仓库为保税仓。 |
+| `name` | string 仓库名称。 |
+| `partner_name` | string 合作伙伴名称。 |
+| `supply_types` | Array of integers <int32> 交货类型。 |
+| `timezone_name` | string 仓库所在时区。 |
 
 ## 示例
 
 ### 示例 0
+
+```text
+true
+```
+
+### 示例 1
 
 ```json
 {"warehouses": [{"address_detailing": {"city": "string","country": "string","house": "string","region": "string","street": "string","zipcode": "string"},"id": 0,"is_bonded": true,"name": "string","partner_name": "string","supply_types": [0],"timezone_name": "string"}]}

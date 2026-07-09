@@ -23,11 +23,16 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-codestring 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ## 示例
 

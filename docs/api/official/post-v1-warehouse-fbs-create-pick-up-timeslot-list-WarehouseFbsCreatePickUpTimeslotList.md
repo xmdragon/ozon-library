@@ -23,15 +23,24 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-address_coordinates required object 仓库坐标。 is_kgt required boolean 超大货物标志。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `address_coordinates` required | object 仓库坐标。 |
+| `is_kgt` required | boolean 超大货物标志。 |
 
 ### 表格 2
 
-is_pickup_supportedboolean 支持pick-up发运标志。 timeslotsArray of objects 时间段列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `is_pickup_supported` | boolean 支持pick-up发运标志。 |
+| `timeslots` | Array of objects 时间段列表。 |
 
 ## 示例
 

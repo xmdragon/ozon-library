@@ -23,29 +23,55 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-products required Array of objects Ozon系统中商品的标识符 — product_id。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `products` required | Array of objects Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 2
 
-statusArray of objects 请求的处理情况。 Array ()errorstring 处理该请求时发生错误的原因。 is_deletedboolean 如果查询的执行没有错误且商品被删除 —— true。 offer_idstring 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `status` | Array of objects 请求的处理情况。 |
+| `error` | string 处理该请求时发生错误的原因。 |
+| `is_deleted` | boolean 如果查询的执行没有错误且商品被删除 —— true。 |
+| `offer_id` | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 3
 
-errorstring 处理该请求时发生错误的原因。 is_deletedboolean 如果查询的执行没有错误且商品被删除 —— true。 offer_idstring 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `error` | string 处理该请求时发生错误的原因。 |
+| `is_deleted` | boolean 如果查询的执行没有错误且商品被删除 —— true。 |
+| `offer_id` | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ## 示例
 
 ### 示例 0
 
+```text
+product_id
+```
+
+### 示例 1
+
+```text
+true
+```
+
+### 示例 2
+
 ```json
 {"products": [{"offer_id": "033"}]}
 ```
 
-### 示例 1
+### 示例 3
 
 ```json
 {"status": [{"offer_id": "033","is_deleted": true,"error": ""}]}

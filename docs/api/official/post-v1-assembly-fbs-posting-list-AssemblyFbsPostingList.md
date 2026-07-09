@@ -23,15 +23,27 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-cursorstring 用于选择下一批数据的指针。 filter required object 筛选器。 limit required integer <int64> <= 1000 每页显示的数量。 sort_dir required string Enum: "ASC" "DESC" 排序方向： ASC——升序， DESC——降序。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。 |
+| `filter` required | object 筛选器。 |
+| `limit` required | integer <int64> <= 1000 每页显示的数量。 |
+| `sort_dir` required | string Enum: "ASC" "DESC" 排序方向： ASC——升序， DESC——降序。 |
 
 ### 表格 2
 
-cursorstring 用于选择下一批数据的指针。如果该参数为空，则没有更多数据了。 cutoffstring <date-time> 卖家需在此时间前完成订单备货。 postingsArray of objects 货件列表。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `cursor` | string 用于选择下一批数据的指针。如果该参数为空，则没有更多数据了。 |
+| `cutoff` | string <date-time> 卖家需在此时间前完成订单备货。 |
+| `postings` | Array of objects 货件列表。 |
 
 ## 示例
 

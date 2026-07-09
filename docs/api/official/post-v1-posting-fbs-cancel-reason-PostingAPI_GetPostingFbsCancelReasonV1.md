@@ -23,19 +23,31 @@
 
 ### 表格 0
 
-Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `Client-Id` required | string 用户识别号。 |
+| `Api-Key` required | string API-密钥。 |
 
 ### 表格 1
 
-related_posting_numbers required Array of strings 货件号。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `related_posting_numbers` required | Array of strings 货件号。 |
 
 ### 表格 2
 
-resultArray of objects 请求结果。 Array ()posting_numberstring 货运号。 reasonsArray of objects 取消订单原因。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `result` | Array of objects 请求结果。 |
+| `posting_number` | string 货运号。 |
+| `reasons` | Array of objects 取消订单原因。 |
 
 ### 表格 3
 
-posting_numberstring 货运号。 reasonsArray of objects 取消订单原因。
+| 字段 | 类型/说明 |
+| --- | --- |
+| `posting_number` | string 货运号。 |
+| `reasons` | Array of objects 取消订单原因。 |
 
 ## 示例
 
