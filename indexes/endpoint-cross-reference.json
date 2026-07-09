@@ -1,0 +1,1133 @@
+{
+  "generated_at": "2026-07-09T05:13:19.738217+00:00",
+  "source_paths": [
+    "/Users/eric/works/AICollection/src-tauri/crates/scraper/src",
+    "/Users/eric/works/AICollection/docs/changelog",
+    "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon",
+    "/Users/eric/works/ZhiPin/ozon_spider",
+    "/Users/eric/works/ZhiPin/extension/src/content",
+    "/Users/eric/works/simple-collection/extension/src",
+    "/Users/eric/works/simple-collection/tests"
+  ],
+  "endpoint_count": 50,
+  "endpoints": [
+    {
+      "value": "/v1/analytics/data",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 461,
+          "snippet": "使用 /v1/analytics/data 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 504,
+          "snippet": "\"/v1/analytics/data\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/chat/send/file",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 153,
+          "snippet": "\"/v1/chat/send/file\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/chat/send/message",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 123,
+          "snippet": "\"/v1/chat/send/message\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/chat/start",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 26,
+          "snippet": "\"/v1/chat/start\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/chat/updates",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 216,
+          "snippet": "\"/v1/chat/updates\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/description-category/attribute",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 53,
+          "snippet": "使用 /v1/description-category/attribute 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 71,
+          "snippet": "\"/v1/description-category/attribute\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/description-category/attribute/values",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 87,
+          "snippet": "使用 /v1/description-category/attribute/values 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 111,
+          "snippet": "\"/v1/description-category/attribute/values\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/description-category/attribute/values/search",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 127,
+          "snippet": "使用 /v1/description-category/attribute/values/search 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 151,
+          "snippet": "\"/v1/description-category/attribute/values/search\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/description-category/tree",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 22,
+          "snippet": "使用 /v1/description-category/tree 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 40,
+          "snippet": "\"/v1/description-category/tree\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/posting/fbs/split",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 194,
+          "snippet": "使用 /v1/posting/fbs/split 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 224,
+          "snippet": "return await self._request(\"POST\", \"/v1/posting/fbs/split\", data=data, resource_type=\"postings\")"
+        }
+      ]
+    },
+    {
+      "value": "/v1/pricing-strategy/competitors/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 533,
+          "snippet": "\"/v1/pricing-strategy/competitors/list\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/pricing-strategy/product/info",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 544,
+          "snippet": "使用 /v1/pricing-strategy/product/info 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 558,
+          "snippet": "\"/v1/pricing-strategy/product/info\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/product/archive",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 321,
+          "snippet": "\"POST\", \"/v1/product/archive\", data={\"product_ids\": product_ids}, resource_type=\"products\""
+        }
+      ]
+    },
+    {
+      "value": "/v1/product/import-by-sku",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/product_routes.py",
+          "relative_path": "plugins/ef/channels/ozon/api/product_routes.py",
+          "line": 425,
+          "snippet": "使用OZON API的 /v1/product/import-by-sku 接口，通过指定现有商品的SKU快速创建商品卡片副本。"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 206,
+          "snippet": "使用 /v1/product/import-by-sku 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 244,
+          "snippet": "\"/v1/product/import-by-sku\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/product_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/product_service.py",
+          "line": 1542,
+          "snippet": "使用OZON API的 /v1/product/import-by-sku 接口，通过指定现有商品的SKU快速创建商品卡片副本。"
+        }
+      ]
+    },
+    {
+      "value": "/v1/product/import/info",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 255,
+          "snippet": "使用 /v1/product/import/info 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 275,
+          "snippet": "\"/v1/product/import/info\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/product/import/prices",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 208,
+          "snippet": "\"POST\", \"/v1/product/import/prices\", data={\"prices\": prices_data}, resource_type=\"products\""
+        }
+      ]
+    },
+    {
+      "value": "/v1/product/pictures/import",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 18,
+          "snippet": "使用 /v1/product/pictures/import 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 38,
+          "snippet": "return await self._request(\"POST\", \"/v1/product/pictures/import\", data=data, resource_type=\"products\")"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 87,
+          "snippet": "使用 /v1/product/pictures/import 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 112,
+          "snippet": "\"/v1/product/pictures/import\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 391,
+          "snippet": "\"POST\", \"/v1/product/pictures/import\","
+        }
+      ]
+    },
+    {
+      "value": "/v1/product/unarchive",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 335,
+          "snippet": "\"POST\", \"/v1/product/unarchive\", data={\"product_id\": product_ids}, resource_type=\"products\""
+        }
+      ]
+    },
+    {
+      "value": "/v2/chat/read",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 186,
+          "snippet": "\"/v2/chat/read\","
+        }
+      ]
+    },
+    {
+      "value": "/v2/posting/fbs/cancel",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 186,
+          "snippet": "return await self._request(\"POST\", \"/v2/posting/fbs/cancel\", data=data, resource_type=\"postings\")"
+        }
+      ]
+    },
+    {
+      "value": "/v2/posting/fbs/package-label",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 232,
+          "snippet": "OZON API 端点: POST /v2/posting/fbs/package-label"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 274,
+          "snippet": "\"Ozon API request: POST /v2/posting/fbs/package-label\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 280,
+          "snippet": "url=\"/v2/posting/fbs/package-label\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 294,
+          "snippet": "\"Ozon API success: POST /v2/posting/fbs/package-label\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 300,
+          "snippet": "\"OZON\", \"POST\", \"/v2/posting/fbs/package-label\", api_elapsed_ms,"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 329,
+          "snippet": "\"OZON\", \"POST\", \"/v2/posting/fbs/package-label\", api_elapsed_ms,"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 337,
+          "snippet": "\"OZON\", \"POST\", \"/v2/posting/fbs/package-label\", api_elapsed_ms,"
+        }
+      ]
+    },
+    {
+      "value": "/v2/product/info/stocks-by-warehouse/fbs",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 280,
+          "snippet": "使用 /v2/product/info/stocks-by-warehouse/fbs API"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 305,
+          "snippet": "\"/v2/product/info/stocks-by-warehouse/fbs\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/sync/product_sync/product_fetcher.py",
+          "relative_path": "plugins/ef/channels/ozon/services/sync/product_sync/product_fetcher.py",
+          "line": 184,
+          "snippet": "批量获取库存信息（使用 /v2/product/info/stocks-by-warehouse/fbs API）"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/sync/product_sync/product_sync_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/sync/product_sync/product_sync_service.py",
+          "line": 199,
+          "snippet": "# 使用 /v2/product/info/stocks-by-warehouse/fbs API，直接返回仓库名"
+        }
+      ]
+    },
+    {
+      "value": "/v2/product/pictures/info",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 43,
+          "snippet": "使用 /v2/product/pictures/info 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 55,
+          "snippet": "return await self._request(\"POST\", \"/v2/product/pictures/info\", data=data, resource_type=\"products\")"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 125,
+          "snippet": "使用 /v2/product/pictures/info 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/media.py",
+          "line": 147,
+          "snippet": "\"/v2/product/pictures/info\","
+        }
+      ]
+    },
+    {
+      "value": "/v2/products/delete",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 350,
+          "snippet": "\"POST\", \"/v2/products/delete\", data={\"products\": products}, resource_type=\"products\""
+        }
+      ]
+    },
+    {
+      "value": "/v2/products/stocks",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 214,
+          "snippet": "使用 /v2/products/stocks API"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 237,
+          "snippet": "\"POST\", \"/v2/products/stocks\", data={\"stocks\": stocks_data}, resource_type=\"products\""
+        }
+      ]
+    },
+    {
+      "value": "/v2/warehouse/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/warehouse.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/warehouse.py",
+          "line": 16,
+          "snippet": "使用 /v2/warehouse/list 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/warehouse.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/warehouse.py",
+          "line": 45,
+          "snippet": "\"/v2/warehouse/list\","
+        }
+      ]
+    },
+    {
+      "value": "/v3/chat/history",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 96,
+          "snippet": "\"/v3/chat/history\","
+        }
+      ]
+    },
+    {
+      "value": "/v3/chat/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/chat.py",
+          "line": 64,
+          "snippet": "\"/v3/chat/list\","
+        }
+      ]
+    },
+    {
+      "value": "/v3/finance/transaction/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "line": 86,
+          "snippet": "使用 /v3/finance/transaction/list 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "line": 151,
+          "snippet": "\"/v3/finance/transaction/list\","
+        }
+      ]
+    },
+    {
+      "value": "/v3/finance/transaction/totals",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "line": 20,
+          "snippet": "使用 /v3/finance/transaction/totals 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/finance.py",
+          "line": 69,
+          "snippet": "\"/v3/finance/transaction/totals\","
+        }
+      ]
+    },
+    {
+      "value": "/v3/posting/fbs/get",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 93,
+          "snippet": "使用 /v3/posting/fbs/get 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 134,
+          "snippet": "\"POST\", \"/v3/posting/fbs/get\", data=data, resource_type=\"postings\""
+        }
+      ]
+    },
+    {
+      "value": "/v3/posting/fbs/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 78,
+          "snippet": "return await self._request(\"POST\", \"/v3/posting/fbs/list\", data=data, resource_type=\"orders\")"
+        }
+      ]
+    },
+    {
+      "value": "/v3/product/import",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/utils/brand_constants.py",
+          "relative_path": "plugins/ef/channels/ozon/utils/brand_constants.py",
+          "line": 4,
+          "snippet": "里 attr 85 的值都必须带合法的 ``dictionary_value_id``，否则 /v3/product/import"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/utils/brand_constants.py",
+          "relative_path": "plugins/ef/channels/ozon/utils/brand_constants.py",
+          "line": 9,
+          "snippet": "- /v3/product/import 没有顶级 ``brand`` 字段（早期 v2 才有）"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/arq_tasks/publish_tasks.py",
+          "relative_path": "plugins/ef/channels/ozon/arq_tasks/publish_tasks.py",
+          "line": 526,
+          "snippet": "2. 创建商品（调用 OZON API /v3/product/import）"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/arq_tasks/publish_tasks.py",
+          "relative_path": "plugins/ef/channels/ozon/arq_tasks/publish_tasks.py",
+          "line": 1001,
+          "snippet": "# 注：不再写 product_item[\"brand\"] —— OZON /v3/product/import 没有顶级"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/product_routes.py",
+          "relative_path": "plugins/ef/channels/ozon/api/product_routes.py",
+          "line": 556,
+          "snippet": "通过 OZON API /v3/product/import 更新商品描述"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 162,
+          "snippet": "使用 /v3/product/import 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/catalog.py",
+          "line": 195,
+          "snippet": "\"/v3/product/import\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/quick_publish_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/quick_publish_service.py",
+          "line": 128,
+          "snippet": "# 构建完整商品数据（用于 /v3/product/import API）"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/catalog_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/catalog_service.py",
+          "line": 1458,
+          "snippet": "OZON ``/v3/product/import`` 没有顶级 ``brand`` 字段；attr 85 是字典绑定"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/catalog_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/catalog_service.py",
+          "line": 1735,
+          "snippet": "# OZON /v3/product/import 的 values[i] schema 仅 ``{dictionary_value_id, value}``。"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/product_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/product_service.py",
+          "line": 1905,
+          "snippet": "通过 OZON API /v3/product/import 更新商品描述"
+        }
+      ]
+    },
+    {
+      "value": "/v3/product/info/attributes",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/catalog_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/catalog_service.py",
+          "line": 1736,
+          "snippet": "# bundle / /v3/product/info/attributes 返回的 sequence / complex_sequence /"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/product_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/product_service.py",
+          "line": 1992,
+          "snippet": "# OZON /v3/product/info/attributes 返回的 attr.id 类型在 seller/buyer 路径"
+        }
+      ]
+    },
+    {
+      "value": "/v3/product/info/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 39,
+          "snippet": "使用 /v3/product/info/list 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 57,
+          "snippet": "response = await self._request(\"POST\", \"/v3/product/info/list\", data=payload, resource_type=\"products\")"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 73,
+          "snippet": "使用 /v3/product/info/list 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 94,
+          "snippet": "return await self._request(\"POST\", \"/v3/product/info/list\", data=payload, resource_type=\"products\")"
+        }
+      ]
+    },
+    {
+      "value": "/v3/product/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 34,
+          "snippet": "return await self._request(\"POST\", \"/v3/product/list\", data=data, resource_type=\"products\")"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/base.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/base.py",
+          "line": 112,
+          "snippet": "endpoint = \"/v3/product/list\""
+        }
+      ]
+    },
+    {
+      "value": "/v4/fbs/posting/product/exemplar/status",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 392,
+          "snippet": "使用 /v4/fbs/posting/product/exemplar/status 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 407,
+          "snippet": "\"POST\", \"/v4/fbs/posting/product/exemplar/status\", data=data, resource_type=\"postings\""
+        }
+      ]
+    },
+    {
+      "value": "/v4/posting/fbs/ship",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 143,
+          "snippet": "使用 /v4/posting/fbs/ship 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 174,
+          "snippet": "return await self._request(\"POST\", \"/v4/posting/fbs/ship\", data=data, resource_type=\"postings\")"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/posting_operations.py",
+          "relative_path": "plugins/ef/channels/ozon/services/posting_operations.py",
+          "line": 689,
+          "snippet": "从 posting.raw_payload 提取商品信息并构造 /v4/posting/fbs/ship API 所需的 packages 数据"
+        }
+      ]
+    },
+    {
+      "value": "/v4/product/info/attributes",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/product_routes.py",
+          "relative_path": "plugins/ef/channels/ozon/api/product_routes.py",
+          "line": 587,
+          "snippet": "调用 OZON /v4/product/info/attributes 接口获取最新数据。"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 109,
+          "snippet": "使用 /v4/product/info/attributes 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 150,
+          "snippet": "return await self._request(\"POST\", \"/v4/product/info/attributes\", data=payload, resource_type=\"products\")"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/product_service.py",
+          "relative_path": "plugins/ef/channels/ozon/services/product_service.py",
+          "line": 2097,
+          "snippet": "调用 OZON /v4/product/info/attributes 接口获取最新数据。"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/sync/product_sync/product_fetcher.py",
+          "relative_path": "plugins/ef/channels/ozon/services/sync/product_sync/product_fetcher.py",
+          "line": 286,
+          "snippet": "# /v4/product/info/attributes 返回的 result 是数组，不是 {\"items\": [...]}"
+        }
+      ]
+    },
+    {
+      "value": "/v4/product/info/stocks",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 245,
+          "snippet": "使用 /v4/product/info/stocks API"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 274,
+          "snippet": "\"POST\", \"/v4/product/info/stocks\", data=data, resource_type=\"products\""
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 282,
+          "snippet": "此 API 直接返回 warehouse_id 和 warehouse_name，比 /v4/product/info/stocks 更准确"
+        }
+      ]
+    },
+    {
+      "value": "/v5/fbs/posting/product/exemplar/validate",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 371,
+          "snippet": "使用 /v5/fbs/posting/product/exemplar/validate 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 386,
+          "snippet": "\"POST\", \"/v5/fbs/posting/product/exemplar/validate\", data=data, resource_type=\"postings\""
+        }
+      ]
+    },
+    {
+      "value": "/v5/product/info/prices",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 404,
+          "snippet": "使用 /v5/product/info/prices 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/products.py",
+          "line": 443,
+          "snippet": "\"/v5/product/info/prices\","
+        }
+      ]
+    },
+    {
+      "value": "/v6/fbs/posting/product/exemplar/set",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 350,
+          "snippet": "使用 /v6/fbs/posting/product/exemplar/set 接口"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "relative_path": "plugins/ef/channels/ozon/api/client_mixins/orders.py",
+          "line": 366,
+          "snippet": "return await self._request(\"POST\", \"/v6/fbs/posting/product/exemplar/set\", data=data, resource_type=\"postings\")"
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/delivery-method-service/provider/template/category/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1723,
+          "snippet": "\"https://seller.ozon.ru/api/delivery-method-service/provider/template/category/list\","
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/delivery-method-service/provider/template/speed/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1738,
+          "snippet": "\"https://seller.ozon.ru/api/delivery-method-service/provider/template/speed/list\","
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/delivery-method-service/v2/provider/template/by-location/list",
+      "references": [
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1703,
+          "snippet": "\"https://seller.ozon.ru/api/delivery-method-service/v2/provider/template/by-location/list\","
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3",
+      "references": [
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/browser/seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/browser/seller.rs",
+          "line": 1320,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3\","
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 726,
+          "snippet": "const resp = await fetch('https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3', {{"
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 845,
+          "snippet": "const resp = await fetch('https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3', {{"
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 916,
+          "snippet": "const resp = await fetch('https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3', {{"
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 1051,
+          "snippet": "assert!(js.contains(\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3\"));"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1548,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1624,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1662,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/data/v3\","
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/get_sellers",
+      "references": [
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/browser/seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/browser/seller.rs",
+          "line": 1321,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/get_sellers\","
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 787,
+          "snippet": "const resp = await fetch('https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/get_sellers', {{"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1582,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-analytics/what_to_sell/get_sellers\","
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/site/seller-prototype/create-bundle-by-variant-id",
+      "references": [
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/browser/seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/browser/seller.rs",
+          "line": 1322,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-prototype/create-bundle-by-variant-id\","
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 1129,
+          "snippet": "var r2 = await fetch('https://seller.ozon.ru/api/site/seller-prototype/create-bundle-by-variant-id', {{"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1216,
+          "snippet": "\"https://seller.ozon.ru/api/site/seller-prototype/create-bundle-by-variant-id\","
+        }
+      ]
+    },
+    {
+      "value": "https://seller.ozon.ru/api/v1/search",
+      "references": [
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/browser/seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/browser/seller.rs",
+          "line": 1319,
+          "snippet": "\"https://seller.ozon.ru/api/v1/search\","
+        },
+        {
+          "project": "AICollection",
+          "path": "/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "relative_path": "src-tauri/crates/scraper/src/services/ozon_seller.rs",
+          "line": 1102,
+          "snippet": "var r1 = await fetch('https://seller.ozon.ru/api/v1/search', {{"
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1111,
+          "snippet": "\"https://seller.ozon.ru/api/v1/search\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1158,
+          "snippet": "\"https://seller.ozon.ru/api/v1/search\","
+        },
+        {
+          "project": "ZhiPin",
+          "path": "/Users/eric/works/ZhiPin/ozon_spider/seller_login.py",
+          "relative_path": "ozon_spider/seller_login.py",
+          "line": 1189,
+          "snippet": "\"https://seller.ozon.ru/api/v1/search\","
+        }
+      ]
+    }
+  ]
+}
