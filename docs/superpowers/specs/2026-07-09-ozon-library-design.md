@@ -1,43 +1,43 @@
-# Ozon Library Design
+# Ozon 资料库设计
 
-## Goal
+## 目标
 
-Build `xmdragon/ozon-library` into a reusable Ozon knowledge base for AI agents and human review. The repository should consolidate knowledge from four sources:
+把 `xmdragon/ozon-library` 建成一个面向 AI 使用、也方便人工查阅的 Ozon 资料库。资料库需要整合四个来源：
 
 - `/Users/eric/works/AICollection`
 - `/Users/eric/works/simple-collection`
 - `/Users/eric/works/ZhiPin`
-- The currently opened Ozon Seller API documentation in Chrome
+- 当前 Chrome 打开的 Ozon Seller API 官方文档
 
-The library must emphasize reusable Ozon concepts instead of copying each project separately. Project-specific details remain traceable through source references and source notes.
+资料库的重点不是把三个项目分别复制一遍，而是提炼可复用的 Ozon 知识单元。项目差异、历史实现和来源证据通过 source notes 和引用保留。
 
-## Context Observed
+## 已观察到的上下文
 
-`ozon-library` is currently an empty repository on branch `main`.
+`ozon-library` 当前是一个空仓库，分支为 `main`。
 
-The active local projects are under `/Users/eric/works`:
+三个活跃本地项目位于 `/Users/eric/works`：
 
-- `AICollection`: large Ozon desktop/scraper implementation with WebView, page-state classification, slider handling, adult verification, queue recovery, Seller web APIs, product scraping, and changelogs.
-- `ZhiPin`: large Ozon backend, extension, Seller API client, seller login, seller internal API, models, migrations, web UI, and older spider implementation.
-- `simple-collection`: smaller browser-extension and capture-oriented project, useful for Ozon DOM capture, API capture, list/card extraction, currency/language handling, and runtime resilience.
-- Chrome Seller API page: `https://docs.ozon.ru/api/seller/zh/?__rr=1`, rendered as Redoc with about 280 operation blocks. Each operation block is extractable from Chrome DOM by `id="operation/<operationId>"` and includes method/path, parameters, request schema, response schema, and examples.
+- `AICollection`：大型 Ozon 桌面端和 scraper 实现，包含 WebView、页面状态识别、滑块处理、成人验证、队列恢复、Seller web API、商品采集和大量 changelog。
+- `ZhiPin`：大型 Ozon 后端、浏览器扩展、Seller API client、Seller 登录、Seller 内部 API、模型、迁移、Web UI 和较早的 spider 实现。
+- `simple-collection`：较小的浏览器扩展/API 捕获项目，适合作为 Ozon DOM 捕获、API 捕获、列表/卡片提取、币种语言处理和运行时韧性的来源。
+- Chrome Seller API 页面：`https://docs.ozon.ru/api/seller/zh/?__rr=1`，是 Redoc 渲染页面，约有 280 个 operation block。每个 operation block 都可以通过 Chrome DOM 中的 `id="operation/<operationId>"` 抽取，并包含 method/path、参数、请求 schema、响应 schema 和示例。
 
-Official Seller API documentation must be captured through Chrome, not through direct `curl` or external downloads.
+官方 Seller API 文档必须通过 Chrome 抓取，不能通过直接 `curl` 或外部下载替代。
 
-## Design Decision
+## 设计决策
 
-Use a topic-first knowledge base with source references.
+采用“主题优先 + 来源引用”的知识库结构。
 
-This avoids duplicating shared logic from AICollection and ZhiPin. The project-specific source folders become provenance and delta notes, while reusable knowledge lives under stable topic areas.
+这样可以避免 AICollection 和 ZhiPin 中的共享逻辑被重复写多遍。项目维度只保留溯源和差异说明，真正可复用的知识放到稳定主题文档里。
 
-Rejected alternatives:
+不采用的方案：
 
-- Source-first organization: easier to trace, but creates duplicate docs and makes AI retrieval noisier.
-- Machine-index-only organization: good for scripts, but poor for human browsing and slower to bootstrap.
+- 按来源项目组织：溯源简单，但重复内容多，AI 检索时噪音大。
+- 只做机器索引：适合脚本，但人工阅读体验差，启动成本也更高。
 
-The selected design combines Markdown topic docs with JSON indexes for scripted refresh and AI lookup.
+最终方案是：Markdown 主题文档作为主资料，JSON 索引作为脚本刷新和 AI 查找的辅助。
 
-## Repository Structure
+## 仓库结构
 
 ```text
 ozon-library/
@@ -104,49 +104,49 @@ ozon-library/
         source-map.md
 ```
 
-## Documentation Format
+## 文档格式
 
-Each topic Markdown file should use this shape:
+每篇主题 Markdown 文档使用下面的结构：
 
 ```markdown
-# Title
+# 标题
 
-## Purpose
-What problem this knowledge solves.
+## 用途
+这块知识解决什么问题。
 
-## AI Summary
-The short, high-signal version an agent should read first.
+## AI 摘要
+给 AI 优先读取的高密度结论。
 
-## Applies To
-Where this knowledge is valid, including project/runtime boundaries.
+## 适用范围
+说明在哪些项目、运行时、页面或 API 场景下有效。
 
-## Key Interfaces
-Tables for APIs, DOM selectors, fields, request payloads, response payloads, events, or status values.
+## 关键接口
+用表格记录 API、DOM selector、字段、请求 payload、响应 payload、事件或状态值。
 
-## Flow
-Actual sequence of calls, DOM checks, state transitions, or recovery steps.
+## 流程
+实际调用顺序、DOM 检测顺序、状态流转或恢复步骤。
 
-## Exceptions And Recovery
-Known errors, blocked states, rate limits, fallback paths, retry limits, and when to stop.
+## 异常与恢复
+已知错误、阻塞状态、限流、fallback、重试上限和停止条件。
 
-## Source References
-Absolute local source paths or official Chrome operation IDs used to derive this document.
+## 来源引用
+用于生成本文档的绝对本地源码路径，或官方 Chrome operation ID。
 ```
 
-Every extracted fact should be traceable. If a fact appears in more than one project, record the common behavior in the topic doc and project-specific differences in `docs/source-notes/`.
+每条非显而易见的知识都要能追溯来源。如果同一个事实在多个项目中出现，公共行为写入主题文档，项目差异写入 `docs/source-notes/`。
 
-## Official Seller API Capture
+## 官方 Seller API 抓取
 
-Official Seller API content must come from Chrome.
+官方 Seller API 内容必须来自 Chrome。
 
-The current page exposes operation sections like:
+当前页面暴露了类似下面的 operation section：
 
 - `operation/ProductAPI_ImportProductsV3`
 - `operation/ProductAPI_ProductsStocksV2`
 - `operation/PostingFbsList`
 - `operation/AccessAPI_RolesByToken`
 
-The extractor should use Chrome/Playwright DOM evaluation to project each operation block into a compact JSON object:
+抽取器应使用 Chrome/Playwright DOM evaluation，把每个 operation block 投影成紧凑 JSON：
 
 ```json
 {
@@ -164,120 +164,120 @@ The extractor should use Chrome/Playwright DOM evaluation to project each operat
 }
 ```
 
-The initial extract should prioritize:
+首轮抽取优先覆盖：
 
-- Authorization, `Client-Id`, `Api-Key`, key expiration, rate limits, CORS/backend-only rule.
-- Product import, attributes, pictures, product list, product info.
-- Stock and price updates.
-- FBS/rFBS postings.
-- Warehouses and delivery methods.
-- Reports, finance, chat, and roles.
-- Deprecated endpoints and replacement endpoints.
+- 授权、`Client-Id`、`Api-Key`、密钥有效期、限流、CORS/backend-only 规则。
+- 商品创建、属性、图片、商品列表、商品信息。
+- 库存和价格更新。
+- FBS/rFBS 货件。
+- 仓库和配送方式。
+- 报告、财务、聊天和角色。
+- 已废弃端点及替代端点。
 
-## Project Source Extraction
+## 项目源码抽取
 
-The local projects should be scanned into indexes first, then merged into docs.
+本地项目应先扫描成索引，再合并进文档。
 
-Important source categories:
+重要来源类别：
 
-- Seller API backend client: `ZhiPin/plugins/ef/channels/ozon/api/client.py` and `client_mixins/*`.
-- Seller web internal API: `AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs`, `AICollection/src-tauri/crates/scraper/src/browser/seller.rs`, `ZhiPin/ozon_spider/seller_login.py`.
-- Buyer page DOM and product data extraction: AICollection scraper pipeline, ZhiPin extension product/list modules, simple-collection extension.
-- Page state and recovery: AICollection `page_state.rs`, `ozon_rate_limit.rs`, `challenge.rs`, slider modules, queue recovery, adult verification code.
-- Browser extension DOM structure: ZhiPin extension `seller-page`, `product-page`, `shop-binding`, `list-enhancer`; simple-collection `content.js`, `api_parser.js`, `page_capture.js`.
-- Database/model fields: ZhiPin Ozon models and migrations, AICollection backend and Tauri stores.
-- Changelog/incidents: AICollection `docs/changelog/*ozon*`, related task notes, and ZhiPin tests/docs where behavior was fixed.
+- Seller API 后端 client：`ZhiPin/plugins/ef/channels/ozon/api/client.py` 和 `client_mixins/*`。
+- Seller web 内部 API：`AICollection/src-tauri/crates/scraper/src/services/ozon_seller.rs`、`AICollection/src-tauri/crates/scraper/src/browser/seller.rs`、`ZhiPin/ozon_spider/seller_login.py`。
+- 买家页 DOM 和商品数据抽取：AICollection scraper pipeline、ZhiPin extension product/list 模块、simple-collection extension。
+- 页面状态与恢复：AICollection `page_state.rs`、`ozon_rate_limit.rs`、`challenge.rs`、slider 模块、queue recovery、adult verification 代码。
+- 浏览器扩展 DOM 结构：ZhiPin extension 的 `seller-page`、`product-page`、`shop-binding`、`list-enhancer`；simple-collection 的 `content.js`、`api_parser.js`、`page_capture.js`。
+- 数据库/模型字段：ZhiPin Ozon models 和 migrations，AICollection backend 与 Tauri stores。
+- Changelog/incident：AICollection `docs/changelog/*ozon*`、相关 task notes，以及 ZhiPin 中说明行为修复的 tests/docs。
 
-Indexes should record file paths, matched topics, endpoints, selectors, status strings, and notable comments. They should not replace curated topic docs.
+索引需要记录文件路径、匹配主题、endpoint、selector、状态字符串和重要注释。索引不能替代人工整理后的主题文档。
 
-## Reuse Extraction Rules
+## 复用提炼规则
 
-When the same behavior appears in multiple projects:
+当多个项目中出现相同行为时：
 
-1. Put the shared behavior in the topic document.
-2. Put implementation differences in `docs/source-notes/<project>.md`.
-3. Link every source path that supports the behavior.
-4. Prefer current AICollection behavior when it represents a later fix for older ZhiPin logic.
-5. Preserve older ZhiPin/simple-collection behavior when it reveals a fallback, legacy endpoint, or historical incident.
-6. Mark unstable Ozon DOM selectors as "observed selectors" rather than permanent contracts.
+1. 共享行为写入主题文档。
+2. 实现差异写入 `docs/source-notes/<project>.md`。
+3. 每条行为都链接支持它的源码路径。
+4. 如果 AICollection 中的当前实现代表对 ZhiPin 旧逻辑的后续修复，优先采用 AICollection 的当前行为。
+5. 如果 ZhiPin/simple-collection 的旧行为揭示了 fallback、legacy endpoint 或历史 incident，需要保留。
+6. Ozon DOM selector 标注为“观察到的 selector”，不要当作永久契约。
 
-Examples of reusable knowledge units:
+可复用知识单元示例：
 
-- Ozon page-state classification: content page, NoConnection, Chrome error, block page, slider captcha, antibot incident, adult birthday form, adult confirm-only page.
-- Slider handling: detection markers, image assets, solve attempt, retry/rotate behavior, cancellation/pause propagation.
-- Adult verification: userAdultModal, birthday input, confirm-only path, 403-sensitive endpoint behavior, DOM-first submit in newer code.
-- Seller API headers and rate limits.
-- Seller web internal API calls that require logged-in browser context and `credentials: include`.
-- Product price extraction after Ozon changed `webPrice` to `webSale`.
-- Seller page widget injection and reinjection via MutationObserver.
-- SKU search plus create-bundle flow for Seller-side product details.
+- Ozon 页面状态分类：内容页、NoConnection、Chrome error、block page、slider captcha、antibot incident、成人生日页、成人确认页。
+- 滑块处理：检测标记、图片资源、解锁尝试、retry/rotate 行为、cancel/pause 传播。
+- 成人验证：`userAdultModal`、生日输入、confirm-only 路径、403 敏感接口行为、较新代码中的 DOM-first submit。
+- Seller API header 和限流。
+- 需要已登录浏览器上下文和 `credentials: include` 的 Seller web 内部 API。
+- Ozon 从 `webPrice` 切换到 `webSale` 后的商品价格提取。
+- Seller 页面 widget 注入和 MutationObserver 重新注入。
+- 通过 SKU search 加 create-bundle 获取 Seller 侧商品详情的流程。
 
-## Repository Skill / Workflow
+## 仓库内 skill / workflow
 
-Create a repository-local skill at `skills/ozon-library-maintainer/SKILL.md`.
+创建仓库本地 skill：`skills/ozon-library-maintainer/SKILL.md`。
 
-The skill is not installed globally. It should guide future Codex sessions when maintaining this repository.
+这个 skill 不安装到全局，只作为本仓库维护说明，供未来 Codex 会话使用。
 
-It should instruct agents to:
+它应指示 agent：
 
-- Read `README.md`, `workflows/ozon-library-update.md`, and `indexes/source-files.json` first.
-- Use Chrome for official Seller API extraction.
-- Use local source scans for the three project repositories.
-- Update indexes before editing topic docs.
-- Merge by reusable topic, not by project.
-- Preserve source references for every non-obvious fact.
-- Treat Ozon DOM and Seller internal APIs as unstable and annotate observation dates.
-- Avoid including credentials, API keys, cookies, tokens, or private account data.
+- 先读 `README.md`、`workflows/ozon-library-update.md` 和 `indexes/source-files.json`。
+- 官方 Seller API 必须通过 Chrome 抽取。
+- 三个本地项目通过源码扫描抽取。
+- 编辑主题文档前先更新索引。
+- 按可复用主题合并，不按项目重复堆内容。
+- 对每条非显而易见的知识保留来源引用。
+- 把 Ozon DOM 和 Seller 内部 API 当作不稳定接口，并标注观察日期。
+- 不要提交 credential、API key、cookie、token 或账号私有数据。
 
-## Workflows
+## 工作流
 
-`workflows/ozon-library-update.md` should define the top-level refresh sequence:
+`workflows/ozon-library-update.md` 定义顶层刷新顺序：
 
-1. Confirm source paths and Git revisions for AICollection, simple-collection, and ZhiPin.
-2. Confirm Chrome has the official Seller API page open.
-3. Extract official operations through Chrome DOM into `indexes/official-seller-api.operations.json`.
-4. Scan local projects into `indexes/source-files.json`, `endpoint-cross-reference.json`, and `dom-selectors.json`.
-5. Compare indexes with existing docs.
-6. Update topic docs for new or changed reusable knowledge.
-7. Update source notes with project-specific deltas.
-8. Run link/reference validation.
-9. Commit changes with source revisions in the commit message or update note.
+1. 确认 AICollection、simple-collection、ZhiPin 的源码路径和 Git revision。
+2. 确认 Chrome 打开了官方 Seller API 页面。
+3. 通过 Chrome DOM 抽取官方 operation，写入 `indexes/official-seller-api.operations.json`。
+4. 扫描本地项目，写入 `indexes/source-files.json`、`endpoint-cross-reference.json` 和 `dom-selectors.json`。
+5. 对比索引和现有文档。
+6. 针对新增或变化的复用知识更新主题文档。
+7. 用项目差异更新 source notes。
+8. 运行链接/引用校验。
+9. 提交时在 commit message 或更新记录里写明来源 revision。
 
-`workflows/chrome-official-seller-api-extract.md` should document the Chrome-only extraction method.
+`workflows/chrome-official-seller-api-extract.md` 记录 Chrome-only 官方文档抽取方法。
 
-`workflows/project-source-extract.md` should document `rg` patterns, path priorities, and topic routing.
+`workflows/project-source-extract.md` 记录 `rg` pattern、路径优先级和主题路由。
 
-`workflows/dedupe-and-merge.md` should document how to resolve duplicate or conflicting findings.
+`workflows/dedupe-and-merge.md` 记录如何处理重复或冲突发现。
 
-## Validation
+## 验收标准
 
-The first implementation should be considered successful when:
+第一版实现满足以下条件即可认为成功：
 
-- The repository has the planned directory structure.
-- README explains how humans and AI should navigate the library.
-- At least one official Seller API operation index is generated from Chrome, with enough structure to scale to all operations.
-- Source indexes include the three local projects and classify files by topic.
-- Initial topic docs exist for the highest-value reusable areas:
-  - Seller API auth and request rules.
-  - Product import/list/info.
-  - Stock and price updates.
-  - Seller web internal APIs.
-  - Product/list page DOM.
-  - Page-state classification.
-  - Slider captcha.
-  - Adult verification.
-  - NoConnection/block/antibot incident recovery.
-- Repository-local skill and workflows are present.
-- No secrets, cookies, tokens, or account-specific private data are committed.
+- 仓库拥有规划中的目录结构。
+- README 说明人和 AI 应如何浏览资料库。
+- 至少能通过 Chrome 生成官方 Seller API operation 索引，并且结构足以扩展到所有 operation。
+- source indexes 覆盖三个本地项目，并按主题分类文件。
+- 首批高价值主题文档已经存在：
+  - Seller API 授权和请求规则。
+  - 商品创建/list/info。
+  - 库存和价格更新。
+  - Seller web 内部 API。
+  - 商品页/列表页 DOM。
+  - 页面状态分类。
+  - 滑块验证码。
+  - 成人验证。
+  - NoConnection/block/antibot incident recovery。
+- 仓库本地 skill 和 workflows 已存在。
+- 没有提交 secret、cookie、token 或账号私有数据。
 
-## Open Implementation Notes
+## 实施说明
 
-The implementation plan should avoid trying to fully curate all 280 official operations in one pass. It should first build:
+实施计划不应该试图一次性人工整理完 280 个官方 operation。第一阶段先完成：
 
-- the skeleton,
-- the extraction scripts or Chrome snippets,
-- the indexes,
-- the highest-value docs,
-- and the maintainer workflow.
+- 仓库骨架；
+- 抽取脚本或 Chrome snippet；
+- 索引；
+- 最高价值主题文档；
+- maintainer workflow。
 
-After that, the remaining official Seller API sections can be filled incrementally from the generated operation index.
+剩余官方 Seller API 内容可以之后从生成的 operation index 中逐步补齐。
