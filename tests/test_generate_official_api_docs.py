@@ -1,0 +1,88 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from tools.generate_official_api_docs import (
+    generate_docs,
+    operation_group,
+    render_operation_doc,
+    slugify_operation,
+)
+
+
+def sample_operation(path="/v3/product/list", operation_id="ProductAPI_GetProductList", title="商品列表"):
+    return {
+        "title": title,
+        "method": "post",
+        "path": path,
+        "operationId": operation_id,
+        "sourceUrl": f"https://docs.ozon.ru/api/seller/zh/#operation/{operation_id}",
+        "headings": ["商品列表", "header Parameters", "Request Body schema", "Response Schema"],
+        "tables": [
+            {"index": 0, "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"},
+            {"index": 1, "text": "filter object 过滤器。 limit integer 每页数量。"},
+            {"index": 2, "text": "result object 商品结果。 total integer 总数。"},
+        ],
+        "examples": [
+            {"index": 0, "text": '{"filter": {"visibility": "ALL"}, "limit": 10}'},
+            {"index": 1, "text": '{"result": {"items": []}, "total": 0}'},
+        ],
+    }
+
+
+class GenerateOfficialApiDocsTest(unittest.TestCase):
+    def test_slug_includes_method_path_and_operation_id(self):
+        slug = slugify_operation(sample_operation())
+
+        self.assertEqual(slug, "post-v3-product-list-ProductAPI_GetProductList.md")
+
+    def test_group_uses_first_stable_path_segment(self):
+        self.assertEqual(operation_group(sample_operation()), "product")
+        self.assertEqual(operation_group(sample_operation("/v4/posting/fbs/list", "PostingFbsList")), "posting")
+
+    def test_render_operation_doc_contains_official_details(self):
+        doc = render_operation_doc(sample_operation())
+
+        self.assertIn("# 商品列表", doc)
+        self.assertIn("`POST /v3/product/list`", doc)
+        self.assertIn("`ProductAPI_GetProductList`", doc)
+        self.assertIn("Client-Id required string 用户识别号。 Api-Key required string API-密钥。", doc)
+        self.assertIn("filter object 过滤器。 limit integer 每页数量。", doc)
+        self.assertIn('```json\n{"filter": {"visibility": "ALL"}, "limit": 10}\n```', doc)
+        self.assertIn("https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList", doc)
+
+    def test_generate_docs_writes_readme_and_one_file_per_operation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            index_path = root / "official.json"
+            output_dir = root / "official"
+            operations = [
+                sample_operation(),
+                sample_operation(
+                    "/v1/finance/realization",
+                    "FinanceAPI_GetRealizationReport",
+                    "实现报告",
+                ),
+            ]
+            index_path.write_text(
+                json.dumps({"operations": operations, "operation_count": 2}, ensure_ascii=False),
+                encoding="utf-8",
+            )
+
+            count = generate_docs(index_path, output_dir)
+
+            self.assertEqual(count, 2)
+            readme = (output_dir / "README.md").read_text(encoding="utf-8")
+            self.assertIn("官方 Seller API 方法文档", readme)
+            self.assertIn("[商品列表](post-v3-product-list-ProductAPI_GetProductList.md)", readme)
+            self.assertIn(
+                "[实现报告](post-v1-finance-realization-FinanceAPI_GetRealizationReport.md)",
+                readme,
+            )
+            self.assertTrue((output_dir / "post-v3-product-list-ProductAPI_GetProductList.md").exists())
+            self.assertTrue((output_dir / "post-v1-finance-realization-FinanceAPI_GetRealizationReport.md").exists())
+
+
+if __name__ == "__main__":
+    unittest.main()

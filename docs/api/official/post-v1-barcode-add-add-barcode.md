@@ -1,0 +1,53 @@
+# 为商品绑定条形码
+
+> 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+## 方法
+
+- 请求：`POST /v1/barcode/add`
+- Operation ID：`add-barcode`
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/add-barcode
+- 分组：`barcode`
+
+## 页面标题结构
+
+- 为商品绑定条形码
+- Request Body schema: application/json
+- 回复
+- Response Schema: application/json
+- 请求范例
+- 回复范例
+
+## 参数与返回结构
+
+### 表格 0
+
+barcodes required Array of objects <= 100 items 条形码与商品的列表。
+
+### 表格 1
+
+errorsArray of objects 错误列表。 Array ()codestring 错误代码。 errorstring 错误描述。 barcodestring 未能绑定的条形码。 skuinteger <int64> 未能绑定条形码的商品标识符。
+
+### 表格 2
+
+codestring 错误代码。 errorstring 错误描述。 barcodestring 未能绑定的条形码。 skuinteger <int64> 未能绑定条形码的商品标识符。
+
+## 示例
+
+### 示例 0
+
+```json
+{"barcodes": [{"barcode": "112772873170","sku": "99887766"}]}
+```
+
+### 示例 1
+
+```json
+{"errors": [{"code": "123-123","error": "does not exist","barcode": "112772873170","sku": 99887766}]}
+```
+
+## 使用提醒
+
+- Seller API 通常需要 `Client-Id` 和 `Api-Key` header。
+- 官方文档提示 Seller API 仅支持后端到后端调用，浏览器直接调用可能被 CORS 拒绝。
+- 本页保留官方 DOM 抽取文本；字段含义不清时先回到官方锚点和原始 JSON 索引核对。

@@ -12,6 +12,7 @@
 ## 快速导航
 
 - `docs/api/`：官方 Seller API、后端调用方式、参数、返回值、限流和废弃接口。
+- `docs/api/official/`：从 Chrome 官方文档索引展开的 Seller API 逐方法说明。
 - `docs/seller-web/`：需要 Seller 登录态的内部接口、登录流程、Seller 页面 API 和数据流。
 - `docs/buyer-page/`：Ozon 买家页 DOM、列表页/商品页结构、价格字段、成人验证和 NoConnection。
 - `docs/recovery/`：页面状态识别、滑块、反爬 incident、限流、WebView 恢复。
@@ -24,7 +25,7 @@
 
 ## 来源规则
 
-官方 Seller API 文档必须通过 Chrome 当前页面抽取，不使用直接下载或外部抓取替代。抽取结果写入 `indexes/official-seller-api.operations.json`，再从索引整理到主题文档。
+官方 Seller API 文档必须通过 Chrome 当前页面抽取，不使用直接下载或外部抓取替代。抽取结果写入 `indexes/official-seller-api.operations.json`，再从索引整理到主题文档，并用 `tools/generate_official_api_docs.py` 展开到 `docs/api/official/`。
 
 本地项目资料先进入索引，再进入主题文档。每条非显而易见的结论都应该能追溯到源码路径、官方 operation ID 或 source note。
 

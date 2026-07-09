@@ -1,0 +1,58 @@
+# 获取用于创建drop-off发运仓库的时间段列表
+
+> 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+## 方法
+
+- 请求：`POST /v1/warehouse/fbs/create/drop-off/timeslot/list`
+- Operation ID：`WarehouseFbsCreateDropOffTimeslotList`
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseFbsCreateDropOffTimeslotList
+- 分组：`warehouse`
+
+## 页面标题结构
+
+- 获取用于创建drop-off发运仓库的时间段列表
+- header Parameters
+- Request Body schema: application/json
+- 回复
+- Response Schema: application/json
+- 请求范例
+- 回复范例
+
+## 参数与返回结构
+
+### 表格 0
+
+Client-Id required string 用户识别号。 Api-Key required string API-密钥。
+
+### 表格 1
+
+drop_off_point_id required integer <int64> 揽收点标识符。
+
+### 表格 2
+
+timeslotsArray of objects 时间段列表。 Array ()acceptance_end_time_localstring 订单接收结束本地时间。 acceptance_start_time_localstring 订单接收开始本地时间。 fromstring 时间段开始时间。 idinteger <int64> 时间段标识符。 tostring 时间段结束时间。
+
+### 表格 3
+
+acceptance_end_time_localstring 订单接收结束本地时间。 acceptance_start_time_localstring 订单接收开始本地时间。 fromstring 时间段开始时间。 idinteger <int64> 时间段标识符。 tostring 时间段结束时间。
+
+## 示例
+
+### 示例 0
+
+```json
+{"drop_off_point_id": 0}
+```
+
+### 示例 1
+
+```json
+{"timeslots": [{"acceptance_end_time_local": "string","acceptance_start_time_local": "string","from": "string","id": 0,"to": "string"}]}
+```
+
+## 使用提醒
+
+- Seller API 通常需要 `Client-Id` 和 `Api-Key` header。
+- 官方文档提示 Seller API 仅支持后端到后端调用，浏览器直接调用可能被 CORS 拒绝。
+- 本页保留官方 DOM 抽取文本；字段含义不清时先回到官方锚点和原始 JSON 索引核对。

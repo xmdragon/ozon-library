@@ -23,9 +23,17 @@
 ## 使用方式
 
 1. 先查 `indexes/official-seller-api.operations.json`。
-2. 用 `operationId`、`path` 或中文标题定位 operation。
-3. 再读对应主题文档，例如商品读 `docs/api/product.md`，库存价格读 `docs/api/stock-price.md`。
-4. 如果项目实现和官方文档不一致，同时读 `docs/source-notes/ZhiPin.md` 和 endpoint cross-reference。
+2. 需要逐方法说明时，读 `docs/api/official/README.md`，里面链接到 264 个官方方法页。
+3. 用 `operationId`、`path` 或中文标题定位 operation。
+4. 再读对应主题文档，例如商品读 `docs/api/product.md`，库存价格读 `docs/api/stock-price.md`。
+5. 如果项目实现和官方文档不一致，同时读 `docs/source-notes/ZhiPin.md` 和 endpoint cross-reference。
+
+## 全量方法文档
+
+- 目录：`docs/api/official/README.md`
+- 生成器：`tools/generate_official_api_docs.py`
+- 重新生成：`python3 tools/generate_official_api_docs.py`
+- 当前数量：264 个 operation 方法页。
 
 ## 来源引用
 
