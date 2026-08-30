@@ -6,15 +6,15 @@
 
 ## AI 摘要
 
-ZhiPin 是 Ozon 后端模型、官方 Seller API client、Seller 登录、旧 spider、浏览器扩展和 Web 管理端的重要来源。它适合补齐字段模型、API payload、数据库结构、业务流程和旧版 fallback。
+ZhiPin 是 Ozon 后端模型、官方 Seller API client、Seller 登录、旧 spider、浏览器扩展和 Web 管理端的重要来源。它适合补齐字段模型、API payload、数据库结构、业务流程和历史兼容行为。
 
-ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不作为本资料库的项目经验来源。官方 Seller API 以 Chrome 官方文档抓取和 News 更新为准；ZhiPin 只贡献调用实现、字段映射、登录态、扩展上下文、页面结构和历史 fallback。
+ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不作为本资料库的项目经验来源。官方 Seller API 以 Chrome 官方文档抓取和 News 更新为准；ZhiPin 只贡献调用实现、字段映射、登录态、扩展上下文、页面结构和历史兼容行为。
 
 ## 当前来源
 
 - 路径：`/Users/eric/works/ZhiPin`
 - 分支：`master`
-- revision：`75b2e572df48eaa9d986d8b28d8b5abd927332a5`
+- revision：`6e19f3aedb3d732cad0f4b98191435d57b4ffa56`
 - 相关文件索引：见 `indexes/source-files.json`
 
 ## 重点贡献
@@ -29,10 +29,11 @@ ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不�
 | 浏览器扩展请求上下文 | Cookie/company id、Seller tab MAIN world fetch、动态 Ozon header、MV3 后台任务 | `extension/src/shared/`、`extension/src/background/` |
 | Web 管理端流程 | 商品、仓库、订单、刊登、库存、报表页面 | `web/src/pages/ozon/`、`web/src/services/ozon/` |
 | 测试约束 | API 行为、桌面路由、同步、权限、字段转换 | `tests/` |
+| 同步生产者与投影 | 订单 checkpoint、商品定向同步、财务 operation 入库与费用投影 | `plugins/ef/channels/ozon/services/sync/`、`plugins/ef/channels/ozon/services/finance_transactions_sync_service.py`、`plugins/ef/channels/ozon/services/ozon_finance_sync_service.py` |
 
 ## 合并规则
 
-ZhiPin 的后端 client 和模型适合补齐字段、payload、数据状态；旧 spider 适合记录历史 fallback 和异常路径。若与 AICollection 新实现冲突，主题文档同时记录“当前推荐行为”和“历史兼容行为”。
+ZhiPin 的后端 client 和模型适合补齐字段、payload、数据状态；旧 spider 适合记录历史兼容和异常路径。若与 AICollection 新实现冲突，主题文档同时记录“当前推荐行为”和“历史兼容行为”。
 
 若 ZhiPin 的本地官方文档副本与 Chrome 官方文档或 News 冲突，Chrome 官方文档优先。项目副本只保留为历史线索，不直接进入 `docs/api/official/`。
 
