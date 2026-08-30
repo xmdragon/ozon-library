@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T23:59:00+00:00",
+  "generated_at": "2026-07-09T05:13:19.461551+00:00",
   "projects": {
     "AICollection": {
       "path": "/Users/eric/works/AICollection",
@@ -14,10 +14,10 @@
     "ZhiPin": {
       "path": "/Users/eric/works/ZhiPin",
       "branch": "master",
-      "revision": "6e19f3aedb3d732cad0f4b98191435d57b4ffa56"
+      "revision": "75b2e572df48eaa9d986d8b28d8b5abd927332a5"
     }
   },
-  "file_count": 3038,
+  "file_count": 3036,
   "files": [
     {
       "project": "AICollection",
@@ -22152,17 +22152,6 @@
     },
     {
       "project": "ZhiPin",
-      "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/public_seller_data_routes.py",
-      "relative_path": "plugins/ef/channels/ozon/api/public_seller_data_routes.py",
-      "topics": [
-        "fields_models",
-        "flows",
-        "official_or_public_api",
-        "tests_incidents"
-      ]
-    },
-    {
-      "project": "ZhiPin",
       "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/report_routes.py",
       "relative_path": "plugins/ef/channels/ozon/api/report_routes.py",
       "topics": [
@@ -22789,16 +22778,6 @@
       "relative_path": "plugins/ef/channels/ozon/repositories/shop_group_repository.py",
       "topics": [
         "fields_models"
-      ]
-    },
-    {
-      "project": "ZhiPin",
-      "path": "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/repositories/webhook_event_repository.py",
-      "relative_path": "plugins/ef/channels/ozon/repositories/webhook_event_repository.py",
-      "topics": [
-        "fields_models",
-        "flows",
-        "tests_incidents"
       ]
     },
     {

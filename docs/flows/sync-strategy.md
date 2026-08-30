@@ -4,61 +4,67 @@
 
 记录订单、商品和财务数据在事件、定向 API、周期校验和本地投影之间的职责边界。目标是在不把事件当作唯一真相的前提下减少重复请求与大响应。
 
-## 核心原则
+## 证据边界
 
-1. 实时变化由 webhook 触发定向同步。
-2. 周期任务只校验事件可能遗漏的范围，不重复执行完整实时链路。
-3. 持久化进度只在所有分页和数据库提交成功后推进。
-4. 请求使用最小响应字段；rich 数据按稳定标识符定向获取。
-5. API ingestion 与本地 projection 单向连接，同一实体只有一个远端数据生产者。
+本文把 `origin/master` revision `6e19f3aedb3d732cad0f4b98191435d57b4ffa56` 的只读源码事实与推荐架构分开。`indexes/` 仍是 2026-07-09 的 revision `75b2e572df48eaa9d986d8b28d8b5abd927332a5` 快照；本次只读复核不等于全量重扫，也不把未合并分支的目标当作当前实现。
 
-## 实体策略矩阵
+## 已确认当前实现
 
-| 实体 | 稳定键 | 实时变化来源 | 补偿读取 | 推荐重叠 | 本地消费 |
-| --- | --- | --- | --- | --- | --- |
-| FBS posting | `(shop_id, posting_number)` | 新货件、取消、状态变化 webhook | `filter.last_changed_status_date` 列表 | 从上次完整成功时间向前固定短窗口 | 状态、物流、商品快照、操作状态 |
-| Product | Ozon `product_id` | 创建/更新、库存变化 webhook | 轻量商品清单加低频 rich 校验 | rich 批次最多 500 | 商品主表、图片、尺寸、属性、价格、库存 |
-| Finance operation | `(shop_id, operation_id)` | 无可靠实时事件 | 按 operation date 和持久水位读取 | 重放一个完整自然日 | transaction 表先入库，费用/利润随后投影 |
+### 订单
 
-## 订单
+- `plugins/ef/channels/ozon/api/client_mixins/orders.py` 仍调用已于 2026-06-01 停用的 `/v3/posting/fbs/list`，分页状态是 `offset`；其增量参数把 `last_changed_status_date` 放在请求体顶层，而官方 `PostingAPI_GetFbsPostingListV3` / `PostingFbsList` 示例要求它位于 `filter`。
+- `OrderFetcher` 默认按 3 小时窗口读取并以 offset 翻页。虽然模型中有 `OzonSyncCheckpoint`，相关订单同步入口在该 revision 没有读写持久 checkpoint；不能把 checkpoint 语义写成已上线。
 
-- v3 货件列表的变化时间必须位于 `filter.last_changed_status_date`。
-- `filter.since/to` 可以覆盖较长的订单创建范围；只要变化时间条件有效，返回值仍限于目标变化窗口。
-- 周期任务使用持久 checkpoint。无 checkpoint 是明确 bootstrap 流程；已有 checkpoint 是 incremental 流程。
-- webhook 负责低延迟，周期任务负责最终一致。调整周期前先观测 webhook 命中率、列表收到量、实际更新量和未变化跳过量。
-- 当前资料只能支持“先修正请求契约再降频”的顺序；具体周期属于部署参数，需要运行数据验证。
+### 商品
 
-## 商品
+- `ProductFetcher` 的当前工程批次分别是列表 100、详情 100、价格 1000、FBS 仓库库存 500、属性 100；它们不是官方统一批量上限。
+- webhook ingress 会保存 `OzonWebhookEvent`，但商品创建/更新 handler 以 `spawn` 启动定向读取，异常被记录后结束；本地不存在的商品在 `_update_product_from_api` 中跳过。因此当前实现不能证明 durable product webhook upsert 已完成。
 
-- 商品列表与 rich 数据拆开。列表确认成员和稳定标识；详情、价格、库存、属性根据事件或校验计划读取。
-- 定向事件处理必须等待本地 upsert 结果。商品不存在是创建路径，不是成功跳过路径。
-- 批次 500 是 ZhiPin 的工程内存边界建议；官方各 endpoint 上限仍以对应 operation 文档为准。
-- 降低 rich 全量频率之前，先证明定向任务可重试，并保留低频完整校验来发现事件缺口。
+### 财务
 
-## 财务
+- `FinanceTransactionsSyncService` 及历史同步任务仍通过 `FinanceAPI_FinanceTransactionListV3` 调用 `/v3/finance/transaction/list`，分页 `page_size` 为 1000；官方 News `section/202656` 说明该接口已于 2026-07-06 停用。
+- `OzonFinanceSyncService` 在本地交易缺失时仍自行扫描同一个 v3 接口，说明 `6e19f3a` 还不是单一 finance producer；现有水位/任务状态不能替代共享 producer 的已验证语义。
 
-- transaction list 只有一个服务负责调用并按 operation 粒度持久化。
-- 费用、退款、赔偿和利润计算只读取本地 transaction 表。缺历史 operation 时通过明确的历史同步入口补录，再运行投影。
-- 水位读取区间应包含一个完整自然日重叠；唯一键消除重复，内容变化才更新已有 operation。
-- API 页失败或数据库提交失败都不能推进水位。下一轮从旧水位恢复并覆盖失败区间。
+## 推荐模式
 
-## 观测指标
+### 订单
 
-- `api_calls`：按 endpoint、shop、task 统计请求次数。
-- `response_bytes`：原始响应字节数，不记录私有响应正文。
-- `received_count`、`inserted_count`、`updated_count`、`skipped_count`。
-- `overlap_ratio = skipped_count / received_count`。
-- checkpoint 的开始、结束、状态和失败页。
-- webhook 定向同步成功率，以及周期校验发现但事件未落库的实体数。
+- 新入口使用 `PostingFbsList` 对应的 `/v4/posting/fbs/list + cursor`；`last_changed_status_date` 严格嵌套在 `filter`，并按需关闭 `with` 扩展字段。
+- 以持久 checkpoint 记录窗口边界，只在所有页面、数据库提交和必要投影成功后推进；首次运行与增量运行显式区分。
+
+### 商品
+
+- 轻量商品列表只维护成员和稳定键；详情、价格、库存、属性由 webhook 定向任务和低频完整校验分别承担。
+- durable webhook 任务按同店 `product_id` 优先、`offer_id` 次之幂等 upsert，并将远端/数据库错误保留为可重试失败。
+- rich 请求统一 500 是推荐的工程内存边界，不是官方统一上限，也不是 `6e19f3a` 已实现值。
+
+### 财务
+
+- `/v3/finance/transaction/list` 仅保留为历史兼容读取；推荐迁移由 `GetFinanceAccrualPostings`（`/v1/finance/accrual/postings`）、`GetFinanceAccrualTypes`（`/v1/finance/accrual/types`）和 `GetFinanceAccrualByDay`（`/v1/finance/accrual/by-day`）组成。
+- 迁移前必须独立验证三接口的 posting 聚合、类型映射、日边界、退款/赔偿和金额币种语义；不能把 v3 写成当前推荐 producer。
+- 远端财务读取由一个 producer 按 operation/accrual 粒度写入本地原始表，费用、退款、赔偿和利润只从本地 projector 读取。
+
+## 待运行观测参数
+
+- 订单：观测 v4 cursor 连续性、`received_count`、`updated_count`、`skipped_count`、webhook 命中率、分页失败率和响应字节数，再确定重叠窗口与调度周期。
+- 商品：逐 endpoint 记录请求上限、批次内存、429 命中、事件定向成功率和列表校验发现数，再决定是否采用 500 与 rich 校验频率。
+- 财务：用脱敏 fixture 或受控 Seller API 样本对三条 accrual 接口与现有 v3 结果做独立对账；验证通过前不切换 producer，也不假定三接口自动等价。
+- 所有实体都应记录任务开始/结束、失败页、原始响应字节数和本地写入计数；未完成的页面或提交失败不得推进水位。
 
 ## 来源引用
 
-- 官方 operation：`PostingAPI_GetFbsPostingListV3`、`PostingFbsList`、`ProductAPI_GetProductList`、`ProductAPI_GetProductInfoList`、`FinanceAPI_FinanceTransactionListV3`
+- 官方 operation：`PostingFbsList`（推荐 v4）、`PostingAPI_GetFbsPostingListV3`（停用 v3）、`ProductAPI_GetProductList`、`ProductAPI_GetProductInfoList`、`FinanceAPI_FinanceTransactionListV3`（停用 v3）、`GetFinanceAccrualPostings`、`GetFinanceAccrualTypes`、`GetFinanceAccrualByDay`
+- 官方 News：`https://docs.ozon.ru/api/seller/zh/#section/2026430`、`https://docs.ozon.ru/api/seller/zh/#section/202656`
+- 本地官方逐方法页：`docs/api/official/post-v3-posting-fbs-list-PostingAPI_GetFbsPostingListV3.md`、`docs/api/official/post-v4-posting-fbs-list-PostingFbsList.md`、`docs/api/official/post-v3-finance-transaction-list-FinanceAPI_FinanceTransactionListV3.md`、`docs/api/official/post-v1-finance-accrual-postings-GetFinanceAccrualPostings.md`、`docs/api/official/post-v1-finance-accrual-types-GetFinanceAccrualTypes.md`、`docs/api/official/post-v1-finance-accrual-by-day-GetFinanceAccrualByDay.md`
+- News 汇总：`docs/api/seller-api-news.md`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/orders.py`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/sync/order_sync/order_fetcher.py`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/sync/product_sync/product_fetcher.py`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/finance_transactions_sync_service.py`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/ozon_finance_sync_service.py`
+- `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/finance.py`
+- `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/arq_tasks/finance_tasks.py`
+- `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/arq_tasks/finance_history_sync.py`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/webhooks/handler.py`
 - `indexes/official-seller-api.operations.json`
 - `indexes/source-files.json`

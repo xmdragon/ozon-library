@@ -10,12 +10,21 @@ ZhiPin 是 Ozon 后端模型、官方 Seller API client、Seller 登录、旧 sp
 
 ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不作为本资料库的项目经验来源。官方 Seller API 以 Chrome 官方文档抓取和 News 更新为准；ZhiPin 只贡献调用实现、字段映射、登录态、扩展上下文、页面结构和历史兼容行为。
 
-## 当前来源
+## 证据边界
+
+### 索引快照
 
 - 路径：`/Users/eric/works/ZhiPin`
 - 分支：`master`
-- revision：`6e19f3aedb3d732cad0f4b98191435d57b4ffa56`
-- 相关文件索引：见 `indexes/source-files.json`
+- 索引快照 revision：`75b2e572df48eaa9d986d8b28d8b5abd927332a5`
+- `indexes/source-files.json` 与 `indexes/endpoint-cross-reference.json` 是 2026-07-09 生成的真实快照（文件数 3036），相关文件索引见这两个文件。
+
+### 本次只读复核
+
+- 本次只读复核对象：`origin/master` revision `6e19f3aedb3d732cad0f4b98191435d57b4ffa56`（短号 `6e19f3a`）。
+- 复核范围是订单、商品 webhook/同步和财务调用链的指定源码路径；它不是全量扫描，也不替换上面的索引快照 revision。
+- 复核确认：该 revision 仍调用停用的 `/v3/posting/fbs/list`（官方停用日 2026-06-01）与 `/v3/finance/transaction/list`（官方停用日 2026-07-06）；订单 `last_changed_status_date` 仍在顶层且没有对应契约测试；商品 durable webhook 与单一 finance producer 仍属于推荐/未合并目标。
+- 财务迁移的官方替代 operation ID 是 `GetFinanceAccrualPostings`、`GetFinanceAccrualTypes`、`GetFinanceAccrualByDay`；三接口聚合语义尚未由本次只读复核验证。
 
 ## 重点贡献
 
@@ -29,7 +38,7 @@ ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不�
 | 浏览器扩展请求上下文 | Cookie/company id、Seller tab MAIN world fetch、动态 Ozon header、MV3 后台任务 | `extension/src/shared/`、`extension/src/background/` |
 | Web 管理端流程 | 商品、仓库、订单、刊登、库存、报表页面 | `web/src/pages/ozon/`、`web/src/services/ozon/` |
 | 测试约束 | API 行为、桌面路由、同步、权限、字段转换 | `tests/` |
-| 同步生产者与投影 | 订单 checkpoint、商品定向同步、财务 operation 入库与费用投影 | `plugins/ef/channels/ozon/services/sync/`、`plugins/ef/channels/ozon/services/finance_transactions_sync_service.py`、`plugins/ef/channels/ozon/services/ozon_finance_sync_service.py` |
+| 同步路径（只读复核） | 订单 offset 增量、商品定向 webhook、财务 operation 入库与费用投影的当前边界 | `plugins/ef/channels/ozon/services/sync/`、`plugins/ef/channels/ozon/services/finance_transactions_sync_service.py`、`plugins/ef/channels/ozon/services/ozon_finance_sync_service.py` |
 
 ## 合并规则
 
