@@ -26,6 +26,12 @@ ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不�
 - 复核确认：该 revision 仍调用停用的 `/v3/posting/fbs/list`（官方停用日 2026-06-01）与 `/v3/finance/transaction/list`（官方停用日 2026-07-06）；订单 `last_changed_status_date` 仍在顶层且没有对应契约测试；商品 durable webhook 与单一 finance producer 仍属于推荐/未合并目标。
 - 财务迁移的官方替代 operation ID 是 `GetFinanceAccrualPostings`、`GetFinanceAccrualTypes`、`GetFinanceAccrualByDay`；三接口聚合语义尚未由本次只读复核验证。
 
+### 待合并迁移 PR
+
+- [PR #367](https://github.com/xmdragon/ZhiPin/pull/367)：订单 `/v4/posting/fbs/list + cursor` 迁移；匿名同窗口 v3/v4 posting 集合完全一致。
+- [PR #369](https://github.com/xmdragon/ZhiPin/pull/369)：财务 `types/by-day/postings` 迁移；匿名四日对账的 649 个 unit 覆盖、total amount 与 sale commission 全部一致。
+- 两个 PR 均未部署。本节记录实现与匿名读取证据，不把分支状态写成 `master` 当前行为。
+
 ## 重点贡献
 
 | 主题 | 说明 | 优先路径 |

@@ -32,6 +32,12 @@
 - `with.financial_data`、`with.analytics_data`、`with.barcodes` 等扩展字段按消费者逐项开启。列表同步不需要的字段保持关闭，详情调用再按 posting 定向读取。
 - 使用持久 checkpoint 记录一轮同步的边界，只在所有页面处理和数据库提交成功后推进；这属于推荐架构，不能写成 `6e19f3a` 已实现事实。
 
+## 待合并实现证据
+
+- [ZhiPin PR #367](https://github.com/xmdragon/ZhiPin/pull/367) 已实现 `/v4/posting/fbs/list`、cursor、`limit=100`、v4 商品价格对象规范化、mock server v4 契约和 webhook 多页专测。
+- 匿名只读生产探针在同店同三小时窗口中得到 v3/v4 各 4 个 posting，交集为 4，集合相等，v4 cursor 正常推进。
+- PR 未合并、未部署，因此这里只记录待合并实现和读取等价证据，不替代 `origin/master 6e19f3a` 的当前事实。
+
 ## 待运行观测参数
 
 - v4 的 `limit`、cursor 失效、空页和重试行为需要在可用 Seller API 环境观测；官方逐方法页给出的 v4 `limit` 范围为 1–100。

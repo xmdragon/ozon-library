@@ -25,6 +25,15 @@
 - `FinanceTransactionsSyncService` 及历史同步任务仍通过 `FinanceAPI_FinanceTransactionListV3` 调用 `/v3/finance/transaction/list`，分页 `page_size` 为 1000；官方 News `section/202656` 说明该接口已于 2026-07-06 停用。
 - `OzonFinanceSyncService` 在本地交易缺失时仍自行扫描同一个 v3 接口，说明 `6e19f3a` 还不是单一 finance producer；现有水位/任务状态不能替代共享 producer 的已验证语义。
 
+## 待合并实现证据
+
+以下内容来自尚未合并到 `master` 的 ZhiPin PR，不改变上一节的当前实现结论：
+
+- [ZhiPin PR #367](https://github.com/xmdragon/ZhiPin/pull/367) 将订单列表切换到 `/v4/posting/fbs/list`，使用 cursor、`limit=100`、最小 `with` 字段、持久 checkpoint 和严格分页失败语义。匿名只读探针在同店同三小时窗口中得到 v3/v4 各 4 个 posting，集合完全一致。
+- [ZhiPin PR #369](https://github.com/xmdragon/ZhiPin/pull/369) 将自动、历史、月度和单 posting 财务读取统一切换到 `types/by-day/postings` 三条 accrual API。四日匿名对账覆盖 649 个 unit，新旧 posting 集合、total amount 和 sale commission 全部一致。
+- 新财务 converter 已用匿名真实响应验证：`by-day` 解析 288 条记录（176 个两段 order、112 个三段 posting）；`postings` 解析 5 条记录，其中 2 条是不含 SKU 的非商品费用，稳定 operation ID 为负、非零且重复转换一致。
+- 上述 PR 仍未部署；Redis、PostgreSQL upsert 并发、ARQ worker 和完整生产周期属于待验证层。
+
 ## 推荐模式
 
 ### 订单
