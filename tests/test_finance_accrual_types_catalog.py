@@ -48,6 +48,12 @@ class FinanceAccrualTypesCatalogTest(unittest.TestCase):
                 self.assertIsNone(entry["seller_api_name"])
                 self.assertNotEqual(entry["evidence_status"], "verified_by_types_api")
 
+    def test_type_30_projects_to_last_mile_after_business_confirmation(self):
+        entry = self.by_id[30]
+        self.assertEqual(entry["fee_key"], "物流平台聚合末端配送费")
+        self.assertEqual(entry["projection_field"], "last_mile_delivery_fee_cny")
+        self.assertEqual(entry["projection_status"], "confirmed_business_policy")
+
     def test_production_database_limit_is_explicit(self):
         observation = self.catalog["production_database_observation"]
         self.assertFalse(observation["stores_seller_api_type_id"])

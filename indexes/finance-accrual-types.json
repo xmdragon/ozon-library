@@ -81,15 +81,15 @@
     {
       "seller_api_type_id": 30,
       "seller_api_name": null,
-      "fee_key": null,
+      "fee_key": "物流平台聚合末端配送费",
       "meaning_zh": "物流平台聚合的末端配送重计费；旧 v3 service 为 MarketplaceServiceItemRedistributionLastMilePVZ。",
       "fee_group_zh": "配送服务",
       "seller_ui_accrual_type_id": null,
       "seller_ui_label_zh": null,
       "seller_ui_label_candidate_zh": "与物流平台聚合的服务费",
-      "projection_field": null,
-      "projection_status": "needs_policy",
-      "evidence_status": "live_postings_type_id_cross_checked_with_v3_service"
+      "projection_field": "last_mile_delivery_fee_cny",
+      "projection_status": "confirmed_business_policy",
+      "evidence_status": "live_postings_type_id_cross_checked_with_v3_service_and_user_policy"
     },
     {
       "seller_api_type_id": 32,

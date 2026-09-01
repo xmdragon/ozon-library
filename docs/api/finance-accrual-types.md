@@ -25,7 +25,7 @@ Ozon 财务至少存在两套不同的类型 ID：
 | 3 | `BrandCommission` | 品牌推广佣金 | `Продвижение бренда` | — | 仅保存交易流水 |
 | 10 | 尚未从 types API 取得 | 部分补偿买家 | `部分补偿买家` | `compensation_cny` | 已通过同 posting 的旧 v3 operation 交叉确认语义 |
 | 29 | `LastMileCourier` | 末端配送至取货点 | 未标准化 key | — | 生产库已出现，需决定投影政策 |
-| 30 | 尚未从 types API 取得 | 物流平台聚合的末端配送重计费 | 尚未定 canonical key | — | 需业务决定是否并入尾程，禁止直接猜字段 |
+| 30 | 尚未从 types API 取得 | 物流平台聚合的末端配送重计费 | `物流平台聚合末端配送费` | `last_mile_delivery_fee_cny` | 2026-09-01 业务确认并入尾程 |
 | 32 | `Logistic` | 物流费用 | 未标准化 key | — | 生产库已出现，需决定物流字段边界 |
 | 41 | `PayPerClick` | 按点击付费推广 | `Оплата за клик` | — | 仅保存交易流水 |
 | 51 | `PremiumMembership` | Premium Pro 比例费用 | `Подписка Premium Pro (процент)` | — | 仅保存交易流水 |
@@ -65,9 +65,9 @@ Ozon 财务至少存在两套不同的类型 ID：
 `/v1/finance/accrual/types` 在 2026-09-01 的运行探针中持续返回 `429 Retry-After: 60`，因此没有把英文 `name` 猜写进目录。
 
 - `type_id=10`：同一 posting、同一日期、同一金额在旧 `POST /v3/finance/transaction/list` 中对应 `OperationMarketplaceServicePartialCompensationToClient`，俄文名称为 `Частичная компенсация покупателю`（部分补偿买家）。
-- `type_id=30`：同一 posting、同一日期、同一金额在旧 v3 `services[]` 中对应 `MarketplaceServiceItemRedistributionLastMilePVZ`。它属于末端配送重计费，但 ZhiPin 是否应把它和 `type_id=66` 一起汇总到 `last_mile_delivery_fee_cny` 尚未形成正式政策。
+- `type_id=30`：同一 posting、同一日期、同一金额在旧 v3 `services[]` 中对应 `MarketplaceServiceItemRedistributionLastMilePVZ`。2026-09-01 已明确业务政策：与 `type_id=66` 先按 signed RUB 求净额，再统一写入 `last_mile_delivery_fee_cny`。
 
-Seller 页面筛选中存在“与物流平台聚合的服务费”候选标签，但当前证据不足以把它的页面内部 ID 与 Seller API `type_id=30` 写成已验证映射，因此只在机器索引的 `seller_ui_label_candidate_zh` 中保留线索。
+Seller 页面筛选中存在“与物流平台聚合的服务费”候选标签，但当前证据不足以把它的页面内部 ID 与 Seller API `type_id=30` 写成已验证映射，因此只在机器索引的 `seller_ui_label_candidate_zh` 中保留线索。页面 ID 未确认不影响已确认的订单投影政策。
 
 没有确认英文名不妨碍保存原始交易：未知类型仍应以包含 `type_id` 的稳定 key 入库；但在没有政策前不能静默投影到某个订单金额字段。
 

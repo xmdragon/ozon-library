@@ -40,6 +40,7 @@ ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不�
 - 复核暴露的实现缺口：仅补 `SaleCommission` 会漏掉 `RfbsGlobalAgentFee`、`RfbsGlobalDelivery`、order 级 `Acquiring` 以及补偿/退款/错误费。完整财务修复必须先入库全部应计，再统一投影所有订单费用字段和利润。
 - `type_id=10` 与旧 v3 部分补偿 operation 对齐；`type_id=30` 与 `MarketplaceServiceItemRedistributionLastMilePVZ` 对齐。两者的 `/types` 英文名在探针被 429 限流时未取得，资料库显式保留证据边界，不猜名称。
 - 生产库只读审计显示 `ozon_finance_transactions` 不保存 `type_id` 且没有类型参考表；117,332 条流水中出现 30 种 operation name、31 种 fee key，并已有未映射的 `29 LastMileCourier`、`32 Logistic`、`93 DefectFineErrors`。
+- 2026-09-01 业务确认 `type_id=30` 并入 `last_mile_delivery_fee_cny`；实现约束是和 `type_id=66` 的 signed RUB 先求净额，禁止逐项取绝对值后相加。
 - 结构化目录：`indexes/finance-accrual-types.json`；主题说明：`docs/api/finance-accrual-types.md`。
 
 ## 重点贡献
