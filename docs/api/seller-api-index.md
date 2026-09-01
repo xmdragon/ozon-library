@@ -20,6 +20,8 @@
 | 仓库 | `WarehouseListV2`、`WarehouseAPI_DeliveryMethodListV2` | 仓库列表、配送方式。 |
 | 聊天/报告/财务 | `Chat*`、`Report*`、`Finance*` | 客服聊天、报表、财务数据。 |
 
+财务应计的 `type_id`、Seller 页面内部类型 ID、中文费用语义和订单字段投影见 [`finance-accrual-types.md`](finance-accrual-types.md)；机器查询使用 [`indexes/finance-accrual-types.json`](../../indexes/finance-accrual-types.json)。
+
 ## 使用方式
 
 1. 先查 `indexes/official-seller-api.operations.json`。

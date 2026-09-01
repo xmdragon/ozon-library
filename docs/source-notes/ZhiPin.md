@@ -26,11 +26,22 @@ ZhiPin 中的 `docs/OzonAPI/`、官方 API HTML 导出和纯官方参数表不�
 - 复核确认：该 revision 仍调用停用的 `/v3/posting/fbs/list`（官方停用日 2026-06-01）与 `/v3/finance/transaction/list`（官方停用日 2026-07-06）；订单 `last_changed_status_date` 仍在顶层且没有对应契约测试；商品 durable webhook 与单一 finance producer 仍属于推荐/未合并目标。
 - 财务迁移的官方替代 operation ID 是 `GetFinanceAccrualPostings`、`GetFinanceAccrualTypes`、`GetFinanceAccrualByDay`；三接口聚合语义尚未由本次只读复核验证。
 
-### 待合并迁移 PR
+### 迁移 PR 历史
 
 - [PR #367](https://github.com/xmdragon/ZhiPin/pull/367)：订单 `/v4/posting/fbs/list + cursor` 迁移；匿名同窗口 v3/v4 posting 集合完全一致。
 - [PR #369](https://github.com/xmdragon/ZhiPin/pull/369)：财务 `types/by-day/postings` 迁移；匿名四日对账的 649 个 unit 覆盖、total amount 与 sale commission 全部一致。
-- 两个 PR 均未部署。本节记录实现与匿名读取证据，不把分支状态写成 `master` 当前行为。
+- 本节保留迁移期间的 PR 与匿名读取证据。2026-09-01 的当前源码复核确认 v4 posting 与 finance accrual 实现已进入 `origin/master`；是否部署仍以各生产环境运行元数据为准。
+
+### 2026-09-01 财务类型与投影复核
+
+- 复核使用 ZhiPin `origin/master` 当前财务适配器、脱敏的 Seller API 运行响应、Seller 页面 `/app/finances/accruals` 和旧 v3 transaction 交叉证据。
+- 确认 Seller API `type_id` 与 Seller 页面 `accrual_type_ids` 是两套不同枚举：API `69/66/67` 分别对应页面内部 `14/177/106`，不能把页面筛选 ID 写进 Seller API 交易表。
+- 确认 `accrual/postings` 只覆盖 posting 级应计；首程收单费仍需从 `accrual/by-day` 的两段 parent order 记录分摊。
+- 复核暴露的实现缺口：仅补 `SaleCommission` 会漏掉 `RfbsGlobalAgentFee`、`RfbsGlobalDelivery`、order 级 `Acquiring` 以及补偿/退款/错误费。完整财务修复必须先入库全部应计，再统一投影所有订单费用字段和利润。
+- `type_id=10` 与旧 v3 部分补偿 operation 对齐；`type_id=30` 与 `MarketplaceServiceItemRedistributionLastMilePVZ` 对齐。两者的 `/types` 英文名在探针被 429 限流时未取得，资料库显式保留证据边界，不猜名称。
+- 生产库只读审计显示 `ozon_finance_transactions` 不保存 `type_id` 且没有类型参考表；117,332 条流水中出现 30 种 operation name、31 种 fee key，并已有未映射的 `29 LastMileCourier`、`32 Logistic`、`93 DefectFineErrors`。
+- 2026-09-01 业务确认 `type_id=30` 并入 `last_mile_delivery_fee_cny`；实现约束是和 `type_id=66` 的 signed RUB 先求净额，禁止逐项取绝对值后相加。
+- 结构化目录：`indexes/finance-accrual-types.json`；主题说明：`docs/api/finance-accrual-types.md`。
 
 ## 重点贡献
 
