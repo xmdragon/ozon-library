@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-01",
+  "namespaces": {
+    "seller_api_type_id": {
+      "source": "POST /v1/finance/accrual/types",
+      "used_by": [
+        "POST /v1/finance/accrual/by-day",
+        "POST /v1/finance/accrual/postings"
+      ]
+    },
+    "seller_ui_accrual_type_id": {
+      "source": "GET /api/site/self-gateway/api/accruals/types",
+      "used_by": [
+        "GET /api/site/self-gateway/api/accruals/details",
+        "GET /api/site/self-gateway/api/accruals/summaries_v2"
+      ]
+    },
+    "warning": "seller_api_type_id 与 seller_ui_accrual_type_id 是两个独立命名空间，不得互换。"
+  },
+  "entries": [
+    {
+      "seller_api_type_id": 1,
+      "seller_api_name": "Acquiring",
+      "fee_key": "支付手续费（收单费）",
+      "meaning_zh": "订单级收单/支付手续费；按同一两段 order 下各 posting 金额比例分摊。",
+      "fee_group_zh": "合作伙伴服务",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": "收单业务",
+      "projection_field": "first_mile_fee_cny",
+      "projection_status": "verified",
+      "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    },
+    {
+      "seller_api_type_id": 3,
+      "seller_api_name": "BrandCommission",
+      "fee_key": "Продвижение бренда",
+      "meaning_zh": "品牌推广佣金。",
+      "fee_group_zh": "推广和广告",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "transaction_only",
+      "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    },
+    {
+      "seller_api_type_id": 10,
+      "seller_api_name": null,
+      "fee_key": "部分补偿买家",
+      "meaning_zh": "向买家支付的部分补偿；旧 v3 交易语义为 OperationMarketplaceServicePartialCompensationToClient。",
+      "fee_group_zh": "赔偿和赔偿返还",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": "compensation_cny",
+      "projection_status": "semantic_cross_checked",
+      "evidence_status": "live_postings_type_id_cross_checked_with_v3_transaction"
+    },
+    {
+      "seller_api_type_id": 30,
+      "seller_api_name": null,
+      "fee_key": null,
+      "meaning_zh": "物流平台聚合的末端配送重计费；旧 v3 service 为 MarketplaceServiceItemRedistributionLastMilePVZ。",
+      "fee_group_zh": "配送服务",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "seller_ui_label_candidate_zh": "与物流平台聚合的服务费",
+      "projection_field": null,
+      "projection_status": "needs_policy",
+      "evidence_status": "live_postings_type_id_cross_checked_with_v3_service"
+    },
+    {
+      "seller_api_type_id": 41,
+      "seller_api_name": "PayPerClick",
+      "fee_key": "Оплата за клик",
+      "meaning_zh": "按点击付费推广。",
+      "fee_group_zh": "推广和广告",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "transaction_only",
+      "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    },
+    {
+      "seller_api_type_id": 51,
+      "seller_api_name": "PremiumMembership",
+      "fee_key": "Подписка Premium Pro (процент)",
+      "meaning_zh": "Premium Pro 订阅按比例收费。",
+      "fee_group_zh": "合作伙伴服务",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "transaction_only",
+      "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    },
+    {
+      "seller_api_type_id": 54,
+      "seller_api_name": "Promotion",
+      "fee_key": "Продвижение товара",
+      "meaning_zh": "商品推广费用。",
+      "fee_group_zh": "推广和广告",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "transaction_only",
+      "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    },
+    {
+      "seller_api_type_id": 66,
+      "seller_api_name": "RfbsGlobalAgentFee",
+      "fee_key": "国际物流代理服务费",
+      "meaning_zh": "realFBS 国际运输合同订立及履约代理费；ZhiPin 当前计入尾程字段。",
+      "fee_group_zh": "配送服务",
+      "seller_ui_accrual_type_id": 177,
+      "seller_ui_label_zh": "组织国际运输合同的订立服务",
+      "projection_field": "last_mile_delivery_fee_cny",
+      "projection_status": "verified_current_behavior",
+      "evidence_status": "verified_by_types_api_v3_and_seller_ui"
+    },
+    {
+      "seller_api_type_id": 67,
+      "seller_api_name": "RfbsGlobalDelivery",
+      "fee_key": "物流服务费重新计费",
+      "meaning_zh": "realFBS 国际配送/物流服务重计费。",
+      "fee_group_zh": "合作伙伴服务",
+      "seller_ui_accrual_type_id": 106,
+      "seller_ui_label_zh": "国际配送服务",
+      "projection_field": "international_logistics_fee_cny",
+      "projection_status": "verified",
+      "evidence_status": "verified_by_types_api_v3_and_seller_ui"
+    },
+    {
+      "seller_api_type_id": 69,
+      "seller_api_name": "SaleCommission",
+      "fee_key": "销售佣金",
+      "meaning_zh": "商品销售佣金；退货或冲销记录可为正数，按 posting 汇总净额。",
+      "fee_group_zh": "配送服务",
+      "seller_ui_accrual_type_id": 14,
+      "seller_ui_label_zh": "Ozon代理佣金",
+      "projection_field": "ozon_commission_cny",
+      "projection_status": "verified",
+      "evidence_status": "verified_by_types_api_v3_and_seller_ui"
+    },
+    {
+      "seller_api_type_id": 74,
+      "seller_api_name": "StarsMembership",
+      "fee_key": "Звёздные товары",
+      "meaning_zh": "星星商品服务费。",
+      "fee_group_zh": "合作伙伴服务",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": "星星商品",
+      "projection_field": null,
+      "projection_status": "transaction_only",
+      "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    }
+  ],
+  "unresolved_seller_api_names": [
+    "ClientReturn",
+    "Cancellation",
+    "PartialReturn",
+    "Compensation",
+    "ItemCompensation",
+    "DefectRate"
+  ],
+  "sources": [
+    "GetFinanceAccrualTypes",
+    "GetFinanceAccrualByDay",
+    "GetFinanceAccrualPostings",
+    "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/finance_translations.py",
+    "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/finance_transactions_sync_service.py",
+    "/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/services/ozon_finance_sync_service.py",
+    "Seller UI observed 2026-09-01: /app/finances/accruals",
+    "Seller UI static asset observed 2026-09-01: finances.66fb3611.js",
+    "Sanitized live reconciliation observed 2026-09-01"
+  ]
+}

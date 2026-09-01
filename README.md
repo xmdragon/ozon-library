@@ -12,6 +12,7 @@
 ## 快速导航
 
 - `docs/api/`：官方 Seller API、后端调用方式、参数、返回值、限流和废弃接口。
+- `docs/api/finance-accrual-types.md`：财务 `type_id`、Seller 页面内部类型 ID、费用语义和订单投影字段对照。
 - `docs/api/official/`：从 Chrome 官方文档索引展开的 Seller API 逐方法说明。
 - `docs/api/seller-api-news.md`：官方 News 中的方法废弃、已移除旧方法、新增字段和废弃字段索引。
 - `docs/seller-web/`：需要 Seller 登录态的内部接口、浏览器扩展请求上下文、登录流程、Seller 页面 API 和数据流。
