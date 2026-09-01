@@ -48,6 +48,26 @@ class FinanceAccrualTypesCatalogTest(unittest.TestCase):
                 self.assertIsNone(entry["seller_api_name"])
                 self.assertNotEqual(entry["evidence_status"], "verified_by_types_api")
 
+    def test_production_database_limit_is_explicit(self):
+        observation = self.catalog["production_database_observation"]
+        self.assertFalse(observation["stores_seller_api_type_id"])
+        self.assertFalse(observation["has_type_reference_table"])
+        self.assertEqual(observation["distinct_fee_keys"], 31)
+        self.assertEqual(len(self.catalog["observed_database_fee_keys"]), 31)
+
+    def test_production_unknown_type_ids_are_cataloged(self):
+        expected = {
+            29: "LastMileCourier",
+            32: "Logistic",
+            93: "DefectFineErrors",
+        }
+        for type_id, name in expected.items():
+            with self.subTest(type_id=type_id):
+                entry = self.by_id[type_id]
+                self.assertEqual(entry["seller_api_name"], name)
+                self.assertEqual(entry["projection_status"], "needs_policy")
+                self.assertIn(f"accrual:{type_id}", entry["fee_key"])
+
     def test_projection_fields_use_known_posting_columns(self):
         allowed = {
             None,

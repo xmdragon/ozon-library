@@ -18,6 +18,17 @@
     },
     "warning": "seller_api_type_id 与 seller_ui_accrual_type_id 是两个独立命名空间，不得互换。"
   },
+  "production_database_observation": {
+    "observed_at": "2026-09-01",
+    "table": "ozon_finance_transactions",
+    "total_rows": 117332,
+    "distinct_operation_types": 30,
+    "distinct_operation_type_names": 30,
+    "distinct_fee_keys": 31,
+    "stores_seller_api_type_id": false,
+    "has_type_reference_table": false,
+    "warning": "该统计是时间点快照；数据库当前只保存 operation_type/name 与 fees_json，不能独立还原全部 Seller API type_id。"
+  },
   "entries": [
     {
       "seller_api_type_id": 1,
@@ -56,6 +67,18 @@
       "evidence_status": "live_postings_type_id_cross_checked_with_v3_transaction"
     },
     {
+      "seller_api_type_id": 29,
+      "seller_api_name": "LastMileCourier",
+      "fee_key": "LastMileCourier/Доставка до места выдачи/accrual:29",
+      "meaning_zh": "快递/末端配送至取货点费用。",
+      "fee_group_zh": "配送服务",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "needs_policy",
+      "evidence_status": "observed_in_production_unknown_fee_key"
+    },
+    {
       "seller_api_type_id": 30,
       "seller_api_name": null,
       "fee_key": null,
@@ -67,6 +90,18 @@
       "projection_field": null,
       "projection_status": "needs_policy",
       "evidence_status": "live_postings_type_id_cross_checked_with_v3_service"
+    },
+    {
+      "seller_api_type_id": 32,
+      "seller_api_name": "Logistic",
+      "fee_key": "Logistic/Логистика/accrual:32",
+      "meaning_zh": "物流费用；当前证据不足以决定并入国际物流还是其它物流字段。",
+      "fee_group_zh": "配送服务",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "needs_policy",
+      "evidence_status": "observed_in_production_unknown_fee_key"
     },
     {
       "seller_api_type_id": 41,
@@ -151,7 +186,52 @@
       "projection_field": null,
       "projection_status": "transaction_only",
       "evidence_status": "verified_by_types_api_and_zhipin_reconciliation"
+    },
+    {
+      "seller_api_type_id": 93,
+      "seller_api_name": "DefectFineErrors",
+      "fee_key": "DefectFineErrors/Превышение индекса ошибок/accrual:93",
+      "meaning_zh": "错误指数超标罚款。",
+      "fee_group_zh": "其他服务与罚款",
+      "seller_ui_accrual_type_id": null,
+      "seller_ui_label_zh": null,
+      "projection_field": null,
+      "projection_status": "needs_policy",
+      "evidence_status": "observed_in_production_unknown_fee_key"
     }
+  ],
+  "observed_database_fee_keys": [
+    "支付手续费（收单费）",
+    "销售佣金",
+    "配送至买家",
+    "国际物流代理服务费",
+    "物流服务费重新计费",
+    "Звёздные товары",
+    "Подписка Premium Pro (процент)",
+    "Оплата за клик",
+    "Превышение индекса ошибок: отмена",
+    "收到退货/取消/未取货",
+    "卖家错误取消服务费",
+    "部分补偿买家",
+    "Продвижение бренда",
+    "Доставка и обработка возврата, отмены, невыкупа",
+    "Ускоренный сбор отзывов",
+    "Услуга размещения товаров на складе",
+    "Продвижение с оплатой за заказ",
+    "Взаимозачет требований между Договорами",
+    "评论积分奖励",
+    "应计",
+    "Подписка Premium Pro",
+    "DefectFineErrors/Превышение индекса ошибок/accrual:93",
+    "Закрепление отзыва",
+    "Продвижение товара",
+    "Прочие компенсации",
+    "LastMileCourier/Доставка до места выдачи/accrual:29",
+    "Logistic/Логистика/accrual:32",
+    "Брак по вине Ozon в логистике",
+    "Превышение индекса ошибок: отмена - отмена начисления",
+    "Удержание за недовложение товара",
+    "Утилизация товара: Автоутилизация со стока"
   ],
   "unresolved_seller_api_names": [
     "ClientReturn",

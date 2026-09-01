@@ -48,4 +48,4 @@
 - [x] **Step 1:** 写主题文档，区分 API、Seller 页面与旧 v3 transaction 三层语义。
 - [x] **Step 2:** 更新导航和 ZhiPin source note，记录 2026-09-01 的脱敏运行证据。
 - [x] **Step 3:** 运行 JSON 校验、全仓测试、敏感信息扫描和 `git diff --check`。
-- [ ] **Step 4:** 提交并推送 `codex/add-finance-accrual-type-catalog`。
+- [x] **Step 4:** 提交并推送 `codex/add-finance-accrual-type-catalog`。

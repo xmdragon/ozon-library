@@ -24,7 +24,9 @@ Ozon 财务至少存在两套不同的类型 ID：
 | 1 | `Acquiring` | 收单/支付手续费 | `支付手续费（收单费）` | `first_mile_fee_cny` | 已验证；两段 order 级费用需按 posting 金额分摊 |
 | 3 | `BrandCommission` | 品牌推广佣金 | `Продвижение бренда` | — | 仅保存交易流水 |
 | 10 | 尚未从 types API 取得 | 部分补偿买家 | `部分补偿买家` | `compensation_cny` | 已通过同 posting 的旧 v3 operation 交叉确认语义 |
+| 29 | `LastMileCourier` | 末端配送至取货点 | 未标准化 key | — | 生产库已出现，需决定投影政策 |
 | 30 | 尚未从 types API 取得 | 物流平台聚合的末端配送重计费 | 尚未定 canonical key | — | 需业务决定是否并入尾程，禁止直接猜字段 |
+| 32 | `Logistic` | 物流费用 | 未标准化 key | — | 生产库已出现，需决定物流字段边界 |
 | 41 | `PayPerClick` | 按点击付费推广 | `Оплата за клик` | — | 仅保存交易流水 |
 | 51 | `PremiumMembership` | Premium Pro 比例费用 | `Подписка Premium Pro (процент)` | — | 仅保存交易流水 |
 | 54 | `Promotion` | 商品推广 | `Продвижение товара` | — | 仅保存交易流水 |
@@ -32,6 +34,31 @@ Ozon 财务至少存在两套不同的类型 ID：
 | 67 | `RfbsGlobalDelivery` | realFBS 国际配送重计费 | `物流服务费重新计费` | `international_logistics_fee_cny` | 已验证 |
 | 69 | `SaleCommission` | 销售佣金及冲销 | `销售佣金` | `ozon_commission_cny` | 已验证；按 posting 汇总净额 |
 | 74 | `StarsMembership` | 星星商品服务费 | `Звёздные товары` | — | 仅保存交易流水 |
+| 93 | `DefectFineErrors` | 错误指数超标罚款 | 未标准化 key | — | 生产库已出现，需决定是否并入错误费 |
+
+## 生产数据库枚举现状
+
+2026-09-01 对生产 `ozon_finance_transactions` 的只读快照显示：
+
+- 117,332 条流水；
+- 30 种 `operation_type`、30 种 `operation_type_name`；
+- 31 种 `fees_json` key；
+- 表中没有 `type_id` 列；
+- 数据库中没有 accrual/finance type reference 表。
+
+因此生产库当前不是完整财务类型目录。它只保存规范化后的字符串；除 key 中显式保留 `accrual:<id>` 的未知类型外，无法仅凭数据库反推出数字 ID。
+
+线上已经出现但旧映射未覆盖的明确例子：
+
+| API `type_id` | `name` | 生产 fee key | 当前处理 |
+| ---: | --- | --- | --- |
+| 29 | `LastMileCourier` | `LastMileCourier/Доставка до места выдачи/accrual:29` | 未投影 |
+| 32 | `Logistic` | `Logistic/Логистика/accrual:32` | 未投影 |
+| 93 | `DefectFineErrors` | `DefectFineErrors/Превышение индекса ошибок/accrual:93` | 未投影 |
+
+所有 31 个实际 fee key 已保存在机器索引的 `observed_database_fee_keys`，但该数组是观察快照，不替代 `/v1/finance/accrual/types` 的动态参考信息。
+
+长期建议是在交易行保存 `accrual_type_id`，或建立带 `observed_at` 的类型快照表；否则 Ozon 修改名称后，历史字符串不能稳定关联原始类型。
 
 ## 10 和 30 的证据边界
 
