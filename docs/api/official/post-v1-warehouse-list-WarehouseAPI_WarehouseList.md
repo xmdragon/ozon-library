@@ -4,31 +4,33 @@
 
 > [!WARNING]
 > 官方 News 标记此方法为 `deprecated`，日期：2026-03-24。替代方法：`/v2/warehouse/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026324
-> News 原文摘要：/v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/warehouse/list
+> News 原文摘要：/v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 /v2/warehouse/list 新版本。
 
 ## 方法
 
 - 请求：`POST /v1/warehouse/list`
 - Operation ID：`WarehouseAPI_WarehouseList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseAPI_WarehouseList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseAPI_WarehouseList
 - 分组：`warehouse`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
-| 2026-03-24 | `deprecated_method` | /v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/warehouse/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
-| 2026-02-16 | `deprecated_method` | /v1/warehouse/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/warehouse/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
+| 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。
+在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2026-03-24 | `deprecated_method` | /v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 /v2/warehouse/list 新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
+| 2026-02-16 | `deprecated_method` | /v1/warehouse/list 该方式已过时，并将于2026年3月20日关闭。请切换至 /v2/warehouse/list 新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
 | 2025-12-18 | `added_field` | /v1/warehouse/list 在方法请求中添加了参数 limit 和 offset。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+| 2025-02-27 | `updated` | /v1/warehouse/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025227) |
 
 ## 页面标题结构
 
 - 仓库清单
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -54,30 +56,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 仓库清单。 |
-| `has_entrusted_acceptance` | boolean 会表明受信任的接受。true, 如果库存中启用了受信任的接受方式。 |
-| `is_rfbs` | boolean 在 rFBS 计划下运作的仓库的标志： true — 仓库在 rFBS 计划下运行； false — 仓库没有在 rFBS 计划下运行。 |
-| `name` | string 仓库名称。 |
-| `warehouse_id` | integer <int64> 仓库识别号。 |
-| `can_print_act_in_advance` | boolean 有可能提前打印收发证书。 true, 如果可以提前打印的话。 |
-| `first_mile_type` | object 第一英里 FBS。 |
-| `has_postings_limit` | boolean 该迹象表明对最小订单数有限制。true, 如果有限制。 |
-| `is_karantin` | boolean 该迹象表明仓库因隔离而停止运作。 |
-| `is_kgt` | boolean 该迹象表明仓库接受大宗商品。 |
-| `is_able_to_set_price` | boolean 如果可以设置价格，则为true。 |
-| `is_presorted` | boolean 如果发运是预先分拣的，则为true。 |
-| `is_timetable_editable` | boolean 该迹象表明可以改变仓库运行时间表。 |
-| `min_postings_limit` | integer <int32> 限制的最小值是指在一次供货中可以带来的订单数量。 |
-| `postings_limit` | integer <int32> 极限值。 -1, 如果没有限制 |
-| `min_working_days` | integer <int64> 仓库运行天数。 |
-| `status` | string 仓库状况。 仓库状态与个人账户中的状态的对应关系: 状态 Seller API 个人账户中的状态 new 正在激活 created 已激活 disabled 存档 blocked 已封禁 disabled_due_to_limit 暂停中 error 错误 |
-| `状态 Seller API` | 个人账户中的状态 |
-| `new` | 正在激活 |
-| `created` | 已激活 |
-| `disabled` | 存档 |
-| `blocked` | 已封禁 |
-| `disabled_due_to_limit` | 暂停中 |
-| `error` | 错误 |
-| `working_days` | Array of stringsItems Enum: "1" "2" "3" "4" "5" "6" "7" 仓库运行天数。 |
 
 ### 表格 3
 
@@ -98,15 +76,7 @@
 | `min_postings_limit` | integer <int32> 限制的最小值是指在一次供货中可以带来的订单数量。 |
 | `postings_limit` | integer <int32> 极限值。 -1, 如果没有限制 |
 | `min_working_days` | integer <int64> 仓库运行天数。 |
-| `status` | string 仓库状况。 仓库状态与个人账户中的状态的对应关系: 状态 Seller API 个人账户中的状态 new 正在激活 created 已激活 disabled 存档 blocked 已封禁 disabled_due_to_limit 暂停中 error 错误 |
-| `状态 Seller API` | 个人账户中的状态 |
-| `new` | 正在激活 |
-| `created` | 已激活 |
-| `disabled` | 存档 |
-| `blocked` | 已封禁 |
-| `disabled_due_to_limit` | 暂停中 |
-| `error` | 错误 |
-| `working_days` | Array of stringsItems Enum: "1" "2" "3" "4" "5" "6" "7" 仓库运行天数。 |
+| `working_days` | Array of strings Items Enum: "1" "2" "3" "4" "5" "6" "7" 仓库运行天数。 |
 
 ### 表格 4
 
@@ -124,96 +94,6 @@
 
 ### 示例 0
 
-```text
-offset = 10
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
-```text
-false
-```
-
-### 示例 4
-
-```text
-true
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
-
-```text
-true
-```
-
-### 示例 7
-
-```text
-true
-```
-
-### 示例 8
-
-```text
--1
-```
-
-### 示例 9
-
-```text
-new
-```
-
-### 示例 10
-
-```text
-created
-```
-
-### 示例 11
-
-```text
-disabled
-```
-
-### 示例 12
-
-```text
-blocked
-```
-
-### 示例 13
-
-```text
-disabled_due_to_limit
-```
-
-### 示例 14
-
-```text
-error
-```
-
-### 示例 15
-
 ```json
 {
   "limit": 1,
@@ -224,7 +104,7 @@ error
 }
 ```
 
-### 示例 16
+### 示例 1
 
 ```json
 {

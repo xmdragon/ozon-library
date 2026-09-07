@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/pricing-strategy/products/add`
 - Operation ID：`pricing_items-add`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_items-add
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_items-add
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 将商品添加到策略
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -32,8 +32,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法操作结果。 |
-| `errors` | Array of objects 有错误的商品。 |
-| `failed_product_count` | integer <int32> 有错误的商品数量。 |
 
 ### 表格 2
 

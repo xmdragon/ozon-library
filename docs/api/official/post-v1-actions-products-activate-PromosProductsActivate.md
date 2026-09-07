@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/actions/products/activate`
 - Operation ID：`PromosProductsActivate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PromosProductsActivate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PromosProductsActivate
 - 分组：`actions`
 
 ## 页面标题结构
 
 - 在促销活动中增加一个商品
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -32,8 +32,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `product_ids` | Array of numbers <double> 已添加到促销活动中的商品ID列表。 |
-| `rejected` | Array of objects 无法添加到促销活动中的商品列表。 |
 
 ### 表格 2
 

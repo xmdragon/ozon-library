@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/draft/direct/timeslot/edit`
 - Operation ID：`FbpDraftDirectTimeslotEdit`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDirectTimeslotEdit
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDirectTimeslotEdit
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 编辑草稿中的时间段
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -32,48 +32,12 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `error_reasons` | Array of strings Default: "RESERVE_FAILURE_TYPE_UNSPECIFIED"Items Enum: "RESERVE_FAILURE_TYPE_UNSPECIFIED" "REQUEST_VALIDATION" "INVALID_RESERVE" "LOGISTICS_REASON" "SCHEDULE_REASON" "NO_CAPACITY" 错误原因： RESERVE_FAILURE_TYPE_UNSPECIFIED——未定义； REQUEST_VALIDATION——请求中填写了过去的预定日期； INVALID_RESERVE——原始预留未找到、已失效或已包含申请，但尝试覆盖； LOGISTICS_REASON——物流方错误； SCHEDULE_REASON——排期方错误； NO_CAPACITY——无可用预定时段。 |
+| `error_reasons` | Array of strings Default: "RESERVE_FAILURE_TYPE_UNSPECIFIED" Items Enum: "RESERVE_FAILURE_TYPE_UNSPECIFIED" "REQUEST_VALIDATION" "INVALID_RESERVE" "LOGISTICS_REASON" "SCHEDULE_REASON" "NO_CAPACITY" 错误原因： RESERVE_FAILURE_TYPE_UNSPECIFIED——未定义； REQUEST_VALIDATION——请求中填写了过去的预定日期； INVALID_RESERVE——原始预留未找到、已失效或已包含申请，但尝试覆盖； LOGISTICS_REASON——物流方错误； SCHEDULE_REASON——排期方错误； NO_CAPACITY——无可用预定时段。 |
 | `row_version` | integer <int64> 草稿的当前版本标识符。 |
 
 ## 示例
 
 ### 示例 0
-
-```text
-RESERVE_FAILURE_TYPE_UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-REQUEST_VALIDATION
-```
-
-### 示例 2
-
-```text
-INVALID_RESERVE
-```
-
-### 示例 3
-
-```text
-LOGISTICS_REASON
-```
-
-### 示例 4
-
-```text
-SCHEDULE_REASON
-```
-
-### 示例 5
-
-```text
-NO_CAPACITY
-```
-
-### 示例 6
 
 ```json
 {
@@ -83,7 +47,7 @@ NO_CAPACITY
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

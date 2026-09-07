@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/finance/accrual/postings`
 - Operation ID：`GetFinanceAccrualPostings`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFinanceAccrualPostings
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/GetFinanceAccrualPostings
 - 分组：`finance`
 
 ## 页面标题结构
 
 - 获取按货件统计的应计项目
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,8 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `posting_accruals` | Array of objects 按货件统计的应计项目列表。 |
-| `accruals` | Array of objects 应计项目列表。 |
-| `posting_number` | string 货件编号。 |
 
 ### 表格 3
 

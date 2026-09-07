@@ -6,16 +6,22 @@
 
 - 请求：`POST /v2/chat/read`
 - Operation ID：`ChatAPI_ChatReadV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ChatAPI_ChatReadV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ChatAPI_ChatReadV2
 - 分组：`chat`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-11-11 | `updated` | /v2/chat/read 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
 
 ## 页面标题结构
 
 - 将信息标记为已读
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

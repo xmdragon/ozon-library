@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/product/info/discounted`
 - Operation ID：`ProductAPI_GetProductInfoDiscounted`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoDiscounted
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoDiscounted
 - 分组：`product`
 
 ## 页面标题结构
 
 - 通过减价商品的SKU查找减价商品和主商品的信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,19 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `items` | Array of objects 关于减价和主要商品的信息。 |
-| `comment_reason_damaged` | string 对损坏原因的评论。 |
-| `condition` | string 商品的状态 — 新的或二手的。 |
-| `condition_estimation` | string 商品的状况，以1至7分为标准。 1 — 令人满意。 2 — 良好。 3 — 非常好。 4 — 优秀。 5-7 — 像新的一样。 |
-| `defects` | string 商品缺陷。 |
-| `discounted_sku` | integer <int64> 折扣商品的SKU。 |
-| `mechanical_damage` | string 机械性损坏的说明。 |
-| `package_damage` | string 包装损坏的说明。 |
-| `packaging_violation` | string 篡改包装的痕迹。 |
-| `reason_damaged` | string 损害原因。 |
-| `repair` | string 商品已被修理的痕迹。 |
-| `shortage` | string 表示商品不完整。 |
-| `sku` | integer <int64> 主要商品的SKU。 |
-| `warranty_type` | string 商品有有效保修的证明。 |
 
 ### 表格 3
 

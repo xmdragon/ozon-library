@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/warehouse/invalid-products/get`
 - Operation ID：`WarehouseInvalidProductsGet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseInvalidProductsGet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseInvalidProductsGet
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/invalid-products/get 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
 
 ## 页面标题结构
 
 - 获取配送受限商品列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,24 +54,6 @@
 
 ### 示例 0
 
-```text
-last_id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
-```text
-last_id
-```
-
-### 示例 3
-
 ```json
 {
   "last_id": 0,
@@ -73,7 +61,7 @@ last_id
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/import/info`
 - Operation ID：`ProductAPI_GetImportProductsInfo`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetImportProductsInfo
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetImportProductsInfo
 - 分组：`product`
 
 ## News 更新标记
@@ -14,15 +14,16 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-05-06 | `removed_field` | /v1/product/import/info 已从方法响应中移除参数 result.items.errors.optional_description_elements。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
-| 2025-03-19 | `updated` | /v1/product/import/info 更新了方法描述。 在方法响应的 result.items.status 参数中，新增可能的值 skipped。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025319) |
+| 2025-03-19 | `updated` | /v1/product/import/info 更新了方法描述。
+在方法响应的 result.items.status 参数中，新增可能的值 skipped。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025319) |
 
 ## 页面标题结构
 
 - 查询商品添加或更新状态
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,8 +47,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object |
-| `items` | Array of objects 商品有关信息。 |
-| `total` | integer <int32> 在卖方系统中的卖家系统中的商品标识符 — product_id。 |
 
 ### 表格 3
 
@@ -60,31 +59,13 @@
 
 ### 示例 0
 
-```text
-result.items.status
-```
-
-### 示例 1
-
-```text
-skipped
-```
-
-### 示例 2
-
-```text
-product_id
-```
-
-### 示例 3
-
 ```json
 {
   "task_id": "172549793"
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

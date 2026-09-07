@@ -6,15 +6,25 @@
 
 - 请求：`POST /v1/review/comment/list`
 - Operation ID：`ReviewAPI_CommentList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReviewAPI_CommentList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReviewAPI_CommentList
 - 分组：`review`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/review/comment/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
+| 2026-03-31 | `updated` | /v1/review/comment/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026331) |
+| 2025-11-11 | `updated` | /v1/review/comment/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
+| 2025-06-20 | `updated` | /v1/review/comment/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+| 2025-01-16 | `new_method` | /v1/review/comment/list 已添加管理评价的测试方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025116) |
 
 ## 页面标题结构
 
 - 评价的评论列表
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -40,24 +50,6 @@
 
 ### 示例 0
 
-```text
-offset = 10
-```
-
-### 示例 1
-
-```text
-ASC
-```
-
-### 示例 2
-
-```text
-DESC
-```
-
-### 示例 3
-
 ```json
 {
   "limit": 100,
@@ -67,7 +59,7 @@ DESC
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

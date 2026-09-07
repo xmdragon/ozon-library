@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/posting/fbp/list`
 - Operation ID：`PostingFbpList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingFbpList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingFbpList
 - 分组：`posting`
 
 ## News 更新标记
@@ -19,10 +19,10 @@
 ## 页面标题结构
 
 - 获取货件列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -56,30 +56,6 @@
 
 ### 示例 0
 
-```text
-last_change_status_date
-```
-
-### 示例 1
-
-```text
-in_process_at
-```
-
-### 示例 2
-
-```text
-ASC
-```
-
-### 示例 3
-
-```text
-DESC
-```
-
-### 示例 4
-
 ```json
 {
   "cursor": "string",
@@ -101,7 +77,7 @@ DESC
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/seller-actions/voucher/get`
 - Operation ID：`SellerActionsVoucherGet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerActionsVoucherGet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SellerActionsVoucherGet
 - 分组：`seller-actions`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 获取CSV格式的促销码文件
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

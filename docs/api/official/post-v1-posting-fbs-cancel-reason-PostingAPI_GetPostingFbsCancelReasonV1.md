@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/posting/fbs/cancel-reason`
 - Operation ID：`PostingAPI_GetPostingFbsCancelReasonV1`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetPostingFbsCancelReasonV1
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_GetPostingFbsCancelReasonV1
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 货运取消原因
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,8 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 请求结果。 |
-| `posting_number` | string 货运号。 |
-| `reasons` | Array of objects 取消订单原因。 |
 
 ### 表格 3
 

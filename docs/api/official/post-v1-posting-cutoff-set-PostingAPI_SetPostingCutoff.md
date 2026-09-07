@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/posting/cutoff/set`
 - Operation ID：`PostingAPI_SetPostingCutoff`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_SetPostingCutoff
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_SetPostingCutoff
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 确认货件发运日期
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,12 +45,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "posting_number": "789456123-0002-3",
@@ -58,7 +52,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

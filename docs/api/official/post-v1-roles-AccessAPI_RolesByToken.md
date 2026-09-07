@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/roles`
 - Operation ID：`AccessAPI_RolesByToken`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AccessAPI_RolesByToken
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/AccessAPI_RolesByToken
 - 分组：`roles`
 
 ## News 更新标记
@@ -19,9 +19,9 @@
 ## 页面标题结构
 
 - 使用API密钥获取角色和方式列表
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构

@@ -4,29 +4,30 @@
 
 > [!WARNING]
 > 官方 News 标记此方法为 `deprecated`，日期：2026-03-24。替代方法：`/v2/delivery-method/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026324
-> News 原文摘要：/v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/delivery-method/list
+> News 原文摘要：/v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 /v2/delivery-method/list 新版本。
 
 ## 方法
 
 - 请求：`POST /v1/delivery-method/list`
 - Operation ID：`WarehouseAPI_DeliveryMethodList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseAPI_DeliveryMethodList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseAPI_DeliveryMethodList
 - 分组：`delivery-method`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-03-24 | `deprecated_method` | /v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 替代方法：/v2/delivery-method/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
+| 2026-03-24 | `deprecated_method` | /v1/delivery-method/list 该方式已过时，并将于2026年4月7日关闭。请切换至 /v2/delivery-method/list 新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
+| 2025-06-20 | `updated` | /v1/delivery-method/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 | 2024-12-26 | `added_field` | /v1/delivery-method/list 添加字段 result.sla_cut_in 在方法响应。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20241226) |
 
 ## 页面标题结构
 
 - 仓库物流方式清单
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -53,17 +54,6 @@
 | --- | --- |
 | `has_next` | boolean 以下该迹象会表明在查询中只送回了部分快递方式。 true — 请用新的 offset 参数重新请求，以获得剩余的方式； false — 回答中包含了所有应要求的快递方式。 |
 | `result` | Array of objects 查询结果。 |
-| `company_id` | integer <int64> 卖家识别号。 |
-| `created_at` | string <date-time> 创建快递方式的日期和时间。 |
-| `cutoff` | string 卖方必须在此之前备货的时间。 |
-| `id` | integer <int64> 快递方式识别号。 |
-| `name` | string 快递方式名称。 |
-| `provider_id` | integer <int64> 快递服务识别号。 |
-| `sla_cut_in` | integer <int64> 根据仓库设置，订单备货的最短时间（以分钟为单位）。 |
-| `status` | string 快递方式状态: NEW — 已创建, EDITED — 正在编辑, ACTIVE — 已激活, DISABLED — 未激活。 |
-| `template_id` | integer <int64> 订单快递服务识别号。 |
-| `updated_at` | string <date-time> 快递方式最后更新的日期和时间。 |
-| `warehouse_id` | integer <int64> 仓库识别号。 |
 
 ### 表格 3
 
@@ -85,54 +75,6 @@
 
 ### 示例 0
 
-```text
-offset = 10
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
-```text
-offset
-```
-
-### 示例 3
-
-```text
-false
-```
-
-### 示例 4
-
-```text
-NEW
-```
-
-### 示例 5
-
-```text
-EDITED
-```
-
-### 示例 6
-
-```text
-ACTIVE
-```
-
-### 示例 7
-
-```text
-DISABLED
-```
-
-### 示例 8
-
 ```json
 {
   "filter": {
@@ -145,7 +87,7 @@ DISABLED
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {

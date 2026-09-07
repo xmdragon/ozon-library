@@ -3,30 +3,31 @@
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
 > [!WARNING]
-> 官方 News 标记此方法为 `deprecated`，日期：2026-05-06。替代方法：`/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/202656
-> News 原文摘要：/v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day
+> 官方 News 标记此方法为 `deprecated`，日期：2026-07-14。替代方法：`/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026714
+> News 原文摘要：/v3/finance/transaction/totals 该方法即将废弃，并将于2026年9月8日停用。请切换到/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day。
 
 ## 方法
 
 - 请求：`POST /v3/finance/transaction/totals`
 - Operation ID：`FinanceAPI_FinanceTransactionTotalV3`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_FinanceTransactionTotalV3
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FinanceAPI_FinanceTransactionTotalV3
 - 分组：`finance`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-05-06 | `deprecated_method` | /v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202656) |
+| 2026-07-14 | `deprecated_method` | /v3/finance/transaction/totals 该方法即将废弃，并将于2026年9月8日停用。请切换到/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026714) |
+| 2026-05-06 | `deprecated_method` | /v3/finance/transaction/totals 该方法即将废弃，并将于2026年7月6日停用。请切换到/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202656) |
 | 2025-08-01 | `updated` | /v3/finance/transaction/totals 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202581) |
 
 ## 页面标题结构
 
 - 清单数目
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -52,14 +53,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 询问结果。 |
-| `accruals_for_sale` | number <double> 指定期间内商品的总成本和退货。 |
-| `compensation_amount` | number <double> 补贴。 |
-| `money_transfer` | number <double> 根据“卖方选择交货”计划工作时的交货和退货费用。 |
-| `others_amount` | number <double> 其他应计费用。 |
-| `processing_and_delivery` | number <double> 运输处理、订单装配、干线、最后一英里以及自2021年2月1日起引入新的佣金和费率前的快递服务费。 干线 —— 集群之间的货物交付。 最后一英里 —— 从订单交付点、自提点和快递员到买家处的快递。 |
-| `refunds_and_cancellations` | number <double> 干线返回、退货处理、取消和非赎回、2021年2月1日起引入新佣金和税率之前退货价格。 干线 —— 集群之间的货物交付。 最后一英里 —— 从订单交付点、自提点和快递员到买家处的快递。 |
-| `sale_commission` | number <double> 商品预售时预扣的佣金数额，退货时返还的佣金数。 |
-| `services_amount` | number <double> 与商品交付和退货没有直接关系的附加服务成本。例如，促销或商品放置。 |
 
 ### 表格 3
 
@@ -78,48 +71,6 @@
 
 ### 示例 0
 
-```text
-all
-```
-
-### 示例 1
-
-```text
-orders
-```
-
-### 示例 2
-
-```text
-returns
-```
-
-### 示例 3
-
-```text
-services
-```
-
-### 示例 4
-
-```text
-compensation
-```
-
-### 示例 5
-
-```text
-transferDelivery
-```
-
-### 示例 6
-
-```text
-other
-```
-
-### 示例 7
-
 ```json
 {
   "date": {
@@ -131,7 +82,7 @@ other
 }
 ```
 
-### 示例 8
+### 示例 1
 
 ```json
 {

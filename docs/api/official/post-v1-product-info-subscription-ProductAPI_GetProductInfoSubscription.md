@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/product/info/subscription`
 - Operation ID：`ProductAPI_GetProductInfoSubscription`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoSubscription
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoSubscription
 - 分组：`product`
 
 ## 页面标题结构
 
 - 订阅该商品的用户数
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -31,8 +31,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 操作方法结果。 |
-| `count` | integer <int64> 订阅用户的数量。 |
-| `sku` | integer <int64> Ozon 系统中的商品ID、SKU。 |
 
 ### 表格 2
 

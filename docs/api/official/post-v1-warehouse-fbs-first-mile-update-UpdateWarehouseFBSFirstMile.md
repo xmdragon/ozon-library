@@ -6,22 +6,23 @@
 
 - 请求：`POST /v1/warehouse/fbs/first-mile/update`
 - Operation ID：`UpdateWarehouseFBSFirstMile`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/UpdateWarehouseFBSFirstMile
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/UpdateWarehouseFBSFirstMile
 - 分组：`warehouse`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/fbs/first-mile/update 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
 | 2025-10-17 | `added_field` | /v1/warehouse/fbs/first-mile/update 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 
 ## 页面标题结构
 
 - 更新头程物流
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/jsonapplication/jsonexample
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -54,30 +55,6 @@
 
 ### 示例 0
 
-```text
-3000
-```
-
-### 示例 1
-
-```text
-first_mile_type = DROP_OFF
-```
-
-### 示例 2
-
-```text
-PICK_UP
-```
-
-### 示例 3
-
-```text
-DROP_OFF
-```
-
-### 示例 4
-
 ```json
 {
   "first_mile_type": "DROP_OFF",
@@ -88,7 +65,7 @@ DROP_OFF
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

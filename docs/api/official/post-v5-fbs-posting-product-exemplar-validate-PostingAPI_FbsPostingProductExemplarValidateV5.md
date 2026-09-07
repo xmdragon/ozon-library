@@ -6,7 +6,7 @@
 
 - 请求：`POST /v5/fbs/posting/product/exemplar/validate`
 - Operation ID：`PostingAPI_FbsPostingProductExemplarValidateV5`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarValidateV5
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingProductExemplarValidateV5
 - 分组：`fbs`
 
 ## News 更新标记
@@ -14,14 +14,16 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-10-16 | `updated` | /v5/fbs/posting/product/exemplar/validate 更新了方法响应中的 products.exemplars.marks 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-09-29 | `updated` | /v5/fbs/posting/product/exemplar/validate 已更新该方式的请求与响应中products.exemplars.marks参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
+| 2025-02-17 | `new_method` | /v5/fbs/posting/product/exemplar/validate 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
 
 ## 页面标题结构
 
 - 标志代码验证
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,10 +48,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `products` | Array of objects 商品清单。 |
-| `error` | string 错误代码。 |
-| `exemplars` | Array of objects 副本信息。 |
-| `product_id` | integer <int64> Ozon系统中的商品ID — SKU。 |
-| `valid` | boolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。 |
 
 ### 表格 3
 
@@ -63,12 +61,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-true
-```
-
-### 示例 1
 
 ```json
 {
@@ -93,7 +85,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

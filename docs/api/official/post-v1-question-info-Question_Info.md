@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/question/info`
 - Operation ID：`Question_Info`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/Question_Info
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/Question_Info
 - 分组：`question`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/question/info 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
 
 ## 页面标题结构
 
 - 问题详情
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -52,43 +58,13 @@
 
 ### 示例 0
 
-```text
-NEW
-```
-
-### 示例 1
-
-```text
-ALL
-```
-
-### 示例 2
-
-```text
-VIEWED
-```
-
-### 示例 3
-
-```text
-PROCESSED
-```
-
-### 示例 4
-
-```text
-UNPROCESSED
-```
-
-### 示例 5
-
 ```json
 {
   "question_id": "string"
 }
 ```
 
-### 示例 6
+### 示例 1
 
 ```json
 {

@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/fbp/draft/get`
 - Operation ID：`FbpAPI_FbpDraftGet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpDraftGet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpDraftGet
 - 分组：`fbp`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-28 | `updated` | /v1/fbp/draft/get 更新了方法响应中delivery_details.direct_details.timeslot_details.timeslot.timeslot_end、delivery_details.direct_details.timeslot_details.timeslot.timeslot_start、delivery_details.drop_off_point.timeslot.timeslot_end和delivery_details.drop_off_point.timeslot.timeslot_start参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026528) |
 
 ## 页面标题结构
 
 - 获取交货草稿信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -52,67 +58,13 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
-```text
-true
-```
-
-### 示例 4
-
-```text
-true
-```
-
-### 示例 5
-
-```text
-DRAFT_STATUS_UNSPECIFIED
-```
-
-### 示例 6
-
-```text
-NEW
-```
-
-### 示例 7
-
-```text
-SUPPLY_VARIANT_CONFIRMATION
-```
-
-### 示例 8
-
-```text
-SUPPLY_NOT_CONFIRMED
-```
-
-### 示例 9
-
 ```json
 {
   "supply_id": "string"
 }
 ```
 
-### 示例 10
+### 示例 1
 
 ```json
 {

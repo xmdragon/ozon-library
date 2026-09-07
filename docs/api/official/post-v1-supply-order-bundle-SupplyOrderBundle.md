@@ -6,21 +6,15 @@
 
 - 请求：`POST /v1/supply-order/bundle`
 - Operation ID：`SupplyOrderBundle`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SupplyOrderBundle
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SupplyOrderBundle
 - 分组：`supply-order`
-
-## News 更新标记
-
-| 日期 | 标记 | 摘要 | 来源 |
-| --- | --- | --- | --- |
-| 2026-01-27 | `updated` | /v1/supply-order/bundle 增加了获取交付物成分的方法。 — 在 管理订单 → FBP 方案 部分，更新了有关方法操作的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026127) |
 
 ## 页面标题结构
 
 - 交货或交货申请的商品组成
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -51,54 +45,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-SKU
-```
-
-### 示例 2
-
-```text
-NAME
-```
-
-### 示例 3
-
-```text
-QUANTITY
-```
-
-### 示例 4
-
-```text
-TOTAL_VOLUME_IN_LITRES
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
-
-```text
-last_id
-```
-
-### 示例 7
-
-```text
-false
-```
-
-### 示例 8
-
 ```json
 {
   "bundle_ids": [
@@ -118,7 +64,7 @@ false
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {

@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/drop-off/registrate`
 - Operation ID：`FbpDraftDropOffRegistrate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDropOffRegistrate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDropOffRegistrate
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 将草稿转为正式交货
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -47,12 +47,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "row_version": 0,
@@ -60,7 +54,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

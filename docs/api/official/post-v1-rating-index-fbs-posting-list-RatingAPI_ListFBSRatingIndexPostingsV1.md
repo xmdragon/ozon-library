@@ -6,22 +6,23 @@
 
 - 请求：`POST /v1/rating/index/fbs/posting/list`
 - Operation ID：`RatingAPI_ListFBSRatingIndexPostingsV1`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RatingAPI_ListFBSRatingIndexPostingsV1
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/RatingAPI_ListFBSRatingIndexPostingsV1
 - 分组：`rating`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/rating/index/fbs/posting/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
 | 2025-11-20 | `new_method` | /v1/rating/index/fbs/posting/list 新增了用于处理错误指数的测试版方法：FBS 和 rFBS。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
 
 ## 页面标题结构
 
 - 影响错误指数的货件列表：FBS 和 rFBS
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -54,12 +55,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "cursor": "string",
@@ -74,7 +69,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

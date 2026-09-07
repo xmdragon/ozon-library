@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/carriage/cancel`
 - Operation ID：`CarriageAPI_CarriageCancel`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CarriageAPI_CarriageCancel
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CarriageAPI_CarriageCancel
 - 分组：`carriage`
 
 ## 页面标题结构
 
 - 发运删除
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

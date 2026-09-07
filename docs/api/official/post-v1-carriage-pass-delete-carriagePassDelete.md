@@ -6,14 +6,14 @@
 
 - 请求：`POST /v1/carriage/pass/delete`
 - Operation ID：`carriagePassDelete`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/carriagePassDelete
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/carriagePassDelete
 - 分组：`carriage`
 
 ## 页面标题结构
 
 - 删除通行证
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例

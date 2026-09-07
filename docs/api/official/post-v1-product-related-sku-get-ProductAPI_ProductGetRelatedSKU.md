@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/product/related-sku/get`
 - Operation ID：`ProductAPI_ProductGetRelatedSKU`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductGetRelatedSKU
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductGetRelatedSKU
 - 分组：`product`
 
 ## 页面标题结构
 
 - 获取相关SKU
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

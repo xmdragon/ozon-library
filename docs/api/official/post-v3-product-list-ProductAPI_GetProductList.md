@@ -6,23 +6,26 @@
 
 - 请求：`POST /v3/product/list`
 - Operation ID：`ProductAPI_GetProductList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。
+在方法响应中新增了参数result.items.sku。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202679) |
+| 2026-02-10 | `updated` | /v3/product/list 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026210) |
 | 2025-12-25 | `updated` | /v3/product/list 更新了方法响应中的 result.items.quants 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | 2025-02-21 | `new_method` | /v3/product/list 新增获取所有商品列表的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025221) |
 
 ## 页面标题结构
 
 - 品列表的
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,9 +51,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 结果。 |
-| `items` | Array of objects 品列表的。 |
-| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
-| `total` | integer <int32> 品牌总数。 |
 
 ### 表格 3
 
@@ -64,42 +64,6 @@
 
 ### 示例 0
 
-```text
-offer_id
-```
-
-### 示例 1
-
-```text
-product_id
-```
-
-### 示例 2
-
-```text
-limit
-```
-
-### 示例 3
-
-```text
-last_id
-```
-
-### 示例 4
-
-```text
-last_id
-```
-
-### 示例 5
-
-```text
-last_id
-```
-
-### 示例 6
-
 ```json
 {
   "filter": {
@@ -109,6 +73,9 @@ last_id
     "product_id": [
       "223681945"
     ],
+    "skus": [
+      "179737222"
+    ],
     "visibility": "ALL"
   },
   "last_id": "",
@@ -116,7 +83,7 @@ last_id
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {
@@ -125,6 +92,7 @@ last_id
       {
         "product_id": 3397917680,
         "offer_id": "2026-01-13 16:56:03 PDF",
+        "sku": 987654321,
         "has_fbo_stocks": false,
         "has_fbs_stocks": false,
         "archived": false,

@@ -6,16 +6,22 @@
 
 - 请求：`POST /v4/posting/fbs/ship`
 - Operation ID：`PostingAPI_ShipFbsPostingV4`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_ShipFbsPostingV4
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_ShipFbsPostingV4
 - 分组：`posting`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-10-23 | `updated` | /v4/posting/fbs/ship 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
 
 ## 页面标题结构
 
 - 搜集订单 (第4方案)
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -47,123 +53,49 @@
 
 ### 示例 0
 
-```text
-awaiting_deliver
+```json
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1"
+}
 ```
 
 ### 示例 1
 
-```text
-packages
+```json
+{
+  "packages": [
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "products": [
+        {
+          "product_id": 185479045,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "posting_number": "89491381-0072-1"
+}
 ```
 
 ### 示例 2
-
-```text
-products
-```
-
-### 示例 3
-
-```text
-products
-```
-
-### 示例 4
-
-```text
-packages
-```
-
-### 示例 5
-
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 2
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
-```
-
-### 示例 6
-
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 2
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
-```
-
-### 示例 7
-
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
-```
-
-### 示例 8
-
-```json
-{
-  "packages": [
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "products": [
-        {
-          "product_id": 185479045,
-          "quantity": 1
-        }
-      ]
-    }
-  ],
-  "posting_number": "89491381-0072-1"
-}
-```
-
-### 示例 9
 
 ```json
 {
@@ -184,7 +116,7 @@ packages
 }
 ```
 
-### 示例 10
+### 示例 3
 
 ```json
 {

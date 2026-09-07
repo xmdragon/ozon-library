@@ -3,39 +3,46 @@
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
 > [!WARNING]
-> 官方 News 标记此方法为 `deprecated`，日期：2026-04-30。替代方法：`/v4/posting/fbs/unfulfilled/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026430
-> News 原文摘要：/v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/unfulfilled/list
+> 官方 News 标记此方法为 `deprecated`，日期：2026-07-10。替代方法：`/v4/posting/fbs/unfulfilled/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026710
+> News 原文摘要：/v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年8月31日停用。请切换到 /v4/posting/fbs/unfulfilled/list。
 
 ## 方法
 
 - 请求：`POST /v3/posting/fbs/unfulfilled/list`
 - Operation ID：`PostingAPI_GetFbsPostingUnfulfilledList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingUnfulfilledList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_GetFbsPostingUnfulfilledList
 - 分组：`posting`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-10 | `deprecated_method` | /v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年8月31日停用。请切换到 /v4/posting/fbs/unfulfilled/list。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-05 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了各方法响应中参数 result.postings.analytics_data.client_delivery_date_begin和 result.postings.analytics_data.client_delivery_date_end的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
-| 2026-04-30 | `deprecated_method` | /v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/unfulfilled/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2026-04-30 | `deprecated_method` | /v3/posting/fbs/unfulfilled/list 该方法已弃用，并将于2026年6月1日停用。请切换到 /v4/posting/fbs/unfulfilled/list。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 | 2026-04-17 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法响应中新增参数result.postings.tariffication_steps。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
 | 2026-03-17 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.analytics_data.client_delivery_date_begin 和 result.postings.analytics_data.client_delivery_date_end 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
-| 2025-11-27 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法的响应中：更新了参数 result.analytics_data.payment_type_group_name 的描述；新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| 2025-11-27 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法的响应中：
+更新了参数 result.analytics_data.payment_type_group_name 的描述；
+新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| 2025-10-23 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.substatus 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
 | 2025-10-21 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
 | 2025-10-16 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.financial_data.products.product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
 | 2025-09-24 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中的 result.postings.customer.phone、result.postings.addressee.phone、result.postings.products.is_marketplace_buyout 和 result.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-07-22 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.requirements.products_requiring_change_country 和 result.postings.financial_data.products.actions 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025722) |
-| 2025-05-22 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了该方法请求中参数 filter.fbpFilter 的描述。 — 在接口使用规范模块中，已提升接口请求限额 —— 现在每个 Client ID 每秒最多可发起50次请求。此前每秒最多只能发起10次请求。 替代方法：/v3/product/import | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
+| 2025-07-02 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202572) |
+| 2025-06-05 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202565) |
+| 2025-05-22 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了该方法请求中参数 filter.fbpFilter 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
 | 2025-05-06 | `removed_field` | /v3/posting/fbs/unfulfilled/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
+| 2025-02-26 | `updated` | /v3/posting/fbs/unfulfilled/list 更新了方法响应中 result.postings.analytics_data.city 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025226) |
 
 ## 页面标题结构
 
 - 未处理货件列表 Deprecated
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -63,8 +70,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `count` | integer <int64> 在响应中的元素计数器。 |
-| `postings` | Array of objects 货件清单和每个货物的详细信息。 |
 
 ### 表格 3
 
@@ -76,120 +81,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-awaiting_registration
-```
-
-### 示例 1
-
-```text
-acceptance_in_progress
-```
-
-### 示例 2
-
-```text
-awaiting_approve
-```
-
-### 示例 3
-
-```text
-awaiting_packaging
-```
-
-### 示例 4
-
-```text
-awaiting_deliver
-```
-
-### 示例 5
-
-```text
-arbitration
-```
-
-### 示例 6
-
-```text
-client_arbitration
-```
-
-### 示例 7
-
-```text
-delivering
-```
-
-### 示例 8
-
-```text
-driver_pickup
-```
-
-### 示例 9
-
-```text
-cancelled
-```
-
-### 示例 10
-
-```text
-not_accepted
-```
-
-### 示例 11
-
-```text
-asc
-```
-
-### 示例 12
-
-```text
-desc
-```
-
-### 示例 13
-
-```text
-cutoff
-```
-
-### 示例 14
-
-```text
-delivering_date
-```
-
-### 示例 15
-
-```text
-cutoff_from
-```
-
-### 示例 16
-
-```text
-cutoff_to
-```
-
-### 示例 17
-
-```text
-delivering_date_from
-```
-
-### 示例 18
-
-```text
-delivering_date_to
-```
-
-### 示例 19
 
 ```json
 {
@@ -214,7 +105,7 @@ delivering_date_to
 }
 ```
 
-### 示例 20
+### 示例 1
 
 ```json
 {
@@ -240,8 +131,10 @@ delivering_date_to
       "tracking_number": "",
       "tpl_integration_type": "ozon",
       "in_process_at": "2026-03-30T11:26:08Z",
+      "integration_type_flow": "ozon",
       "shipment_date": "2026-03-31T09:00:00Z",
       "shipment_date_without_delay": "2026-04-04T16:59:00Z",
+      "sorting_center": null,
       "optional": {
         "products_with_possible_mandatory_mark": []
       },

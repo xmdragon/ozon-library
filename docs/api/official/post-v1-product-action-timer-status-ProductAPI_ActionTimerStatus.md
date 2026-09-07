@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/action/timer/status`
 - Operation ID：`ProductAPI_ActionTimerStatus`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ActionTimerStatus
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ActionTimerStatus
 - 分组：`product`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 获取已设置计时器状态
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,9 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `statuses` | Array of objects |
-| `expired_at` | string <date-time> 计时器结束时间。如果该参数为空，则没有有效的计时器。 |
-| `min_price_for_auto_actions_enabled` | boolean 如果Ozon在添加商品至促销活动时会参考最低价格，则返回值为true。 |
-| `product_id` | integer <int64> 卖家系统中的商品识别符——product_id。 |
 
 ### 表格 3
 
@@ -61,31 +58,13 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
-```text
-product_id
-```
-
-### 示例 3
-
 ```json
 {
   "product_ids": 0
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/drop-off/create`
 - Operation ID：`FbpDraftDropOffCreate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDropOffCreate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDropOffCreate
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 创建接收点配送草稿
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

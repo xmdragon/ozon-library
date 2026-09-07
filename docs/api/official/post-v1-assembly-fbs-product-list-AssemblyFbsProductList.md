@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/assembly/fbs/product/list`
 - Operation ID：`AssemblyFbsProductList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AssemblyFbsProductList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/AssemblyFbsProductList
 - 分组：`assembly`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 获取货件中的商品列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -55,42 +55,6 @@
 
 ### 示例 0
 
-```text
-offset = 10
-```
-
-### 示例 1
-
-```text
-ASC
-```
-
-### 示例 2
-
-```text
-DESC
-```
-
-### 示例 3
-
-```text
-true
-```
-
-### 示例 4
-
-```text
-offset
-```
-
-### 示例 5
-
-```text
-false
-```
-
-### 示例 6
-
 ```json
 {
   "filter": {
@@ -104,7 +68,7 @@ false
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

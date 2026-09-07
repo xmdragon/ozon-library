@@ -6,22 +6,23 @@
 
 - 请求：`POST /v4/posting/fbs/unfulfilled/list`
 - Operation ID：`PostingFbsUnfulfilledList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingFbsUnfulfilledList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingFbsUnfulfilledList
 - 分组：`posting`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-08-04 | `updated` | /v4/posting/fbs/unfulfilled/list 更新了方法响应中postings.products.is_marketplace_buyout参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202684) |
 | 2026-04-30 | `new_method` | /v4/posting/fbs/unfulfilled/list 新增了用于获取FBS未处理货件列表的方法新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 
 ## 页面标题结构
 
 - 获取未处理货件列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -57,126 +58,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-awaiting_registration
-```
-
-### 示例 1
-
-```text
-acceptance_in_progress
-```
-
-### 示例 2
-
-```text
-awaiting_approve
-```
-
-### 示例 3
-
-```text
-awaiting_packaging
-```
-
-### 示例 4
-
-```text
-awaiting_deliver
-```
-
-### 示例 5
-
-```text
-arbitration
-```
-
-### 示例 6
-
-```text
-client_arbitration
-```
-
-### 示例 7
-
-```text
-delivering
-```
-
-### 示例 8
-
-```text
-driver_pickup
-```
-
-### 示例 9
-
-```text
-cancelled
-```
-
-### 示例 10
-
-```text
-not_accepted
-```
-
-### 示例 11
-
-```text
-cutoff
-```
-
-### 示例 12
-
-```text
-delivering_date
-```
-
-### 示例 13
-
-```text
-cutoff_from
-```
-
-### 示例 14
-
-```text
-cutoff_to
-```
-
-### 示例 15
-
-```text
-delivering_date_from
-```
-
-### 示例 16
-
-```text
-delivering_date_to
-```
-
-### 示例 17
-
-```text
-ASC
-```
-
-### 示例 18
-
-```text
-DESC
-```
-
-### 示例 19
-
-```text
-true
-```
-
-### 示例 20
 
 ```json
 {
@@ -214,7 +95,7 @@ true
 }
 ```
 
-### 示例 21
+### 示例 1
 
 ```json
 {
@@ -240,8 +121,10 @@ true
       "tracking_number": "",
       "tpl_integration_type": "ozon",
       "in_process_at": "2026-05-04T06:44:37Z",
+      "integration_type_flow": "ozon",
       "shipment_date": "2026-05-05T06:44:37Z",
       "shipment_date_without_delay": "2026-05-06T04:00:00Z",
+      "sorting_center": null,
       "optional": {
         "products_with_possible_mandatory_mark": [
           4116250392

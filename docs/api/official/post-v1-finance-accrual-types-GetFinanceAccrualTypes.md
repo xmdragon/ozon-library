@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/finance/accrual/types`
 - Operation ID：`GetFinanceAccrualTypes`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFinanceAccrualTypes
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/GetFinanceAccrualTypes
 - 分组：`finance`
 
 ## 页面标题结构
 
 - 获取应计项目参考信息
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构
@@ -31,9 +31,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `accrual_types` | Array of objects 应计项目相关信息。 |
-| `description` | string 应计项目说明。 |
-| `id` | integer <int32> 应计项目标识符。 |
-| `name` | string 应计项目名称。 |
 
 ### 表格 2
 

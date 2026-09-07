@@ -6,7 +6,7 @@
 
 - 请求：`POST /v2/posting/fbs/package-label`
 - Operation ID：`PostingAPI_PostingFBSPackageLabel`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_PostingFBSPackageLabel
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_PostingFBSPackageLabel
 - 分组：`posting`
 
 ## News 更新标记
@@ -19,10 +19,10 @@
 ## 页面标题结构
 
 - 打印标签
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/pdf
+- RESPONSE SCHEMA: application/pdf
 - 请求范例
 - 回复范例
 
@@ -53,12 +53,6 @@
 
 ### 示例 0
 
-```text
-The next postings aren't ready
-```
-
-### 示例 1
-
 ```json
 {
   "posting_number": [
@@ -67,7 +61,7 @@ The next postings aren't ready
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

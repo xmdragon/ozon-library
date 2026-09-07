@@ -6,23 +6,25 @@
 
 - 请求：`POST /v2/warehouse/list`
 - Operation ID：`WarehouseListV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseListV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseListV2
 - 分组：`warehouse`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。在方法的响应中添加了参数 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+| 2026-02-02 | `graduated` | /v2/warehouse/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
+| 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。
+在方法的响应中添加了参数 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | 2025-12-16 | `added_field` | /v2/warehouse/list 在方法的响应中添加了参数 has_next 和 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
 
 ## 页面标题结构
 
 - 仓库列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -55,12 +57,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "cursor": "string",
@@ -71,7 +67,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

@@ -6,13 +6,14 @@
 
 - 请求：`POST /v1/report/info`
 - Operation ID：`ReportAPI_ReportInfo`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_ReportInfo
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReportAPI_ReportInfo
 - 分组：`report`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-28 | `added_field` | /v1/report/info 在方法响应中添加了result.additional_data参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026728) |
 | 2026-02-03 | `updated` | /v1/report/info 已更新方法响应中 result.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202623) |
 | 2026-01-16 | `updated` | /v1/report/info 已更新方法响应中 result.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026116) |
 | 2025-11-18 | `added_field` | /v1/report/info 在方法的响应中新增参数result.expires_at。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
@@ -21,10 +22,10 @@
 ## 页面标题结构
 
 - 报告信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,19 +49,12 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 关于报告的信息。 |
-| `code` | string 报告的唯一识别码。 |
-| `created_at` | string <date-time> 报告创建日期。 |
-| `error` | string 生成报告时的错误代码。 |
-| `expires_at` | string <date-time> 报告链接的有效日期和时间。 如果报告生成于 2025 年 10 月 14 日之前，该字段将为空。 |
-| `file` | string XLSX文件的链接。 SELLER_RETURNS 类型的报告，链接有效期为5分钟。 |
-| `params` | object 一个数组，包含卖家创建报告时指定的过滤器。 |
-| `report_type` | string 报告类型： SELLER_PRODUCTS — 商品报告， SELLER_STOCK — 商品库存报告， SELLER_RETURNS — 退货报告， SELLER_POSTINGS — 发货报告， SELLER_DISCOUNTED — 减价商品报告， MUTUAL_SETTLEMENT — 结算报告， DOCUMENT_B2B_SALES — 面向法人客户的销售报告， COMPENSATION_REPORT — 赔偿报告， DECOMPENSATION_REPORT — 赔偿返还报告， MARKED_PRODUCTS_SALES — 标签销售报告， SELLER_PLACEMENT_BY_PRODUCTS — 按商品维度的存储服务费用报告， SELLER_PLACEMENT_BY_SUPPLIES — 按交货维度的存储服务费用报告。 |
-| `status` | string 报告生成状态： waiting—在等待队列中待处理， processing—正在处理， success， failed。 |
 
 ### 表格 3
 
 | 字段 | 类型/说明 |
 | --- | --- |
+| `additional_data` | Array of objects 附加参数。 |
 | `code` | string 报告的唯一识别码。 |
 | `created_at` | string <date-time> 报告创建日期。 |
 | `error` | string 生成报告时的错误代码。 |
@@ -74,124 +68,28 @@
 
 ### 示例 0
 
-```text
-SELLER_RETURNS
-```
-
-### 示例 1
-
-```text
-SELLER_PRODUCTS
-```
-
-### 示例 2
-
-```text
-SELLER_STOCK
-```
-
-### 示例 3
-
-```text
-SELLER_RETURNS
-```
-
-### 示例 4
-
-```text
-SELLER_POSTINGS
-```
-
-### 示例 5
-
-```text
-SELLER_DISCOUNTED
-```
-
-### 示例 6
-
-```text
-MUTUAL_SETTLEMENT
-```
-
-### 示例 7
-
-```text
-DOCUMENT_B2B_SALES
-```
-
-### 示例 8
-
-```text
-COMPENSATION_REPORT
-```
-
-### 示例 9
-
-```text
-DECOMPENSATION_REPORT
-```
-
-### 示例 10
-
-```text
-MARKED_PRODUCTS_SALES
-```
-
-### 示例 11
-
-```text
-SELLER_PLACEMENT_BY_PRODUCTS
-```
-
-### 示例 12
-
-```text
-SELLER_PLACEMENT_BY_SUPPLIES
-```
-
-### 示例 13
-
-```text
-waiting
-```
-
-### 示例 14
-
-```text
-processing
-```
-
-### 示例 15
-
-```text
-success
-```
-
-### 示例 16
-
-```text
-failed
-```
-
-### 示例 17
-
 ```json
 {
   "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69"
 }
 ```
 
-### 示例 18
+### 示例 1
 
 ```json
 {
   "result": {
+    "additional_data": [
+      {
+        "key": "key",
+        "value": "value"
+      }
+    ],
     "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
     "status": "success",
     "error": "",
     "expires_at": "2025-11-12T19:53:08.770Z",
-    "file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+    "file": "https://ir.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
     "report_type": "seller_products",
     "params": {},
     "created_at": "2021-11-25T14:54:55.688260Z"

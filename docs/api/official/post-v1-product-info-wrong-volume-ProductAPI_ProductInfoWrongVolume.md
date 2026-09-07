@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/info/wrong-volume`
 - Operation ID：`ProductAPI_ProductInfoWrongVolume`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductInfoWrongVolume
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductInfoWrongVolume
 - 分组：`product`
 
 ## News 更新标记
@@ -14,15 +14,16 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2026-05-05 | `updated` | /v1/product/info/wrong-volume 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
+| 2025-06-20 | `updated` | /v1/product/info/wrong-volume 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 | 2025-03-26 | `new_method` | /v1/product/info/wrong-volume 我们已为获取体积重量特征不正确的商品的列表添加了Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025326) |
 
 ## 页面标题结构
 
 - 体积重量特征不正确的商品列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

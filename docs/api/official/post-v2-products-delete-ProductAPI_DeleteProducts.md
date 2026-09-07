@@ -6,16 +6,16 @@
 
 - 请求：`POST /v2/products/delete`
 - Operation ID：`ProductAPI_DeleteProducts`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_DeleteProducts
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_DeleteProducts
 - 分组：`products`
 
 ## 页面标题结构
 
 - 从存档删除没有SKU的商品
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,9 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `status` | Array of objects 请求的处理情况。 |
-| `error` | string 处理该请求时发生错误的原因。 |
-| `is_deleted` | boolean 如果查询的执行没有错误且商品被删除 —— true。 |
-| `offer_id` | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 3
 
@@ -55,18 +52,6 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
 ```json
 {
   "products": [
@@ -77,7 +62,7 @@ true
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

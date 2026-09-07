@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/pricing-strategy/products/delete`
 - Operation ID：`pricing_items-delete`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_items-delete
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_items-delete
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 从策略中删除商品
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,7 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法操作列表。 |
-| `failed_product_count` | integer <int32> 有错误的商品数量。 |
 
 ### 表格 3
 

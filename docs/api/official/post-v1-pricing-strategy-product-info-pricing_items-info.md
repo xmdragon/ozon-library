@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/pricing-strategy/product/info`
 - Operation ID：`pricing_items-info`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_items-info
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_items-info
 - 分组：`pricing-strategy`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 竞争对手 的商品价格
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,12 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法操作结果。 |
-| `strategy_id` | string 策略ID。 |
-| `is_enabled` | boolean true, 如果商品参与定价策略。 |
-| `strategy_product_price` | integer <int32> 定价策略。 |
-| `price_downloaded_at` | string 定价策略设定日期。 |
-| `strategy_competitor_id` | integer <int64> Deprecated 竞争对手ID。 |
-| `strategy_competitor_product_url` | string 竞争对手商品链接。 |
 
 ### 表格 3
 
@@ -67,25 +61,13 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
 ```json
 {
   "product_id": 7856197312
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

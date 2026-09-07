@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/question/count`
 - Operation ID：`Question_Count`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/Question_Count
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/Question_Count
 - 分组：`question`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/question/count 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
 
 ## 页面标题结构
 
 - 按状态统计问题数量
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构

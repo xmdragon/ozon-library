@@ -6,16 +6,22 @@
 
 - 请求：`POST /v2/fbs/posting/delivered`
 - Operation ID：`PostingAPI_FbsPostingDelivered`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingDelivered
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingDelivered
 - 分组：`fbs`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-09-24 | `updated` | /v2/fbs/posting/delivered 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 
 ## 页面标题结构
 
 - 将状态改成“已送达”
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,9 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 方法操作结果。 |
-| `error` | string 处理请求时出错。 |
-| `posting_number` | string 发货号。 |
-| `result` | boolean 如果执行请求无误 — true。 |
 
 ### 表格 3
 
@@ -55,12 +58,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "posting_number": [
@@ -69,7 +66,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

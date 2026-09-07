@@ -4,28 +4,28 @@
 
 > [!WARNING]
 > 官方 News 标记此方法为 `deprecated`，日期：2026-02-16。替代方法：`/v2/carriage/delivery/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026216
-> News 原文摘要：/v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/carriage/delivery/list
+> News 原文摘要：/v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 /v2/carriage/delivery/list 新版本。
 
 ## 方法
 
 - 请求：`POST /v1/posting/carriage-available/list`
 - Operation ID：`PostingAPI_GetCarriageAvailableList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetCarriageAvailableList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_GetCarriageAvailableList
 - 分组：`posting`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-02-16 | `deprecated_method` | /v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 替代方法：/v2/carriage/delivery/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
+| 2026-02-16 | `deprecated_method` | /v1/posting/carriage-available/list 该方式已过时，并将于2026年3月20日关闭。请切换至 /v2/carriage/delivery/list 新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
 
 ## 页面标题结构
 
 - 可供运输的列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -50,25 +50,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 方法操作结果。 |
-| `carriage_id` | integer <int64> 运输ID（也是文件形成的任务编号）。 |
-| `carriage_postings_count` | integer <int32> 运输中的货件数量。 |
-| `carriage_status` | string 所请求的交付方式和装运日期的运输状态。 |
-| `cutoff_at` | string <date-time> 需要收取货件的日期和时间。 |
-| `delivery_method_id` | integer <int64> 快递方式ID。 |
-| `delivery_method_name` | string 快递方式名称。 |
-| `errors` | Array of objects 错误列表。 |
-| `first_mile_type` | string 第一英里类型。 |
-| `has_entrusted_acceptance` | boolean 信任接收的标志。 如果在仓库中启用了信任接收，则为“true”。 |
-| `mandatory_postings_count` | integer <int32> 需要收取的货件数量。 |
-| `mandatory_packaged_count` | integer <int32> 收取货件数量。 |
-| `recommended_time_local` | string 推荐的本地发运时间（订单接收点）。 |
-| `recommended_time_utc_offset_in_minutes` | number <int32> 推荐发运时间与UTC-0的时区偏移量（以分钟为单位）。 |
-| `tpl_provider_icon_url` | string 快递服务图标的链接。 |
-| `tpl_provider_name` | string 快递服务名称。 |
-| `warehouse_city` | string 仓库所在城市。 |
-| `warehouse_id` | integer <int64> 仓库ID。 |
-| `warehouse_name` | string 仓库名称。 |
-| `warehouse_timezone` | string 仓库所在时区。 |
 
 ### 表格 3
 

@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/act-from/get`
 - Operation ID：`FbpAPI_FbpCheckActState`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpCheckActState
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpCheckActState
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 获取验收证明书生成状态
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -38,73 +38,13 @@
 
 ### 示例 0
 
-```text
-ERROR_REASON_UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-INVALID_COMPANY
-```
-
-### 示例 2
-
-```text
-FILE_NOT_FOUND
-```
-
-### 示例 3
-
-```text
-GENERATE_TIMEOUT_REACHED
-```
-
-### 示例 4
-
-```text
-GENERATION_ERROR
-```
-
-### 示例 5
-
-```text
-STATUS_UNSPECIFIED
-```
-
-### 示例 6
-
-```text
-NOT_EXIST
-```
-
-### 示例 7
-
-```text
-PROCESSING
-```
-
-### 示例 8
-
-```text
-EXIST
-```
-
-### 示例 9
-
-```text
-ERROR
-```
-
-### 示例 10
-
 ```json
 {
   "file_uuid": "string"
 }
 ```
 
-### 示例 11
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v5/product/info/prices`
 - Operation ID：`ProductAPI_GetProductInfoPrices`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoPrices
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoPrices
 - 分组：`product`
 
 ## News 更新标记
@@ -26,10 +26,10 @@
 ## 页面标题结构
 
 - 获取商品价格信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

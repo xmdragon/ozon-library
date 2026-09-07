@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/order/direct/seller-dlv/edit`
 - Operation ID：`FbpAPI_FbpOrderDirectSellerDlvEdit`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpOrderDirectSellerDlvEdit
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpOrderDirectSellerDlvEdit
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 更新卖家自配送信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -42,12 +42,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "driver_name": "string",
@@ -58,7 +52,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

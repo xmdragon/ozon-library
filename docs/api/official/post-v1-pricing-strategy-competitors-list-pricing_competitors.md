@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/pricing-strategy/competitors/list`
 - Operation ID：`pricing_competitors`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_competitors
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_competitors
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 竞争对手名单
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -36,13 +36,7 @@
 
 ## 示例
 
-### 示例 2
-
-```text
-50
-```
-
-### 示例 3
+### 示例 0
 
 ```json
 {
@@ -51,7 +45,7 @@
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/pricing-strategy/status`
 - Operation ID：`pricing_status`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_status
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_status
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 更改策略状态
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -31,18 +31,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-false
-```
-
-### 示例 2
-
 ```json
 {
   "strategy_id": "c7516438-7124-4e2c-85d3-ccd92b6b9b65",
@@ -50,7 +38,7 @@ false
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {}

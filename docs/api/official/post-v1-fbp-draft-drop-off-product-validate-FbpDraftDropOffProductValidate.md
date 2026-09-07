@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/drop-off/product/validate`
 - Operation ID：`FbpDraftDropOffProductValidate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDropOffProductValidate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDropOffProductValidate
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 检查合作伙伴仓库可接收的商品列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,12 +48,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "skus": [
@@ -66,7 +60,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

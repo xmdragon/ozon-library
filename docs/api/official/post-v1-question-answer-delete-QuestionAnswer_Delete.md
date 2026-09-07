@@ -6,14 +6,20 @@
 
 - 请求：`POST /v1/question/answer/delete`
 - Operation ID：`QuestionAnswer_Delete`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/QuestionAnswer_Delete
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/QuestionAnswer_Delete
 - 分组：`question`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/question/answer/delete 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
 
 ## 页面标题结构
 
 - 删除问题回答
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例

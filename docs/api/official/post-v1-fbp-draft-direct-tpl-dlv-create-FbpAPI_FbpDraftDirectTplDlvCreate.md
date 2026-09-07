@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/draft/direct/tpl-dlv/create`
 - Operation ID：`FbpAPI_FbpDraftDirectTplDlvCreate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpDraftDirectTplDlvCreate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpDraftDirectTplDlvCreate
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 创建第三方物流公司配送的申请草稿
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

@@ -6,22 +6,24 @@
 
 - 请求：`POST /v1/product/attributes/update`
 - Operation ID：`ProductAPI_ProductUpdateAttributes`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductUpdateAttributes
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductUpdateAttributes
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-10 | `updated` | /v1/product/attributes/update 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| 2026-05-12 | `updated` | /v1/product/attributes/update 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2025-11-25 | `updated` | /v1/product/attributes/update 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251125) |
 
 ## 页面标题结构
 
 - 更新商品特征
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -49,30 +51,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-429
-```
-
-### 示例 1
-
-```text
-message
-```
-
-### 示例 2
-
-```text
-Item-Retry-After
-```
-
-### 示例 3
-
-```text
-Item-Rate-Limit-Remaining
-```
-
-### 示例 4
 
 ```json
 {
@@ -120,7 +98,7 @@ Item-Rate-Limit-Remaining
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/description-category/attribute/values`
 - Operation ID：`DescriptionCategoryAPI_GetAttributeValues`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/DescriptionCategoryAPI_GetAttributeValues
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryAPI_GetAttributeValues
 - 分组：`description-category`
 
 ## 页面标题结构
 
 - 特征值指南
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,10 +45,6 @@
 | --- | --- |
 | `has_next` | boolean 该特征表示响应中只返回了部分特性值： true —— 请用新参数 last_value_id 再次请求以获取其它值； false —— 响应包含了所有特性值。 |
 | `result` | Array of objects 特性值。 |
-| `id` | integer <int64> 特性值ID。 |
-| `info` | string 附加描述。 |
-| `picture` | string 图片链接。 |
-| `value` | string 商品特性值。 |
 
 ### 表格 3
 
@@ -63,54 +59,6 @@
 
 ### 示例 0
 
-```text
-EN
-```
-
-### 示例 1
-
-```text
-RU
-```
-
-### 示例 2
-
-```text
-TR
-```
-
-### 示例 3
-
-```text
-ZH_HANS
-```
-
-### 示例 4
-
-```text
-last_value_id
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
-
-```text
-last_value_id
-```
-
-### 示例 7
-
-```text
-false
-```
-
-### 示例 8
-
 ```json
 {
   "attribute_id": 85,
@@ -122,7 +70,7 @@ false
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {
@@ -131,13 +79,13 @@ false
       "id": 5055881,
       "value": "Sunshine",
       "info": "美容与健康",
-      "picture": "https://ir-21.ozonru.cn/s3/multimedia-i/6010930878.jpg"
+      "picture": "https://ir.ozone.ru/s3/multimedia-i/6010930878.jpg"
     },
     {
       "id": 5056737,
       "value": "Essence",
       "info": "美容与健康",
-      "picture": "https://ir-21.ozonru.cn/s3/multimedia-v/6088253599.jpg"
+      "picture": "https://ir.ozone.ru/s3/multimedia-v/6088253599.jpg"
     }
   ],
   "has_next": true

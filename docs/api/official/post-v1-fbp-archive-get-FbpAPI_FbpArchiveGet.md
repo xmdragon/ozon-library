@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/fbp/archive/get`
 - Operation ID：`FbpAPI_FbpArchiveGet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpArchiveGet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpArchiveGet
 - 分组：`fbp`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-28 | `updated` | /v1/fbp/archive/get 更新了方法响应中delivery_details.direct_details.timeslot_details.timeslot.timeslot_end、delivery_details.direct_details.timeslot_details.timeslot.timeslot_start、delivery_details.drop_off_point.timeslot.timeslot_end和delivery_details.drop_off_point.timeslot.timeslot_start参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026528) |
 
 ## 页面标题结构
 
 - 获取已完成交货信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -53,49 +59,13 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
-```text
-ARCHIVE_STATUS_UNSPECIFIED
-```
-
-### 示例 3
-
-```text
-COMPLETED
-```
-
-### 示例 4
-
-```text
-REJECTED_AT_SUPPLY_WAREHOUSE
-```
-
-### 示例 5
-
-```text
-CANCELLED_BY_SELLER
-```
-
-### 示例 6
-
 ```json
 {
   "supply_id": "string"
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

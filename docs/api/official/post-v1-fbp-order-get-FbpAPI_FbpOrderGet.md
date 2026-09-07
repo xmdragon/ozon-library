@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/fbp/order/get`
 - Operation ID：`FbpAPI_FbpOrderGet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpOrderGet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpOrderGet
 - 分组：`fbp`
 
 ## News 更新标记
@@ -18,9 +18,9 @@
 ## 页面标题结构
 
 - 获取关于特定交货的信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -36,7 +36,7 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `attention_reasons` | Array of strings Default: "ORDER_ATTENTION_TYPE_UNSPECIFIED"Items Enum: "ORDER_ATTENTION_TYPE_UNSPECIFIED" "OLD" "TIME_SLOT_EXPIRED" 警告原因： ORDER_ATTENTION_TYPE_UNSPECIFIED——未指定； OLD——过期申请； TIME_SLOT_EXPIRED——时间段已过期。 |
+| `attention_reasons` | Array of strings Default: "ORDER_ATTENTION_TYPE_UNSPECIFIED" Items Enum: "ORDER_ATTENTION_TYPE_UNSPECIFIED" "OLD" "TIME_SLOT_EXPIRED" 警告原因： ORDER_ATTENTION_TYPE_UNSPECIFIED——未指定； OLD——过期申请； TIME_SLOT_EXPIRED——时间段已过期。 |
 | `bundle_uuid` | string 组成商品标识符。 |
 | `can_be_cancelled` | boolean true，如果申请可以取消。 |
 | `cancellation_state` | object 取消原因。 |
@@ -59,109 +59,13 @@
 
 ### 示例 0
 
-```text
-ORDER_ATTENTION_TYPE_UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-OLD
-```
-
-### 示例 2
-
-```text
-TIME_SLOT_EXPIRED
-```
-
-### 示例 3
-
-```text
-true
-```
-
-### 示例 4
-
-```text
-true
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
-
-```text
-true
-```
-
-### 示例 7
-
-```text
-ORDER_STATUS_UNSPECIFIED
-```
-
-### 示例 8
-
-```text
-READY_TO_SUPPLY
-```
-
-### 示例 9
-
-```text
-FILLING_DELIVERY_DETAILS
-```
-
-### 示例 10
-
-```text
-COURIER_ASSIGNED
-```
-
-### 示例 11
-
-```text
-COURIER_PICKED_UP
-```
-
-### 示例 12
-
-```text
-ACCEPTANCE_AT_DROP_OFF_POINT
-```
-
-### 示例 13
-
-```text
-IN_TRANSIT_TO_STORAGE_WAREHOUSE
-```
-
-### 示例 14
-
-```text
-ACCEPTANCE_AT_STORAGE_WAREHOUSE
-```
-
-### 示例 15
-
-```text
-CANCELLED
-```
-
-### 示例 16
-
 ```json
 {
   "supply_id": "string"
 }
 ```
 
-### 示例 17
+### 示例 1
 
 ```json
 {

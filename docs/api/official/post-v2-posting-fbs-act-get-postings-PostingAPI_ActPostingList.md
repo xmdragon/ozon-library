@@ -6,7 +6,7 @@
 
 - 请求：`POST /v2/posting/fbs/act/get-postings`
 - Operation ID：`PostingAPI_ActPostingList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_ActPostingList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_ActPostingList
 - 分组：`posting`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 单据中的货件列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,14 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 货件信息。 |
-| `id` | integer <int64> 单据标识符。 |
-| `multi_box_qty` | integer <int32> 商品包装所用箱数。 |
-| `posting_number` | string 货件编号。 |
-| `status` | string 货件状态。 |
-| `seller_error` | string 错误代码说明。 |
-| `updated_at` | string <date-time> 货件记录的更新日期和时间。 |
-| `created_at` | string <date-time> 货件记录的创建日期和时间。 |
-| `products` | Array of objects 货件中商品列表。 |
 
 ### 表格 3
 

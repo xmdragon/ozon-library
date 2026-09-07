@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/warehouse/fbs/update`
 - Operation ID：`UpdateWarehouseFBS`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/UpdateWarehouseFBS
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/UpdateWarehouseFBS
 - 分组：`warehouse`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 更新仓库
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/jsonapplication/jsonexample
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -55,48 +55,6 @@
 
 ### 示例 0
 
-```text
-MONDAY
-```
-
-### 示例 1
-
-```text
-TUESDAY
-```
-
-### 示例 2
-
-```text
-WEDNESDAY
-```
-
-### 示例 3
-
-```text
-THURSDAY
-```
-
-### 示例 4
-
-```text
-FRIDAY
-```
-
-### 示例 5
-
-```text
-SATURDAY
-```
-
-### 示例 6
-
-```text
-SUNDAY
-```
-
-### 示例 7
-
 ```json
 {
   "address_coordinates": {
@@ -124,7 +82,7 @@ SUNDAY
 }
 ```
 
-### 示例 8
+### 示例 1
 
 ```json
 {

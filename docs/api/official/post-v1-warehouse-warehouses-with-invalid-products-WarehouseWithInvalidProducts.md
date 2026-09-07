@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/warehouse/warehouses-with-invalid-products`
 - Operation ID：`WarehouseWithInvalidProducts`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseWithInvalidProducts
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseWithInvalidProducts
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/warehouses-with-invalid-products 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
 
 ## 页面标题结构
 
 - 获取含有配送受限商品的仓库列表
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构

@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/act-to/get`
 - Operation ID：`FbpAPI_FbpCheckConsignmentNoteState`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpCheckConsignmentNoteState
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpCheckConsignmentNoteState
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 获取货物运单生成状态
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,30 +39,6 @@
 
 ### 示例 0
 
-```text
-STATE_TYPE_UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-IN_PROGRESS
-```
-
-### 示例 2
-
-```text
-FINISHED
-```
-
-### 示例 3
-
-```text
-FAILED
-```
-
-### 示例 4
-
 ```json
 {
   "code": "string",
@@ -70,7 +46,7 @@ FAILED
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

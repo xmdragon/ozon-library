@@ -6,22 +6,23 @@
 
 - 请求：`POST /v1/question/answer/list`
 - Operation ID：`QuestionAnswer_List`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/QuestionAnswer_List
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/QuestionAnswer_List
 - 分组：`question`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/question/answer/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
 | 2026-05-19 | `added_field` | /v1/question/answer/list 在方法响应中新增了answers.status_publication参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 
 ## 页面标题结构
 
 - 问题回答列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -53,18 +54,6 @@
 
 ### 示例 0
 
-```text
-last_id
-```
-
-### 示例 1
-
-```text
-last_id
-```
-
-### 示例 2
-
 ```json
 {
   "last_id": "",
@@ -73,7 +62,7 @@ last_id
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

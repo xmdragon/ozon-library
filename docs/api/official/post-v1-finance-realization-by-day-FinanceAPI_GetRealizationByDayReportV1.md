@@ -6,22 +6,23 @@
 
 - 请求：`POST /v1/finance/realization/by-day`
 - Operation ID：`FinanceAPI_GetRealizationByDayReportV1`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_GetRealizationByDayReportV1
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FinanceAPI_GetRealizationByDayReportV1
 - 分组：`finance`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2025-11-11 | `updated` | /v1/finance/realization/by-day 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
 | 2025-07-15 | `graduated` | /v1/finance/realization/by-day 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025715) |
 
 ## 页面标题结构
 
 - 每日商品销售报告
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -47,12 +48,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `rows` | Array of objects 报告表格。 |
-| `commission_ratio` | number <double> 按类目划分的销售佣金比例。 |
-| `delivery_commission` | object 配送佣金。 |
-| `item` | object 商品信息。 |
-| `return_commission` | object 商品退货佣金。 |
-| `rowNumber` | integer <int32> 报告中的行号。 |
-| `seller_price_per_instance` | number <double> 考虑折扣后的卖家价格。 |
 
 ### 表格 3
 

@@ -6,14 +6,14 @@
 
 - 请求：`POST /v1/return/pass/update`
 - Operation ID：`returnPassUpdate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/returnPassUpdate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/returnPassUpdate
 - 分组：`return`
 
 ## 页面标题结构
 
 - 更新退货通行证
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例

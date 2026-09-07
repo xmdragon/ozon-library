@@ -6,15 +6,22 @@
 
 - 请求：`POST /v1/warehouse/fbs/create`
 - Operation ID：`WarehouseAPI_CreateWarehouseFBS`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseAPI_CreateWarehouseFBS
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseAPI_CreateWarehouseFBS
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/fbs/create 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
+| 2025-10-17 | `added_field` | /v1/warehouse/fbs/create 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 
 ## 页面标题结构
 
 - 创建仓库
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -44,72 +51,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-3000
-```
-
-### 示例 1
-
-```text
-PICK_UP
-```
-
-### 示例 2
-
-```text
-DROP_OFF
-```
-
-### 示例 3
-
-```text
-true
-```
-
-### 示例 4
-
-```text
-MONDAY
-```
-
-### 示例 5
-
-```text
-TUESDAY
-```
-
-### 示例 6
-
-```text
-WEDNESDAY
-```
-
-### 示例 7
-
-```text
-THURSDAY
-```
-
-### 示例 8
-
-```text
-FRIDAY
-```
-
-### 示例 9
-
-```text
-SATURDAY
-```
-
-### 示例 10
-
-```text
-SUNDAY
-```
-
-### 示例 11
 
 ```json
 {
@@ -142,7 +83,7 @@ SUNDAY
 }
 ```
 
-### 示例 12
+### 示例 1
 
 ```json
 {

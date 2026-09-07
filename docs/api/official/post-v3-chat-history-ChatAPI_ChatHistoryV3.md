@@ -6,7 +6,7 @@
 
 - 请求：`POST /v3/chat/history`
 - Operation ID：`ChatAPI_ChatHistoryV3`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ChatAPI_ChatHistoryV3
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ChatAPI_ChatHistoryV3
 - 分组：`chat`
 
 ## News 更新标记
@@ -14,6 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2026-03-19 | `updated` | /v3/chat/history 更新了方法响应中 messages.user.type 参数的描。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026319) |
+| 2025-11-11 | `updated` | /v3/chat/history 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
 | 2025-09-24 | `updated` | /v3/chat/history 更新了方法请求中的 from_message_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-05-13 | `graduated` | /v3/chat/history 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025513) |
 | 2025-03-11 | `new_method` | /v3/chat/history 添加了新版本的聊天记录查看方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025311) |
@@ -21,10 +22,10 @@
 ## 页面标题结构
 
 - 聊天历史记录
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -58,48 +59,6 @@
 
 ### 示例 0
 
-```text
-Forward
-```
-
-### 示例 1
-
-```text
-Backward
-```
-
-### 示例 2
-
-```text
-Backward
-```
-
-### 示例 3
-
-```text
-limit
-```
-
-### 示例 4
-
-```text
-direction = Forward
-```
-
-### 示例 5
-
-```text
-from_message_id
-```
-
-### 示例 6
-
-```text
-direction
-```
-
-### 示例 7
-
 ```json
 {
   "chat_id": "18b8e1f9-4ae7-461c-84ea-8e1f54d1a45e",
@@ -114,7 +73,7 @@ direction
 }
 ```
 
-### 示例 8
+### 示例 1
 
 ```json
 {

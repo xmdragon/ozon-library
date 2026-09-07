@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/pricing-strategy/products/list`
 - Operation ID：`pricing_items-list`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_items-list
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_items-list
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 策略中的商品列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,7 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 商品列表。 |
-| `product_id` | Array of strings <int64> Ozon系统中商品的标识符 — product_id。 |
 
 ### 表格 3
 
@@ -51,19 +50,13 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
 ```json
 {
   "strategy_id": "b7cd30e6-5667-424d-b105-fbec30a52477"
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

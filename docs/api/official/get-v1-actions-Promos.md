@@ -6,7 +6,7 @@
 
 - 请求：`GET /v1/actions`
 - Operation ID：`Promos`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/Promos
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/Promos
 - 分组：`actions`
 
 ## News 更新标记
@@ -20,7 +20,7 @@
 
 - 活动清单
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构
@@ -30,23 +30,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 请求结果。 |
-| `id` | number <double> 活动识别号。 |
-| `title` | string 活动名称。 |
-| `action_type` | string 活动类型。 |
-| `description` | string 活动描述。 |
-| `date_start` | string 活动开始日期。 |
-| `date_end` | string 活动结束日期。 |
-| `auto_add_dates` | Array of strings <date-time> 商品自动添加到促销活动中的日期和时间。 |
-| `freeze_date` | string 活动暂停的日期。 如果该空白被填写，卖家就不能提高价格，改变商品清单或减少促销活动的单位数量。 卖方可以降低价格，增加促销的单位数量。 |
-| `potential_products_count` | number <double> 可供活动的商品数量。 |
-| `participating_products_count` | number <double> 参加促销的商品数量。 |
-| `is_participating` | boolean 无论你是否参加这项活动。 |
-| `is_voucher_action` | boolean 此迹象表明买家需要促销代码才能参加。 |
-| `banned_products_count` | number <double> 被封商品数量。 |
-| `with_targeting` | boolean 此迹象表明该活动是与目标受众一起进行的。 |
-| `order_amount` | number <double> 预定金额。 |
-| `discount_type` | string 折扣类型。 |
-| `discount_value` | number <double> 折扣力度。 |
 
 ### 表格 1
 

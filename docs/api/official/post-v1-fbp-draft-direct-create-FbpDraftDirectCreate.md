@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/direct/create`
 - Operation ID：`FbpDraftDirectCreate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDirectCreate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDirectCreate
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 创建不指定配送方法的交货申请草稿
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

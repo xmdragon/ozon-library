@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/visibility/info`
 - Operation ID：`ProductVisibilityInfo`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductVisibilityInfo
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductVisibilityInfo
 - 分组：`product`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 获取商品可见性信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,8 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `items` | Array of objects 商品列表。 |
-| `showcases_visibility` | string Default: "UNSPECIFIED" Enum: "UNSPECIFIED" "OZON" "SELECT" "OZON_SELECT" "NONE" 商品展示在哪些橱窗中： UNSPECIFIED——未指定； OZON——仅在Ozon展示； SELECT——仅在Select展示； OZON_SELECT——在Select和Ozon展示； NONE——商品在所有橱窗均隐藏。 |
-| `sku` | integer <int64> 商品在Ozon系统中的标识符——SKU。 |
 
 ### 表格 3
 
@@ -59,36 +57,6 @@
 
 ### 示例 0
 
-```text
-UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-OZON
-```
-
-### 示例 2
-
-```text
-SELECT
-```
-
-### 示例 3
-
-```text
-OZON_SELECT
-```
-
-### 示例 4
-
-```text
-NONE
-```
-
-### 示例 5
-
 ```json
 {
   "skus": [
@@ -97,7 +65,7 @@ NONE
 }
 ```
 
-### 示例 6
+### 示例 1
 
 ```json
 {

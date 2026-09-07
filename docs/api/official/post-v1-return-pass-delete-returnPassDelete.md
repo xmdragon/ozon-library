@@ -6,14 +6,14 @@
 
 - 请求：`POST /v1/return/pass/delete`
 - Operation ID：`returnPassDelete`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/returnPassDelete
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/returnPassDelete
 - 分组：`return`
 
 ## 页面标题结构
 
 - 删除退货通行证
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例

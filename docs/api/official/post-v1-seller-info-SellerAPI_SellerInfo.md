@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/seller/info`
 - Operation ID：`SellerAPI_SellerInfo`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerAPI_SellerInfo
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SellerAPI_SellerInfo
 - 分组：`seller`
 
 ## News 更新标记
@@ -18,9 +18,9 @@
 ## 页面标题结构
 
 - 卖家个人中心信息
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构

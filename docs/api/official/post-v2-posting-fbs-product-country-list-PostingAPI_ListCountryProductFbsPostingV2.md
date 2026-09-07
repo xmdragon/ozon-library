@@ -6,15 +6,15 @@
 
 - 请求：`POST /v2/posting/fbs/product/country/list`
 - Operation ID：`PostingAPI_ListCountryProductFbsPostingV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_ListCountryProductFbsPostingV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_ListCountryProductFbsPostingV2
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 可用产地名单
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -31,8 +31,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 制造国和ISO代码列表。 |
-| `name` | string 国家俄语名称 |
-| `country_iso_code` | string ISO国家代码。 |
 
 ### 表格 2
 

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/carriage/create`
 - Operation ID：`CarriageAPI_CarriageCreate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CarriageAPI_CarriageCreate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CarriageAPI_CarriageCreate
 - 分组：`carriage`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 创建发运
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -52,24 +52,6 @@
 
 ### 示例 0
 
-```text
-new
-```
-
-### 示例 1
-
-```text
-new
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
 ```json
 {
   "all_blr_traceable": true,
@@ -78,7 +60,7 @@ true
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

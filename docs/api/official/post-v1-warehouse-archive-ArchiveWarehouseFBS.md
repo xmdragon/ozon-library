@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/warehouse/archive`
 - Operation ID：`ArchiveWarehouseFBS`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ArchiveWarehouseFBS
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ArchiveWarehouseFBS
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/archive 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
 
 ## 页面标题结构
 
 - 将仓库归档
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

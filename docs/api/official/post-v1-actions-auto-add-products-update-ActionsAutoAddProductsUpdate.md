@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/actions/auto-add/products/update`
 - Operation ID：`ActionsAutoAddProductsUpdate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ActionsAutoAddProductsUpdate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsUpdate
 - 分组：`actions`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 在促销活动自动添加列表中添加或更新商品
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -56,12 +56,6 @@
 
 ### 示例 0
 
-```text
-result.auto_add_dates
-```
-
-### 示例 1
-
 ```json
 {
   "action_id": "250204",
@@ -77,7 +71,7 @@ result.auto_add_dates
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

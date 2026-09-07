@@ -101,6 +101,39 @@ class ApplyOfficialApiNewsTest(unittest.TestCase):
         self.assertIn("removed_field", operation["news_updates"][0]["labels"])
         self.assertNotIn("removed_method", operation["news_updates"][0]["labels"])
 
+    def test_shared_news_cell_applies_change_to_each_endpoint(self):
+        operations = [
+            {"path": "/v3/finance/transaction/list", "operationId": "TransactionList"},
+            {"path": "/v3/finance/transaction/totals", "operationId": "TransactionTotals"},
+        ]
+        news = {"entries": [{
+            "date": "2026-07-14",
+            "id": "section/2026714",
+            "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026714",
+            "text": "/v3/finance/transaction/list /v3/finance/transaction/totals 该方法即将废弃，并将于2026年9月8日停用。请切换到/v1/finance/accrual/postings。",
+        }]}
+
+        result = apply_news_metadata(copy.deepcopy(operations), news)
+        for operation in result["operations"]:
+            self.assertEqual(operation["lifecycle"]["status"], "deprecated")
+            self.assertEqual(operation["lifecycle"]["replacement_paths"], ["/v1/finance/accrual/postings"])
+
+    def test_structured_rows_use_links_when_visible_method_label_is_wrong(self):
+        entry = {
+            "date": "2025-12-26",
+            "id": "section/20251226",
+            "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20251226",
+            "rows": [{
+                "methods": ["/v2/returns/rfbs/list", "/v2/returns/rfbs/get"],
+                "method_text": "/v2/returns/rfbs/list\n/v2/returns/rfbs/list",
+                "description": "参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。",
+            }],
+            "text": "错误的折叠 label",
+        }
+        summaries = {item["path"]: item for item in summarize_news_entry(entry)}
+        self.assertIn("deprecated_field", summaries["/v2/returns/rfbs/list"]["labels"])
+        self.assertIn("deprecated_field", summaries["/v2/returns/rfbs/get"]["labels"])
+
 
 if __name__ == "__main__":
     unittest.main()

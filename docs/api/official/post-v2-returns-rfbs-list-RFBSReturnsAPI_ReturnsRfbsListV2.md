@@ -6,7 +6,7 @@
 
 - 请求：`POST /v2/returns/rfbs/list`
 - Operation ID：`RFBSReturnsAPI_ReturnsRfbsListV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RFBSReturnsAPI_ReturnsRfbsListV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/RFBSReturnsAPI_ReturnsRfbsListV2
 - 分组：`returns`
 
 ## News 更新标记
@@ -14,15 +14,17 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-12-26 | `deprecated_field` | /v2/returns/rfbs/list 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251226) |
-| 2025-09-24 | `updated` | /v2/returns/rfbs/list 更新了该方法请求中参数 last_id 的描述。已更新回答示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-09-24 | `updated` | /v2/returns/rfbs/list 更新了该方法请求中参数 last_id 的描述。
+已更新回答示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-06-20 | `updated` | /v2/returns/rfbs/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 
 ## 页面标题结构
 
 - 退货申请列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,14 +50,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `returns` | object 申请信息。 |
-| `client_name` | string Deprecated 买家姓名。 |
-| `created_at` | string <date-time> 创建日期。 |
-| `order_number` | string 订单号。 |
-| `posting_number` | string 货件编号。 |
-| `product` | object 商品信息。 |
-| `return_id` | integer <int64> 退货申请的标识符。 |
-| `return_number` | string 退货申请编号。 |
-| `state` | object 退货申请和退款状态。 |
 
 ### 表格 3
 
@@ -73,12 +67,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-return_id
-```
-
-### 示例 1
 
 ```json
 {
@@ -99,7 +87,7 @@ return_id
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

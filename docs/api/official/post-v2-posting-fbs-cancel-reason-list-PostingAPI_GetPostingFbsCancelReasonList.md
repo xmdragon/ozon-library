@@ -6,15 +6,15 @@
 
 - 请求：`POST /v2/posting/fbs/cancel-reason/list`
 - Operation ID：`PostingAPI_GetPostingFbsCancelReasonList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetPostingFbsCancelReasonList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_GetPostingFbsCancelReasonList
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 货件取消原因
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构
@@ -31,10 +31,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 方法操作结果。 |
-| `id` | integer <int64> 取消原因ID。 |
-| `is_available_for_cancellation` | boolean 取消装运结果。 true, 如果请求可以取消。 |
-| `title` | string 类别名称。 |
-| `type_id` | string 取消货件ID： buyer — 买家， seller — 卖家。 |
 
 ### 表格 2
 
@@ -48,24 +44,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-true
-```
-
-### 示例 1
-
-```text
-buyer
-```
-
-### 示例 2
-
-```text
-seller
-```
-
-### 示例 3
 
 ```json
 {

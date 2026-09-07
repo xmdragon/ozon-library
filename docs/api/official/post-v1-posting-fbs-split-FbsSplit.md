@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/posting/fbs/split`
 - Operation ID：`FbsSplit`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbsSplit
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbsSplit
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 将订单拆分为不带备货的货件
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

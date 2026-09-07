@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/direct/delete`
 - Operation ID：`FbpDraftDirectDelete`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDirectDelete
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDirectDelete
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 删除交货申请草稿
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

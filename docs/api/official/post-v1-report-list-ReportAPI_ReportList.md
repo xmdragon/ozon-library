@@ -6,25 +6,27 @@
 
 - 请求：`POST /v1/report/list`
 - Operation ID：`ReportAPI_ReportList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_ReportList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReportAPI_ReportList
 - 分组：`report`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-02-03 | `updated` | /v1/report/list 更新了方法请求中的 report_type 参数描述。已更新方法响应中 result.reports.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202623) |
+| 2026-02-03 | `updated` | /v1/report/list 更新了方法请求中的 report_type 参数描述。
+已更新方法响应中 result.reports.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202623) |
 | 2026-01-16 | `updated` | /v1/report/list 已更新方法请求中 report_type 参数以及方法响应中 result.reports.report_type 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026116) |
 | 2025-11-18 | `added_field` | /v1/report/list 在方法的响应中新增参数result.reports.expires_at。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
+| 2025-06-20 | `updated` | /v1/report/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 | 2025-05-05 | `updated` | /v1/report/list 更新了 report_type 参数在方法请求和响应中的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202555) |
 
 ## 页面标题结构
 
 - 报告清单
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -50,8 +52,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `reports` | Array of objects 包含所有生成的报告的数组。 |
-| `total` | integer <int32> 累计报告数。 |
 
 ### 表格 3
 
@@ -64,84 +64,6 @@
 
 ### 示例 0
 
-```text
-ALL
-```
-
-### 示例 1
-
-```text
-SELLER_PRODUCTS
-```
-
-### 示例 2
-
-```text
-SELLER_STOCK
-```
-
-### 示例 3
-
-```text
-SELLER_RETURNS
-```
-
-### 示例 4
-
-```text
-SELLER_POSTINGS
-```
-
-### 示例 5
-
-```text
-SELLER_DISCOUNTED
-```
-
-### 示例 6
-
-```text
-MUTUAL_SETTLEMENT
-```
-
-### 示例 7
-
-```text
-DOCUMENT_B2B_SALES
-```
-
-### 示例 8
-
-```text
-COMPENSATION_REPORT
-```
-
-### 示例 9
-
-```text
-DECOMPENSATION_REPORT
-```
-
-### 示例 10
-
-```text
-MARKED_PRODUCTS_SALES
-```
-
-### 示例 11
-
-```text
-SELLER_PLACEMENT_BY_PRODUCTS
-```
-
-### 示例 12
-
-```text
-SELLER_PLACEMENT_BY_SUPPLIES
-```
-
-### 示例 13
-
 ```json
 {
   "page": 1,
@@ -150,18 +72,24 @@ SELLER_PLACEMENT_BY_SUPPLIES
 }
 ```
 
-### 示例 14
+### 示例 1
 
 ```json
 {
   "result": {
     "reports": [
       {
+        "additional_data": [
+          {
+            "key": "key",
+            "value": "value"
+          }
+        ],
         "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
         "status": "success",
         "error": "",
         "expires_at": "2025-11-12T19:55:28.249Z",
-        "file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+        "file": "https://ir.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
         "report_type": "seller_products",
         "params": {
           "visibility": "3"
@@ -172,7 +100,7 @@ SELLER_PLACEMENT_BY_SUPPLIES
         "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
         "status": "success",
         "error": "",
-        "file": "https://ir-21.ozonru.cn/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+        "file": "https://ir.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
         "report_type": "seller_products",
         "params": {
           "visibility": "3"

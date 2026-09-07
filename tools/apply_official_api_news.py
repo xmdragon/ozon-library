@@ -115,25 +115,58 @@ def _sentence_window(text: str, start: int) -> str:
 
 def _segments_for_paths(text: str) -> Iterable[tuple[str, str, str]]:
     matches = list(PATH_RE.finditer(text))
-    for index, match in enumerate(matches):
-        path = match.group(0).rstrip(".,;:，。；：")
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
-        segment = text[match.start() : end].strip()
+    index = 0
+    while index < len(matches):
+        match = matches[index]
+        # Redoc collapses one table cell containing several endpoints into a
+        # whitespace-separated path run. Keep the row's description attached
+        # to every path in that run.
+        group_end = index + 1
+        while group_end < len(matches) and not text[matches[group_end - 1].end() : matches[group_end].start()].strip(" \t\r\n"):
+            group_end += 1
+        description_end = matches[group_end].start() if group_end < len(matches) else len(text)
+        segment = text[match.start() : description_end].strip()
         replacement_window = _sentence_window(text, match.start())
-        if index + 1 < len(matches):
-            replacement_window = f"{segment} {_sentence_window(text, matches[index + 1].start())}".strip()
-        yield path, segment, replacement_window
+        if group_end < len(matches):
+            replacement_window = f"{segment} {_sentence_window(text, matches[group_end].start())}".strip()
+        for grouped_match in matches[index:group_end]:
+            path = grouped_match.group(0).rstrip(".,;:，。；：")
+            yield path, segment, replacement_window
+        index = group_end
 
 
 def summarize_news_entry(entry: NewsEntry) -> List[NewsUpdate]:
     """Convert one News item into path-level update summaries."""
 
-    text = str(entry.get("text") or "").strip()
     date = str(entry.get("date") or "")
     source_url = _entry_source_url(entry)
     summaries: Dict[str, NewsUpdate] = {}
 
-    for path, segment, sentence_window in _segments_for_paths(text):
+    # Fresh Chrome extraction keeps the method column as structured rows. Use
+    # its href-derived methods because the visible label can be duplicated or
+    # mistyped while the links still identify each endpoint correctly.
+    structured_rows = entry.get("rows")
+    if isinstance(structured_rows, list):
+        row_segments = []
+        for row in structured_rows:
+            if not isinstance(row, dict):
+                continue
+            description = str(row.get("description") or "").strip()
+            methods = row.get("methods")
+            if not description or not isinstance(methods, list):
+                continue
+            for path in methods:
+                path = str(path or "").strip()
+                if path.startswith("/v"):
+                    row_segments.append((path, f"{path} {description}"))
+        path_segments = row_segments
+    else:
+        text = str(entry.get("text") or "").strip()
+        path_segments = [(path, segment, sentence_window) for path, segment, sentence_window in _segments_for_paths(text)]
+
+    for item in path_segments:
+        path, segment = item[:2]
+        sentence_window = segment if structured_rows is not None else item[2]
         labels = _classify_segment(segment)
         if not labels:
             continue

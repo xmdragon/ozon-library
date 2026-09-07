@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/drop-off/point/timetable`
 - Operation ID：`FbpDraftDropOffPointTimetable`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDropOffPointTimetable
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDropOffPointTimetable
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 获取接收点的营业时间表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -41,8 +41,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `calendar` | Array of objects 接收点的营业时间表。 |
-| `calendar_item` | object 营业时间表。 |
-| `day_of_week` | string Default: "DAY_OF_WEEK_UNSPECIFIED" Enum: "DAY_OF_WEEK_UNSPECIFIED" "MONDAY" "TUESDAY" "WEDNESDAY" "THURSDAY" "FRIDAY" "SATURDAY" "SUNDAY" 星期： DAY_OF_WEEK_UNSPECIFIED——未指定； MONDAY——星期一； TUESDAY——星期二； WEDNESDAY——星期三； THURSDAY——星期四； FRIDAY——星期五； SATURDAY——星期六； SUNDAY——星期日。 |
 
 ### 表格 3
 
@@ -55,54 +53,6 @@
 
 ### 示例 0
 
-```text
-DAY_OF_WEEK_UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-MONDAY
-```
-
-### 示例 2
-
-```text
-TUESDAY
-```
-
-### 示例 3
-
-```text
-WEDNESDAY
-```
-
-### 示例 4
-
-```text
-THURSDAY
-```
-
-### 示例 5
-
-```text
-FRIDAY
-```
-
-### 示例 6
-
-```text
-SATURDAY
-```
-
-### 示例 7
-
-```text
-SUNDAY
-```
-
-### 示例 8
-
 ```json
 {
   "drop_off_point_id": 0,
@@ -111,7 +61,7 @@ SUNDAY
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {

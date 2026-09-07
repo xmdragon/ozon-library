@@ -6,7 +6,7 @@
 
 ## 生成信息
 
-- 方法页数量：264
+- 方法页数量：262
 - 来源：`indexes/official-seller-api.operations.json`
 - 生成器：`tools/generate_official_api_docs.py`
 - 重新生成：`python3 tools/generate_official_api_docs.py`
@@ -51,6 +51,8 @@
 
 - [发运确认](post-v1-carriage-approve-CarriageAPI_CarriageApprove.md) - `POST /v1/carriage/approve` - `CarriageAPI_CarriageApprove`
 - [发运删除](post-v1-carriage-cancel-CarriageAPI_CarriageCancel.md) - `POST /v1/carriage/cancel` - `CarriageAPI_CarriageCancel`
+- [获取向快递员提供的卖家联系方式](post-v1-carriage-courier-contact-get-CarriageCourierContactGet.md) - `POST /v1/carriage/courier-contact/get` - `CarriageCourierContactGet`
+- [添加或更新向快递员提供的卖家联系方式](post-v1-carriage-courier-contact-set-CarriageCourierContactSet.md) - `POST /v1/carriage/courier-contact/set` - `CarriageCourierContactSet`
 - [创建发运](post-v1-carriage-create-CarriageAPI_CarriageCreate.md) - `POST /v1/carriage/create` - `CarriageAPI_CarriageCreate`
 - [运输信息](post-v1-carriage-get-CarriageGet.md) - `POST /v1/carriage/get` - `CarriageGet`
 - [创建通行证](post-v1-carriage-pass-create-carriagePassCreate.md) - `POST /v1/carriage/pass/create` - `carriagePassCreate`
@@ -226,7 +228,7 @@
 - [订阅该商品的用户数](post-v1-product-info-subscription-ProductAPI_GetProductInfoSubscription.md) - `POST /v1/product/info/subscription` - `ProductAPI_GetProductInfoSubscription`
 - [获取FBS和rFBS仓库库存信息](post-v1-product-info-warehouse-stocks-ProductInfoWarehouseStocks.md) - `POST /v1/product/info/warehouse/stocks` - `ProductInfoWarehouseStocks`
 - [体积重量特征不正确的商品列表](post-v1-product-info-wrong-volume-ProductAPI_ProductInfoWrongVolume.md) - `POST /v1/product/info/wrong-volume` - `ProductAPI_ProductInfoWrongVolume`
-- [上传或更新商品图片](post-v1-product-pictures-import-ProductAPI_ProductImportPictures.md) - `POST /v1/product/pictures/import` - `ProductAPI_ProductImportPictures`
+- [上传或更新商品图片 Deprecated](post-v1-product-pictures-import-ProductAPI_ProductImportPictures.md) - `POST /v1/product/pictures/import` - `ProductAPI_ProductImportPictures` - **deprecated**
 - [获取商品价格的详细信息](post-v1-product-prices-details-ProductPricesDetails.md) - `POST /v1/product/prices/details` - `ProductPricesDetails`
 - [按SKU获得商品的内容排名](post-v1-product-rating-by-sku-ProductAPI_GetProductRatingBySku.md) - `POST /v1/product/rating-by-sku` - `ProductAPI_GetProductRatingBySku`
 - [获取相关SKU](post-v1-product-related-sku-get-ProductAPI_ProductGetRelatedSKU.md) - `POST /v1/product/related-sku/get` - `ProductAPI_ProductGetRelatedSKU`
@@ -238,6 +240,7 @@
 - [获取商品可见性信息](post-v1-product-visibility-info-ProductVisibilityInfo.md) - `POST /v1/product/visibility/info` - `ProductVisibilityInfo`
 - [新增了用于设置商品在Ozon和Ozon Select橱窗可见性的Beta方法。](post-v1-product-visibility-set-ProductVisibilitySet.md) - `POST /v1/product/visibility/set` - `ProductVisibilitySet`
 - [获取卖家仓库库存信息](post-v2-product-info-stocks-by-warehouse-fbs-GetProductInfoStocksByWarehouseFbsV2.md) - `POST /v2/product/info/stocks-by-warehouse/fbs` - `GetProductInfoStocksByWarehouseFbsV2`
+- [上传或更新商品图片](post-v2-product-pictures-import-ProductImportPicturesV2.md) - `POST /v2/product/pictures/import` - `ProductImportPicturesV2`
 - [获取商品图片](post-v2-product-pictures-info-ProductAPI_ProductInfoPicturesV2.md) - `POST /v2/product/pictures/info` - `ProductAPI_ProductInfoPicturesV2`
 - [创建或更新商品](post-v3-product-import-ProductAPI_ImportProductsV3.md) - `POST /v3/product/import` - `ProductAPI_ImportProductsV3`
 - [根据标识符获取商品信息](post-v3-product-info-list-ProductAPI_GetProductInfoList.md) - `POST /v3/product/info/list` - `ProductAPI_GetProductInfoList`
@@ -251,7 +254,6 @@
 
 - [从存档删除没有SKU的商品](post-v2-products-delete-ProductAPI_DeleteProducts.md) - `POST /v2/products/delete` - `ProductAPI_DeleteProducts`
 - [更新库存商品的数量](post-v2-products-stocks-ProductAPI_ProductsStocksV2.md) - `POST /v2/products/stocks` - `ProductAPI_ProductsStocksV2`
-- [获取商品特征描述](post-v3-products-info-attributes-ProductAPI_GetProductAttributesV3.md) - `POST /v3/products/info/attributes` - `ProductAPI_GetProductAttributesV3`
 
 ### question
 
@@ -277,6 +279,7 @@
 - [生成带有标记商品的销售报告](post-v1-report-marked-products-sales-create-CreateCompanyMarkedProductsSalesReport.md) - `POST /v1/report/marked-products-sales/create` - `CreateCompanyMarkedProductsSalesReport`
 - [发货报告](post-v1-report-postings-create-ReportAPI_CreateCompanyPostingsReport.md) - `POST /v1/report/postings/create` - `ReportAPI_CreateCompanyPostingsReport`
 - [商品报告](post-v1-report-products-create-ReportAPI_CreateCompanyProductsReport.md) - `POST /v1/report/products/create` - `ReportAPI_CreateCompanyProductsReport`
+- [获取每订单商品销售报告](post-v1-report-realization-posting-create-CreateCompanyFinanceRealizationPostingReport.md) - `POST /v1/report/realization/posting/create` - `CreateCompanyFinanceRealizationPostingReport`
 - [关于FBS仓库库存报告](post-v1-report-warehouse-stock-ReportAPI_CreateStockByWarehouseReport.md) - `POST /v1/report/warehouse/stock` - `ReportAPI_CreateStockByWarehouseReport`
 
 ### return
@@ -290,13 +293,8 @@
 - [FBS退货数量](post-v1-returns-company-fbs-info-returnsCompanyFBSInfo.md) - `POST /v1/returns/company/fbs/info` - `returnsCompanyFBSInfo`
 - [FBO和FBS退货信息](post-v1-returns-list-returnsList.md) - `POST /v1/returns/list` - `returnsList`
 - [传递 rFBS 退货的可用操作](post-v1-returns-rfbs-action-set-ReturnsAPI_ReturnsRfbsActionSet.md) - `POST /v1/returns/rfbs/action/set` - `ReturnsAPI_ReturnsRfbsActionSet`
-- [退还部分商品金额](post-v2-returns-rfbs-compensate-RFBSReturnsAPI_ReturnsRfbsCompensateV2.md) - `POST /v2/returns/rfbs/compensate` - `RFBSReturnsAPI_ReturnsRfbsCompensateV2`
 - [退货申请信息](post-v2-returns-rfbs-get-RFBSReturnsAPI_ReturnsRfbsGetV2.md) - `POST /v2/returns/rfbs/get` - `RFBSReturnsAPI_ReturnsRfbsGetV2`
 - [退货申请列表](post-v2-returns-rfbs-list-RFBSReturnsAPI_ReturnsRfbsListV2.md) - `POST /v2/returns/rfbs/list` - `RFBSReturnsAPI_ReturnsRfbsListV2`
-- [确认收到待检查商品](post-v2-returns-rfbs-receive-return-RFBSReturnsAPI_ReturnsRfbsReceiveReturnV2.md) - `POST /v2/returns/rfbs/receive-return` - `RFBSReturnsAPI_ReturnsRfbsReceiveReturnV2`
-- [拒绝退货申请](post-v2-returns-rfbs-reject-RFBSReturnsAPI_ReturnsRfbsRejectV2.md) - `POST /v2/returns/rfbs/reject` - `RFBSReturnsAPI_ReturnsRfbsRejectV2`
-- [向买家退款](post-v2-returns-rfbs-return-money-RFBSReturnsAPI_ReturnsRfbsReturnMoneyV2.md) - `POST /v2/returns/rfbs/return-money` - `RFBSReturnsAPI_ReturnsRfbsReturnMoneyV2`
-- [批准退货申请](post-v2-returns-rfbs-verify-RFBSReturnsAPI_ReturnsRfbsVerifyV2.md) - `POST /v2/returns/rfbs/verify` - `RFBSReturnsAPI_ReturnsRfbsVerifyV2`
 
 ### review
 

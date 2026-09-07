@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/fbp/order/list`
 - Operation ID：`FbpAPI_FbpOrderList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpOrderList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpOrderList
 - 分组：`fbp`
 
 ## News 更新标记
@@ -18,9 +18,9 @@
 ## 页面标题结构
 
 - 获取交货列表
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,18 +45,6 @@
 
 ### 示例 0
 
-```text
-id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
 ```json
 {
   "count": 0,
@@ -64,7 +52,7 @@ true
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

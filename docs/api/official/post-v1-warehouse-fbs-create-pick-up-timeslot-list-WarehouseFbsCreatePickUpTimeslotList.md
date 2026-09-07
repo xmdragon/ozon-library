@@ -6,16 +6,23 @@
 
 - 请求：`POST /v1/warehouse/fbs/create/pick-up/timeslot/list`
 - Operation ID：`WarehouseFbsCreatePickUpTimeslotList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseFbsCreatePickUpTimeslotList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseFbsCreatePickUpTimeslotList
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/fbs/create/pick-up/timeslot/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
+| 2025-10-17 | `new_method` | /v1/warehouse/fbs/create/pick-up/timeslot/list 新增了与时间段相关的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 
 ## 页面标题结构
 
 - 获取用于创建pick-up发运仓库的时间段列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

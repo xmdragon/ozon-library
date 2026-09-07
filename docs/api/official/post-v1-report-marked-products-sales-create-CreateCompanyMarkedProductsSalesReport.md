@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/report/marked-products-sales/create`
 - Operation ID：`CreateCompanyMarkedProductsSalesReport`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CreateCompanyMarkedProductsSalesReport
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CreateCompanyMarkedProductsSalesReport
 - 分组：`report`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-30 | `graduated` | /v1/report/marked-products-sales/create 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
 
 ## 页面标题结构
 
 - 生成带有标记商品的销售报告
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,7 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ### 表格 3
 

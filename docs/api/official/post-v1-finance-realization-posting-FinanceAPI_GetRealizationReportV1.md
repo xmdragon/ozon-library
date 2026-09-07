@@ -6,23 +6,24 @@
 
 - 请求：`POST /v1/finance/realization/posting`
 - Operation ID：`FinanceAPI_GetRealizationReportV1`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_GetRealizationReportV1
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FinanceAPI_GetRealizationReportV1
 - 分组：`finance`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-28 | `updated` | /v1/finance/realization/posting 更新了方法400错误响应正文中message参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026728) |
 | 2025-12-25 | `removed_field` | /v1/finance/realization/posting 已从方法响应中移除参数 header.doc_amount 和 header.vat_amount。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | 2025-06-05 | `graduated` | /v1/finance/realization/posting 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202565) |
 
 ## 页面标题结构
 
 - 按订单细分的商品销售报告
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

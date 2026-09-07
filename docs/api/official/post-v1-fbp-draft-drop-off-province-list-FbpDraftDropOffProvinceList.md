@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/drop-off/province/list`
 - Operation ID：`FbpDraftDropOffProvinceList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDropOffProvinceList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDropOffProvinceList
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 获取省份列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,9 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `provinces` | Array of objects 省份列表。 |
-| `name` | string 省份名称。 |
-| `points_count` | integer <int32> 地图上接收点数量。 |
-| `province_uuid` | string 省份唯一标识符。 |
 
 ### 表格 3
 

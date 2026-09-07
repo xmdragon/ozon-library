@@ -6,18 +6,25 @@
 
 - 请求：`POST /v3/product/import`
 - Operation ID：`ProductAPI_ImportProductsV3`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ImportProductsV3
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsV3
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。
+已将方法请求中的items.offer_id参数标记为必填。
+更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-14 | `updated` | /v3/product/import 更新了该方法请求中参数items.promotions.type的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
+| 2026-05-12 | `updated` | /v3/product/import 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
+| 2026-05-05 | `updated` | /v3/product/import 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2025-12-30 | `updated` | /v3/product/import 更新了方法请求中的 items.vat 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
-| 2025-10-08 | `updated` | /v3/product/import 更新了该方法请求中参数 items.images 的描述。更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
+| 2025-10-08 | `updated` | /v3/product/import 更新了该方法请求中参数 items.images 的描述。
+更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
 | 2025-10-01 | `updated` | /v3/product/import 更新了该方法请求中参数 items.name 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025101) |
-| 2025-09-24 | `updated` | /v3/product/import 将方法请求中的 items.price 参数标记为必需。 更新了方法响应中的 result.task_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-09-24 | `updated` | /v3/product/import 将方法请求中的 items.price 参数标记为必需。
+更新了方法响应中的 result.task_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-05-22 | `added_field` | /v3/product/import 添加字段 items.promotions 在方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
 | 2025-05-06 | `removed_field` | /v3/product/import 已从方法请求中移除参数 items.image_group_id 和 items.premium_price。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | 2024-12-24 | `updated` | /v3/product/import 更新了方法请求中参数 items.vat 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20241224) |
@@ -29,10 +36,10 @@
 - 上传视频
 - 视频封面上传
 - 上传尺寸表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -56,7 +63,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 查询结果。 |
-| `task_id` | integer <int64> 装卸任务的编号。 |
 
 ### 表格 3
 
@@ -68,355 +74,62 @@
 
 ### 示例 0
 
-```text
-item_limit_exceeded
+```json
+{
+  "complex_id": 100001,
+  "id": 21841,
+  "values": [
+    {
+      "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY"
+    }
+  ]
+}
 ```
 
 ### 示例 1
 
-```text
-429
+```json
+{
+  "complex_id": 100001,
+  "id": 21837,
+  "values": [
+    {
+      "value": "videoName_1"
+    }
+  ]
+}
 ```
 
 ### 示例 2
 
-```text
-message
+```json
+{
+    "complex_id": 100001,
+    "id": 21837,
+    "values": [
+      {
+        "value": "videoName_1"
+      },
+      {
+        "value": "videoName_2"
+      }
+    ]
+  },
+  {
+    "complex_id": 100001,
+    "id": 21841,
+    "values": [
+      {
+        "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY"
+      },
+      {
+        "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    ]
+  }
 ```
 
 ### 示例 3
-
-```text
-Item-Retry-After
-```
-
-### 示例 4
-
-```text
-Item-Rate-Limit-Remaining
-```
-
-### 示例 5
-
-```text
-items
-```
-
-### 示例 6
-
-```text
-RUB
-```
-
-### 示例 7
-
-```text
-CNY
-```
-
-### 示例 8
-
-```text
-depth
-```
-
-### 示例 9
-
-```text
-width
-```
-
-### 示例 10
-
-```text
-height
-```
-
-### 示例 11
-
-```text
-dimension_unit
-```
-
-### 示例 12
-
-```text
-weight
-```
-
-### 示例 13
-
-```text
-weight_unit
-```
-
-### 示例 14
-
-```text
-items.statuses.moderate_status
-```
-
-### 示例 15
-
-```text
-items
-```
-
-### 示例 16
-
-```text
-9048
-```
-
-### 示例 17
-
-```text
-attributes
-```
-
-### 示例 18
-
-```text
-images
-```
-
-### 示例 19
-
-```text
-primary_image
-```
-
-### 示例 20
-
-```text
-primary_image
-```
-
-### 示例 21
-
-```text
-images
-```
-
-### 示例 22
-
-```text
-result.id = 23500
-```
-
-### 示例 23
-
-```text
-id = 23500
-```
-
-### 示例 24
-
-```text
-items.attributes.values.value
-```
-
-### 示例 25
-
-```text
-primary_image
-```
-
-### 示例 26
-
-```text
-images
-```
-
-### 示例 27
-
-```text
-primary_image
-```
-
-### 示例 28
-
-```text
-images
-```
-
-### 示例 29
-
-```text
-images360
-```
-
-### 示例 30
-
-```text
-color_image
-```
-
-### 示例 31
-
-```text
-images
-```
-
-### 示例 32
-
-```text
-images360
-```
-
-### 示例 33
-
-```text
-color_image
-```
-
-### 示例 34
-
-```text
-complex_attributes
-```
-
-### 示例 35
-
-```text
-attributes
-```
-
-### 示例 36
-
-```text
-complex_id = 100001
-```
-
-### 示例 37
-
-```text
-id = 21841
-```
-
-### 示例 38
-
-```text
-values
-```
-
-### 示例 39
-
-```json
-{
-  "complex_id": 100001,
-  "id": 21841,
-  "values": [
-    {
-      "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY"
-    }
-  ]
-}
-```
-
-### 示例 40
-
-```json
-{
-  "complex_id": 100001,
-  "id": 21841,
-  "values": [
-    {
-      "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY"
-    }
-  ]
-}
-```
-
-### 示例 41
-
-```text
-id = 21837
-```
-
-### 示例 42
-
-```text
-values
-```
-
-### 示例 43
-
-```json
-{
-  "complex_id": 100001,
-  "id": 21837,
-  "values": [
-    {
-      "value": "videoName_1"
-    }
-  ]
-}
-```
-
-### 示例 44
-
-```json
-{
-  "complex_id": 100001,
-  "id": 21837,
-  "values": [
-    {
-      "value": "videoName_1"
-    }
-  ]
-}
-```
-
-### 示例 45
-
-```text
-values
-```
-
-### 示例 46
-
-```json
-{ "complex_id": 100001, "id": 21837, "values": [ { "value": "videoName_1" }, { "value": "videoName_2" } ] }, { "complex_id": 100001, "id": 21841, "values": [ { "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY" }, { "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" } ] }
-```
-
-### 示例 47
-
-```json
-{ "complex_id": 100001, "id": 21837, "values": [ { "value": "videoName_1" }, { "value": "videoName_2" } ] }, { "complex_id": 100001, "id": 21841, "values": [ { "value": "https://www.youtube.com/watch?v=ZwM0iBn03dY" }, { "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" } ] }
-```
-
-### 示例 48
-
-```text
-complex_attributes
-```
-
-### 示例 49
-
-```text
-"complex_attributes": [ { "attributes": [ { "id": 21845, "complex_id": 100002, "values": [ { "dictionary_value_id": 0, "value": "https://v.ozone.ru/vod/video-10/01GFATWQVCDE7G5B721421P1231Q7/asset_1.mp4" } ] } ] } ]
-```
-
-### 示例 50
-
-```text
-"complex_attributes": [ { "attributes": [ { "id": 21845, "complex_id": 100002, "values": [ { "dictionary_value_id": 0, "value": "https://v.ozone.ru/vod/video-10/01GFATWQVCDE7G5B721421P1231Q7/asset_1.mp4" } ] } ] } ]
-```
-
-### 示例 51
-
-```text
-attributes
-```
-
-### 示例 52
-
-```text
-id = 13164
-```
-
-### 示例 53
 
 ```json
 {
@@ -483,7 +196,6 @@ id = 13164
       "dimension_unit": "mm",
       "height": 250,
       "images": [],
-      "images360": [],
       "name": "一套X3NFC的保护膜。深色棉质",
       "offer_id": "143210608",
       "old_price": "1100",
@@ -506,7 +218,7 @@ id = 13164
 }
 ```
 
-### 示例 54
+### 示例 4
 
 ```json
 {
