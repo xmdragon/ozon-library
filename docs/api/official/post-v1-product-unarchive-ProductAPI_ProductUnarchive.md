@@ -13,8 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-07-16 | `updated` | /v1/product/unarchive 已更新方法描述。
-更新了方法的错误体。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026716) |
+| 2026-07-16 | `updated` | /v1/product/unarchive 已更新方法描述。<br>更新了方法的错误体。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026716) |
 | 2026-07-10 | `updated` | /v1/product/unarchive 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-05 | `updated` | /v1/product/unarchive 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2025-12-23 | `updated` | /v1/product/unarchive 更新了方法请求中的 product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251223) |

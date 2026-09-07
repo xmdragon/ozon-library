@@ -8709,6 +8709,14 @@
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202572"
         },
         {
+          "date": "2025-06-23",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/posting/fbs/get 新了方法响应中result.shipment_date参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025623"
+        },
+        {
           "date": "2025-06-05",
           "labels": [
             "added_field"
@@ -9669,7 +9677,17 @@
           "text": "items Array of objects 交货申请中的商品列表。 total_count integer <int32> 申请中的商品数量。 has_next boolean 响应中是否未返回全部商品： true——请使用不同的 last_id 值再次请求，以获取其余数据； false——响应已包含全部商品数据。 last_id string 当前页面最后一个值的标识符。"
         }
       ],
-      "title": "交货或交货申请的商品组成"
+      "title": "交货或交货申请的商品组成",
+      "news_updates": [
+        {
+          "date": "2026-01-27",
+          "labels": [
+            "new_method"
+          ],
+          "text": "/v1/supply-order/bundle 增加了获取交付物成分的方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026127"
+        }
+      ]
     },
     {
       "examples": [
@@ -24106,10 +24124,10 @@
     "deprecated_field": 11,
     "deprecated_method": 37,
     "graduated": 59,
-    "new_method": 73,
+    "new_method": 74,
     "removed_field": 17,
     "removed_method": 40,
-    "updated": 181
+    "updated": 182
   },
   "news_removed_or_missing_methods": [
     {

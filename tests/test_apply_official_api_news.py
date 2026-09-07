@@ -134,6 +134,29 @@ class ApplyOfficialApiNewsTest(unittest.TestCase):
         self.assertIn("deprecated_field", summaries["/v2/returns/rfbs/list"]["labels"])
         self.assertIn("deprecated_field", summaries["/v2/returns/rfbs/get"]["labels"])
 
+    def test_structured_rows_classify_captured_method_wording(self):
+        entries = [
+            {
+                "date": "2026-01-27",
+                "rows": [{
+                    "methods": ["/v1/supply-order/bundle"],
+                    "description": "增加了获取交付物成分的方法。",
+                }],
+            },
+            {
+                "date": "2025-06-23",
+                "rows": [{
+                    "methods": ["/v3/posting/fbs/get"],
+                    "description": "新了方法响应中result.shipment_date参数的描述。",
+                }],
+            },
+        ]
+
+        summaries = [summarize_news_entry(entry)[0] for entry in entries]
+
+        self.assertEqual(summaries[0]["labels"], ["new_method"])
+        self.assertEqual(summaries[1]["labels"], ["updated"])
+
 
 if __name__ == "__main__":
     unittest.main()

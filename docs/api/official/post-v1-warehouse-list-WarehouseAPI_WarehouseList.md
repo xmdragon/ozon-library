@@ -17,8 +17,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。
-在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。<br>在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 | 2026-03-24 | `deprecated_method` | /v1/warehouse/list 该方式已过时，并将于2026年4月7日关闭。请切换至 /v2/warehouse/list 新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
 | 2026-02-16 | `deprecated_method` | /v1/warehouse/list 该方式已过时，并将于2026年3月20日关闭。请切换至 /v2/warehouse/list 新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
 | 2025-12-18 | `added_field` | /v1/warehouse/list 在方法请求中添加了参数 limit 和 offset。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |

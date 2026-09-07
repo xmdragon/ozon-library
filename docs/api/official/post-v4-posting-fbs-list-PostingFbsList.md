@@ -14,8 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2026-08-04 | `updated` | /v4/posting/fbs/list 更新了方法响应中postings.products.is_marketplace_buyout参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202684) |
-| 2026-07-22 | `added_field` | /v4/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。
-在方法响应中新增了postings.integration_type_flow和postings.sorting_center参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
+| 2026-07-22 | `added_field` | /v4/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了postings.integration_type_flow和postings.sorting_center参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
 | 2026-04-30 | `new_method` | /v4/posting/fbs/list 新增了用于获取FBS货件列表的方法新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 
 ## 页面标题结构

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SupplyOrderBundle
 - 分组：`supply-order`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-01-27 | `new_method` | /v1/supply-order/bundle 增加了获取交付物成分的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026127) |
+
 ## 页面标题结构
 
 - 交货或交货申请的商品组成

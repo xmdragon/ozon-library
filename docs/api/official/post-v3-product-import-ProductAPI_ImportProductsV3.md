@@ -13,18 +13,14 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。
-已将方法请求中的items.offer_id参数标记为必填。
-更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。<br>已将方法请求中的items.offer_id参数标记为必填。<br>更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-14 | `updated` | /v3/product/import 更新了该方法请求中参数items.promotions.type的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
 | 2026-05-12 | `updated` | /v3/product/import 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2026-05-05 | `updated` | /v3/product/import 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2025-12-30 | `updated` | /v3/product/import 更新了方法请求中的 items.vat 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
-| 2025-10-08 | `updated` | /v3/product/import 更新了该方法请求中参数 items.images 的描述。
-更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
+| 2025-10-08 | `updated` | /v3/product/import 更新了该方法请求中参数 items.images 的描述。<br>更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
 | 2025-10-01 | `updated` | /v3/product/import 更新了该方法请求中参数 items.name 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025101) |
-| 2025-09-24 | `updated` | /v3/product/import 将方法请求中的 items.price 参数标记为必需。
-更新了方法响应中的 result.task_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-09-24 | `updated` | /v3/product/import 将方法请求中的 items.price 参数标记为必需。<br>更新了方法响应中的 result.task_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-05-22 | `added_field` | /v3/product/import 添加字段 items.promotions 在方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
 | 2025-05-06 | `removed_field` | /v3/product/import 已从方法请求中移除参数 items.image_group_id 和 items.premium_price。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | 2024-12-24 | `updated` | /v3/product/import 更新了方法请求中参数 items.vat 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20241224) |

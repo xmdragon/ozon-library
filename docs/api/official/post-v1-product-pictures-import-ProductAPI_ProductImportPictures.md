@@ -18,13 +18,10 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2026-09-03 | `deprecated_method` | /v1/product/pictures/import 该方法即将弃用，将于2026年10月1日停用。请切换到/v2/product/pictures/import。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202693) |
-| 2026-07-10 | `removed_field` | /v1/product/pictures/import 已从方法请求中删除了images360参数。
-已从方法响应中删除了result.pictures.is_360参数。
-更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| 2026-07-10 | `removed_field` | /v1/product/pictures/import 已从方法请求中删除了images360参数。<br>已从方法响应中删除了result.pictures.is_360参数。<br>更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-12 | `updated` | /v1/product/pictures/import 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2026-05-05 | `updated` | /v1/product/pictures/import 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
-| 2025-10-08 | `updated` | /v1/product/pictures/import 更新了该方法请求中参数 images 的描述。
-更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
+| 2025-10-08 | `updated` | /v1/product/pictures/import 更新了该方法请求中参数 images 的描述。<br>更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025108) |
 
 ## 页面标题结构
 

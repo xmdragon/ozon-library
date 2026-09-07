@@ -13,8 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-02-03 | `updated` | /v1/report/list 更新了方法请求中的 report_type 参数描述。
-已更新方法响应中 result.reports.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202623) |
+| 2026-02-03 | `updated` | /v1/report/list 更新了方法请求中的 report_type 参数描述。<br>已更新方法响应中 result.reports.report_type 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202623) |
 | 2026-01-16 | `updated` | /v1/report/list 已更新方法请求中 report_type 参数以及方法响应中 result.reports.report_type 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026116) |
 | 2025-11-18 | `added_field` | /v1/report/list 在方法的响应中新增参数result.reports.expires_at。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
 | 2025-06-20 | `updated` | /v1/report/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |

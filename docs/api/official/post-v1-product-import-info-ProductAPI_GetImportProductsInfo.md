@@ -14,8 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-05-06 | `removed_field` | /v1/product/import/info 已从方法响应中移除参数 result.items.errors.optional_description_elements。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
-| 2025-03-19 | `updated` | /v1/product/import/info 更新了方法描述。
-在方法响应的 result.items.status 参数中，新增可能的值 skipped。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025319) |
+| 2025-03-19 | `updated` | /v1/product/import/info 更新了方法描述。<br>在方法响应的 result.items.status 参数中，新增可能的值 skipped。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025319) |
 
 ## 页面标题结构
 

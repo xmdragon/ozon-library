@@ -14,8 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-12-26 | `deprecated_field` | /v2/returns/rfbs/list 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251226) |
-| 2025-09-24 | `updated` | /v2/returns/rfbs/list 更新了该方法请求中参数 last_id 的描述。
-已更新回答示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-09-24 | `updated` | /v2/returns/rfbs/list 更新了该方法请求中参数 last_id 的描述。<br>已更新回答示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-06-20 | `updated` | /v2/returns/rfbs/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 
 ## 页面标题结构

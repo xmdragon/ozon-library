@@ -14,8 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2026-07-08 | `graduated` | /v1/question/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
-| 2026-05-19 | `added_field` | /v1/question/list 在方法请求中新增了sort_dir和limit参数。
-在方法响应中新增了has_next参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+| 2026-05-19 | `added_field` | /v1/question/list 在方法请求中新增了sort_dir和limit参数。<br>在方法响应中新增了has_next参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 
 ## 页面标题结构
 

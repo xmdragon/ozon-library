@@ -7,7 +7,7 @@
 - News 条目数：163
 - 当前方法页已标记废弃/移除：10
 - News 中提到但当前 operation 索引不存在的废弃/移除方法：48
-- 标签统计：`added_field`: 66, `deprecated_field`: 11, `deprecated_method`: 37, `graduated`: 59, `new_method`: 73, `removed_field`: 17, `removed_method`: 40, `updated`: 181
+- 标签统计：`added_field`: 66, `deprecated_field`: 11, `deprecated_method`: 37, `graduated`: 59, `new_method`: 74, `removed_field`: 17, `removed_method`: 40, `updated`: 182
 
 ## 已在当前方法页标记的方法
 
@@ -92,10 +92,7 @@
 | `/v1/carriage/pass/update` | 2026-07-07 | `added_field` | /v1/carriage/pass/update 在方法请求中添加了参数arrival_passes.arrival_time、arrival_passes.tracking_number和arrival_passes.tracking_url。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202677) |
 | `/v1/delivery-method/list` | 2024-12-26 | `added_field` | /v1/delivery-method/list 添加字段 result.sla_cut_in 在方法响应。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20241226) |
 | `/v1/description-category/attribute` | 2025-03-19 | `added_field` | /v1/description-category/attribute 在方法响应中添加了参数 result.complex_is_collection。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025319) |
-| `/v1/finance/accrual/by-day` | 2026-07-30 | `added_field` | /v1/finance/accrual/by-day 更新了方法请求中date和last_id参数的描述。
-在方法的响应中：
-新增了accruals.container_fees参数；
-更新了accruals.accrued_category和last_id参数的描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026730) |
+| `/v1/finance/accrual/by-day` | 2026-07-30 | `added_field` | /v1/finance/accrual/by-day 更新了方法请求中date和last_id参数的描述。<br>在方法的响应中：<br>新增了accruals.container_fees参数；<br>更新了accruals.accrued_category和last_id参数的描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026730) |
 | `/v1/finance/realization/posting` | 2025-12-25 | `removed_field` | /v1/finance/realization/posting 已从方法响应中移除参数 header.doc_amount 和 header.vat_amount。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | `/v1/posting/fbp/list` | 2026-06-30 | `added_field` | /v1/posting/fbp/list 已在方法响应中添加参数postings.financial_data.products.posting_commission和postings.financial_data.products.return_commission。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026630) |
 | `/v1/pricing-strategy/product/info` | 2025-06-19 | `deprecated_field` | /v1/pricing-strategy/product/info 并将参数 result.strategy_competitor_id 标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025619) |
@@ -106,28 +103,20 @@
 | `/v1/product/import/prices` | 2025-01-15 | `added_field` | /v1/product/import/prices 添加字段 prices.min_price_for_auto_actions_enabled 在方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025115) |
 | `/v1/product/import/prices` | 2024-12-24 | `added_field` | /v1/product/import/prices 在方法请求中添加了参数 prices.vat。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20241224) |
 | `/v1/product/info/stocks-by-warehouse/fbs` | 2025-10-23 | `added_field` | /v1/product/info/stocks-by-warehouse/fbs 在请求中添加了参数 offer_id，并在方法响应中添加了参数 results.offer_id。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
-| `/v1/product/pictures/import` | 2026-07-10 | `removed_field` | /v1/product/pictures/import 已从方法请求中删除了images360参数。
-已从方法响应中删除了result.pictures.is_360参数。
-更新了方法描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
-| `/v1/product/prices/details` | 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：
-新增了prices.price_indexes参数；
-将prices.discount_percent参数标记为已弃用；
-更新了prices.customer_price参数的说明。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+| `/v1/product/pictures/import` | 2026-07-10 | `removed_field` | /v1/product/pictures/import 已从方法请求中删除了images360参数。<br>已从方法响应中删除了result.pictures.is_360参数。<br>更新了方法描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| `/v1/product/prices/details` | 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：<br>新增了prices.price_indexes参数；<br>将prices.discount_percent参数标记为已弃用；<br>更新了prices.customer_price参数的说明。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | `/v1/question/answer/list` | 2026-05-19 | `added_field` | /v1/question/answer/list 在方法响应中新增了answers.status_publication参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
-| `/v1/question/list` | 2026-05-19 | `added_field` | /v1/question/list 在方法请求中新增了sort_dir和limit参数。
-在方法响应中新增了has_next参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+| `/v1/question/list` | 2026-05-19 | `added_field` | /v1/question/list 在方法请求中新增了sort_dir和limit参数。<br>在方法响应中新增了has_next参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | `/v1/report/info` | 2026-07-28 | `added_field` | /v1/report/info 在方法响应中添加了result.additional_data参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026728) |
 | `/v1/report/info` | 2025-11-18 | `added_field` | /v1/report/info 在方法的响应中新增参数result.expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
 | `/v1/report/list` | 2025-11-18 | `added_field` | /v1/report/list 在方法的响应中新增参数result.reports.expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
 | `/v1/report/postings/create` | 2025-09-29 | `added_field` | /v1/report/postings/create 已添加以下参数filter.warehouse_id、filter.delivery_method_id、filter.is_express、with.additional_data、with.analytics_data、with.customer_data 和 with.jewelry_codes 到方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
 | `/v1/returns/list` | 2025-12-12 | `removed_field` | /v1/returns/list 移除了方法请求中参数 filter.visual_status_name 的值 ReturnCompensated。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251212) |
-| `/v1/returns/list` | 2025-11-20 | `added_field` | /v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。
-在方法的响应中添加了参数 returns.compensation_status。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
+| `/v1/returns/list` | 2025-11-20 | `added_field` | /v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。<br>在方法的响应中添加了参数 returns.compensation_status。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
 | `/v1/roles` | 2026-03-04 | `added_field` | /v1/roles 在方法的响应中新增了参数 expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202634) |
 | `/v1/warehouse/fbs/create` | 2025-10-17 | `added_field` | /v1/warehouse/fbs/create 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 | `/v1/warehouse/fbs/first-mile/update` | 2025-10-17 | `added_field` | /v1/warehouse/fbs/first-mile/update 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
-| `/v1/warehouse/list` | 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。
-在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| `/v1/warehouse/list` | 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。<br>在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 | `/v1/warehouse/list` | 2025-12-18 | `added_field` | /v1/warehouse/list 在方法请求中添加了参数 limit 和 offset。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | `/v2/delivery-method/list` | 2026-05-22 | `added_field` | /v2/delivery-method/list 在方法响应中新增了参数delivery_methods.tpl_dropoff_point。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026522) |
 | `/v2/finance/realization` | 2025-12-25 | `removed_field` | /v2/finance/realization 已从方法响应中移除参数 result.header.doc_amount 和 result.header.vat_amount。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
@@ -137,46 +126,32 @@
 | `/v2/product/pictures/info` | 2025-06-04 | `added_field` | /v2/product/pictures/info 在方法的响应中新增了参数items.errors。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202564) |
 | `/v2/returns/rfbs/get` | 2025-12-26 | `deprecated_field` | /v2/returns/rfbs/get 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251226) |
 | `/v2/returns/rfbs/list` | 2025-12-26 | `deprecated_field` | /v2/returns/rfbs/list 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251226) |
-| `/v2/warehouse/list` | 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。
-在方法的响应中添加了参数 cursor。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+| `/v2/warehouse/list` | 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。<br>在方法的响应中添加了参数 cursor。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | `/v2/warehouse/list` | 2025-12-16 | `added_field` | /v2/warehouse/list 在方法的响应中添加了参数 has_next 和 cursor。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
 | `/v3/posting/fbs/get` | 2026-04-17 | `added_field` | /v3/posting/fbs/get 在方法响应中新增参数result.tariffication_steps。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
-| `/v3/posting/fbs/get` | 2025-11-27 | `added_field` | /v3/posting/fbs/get 在方法的响应中：
-更新了参数 result.analytics_data.payment_type_group_name 的描述；
-新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| `/v3/posting/fbs/get` | 2025-11-27 | `added_field` | /v3/posting/fbs/get 在方法的响应中：<br>更新了参数 result.analytics_data.payment_type_group_name 的描述；<br>新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
 | `/v3/posting/fbs/get` | 2025-10-21 | `added_field` | /v3/posting/fbs/get 在方法的响应中添加了参数 result.shipment_date_without_delay。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
-| `/v3/posting/fbs/get` | 2025-09-24 | `added_field` | /v3/posting/fbs/get 在方法响应中：
-• 添加了参数 result.financial_data.products.customer_price；
-• 更新了 result.requirements.products_requiring_gtd、result.requirements.products_requiring_mandatory_mark、result.requirements.products_requiring_jw_uin、result.requirements.products_requiring_rnpt、result.status、result.substatus、result.previous_substatus、result.financial_data.products.price、result.financial_data.products.old_price、result.customer.phone、result.addressee.phone 和 result.products.is_marketplace_buyout 参数描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| `/v3/posting/fbs/get` | 2025-09-24 | `added_field` | /v3/posting/fbs/get 在方法响应中：<br>• 添加了参数 result.financial_data.products.customer_price；<br>• 更新了 result.requirements.products_requiring_gtd、result.requirements.products_requiring_mandatory_mark、result.requirements.products_requiring_jw_uin、result.requirements.products_requiring_rnpt、result.status、result.substatus、result.previous_substatus、result.financial_data.products.price、result.financial_data.products.old_price、result.customer.phone、result.addressee.phone 和 result.products.is_marketplace_buyout 参数描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | `/v3/posting/fbs/get` | 2025-07-02 | `added_field` | /v3/posting/fbs/get 在方法的响应中新增了参数result.requirements.products_requiring_change_country。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202572) |
 | `/v3/posting/fbs/get` | 2025-06-05 | `added_field` | /v3/posting/fbs/get 在方法请求中添加了参数 with.legal_info 参数的 和 result.legal_info 到方法的响应中。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202565) |
 | `/v3/posting/fbs/get` | 2025-05-06 | `removed_field` | /v3/posting/fbs/get 已从方法响应中移除参数 result.financial_data.products.client_price，result.financial_data.products.picking 和 result.products.mandatory_mark。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | `/v3/posting/fbs/get` | 2025-02-27 | `added_field` | /v3/posting/fbs/get 在方法响应中添加了参数 result.previous_substatus。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025227) |
-| `/v3/posting/fbs/list` | 2026-07-22 | `added_field` | /v3/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。
-在方法响应中新增了result.postings.integration_type_flow和result.postings.sorting_center参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
+| `/v3/posting/fbs/list` | 2026-07-22 | `added_field` | /v3/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了result.postings.integration_type_flow和result.postings.sorting_center参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
 | `/v3/posting/fbs/list` | 2026-04-30 | `deprecated_method`, `added_field` | /v3/posting/fbs/list 在方式的响应中添加了参数result.postings.is_presortable、result.postings.destination_place_id、result.postings.destination_place_name和result.postings.customer.customer_email。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 | `/v3/posting/fbs/list` | 2026-04-17 | `added_field` | /v3/posting/fbs/list 在各方法响应中新增参数result.postings.tariffication_steps。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
-| `/v3/posting/fbs/list` | 2025-11-27 | `added_field` | /v3/posting/fbs/list 在各方法的响应中：
-更新了参数 result.analytics_data.payment_type_group_name 的描述；
-新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| `/v3/posting/fbs/list` | 2025-11-27 | `added_field` | /v3/posting/fbs/list 在各方法的响应中：<br>更新了参数 result.analytics_data.payment_type_group_name 的描述；<br>新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
 | `/v3/posting/fbs/list` | 2025-10-21 | `added_field` | /v3/posting/fbs/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
-| `/v3/posting/fbs/list` | 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中：
-• 添加了参数 result.postings.financial_data.products.customer_price；
-• 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| `/v3/posting/fbs/list` | 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中：<br>• 添加了参数 result.postings.financial_data.products.customer_price；<br>• 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | `/v3/posting/fbs/list` | 2025-07-02 | `added_field` | /v3/posting/fbs/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202572) |
 | `/v3/posting/fbs/list` | 2025-06-05 | `added_field` | /v3/posting/fbs/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202565) |
 | `/v3/posting/fbs/list` | 2025-05-06 | `removed_field` | /v3/posting/fbs/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | `/v3/posting/fbs/unfulfilled/list` | 2026-04-17 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法响应中新增参数result.postings.tariffication_steps。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
-| `/v3/posting/fbs/unfulfilled/list` | 2025-11-27 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法的响应中：
-更新了参数 result.analytics_data.payment_type_group_name 的描述；
-新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| `/v3/posting/fbs/unfulfilled/list` | 2025-11-27 | `added_field` | /v3/posting/fbs/unfulfilled/list 在各方法的响应中：<br>更新了参数 result.analytics_data.payment_type_group_name 的描述；<br>新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
 | `/v3/posting/fbs/unfulfilled/list` | 2025-10-21 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
 | `/v3/posting/fbs/unfulfilled/list` | 2025-07-02 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202572) |
 | `/v3/posting/fbs/unfulfilled/list` | 2025-06-05 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202565) |
 | `/v3/posting/fbs/unfulfilled/list` | 2025-05-06 | `removed_field` | /v3/posting/fbs/unfulfilled/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
-| `/v3/product/import` | 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。
-已将方法请求中的items.offer_id参数标记为必填。
-更新了方法描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| `/v3/product/import` | 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。<br>已将方法请求中的items.offer_id参数标记为必填。<br>更新了方法描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | `/v3/product/import` | 2025-05-22 | `added_field` | /v3/product/import 添加字段 items.promotions 在方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
 | `/v3/product/import` | 2025-05-06 | `removed_field` | /v3/product/import 已从方法请求中移除参数 items.image_group_id 和 items.premium_price。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | `/v3/product/info/list` | 2026-07-10 | `removed_field` | /v3/product/info/list 已从方法响应中删除了items.images360参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
@@ -184,10 +159,8 @@
 | `/v3/product/info/list` | 2025-10-06 | `deprecated_field`, `added_field` | /v3/product/info/list 参数 items.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025106) |
 | `/v3/product/info/list` | 2025-08-14 | `added_field` | /v3/product/info/list 在方法的响应中新增了参数 items.promotions、items.promotions.is_enabled、items.promotions.type 和 items.sku。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025814) |
 | `/v3/product/info/list` | 2025-08-05 | `deprecated_field` | /v3/product/info/list 已将参数 items.is_prepayment_allowed 标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202585) |
-| `/v3/product/list` | 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。
-在方法响应中新增了参数result.items.sku。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202679) |
-| `/v4/posting/fbs/list` | 2026-07-22 | `added_field` | /v4/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。
-在方法响应中新增了postings.integration_type_flow和postings.sorting_center参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
+| `/v3/product/list` | 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。<br>在方法响应中新增了参数result.items.sku。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202679) |
+| `/v4/posting/fbs/list` | 2026-07-22 | `added_field` | /v4/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了postings.integration_type_flow和postings.sorting_center参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
 | `/v4/product/info/limit` | 2026-06-09 | `added_field` | /v4/product/info/limit 在方法的响应中添加了参数 operation_limits和total.quota_by_category的说明。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202669) |
 | `/v4/product/info/stocks` | 2025-12-18 | `deprecated_field` | /v4/product/info/stocks 已将方法响应中的参数 items.stocks.warehouse_ids 标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | `/v4/product/info/stocks` | 2025-06-11 | `added_field` | /v4/product/info/stocks 在方法的响应中新增了参数items.stocks.warehouse_ids。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025611) |

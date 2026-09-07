@@ -14,8 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-12-12 | `removed_field` | /v1/returns/list 移除了方法请求中参数 filter.visual_status_name 的值 ReturnCompensated。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251212) |
-| 2025-11-20 | `added_field` | /v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。
-在方法的响应中添加了参数 returns.compensation_status。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
+| 2025-11-20 | `added_field` | /v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。<br>在方法的响应中添加了参数 returns.compensation_status。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
 | 2025-01-14 | `updated` | /v1/returns/list 更新了方法请求中 filter 和 filter.posting_numbers 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025114) |
 
 ## 页面标题结构

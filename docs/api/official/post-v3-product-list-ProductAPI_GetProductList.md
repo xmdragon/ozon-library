@@ -13,8 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。
-在方法响应中新增了参数result.items.sku。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202679) |
+| 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。<br>在方法响应中新增了参数result.items.sku。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202679) |
 | 2026-02-10 | `updated` | /v3/product/list 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026210) |
 | 2025-12-25 | `updated` | /v3/product/list 更新了方法响应中的 result.items.quants 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | 2025-02-21 | `new_method` | /v3/product/list 新增获取所有商品列表的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025221) |

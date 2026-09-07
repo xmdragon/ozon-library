@@ -13,10 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-07-30 | `added_field` | /v1/finance/accrual/by-day 更新了方法请求中date和last_id参数的描述。
-在方法的响应中：
-新增了accruals.container_fees参数；
-更新了accruals.accrued_category和last_id参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026730) |
+| 2026-07-30 | `added_field` | /v1/finance/accrual/by-day 更新了方法请求中date和last_id参数的描述。<br>在方法的响应中：<br>新增了accruals.container_fees参数；<br>更新了accruals.accrued_category和last_id参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026730) |
 | 2026-07-21 | `updated` | /v1/finance/accrual/by-day 更新了方法响应中accruals.posting.products.delivery.services参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026721) |
 | 2026-06-09 | `updated` | /v1/finance/accrual/by-day 在方法响应中，将参数名称accruals.type_id改为accruals.accrual_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202669) |
 

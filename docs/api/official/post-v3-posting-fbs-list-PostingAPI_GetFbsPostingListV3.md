@@ -17,22 +17,17 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-07-22 | `added_field` | /v3/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。
-在方法响应中新增了result.postings.integration_type_flow和result.postings.sorting_center参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
+| 2026-07-22 | `added_field` | /v3/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了result.postings.integration_type_flow和result.postings.sorting_center参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
 | 2026-07-10 | `deprecated_method` | /v3/posting/fbs/list 该方法已弃用，并将于2026年8月31日停用。请切换到 /v4/posting/fbs/list。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-05 | `updated` | /v3/posting/fbs/list 更新了各方法响应中参数 result.postings.analytics_data.client_delivery_date_begin和 result.postings.analytics_data.client_delivery_date_end的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2026-04-30 | `deprecated_method`, `added_field` | /v3/posting/fbs/list 在方式的响应中添加了参数result.postings.is_presortable、result.postings.destination_place_id、result.postings.destination_place_name和result.postings.customer.customer_email。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 | 2026-04-17 | `added_field` | /v3/posting/fbs/list 在各方法响应中新增参数result.postings.tariffication_steps。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
 | 2026-03-17 | `updated` | /v3/posting/fbs/list 更新了方法响应中 result.postings.analytics_data.client_delivery_date_begin 和 result.postings.analytics_data.client_delivery_date_end 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
-| 2025-11-27 | `added_field` | /v3/posting/fbs/list 在各方法的响应中：
-更新了参数 result.analytics_data.payment_type_group_name 的描述；
-新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
+| 2025-11-27 | `added_field` | /v3/posting/fbs/list 在各方法的响应中：<br>更新了参数 result.analytics_data.payment_type_group_name 的描述；<br>新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
 | 2025-10-23 | `updated` | /v3/posting/fbs/list 更新了方法响应中的 result.postings.substatus 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
 | 2025-10-21 | `added_field` | /v3/posting/fbs/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
 | 2025-10-16 | `updated` | /v3/posting/fbs/list 更新了方法响应中的 result.postings.financial_data.products.product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
-| 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中：
-• 添加了参数 result.postings.financial_data.products.customer_price；
-• 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中：<br>• 添加了参数 result.postings.financial_data.products.customer_price；<br>• 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-07-22 | `updated` | /v3/posting/fbs/list 更新了方法响应中 result.postings.requirements.products_requiring_change_country 和 result.postings.financial_data.products.actions 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025722) |
 | 2025-07-02 | `added_field` | /v3/posting/fbs/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202572) |
 | 2025-06-20 | `updated` | /v3/posting/fbs/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |

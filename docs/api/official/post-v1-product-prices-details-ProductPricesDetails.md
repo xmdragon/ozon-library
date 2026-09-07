@@ -13,10 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：
-新增了prices.price_indexes参数；
-将prices.discount_percent参数标记为已弃用；
-更新了prices.customer_price参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+| 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：<br>新增了prices.price_indexes参数；<br>将prices.discount_percent参数标记为已弃用；<br>更新了prices.customer_price参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | 2026-03-04 | `graduated` | /v1/product/prices/details 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
 
 ## 页面标题结构

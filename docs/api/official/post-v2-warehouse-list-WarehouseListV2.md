@@ -14,8 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2026-02-02 | `graduated` | /v2/warehouse/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
-| 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。
-在方法的响应中添加了参数 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
+| 2025-12-18 | `added_field` | /v2/warehouse/list 在方法请求中添加了参数 limit 和 cursor。<br>在方法的响应中添加了参数 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | 2025-12-16 | `added_field` | /v2/warehouse/list 在方法的响应中添加了参数 has_next 和 cursor。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
 
 ## 页面标题结构

@@ -61,7 +61,7 @@ def _classify_segment(segment: str) -> List[str]:
         or re.search(r"相关方法已从.{0,12}(文件|文档)中删除", text)
     )
 
-    if "新增了用于" in text or re.search(r"(新增|添加).{0,12}(beta)?方法(版本)?", text):
+    if "新增了用于" in text or re.search(r"(新增|添加|增加).{0,12}(beta)?方法(版本)?", text):
         labels.append("new_method")
     if method_deprecated and not (field_context and not re.search(r"(该方法|该方式|这些方式)", text)):
         labels.append("deprecated_method")
@@ -81,7 +81,7 @@ def _classify_segment(segment: str) -> List[str]:
         labels.append("removed_field")
     if "从Beta版迁移至正式版" in text or "从测试版移至正式版" in text:
         labels.append("graduated")
-    if not labels and re.search(r"(更新|已更新|变更|改为|更改)", text):
+    if not labels and re.search(r"(更新|已更新|变更|改为|更改|新了)", text):
         labels.append("updated")
 
     unique: List[str] = []
@@ -295,7 +295,7 @@ def _missing_rows(items: List[NewsUpdate]) -> List[str]:
     for item in items:
         replacements = ", ".join(f"`{path}`" for path in item.get("replacement_paths", [])) or "无"
         labels = ", ".join(f"`{label}`" for label in item.get("labels", [])) or "无"
-        summary = str(item.get("text") or "").replace("|", "\\|")
+        summary = _escape_markdown_table_cell(item.get("text", ""))
         rows.append(f"| `{item.get('path')}` | {labels} | {item.get('date') or '无'} | {replacements} | {summary} |")
     return rows
 
@@ -309,11 +309,17 @@ def _field_rows(operations: List[Operation]) -> List[str]:
             if not labels & field_labels:
                 continue
             label_text = ", ".join(f"`{label}`" for label in update.get("labels", []))
-            summary = str(update.get("text") or "").replace("|", "\\|")
+            summary = _escape_markdown_table_cell(update.get("text", ""))
             source_url = str(update.get("sourceUrl") or "")
             news_link = f"[来源]({source_url})" if source_url else "无"
             rows.append(f"| `{operation.get('path')}` | {update.get('date') or '无'} | {label_text} | {summary} | {news_link} |")
     return rows
+
+
+def _escape_markdown_table_cell(value: Any) -> str:
+    """Keep derived Markdown table rows valid without changing captured text."""
+
+    return str(value or "").strip().replace("|", "\\|").replace("\r\n", "<br>").replace("\n", "<br>").replace("\r", "<br>")
 
 
 def render_news_summary(news: Dict[str, Any], result: Dict[str, Any]) -> str:
