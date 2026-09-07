@@ -6,16 +6,22 @@
 
 - 请求：`POST /v4/product/info/attributes`
 - Operation ID：`ProductAPI_GetProductAttributesV4`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductAttributesV4
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductAttributesV4
 - 分组：`product`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-10 | `updated` | /v4/product/info/attributes 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026210) |
 
 ## 页面标题结构
 
 - 获取商品特征描述
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -43,28 +49,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 查询结果。 |
-| `attributes` | Array of objects 商品特性的数组。 |
-| `attributes_with_defaults` | Array of integers <int64> 具有默认值的特征标识符列表。 |
-| `barcode` | string 条形码。 |
-| `barcodes` | array of strings 商品的所有条形码。 |
-| `description_category_id` | integer <int64> 类目标识符。 请将其与以下方法结合使用：/v1/description-category/attribute 和 /v1/description-category/attribute/values。 |
-| `color_image` | string 市场营销色彩。 |
-| `complex_attributes` | Array of objects 嵌套特征列表。 |
-| `depth` | integer <int64> 深度。 |
-| `dimension_unit` | string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 |
-| `height` | integer <int64> 包装高度。 |
-| `id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
-| `images` | array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 |
-| `model_info` | object 型号信息。 |
-| `name` | string <= 500 characters 商品名称。 |
-| `offer_id` | string 卖家系统中的商品标识符 — 货号。 |
-| `pdf_list` | Array of objects PDF文件列表。 |
-| `primary_image` | string 商品主图链接。 |
-| `sku` | string Ozon 系统中的商品标识符（SKU）。 |
-| `type_id` | integer <int64> 商品类型的标识符。 |
-| `weight` | integer <int64> 商品在包装中的重量。 |
-| `weight_unit` | string 重量测量单位。 |
-| `width` | integer <int64> 包装宽度。 |
 | `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
 | `total` | string <int64> 列表中的商品数量。 |
 
@@ -99,96 +83,6 @@
 
 ### 示例 0
 
-```text
-offer_id
-```
-
-### 示例 1
-
-```text
-product_id
-```
-
-### 示例 2
-
-```text
-sku
-```
-
-### 示例 3
-
-```text
-last_id
-```
-
-### 示例 4
-
-```text
-sku
-```
-
-### 示例 5
-
-```text
-offer_id
-```
-
-### 示例 6
-
-```text
-id
-```
-
-### 示例 7
-
-```text
-title
-```
-
-### 示例 8
-
-```text
-asc
-```
-
-### 示例 9
-
-```text
-desc
-```
-
-### 示例 10
-
-```text
-mm
-```
-
-### 示例 11
-
-```text
-cm
-```
-
-### 示例 12
-
-```text
-in
-```
-
-### 示例 13
-
-```text
-product_id
-```
-
-### 示例 14
-
-```text
-last_id
-```
-
-### 示例 15
-
 ```json
 {
   "filter": {
@@ -208,7 +102,7 @@ last_id
 }
 ```
 
-### 示例 16
+### 示例 1
 
 ```json
 {
@@ -229,15 +123,15 @@ last_id
       "dimension_unit": "mm",
       "weight": 50,
       "weight_unit": "g",
-      "primary_image": "https://ir-21.ozonru.cn/s3/multimedia-4/6804736960.jpg",
+      "primary_image": "https://ir.ozone.ru/s3/multimedia-4/6804736960.jpg",
       "sku": 423434534,
       "model_info": {
         "model_id": 43445453,
         "count": 4
       },
       "images": [
-        "https://ir-21.ozonru.cn/s3/multimedia-4/6804736960.jpg",
-        "https://ir-21.ozonru.cn/s3/multimedia-j/6835412647.jpg"
+        "https://ir.ozone.ru/s3/multimedia-4/6804736960.jpg",
+        "https://ir.ozone.ru/s3/multimedia-j/6835412647.jpg"
       ],
       "pdf_list": [],
       "attributes": [

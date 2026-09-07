@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/finance/compensation`
 - Operation ID：`ReportAPI_GetCompensationReport`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_GetCompensationReport
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReportAPI_GetCompensationReport
 - 分组：`finance`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-07-23 | `graduated` | /v1/finance/compensation 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025723) |
 
 ## 页面标题结构
 
 - 赔偿报告
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -32,7 +38,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `code` | string 报告的唯一标识符。要获取报告，请将该值传递到方法 /v1/report/info。 |
 
 ### 表格 2
 
@@ -44,24 +49,6 @@
 
 ### 示例 0
 
-```text
-YYYY-MM
-```
-
-### 示例 1
-
-```text
-RU
-```
-
-### 示例 2
-
-```text
-EN
-```
-
-### 示例 3
-
 ```json
 {
   "date": "2023-09",
@@ -69,7 +56,7 @@ EN
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/description-category/tips`
 - Operation ID：`DescriptionCategoryTips`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/DescriptionCategoryTips
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryTips
 - 分组：`description-category`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 获取用于确定商品类目的提示
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,9 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 提示列表。 |
-| `images_url` | Array of strings 相似商品图片链接。 |
-| `info_url` | string 指向Ozon商品橱窗的链接，其中包含相似商品及其信息。 |
-| `type_id` | integer <int64> 商品类型标识符。 |
 
 ### 表格 3
 

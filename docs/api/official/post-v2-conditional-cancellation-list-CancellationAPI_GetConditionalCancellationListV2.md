@@ -6,21 +6,21 @@
 
 - 请求：`POST /v2/conditional-cancellation/list`
 - Operation ID：`CancellationAPI_GetConditionalCancellationListV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CancellationAPI_GetConditionalCancellationListV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CancellationAPI_GetConditionalCancellationListV2
 - 分组：`conditional-cancellation`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2025-06-19 | `updated` | /v2/conditional-cancellation/list。 — 在 管理取消订单 模块，更新了获取rFBS取消申请的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025619) |
+| 2025-06-03 | `graduated` | /v2/conditional-cancellation/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202563) |
 
 ## 页面标题结构
 
 - 获取 rFBS 取消申请列表
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -42,19 +42,6 @@
 | `counter` | integer <int64> ON_APPROVAL 状态申请的计数器。 |
 | `last_id` | integer <int64> 页面上最后一个值的标识符。 要获取后续值，请指定上一次请求响应中的 last_id。 |
 | `result` | Array of objects 取消申请的详细信息。 |
-| `approve_comment` | string 在确认或拒绝取消申请时填写的备注。 |
-| `approve_date` | string <date-time> 取消申请确认或拒绝的日期。 |
-| `auto_approve_date` | string <date-time> 申请将在此日期后自动确认。 |
-| `cancellation_id` | integer <int64> 取消申请标识符。 |
-| `cancellation_initiator` | string Enum: "OZON" "SELLER" "CLIENT" "SYSTEM" "DELIVERY" 取消发起人： SELLER — 卖家， CLIENT — 买家， OZON — Ozon, SYSTEM — 系统， DELIVERY — 配送服务。 |
-| `cancellation_reason` | object 取消原因。 |
-| `cancellation_reason_message` | string 取消申请中由取消发起人手动填写的备注。 |
-| `cancelled_at` | string <date-time> 取消申请的创建日期。 |
-| `order_date` | string <date-time> 订单的创建日期。 |
-| `posting_number` | string 货件编号。 |
-| `source_id` | integer <int64> 上一次取消申请的标识符。 用于保持向后兼容性。 |
-| `state` | object 取消申请的状态。 |
-| `tpl_integration_type` | string 与配送服务的集成类型。 |
 
 ### 表格 2
 
@@ -78,54 +65,6 @@
 
 ### 示例 0
 
-```text
-last_id
-```
-
-### 示例 1
-
-```text
-ON_APPROVAL
-```
-
-### 示例 2
-
-```text
-last_id
-```
-
-### 示例 3
-
-```text
-SELLER
-```
-
-### 示例 4
-
-```text
-CLIENT
-```
-
-### 示例 5
-
-```text
-OZON
-```
-
-### 示例 6
-
-```text
-SYSTEM
-```
-
-### 示例 7
-
-```text
-DELIVERY
-```
-
-### 示例 8
-
 ```json
 {
   "filters": {
@@ -145,7 +84,7 @@ DELIVERY
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/finance/balance`
 - Operation ID：`GetFinanceBalanceV1`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFinanceBalanceV1
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/GetFinanceBalanceV1
 - 分组：`finance`
 
 ## News 更新标记
@@ -19,9 +19,9 @@
 ## 页面标题结构
 
 - 获取余额报告
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,30 +45,6 @@
 
 ### 示例 0
 
-```text
-YYYY-MM-DD
-```
-
-### 示例 1
-
-```text
-YYYY-MM-DD
-```
-
-### 示例 2
-
-```text
-date_from
-```
-
-### 示例 3
-
-```text
-date_to
-```
-
-### 示例 4
-
 ```json
 {
   "date_from": "2019-08-24",
@@ -76,7 +52,7 @@ date_to
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

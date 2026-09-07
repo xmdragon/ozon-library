@@ -6,16 +6,23 @@
 
 - 请求：`POST /v6/fbs/posting/product/exemplar/create-or-get`
 - Operation ID：`PostingAPI_FbsPostingProductExemplarCreateOrGetV6`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarCreateOrGetV6
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingProductExemplarCreateOrGetV6
 - 分组：`fbs`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-09-29 | `added_field` | /v6/fbs/posting/product/exemplar/create-or-get 已更新products.exemplars.marks参数的描述，并在方式响应中添加了products.has_imei参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
+| 2025-02-17 | `new_method` | /v6/fbs/posting/product/exemplar/create-or-get 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
 
 ## 页面标题结构
 
 - 获取已创建样件数据
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,19 +53,13 @@
 
 ### 示例 0
 
-```text
-exemplar_id
-```
-
-### 示例 1
-
 ```json
 {
   "posting_number": "string"
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

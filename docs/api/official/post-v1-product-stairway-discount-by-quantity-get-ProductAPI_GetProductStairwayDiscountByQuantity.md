@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/product/stairway-discount/by-quantity/get`
 - Operation ID：`ProductAPI_GetProductStairwayDiscountByQuantity`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductStairwayDiscountByQuantity
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductStairwayDiscountByQuantity
 - 分组：`product`
 
 ## 页面标题结构
 
 - 获取按数量折扣信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,10 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `stairways` | Array of objects 单个商品的按数量折扣信息。 |
-| `enabled` | boolean true，表示数量折扣已启用。 |
-| `sku` | integer <int64> Ozon系统中的商品标识符——SKU。 |
-| `stairway` | object 按数量折扣等级信息。 |
-| `status` | string Enum: "IN_PROCESS" "ERROR" "SUCCESS" 按数量折扣变更状态。可能的取值： ERROR——修改折扣时出错。请再次调用方法 /v1/product/stairway-discount/by-quantity/set。 IN_PROCESS——修正正在处理中。 SUCCESS——折扣修改已成功应用到商品。 |
 
 ### 表格 3
 
@@ -57,30 +53,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-ERROR
-```
-
-### 示例 2
-
-```text
-IN_PROCESS
-```
-
-### 示例 3
-
-```text
-SUCCESS
-```
-
-### 示例 4
-
 ```json
 {
   "skus": [
@@ -89,7 +61,7 @@ SUCCESS
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

@@ -61,7 +61,7 @@ def _classify_segment(segment: str) -> List[str]:
         or re.search(r"相关方法已从.{0,12}(文件|文档)中删除", text)
     )
 
-    if "新增了用于" in text or re.search(r"(新增|添加).{0,12}(beta)?方法(版本)?", text):
+    if "新增了用于" in text or re.search(r"(新增|添加|增加).{0,12}(beta)?方法(版本)?", text):
         labels.append("new_method")
     if method_deprecated and not (field_context and not re.search(r"(该方法|该方式|这些方式)", text)):
         labels.append("deprecated_method")
@@ -81,7 +81,7 @@ def _classify_segment(segment: str) -> List[str]:
         labels.append("removed_field")
     if "从Beta版迁移至正式版" in text or "从测试版移至正式版" in text:
         labels.append("graduated")
-    if not labels and re.search(r"(更新|已更新|变更|改为|更改)", text):
+    if not labels and re.search(r"(更新|已更新|变更|改为|更改|新了)", text):
         labels.append("updated")
 
     unique: List[str] = []
@@ -115,25 +115,58 @@ def _sentence_window(text: str, start: int) -> str:
 
 def _segments_for_paths(text: str) -> Iterable[tuple[str, str, str]]:
     matches = list(PATH_RE.finditer(text))
-    for index, match in enumerate(matches):
-        path = match.group(0).rstrip(".,;:，。；：")
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
-        segment = text[match.start() : end].strip()
+    index = 0
+    while index < len(matches):
+        match = matches[index]
+        # Redoc collapses one table cell containing several endpoints into a
+        # whitespace-separated path run. Keep the row's description attached
+        # to every path in that run.
+        group_end = index + 1
+        while group_end < len(matches) and not text[matches[group_end - 1].end() : matches[group_end].start()].strip(" \t\r\n"):
+            group_end += 1
+        description_end = matches[group_end].start() if group_end < len(matches) else len(text)
+        segment = text[match.start() : description_end].strip()
         replacement_window = _sentence_window(text, match.start())
-        if index + 1 < len(matches):
-            replacement_window = f"{segment} {_sentence_window(text, matches[index + 1].start())}".strip()
-        yield path, segment, replacement_window
+        if group_end < len(matches):
+            replacement_window = f"{segment} {_sentence_window(text, matches[group_end].start())}".strip()
+        for grouped_match in matches[index:group_end]:
+            path = grouped_match.group(0).rstrip(".,;:，。；：")
+            yield path, segment, replacement_window
+        index = group_end
 
 
 def summarize_news_entry(entry: NewsEntry) -> List[NewsUpdate]:
     """Convert one News item into path-level update summaries."""
 
-    text = str(entry.get("text") or "").strip()
     date = str(entry.get("date") or "")
     source_url = _entry_source_url(entry)
     summaries: Dict[str, NewsUpdate] = {}
 
-    for path, segment, sentence_window in _segments_for_paths(text):
+    # Fresh Chrome extraction keeps the method column as structured rows. Use
+    # its href-derived methods because the visible label can be duplicated or
+    # mistyped while the links still identify each endpoint correctly.
+    structured_rows = entry.get("rows")
+    if isinstance(structured_rows, list):
+        row_segments = []
+        for row in structured_rows:
+            if not isinstance(row, dict):
+                continue
+            description = str(row.get("description") or "").strip()
+            methods = row.get("methods")
+            if not description or not isinstance(methods, list):
+                continue
+            for path in methods:
+                path = str(path or "").strip()
+                if path.startswith("/v"):
+                    row_segments.append((path, f"{path} {description}"))
+        path_segments = row_segments
+    else:
+        text = str(entry.get("text") or "").strip()
+        path_segments = [(path, segment, sentence_window) for path, segment, sentence_window in _segments_for_paths(text)]
+
+    for item in path_segments:
+        path, segment = item[:2]
+        sentence_window = segment if structured_rows is not None else item[2]
         labels = _classify_segment(segment)
         if not labels:
             continue
@@ -262,7 +295,7 @@ def _missing_rows(items: List[NewsUpdate]) -> List[str]:
     for item in items:
         replacements = ", ".join(f"`{path}`" for path in item.get("replacement_paths", [])) or "无"
         labels = ", ".join(f"`{label}`" for label in item.get("labels", [])) or "无"
-        summary = str(item.get("text") or "").replace("|", "\\|")
+        summary = _escape_markdown_table_cell(item.get("text", ""))
         rows.append(f"| `{item.get('path')}` | {labels} | {item.get('date') or '无'} | {replacements} | {summary} |")
     return rows
 
@@ -276,11 +309,17 @@ def _field_rows(operations: List[Operation]) -> List[str]:
             if not labels & field_labels:
                 continue
             label_text = ", ".join(f"`{label}`" for label in update.get("labels", []))
-            summary = str(update.get("text") or "").replace("|", "\\|")
+            summary = _escape_markdown_table_cell(update.get("text", ""))
             source_url = str(update.get("sourceUrl") or "")
             news_link = f"[来源]({source_url})" if source_url else "无"
             rows.append(f"| `{operation.get('path')}` | {update.get('date') or '无'} | {label_text} | {summary} | {news_link} |")
     return rows
+
+
+def _escape_markdown_table_cell(value: Any) -> str:
+    """Keep derived Markdown table rows valid without changing captured text."""
+
+    return str(value or "").strip().replace("|", "\\|").replace("\r\n", "<br>").replace("\n", "<br>").replace("\r", "<br>")
 
 
 def render_news_summary(news: Dict[str, Any], result: Dict[str, Any]) -> str:

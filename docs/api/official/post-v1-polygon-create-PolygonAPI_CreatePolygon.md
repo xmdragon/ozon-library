@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/polygon/create`
 - Operation ID：`PolygonAPI_CreatePolygon`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PolygonAPI_CreatePolygon
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PolygonAPI_CreatePolygon
 - 分组：`polygon`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 创建一个快递的设施
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

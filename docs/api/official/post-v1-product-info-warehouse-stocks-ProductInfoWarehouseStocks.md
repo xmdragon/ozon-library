@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/info/warehouse/stocks`
 - Operation ID：`ProductInfoWarehouseStocks`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductInfoWarehouseStocks
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductInfoWarehouseStocks
 - 分组：`product`
 
 ## News 更新标记
@@ -18,9 +18,9 @@
 ## 页面标题结构
 
 - 获取FBS和rFBS仓库库存信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,24 +46,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-cursor
-```
-
-### 示例 2
-
-```text
-false
-```
-
-### 示例 3
-
 ```json
 {
   "cursor": "",
@@ -72,7 +54,7 @@ false
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

@@ -3,34 +3,46 @@
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
 > [!WARNING]
-> 官方 News 标记此方法为 `deprecated`，日期：2026-04-30。替代方法：`/v4/posting/fbs/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026430
-> News 原文摘要：/v3/posting/fbs/list 该方法已弃用，并将于2026年6月1日停用。请切换到 替代方法：/v4/posting/fbs/list
+> 官方 News 标记此方法为 `deprecated`，日期：2026-07-10。替代方法：`/v4/posting/fbs/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026710
+> News 原文摘要：/v3/posting/fbs/list 该方法已弃用，并将于2026年8月31日停用。请切换到 /v4/posting/fbs/list。
 
 ## 方法
 
 - 请求：`POST /v3/posting/fbs/list`
 - Operation ID：`PostingAPI_GetFbsPostingListV3`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingListV3
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_GetFbsPostingListV3
 - 分组：`posting`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-22 | `added_field` | /v3/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了result.postings.integration_type_flow和result.postings.sorting_center参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
+| 2026-07-10 | `deprecated_method` | /v3/posting/fbs/list 该方法已弃用，并将于2026年8月31日停用。请切换到 /v4/posting/fbs/list。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| 2026-05-05 | `updated` | /v3/posting/fbs/list 更新了各方法响应中参数 result.postings.analytics_data.client_delivery_date_begin和 result.postings.analytics_data.client_delivery_date_end的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2026-04-30 | `deprecated_method`, `added_field` | /v3/posting/fbs/list 在方式的响应中添加了参数result.postings.is_presortable、result.postings.destination_place_id、result.postings.destination_place_name和result.postings.customer.customer_email。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
+| 2026-04-17 | `added_field` | /v3/posting/fbs/list 在各方法响应中新增参数result.postings.tariffication_steps。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026417) |
+| 2026-03-17 | `updated` | /v3/posting/fbs/list 更新了方法响应中 result.postings.analytics_data.client_delivery_date_begin 和 result.postings.analytics_data.client_delivery_date_end 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
+| 2025-11-27 | `added_field` | /v3/posting/fbs/list 在各方法的响应中：<br>更新了参数 result.analytics_data.payment_type_group_name 的描述；<br>新增了参数 result.analytics_data.client_delivery_date_begin 和result.analytics_data.client_delivery_date_end。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251127) |
 | 2025-10-23 | `updated` | /v3/posting/fbs/list 更新了方法响应中的 result.postings.substatus 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
-| 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中： • 添加了参数 result.postings.financial_data.products.customer_price； • 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-10-21 | `added_field` | /v3/posting/fbs/list 在方法的响应中添加了参数result.postings.shipment_date_without_delay。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251021) |
+| 2025-10-16 | `updated` | /v3/posting/fbs/list 更新了方法响应中的 result.postings.financial_data.products.product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-09-24 | `added_field` | /v3/posting/fbs/list 在方法响应中：<br>• 添加了参数 result.postings.financial_data.products.customer_price；<br>• 更新了 result.postings.requirements.products_requiring_gtd、result.postings.requirements.products_requiring_mandatory_mark、result.postings.requirements.products_requiring_jw_uin、result.postings.requirements.products_requiring_rnpt、result.postings.financial_data.products.price、result.postings.financial_data.products.old_price、result.postings.customer.phone、result.postings.addressee.phone 和 result.postings.products.is_marketplace_buyout 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-07-22 | `updated` | /v3/posting/fbs/list 更新了方法响应中 result.postings.requirements.products_requiring_change_country 和 result.postings.financial_data.products.actions 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025722) |
 | 2025-07-02 | `added_field` | /v3/posting/fbs/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202572) |
+| 2025-06-20 | `updated` | /v3/posting/fbs/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 | 2025-06-05 | `added_field` | /v3/posting/fbs/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202565) |
+| 2025-05-22 | `updated` | /v3/posting/fbs/list 更新了该方法请求中参数 filter.fbpFilter 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
+| 2025-05-06 | `removed_field` | /v3/posting/fbs/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | 2025-02-26 | `updated` | /v3/posting/fbs/list 更新了方法响应中 result.postings.analytics_data.city 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025226) |
 
 ## 页面标题结构
 
 - 货件列表 Deprecated
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -58,8 +70,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 货运数组。 |
-| `has_next` | boolean 响应中未返回整个货运数组的标志: true — 必须提出含其他值 offset的新请求，以获得其他货运信息； false — 响应中返回了在请求中提出的整个用于过滤的货运数组。 |
-| `postings` | Array of objects 货运信息。 |
 
 ### 表格 3
 
@@ -72,54 +82,15 @@
 
 ### 示例 0
 
-```text
-has_next = true
-```
-
-### 示例 1
-
-```text
-offset
-```
-
-### 示例 2
-
-```text
-asc
-```
-
-### 示例 3
-
-```text
-desc
-```
-
-### 示例 4
-
-```text
-true
-```
-
-### 示例 5
-
-```text
-offset
-```
-
-### 示例 6
-
-```text
-false
-```
-
-### 示例 7
-
 ```json
 {
   "dir": "ASC",
   "filter": {
     "delivery_method_id": [
       "21321684811000"
+    ],
+    "integration_type_flow": [
+      "ozon"
     ],
     "fbpFilter": "string",
     "last_changed_status_date": {
@@ -148,7 +119,7 @@ false
 }
 ```
 
-### 示例 8
+### 示例 1
 
 ```json
 {
@@ -170,6 +141,7 @@ false
         "tracking_number": "",
         "tpl_integration_type": "ozon",
         "in_process_at": "2026-03-30T11:26:00Z",
+        "integration_type_flow": "ozon",
         "shipment_date": "2026-03-31T09:00:00Z",
         "delivering_date": null,
         "cancellation": {
@@ -286,6 +258,7 @@ false
           "kpp": ""
         },
         "shipment_date_without_delay": "2026-04-04T16:59:00Z",
+        "sorting_center": null,
         "require_blr_traceable_attrs": false,
         "is_click_and_collect": false,
         "tariffication_steps": [

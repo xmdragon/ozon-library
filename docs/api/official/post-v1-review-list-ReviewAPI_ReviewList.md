@@ -4,20 +4,21 @@
 
 > [!WARNING]
 > 官方 News 标记此方法为 `deprecated`，日期：2026-06-11。替代方法：`/v2/review/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026611
-> News 原文摘要：/v1/review/list 该方法已弃用，并将在未来停用。请切换到 替代方法：/v2/review/list
+> News 原文摘要：/v1/review/list 该方法已弃用，并将在未来停用。请切换到/v2/review/list。
 
 ## 方法
 
 - 请求：`POST /v1/review/list`
 - Operation ID：`ReviewAPI_ReviewList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReviewAPI_ReviewList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReviewAPI_ReviewList
 - 分组：`review`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-06-11 | `deprecated_method` | /v1/review/list 该方法已弃用，并将在未来停用。请切换到 替代方法：/v2/review/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026611) |
+| 2026-07-08 | `graduated` | /v1/review/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
+| 2026-06-11 | `deprecated_method` | /v1/review/list 该方法已弃用，并将在未来停用。请切换到/v2/review/list。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026611) |
 | 2026-03-31 | `updated` | /v1/review/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026331) |
 | 2025-11-11 | `updated` | /v1/review/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
 | 2025-06-20 | `updated` | /v1/review/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
@@ -26,9 +27,9 @@
 ## 页面标题结构
 
 - 获取评价列表 Deprecated
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -55,42 +56,6 @@
 
 ### 示例 0
 
-```text
-ASC
-```
-
-### 示例 1
-
-```text
-DESC
-```
-
-### 示例 2
-
-```text
-ALL
-```
-
-### 示例 3
-
-```text
-UNPROCESSED
-```
-
-### 示例 4
-
-```text
-PROCESSED
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
-
 ```json
 {
   "last_id": "",
@@ -100,7 +65,7 @@ true
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

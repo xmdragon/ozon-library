@@ -6,15 +6,24 @@
 
 - 请求：`POST /v1/review/comment/create`
 - Operation ID：`ReviewAPI_CommentCreate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReviewAPI_CommentCreate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReviewAPI_CommentCreate
 - 分组：`review`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/review/comment/create 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
+| 2026-03-31 | `updated` | /v1/review/comment/create 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026331) |
+| 2025-11-11 | `updated` | /v1/review/comment/create 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
+| 2025-01-16 | `new_method` | /v1/review/comment/create 已添加管理评价的测试方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025116) |
 
 ## 页面标题结构
 
 - 对评价留下评论
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,24 +48,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-Processed
-```
-
-### 示例 2
-
-```text
-false
-```
-
-### 示例 3
-
 ```json
 {
   "mark_review_as_processed": true,
@@ -66,7 +57,7 @@ false
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

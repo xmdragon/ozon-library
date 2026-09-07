@@ -1,21 +1,21 @@
-# 确认收到待检查商品
+# 获取每订单商品销售报告
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
 ## 方法
 
-- 请求：`POST /v2/returns/rfbs/receive-return`
-- Operation ID：`RFBSReturnsAPI_ReturnsRfbsReceiveReturnV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RFBSReturnsAPI_ReturnsRfbsReceiveReturnV2
-- 分组：`returns`
+- 请求：`POST /v1/report/realization/posting/create`
+- Operation ID：`CreateCompanyFinanceRealizationPostingReport`
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CreateCompanyFinanceRealizationPostingReport
+- 分组：`report`
 
 ## 页面标题结构
 
-- 确认收到待检查商品
-- header Parameters
-- Request Body schema: application/json
+- 获取每订单商品销售报告
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -32,7 +32,14 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `return_id` required | integer <int64> 退货申请的标识符。 |
+| `month` required | integer <int32> 月份。 |
+| `year` required | integer <int32> 年份。 |
+
+### 表格 2
+
+| 字段 | 类型/说明 |
+| --- | --- |
+| `code` | string 报告的唯一标识符。使用方法/v1/report/info获取报告。 |
 
 ## 示例
 
@@ -40,14 +47,17 @@
 
 ```json
 {
-  "return_id": 0
+  "month": 0,
+  "year": 0
 }
 ```
 
 ### 示例 1
 
 ```json
-{}
+{
+  "code": "string"
+}
 ```
 
 ## 使用提醒

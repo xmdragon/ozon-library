@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/barcode/add`
 - Operation ID：`add-barcode`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/add-barcode
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/add-barcode
 - 分组：`barcode`
 
 ## News 更新标记
@@ -19,9 +19,9 @@
 ## 页面标题结构
 
 - 为商品绑定条形码
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -38,10 +38,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `errors` | Array of objects 错误列表。 |
-| `code` | string 错误代码。 |
-| `error` | string 错误描述。 |
-| `barcode` | string 未能绑定的条形码。 |
-| `sku` | integer <int64> 未能绑定条形码的商品标识符。 |
 
 ### 表格 2
 

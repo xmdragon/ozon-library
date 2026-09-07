@@ -6,7 +6,7 @@
 
 - 请求：`POST /v2/posting/fbs/get-by-barcode`
 - Operation ID：`PostingAPI_GetFbsPostingByBarcode`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_GetFbsPostingByBarcode
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_GetFbsPostingByBarcode
 - 分组：`posting`
 
 ## News 更新标记
@@ -19,10 +19,10 @@
 ## 页面标题结构
 
 - 按条形码获取有关货件的信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,16 +46,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `barcodes` | object 货件条形码。 |
-| `cancel_reason_id` | integer <int64> 取消装运原因ID。 |
-| `created_at` | string <date-time> 创建装运日期和时间。 |
-| `in_process_at` | string <date-time> 开始处理货件的日期和时间。 |
-| `order_id` | integer <int64> 货运所属订单ID。 |
-| `order_number` | string 货运所属的订单号。 |
-| `posting_number` | string 货运号。 |
-| `products` | Array of objects 货运商品列表。 |
-| `shipment_date` | string <date-time> 必须收取货件的日期和时间。 如果在此日期之前未完成配货，则货运自动取消。 |
-| `status` | string 货运状态。 |
 
 ### 表格 3
 
@@ -76,19 +66,13 @@
 
 ### 示例 0
 
-```text
-barcodes
-```
-
-### 示例 1
-
 ```json
 {
   "barcode": "20325804886000"
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

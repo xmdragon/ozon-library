@@ -6,7 +6,7 @@
 
 - 请求：`POST /v2/posting/fbs/awaiting-delivery`
 - Operation ID：`PostingAPI_MoveFbsPostingToAwaitingDelivery`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_MoveFbsPostingToAwaitingDelivery
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_MoveFbsPostingToAwaitingDelivery
 - 分组：`posting`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 货件装运
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -50,12 +50,6 @@
 
 ### 示例 0
 
-```text
-awaiting_deliver
-```
-
-### 示例 1
-
 ```json
 {
   "posting_number": [
@@ -64,7 +58,7 @@ awaiting_deliver
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

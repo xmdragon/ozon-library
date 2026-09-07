@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/order/drop-off/cancel`
 - Operation ID：`FbpAPI_FbpOrderDropOffCancel`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpOrderDropOffCancel
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpOrderDropOffCancel
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 取消 drop-off 交货
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,19 +46,13 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "supply_id": "string"
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

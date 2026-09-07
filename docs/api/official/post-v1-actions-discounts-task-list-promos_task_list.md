@@ -4,27 +4,28 @@
 
 > [!WARNING]
 > 官方 News 标记此方法为 `deprecated`，日期：2026-01-29。替代方法：`/v2/actions/discounts-task/list`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026129
-> News 原文摘要：/v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 替代方法：/v2/actions/discounts-task/list
+> News 原文摘要：/v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 /v2/actions/discounts-task/list。
 
 ## 方法
 
 - 请求：`POST /v1/actions/discounts-task/list`
 - Operation ID：`promos_task_list`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/promos_task_list
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/promos_task_list
 - 分组：`actions`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-01-29 | `deprecated_method` | /v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 替代方法：/v2/actions/discounts-task/list | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026129) |
+| 2026-01-29 | `deprecated_method` | /v1/actions/discounts-task/list 该方法已弃用，并将在未来停用。请切换至 /v2/actions/discounts-task/list。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026129) |
+| 2025-06-20 | `updated` | /v1/actions/discounts-task/list 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 
 ## 页面标题结构
 
 - 申请折扣列表
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -43,41 +44,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 申请列表。 |
-| `id` | integer <uint64> 申请ID。 |
-| `created_at` | string <date-time> 申请创建日期。 |
-| `end_at` | string <date-time> 申请到期时间。 |
-| `edited_till` | string <date-time> 决定改变时间。 |
-| `status` | string 申请状态。 |
-| `customer_name` | string 买家姓名。 |
-| `sku` | integer <uint64> Ozon系统中的商品ID —— SKU。 |
-| `user_comment` | string 买家对申请的评论。 |
-| `seller_comment` | string 卖家对申请的评论。 |
-| `requested_price` | number <double> 申请价格。 |
-| `approved_price` | number <double> 批准的价格。 |
-| `original_price` | number <double> 折扣前的商品价格。 |
-| `discount` | number <double> 卢布折扣。 |
-| `discount_percent` | number <double> 折扣百分比。 |
-| `base_price` | number <double> 如果不参与促销活动，商品在Ozon上销售的基础价。 |
-| `min_auto_price` | number <double> 自动应用折扣和促销后的最低价格值。 |
-| `prev_task_id` | integer <uint64> 该商品买家先前申请ID。 |
-| `is_damaged` | boolean 商品是否打折。如果打折，true。 |
-| `moderated_at` | string <date-time> 审核日期：审核、批准或拒绝申请。 |
-| `approved_discount` | number <double> 卖家同意的以卢布显示的折扣。 如果卖家不批准订单，则传递值“0”。 |
-| `approved_discount_percent` | number <double> 卖家批准的折扣百分比。请传递值 0，如果卖家不批准申请。 |
-| `is_purchased` | boolean 用户是否购买了商品。 true，如果购买。 |
-| `is_auto_moderated` | boolean 申请是否自动审核。 true，如果自动审核。 |
-| `offer_id` | string 卖家系统中的商品标识符是商品货号。 |
-| `email` | string 处理请求的卖家员工电子邮件地址。 |
-| `last_name` | string 处理申请的卖家员工姓氏。 |
-| `first_name` | string 处理请求的卖家员工姓名。 |
-| `patronymic` | string 处理请求的卖家员工父称。 |
-| `approved_quantity_min` | integer <uint64> 商品数量批准的最小值。 |
-| `approved_quantity_max` | integer <uint64> 商品数量批准的最大值。 |
-| `requested_quantity_min` | integer <uint64> 商品请求数量最小值。 |
-| `requested_quantity_max` | integer <uint64> 商品请求数量最大值。 |
-| `requested_price_with_fee` | number <double> 带有区域加价的价格申请。 |
-| `approved_price_with_fee` | number <double> 批准的含区域加价的价格。 |
-| `approved_price_fee_percent` | number <double> 按百分比显示的区域加价。 |
 
 ### 表格 2
 
@@ -123,78 +89,6 @@
 
 ### 示例 0
 
-```text
-NEW
-```
-
-### 示例 1
-
-```text
-SEEN
-```
-
-### 示例 2
-
-```text
-APPROVED
-```
-
-### 示例 3
-
-```text
-PARTLY_APPROVED
-```
-
-### 示例 4
-
-```text
-DECLINED
-```
-
-### 示例 5
-
-```text
-AUTO_DECLINED
-```
-
-### 示例 6
-
-```text
-DECLINED_BY_USER
-```
-
-### 示例 7
-
-```text
-COUPON
-```
-
-### 示例 8
-
-```text
-PURCHASED
-```
-
-### 示例 9
-
-```text
-true
-```
-
-### 示例 11
-
-```text
-true
-```
-
-### 示例 12
-
-```text
-true
-```
-
-### 示例 13
-
 ```json
 {
   "status": "UNKNOWN",
@@ -203,7 +97,7 @@ true
 }
 ```
 
-### 示例 14
+### 示例 1
 
 ```json
 {

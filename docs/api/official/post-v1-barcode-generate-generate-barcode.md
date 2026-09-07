@@ -6,21 +6,21 @@
 
 - 请求：`POST /v1/barcode/generate`
 - Operation ID：`generate-barcode`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/generate-barcode
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/generate-barcode
 - 分组：`barcode`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2025-06-20 | `new_method`, `graduated` | /v1/barcode/generate 新增了为商品生成条形码的方法。 v1/returns/rfbs/action/set 已将该方法从Beta版迁移至正式版。 — 在 方法操作顺序 → 管理rFBS订单退货申请 部分，更新了有关方法操作的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+| 2025-06-20 | `new_method` | /v1/barcode/generate 新增了为商品生成条形码的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 
 ## 页面标题结构
 
 - 创建商品条形码
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -37,10 +37,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `errors` | Array of objects 生成条形码时出现的错误。 |
-| `code` | string 错误代码。 |
-| `error` | string 错误描述。 |
-| `barcode` | string 生成条形码时出错的条形码。 |
-| `product_id` | integer <int64> 未能成功生成条形码的商品标识符。 |
 
 ### 表格 2
 

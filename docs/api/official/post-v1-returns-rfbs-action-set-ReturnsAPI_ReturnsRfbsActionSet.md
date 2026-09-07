@@ -6,13 +6,19 @@
 
 - 请求：`POST /v1/returns/rfbs/action/set`
 - Operation ID：`ReturnsAPI_ReturnsRfbsActionSet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReturnsAPI_ReturnsRfbsActionSet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReturnsAPI_ReturnsRfbsActionSet
 - 分组：`returns`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-06-20 | `graduated` | /v1/returns/rfbs/action/set 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 
 ## 页面标题结构
 
 - 传递 rFBS 退货的可用操作
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例
@@ -34,48 +40,6 @@
 
 ### 示例 0
 
-```text
-id: -1
-```
-
-### 示例 1
-
-```text
-id: -10
-```
-
-### 示例 2
-
-```text
-id: 1020
-```
-
-### 示例 3
-
-```text
-returns.available_actions
-```
-
-### 示例 4
-
-```text
-id: -1
-```
-
-### 示例 5
-
-```text
-id: -10
-```
-
-### 示例 6
-
-```text
-returns.rejection_reason
-```
-
-### 示例 8
-
 ```json
 {
   "comment": "string",
@@ -87,7 +51,7 @@ returns.rejection_reason
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {

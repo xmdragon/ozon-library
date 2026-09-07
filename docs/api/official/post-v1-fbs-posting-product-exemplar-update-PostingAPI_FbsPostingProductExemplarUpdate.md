@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/fbs/posting/product/exemplar/update`
 - Operation ID：`PostingAPI_FbsPostingProductExemplarUpdate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarUpdate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingProductExemplarUpdate
 - 分组：`fbs`
 
 ## News 更新标记
@@ -18,8 +18,8 @@
 ## 页面标题结构
 
 - Обновить данные экземпляров
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例

@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/seller-actions/create/multi-level-discount`
 - Operation ID：`SellerActionsCreateMultiLevelDiscount`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerActionsCreateMultiLevelDiscount
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SellerActionsCreateMultiLevelDiscount
 - 分组：`seller-actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-24 | `new_method` | /v1/seller-actions/create/multi-level-discount 新增了用于管理卖家促销活动的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
 
 ## 页面标题结构
 
 - 创建采用"多级满额折扣"机制的促销活动
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -49,24 +55,6 @@
 
 ### 示例 0
 
-```text
-PERCENT
-```
-
-### 示例 1
-
-```text
-CURRENCY
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
 ```json
 {
   "date_end": "2019-08-24T14:15:22Z",
@@ -87,7 +75,7 @@ true
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

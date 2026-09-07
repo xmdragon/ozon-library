@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/description-category/tree`
 - Operation ID：`DescriptionCategoryAPI_GetTree`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/DescriptionCategoryAPI_GetTree
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryAPI_GetTree
 - 分组：`description-category`
 
 ## 页面标题结构
 
 - 商品类别和类型的树形图
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,12 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 类别清单。 |
-| `description_category_id` | integer <int64> 类别ID。 |
-| `category_name` | string 类别名称。 |
-| `children` | Array of objects 子类别树形图。 |
-| `disabled` | boolean 如果无法在类别中创建商品，则为true。 如果可能，为false。 |
-| `type_id` | integer <int64> 商品类型ID。 |
-| `type_name` | string 商品类型名称。 |
 
 ### 表格 3
 
@@ -61,49 +55,13 @@
 
 ### 示例 0
 
-```text
-EN
-```
-
-### 示例 1
-
-```text
-RU
-```
-
-### 示例 2
-
-```text
-TR
-```
-
-### 示例 3
-
-```text
-ZH_HANS
-```
-
-### 示例 4
-
-```text
-true
-```
-
-### 示例 5
-
-```text
-false
-```
-
-### 示例 6
-
 ```json
 {
   "language": "DEFAULT"
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

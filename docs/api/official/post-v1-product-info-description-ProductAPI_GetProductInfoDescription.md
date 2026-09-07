@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/product/info/description`
 - Operation ID：`ProductAPI_GetProductInfoDescription`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductInfoDescription
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoDescription
 - 分组：`product`
 
 ## 页面标题结构
 
 - 获取商品详细信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -40,10 +40,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object |
-| `description` | string 描述。 |
-| `id` | integer <int64> 识别码。 |
-| `name` | string 名称。 |
-| `offer_id` | string 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 3
 
@@ -58,12 +54,6 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
 ```json
 {
   "offer_id": "5",
@@ -71,7 +61,7 @@ product_id
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

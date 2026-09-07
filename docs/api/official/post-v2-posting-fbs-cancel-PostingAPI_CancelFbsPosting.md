@@ -6,16 +6,16 @@
 
 - 请求：`POST /v2/posting/fbs/cancel`
 - Operation ID：`PostingAPI_CancelFbsPosting`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_CancelFbsPosting
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_CancelFbsPosting
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 取消货运
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,66 +46,6 @@
 
 ### 示例 0
 
-```text
-cancelled
-```
-
-### 示例 1
-
-```text
-cancel_reason_id
-```
-
-### 示例 2
-
-```text
-352
-```
-
-### 示例 3
-
-```text
-400
-```
-
-### 示例 4
-
-```text
-401
-```
-
-### 示例 5
-
-```text
-402
-```
-
-### 示例 6
-
-```text
-665
-```
-
-### 示例 7
-
-```text
-666
-```
-
-### 示例 8
-
-```text
-667
-```
-
-### 示例 9
-
-```text
-cancel_reason_id = 402
-```
-
-### 示例 10
-
 ```json
 {
   "cancel_reason_id": 352,
@@ -114,7 +54,7 @@ cancel_reason_id = 402
 }
 ```
 
-### 示例 11
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/info/stocks-by-warehouse/fbs`
 - Operation ID：`ProductAPI_ProductStocksByWarehouseFbs`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductStocksByWarehouseFbs
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductStocksByWarehouseFbs
 - 分组：`product`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 关于卖家库存余额的信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,13 +46,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 该处理方法的结果。 |
-| `sku` | integer <int64> Ozon系统中的商品识别码是SKU。 |
-| `offer_id` | string <int64> 卖家系统中的商品识别码是卖家系统中的商品标识符是商品货号。 |
-| `present` | integer <int64> 库存商品总量。 |
-| `product_id` | integer <int64> 卖家系统中的Ozon系统中商品的标识符 — product_id。 |
-| `reserved` | integer <int64> 仓库中的保留商品的数量。 |
-| `warehouse_id` | integer <int64> 仓库编号。 |
-| `warehouse_name` | string 仓库名称。 |
 
 ### 表格 3
 
@@ -70,30 +63,6 @@
 
 ### 示例 0
 
-```text
-offer_id
-```
-
-### 示例 1
-
-```text
-sku
-```
-
-### 示例 2
-
-```text
-sku
-```
-
-### 示例 3
-
-```text
-product_id
-```
-
-### 示例 4
-
 ```json
 {
   "sku": [
@@ -105,7 +74,7 @@ product_id
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

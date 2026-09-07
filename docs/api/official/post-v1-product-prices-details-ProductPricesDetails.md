@@ -6,23 +6,23 @@
 
 - 请求：`POST /v1/product/prices/details`
 - Operation ID：`ProductPricesDetails`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductPricesDetails
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductPricesDetails
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：新增了prices.price_indexes参数；将prices.discount_percent参数标记为已弃用；更新了prices.customer_price参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
-| 2026-03-04 | `graduated` | /v1/product/prices/details 已将该方法从Beta版迁移至正式版。 — 在 授权 模块，我们更新了关于API密钥使用的信息。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
+| 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：<br>新增了prices.price_indexes参数；<br>将prices.discount_percent参数标记为已弃用；<br>更新了prices.customer_price参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
+| 2026-03-04 | `graduated` | /v1/product/prices/details 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
 
 ## 页面标题结构
 
 - 获取商品价格的详细信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,12 +46,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `prices` | Array of objects 商品价格。 |
-| `customer_price` | object 网站上的商品价格。 |
-| `discount_percent` | number <float> Deprecated 由 Ozon 承担的折扣比例。 |
-| `offer_id` | string 卖家系统中的商品标识符（商品货号）。 |
-| `price` | object 商品价格（已包含促销活动或推广优惠）。 |
-| `price_indexes` | Array of objects 价格指数。 |
-| `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ### 表格 3
 

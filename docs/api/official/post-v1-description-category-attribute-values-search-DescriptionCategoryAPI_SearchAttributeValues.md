@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/description-category/attribute/values/search`
 - Operation ID：`DescriptionCategoryAPI_SearchAttributeValues`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/DescriptionCategoryAPI_SearchAttributeValues
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryAPI_SearchAttributeValues
 - 分组：`description-category`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-06-20 | `updated` | /v1/description-category/attribute/values/search 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 
 ## 页面标题结构
 
 - 根据属性的参考值进行搜索
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -43,10 +49,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 属性值。 |
-| `id` | integer <int64> 属性值的标识符。 |
-| `info` | string 额外信息。 |
-| `picture` | string 图片链接。 |
-| `value` | string |
 
 ### 表格 3
 
@@ -61,12 +63,6 @@
 
 ### 示例 0
 
-```text
-value
-```
-
-### 示例 1
-
 ```json
 {
   "attribute_id": 85,
@@ -77,7 +73,7 @@ value
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/warehouse/fbs/create/drop-off/list`
 - Operation ID：`WarehouseAPI_ListDropOffPointsForCreateFBSWarehouse`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseAPI_ListDropOffPointsForCreateFBSWarehouse
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseAPI_ListDropOffPointsForCreateFBSWarehouse
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/fbs/create/drop-off/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
 
 ## 页面标题结构
 
 - 获取用于创建仓库的揽收点列表
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -34,12 +40,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `points` | Array of objects 点位列表。 |
-| `address` | string 揽收点地址。 |
-| `coordinates` | object 揽收点坐标。 |
-| `discount_percent` | number <float> 交付货件的折扣百分比。 |
-| `id` | string 揽收点标识符。 |
-| `last_transit_time_local` | object 为获得发运折扣，需要在此时间前交付货件。 |
-| `type` | string Enum: "PVZ" "PPZ" "SC" D揽收点类型： PVZ — 订单取货点， PPZ — 订单接收点， SC — 分拣中心。 |
 
 ### 表格 2
 
@@ -55,30 +55,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-true
-```
-
-### 示例 1
-
-```text
-PVZ
-```
-
-### 示例 2
-
-```text
-PPZ
-```
-
-### 示例 3
-
-```text
-SC
-```
-
-### 示例 4
 
 ```json
 {
@@ -97,7 +73,7 @@ SC
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {

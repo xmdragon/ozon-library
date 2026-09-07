@@ -6,22 +6,24 @@
 
 - 请求：`POST /v4/posting/fbs/list`
 - Operation ID：`PostingFbsList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingFbsList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingFbsList
 - 分组：`posting`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-08-04 | `updated` | /v4/posting/fbs/list 更新了方法响应中postings.products.is_marketplace_buyout参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202684) |
+| 2026-07-22 | `added_field` | /v4/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了postings.integration_type_flow和postings.sorting_center参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
 | 2026-04-30 | `new_method` | /v4/posting/fbs/list 新增了用于获取FBS货件列表的方法新版本。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
 
 ## 页面标题结构
 
 - 获取货件列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -57,30 +59,6 @@
 
 ### 示例 0
 
-```text
-ASC
-```
-
-### 示例 1
-
-```text
-DESC
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
-```text
-true
-```
-
-### 示例 4
-
 ```json
 {
   "sort_dir": "asc",
@@ -90,6 +68,9 @@ true
     ],
     "delivery_method_ids": [
       123456789
+    ],
+    "integration_type_flow": [
+      "ozon"
     ],
     "is_blr_traceable": false,
     "last_changed_status_date": {
@@ -124,7 +105,7 @@ true
 }
 ```
 
-### 示例 5
+### 示例 1
 
 ```json
 {
@@ -238,6 +219,7 @@ true
         ]
       },
       "in_process_at": "2026-05-14T08:00:00.000Z",
+      "integration_type_flow": "ozon",
       "is_click_and_collect": false,
       "is_express": false,
       "is_multibox": false,
@@ -307,6 +289,7 @@ true
       },
       "shipment_date": "2026-05-18T12:00:00.000Z",
       "shipment_date_without_delay": "2026-05-18T12:00:00.000Z",
+      "sorting_center": null,
       "status": "awaiting_packaging",
       "substatus": "posting_created",
       "tariffication": {

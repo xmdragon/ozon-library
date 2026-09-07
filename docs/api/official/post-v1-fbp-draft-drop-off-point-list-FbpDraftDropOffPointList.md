@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/fbp/draft/drop-off/point/list`
 - Operation ID：`FbpDraftDropOffPointList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpDraftDropOffPointList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpDraftDropOffPointList
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 获取省份内接收点列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -42,11 +42,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `drop_off_points` | Array of objects 接收点列表。 |
-| `city` | string 城市。 |
-| `drop_off_point_id` | integer <int64> 揽收点标识符。 |
-| `nearest_drop_off_date` | string <date-time> 最近的发运日期。 |
-| `point_address` | string 接收点地址。 |
-| `province_uuid` | string 省份唯一标识符。 |
 
 ### 表格 3
 

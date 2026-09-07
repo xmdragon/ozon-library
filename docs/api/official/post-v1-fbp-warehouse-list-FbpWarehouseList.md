@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/warehouse/list`
 - Operation ID：`FbpWarehouseList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpWarehouseList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpWarehouseList
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 获取合作伙伴仓库列表
-- header Parameters
+- HEADER PARAMETERS
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 回复范例
 
 ## 参数与返回结构
@@ -31,13 +31,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `warehouses` | Array of objects 仓库列表。 |
-| `address_detailing` | object 地址详情。 |
-| `id` | integer <int64> 仓库标识符。 |
-| `is_bonded` | boolean true，表示该仓库为保税仓。 |
-| `name` | string 仓库名称。 |
-| `partner_name` | string 合作伙伴名称。 |
-| `supply_types` | Array of integers <int32> 交货类型。 |
-| `timezone_name` | string 仓库所在时区。 |
 
 ### 表格 2
 
@@ -54,12 +47,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-true
-```
-
-### 示例 1
 
 ```json
 {

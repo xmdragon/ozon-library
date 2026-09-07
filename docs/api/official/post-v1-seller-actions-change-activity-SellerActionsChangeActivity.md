@@ -6,14 +6,20 @@
 
 - 请求：`POST /v1/seller-actions/change-activity`
 - Operation ID：`SellerActionsChangeActivity`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerActionsChangeActivity
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SellerActionsChangeActivity
 - 分组：`seller-actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-24 | `new_method` | /v1/seller-actions/change-activity 新增了用于管理卖家促销活动的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
 
 ## 页面标题结构
 
 - 启用或关闭活动
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例
@@ -38,12 +44,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "action_id": 0,
@@ -51,7 +51,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

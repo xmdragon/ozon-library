@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/pricing-strategy/strategy-ids-by-product-ids`
 - Operation ID：`pricing_ids`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_ids
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_ids
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 策略ID列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,7 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法操作结果。 |
-| `products_info` | Array of objects 商品信息。 |
 
 ### 表格 3
 

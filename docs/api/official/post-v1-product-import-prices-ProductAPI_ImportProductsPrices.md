@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/import/prices`
 - Operation ID：`ProductAPI_ImportProductsPrices`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ImportProductsPrices
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsPrices
 - 分组：`product`
 
 ## News 更新标记
@@ -23,10 +23,10 @@
 ## 页面标题结构
 
 - 更新价格
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -50,10 +50,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 搜索结果。 |
-| `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
-| `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
-| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
-| `updated` | boolean 如果商品信息已被成功更新 — true。 |
 
 ### 表格 3
 
@@ -67,42 +63,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-old_price
-```
-
-### 示例 1
-
-```text
-offer_id
-```
-
-### 示例 2
-
-```text
-product_id
-```
-
-### 示例 3
-
-```text
-offer_id
-```
-
-### 示例 4
-
-```text
-product_id
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
 
 ```json
 {
@@ -125,7 +85,7 @@ true
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

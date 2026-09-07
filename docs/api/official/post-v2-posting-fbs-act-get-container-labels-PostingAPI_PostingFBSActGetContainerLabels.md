@@ -6,7 +6,7 @@
 
 - 请求：`POST /v2/posting/fbs/act/get-container-labels`
 - Operation ID：`PostingAPI_PostingFBSActGetContainerLabels`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_PostingFBSActGetContainerLabels
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_PostingFBSActGetContainerLabels
 - 分组：`posting`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 货位标签
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/pdf
+- RESPONSE SCHEMA: application/pdf
 - 请求范例
 - 回复范例
 

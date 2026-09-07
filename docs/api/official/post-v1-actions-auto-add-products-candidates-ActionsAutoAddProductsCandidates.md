@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/actions/auto-add/products/candidates`
 - Operation ID：`ActionsAutoAddProductsCandidates`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ActionsAutoAddProductsCandidates
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsCandidates
 - 分组：`actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-12 | `new_method` | /v1/actions/auto-add/products/candidates 新增了用于处理商品自动添加到促销活动中的beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 
 ## 页面标题结构
 
 - 获取可自动添加到促销活动中的商品列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,18 +54,6 @@
 
 ### 示例 0
 
-```text
-result.auto_add_dates
-```
-
-### 示例 1
-
-```text
-offset = 10
-```
-
-### 示例 2
-
 ```json
 {
   "action_id": "250204",
@@ -69,7 +63,7 @@ offset = 10
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

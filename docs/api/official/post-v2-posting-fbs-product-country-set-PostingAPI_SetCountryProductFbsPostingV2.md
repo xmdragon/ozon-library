@@ -6,15 +6,15 @@
 
 - 请求：`POST /v2/posting/fbs/product/country/set`
 - Operation ID：`PostingAPI_SetCountryProductFbsPostingV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_SetCountryProductFbsPostingV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_SetCountryProductFbsPostingV2
 - 分组：`posting`
 
 ## 页面标题结构
 
 - 添加商品产地信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

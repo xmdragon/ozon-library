@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/search-queries/text`
 - Operation ID：`SearchQueriesAPI_SearchQueriesText`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SearchQueriesAPI_SearchQueriesText
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SearchQueriesAPI_SearchQueriesText
 - 分组：`search-queries`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-11-11 | `new_method` | /v1/search-queries/text 已新增用于处理搜索查询的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
 
 ## 页面标题结构
 
 - 获取按文本筛选的搜索查询列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -50,42 +56,6 @@
 
 ### 示例 0
 
-```text
-CLIENT_COUNT
-```
-
-### 示例 1
-
-```text
-ADD_TO_CART
-```
-
-### 示例 2
-
-```text
-CONVERSION_TO_CART
-```
-
-### 示例 3
-
-```text
-AVG_PRICE
-```
-
-### 示例 4
-
-```text
-ASC
-```
-
-### 示例 5
-
-```text
-DESC
-```
-
-### 示例 6
-
 ```json
 {
   "limit": "50",
@@ -96,7 +66,7 @@ DESC
 }
 ```
 
-### 示例 7
+### 示例 1
 
 ```json
 {

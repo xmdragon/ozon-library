@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/report/postings/create`
 - Operation ID：`ReportAPI_CreateCompanyPostingsReport`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_CreateCompanyPostingsReport
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReportAPI_CreateCompanyPostingsReport
 - 分组：`report`
 
 ## News 更新标记
@@ -19,10 +19,10 @@
 ## 页面标题结构
 
 - 发货报告
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,7 +48,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ### 表格 3
 
@@ -59,18 +58,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-RU
-```
-
-### 示例 1
-
-```text
-EN
-```
-
-### 示例 2
 
 ```json
 {
@@ -98,7 +85,7 @@ EN
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

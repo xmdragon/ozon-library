@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/carriage/pass/create`
 - Operation ID：`carriagePassCreate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/carriagePassCreate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/carriagePassCreate
 - 分组：`carriage`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-07 | `added_field` | /v1/carriage/pass/create 在方法请求中添加了参数arrival_passes.arrival_time、arrival_passes.tracking_number和arrival_passes.tracking_url。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202677) |
 
 ## 页面标题结构
 
 - 创建通行证
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

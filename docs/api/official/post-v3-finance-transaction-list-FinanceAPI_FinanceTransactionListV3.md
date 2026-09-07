@@ -3,30 +3,32 @@
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
 > [!WARNING]
-> 官方 News 标记此方法为 `deprecated`，日期：2026-05-06。替代方法：`/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/202656
-> News 原文摘要：/v3/finance/transaction/list 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day
+> 官方 News 标记此方法为 `deprecated`，日期：2026-07-14。替代方法：`/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026714
+> News 原文摘要：/v3/finance/transaction/list 该方法即将废弃，并将于2026年9月8日停用。请切换到/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day。
 
 ## 方法
 
 - 请求：`POST /v3/finance/transaction/list`
 - Operation ID：`FinanceAPI_FinanceTransactionListV3`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_FinanceTransactionListV3
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FinanceAPI_FinanceTransactionListV3
 - 分组：`finance`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-05-06 | `deprecated_method` | /v3/finance/transaction/list 该方法即将废弃，并将于2026年7月6日停用。请切换到 替代方法：/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202656) |
+| 2026-07-14 | `deprecated_method` | /v3/finance/transaction/list 该方法即将废弃，并将于2026年9月8日停用。请切换到/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026714) |
+| 2026-05-06 | `deprecated_method` | /v3/finance/transaction/list 该方法即将废弃，并将于2026年7月6日停用。请切换到/v1/finance/accrual/postings, /v1/finance/accrual/types, /v1/finance/accrual/by-day。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202656) |
+| 2025-08-01 | `updated` | /v3/finance/transaction/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202581) |
 | 2025-02-27 | `updated` | /v3/finance/transaction/list 更新了方法响应中result.operations.posting.delivery_schema参数的描述 。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025227) |
 
 ## 页面标题结构
 
 - 交易清单
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -52,9 +54,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 询问结果。 |
-| `operations` | Array of objects 操作信息。 |
-| `page_count` | integer <int64> 页数。如果为0，则说明已无页面。 |
-| `row_count` | integer <int64> 所有页面上的交易数量。如果为0，说明已无交易。 |
 
 ### 表格 3
 
@@ -67,12 +66,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-posting_number
-```
-
-### 示例 1
 
 ```json
 {
@@ -90,7 +83,7 @@ posting_number
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

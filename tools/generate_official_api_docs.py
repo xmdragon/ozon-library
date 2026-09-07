@@ -83,7 +83,13 @@ def _format_schema_text(text: str) -> str:
 
 
 def _escape_markdown_table_cell(value: str) -> str:
-    return _format_text_block(value).replace("|", "\\|")
+    return (
+        _format_text_block(value)
+        .replace("|", "\\|")
+        .replace("\r\n", "<br>")
+        .replace("\n", "<br>")
+        .replace("\r", "<br>")
+    )
 
 
 def _format_table_field(value: str) -> str:

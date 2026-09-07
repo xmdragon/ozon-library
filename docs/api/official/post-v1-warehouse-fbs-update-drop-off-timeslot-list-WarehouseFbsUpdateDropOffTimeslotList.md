@@ -6,16 +6,23 @@
 
 - 请求：`POST /v1/warehouse/fbs/update/drop-off/timeslot/list`
 - Operation ID：`WarehouseFbsUpdateDropOffTimeslotList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/WarehouseFbsUpdateDropOffTimeslotList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/WarehouseFbsUpdateDropOffTimeslotList
 - 分组：`warehouse`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-02-02 | `graduated` | /v1/warehouse/fbs/update/drop-off/timeslot/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202622) |
+| 2025-10-17 | `new_method` | /v1/warehouse/fbs/update/drop-off/timeslot/list 新增了与时间段相关的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 
 ## 页面标题结构
 
 - 获取用于更新drop-off发运仓库的时间段列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -40,11 +47,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `timeslots` | Array of objects 时间段列表。 |
-| `acceptance_end_time_local` | string Sipariş kabul işleminin sona erdiği yerel saat. |
-| `acceptance_start_time_local` | string Sipariş kabul işleminin başladığı yerel saat. |
-| `from` | string Zaman aralığı başlangıç saati. |
-| `id` | integer <int64> Zaman aralığı kimliği. |
-| `to` | string Zaman aralığı bitiş saati. |
 
 ### 表格 3
 

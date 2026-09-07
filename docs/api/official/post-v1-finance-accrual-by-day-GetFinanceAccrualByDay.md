@@ -6,22 +6,24 @@
 
 - 请求：`POST /v1/finance/accrual/by-day`
 - Operation ID：`GetFinanceAccrualByDay`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFinanceAccrualByDay
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/GetFinanceAccrualByDay
 - 分组：`finance`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-30 | `added_field` | /v1/finance/accrual/by-day 更新了方法请求中date和last_id参数的描述。<br>在方法的响应中：<br>新增了accruals.container_fees参数；<br>更新了accruals.accrued_category和last_id参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026730) |
+| 2026-07-21 | `updated` | /v1/finance/accrual/by-day 更新了方法响应中accruals.posting.products.delivery.services参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026721) |
 | 2026-06-09 | `updated` | /v1/finance/accrual/by-day 在方法响应中，将参数名称accruals.type_id改为accruals.accrual_id。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202669) |
 
 ## 页面标题结构
 
 - 获取某日应计项目
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -38,25 +40,19 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `date` required | string YYYY-MM-DD 应计日期。最早可查询日期为2022年1月1日。 |
-| `last_id` required | string 页面上最后一个值的标识符。首次请求请留空。 要获取后续值，请指定上一次请求响应中的 last_id。 |
+| `date` required | string YYYY-MM-DD 应计日期。最早可查询日期为2022年1月1日。 如果您指定last_id，请传递上一个请求中的date值。 |
+| `last_id` required | string 页面上最后一个值的标识符。首次请求请留空。 要获取后续值，请指定上一次请求响应中的 last_id。 标识符的有效期为15分钟。 |
 
 ### 表格 2
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `accruals` | Array of objects 应计项目列表。 |
-| `last_id` | string 页面中最后一个值的标识符。 |
+| `accruals` | Array of objects 货件的应计项目列表。 |
+| `last_id` | string 页面中最后一个值的标识符。 标识符的有效期为15分钟。 |
 
 ## 示例
 
 ### 示例 0
-
-```text
-last_id
-```
-
-### 示例 1
 
 ```json
 {
@@ -65,13 +61,24 @@ last_id
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {
   "accruals": [
     {
       "accrued_category": "UNSPECIFIED",
+      "container_fees": {
+        "fees": [
+          {
+            "accrued": {
+              "amount": "string",
+              "currency": "string"
+            },
+            "type_id": 0
+          }
+        ]
+      },
       "date": "string",
       "item_fees": {
         "fees": [

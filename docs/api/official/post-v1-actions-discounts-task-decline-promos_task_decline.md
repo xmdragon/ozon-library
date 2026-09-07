@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/actions/discounts-task/decline`
 - Operation ID：`promos_task_decline`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/promos_task_decline
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/promos_task_decline
 - 分组：`actions`
 
 ## 页面标题结构
 
 - 取消折扣申请
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -31,9 +31,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法操作结果。 |
-| `fail_details` | Array of objects 创建申请时的错误。 |
-| `success_count` | integer <int32> 状态更改成功的申请数量。 |
-| `fail_count` | integer <int32> 未能更改状态的申请数量。 |
 
 ### 表格 2
 
@@ -47,18 +44,6 @@
 
 ### 示例 0
 
-```text
-NEW
-```
-
-### 示例 1
-
-```text
-SEEN
-```
-
-### 示例 2
-
 ```json
 {
   "tasks": [
@@ -70,7 +55,7 @@ SEEN
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

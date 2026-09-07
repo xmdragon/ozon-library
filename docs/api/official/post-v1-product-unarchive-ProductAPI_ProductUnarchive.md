@@ -6,22 +6,25 @@
 
 - 请求：`POST /v1/product/unarchive`
 - Operation ID：`ProductAPI_ProductUnarchive`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductUnarchive
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductUnarchive
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-16 | `updated` | /v1/product/unarchive 已更新方法描述。<br>更新了方法的错误体。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026716) |
+| 2026-07-10 | `updated` | /v1/product/unarchive 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| 2026-05-05 | `updated` | /v1/product/unarchive 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2025-12-23 | `updated` | /v1/product/unarchive 更新了方法请求中的 product_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251223) |
 
 ## 页面标题结构
 
 - 从档案中还原商品
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -50,24 +53,6 @@
 
 ### 示例 0
 
-```text
-autoarchive_restore_failed
-```
-
-### 示例 1
-
-```text
-product_id
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
 ```json
 {
   "product_id": [
@@ -77,7 +62,7 @@ true
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/label/create`
 - Operation ID：`FbpAPI_FbpCreateLabel`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpCreateLabel
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpCreateLabel
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 创建标签生成任务
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v3/chat/list`
 - Operation ID：`ChatAPI_ChatListV3`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ChatAPI_ChatListV3
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ChatAPI_ChatListV3
 - 分组：`chat`
 
 ## News 更新标记
@@ -23,10 +23,10 @@
 ## 页面标题结构
 
 - 聊天清单
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -60,24 +60,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
-```text
-cursor
-```
-
-### 示例 2
-
-```text
-false
-```
-
-### 示例 3
-
 ```json
 {
   "filter": {
@@ -89,7 +71,7 @@ false
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

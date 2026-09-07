@@ -6,16 +6,16 @@
 
 - 请求：`POST /v2/fbs/posting/tracking-number/set`
 - Operation ID：`PostingAPI_FbsPostingTrackingNumberSet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingTrackingNumberSet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingTrackingNumberSet
 - 分组：`fbs`
 
 ## 页面标题结构
 
 - 添加跟踪号
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,9 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 方法操作结果。 |
-| `error` | string 处理请求时出错。 |
-| `posting_number` | string 发货号。 |
-| `result` | boolean 如果执行请求无误 — true。 |
 
 ### 表格 3
 
@@ -55,12 +52,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "tracking_numbers": [
@@ -72,7 +63,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

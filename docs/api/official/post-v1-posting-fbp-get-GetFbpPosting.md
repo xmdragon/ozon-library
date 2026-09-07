@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/posting/fbp/get`
 - Operation ID：`GetFbpPosting`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/GetFbpPosting
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/GetFbpPosting
 - 分组：`posting`
 
 ## News 更新标记
@@ -18,9 +18,9 @@
 ## 页面标题结构
 
 - 按标识符获取货件信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -37,18 +37,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `posting` | object 货件信息。 |
-| `analytics_data` | object 分析数据。 |
-| `cancellation` | object 取消信息。 |
-| `financial_data` | object 财务数据。 |
-| `in_process_at` | string <date-time> 货件开始处理的日期和时间。 |
-| `order_date` | string <date-time> 订单的创建日期。 |
-| `order_id` | integer <int64> 该货件所属订单的标识符。 |
-| `order_number` | string 该货件所属订单的编号。 |
-| `posting_number` | string 货件标识符。 |
-| `products` | Array of objects 货件中商品列表。 |
-| `status` | integer <int64> 货件状态。 |
-| `substatus` | string 货件子状态。 |
-| `tpl_provider_id` | integer <int64> 配送服务商标识符。 |
 
 ### 表格 2
 

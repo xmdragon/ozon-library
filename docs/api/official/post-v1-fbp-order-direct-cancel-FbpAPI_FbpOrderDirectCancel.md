@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/order/direct/cancel`
 - Operation ID：`FbpAPI_FbpOrderDirectCancel`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpOrderDirectCancel
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpOrderDirectCancel
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 取消交货
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -38,19 +38,13 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "supply_id": "string"
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

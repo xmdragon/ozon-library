@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/draft/pick-up/dlv/edit`
 - Operation ID：`FbpAPI_FbpDraftPickupDlvEdit`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpDraftPickupDlvEdit
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpDraftPickupDlvEdit
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 修改 pick-up 交货申请
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

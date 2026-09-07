@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/chat/start`
 - Operation ID：`ChatAPI_ChatStart`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ChatAPI_ChatStart
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ChatAPI_ChatStart
 - 分组：`chat`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-11-11 | `updated` | /v1/chat/start 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
 
 ## 页面标题结构
 
 - 创建新聊天
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,7 +45,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法运行结果。 |
-| `chat_id` | string 聊天识别码。 |
 
 ### 表格 3
 

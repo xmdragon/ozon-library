@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/carriage/get`
 - Operation ID：`CarriageGet`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CarriageGet
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CarriageGet
 - 分组：`carriage`
 
 ## News 更新标记
@@ -19,9 +19,9 @@
 ## 页面标题结构
 
 - 运输信息
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -63,55 +63,13 @@
 
 ### 示例 0
 
-```text
-get_shipping_list
-```
-
-### 示例 1
-
-```text
-get_act_of_acceptance
-```
-
-### 示例 2
-
-```text
-get_waybill
-```
-
-### 示例 3
-
-```text
-set_arrival_passes
-```
-
-### 示例 4
-
-```text
-true
-```
-
-### 示例 5
-
-```text
-true
-```
-
-### 示例 6
-
-```text
-true
-```
-
-### 示例 7
-
 ```json
 {
   "carriage_id": 0
 }
 ```
 
-### 示例 8
+### 示例 1
 
 ```json
 {

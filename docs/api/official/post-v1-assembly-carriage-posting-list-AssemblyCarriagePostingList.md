@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/assembly/carriage/posting/list`
 - Operation ID：`AssemblyCarriagePostingList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AssemblyCarriagePostingList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/AssemblyCarriagePostingList
 - 分组：`assembly`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-30 | `graduated` | /v1/assembly/carriage/posting/list 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
 
 ## 页面标题结构
 
 - 获取发运中的货件列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,12 +54,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "cursor": "string",
@@ -67,7 +67,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

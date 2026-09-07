@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/carriage/set-postings`
 - Operation ID：`CarriageAPI_SetPostings`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/CarriageAPI_SetPostings
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CarriageAPI_SetPostings
 - 分组：`carriage`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 发运组成商品更改
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,9 +46,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects |
-| `error` | string 错误描述。 |
-| `posting_number` | string 货件编号。 |
-| `result` | boolean 请求处理结果：若请求处理成功，返回值为true。 |
 
 ### 表格 3
 
@@ -62,18 +59,6 @@
 
 ### 示例 0
 
-```text
-等待发运
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
 ```json
 {
   "carriage_id": 0,
@@ -83,7 +68,7 @@ true
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

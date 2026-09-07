@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/seller-actions/list`
 - Operation ID：`SellerActionsList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/SellerActionsList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/SellerActionsList
 - 分组：`seller-actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-03-24 | `new_method` | /v1/seller-actions/list 新增了用于管理卖家促销活动的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
 
 ## 页面标题结构
 
 - 获取促销活动列表
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -33,11 +39,11 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `action_ids` | Array of strings <uint64> <= 100 items 促销活动标识符列表。 |
-| `action_type` | Array of stringsItems Enum: "DISCOUNT" "VOUCHER_DISCOUNT" "DISCOUNT_WITH_CONDITION" "INSTALLMENT" "INDIVIDUAL_DISCOUNT_BY_PRODUCTS" "OZON_ACCOUNT_DISCOUNT" "MULTI_LEVEL_DISCOUNT_ON_AMOUNT" 促销活动机制： DISCOUNT——折扣； VOUCHER_DISCOUNT——促销码折扣； DISCOUNT_WITH_CONDITION——基于订单总额的折扣； INSTALLMENT——免息分期付款； INDIVIDUAL_DISCOUNT_BY_PRODUCTS——卖家积分； OZON_ACCOUNT_DISCOUNT——Ozon银行卡专享额外折扣； MULTI_LEVEL_DISCOUNT_ON_AMOUNT——多级满额折扣。 |
+| `action_type` | Array of strings Items Enum: "DISCOUNT" "VOUCHER_DISCOUNT" "DISCOUNT_WITH_CONDITION" "INSTALLMENT" "INDIVIDUAL_DISCOUNT_BY_PRODUCTS" "OZON_ACCOUNT_DISCOUNT" "MULTI_LEVEL_DISCOUNT_ON_AMOUNT" 促销活动机制： DISCOUNT——折扣； VOUCHER_DISCOUNT——促销码折扣； DISCOUNT_WITH_CONDITION——基于订单总额的折扣； INSTALLMENT——免息分期付款； INDIVIDUAL_DISCOUNT_BY_PRODUCTS——卖家积分； OZON_ACCOUNT_DISCOUNT——Ozon银行卡专享额外折扣； MULTI_LEVEL_DISCOUNT_ON_AMOUNT——多级满额折扣。 |
 | `limit` required | integer <uint64> [ 1 .. 100 ] 每页显示的数量。 |
 | `offset` | integer <uint64> 在响应中将被跳过的项目数量。例如，当offset = 10时，响应将从第11个找到的元素开始。 |
 | `search` | string >= 3 characters 按促销活动名称搜索。 |
-| `status` | Array of stringsItems Enum: "ACTIVE" "ENDED" "PLANNED" "PAUSED" 促销活动状态： ACTIVE—— 活跃； ENDED——已结束； PLANNED——已计划； PAUSED——已暂停。 |
+| `status` | Array of strings Items Enum: "ACTIVE" "ENDED" "PLANNED" "PAUSED" 促销活动状态： ACTIVE—— 活跃； ENDED——已结束； PLANNED——已计划； PAUSED——已暂停。 |
 
 ### 表格 2
 
@@ -49,78 +55,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-DISCOUNT
-```
-
-### 示例 1
-
-```text
-VOUCHER_DISCOUNT
-```
-
-### 示例 2
-
-```text
-DISCOUNT_WITH_CONDITION
-```
-
-### 示例 3
-
-```text
-INSTALLMENT
-```
-
-### 示例 4
-
-```text
-INDIVIDUAL_DISCOUNT_BY_PRODUCTS
-```
-
-### 示例 5
-
-```text
-OZON_ACCOUNT_DISCOUNT
-```
-
-### 示例 6
-
-```text
-MULTI_LEVEL_DISCOUNT_ON_AMOUNT
-```
-
-### 示例 7
-
-```text
-offset = 10
-```
-
-### 示例 8
-
-```text
-ACTIVE
-```
-
-### 示例 9
-
-```text
-ENDED
-```
-
-### 示例 10
-
-```text
-PLANNED
-```
-
-### 示例 11
-
-```text
-PAUSED
-```
-
-### 示例 12
 
 ```json
 {
@@ -139,7 +73,7 @@ PAUSED
 }
 ```
 
-### 示例 13
+### 示例 1
 
 ```json
 {

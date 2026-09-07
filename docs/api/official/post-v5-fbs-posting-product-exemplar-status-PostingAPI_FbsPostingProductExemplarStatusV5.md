@@ -6,7 +6,7 @@
 
 - 请求：`POST /v5/fbs/posting/product/exemplar/status`
 - Operation ID：`PostingAPI_FbsPostingProductExemplarStatusV5`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarStatusV5
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingProductExemplarStatusV5
 - 分组：`fbs`
 
 ## News 更新标记
@@ -15,14 +15,16 @@
 | --- | --- | --- | --- |
 | 2025-12-25 | `updated` | /v5/fbs/posting/product/exemplar/status 已更新方法响应中参数 products.exemplars.marks.check_status 的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | 2025-12-16 | `updated` | /v5/fbs/posting/product/exemplar/status 更新了方法响应中的 status 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
+| 2025-09-29 | `updated` | /v5/fbs/posting/product/exemplar/status 更新了方法响应中products.exemplars.marks参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
+| 2025-02-17 | `new_method` | /v5/fbs/posting/product/exemplar/status 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
 
 ## 页面标题结构
 
 - 获取样件添加状态
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -53,43 +55,13 @@
 
 ### 示例 0
 
-```text
-ship_available
-```
-
-### 示例 1
-
-```text
-ship_not_available
-```
-
-### 示例 2
-
-```text
-validation_in_process
-```
-
-### 示例 3
-
-```text
-update_available
-```
-
-### 示例 4
-
-```text
-update_not_available
-```
-
-### 示例 5
-
 ```json
 {
   "posting_number": "string"
 }
 ```
 
-### 示例 6
+### 示例 1
 
 ```json
 {

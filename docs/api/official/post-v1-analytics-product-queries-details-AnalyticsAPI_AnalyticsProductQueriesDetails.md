@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/analytics/product-queries/details`
 - Operation ID：`AnalyticsAPI_AnalyticsProductQueriesDetails`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/AnalyticsAPI_AnalyticsProductQueriesDetails
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/AnalyticsAPI_AnalyticsProductQueriesDetails
 - 分组：`analytics`
 
 ## News 更新标记
@@ -14,16 +14,18 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-09-24 | `updated` | /v1/analytics/product-queries/details 更新了方法请求中的 page 和 page_size 参数描述。更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
+| 2025-07-23 | `graduated` | /v1/analytics/product-queries/details 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025723) |
+| 2025-06-20 | `updated` | /v1/analytics/product-queries/details 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
 | 2025-03-20 | `updated` | /v1/analytics/product-queries/details 更新了方法请求中 limit_by_sku，page 和 page_size 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025320) |
 | 2025-03-14 | `new_method` | /v1/analytics/product-queries/details 我们添加了获得特定商品查询数据的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025314) |
 
 ## 页面标题结构
 
 - 有关特定商品查询的信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -62,84 +64,6 @@
 
 ### 示例 0
 
-```text
-date_from
-```
-
-### 示例 1
-
-```text
-date_to
-```
-
-### 示例 2
-
-```text
-date_from
-```
-
-### 示例 3
-
-```text
-BY_SEARCHES
-```
-
-### 示例 4
-
-```text
-BY_VIEWS
-```
-
-### 示例 5
-
-```text
-BY_POSITION
-```
-
-### 示例 6
-
-```text
-BY_CONVERSION
-```
-
-### 示例 7
-
-```text
-BY_GMV
-```
-
-### 示例 8
-
-```text
-BY_VIEWS
-```
-
-### 示例 9
-
-```text
-BY_POSITION
-```
-
-### 示例 10
-
-```text
-BY_CONVERSION
-```
-
-### 示例 11
-
-```text
-DESCENDING
-```
-
-### 示例 12
-
-```text
-ASCENDING
-```
-
-### 示例 13
-
 ```json
 {
   "date_from": "2019-08-24T14:15:22Z",
@@ -155,7 +79,7 @@ ASCENDING
 }
 ```
 
-### 示例 14
+### 示例 1
 
 ```json
 {

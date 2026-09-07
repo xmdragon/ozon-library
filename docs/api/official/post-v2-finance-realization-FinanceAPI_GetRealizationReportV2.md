@@ -6,24 +6,24 @@
 
 - 请求：`POST /v2/finance/realization`
 - Operation ID：`FinanceAPI_GetRealizationReportV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_GetRealizationReportV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FinanceAPI_GetRealizationReportV2
 - 分组：`finance`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-05-21 | `updated` | /v2/finance/realization 已更新方法说明。 — 在错误部分中，为方法 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026521) |
+| 2026-05-21 | `updated` | /v2/finance/realization 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026521) |
 | 2025-12-25 | `removed_field` | /v2/finance/realization 已从方法响应中移除参数 result.header.doc_amount 和 result.header.vat_amount。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | 2025-09-24 | `updated` | /v2/finance/realization 更新了方法响应中的 result.rows.delivery_commission.commission、result.rows.delivery_commission.compensation、result.rows.return_commission.commission 和 result.rows.return_commission.compensation 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 
 ## 页面标题结构
 
 - 商品销售报告 （第2版）
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -48,8 +48,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `header` | object 报告标题页。 |
-| `rows` | Array of objects 报告表格。 |
 
 ### 表格 3
 

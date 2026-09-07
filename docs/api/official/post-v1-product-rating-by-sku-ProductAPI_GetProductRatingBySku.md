@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/product/rating-by-sku`
 - Operation ID：`ProductAPI_GetProductRatingBySku`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_GetProductRatingBySku
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductRatingBySku
 - 分组：`product`
 
 ## 页面标题结构
 
 - 按SKU获得商品的内容排名
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,9 +39,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `products` | Array of objects 商品内容分级。 |
-| `sku` | integer <int64> Ozon 系统中的商品标识符（SKU）。 |
-| `rating` | number <float> 产品内容评级: 从0到100。 |
-| `groups` | Array of objects 构成内容评级的各组特征。 |
 
 ### 表格 3
 

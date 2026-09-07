@@ -6,15 +6,24 @@
 
 - 请求：`POST /v1/review/change-status`
 - Operation ID：`ReviewAPI_ReviewChangeStatus`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReviewAPI_ReviewChangeStatus
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReviewAPI_ReviewChangeStatus
 - 分组：`review`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-08 | `graduated` | /v1/review/change-status 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202678) |
+| 2026-03-31 | `updated` | /v1/review/change-status 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026331) |
+| 2025-11-11 | `updated` | /v1/review/change-status 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251111) |
+| 2025-01-16 | `new_method` | /v1/review/change-status 已添加管理评价的测试方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025116) |
 
 ## 页面标题结构
 
 - 更改评价状态
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -31,18 +40,6 @@
 
 ### 示例 0
 
-```text
-PROCESSED
-```
-
-### 示例 1
-
-```text
-UNPROCESSED
-```
-
-### 示例 2
-
 ```json
 {
   "review_ids": [
@@ -52,7 +49,7 @@ UNPROCESSED
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {}

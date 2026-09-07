@@ -6,22 +6,23 @@
 
 - 请求：`POST /v2/returns/rfbs/get`
 - Operation ID：`RFBSReturnsAPI_ReturnsRfbsGetV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/RFBSReturnsAPI_ReturnsRfbsGetV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/RFBSReturnsAPI_ReturnsRfbsGetV2
 - 分组：`returns`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2025-12-26 | `deprecated_field` | /v2/returns/rfbs/get 参数 returns.client_name 即将废弃，将于2026年2月2日停止支持。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251226) |
 | 2025-09-24 | `updated` | /v2/returns/rfbs/get 更新了方法请求中的 return_id 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 
 ## 页面标题结构
 
 - 退货申请信息
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -45,23 +46,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `returns` | object 申请信息。 |
-| `available_actions` | Array of objects 申请的可用操作的信息。 |
-| `client_name` | string Deprecated 买家姓名。 |
-| `client_photo` | Array of strings 商品照片链接。 |
-| `client_return_method_type` | object 退货方式信息。 |
-| `comment` | string 买家评论。 |
-| `created_at` | string <date-time> 申请创建日期。 |
-| `order_number` | string 订单号。 |
-| `posting_number` | string 货件编号。 |
-| `product` | object 商品信息。 |
-| `rejection_comment` | string 有关申请被拒绝的备注。 |
-| `rejection_reason` | Array of objects 申请被拒绝的原因的信息。 |
-| `return_method_description` | string 商品退货方式。 |
-| `return_number` | string 退货申请编号。 |
-| `return_reason` | object 退货原因信息。 |
-| `ru_post_tracking_number` | string 跟踪号码。 |
-| `state` | object 退货状态信息。 |
-| `warehouse_id` | integer <int64> 仓库标识符。 |
 
 ### 表格 3
 
@@ -78,7 +62,7 @@
 | `product` | object 商品信息。 |
 | `rejection_comment` | string 有关申请被拒绝的备注。 |
 | `rejection_reason` | Array of objects 申请被拒绝的原因的信息。 |
-| `return_method_description` | string 商品退货方式。 |
+| `return_method_description` | string Deprecated 商品退货方式。 |
 | `return_number` | string 退货申请编号。 |
 | `return_reason` | object 退货原因信息。 |
 | `ru_post_tracking_number` | string 跟踪号码。 |

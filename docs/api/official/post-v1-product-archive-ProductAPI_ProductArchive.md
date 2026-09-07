@@ -6,16 +6,22 @@
 
 - 请求：`POST /v1/product/archive`
 - Operation ID：`ProductAPI_ProductArchive`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductArchive
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductArchive
 - 分组：`product`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-05 | `updated` | /v1/product/archive 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 
 ## 页面标题结构
 
 - 将商品归档
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -44,18 +50,6 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
 ```json
 {
   "product_id": [
@@ -65,7 +59,7 @@ true
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

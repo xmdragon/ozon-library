@@ -6,23 +6,24 @@
 
 - 请求：`POST /v1/product/update/offer-id`
 - Operation ID：`ProductAPI_ProductUpdateOfferID`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductUpdateOfferID
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductUpdateOfferID
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-10 | `updated` | /v1/product/update/offer-id 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-12 | `updated` | /v1/product/update/offer-id 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2026-03-17 | `updated` | /v1/product/update/offer-id 更新了方法描述。为方法请求中的 update_offer_id 参数添加了限制。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026317) |
 
 ## 页面标题结构
 
 - 从卖家的系统中改变商品货号
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,8 +47,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `errors` | Array of objects 错误清单。 |
-| `message` | string 错误信息。 |
-| `offer_id` | string 无法更改的卖家系统中的商品标识符是商品货号。 |
 
 ### 表格 3
 
@@ -60,54 +59,6 @@
 
 ### 示例 0
 
-```text
-offer_id
-```
-
-### 示例 1
-
-```text
-offer_id
-```
-
-### 示例 2
-
-```text
-offer_id
-```
-
-### 示例 3
-
-```text
-OFFER_ID_ALREADY_EXISTS
-```
-
-### 示例 4
-
-```text
-429
-```
-
-### 示例 5
-
-```text
-message
-```
-
-### 示例 6
-
-```text
-Item-Retry-After
-```
-
-### 示例 7
-
-```text
-Item-Rate-Limit-Remaining
-```
-
-### 示例 8
-
 ```json
 {
   "update_offer_id": [
@@ -119,7 +70,7 @@ Item-Rate-Limit-Remaining
 }
 ```
 
-### 示例 9
+### 示例 1
 
 ```json
 {

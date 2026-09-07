@@ -6,16 +6,16 @@
 
 - 请求：`POST /v1/polygon/bind`
 - Operation ID：`PolygonAPI_BindPolygon`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PolygonAPI_BindPolygon
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PolygonAPI_BindPolygon
 - 分组：`polygon`
 
 ## 页面标题结构
 
 - 将快递方式与快递设施联系起来
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v6/fbs/posting/product/exemplar/set`
 - Operation ID：`PostingAPI_FbsPostingProductExemplarSetV6`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_FbsPostingProductExemplarSetV6
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_FbsPostingProductExemplarSetV6
 - 分组：`fbs`
 
 ## News 更新标记
@@ -14,12 +14,14 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-10-16 | `updated` | /v6/fbs/posting/product/exemplar/set 更新了方法请求中的 products.exemplars.marks 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
+| 2025-09-29 | `updated` | /v6/fbs/posting/product/exemplar/set 更新了方法请求中products.exemplars.marks参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
+| 2025-02-17 | `new_method` | /v6/fbs/posting/product/exemplar/set 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
 
 ## 页面标题结构
 
 - 检查并保存份数数据
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例
@@ -44,18 +46,6 @@
 ## 示例
 
 ### 示例 0
-
-```text
-product_id
-```
-
-### 示例 1
-
-```text
-exemplars
-```
-
-### 示例 2
 
 ```json
 {
@@ -84,7 +74,7 @@ exemplars
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

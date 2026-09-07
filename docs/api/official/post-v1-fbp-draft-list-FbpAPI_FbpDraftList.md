@@ -6,15 +6,21 @@
 
 - 请求：`POST /v1/fbp/draft/list`
 - Operation ID：`FbpAPI_FbpDraftList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpDraftList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpDraftList
 - 分组：`fbp`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-05-28 | `updated` | /v1/fbp/draft/list 更新了方法响应中items.delivery_details.direct_details.timeslot_details.timeslot.timeslot_end、items.delivery_details.direct_details.timeslot_details.timeslot.timeslot_start、items.delivery_details.drop_off_point.timeslot.timeslot_end和items.delivery_details.drop_off_point.timeslot.timeslot_start参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026528) |
 
 ## 页面标题结构
 
 - 交货草稿列表
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,18 +45,6 @@
 
 ### 示例 0
 
-```text
-last_id
-```
-
-### 示例 1
-
-```text
-true
-```
-
-### 示例 2
-
 ```json
 {
   "count": 0,
@@ -58,7 +52,7 @@ true
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

@@ -6,22 +6,22 @@
 
 - 请求：`POST /v4/posting/fbs/ship/package`
 - Operation ID：`PostingAPI_ShipFbsPostingPackage`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PostingAPI_ShipFbsPostingPackage
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PostingAPI_ShipFbsPostingPackage
 - 分组：`posting`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2025-10-23 | `updated` | /v4/posting/fbs/ship/package 更新了方法描述。 — 在错误板块中，已为 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
+| 2025-10-23 | `updated` | /v4/posting/fbs/ship/package 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
 
 ## 页面标题结构
 
 - 货件的部分装配 (第4方案)
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -51,12 +51,6 @@
 
 ### 示例 0
 
-```text
-awaiting_packaging
-```
-
-### 示例 1
-
 ```json
 {
   "posting_number": "string",
@@ -72,7 +66,7 @@ awaiting_packaging
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

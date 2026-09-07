@@ -6,23 +6,24 @@
 
 - 请求：`POST /v2/product/pictures/info`
 - Operation ID：`ProductAPI_ProductInfoPicturesV2`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ProductInfoPicturesV2
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ProductInfoPicturesV2
 - 分组：`product`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-07-10 | `removed_field` | /v2/product/pictures/info 已从方法响应中删除了items.photo_360参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2025-06-04 | `added_field` | /v2/product/pictures/info 在方法的响应中新增了参数items.errors。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202564) |
 | 2025-01-14 | `graduated` | /v2/product/pictures/info 已将此方法从测试版移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025114) |
 
 ## 页面标题结构
 
 - 获取商品图片
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -46,12 +47,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `items` | Array of objects 商品图片。 |
-| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
-| `primary_photo` | Array of strings 主图链接。 |
-| `photo` | Array of strings 商品照片链接。 |
-| `color_photo` | Array of strings 上传的颜色样本链接。 |
-| `photo_360` | Array of strings 360度图片链接。 |
-| `errors` | Array of objects 商品图片相关错误列表。 |
 
 ### 表格 3
 
@@ -61,18 +56,11 @@
 | `primary_photo` | Array of strings 主图链接。 |
 | `photo` | Array of strings 商品照片链接。 |
 | `color_photo` | Array of strings 上传的颜色样本链接。 |
-| `photo_360` | Array of strings 360度图片链接。 |
 | `errors` | Array of objects 商品图片相关错误列表。 |
 
 ## 示例
 
 ### 示例 0
-
-```text
-product_id
-```
-
-### 示例 1
 
 ```json
 {
@@ -82,7 +70,7 @@ product_id
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {
@@ -99,10 +87,6 @@ product_id
       "color_photo": [
         "https://test-test.ru/images/products/100500/color_red.jpg",
         "https://test-test.ru/images/products/100500/color_blue.jpg"
-      ],
-      "photo_360": [
-        "https://test-test.ru/images/products/100500/360_view1.jpg",
-        "https://test-test.ru/images/products/100500/360_view2.jpg"
       ],
       "errors": [
         {

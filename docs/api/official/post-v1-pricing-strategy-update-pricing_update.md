@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/pricing-strategy/update`
 - Operation ID：`pricing_update`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/pricing_update
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/pricing_update
 - 分组：`pricing-strategy`
 
 ## 页面标题结构
 
 - 更新策略
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 

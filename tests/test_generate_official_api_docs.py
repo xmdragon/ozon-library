@@ -167,6 +167,20 @@ class GenerateOfficialApiDocsTest(unittest.TestCase):
         self.assertIn("| 2026-06-11 | `deprecated_method` |", doc)
         self.assertIn("/v1/review/list 该方法已弃用", doc)
 
+    def test_render_operation_doc_keeps_news_table_rows_single_line(self):
+        operation = sample_operation()
+        operation["news_updates"] = [{
+            "date": "2026-07-30",
+            "labels": ["updated"],
+            "text": "第一行\n第二行",
+            "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026730",
+        }]
+
+        doc = render_operation_doc(operation)
+
+        self.assertIn("| 2026-07-30 | `updated` | 第一行<br>第二行 |", doc)
+        self.assertNotIn("| 2026-07-30 | `updated` | 第一行\n第二行 |", doc)
+
     def test_generate_docs_writes_readme_and_one_file_per_operation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

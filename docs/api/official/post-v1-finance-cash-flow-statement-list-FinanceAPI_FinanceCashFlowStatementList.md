@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/finance/cash-flow-statement/list`
 - Operation ID：`FinanceAPI_FinanceCashFlowStatementList`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FinanceAPI_FinanceCashFlowStatementList
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FinanceAPI_FinanceCashFlowStatementList
 - 分组：`finance`
 
 ## News 更新标记
@@ -15,14 +15,15 @@
 | --- | --- | --- | --- |
 | 2026-05-14 | `updated` | /v1/finance/cash-flow-statement/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
 | 2025-12-12 | `updated` | /v1/finance/cash-flow-statement/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251212) |
+| 2025-08-01 | `updated` | /v1/finance/cash-flow-statement/list 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202581) |
 
 ## 页面标题结构
 
 - 财务报告
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -49,9 +50,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 方法操作结果。 |
-| `cash_flows` | Array of objects 报告清单。 |
-| `details` | Array of objects 细节信息。 |
-| `page_count` | integer <int64> 含有报告的页数。 |
 
 ### 表格 3
 
@@ -65,12 +63,6 @@
 
 ### 示例 0
 
-```text
-true
-```
-
-### 示例 1
-
 ```json
 {
   "date": {
@@ -83,7 +75,7 @@ true
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {

@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/report/products/create`
 - Operation ID：`ReportAPI_CreateCompanyProductsReport`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ReportAPI_CreateCompanyProductsReport
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ReportAPI_CreateCompanyProductsReport
 - 分组：`report`
 
 ## News 更新标记
@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 商品报告
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -49,7 +49,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `code` | string 报告的唯一识别码。要获取报告，请将此值传递到方法 /v1/report/info。 |
 
 ### 表格 3
 
@@ -61,102 +60,6 @@
 
 ### 示例 0
 
-```text
-product_id
-```
-
-### 示例 1
-
-```text
-product_id
-```
-
-### 示例 2
-
-```text
-product_id
-```
-
-### 示例 3
-
-```text
-product_id
-```
-
-### 示例 4
-
-```text
-RU
-```
-
-### 示例 5
-
-```text
-EN
-```
-
-### 示例 6
-
-```text
-ALL
-```
-
-### 示例 7
-
-```text
-VALIDATION_STATE_FAIL
-```
-
-### 示例 8
-
-```text
-TO_SUPPLY
-```
-
-### 示例 9
-
-```text
-IN_SALE
-```
-
-### 示例 10
-
-```text
-REMOVED_FROM_SALE
-```
-
-### 示例 11
-
-```text
-PARTIAL_APPROVED
-```
-
-### 示例 12
-
-```text
-IMAGE_ABSENT
-```
-
-### 示例 13
-
-```text
-ARCHIVED
-```
-
-### 示例 14
-
-```text
-AUTO_ARCHIVED
-```
-
-### 示例 15
-
-```text
-MANUAL_ARCHIVED
-```
-
-### 示例 16
-
 ```json
 {
   "language": "DEFAULT",
@@ -167,7 +70,7 @@ MANUAL_ARCHIVED
 }
 ```
 
-### 示例 17
+### 示例 1
 
 ```json
 {

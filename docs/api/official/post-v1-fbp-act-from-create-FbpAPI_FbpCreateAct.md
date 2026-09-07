@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/fbp/act-from/create`
 - Operation ID：`FbpAPI_FbpCreateAct`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/FbpAPI_FbpCreateAct
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/FbpAPI_FbpCreateAct
 - 分组：`fbp`
 
 ## 页面标题结构
 
 - 生成验收证明书
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -30,7 +30,7 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `errors` | Array of strings Default: "CREATE_ACT_ERROR_REASON_UNSPECIFIED"Items Enum: "CREATE_ACT_ERROR_REASON_UNSPECIFIED" "INVALID_ORDER_TYPE" 错误原因： CREATE_ACT_ERROR_REASON_UNSPECIFIED ——未定义； INVALID_ORDER_TYPE ——无法为指定标识符创建验收证明书。 |
+| `errors` | Array of strings Default: "CREATE_ACT_ERROR_REASON_UNSPECIFIED" Items Enum: "CREATE_ACT_ERROR_REASON_UNSPECIFIED" "INVALID_ORDER_TYPE" 错误原因： CREATE_ACT_ERROR_REASON_UNSPECIFIED ——未定义； INVALID_ORDER_TYPE ——无法为指定标识符创建验收证明书。 |
 | `file_uuid` | string 验收证明书标识符。 |
 | `is_success` | boolean true，前提是请求中没有错误。 |
 
@@ -38,31 +38,13 @@
 
 ### 示例 0
 
-```text
-CREATE_ACT_ERROR_REASON_UNSPECIFIED
-```
-
-### 示例 1
-
-```text
-INVALID_ORDER_TYPE
-```
-
-### 示例 2
-
-```text
-true
-```
-
-### 示例 3
-
 ```json
 {
   "supply_id": "string"
 }
 ```
 
-### 示例 4
+### 示例 1
 
 ```json
 {

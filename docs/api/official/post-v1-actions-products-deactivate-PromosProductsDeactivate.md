@@ -6,15 +6,15 @@
 
 - 请求：`POST /v1/actions/products/deactivate`
 - Operation ID：`PromosProductsDeactivate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PromosProductsDeactivate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PromosProductsDeactivate
 - 分组：`actions`
 
 ## 页面标题结构
 
 - 从活动中删除商品
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -32,8 +32,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `product_ids` | Array of numbers <double> 已从促销活动中删除的商品ID列表。 |
-| `rejected` | Array of objects 不能从促销活动中删除的商品清单。 |
 
 ### 表格 2
 

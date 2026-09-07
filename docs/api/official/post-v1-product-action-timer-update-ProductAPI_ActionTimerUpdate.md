@@ -6,7 +6,7 @@
 
 - 请求：`POST /v1/product/action/timer/update`
 - Operation ID：`ProductAPI_ActionTimerUpdate`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/ProductAPI_ActionTimerUpdate
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ActionTimerUpdate
 - 分组：`product`
 
 ## News 更新标记
@@ -18,8 +18,8 @@
 ## 页面标题结构
 
 - 最低价格时效性计时器更新
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
 - 请求范例
 - 回复范例
@@ -43,25 +43,13 @@
 
 ### 示例 0
 
-```text
-product_ids
-```
-
-### 示例 1
-
-```text
-product_id
-```
-
-### 示例 2
-
 ```json
 {
   "product_ids": 88787267123
 }
 ```
 
-### 示例 3
+### 示例 1
 
 ```json
 {

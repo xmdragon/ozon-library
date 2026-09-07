@@ -6,15 +6,23 @@
 
 - 请求：`POST /v1/actions/candidates`
 - Operation ID：`PromosCandidates`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/?__rr=1#operation/PromosCandidates
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PromosCandidates
 - 分组：`actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2025-12-23 | `added_field` | /v1/actions/candidates 添加了参数 result.products.current_boost、result.products.price_min_elastic、result.products.price_max_elastic、result.products.min_boost 和 result.products.max_boost 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251223) |
+| 2025-05-15 | `added_field` | /v1/actions/candidates 添加了参数 result.products.alert_max_action_price_failed 和 result.products.alert_max_action_price 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025515) |
+| 2025-03-13 | `added_field`, `deprecated_field` | /v1/actions/candidates 我们已将 offset 参数标记为已弃用，并添加了 last_id分页参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025313) |
 
 ## 页面标题结构
 
 - 可用的促销商品清单
-- Request Body schema: application/json
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -33,9 +41,6 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
-| `products` | Array of objects 商品清单。 |
-| `total` | number <double> 可用于活动的商品总数。 |
-| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
 
 ### 表格 2
 
@@ -49,12 +54,6 @@
 
 ### 示例 0
 
-```text
-last_id
-```
-
-### 示例 1
-
 ```json
 {
   "action_id": 63337,
@@ -63,7 +62,7 @@ last_id
 }
 ```
 
-### 示例 2
+### 示例 1
 
 ```json
 {
