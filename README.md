@@ -25,6 +25,10 @@
 - `workflows/`：维护资料库的操作流程。
 - `skills/ozon-library-maintainer/`：仓库本地维护 skill，不安装到全局。
 
+## 搜索分析专题
+
+- [搜索查询报告与每日快照（KISS）](docs/seller-web/search-query-reports.md)：Seller内部报告计划、18字段应用契约、7/28天快照、动态榜单及容错取舍；未实测部分明确标注。
+
 ## 来源规则
 
 官方 Seller API 文档必须通过 Chrome 当前页面抽取，不使用直接下载或外部抓取替代。抽取结果写入 `indexes/official-seller-api.operations.json`，News 写入 `indexes/official-seller-api.news.json`，再运行 `tools/apply_official_api_news.py` 合并废弃和字段变更标记，最后用 `tools/generate_official_api_docs.py` 展开到 `docs/api/official/`。
