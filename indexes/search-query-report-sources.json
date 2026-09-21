@@ -1,0 +1,35 @@
+{
+  "topic": "ozon-search-query-reports",
+  "status": "design_reference_not_live_verified",
+  "document": "docs/seller-web/search-query-reports.md",
+  "source_note": "docs/source-notes/search-query-reports.md",
+  "user_direction": {
+    "principle": "KISS",
+    "use": "参考分析",
+    "error_tolerance": "允许10%以内错误；未定义统计分母或测量窗口，不视为已证明的准确率",
+    "freshness": "不要求100%及时"
+  },
+  "sources": [
+    {
+      "repository": "xmdragon/AICollection",
+      "pull_request": 2181,
+      "reviewed_head": "6f9676325dcd1be1bf3c741bce207543a8ecf188",
+      "path": "docs/superpowers/plans/2026-09-20-ozon-search-snapshots.md",
+      "kind": "implementation_plan"
+    },
+    {
+      "repository": "xmdragon/ZhiPin",
+      "pull_request": 481,
+      "reviewed_head": "ef7c4762f1fbfc8abc9e87bd04cab996dacee45d",
+      "path": "docs/plans/2026-09-20-ozon-search-report-sync.md",
+      "kind": "implementation_plan"
+    }
+  ],
+  "unverified": [
+    "actual_metrics_array",
+    "raw_xlsx_headers_and_units",
+    "create_and_status_response_shape",
+    "source_generated_at_availability"
+  ],
+  "live_ozon_requests_performed": false
+}
