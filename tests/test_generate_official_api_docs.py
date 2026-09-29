@@ -57,6 +57,25 @@ class GenerateOfficialApiDocsTest(unittest.TestCase):
         )
         self.assertIn("https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList", doc)
 
+    def test_render_variant_schema_and_derived_request_template(self):
+        operation = sample_operation()
+        operation["tables"] = [{
+            "index": 2,
+            "variant": "products[]：action_price 方案",
+            "rows": [["action_price required", "number <double> 商品的促销价格。"]],
+        }]
+        operation["request_templates"] = [{
+            "variant": "action_price 方案",
+            "note": "根据官方字段整理。",
+            "body": {"products": [{"action_price": 100}]},
+        }]
+
+        doc = render_operation_doc(operation)
+        self.assertIn("### 表格 2：products[]：action_price 方案", doc)
+        self.assertIn("| `action_price` required | number <double> 商品的促销价格。 |", doc)
+        self.assertIn("以下示意根据官方字段结构整理", doc)
+        self.assertIn('"action_price": 100', doc)
+
     def test_render_operation_doc_splits_collapsed_schema_fields(self):
         operation = sample_operation()
         operation["tables"] = [

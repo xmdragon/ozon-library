@@ -4,16 +4,24 @@
 
 ## 摘要
 
-- News 条目数：163
-- 当前方法页已标记废弃/移除：10
+- News 条目数：170
+- 当前方法页已标记废弃/移除：18
 - News 中提到但当前 operation 索引不存在的废弃/移除方法：48
-- 标签统计：`added_field`: 66, `deprecated_field`: 11, `deprecated_method`: 37, `graduated`: 59, `new_method`: 74, `removed_field`: 17, `removed_method`: 40, `updated`: 182
+- 标签统计：`added_field`: 70, `deprecated_field`: 16, `deprecated_method`: 45, `graduated`: 59, `new_method`: 88, `removed_field`: 17, `removed_method`: 40, `updated`: 189
 
 ## 已在当前方法页标记的方法
 
 | 方法 | 状态 | 日期 | 替代方法 | News |
 | --- | --- | --- | --- | --- |
+| `/v1/actions/auto-add/products/candidates` | `deprecated` | 2026-09-23 | `/v2/actions/auto-add/products/candidates` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+| `/v1/actions/auto-add/products/delete` | `deprecated` | 2026-09-23 | `/v2/actions/auto-add/products/delete` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+| `/v1/actions/auto-add/products/list` | `deprecated` | 2026-09-23 | `/v2/actions/auto-add/products/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+| `/v1/actions/auto-add/products/update` | `deprecated` | 2026-09-23 | `/v2/actions/auto-add/products/update` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+| `/v1/actions/candidates` | `deprecated` | 2026-09-23 | `/v2/actions/candidates` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 | `/v1/actions/discounts-task/list` | `deprecated` | 2026-01-29 | `/v2/actions/discounts-task/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026129) |
+| `/v1/actions/products` | `deprecated` | 2026-09-23 | `/v2/actions/products` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+| `/v1/actions/products/activate` | `deprecated` | 2026-09-23 | `/v1/actions/products/update` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+| `/v1/actions/products/deactivate` | `deprecated` | 2026-09-23 | `/v2/actions/products/deactivate` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 | `/v1/delivery-method/list` | `deprecated` | 2026-03-24 | `/v2/delivery-method/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
 | `/v1/posting/carriage-available/list` | `deprecated` | 2026-02-16 | `/v2/carriage/delivery/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026216) |
 | `/v1/product/pictures/import` | `deprecated` | 2026-09-03 | `/v2/product/pictures/import` | [来源](https://docs.ozon.ru/api/seller/zh/#section/202693) |
@@ -98,6 +106,7 @@
 | `/v1/pricing-strategy/product/info` | 2025-06-19 | `deprecated_field` | /v1/pricing-strategy/product/info 并将参数 result.strategy_competitor_id 标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025619) |
 | `/v1/product/import-by-sku` | 2025-05-06 | `removed_field` | /v1/product/import-by-sku 已从方法请求中移除参数 items.premium_price。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | `/v1/product/import/info` | 2025-05-06 | `removed_field` | /v1/product/import/info 已从方法响应中移除参数 result.items.errors.optional_description_elements。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
+| `/v1/product/import/prices` | 2026-09-11 | `deprecated_field` | /v1/product/import/prices 已将方法请求中的 prices.auto_action_enabled 和 prices.manage_elastic_boosting_through_price 参数标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026911) |
 | `/v1/product/import/prices` | 2025-10-22 | `added_field` | /v1/product/import/prices 已添加参数 prices.manage_elastic_boosting_through_price 到方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251022) |
 | `/v1/product/import/prices` | 2025-02-24 | `added_field` | /v1/product/import/prices 在方法请求中添加了参数 prices.net_price，用于指定商品的成本价。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025224) |
 | `/v1/product/import/prices` | 2025-01-15 | `added_field` | /v1/product/import/prices 添加字段 prices.min_price_for_auto_actions_enabled 在方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025115) |
@@ -114,6 +123,7 @@
 | `/v1/returns/list` | 2025-12-12 | `removed_field` | /v1/returns/list 移除了方法请求中参数 filter.visual_status_name 的值 ReturnCompensated。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251212) |
 | `/v1/returns/list` | 2025-11-20 | `added_field` | /v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。<br>在方法的响应中添加了参数 returns.compensation_status。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
 | `/v1/roles` | 2026-03-04 | `added_field` | /v1/roles 在方法的响应中新增了参数 expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202634) |
+| `/v1/seller-actions/products/add` | 2026-09-28 | `added_field` | /v1/seller-actions/products/add 在方式的请求中添加了 products.action_price 参数。 更新了方法请求中的 products.discount_percent 参数描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026928) |
 | `/v1/warehouse/fbs/create` | 2025-10-17 | `added_field` | /v1/warehouse/fbs/create 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 | `/v1/warehouse/fbs/first-mile/update` | 2025-10-17 | `added_field` | /v1/warehouse/fbs/first-mile/update 在方法请求中新增了参数 cut_in_time 和 timeslot_id。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251017) |
 | `/v1/warehouse/list` | 2026-04-30 | `added_field` | /v1/warehouse/list 在方式的请求中添加了with.able_to_set_price参数。<br>在方式的响应中添加了result.is_able_to_set_price和result.is_presorted参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026430) |
@@ -151,6 +161,7 @@
 | `/v3/posting/fbs/unfulfilled/list` | 2025-07-02 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法的响应中新增了参数result.postings.requirements.products_requiring_change_country。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202572) |
 | `/v3/posting/fbs/unfulfilled/list` | 2025-06-05 | `added_field` | /v3/posting/fbs/unfulfilled/list 在方法请求中添加了参数 with.legal_info 参数的 和 result.postings.legal_info 到方法的响应中。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202565) |
 | `/v3/posting/fbs/unfulfilled/list` | 2025-05-06 | `removed_field` | /v3/posting/fbs/unfulfilled/list 已从方法响应中移除参数 result.postings.financial_data.products.client_price，result.postings.financial_data.products.picking 和 result.postings.products.mandatory_mark。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
+| `/v3/product/import` | 2026-09-10 | `deprecated_field` | /v3/product/import 我们已将 items.geo_names 参数标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026910) |
 | `/v3/product/import` | 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。<br>已将方法请求中的items.offer_id参数标记为必填。<br>更新了方法描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | `/v3/product/import` | 2025-05-22 | `added_field` | /v3/product/import 添加字段 items.promotions 在方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025522) |
 | `/v3/product/import` | 2025-05-06 | `removed_field` | /v3/product/import 已从方法请求中移除参数 items.image_group_id 和 items.premium_price。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
@@ -159,11 +170,14 @@
 | `/v3/product/info/list` | 2025-10-06 | `deprecated_field`, `added_field` | /v3/product/info/list 参数 items.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025106) |
 | `/v3/product/info/list` | 2025-08-14 | `added_field` | /v3/product/info/list 在方法的响应中新增了参数 items.promotions、items.promotions.is_enabled、items.promotions.type 和 items.sku。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025814) |
 | `/v3/product/info/list` | 2025-08-05 | `deprecated_field` | /v3/product/info/list 已将参数 items.is_prepayment_allowed 标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202585) |
+| `/v3/product/list` | 2026-09-24 | `added_field`, `deprecated_field` | /v3/product/list 在方法的响应中： 我们已将 result.total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 result.total_items 。 新增了 result.total_items 参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
 | `/v3/product/list` | 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。<br>在方法响应中新增了参数result.items.sku。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202679) |
 | `/v4/posting/fbs/list` | 2026-07-22 | `added_field` | /v4/posting/fbs/list 在方式的请求中添加了filter.integration_type_flow参数。<br>在方法响应中新增了postings.integration_type_flow和postings.sorting_center参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026722) |
 | `/v4/product/info/limit` | 2026-06-09 | `added_field` | /v4/product/info/limit 在方法的响应中添加了参数 operation_limits和total.quota_by_category的说明。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202669) |
+| `/v4/product/info/stocks` | 2026-09-24 | `added_field`, `deprecated_field` | /v4/product/info/stocks 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
 | `/v4/product/info/stocks` | 2025-12-18 | `deprecated_field` | /v4/product/info/stocks 已将方法响应中的参数 items.stocks.warehouse_ids 标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | `/v4/product/info/stocks` | 2025-06-11 | `added_field` | /v4/product/info/stocks 在方法的响应中新增了参数items.stocks.warehouse_ids。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025611) |
+| `/v5/product/info/prices` | 2026-09-24 | `added_field`, `deprecated_field` | /v5/product/info/prices 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
 | `/v5/product/info/prices` | 2025-11-12 | `removed_field` | /v5/product/info/prices 在方法回答该price.marketing_price参数已过期，我们已将其从文件中删除。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251112) |
 | `/v5/product/info/prices` | 2025-10-06 | `deprecated_field` | /v5/product/info/prices 参数 items.price.marketing_price 即将废弃，我们将于2025年11月12日关闭该参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025106) |
 | `/v5/product/info/prices` | 2025-05-28 | `added_field` | /v5/product/info/prices 在方法的响应中新增了参数items.price.net_price。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025528) |

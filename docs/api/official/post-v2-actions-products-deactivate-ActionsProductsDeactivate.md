@@ -1,27 +1,27 @@
-# 获取每订单商品销售报告
+# 从活动中删除商品
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
 ## 方法
 
-- 请求：`POST /v1/report/realization/posting/create`
-- Operation ID：`CreateCompanyFinanceRealizationPostingReport`
-- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CreateCompanyFinanceRealizationPostingReport
-- 分组：`report`
+- 请求：`POST /v2/actions/products/deactivate`
+- Operation ID：`ActionsProductsDeactivate`
+- 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsDeactivate
+- 分组：`actions`
 
 ## News 更新标记
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-07-28 | `new_method` | /v1/report/realization/posting/create 添加了用于获取每订单商品销售报告的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026728) |
+| 2026-09-23 | `new_method` | /v2/actions/products/deactivate 新增了操作Ozon促销活动的新方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 
 ## 页面标题结构
 
-- 获取每订单商品销售报告
-- HEADER PARAMETERS
-- REQUEST BODY SCHEMA: application/json
+- 从活动中删除商品
+- header Parameters
+- Request Body schema: application/json
 - 回复
-- RESPONSE SCHEMA: application/json
+- Response Schema: application/json
 - 请求范例
 - 回复范例
 
@@ -38,14 +38,14 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `month` required | integer <int32> 月份。 |
-| `year` required | integer <int32> 年份。 |
+| `action_id` required | integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。 |
+| `product_ids` required | Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。 |
 
 ### 表格 2
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `code` | string 报告的唯一标识符。使用方法/v1/report/info获取报告。 |
+| `product_ids` | Array of strings <uint64> 已移出促销活动的商品ID列表。 |
 
 ## 示例
 
@@ -53,16 +53,10 @@
 
 ```json
 {
-  "month": 0,
-  "year": 0
-}
-```
-
-### 示例 1
-
-```json
-{
-  "code": "string"
+  "action_id": 213139,
+  "product_ids": [
+    999999
+  ]
 }
 ```
 

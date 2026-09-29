@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-24 | `added_field`, `deprecated_field` | /v3/product/list 在方法的响应中： 我们已将 result.total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 result.total_items 。 新增了 result.total_items 参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
 | 2026-07-09 | `added_field` | /v3/product/list 在方式的请求中添加了filter.skus参数。<br>在方法响应中新增了参数result.items.sku。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202679) |
 | 2026-02-10 | `updated` | /v3/product/list 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026210) |
 | 2025-12-25 | `updated` | /v3/product/list 更新了方法响应中的 result.items.quants 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
@@ -42,7 +43,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `filter` | object 商品过滤。 |
-| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
+| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
 | `limit` | integer <int64> 答复的信息数量。默认设置为1。最大值是1000。 |
 
 ### 表格 2
@@ -50,14 +51,19 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 结果。 |
+| `items` | Array of objects 品列表的。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `total` | integer <int32> Deprecated 品牌总数。 |
+| `total_items` | integer <int64> 商品总数。 |
 
 ### 表格 3
 
 | 字段 | 类型/说明 |
 | --- | --- |
 | `items` | Array of objects 品列表的。 |
-| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
-| `total` | integer <int32> 品牌总数。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `total` | integer <int32> Deprecated 品牌总数。 |
+| `total_items` | integer <int64> 商品总数。 |
 
 ## 示例
 
@@ -100,6 +106,7 @@
       }
     ],
     "total": 1,
+    "total_items": 1,
     "last_id": "WzMzOTc5MTc2ODAsMzM5NzkxNzY4MF0="
   }
 }

@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-24 | `added_field`, `deprecated_field` | /v4/product/info/stocks 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
 | 2026-05-05 | `updated` | /v4/product/info/stocks 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2026-02-10 | `updated` | /v4/product/info/stocks 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026210) |
 | 2026-01-27 | `updated` | /v4/product/info/stocks 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026127) |
@@ -56,7 +57,8 @@
 | --- | --- |
 | `cursor` | string 后续数据的选择标志。 |
 | `items` | Array of objects 商品信息。 |
-| `total` | integer <int32> 显示库存信息的独特商品数量。 |
+| `total` | integer <int32> Deprecated 显示库存信息的独特商品数量。 |
+| `total_items` | integer <int64> 显示库存信息的不重复商品数量。 |
 
 ## 示例
 
@@ -122,7 +124,8 @@
     }
   ],
   "cursor": "next-cursor-12345",
-  "total": 2
+  "total": 2,
+  "total_items": 2
 }
 ```
 

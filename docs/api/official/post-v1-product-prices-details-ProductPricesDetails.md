@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-14 | `updated` | /v1/product/prices/details 更新了方法响应中 prices.customer_price 、 prices.price 和 prices.price_indexes 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
 | 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：<br>新增了prices.price_indexes参数；<br>将prices.discount_percent参数标记为已弃用；<br>更新了prices.customer_price参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | 2026-03-04 | `graduated` | /v1/product/prices/details 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
 
@@ -46,16 +47,22 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `prices` | Array of objects 商品价格。 |
+| `customer_price` | object 买家看到的价格。 |
+| `discount_percent` | number <float> Deprecated 由 Ozon 承担的折扣比例。 |
+| `offer_id` | string 卖家系统中的商品标识符（商品货号）。 |
+| `price` | object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 |
+| `price_indexes` | Array of objects 商品价格指数。 |
+| `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ### 表格 3
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `customer_price` | object 网站上的商品价格。 |
+| `customer_price` | object 买家看到的价格。 |
 | `discount_percent` | number <float> Deprecated 由 Ozon 承担的折扣比例。 |
 | `offer_id` | string 卖家系统中的商品标识符（商品货号）。 |
-| `price` | object 商品价格（已包含促销活动或推广优惠）。 |
-| `price_indexes` | Array of objects 价格指数。 |
+| `price` | object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 |
+| `price_indexes` | Array of objects 商品价格指数。 |
 | `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
 
 ## 示例

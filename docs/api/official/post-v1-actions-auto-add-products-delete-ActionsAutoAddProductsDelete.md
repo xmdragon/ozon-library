@@ -1,6 +1,10 @@
-# 从促销活动自动添加列表中删除商品
+# 从促销活动自动添加列表中删除商品 Deprecated
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-09-23。替代方法：`/v2/actions/auto-add/products/delete`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026923
+> News 原文摘要：/v1/actions/auto-add/products/delete 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/delete 。
 
 ## 方法
 
@@ -13,6 +17,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-23 | `deprecated_method` | /v1/actions/auto-add/products/delete 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/delete 。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 | 2026-05-12 | `new_method` | /v1/actions/auto-add/products/delete 新增了用于处理商品自动添加到促销活动中的beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 
 ## 页面标题结构
@@ -39,8 +44,8 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `action_id` | integer <uint64> 促销活动标识符。 |
-| `auto_add_date` | string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 |
-| `product_ids` | Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即product_id。 |
+| `auto_add_date` | string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 |
+| `product_ids` | Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即 product_id 。 |
 
 ### 表格 2
 

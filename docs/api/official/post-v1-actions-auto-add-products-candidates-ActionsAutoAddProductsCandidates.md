@@ -1,6 +1,10 @@
-# 获取可自动添加到促销活动中的商品列表
+# 获取可自动添加到促销活动中的商品列表 Deprecated
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-09-23。替代方法：`/v2/actions/auto-add/products/candidates`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026923
+> News 原文摘要：/v1/actions/auto-add/products/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/candidates 。
 
 ## 方法
 
@@ -13,6 +17,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-23 | `deprecated_method` | /v1/actions/auto-add/products/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/candidates 。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 | 2026-05-12 | `new_method` | /v1/actions/auto-add/products/candidates 新增了用于处理商品自动添加到促销活动中的beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 
 ## 页面标题结构
@@ -39,9 +44,9 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `action_id` required | integer <uint64> 促销活动标识符。 |
-| `auto_add_date` required | string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 |
+| `auto_add_date` required | string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 |
 | `limit` required | integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 |
-| `offset` | integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果offset = 10，响应将从第11个找到的元素开始。 |
+| `offset` | integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果 offset = 10 ，响应将从第11个找到的元素开始。 |
 
 ### 表格 2
 

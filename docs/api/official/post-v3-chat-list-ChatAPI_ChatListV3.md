@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-10 | `updated` | /v3/chat/list 更新了方法响应中参数 chats.chat.chat_type 的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026910) |
 | 2026-06-30 | `updated` | /v3/chat/list 更新了方法响应中chats.chat.chat_type参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026630) |
 | 2026-05-05 | `updated` | /v3/chat/list 更新了方法响应中参数chats.chat.chat_type的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
 | 2026-03-19 | `updated` | /v3/chat/list 更新了方法响应中 chats.chat.chat_type 参数的描。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026319) |

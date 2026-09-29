@@ -235,10 +235,11 @@ def render_operation_doc(operation: Operation) -> str:
     if tables:
         for table in tables:
             table_index = table.get("index", 0)
+            variant = str(table.get("variant") or "")
             table_body = _format_table_rows(table.get("rows")) or _format_schema_text(table.get("text", ""))
             lines.extend(
                 [
-                    f"### 表格 {table_index}",
+                    f"### 表格 {table_index}" + (f"：{variant}" if variant else ""),
                     "",
                     table_body,
                     "",
@@ -249,6 +250,20 @@ def render_operation_doc(operation: Operation) -> str:
 
     lines.extend(["## 示例", ""])
     lines.extend(_render_examples(examples))
+    templates = operation.get("request_templates") or []
+    if templates:
+        lines.extend(["## 请求填写示意", "", "以下示意根据官方字段结构整理，须替换为真实活动与商品 ID。", ""])
+        for template in templates:
+            lines.extend([
+                f"### {template['variant']}",
+                "",
+                _format_text_block(template.get("note", "")),
+                "",
+                "```json",
+                json.dumps(template["body"], ensure_ascii=False, indent=2),
+                "```",
+                "",
+            ])
     lines.extend(
         [
             "## 使用提醒",
