@@ -13,7 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
-| 2026-09-11 | `updated` | /v1/fbp/order/direct/tpl-dlv/edit 添加了用于更新第三方物流公司配送信息的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026911) |
+| 2026-09-11 | `new_method` | /v1/fbp/order/direct/tpl-dlv/edit 添加了用于更新第三方物流公司配送信息的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026911) |
 
 ## 页面标题结构
 

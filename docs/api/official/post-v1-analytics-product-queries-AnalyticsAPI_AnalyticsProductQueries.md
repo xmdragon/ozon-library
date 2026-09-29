@@ -16,6 +16,7 @@
 | 2025-09-24 | `updated` | /v1/analytics/product-queries 更新了方法请求中的 page 和 page_size 参数描述。更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 | 2025-07-23 | `graduated` | /v1/analytics/product-queries 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025723) |
 | 2025-06-20 | `updated` | /v1/analytics/product-queries 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+| 2025-03-13 | `new_method` | /v1/analytics/product-queries 添加了获取商品搜索查询数据的 Beta 方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025313) |
 
 ## 页面标题结构
 

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsUpdate
 - 分组：`actions`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-09-23 | `new_method` | /v1/actions/products/update 新增了操作Ozon促销活动的新方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+
 ## 页面标题结构
 
 - 将商品加入促销活动或更新商品

@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsListV2
 - 分组：`actions`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-09-23 | `new_method` | /v2/actions/auto-add/products/list 新增了操作Ozon促销活动的新方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
+
 ## 页面标题结构
 
 - 获取促销活动自动添加列表中的商品列表

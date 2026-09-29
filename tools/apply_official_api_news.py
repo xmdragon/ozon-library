@@ -61,7 +61,9 @@ def _classify_segment(segment: str) -> List[str]:
         or re.search(r"相关方法已从.{0,12}(文件|文档)中删除", text)
     )
 
-    if "新增了用于" in text or re.search(r"(新增|添加|增加).{0,12}(beta)?方法(版本)?", text):
+    if "新增了用于" in text or re.search(
+        r"(?:新增|添加)了[^。；]{0,100}(?:新方法|Beta方法|方法版本)", text
+    ) or re.search(r"(新增|添加|增加).{0,12}(beta)?方法(版本)?", text):
         labels.append("new_method")
     if method_deprecated and not (field_context and not re.search(r"(该方法|该方式|这些方式)", text)):
         labels.append("deprecated_method")

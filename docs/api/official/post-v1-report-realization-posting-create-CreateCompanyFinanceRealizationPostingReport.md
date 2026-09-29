@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/CreateCompanyFinanceRealizationPostingReport
 - 分组：`report`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-07-28 | `new_method` | /v1/report/realization/posting/create 添加了用于获取每订单商品销售报告的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026728) |
+
 ## 页面标题结构
 
 - 获取每订单商品销售报告

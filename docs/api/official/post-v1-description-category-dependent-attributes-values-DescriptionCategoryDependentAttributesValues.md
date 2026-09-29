@@ -9,6 +9,12 @@
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryDependentAttributesValues
 - 分组：`description-category`
 
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-09-24 | `new_method` | /v1/description-category/dependent-attributes/values 添加了用于处理依赖特征的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
+
 ## 页面标题结构
 
 - 获取子特征的可能值

@@ -157,6 +157,32 @@ class ApplyOfficialApiNewsTest(unittest.TestCase):
         self.assertEqual(summaries[0]["labels"], ["new_method"])
         self.assertEqual(summaries[1]["labels"], ["updated"])
 
+    def test_long_new_method_announcements_cover_each_linked_path(self):
+        cases = [
+            ([
+                "/v1/actions/products/update",
+                "/v2/actions/products/deactivate",
+                "/v2/actions/products",
+                "/v2/actions/candidates",
+                "/v2/actions/auto-add/products/candidates",
+                "/v2/actions/auto-add/products/update",
+                "/v2/actions/auto-add/products/list",
+                "/v2/actions/auto-add/products/delete",
+            ], "新增了操作Ozon促销活动的新方法。"),
+            ([
+                "/v1/description-category/dependent-attributes",
+                "/v1/description-category/dependent-attributes/values",
+            ], "添加了用于处理依赖特征的Beta方法。"),
+            (["/v1/fbp/order/direct/tpl-dlv/edit"], "添加了用于更新第三方物流公司配送信息的Beta方法。"),
+        ]
+        for paths, description in cases:
+            with self.subTest(description=description):
+                entry = {"date": "2026-09-23", "rows": [{"methods": paths, "description": description}]}
+                summaries = {item["path"]: item for item in summarize_news_entry(entry)}
+                self.assertEqual(set(summaries), set(paths))
+                for path in paths:
+                    self.assertIn("new_method", summaries[path]["labels"])
+
 
 if __name__ == "__main__":
     unittest.main()

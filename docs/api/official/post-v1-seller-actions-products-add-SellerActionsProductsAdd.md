@@ -41,6 +41,24 @@
 | `action_id` required | integer <uint64> 促销活动标识符。请通过方法 /v1/seller-actions/list 获取该参数的值。 |
 | `products` required | Array of action_price (object) or discount_percent (object) <= 100 items 商品信息。 |
 
+### 表格 2：products[]：action_price 方案
+
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_price` required | number <double> 商品的促销价格。 |
+| `currency` | string Default: "RUB" Enum: "RUB" "BYN" "KZT" "EUR" "USD" "CNY" 货币： RUB ——俄罗斯卢布； BYN ——白俄罗斯卢布； KZT ——坚戈； EUR ——欧元； USD ——美元； CNY ——人民币。 |
+| `discount_percent` | number <double> 百分比折扣值。如果您选择了“折扣”或“促销码折扣”促销活动机制，并且在 /v1/seller-actions/list 方法中获得了 actions.action_parameters.discount_type = PERCENT ，请传递该参数。 |
+| `sku` required | integer <uint64> Ozon系统中的商品标识符——SKU。 |
+
+### 表格 3：products[]：discount_percent 方案
+
+| 字段 | 类型/说明 |
+| --- | --- |
+| `action_price` | number <double> 商品的促销价格。 |
+| `currency` | string Default: "RUB" Enum: "RUB" "BYN" "KZT" "EUR" "USD" "CNY" 货币： RUB ——俄罗斯卢布； BYN ——白俄罗斯卢布； KZT ——坚戈； EUR ——欧元； USD ——美元； CNY ——人民币。 |
+| `discount_percent` required | number <double> 百分比折扣值。如果您选择了“折扣”或“促销码折扣”促销活动机制，并且在 /v1/seller-actions/list 方法中获得了 actions.action_parameters.discount_type = PERCENT ，请传递该参数。 |
+| `sku` required | integer <uint64> Ozon系统中的商品标识符——SKU。 |
+
 ## 示例
 
 ### 示例 0
@@ -66,6 +84,44 @@
     }
   ],
   "message": "string"
+}
+```
+
+## 请求填写示意
+
+以下示意根据官方字段结构整理，须替换为真实活动与商品 ID。
+
+### action_price 方案
+
+填写商品促销价格；action_id、sku 均需替换为真实标识。
+
+```json
+{
+  "action_id": 0,
+  "products": [
+    {
+      "action_price": 100,
+      "currency": "RUB",
+      "sku": 0
+    }
+  ]
+}
+```
+
+### discount_percent 方案
+
+仅在“折扣”或“促销码折扣”活动且 actions.action_parameters.discount_type 为 PERCENT 时填写；action_id、sku 均需替换为真实标识。
+
+```json
+{
+  "action_id": 0,
+  "products": [
+    {
+      "discount_percent": 10,
+      "currency": "RUB",
+      "sku": 0
+    }
+  ]
 }
 ```
 
