@@ -1,9 +1,500 @@
 {
-  "captured_at": "2026-09-07T10:14:38.290Z",
+  "captured_at": "2026-09-29T09:24:00.918559+00:00",
   "source_url": "https://docs.ozon.ru/api/seller/zh/#tag/News",
   "title": "Ozon Seller API 文件",
-  "entry_count": 163,
+  "entry_count": 170,
   "entries": [
+    {
+      "date": "2026-09-28",
+      "id": "section/2026928",
+      "text": "2026年9月28日 方法 变更 /v1/seller-actions/products/add 在方式的请求中添加了 products.action_price 参数。 更新了方法请求中的 products.discount_percent 参数描述。",
+      "paths": [
+        "/v1/seller-actions/products/add"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026928",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/SellerActionsProductsAdd",
+          "text": "/v1/seller-actions/products/add"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v1/seller-actions/products/add"
+          ],
+          "description": "在方式的请求中添加了 products.action_price 参数。 更新了方法请求中的 products.discount_percent 参数描述。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026928"
+    },
+    {
+      "date": "2026-09-25",
+      "id": "section/2026925",
+      "text": "2026年9月25日 方法 变更 /v3/product/list /v4/product/info/attributes 已为请求方法中的 filter.visibility 参数添加值 SHOWCASE_SELECT_ACTIVE 。 — 新增 限额 部分。",
+      "paths": [
+        "/v3/product/list",
+        "/v4/product/info/attributes"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026925",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList",
+          "text": "/v3/product/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductAttributesV4",
+          "text": "/v4/product/info/attributes"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#tag/Limits",
+          "text": "限额"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v3/product/list",
+            "/v4/product/info/attributes"
+          ],
+          "description": "已为请求方法中的 filter.visibility 参数添加值 SHOWCASE_SELECT_ACTIVE 。"
+        },
+        {
+          "methods": [],
+          "description": "新增 限额 部分。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026925"
+    },
+    {
+      "date": "2026-09-24",
+      "id": "section/2026924",
+      "text": "2026年9月24日 方法 变更 /v1/description-category/dependent-attributes /v1/description-category/dependent-attributes/values 添加了用于处理依赖特征的Beta方法。 /v3/product/list 在方法的响应中： 我们已将 result.total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 result.total_items 。 新增了 result.total_items 参数。 /v4/product/info/stocks /v5/product/info/prices 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。",
+      "paths": [
+        "/v1/description-category/dependent-attributes",
+        "/v1/description-category/dependent-attributes/values",
+        "/v3/product/list",
+        "/v4/product/info/stocks",
+        "/v5/product/info/prices"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026924",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryDependentAttributes",
+          "text": "/v1/description-category/dependent-attributes"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryDependentAttributesValues",
+          "text": "/v1/description-category/dependent-attributes/values"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductList",
+          "text": "/v3/product/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoStocks",
+          "text": "/v4/product/info/stocks"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoPrices",
+          "text": "/v5/product/info/prices"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v1/description-category/dependent-attributes",
+            "/v1/description-category/dependent-attributes/values"
+          ],
+          "description": "添加了用于处理依赖特征的Beta方法。"
+        },
+        {
+          "methods": [
+            "/v3/product/list"
+          ],
+          "description": "在方法的响应中： 我们已将 result.total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 result.total_items 。 新增了 result.total_items 参数。"
+        },
+        {
+          "methods": [
+            "/v4/product/info/stocks",
+            "/v5/product/info/prices"
+          ],
+          "description": "在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026924"
+    },
+    {
+      "date": "2026-09-23",
+      "id": "section/2026923",
+      "text": "2026年9月23日 方法 变更 /v1/actions/products/update /v2/actions/products/deactivate /v2/actions/products /v2/actions/candidates /v2/actions/auto-add/products/candidates /v2/actions/auto-add/products/update /v2/actions/auto-add/products/list /v2/actions/auto-add/products/delete 新增了操作Ozon促销活动的新方法。 /v1/actions/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/candidates 。 /v1/actions/products 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products 。 /v1/actions/products/activate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v1/actions/products/update 。 /v1/actions/products/deactivate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products/deactivate 。 /v1/actions/auto-add/products/list 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/list 。 /v1/actions/auto-add/products/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/candidates 。 /v1/actions/auto-add/products/delete 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/delete 。 /v1/actions/auto-add/products/update 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/update 。",
+      "paths": [
+        "/v1/actions/products/update",
+        "/v2/actions/products/deactivate",
+        "/v2/actions/products",
+        "/v2/actions/candidates",
+        "/v2/actions/auto-add/products/candidates",
+        "/v2/actions/auto-add/products/update",
+        "/v2/actions/auto-add/products/list",
+        "/v2/actions/auto-add/products/delete",
+        "/v1/actions/candidates",
+        "/v1/actions/products",
+        "/v1/actions/products/activate",
+        "/v1/actions/products/deactivate",
+        "/v1/actions/auto-add/products/list",
+        "/v1/actions/auto-add/products/candidates",
+        "/v1/actions/auto-add/products/delete",
+        "/v1/actions/auto-add/products/update"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsUpdate",
+          "text": "/v1/actions/products/update"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsDeactivate",
+          "text": "/v2/actions/products/deactivate"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProducts",
+          "text": "/v2/actions/products"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsCandidates",
+          "text": "/v2/actions/candidates"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsCandidatesV2",
+          "text": "/v2/actions/auto-add/products/candidates"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsUpdateV2",
+          "text": "/v2/actions/auto-add/products/update"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsListV2",
+          "text": "/v2/actions/auto-add/products/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsDeleteV2",
+          "text": "/v2/actions/auto-add/products/delete"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/PromosCandidates",
+          "text": "/v1/actions/candidates"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsCandidates",
+          "text": "/v2/actions/candidates"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/PromosProducts",
+          "text": "/v1/actions/products"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProducts",
+          "text": "/v2/actions/products"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/PromosProductsActivate",
+          "text": "/v1/actions/products/activate"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsUpdate",
+          "text": "/v1/actions/products/update"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/PromosProductsDeactivate",
+          "text": "/v1/actions/products/deactivate"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsDeactivate",
+          "text": "/v2/actions/products/deactivate"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsList",
+          "text": "/v1/actions/auto-add/products/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsListV2",
+          "text": "/v2/actions/auto-add/products/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsCandidates",
+          "text": "/v1/actions/auto-add/products/candidates"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsCandidatesV2",
+          "text": "/v2/actions/auto-add/products/candidates"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsDelete",
+          "text": "/v1/actions/auto-add/products/delete"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsDeleteV2",
+          "text": "/v2/actions/auto-add/products/delete"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsUpdate",
+          "text": "/v1/actions/auto-add/products/update"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsUpdateV2",
+          "text": "/v2/actions/auto-add/products/update"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v1/actions/products/update",
+            "/v2/actions/products/deactivate",
+            "/v2/actions/products",
+            "/v2/actions/candidates",
+            "/v2/actions/auto-add/products/candidates",
+            "/v2/actions/auto-add/products/update",
+            "/v2/actions/auto-add/products/list",
+            "/v2/actions/auto-add/products/delete"
+          ],
+          "description": "新增了操作Ozon促销活动的新方法。"
+        },
+        {
+          "methods": [
+            "/v1/actions/candidates"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/candidates 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/products"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/products/activate"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v1/actions/products/update 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/products/deactivate"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products/deactivate 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/auto-add/products/list"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/list 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/auto-add/products/candidates"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/candidates 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/auto-add/products/delete"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/delete 。"
+        },
+        {
+          "methods": [
+            "/v1/actions/auto-add/products/update"
+          ],
+          "description": "该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/update 。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923"
+    },
+    {
+      "date": "2026-09-14",
+      "id": "section/2026914",
+      "text": "2026年9月14日 方法 变更 /v3/product/import /v1/product/import-by-sku 更新了方法请求中 items.old_price 和 items.price 参数的描述。 /v3/product/info/list 更新了方法响应中 items.min_price 、 items.old_price 和 items.price 参数的描述。 /v1/product/import/prices 更新了方法请求中 prices.min_price 、 prices.min_price_for_auto_actions_enabled 、 prices.old_price 、 prices.price 和 prices.price_strategy_enabled 参数的描述。 /v5/product/info/prices 更新了方法响应中 items.price.marketing_seller_price 、 items.price.min_price 、 items.price.old_price 和 items.price.price 参数的描述。 /v1/product/prices/details 更新了方法响应中 prices.customer_price 、 prices.price 和 prices.price_indexes 参数的描述。",
+      "paths": [
+        "/v3/product/import",
+        "/v1/product/import-by-sku",
+        "/v3/product/info/list",
+        "/v1/product/import/prices",
+        "/v5/product/info/prices",
+        "/v1/product/prices/details"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026914",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsV3",
+          "text": "/v3/product/import"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsBySKU",
+          "text": "/v1/product/import-by-sku"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoList",
+          "text": "/v3/product/info/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsPrices",
+          "text": "/v1/product/import/prices"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_GetProductInfoPrices",
+          "text": "/v5/product/info/prices"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductPricesDetails",
+          "text": "/v1/product/prices/details"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v3/product/import",
+            "/v1/product/import-by-sku"
+          ],
+          "description": "更新了方法请求中 items.old_price 和 items.price 参数的描述。"
+        },
+        {
+          "methods": [
+            "/v3/product/info/list"
+          ],
+          "description": "更新了方法响应中 items.min_price 、 items.old_price 和 items.price 参数的描述。"
+        },
+        {
+          "methods": [
+            "/v1/product/import/prices"
+          ],
+          "description": "更新了方法请求中 prices.min_price 、 prices.min_price_for_auto_actions_enabled 、 prices.old_price 、 prices.price 和 prices.price_strategy_enabled 参数的描述。"
+        },
+        {
+          "methods": [
+            "/v5/product/info/prices"
+          ],
+          "description": "更新了方法响应中 items.price.marketing_seller_price 、 items.price.min_price 、 items.price.old_price 和 items.price.price 参数的描述。"
+        },
+        {
+          "methods": [
+            "/v1/product/prices/details"
+          ],
+          "description": "更新了方法响应中 prices.customer_price 、 prices.price 和 prices.price_indexes 参数的描述。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+    },
+    {
+      "date": "2026-09-11",
+      "id": "section/2026911",
+      "text": "2026年9月11日 方法 变更 /v1/product/import/prices 已将方法请求中的 prices.auto_action_enabled 和 prices.manage_elastic_boosting_through_price 参数标记为已弃用。 /v1/fbp/order/direct/tpl-dlv/edit 添加了用于更新第三方物流公司配送信息的Beta方法。",
+      "paths": [
+        "/v1/product/import/prices",
+        "/v1/fbp/order/direct/tpl-dlv/edit"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026911",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsPrices",
+          "text": "/v1/product/import/prices"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/FbpOrderDirectTplDlvEdit",
+          "text": "/v1/fbp/order/direct/tpl-dlv/edit"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v1/product/import/prices"
+          ],
+          "description": "已将方法请求中的 prices.auto_action_enabled 和 prices.manage_elastic_boosting_through_price 参数标记为已弃用。"
+        },
+        {
+          "methods": [
+            "/v1/fbp/order/direct/tpl-dlv/edit"
+          ],
+          "description": "添加了用于更新第三方物流公司配送信息的Beta方法。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026911"
+    },
+    {
+      "date": "2026-09-10",
+      "id": "section/2026910",
+      "text": "2026年9月10日 方法 变更 /v3/product/import 我们已将 items.geo_names 参数标记为已弃用。 /v3/chat/list 更新了方法响应中参数 chats.chat.chat_type 的说明。 — 在 推送通知 → 新的聊天消息 、 聊天消息已更改 、 您的消息已被买家或客服阅读 和 聊天已关闭 部分中，已更新参数 chat_type 的取值。",
+      "paths": [
+        "/v3/product/import",
+        "/v3/chat/list"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/2026910",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsV3",
+          "text": "/v3/product/import"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ChatAPI_ChatListV3",
+          "text": "/v3/chat/list"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/%E6%96%B0%E7%9A%84%E8%81%8A%E5%A4%A9%E6%B6%88%E6%81%AF",
+          "text": "推送通知 → 新的聊天消息"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/%E8%81%8A%E5%A4%A9%E6%B6%88%E6%81%AF%E5%B7%B2%E6%9B%B4%E6%94%B9",
+          "text": "聊天消息已更改"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/%E6%82%A8%E7%9A%84%E6%B6%88%E6%81%AF%E5%B7%B2%E8%A2%AB%E4%B9%B0%E5%AE%B6%E6%88%96%E5%AE%A2%E6%9C%8D%E9%98%85%E8%AF%BB",
+          "text": "您的消息已被买家或客服阅读"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/%E8%81%8A%E5%A4%A9%E5%B7%B2%E5%85%B3%E9%97%AD",
+          "text": "聊天已关闭"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v3/product/import"
+          ],
+          "description": "我们已将 items.geo_names 参数标记为已弃用。"
+        },
+        {
+          "methods": [
+            "/v3/chat/list"
+          ],
+          "description": "更新了方法响应中参数 chats.chat.chat_type 的说明。"
+        },
+        {
+          "methods": [],
+          "description": "在 推送通知 → 新的聊天消息 、 聊天消息已更改 、 您的消息已被买家或客服阅读 和 聊天已关闭 部分中，已更新参数 chat_type 的取值。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026910"
+    },
     {
       "date": "2026-09-03",
       "id": "section/202693",

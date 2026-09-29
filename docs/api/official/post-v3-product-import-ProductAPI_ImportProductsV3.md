@@ -13,6 +13,8 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-14 | `updated` | /v3/product/import 更新了方法请求中 items.old_price 和 items.price 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
+| 2026-09-10 | `deprecated_field` | /v3/product/import 我们已将 items.geo_names 参数标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026910) |
 | 2026-07-10 | `removed_field` | /v3/product/import 已从方法请求中删除了items.images360参数。<br>已将方法请求中的items.offer_id参数标记为必填。<br>更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-14 | `updated` | /v3/product/import 更新了该方法请求中参数items.promotions.type的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026514) |
 | 2026-05-12 | `updated` | /v3/product/import 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
@@ -59,6 +61,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 查询结果。 |
+| `task_id` | integer <int64> 装卸任务的编号。 |
 
 ### 表格 3
 

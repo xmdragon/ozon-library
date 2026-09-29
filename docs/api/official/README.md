@@ -6,7 +6,7 @@
 
 ## 生成信息
 
-- 方法页数量：262
+- 方法页数量：273
 - 来源：`indexes/official-seller-api.operations.json`
 - 生成器：`tools/generate_official_api_docs.py`
 - 重新生成：`python3 tools/generate_official_api_docs.py`
@@ -16,18 +16,26 @@
 ### actions
 
 - [活动清单](get-v1-actions-Promos.md) - `GET /v1/actions` - `Promos`
-- [获取可自动添加到促销活动中的商品列表](post-v1-actions-auto-add-products-candidates-ActionsAutoAddProductsCandidates.md) - `POST /v1/actions/auto-add/products/candidates` - `ActionsAutoAddProductsCandidates`
-- [从促销活动自动添加列表中删除商品](post-v1-actions-auto-add-products-delete-ActionsAutoAddProductsDelete.md) - `POST /v1/actions/auto-add/products/delete` - `ActionsAutoAddProductsDelete`
-- [获取促销活动自动添加列表中的商品列表](post-v1-actions-auto-add-products-list-ActionsAutoAddProductsList.md) - `POST /v1/actions/auto-add/products/list` - `ActionsAutoAddProductsList`
-- [在促销活动自动添加列表中添加或更新商品](post-v1-actions-auto-add-products-update-ActionsAutoAddProductsUpdate.md) - `POST /v1/actions/auto-add/products/update` - `ActionsAutoAddProductsUpdate`
-- [可用的促销商品清单](post-v1-actions-candidates-PromosCandidates.md) - `POST /v1/actions/candidates` - `PromosCandidates`
+- [获取可自动添加到促销活动中的商品列表 Deprecated](post-v1-actions-auto-add-products-candidates-ActionsAutoAddProductsCandidates.md) - `POST /v1/actions/auto-add/products/candidates` - `ActionsAutoAddProductsCandidates` - **deprecated**
+- [从促销活动自动添加列表中删除商品 Deprecated](post-v1-actions-auto-add-products-delete-ActionsAutoAddProductsDelete.md) - `POST /v1/actions/auto-add/products/delete` - `ActionsAutoAddProductsDelete` - **deprecated**
+- [获取促销活动自动添加列表中的商品列表 Deprecated](post-v1-actions-auto-add-products-list-ActionsAutoAddProductsList.md) - `POST /v1/actions/auto-add/products/list` - `ActionsAutoAddProductsList` - **deprecated**
+- [在促销活动自动添加列表中添加或更新商品 Deprecated](post-v1-actions-auto-add-products-update-ActionsAutoAddProductsUpdate.md) - `POST /v1/actions/auto-add/products/update` - `ActionsAutoAddProductsUpdate` - **deprecated**
+- [可用的促销商品清单 Deprecated](post-v1-actions-candidates-PromosCandidates.md) - `POST /v1/actions/candidates` - `PromosCandidates` - **deprecated**
 - [同意折扣申请](post-v1-actions-discounts-task-approve-promos_task_approve.md) - `POST /v1/actions/discounts-task/approve` - `promos_task_approve`
 - [取消折扣申请](post-v1-actions-discounts-task-decline-promos_task_decline.md) - `POST /v1/actions/discounts-task/decline` - `promos_task_decline`
 - [申请折扣列表](post-v1-actions-discounts-task-list-promos_task_list.md) - `POST /v1/actions/discounts-task/list` - `promos_task_list` - **deprecated**
-- [参与 活动的商品列表](post-v1-actions-products-PromosProducts.md) - `POST /v1/actions/products` - `PromosProducts`
-- [在促销活动中增加一个商品](post-v1-actions-products-activate-PromosProductsActivate.md) - `POST /v1/actions/products/activate` - `PromosProductsActivate`
-- [从活动中删除商品](post-v1-actions-products-deactivate-PromosProductsDeactivate.md) - `POST /v1/actions/products/deactivate` - `PromosProductsDeactivate`
+- [参与 活动的商品列表 Deprecated](post-v1-actions-products-PromosProducts.md) - `POST /v1/actions/products` - `PromosProducts` - **deprecated**
+- [在促销活动中增加一个商品 Deprecated](post-v1-actions-products-activate-PromosProductsActivate.md) - `POST /v1/actions/products/activate` - `PromosProductsActivate` - **deprecated**
+- [从活动中删除商品 Deprecated](post-v1-actions-products-deactivate-PromosProductsDeactivate.md) - `POST /v1/actions/products/deactivate` - `PromosProductsDeactivate` - **deprecated**
+- [将商品加入促销活动或更新商品](post-v1-actions-products-update-ActionsProductsUpdate.md) - `POST /v1/actions/products/update` - `ActionsProductsUpdate`
+- [获取可自动添加到促销活动中的商品列表](post-v2-actions-auto-add-products-candidates-ActionsAutoAddProductsCandidatesV2.md) - `POST /v2/actions/auto-add/products/candidates` - `ActionsAutoAddProductsCandidatesV2`
+- [从促销活动自动添加列表中删除商品](post-v2-actions-auto-add-products-delete-ActionsAutoAddProductsDeleteV2.md) - `POST /v2/actions/auto-add/products/delete` - `ActionsAutoAddProductsDeleteV2`
+- [获取促销活动自动添加列表中的商品列表](post-v2-actions-auto-add-products-list-ActionsAutoAddProductsListV2.md) - `POST /v2/actions/auto-add/products/list` - `ActionsAutoAddProductsListV2`
+- [在促销活动自动添加列表中添加或更新商品](post-v2-actions-auto-add-products-update-ActionsAutoAddProductsUpdateV2.md) - `POST /v2/actions/auto-add/products/update` - `ActionsAutoAddProductsUpdateV2`
+- [可用的促销商品清单](post-v2-actions-candidates-ActionsCandidates.md) - `POST /v2/actions/candidates` - `ActionsCandidates`
 - [获取折扣申请列表](post-v2-actions-discounts-task-list-GetDiscountTaskListV2.md) - `POST /v2/actions/discounts-task/list` - `GetDiscountTaskListV2`
+- [获取参与活动的商品列表](post-v2-actions-products-ActionsProducts.md) - `POST /v2/actions/products` - `ActionsProducts`
+- [从活动中删除商品](post-v2-actions-products-deactivate-ActionsProductsDeactivate.md) - `POST /v2/actions/products/deactivate` - `ActionsProductsDeactivate`
 
 ### analytics
 
@@ -85,6 +93,8 @@
 - [类别特征列表](post-v1-description-category-attribute-DescriptionCategoryAPI_GetAttributes.md) - `POST /v1/description-category/attribute` - `DescriptionCategoryAPI_GetAttributes`
 - [特征值指南](post-v1-description-category-attribute-values-DescriptionCategoryAPI_GetAttributeValues.md) - `POST /v1/description-category/attribute/values` - `DescriptionCategoryAPI_GetAttributeValues`
 - [根据属性的参考值进行搜索](post-v1-description-category-attribute-values-search-DescriptionCategoryAPI_SearchAttributeValues.md) - `POST /v1/description-category/attribute/values/search` - `DescriptionCategoryAPI_SearchAttributeValues`
+- [获取依赖特征](post-v1-description-category-dependent-attributes-DescriptionCategoryDependentAttributes.md) - `POST /v1/description-category/dependent-attributes` - `DescriptionCategoryDependentAttributes`
+- [获取子特征的可能值](post-v1-description-category-dependent-attributes-values-DescriptionCategoryDependentAttributesValues.md) - `POST /v1/description-category/dependent-attributes/values` - `DescriptionCategoryDependentAttributesValues`
 - [获取用于确定商品类目的提示](post-v1-description-category-tips-DescriptionCategoryTips.md) - `POST /v1/description-category/tips` - `DescriptionCategoryTips`
 - [商品类别和类型的树形图](post-v1-description-category-tree-DescriptionCategoryAPI_GetTree.md) - `POST /v1/description-category/tree` - `DescriptionCategoryAPI_GetTree`
 
@@ -127,6 +137,7 @@
 - [更新卖家自配送信息](post-v1-fbp-order-direct-seller-dlv-edit-FbpAPI_FbpOrderDirectSellerDlvEdit.md) - `POST /v1/fbp/order/direct/seller-dlv/edit` - `FbpAPI_FbpOrderDirectSellerDlvEdit`
 - [编辑交货申请中的时间段](post-v1-fbp-order-direct-timeslot-edit-FbpAPI_FbpEditTimeslot.md) - `POST /v1/fbp/order/direct/timeslot/edit` - `FbpAPI_FbpEditTimeslot`
 - [获取交货时间段列表](post-v1-fbp-order-direct-timeslot-list-FbpAPI_FbpAvailableTimeslotList.md) - `POST /v1/fbp/order/direct/timeslot/list` - `FbpAPI_FbpAvailableTimeslotList`
+- [更新第三方物流公司配送信息](post-v1-fbp-order-direct-tpl-dlv-edit-FbpOrderDirectTplDlvEdit.md) - `POST /v1/fbp/order/direct/tpl-dlv/edit` - `FbpOrderDirectTplDlvEdit`
 - [取消 drop-off 交货](post-v1-fbp-order-drop-off-cancel-FbpAPI_FbpOrderDropOffCancel.md) - `POST /v1/fbp/order/drop-off/cancel` - `FbpAPI_FbpOrderDropOffCancel`
 - [编辑收货点的送货信息](post-v1-fbp-order-drop-off-dlv-edit-FbpAPI_FbpOrderDropOffDlvEdit.md) - `POST /v1/fbp/order/drop-off/dlv/edit` - `FbpAPI_FbpOrderDropOffDlvEdit`
 - [获取接收点的营业时间表](post-v1-fbp-order-drop-off-timetable-FbpAPI_FbpOrderDropOffTimetable.md) - `POST /v1/fbp/order/drop-off/timetable` - `FbpAPI_FbpOrderDropOffTimetable`

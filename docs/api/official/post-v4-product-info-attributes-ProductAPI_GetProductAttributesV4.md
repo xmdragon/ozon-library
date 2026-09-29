@@ -39,7 +39,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `filter` | object 商品过滤。 |
-| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
+| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
 | `limit` | integer <int32> [ 1 .. 1000 ] К每页的值的数量。 |
 | `sort_by` | string 商品排序参数： sku — 按Ozon系统中的商品标识符排序； offer_id — 按商品货号排序； id — 按商品标识符排序； title — 按商品名称排序。 |
 | `sort_dir` | string 排序方向： asc — 升序， desc — 降序。 |
@@ -49,7 +49,29 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 查询结果。 |
-| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
+| `attributes` | Array of objects 商品特性的数组。 |
+| `attributes_with_defaults` | Array of integers <int64> 具有默认值的特征标识符列表。 |
+| `barcode` | string 条形码。 |
+| `barcodes` | array of strings 商品的所有条形码。 |
+| `description_category_id` | integer <int64> 类目标识符。<br>请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。 |
+| `color_image` | string 市场营销色彩。 |
+| `complex_attributes` | Array of objects 嵌套特征列表。 |
+| `depth` | integer <int64> 深度。 |
+| `dimension_unit` | string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 |
+| `height` | integer <int64> 包装高度。 |
+| `id` | integer <int64> Ozon系统中商品的标识符 — product_id 。 |
+| `images` | array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 |
+| `model_info` | object 型号信息。 |
+| `name` | string <= 500 characters 商品名称。 |
+| `offer_id` | string 卖家系统中的商品标识符 — 货号。 |
+| `pdf_list` | Array of objects PDF文件列表。 |
+| `primary_image` | string 商品主图链接。 |
+| `sku` | string Ozon 系统中的商品标识符（SKU）。 |
+| `type_id` | integer <int64> 商品类型的标识符。 |
+| `weight` | integer <int64> 商品在包装中的重量。 |
+| `weight_unit` | string 重量测量单位。 |
+| `width` | integer <int64> 包装宽度。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
 | `total` | string <int64> 列表中的商品数量。 |
 
 ### 表格 3
@@ -60,13 +82,13 @@
 | `attributes_with_defaults` | Array of integers <int64> 具有默认值的特征标识符列表。 |
 | `barcode` | string 条形码。 |
 | `barcodes` | array of strings 商品的所有条形码。 |
-| `description_category_id` | integer <int64> 类目标识符。 请将其与以下方法结合使用：/v1/description-category/attribute 和 /v1/description-category/attribute/values。 |
+| `description_category_id` | integer <int64> 类目标识符。<br>请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。 |
 | `color_image` | string 市场营销色彩。 |
 | `complex_attributes` | Array of objects 嵌套特征列表。 |
 | `depth` | integer <int64> 深度。 |
 | `dimension_unit` | string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 |
 | `height` | integer <int64> 包装高度。 |
-| `id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
+| `id` | integer <int64> Ozon系统中商品的标识符 — product_id 。 |
 | `images` | array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 |
 | `model_info` | object 型号信息。 |
 | `name` | string <= 500 characters 商品名称。 |

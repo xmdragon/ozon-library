@@ -1,8 +1,8 @@
 {
-  "captured_at": "2026-09-07T10:12:31.254Z",
+  "captured_at": "2026-09-29T09:24:01.010581+00:00",
   "source_url": "https://docs.ozon.ru/api/seller/zh/#tag/News",
   "title": "Ozon Seller API 文件",
-  "operation_count": 262,
+  "operation_count": 273,
   "operations": [
     {
       "examples": [
@@ -735,6 +735,13 @@
             [
               "result",
               "object 查询结果。"
+            ],
+            [
+              "task_id integer <int64> 装卸任务的编号。"
+            ],
+            [
+              "task_id",
+              "integer <int64> 装卸任务的编号。"
             ]
           ],
           "text": "result object 查询结果。 task_id integer <int64> 装卸任务的编号。"
@@ -752,6 +759,22 @@
       ],
       "title": "创建或更新商品",
       "news_updates": [
+        {
+          "date": "2026-09-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/import 更新了方法请求中 items.old_price 和 items.price 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+        },
+        {
+          "date": "2026-09-10",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v3/product/import 我们已将 items.geo_names 参数标记为已弃用。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026910"
+        },
         {
           "date": "2026-07-10",
           "labels": [
@@ -993,6 +1016,17 @@
             [
               "result",
               "object"
+            ],
+            [
+              "task_id integer <int64> 进口货物任务代码。 unmatched_sku_list Array of integers <int64> 商品Id列表。"
+            ],
+            [
+              "task_id",
+              "integer <int64> 进口货物任务代码。"
+            ],
+            [
+              "unmatched_sku_list",
+              "Array of integers <int64> 商品Id列表。"
             ]
           ],
           "text": "result object task_id integer <int64> 进口货物任务代码。 unmatched_sku_list Array of integers <int64> 商品Id列表。"
@@ -1014,6 +1048,14 @@
       ],
       "title": "通过SKU创建商品",
       "news_updates": [
+        {
+          "date": "2026-09-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import-by-sku 更新了方法请求中 items.old_price 和 items.price 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+        },
         {
           "date": "2026-07-10",
           "labels": [
@@ -1387,11 +1429,11 @@
       "examples": [
         {
           "index": 0,
-          "text": "{\n\"filter\": \n{\n\"offer_id\": \n[\n\"136748\"\n],\n\"product_id\": \n[\n\"223681945\"\n],\n\"skus\": \n[\n\"179737222\"\n],\n\"visibility\": \"ALL\"\n},\n\"last_id\": \"\",\n\"limit\": 100\n}"
+          "text": "{ \"filter\" : { \"offer_id\" : [ \"136748\" ] , \"product_id\" : [ \"223681945\" ] , \"skus\" : [ \"179737222\" ] , \"visibility\" : \"ALL\" } , \"last_id\" : \"\" , \"limit\" : 100 }"
         },
         {
           "index": 1,
-          "text": "{\n\"result\": \n{\n\"items\": \n[\n{\n\"product_id\": 3397917680,\n\"offer_id\": \"2026-01-13 16:56:03 PDF\",\n\"sku\": 987654321,\n\"has_fbo_stocks\": false,\n\"has_fbs_stocks\": false,\n\"archived\": false,\n\"is_discounted\": false,\n\"quants\": [ ]\n}\n],\n\"total\": 1,\n\"last_id\": \"WzMzOTc5MTc2ODAsMzM5NzkxNzY4MF0=\"\n}\n}"
+          "text": "{ \"result\" : { \"items\" : [ { \"product_id\" : 3397917680 , \"offer_id\" : \"2026-01-13 16:56:03 PDF\" , \"sku\" : 987654321 , \"has_fbo_stocks\" : false , \"has_fbs_stocks\" : false , \"archived\" : false , \"is_discounted\" : false , \"quants\" : [ ] } ] , \"total\" : 1 , \"total_items\" : 1 , \"last_id\" : \"WzMzOTc5MTc2ODAsMzM5NzkxNzY4MF0=\" } }"
         }
       ],
       "headings": [
@@ -1432,14 +1474,14 @@
             ],
             [
               "last_id",
-              "string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id。"
+              "string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ],
             [
               "limit",
               "integer <int64> 答复的信息数量。默认设置为1。最大值是1000。"
             ]
           ],
-          "text": "filter object 商品过滤。 last_id string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id。 limit integer <int64> 答复的信息数量。默认设置为1。最大值是1000。"
+          "text": "filter object 商品过滤。 last_id string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 limit integer <int64> 答复的信息数量。默认设置为1。最大值是1000。"
         },
         {
           "index": 2,
@@ -1447,9 +1489,28 @@
             [
               "result",
               "object 结果。"
+            ],
+            [
+              "items Array of objects 品列表的。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 total integer <int32> Deprecated 品牌总数。 total_items integer <int64> 商品总数。"
+            ],
+            [
+              "items",
+              "Array of objects 品列表的。"
+            ],
+            [
+              "last_id",
+              "string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
+            ],
+            [
+              "total",
+              "integer <int32> Deprecated 品牌总数。"
+            ],
+            [
+              "total_items",
+              "integer <int64> 商品总数。"
             ]
           ],
-          "text": "result object 结果。 items Array of objects 品列表的。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 total integer <int32> 品牌总数。"
+          "text": "result object 结果。 items Array of objects 品列表的。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 total integer <int32> Deprecated 品牌总数。 total_items integer <int64> 商品总数。"
         },
         {
           "index": 3,
@@ -1460,18 +1521,31 @@
             ],
             [
               "last_id",
-              "string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。"
+              "string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ],
             [
               "total",
-              "integer <int32> 品牌总数。"
+              "integer <int32> Deprecated 品牌总数。"
+            ],
+            [
+              "total_items",
+              "integer <int64> 商品总数。"
             ]
           ],
-          "text": "items Array of objects 品列表的。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 total integer <int32> 品牌总数。"
+          "text": "items Array of objects 品列表的。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 total integer <int32> Deprecated 品牌总数。 total_items integer <int64> 商品总数。"
         }
       ],
       "title": "品列表的",
       "news_updates": [
+        {
+          "date": "2026-09-24",
+          "labels": [
+            "added_field",
+            "deprecated_field"
+          ],
+          "text": "/v3/product/list 在方法的响应中： 我们已将 result.total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 result.total_items 。 新增了 result.total_items 参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026924"
+        },
         {
           "date": "2026-07-09",
           "labels": [
@@ -1636,14 +1710,14 @@
             ],
             [
               "product_id",
-              "Array of strings <int64> Ozon系统中商品的标识符 — product_id。"
+              "Array of strings <int64> Ozon系统中商品的标识符 — product_id 。"
             ],
             [
               "sku",
               "Array of strings <int64> 商品在 Ozon 系统中的标识符 — SKU。"
             ]
           ],
-          "text": "offer_id Array of strings 商品在卖家系统中的标识符 — 货号。 product_id Array of strings <int64> Ozon系统中商品的标识符 — product_id。 sku Array of strings <int64> 商品在 Ozon 系统中的标识符 — SKU。"
+          "text": "offer_id Array of strings 商品在卖家系统中的标识符 — 货号。 product_id Array of strings <int64> Ozon系统中商品的标识符 — product_id 。 sku Array of strings <int64> 商品在 Ozon 系统中的标识符 — SKU。"
         },
         {
           "index": 2,
@@ -1651,13 +1725,10 @@
             [
               "items",
               "Array of objects 数据数组。"
-            ]
-          ],
-          "text": "items Array of objects 数据数组。 Array () availabilities Array of objects 商品可售数量信息。 barcodes Array of strings 商品的所有条形码。 color_image Array of strings 商品颜色图片。 commissions Array of objects 佣金信息。 created_at string <date-time> 商品的创建日期和时间。 currency_code string 货币单位。 description_category_id integer <int64> 类目标识符。 可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 discounted_fbo_stocks integer <int32> Ozon 仓库中减价商品的库存。 errors Array of objects 创建或验证商品时的错误信息。 has_discounted_fbo_item boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 id integer <int64> 商品标识符。 images Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 is_archived boolean 如果商品是手动归档的，则为 true。 is_autoarchived boolean 如果商品是自动归档的，则为 true。 is_discounted boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true。 如果商品不是减价商品或是由Ozon减价的，则为 false。 is_kgt boolean true，表示商品为超大。仅适用于FBS模式。 is_prepayment_allowed boolean Deprecated 如果支持预付款，则为 true。 is_super boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 min_price string 应用促销后的最低价格。 model_info object 商品型号信息。 name string 名称。 offer_id string 商品在卖家系统中的标识符 — 货号。 old_price string 不含折扣价格。在商品卡片上显示为划线价。 price string 商品的含折扣价格。该值将在商品卡片上显示。 price_indexes object 商品价格指数。 primary_image Array of strings 商品的主图。 promotions Array of objects 促销活动。 sku integer <int64> 商品在 Ozon 系统中的标识符 — SKU。 sources Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。 statuses object 商品状态信息。 stocks object 商品库存信息。 type_id integer <int64> 商品类型标识符。 updated_at string <date-time> 商品的最后更新时间。 vat string 商品的增值税税率。 visibility_details object 商品的可见性设置。 volume_weight number <double> 商品的体积重量。"
-        },
-        {
-          "index": 3,
-          "rows": [
+            ],
+            [
+              "Array () availabilities Array of objects 商品可售数量信息。 barcodes Array of strings 商品的所有条形码。 color_image Array of strings 商品颜色图片。 commissions Array of objects 佣金信息。 created_at string <date-time> 商品的创建日期和时间。 currency_code string 货币单位。 description_category_id integer <int64> 类目标识符。\n可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 discounted_fbo_stocks integer <int32> Ozon 仓库中减价商品的库存。 errors Array of objects 创建或验证商品时的错误信息。 has_discounted_fbo_item boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 id integer <int64> 商品标识符。 images Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 is_archived boolean 如果商品是手动归档的，则为 true 。 is_autoarchived boolean 如果商品是自动归档的，则为 true 。 is_discounted boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。 is_kgt boolean true ，表示商品为超大。仅适用于FBS模式。 is_prepayment_allowed boolean Deprecated 如果支持预付款，则为 true 。 is_super boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 min_price string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。 model_info object 商品型号信息。 name string 名称。 offer_id string 商品在卖家系统中的标识符 — 货号。 old_price string 买家看到的划线价。必须大于 price 。 price string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 price_indexes object 商品价格指数。 primary_image Array of strings 商品的主图。 promotions Array of objects 促销活动。 sku integer <int64> 商品在 Ozon 系统中的标识符 — SKU。 sources Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。 statuses object 商品状态信息。 stocks object 商品库存信息。 type_id integer <int64> 商品类型标识符。 updated_at string <date-time> 商品的最后更新时间。 vat string 商品的增值税税率。 visibility_details object 商品的可见性设置。 volume_weight number <double> 商品的体积重量。"
+            ],
             [
               "availabilities",
               "Array of objects 商品可售数量信息。"
@@ -1684,7 +1755,7 @@
             ],
             [
               "description_category_id",
-              "integer <int64> 类目标识符。 可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。"
+              "integer <int64> 类目标识符。\n可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。"
             ],
             [
               "discounted_fbo_stocks",
@@ -1708,23 +1779,23 @@
             ],
             [
               "is_archived",
-              "boolean 如果商品是手动归档的，则为 true。"
+              "boolean 如果商品是手动归档的，则为 true 。"
             ],
             [
               "is_autoarchived",
-              "boolean 如果商品是自动归档的，则为 true。"
+              "boolean 如果商品是自动归档的，则为 true 。"
             ],
             [
               "is_discounted",
-              "boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true。 如果商品不是减价商品或是由Ozon减价的，则为 false。"
+              "boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。"
             ],
             [
               "is_kgt",
-              "boolean true，表示商品为超大。仅适用于FBS模式。"
+              "boolean true ，表示商品为超大。仅适用于FBS模式。"
             ],
             [
               "is_prepayment_allowed",
-              "boolean Deprecated 如果支持预付款，则为 true。"
+              "boolean Deprecated 如果支持预付款，则为 true 。"
             ],
             [
               "is_super",
@@ -1732,7 +1803,7 @@
             ],
             [
               "min_price",
-              "string 应用促销后的最低价格。"
+              "string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。"
             ],
             [
               "model_info",
@@ -1748,11 +1819,11 @@
             ],
             [
               "old_price",
-              "string 不含折扣价格。在商品卡片上显示为划线价。"
+              "string 买家看到的划线价。必须大于 price 。"
             ],
             [
               "price",
-              "string 商品的含折扣价格。该值将在商品卡片上显示。"
+              "string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。"
             ],
             [
               "price_indexes",
@@ -1803,11 +1874,169 @@
               "number <double> 商品的体积重量。"
             ]
           ],
-          "text": "availabilities Array of objects 商品可售数量信息。 barcodes Array of strings 商品的所有条形码。 color_image Array of strings 商品颜色图片。 commissions Array of objects 佣金信息。 created_at string <date-time> 商品的创建日期和时间。 currency_code string 货币单位。 description_category_id integer <int64> 类目标识符。 可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 discounted_fbo_stocks integer <int32> Ozon 仓库中减价商品的库存。 errors Array of objects 创建或验证商品时的错误信息。 has_discounted_fbo_item boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 id integer <int64> 商品标识符。 images Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 is_archived boolean 如果商品是手动归档的，则为 true。 is_autoarchived boolean 如果商品是自动归档的，则为 true。 is_discounted boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true。 如果商品不是减价商品或是由Ozon减价的，则为 false。 is_kgt boolean true，表示商品为超大。仅适用于FBS模式。 is_prepayment_allowed boolean Deprecated 如果支持预付款，则为 true。 is_super boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 min_price string 应用促销后的最低价格。 model_info object 商品型号信息。 name string 名称。 offer_id string 商品在卖家系统中的标识符 — 货号。 old_price string 不含折扣价格。在商品卡片上显示为划线价。 price string 商品的含折扣价格。该值将在商品卡片上显示。 price_indexes object 商品价格指数。 primary_image Array of strings 商品的主图。 promotions Array of objects 促销活动。 sku integer <int64> 商品在 Ozon 系统中的标识符 — SKU。 sources Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。 statuses object 商品状态信息。 stocks object 商品库存信息。 type_id integer <int64> 商品类型标识符。 updated_at string <date-time> 商品的最后更新时间。 vat string 商品的增值税税率。 visibility_details object 商品的可见性设置。 volume_weight number <double> 商品的体积重量。"
+          "text": "items Array of objects 数据数组。 Array () availabilities Array of objects 商品可售数量信息。 barcodes Array of strings 商品的所有条形码。 color_image Array of strings 商品颜色图片。 commissions Array of objects 佣金信息。 created_at string <date-time> 商品的创建日期和时间。 currency_code string 货币单位。 description_category_id integer <int64> 类目标识符。\n可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 discounted_fbo_stocks integer <int32> Ozon 仓库中减价商品的库存。 errors Array of objects 创建或验证商品时的错误信息。 has_discounted_fbo_item boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 id integer <int64> 商品标识符。 images Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 is_archived boolean 如果商品是手动归档的，则为 true 。 is_autoarchived boolean 如果商品是自动归档的，则为 true 。 is_discounted boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。 is_kgt boolean true ，表示商品为超大。仅适用于FBS模式。 is_prepayment_allowed boolean Deprecated 如果支持预付款，则为 true 。 is_super boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 min_price string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。 model_info object 商品型号信息。 name string 名称。 offer_id string 商品在卖家系统中的标识符 — 货号。 old_price string 买家看到的划线价。必须大于 price 。 price string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 price_indexes object 商品价格指数。 primary_image Array of strings 商品的主图。 promotions Array of objects 促销活动。 sku integer <int64> 商品在 Ozon 系统中的标识符 — SKU。 sources Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。 statuses object 商品状态信息。 stocks object 商品库存信息。 type_id integer <int64> 商品类型标识符。 updated_at string <date-time> 商品的最后更新时间。 vat string 商品的增值税税率。 visibility_details object 商品的可见性设置。 volume_weight number <double> 商品的体积重量。"
+        },
+        {
+          "index": 3,
+          "rows": [
+            [
+              "availabilities",
+              "Array of objects 商品可售数量信息。"
+            ],
+            [
+              "barcodes",
+              "Array of strings 商品的所有条形码。"
+            ],
+            [
+              "color_image",
+              "Array of strings 商品颜色图片。"
+            ],
+            [
+              "commissions",
+              "Array of objects 佣金信息。"
+            ],
+            [
+              "created_at",
+              "string <date-time> 商品的创建日期和时间。"
+            ],
+            [
+              "currency_code",
+              "string 货币单位。"
+            ],
+            [
+              "description_category_id",
+              "integer <int64> 类目标识符。\n可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。"
+            ],
+            [
+              "discounted_fbo_stocks",
+              "integer <int32> Ozon 仓库中减价商品的库存。"
+            ],
+            [
+              "errors",
+              "Array of objects 创建或验证商品时的错误信息。"
+            ],
+            [
+              "has_discounted_fbo_item",
+              "boolean 商品在 Ozon 仓库中是否有减价版的同款商品。"
+            ],
+            [
+              "id",
+              "integer <int64> 商品标识符。"
+            ],
+            [
+              "images",
+              "Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。"
+            ],
+            [
+              "is_archived",
+              "boolean 如果商品是手动归档的，则为 true 。"
+            ],
+            [
+              "is_autoarchived",
+              "boolean 如果商品是自动归档的，则为 true 。"
+            ],
+            [
+              "is_discounted",
+              "boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。"
+            ],
+            [
+              "is_kgt",
+              "boolean true ，表示商品为超大。仅适用于FBS模式。"
+            ],
+            [
+              "is_prepayment_allowed",
+              "boolean Deprecated 如果支持预付款，则为 true 。"
+            ],
+            [
+              "is_super",
+              "boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库"
+            ],
+            [
+              "min_price",
+              "string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。"
+            ],
+            [
+              "model_info",
+              "object 商品型号信息。"
+            ],
+            [
+              "name",
+              "string 名称。"
+            ],
+            [
+              "offer_id",
+              "string 商品在卖家系统中的标识符 — 货号。"
+            ],
+            [
+              "old_price",
+              "string 买家看到的划线价。必须大于 price 。"
+            ],
+            [
+              "price",
+              "string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。"
+            ],
+            [
+              "price_indexes",
+              "object 商品价格指数。"
+            ],
+            [
+              "primary_image",
+              "Array of strings 商品的主图。"
+            ],
+            [
+              "promotions",
+              "Array of objects 促销活动。"
+            ],
+            [
+              "sku",
+              "integer <int64> 商品在 Ozon 系统中的标识符 — SKU。"
+            ],
+            [
+              "sources",
+              "Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。"
+            ],
+            [
+              "statuses",
+              "object 商品状态信息。"
+            ],
+            [
+              "stocks",
+              "object 商品库存信息。"
+            ],
+            [
+              "type_id",
+              "integer <int64> 商品类型标识符。"
+            ],
+            [
+              "updated_at",
+              "string <date-time> 商品的最后更新时间。"
+            ],
+            [
+              "vat",
+              "string 商品的增值税税率。"
+            ],
+            [
+              "visibility_details",
+              "object 商品的可见性设置。"
+            ],
+            [
+              "volume_weight",
+              "number <double> 商品的体积重量。"
+            ]
+          ],
+          "text": "availabilities Array of objects 商品可售数量信息。 barcodes Array of strings 商品的所有条形码。 color_image Array of strings 商品颜色图片。 commissions Array of objects 佣金信息。 created_at string <date-time> 商品的创建日期和时间。 currency_code string 货币单位。 description_category_id integer <int64> 类目标识符。\n可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 discounted_fbo_stocks integer <int32> Ozon 仓库中减价商品的库存。 errors Array of objects 创建或验证商品时的错误信息。 has_discounted_fbo_item boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 id integer <int64> 商品标识符。 images Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 is_archived boolean 如果商品是手动归档的，则为 true 。 is_autoarchived boolean 如果商品是自动归档的，则为 true 。 is_discounted boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。 is_kgt boolean true ，表示商品为超大。仅适用于FBS模式。 is_prepayment_allowed boolean Deprecated 如果支持预付款，则为 true 。 is_super boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 min_price string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。 model_info object 商品型号信息。 name string 名称。 offer_id string 商品在卖家系统中的标识符 — 货号。 old_price string 买家看到的划线价。必须大于 price 。 price string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 price_indexes object 商品价格指数。 primary_image Array of strings 商品的主图。 promotions Array of objects 促销活动。 sku integer <int64> 商品在 Ozon 系统中的标识符 — SKU。 sources Array of objects 商品创建来源信息。自2023年7月1日起，卖家按SDS模式创建商品。 statuses object 商品状态信息。 stocks object 商品库存信息。 type_id integer <int64> 商品类型标识符。 updated_at string <date-time> 商品的最后更新时间。 vat string 商品的增值税税率。 visibility_details object 商品的可见性设置。 volume_weight number <double> 商品的体积重量。"
         }
       ],
       "title": "根据标识符获取商品信息",
       "news_updates": [
+        {
+          "date": "2026-09-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/product/info/list 更新了方法响应中 items.min_price 、 items.old_price 和 items.price 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+        },
         {
           "date": "2026-07-10",
           "labels": [
@@ -1924,7 +2153,7 @@
             ],
             [
               "last_id",
-              "string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+              "string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ],
             [
               "limit",
@@ -1939,7 +2168,7 @@
               "string 排序方向： asc — 升序， desc — 降序。"
             ]
           ],
-          "text": "filter object 商品过滤。 last_id string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。 limit integer <int32> [ 1 .. 1000 ] К每页的值的数量。 sort_by string 商品排序参数： sku — 按Ozon系统中的商品标识符排序； offer_id — 按商品货号排序； id — 按商品标识符排序； title — 按商品名称排序。 sort_dir string 排序方向： asc — 升序， desc — 降序。"
+          "text": "filter object 商品过滤。 last_id string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 limit integer <int32> [ 1 .. 1000 ] К每页的值的数量。 sort_by string 商品排序参数： sku — 按Ozon系统中的商品标识符排序； offer_id — 按商品货号排序； id — 按商品标识符排序； title — 按商品名称排序。 sort_dir string 排序方向： asc — 升序， desc — 降序。"
         },
         {
           "index": 2,
@@ -1949,19 +2178,8 @@
               "Array of objects 查询结果。"
             ],
             [
-              "last_id",
-              "string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+              "Array () attributes Array of objects 商品特性的数组。 attributes_with_defaults Array of integers <int64> 具有默认值的特征标识符列表。 barcode string 条形码。 barcodes array of strings 商品的所有条形码。 description_category_id integer <int64> 类目标识符。\n请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。 color_image string 市场营销色彩。 complex_attributes Array of objects 嵌套特征列表。 depth integer <int64> 深度。 dimension_unit string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 height integer <int64> 包装高度。 id integer <int64> Ozon系统中商品的标识符 — product_id 。 images array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 model_info object 型号信息。 name string <= 500 characters 商品名称。 offer_id string 卖家系统中的商品标识符 — 货号。 pdf_list Array of objects PDF文件列表。 primary_image string 商品主图链接。 sku string Ozon 系统中的商品标识符（SKU）。 type_id integer <int64> 商品类型的标识符。 weight integer <int64> 商品在包装中的重量。 weight_unit string 重量测量单位。 width integer <int64> 包装宽度。"
             ],
-            [
-              "total",
-              "string <int64> 列表中的商品数量。"
-            ]
-          ],
-          "text": "result Array of objects 查询结果。 Array () attributes Array of objects 商品特性的数组。 attributes_with_defaults Array of integers <int64> 具有默认值的特征标识符列表。 barcode string 条形码。 barcodes array of strings 商品的所有条形码。 description_category_id integer <int64> 类目标识符。 请将其与以下方法结合使用：/v1/description-category/attribute 和 /v1/description-category/attribute/values。 color_image string 市场营销色彩。 complex_attributes Array of objects 嵌套特征列表。 depth integer <int64> 深度。 dimension_unit string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 height integer <int64> 包装高度。 id integer <int64> Ozon系统中商品的标识符 — product_id。 images array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 model_info object 型号信息。 name string <= 500 characters 商品名称。 offer_id string 卖家系统中的商品标识符 — 货号。 pdf_list Array of objects PDF文件列表。 primary_image string 商品主图链接。 sku string Ozon 系统中的商品标识符（SKU）。 type_id integer <int64> 商品类型的标识符。 weight integer <int64> 商品在包装中的重量。 weight_unit string 重量测量单位。 width integer <int64> 包装宽度。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定last_id。 total string <int64> 列表中的商品数量。"
-        },
-        {
-          "index": 3,
-          "rows": [
             [
               "attributes",
               "Array of objects 商品特性的数组。"
@@ -1980,7 +2198,7 @@
             ],
             [
               "description_category_id",
-              "integer <int64> 类目标识符。 请将其与以下方法结合使用：/v1/description-category/attribute 和 /v1/description-category/attribute/values。"
+              "integer <int64> 类目标识符。\n请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。"
             ],
             [
               "color_image",
@@ -2004,7 +2222,109 @@
             ],
             [
               "id",
-              "integer <int64> Ozon系统中商品的标识符 — product_id。"
+              "integer <int64> Ozon系统中商品的标识符 — product_id 。"
+            ],
+            [
+              "images",
+              "array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。"
+            ],
+            [
+              "model_info",
+              "object 型号信息。"
+            ],
+            [
+              "name",
+              "string <= 500 characters 商品名称。"
+            ],
+            [
+              "offer_id",
+              "string 卖家系统中的商品标识符 — 货号。"
+            ],
+            [
+              "pdf_list",
+              "Array of objects PDF文件列表。"
+            ],
+            [
+              "primary_image",
+              "string 商品主图链接。"
+            ],
+            [
+              "sku",
+              "string Ozon 系统中的商品标识符（SKU）。"
+            ],
+            [
+              "type_id",
+              "integer <int64> 商品类型的标识符。"
+            ],
+            [
+              "weight",
+              "integer <int64> 商品在包装中的重量。"
+            ],
+            [
+              "weight_unit",
+              "string 重量测量单位。"
+            ],
+            [
+              "width",
+              "integer <int64> 包装宽度。"
+            ],
+            [
+              "last_id",
+              "string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
+            ],
+            [
+              "total",
+              "string <int64> 列表中的商品数量。"
+            ]
+          ],
+          "text": "result Array of objects 查询结果。 Array () attributes Array of objects 商品特性的数组。 attributes_with_defaults Array of integers <int64> 具有默认值的特征标识符列表。 barcode string 条形码。 barcodes array of strings 商品的所有条形码。 description_category_id integer <int64> 类目标识符。\n请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。 color_image string 市场营销色彩。 complex_attributes Array of objects 嵌套特征列表。 depth integer <int64> 深度。 dimension_unit string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 height integer <int64> 包装高度。 id integer <int64> Ozon系统中商品的标识符 — product_id 。 images array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 model_info object 型号信息。 name string <= 500 characters 商品名称。 offer_id string 卖家系统中的商品标识符 — 货号。 pdf_list Array of objects PDF文件列表。 primary_image string 商品主图链接。 sku string Ozon 系统中的商品标识符（SKU）。 type_id integer <int64> 商品类型的标识符。 weight integer <int64> 商品在包装中的重量。 weight_unit string 重量测量单位。 width integer <int64> 包装宽度。 last_id string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 total string <int64> 列表中的商品数量。"
+        },
+        {
+          "index": 3,
+          "rows": [
+            [
+              "attributes",
+              "Array of objects 商品特性的数组。"
+            ],
+            [
+              "attributes_with_defaults",
+              "Array of integers <int64> 具有默认值的特征标识符列表。"
+            ],
+            [
+              "barcode",
+              "string 条形码。"
+            ],
+            [
+              "barcodes",
+              "array of strings 商品的所有条形码。"
+            ],
+            [
+              "description_category_id",
+              "integer <int64> 类目标识符。\n请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。"
+            ],
+            [
+              "color_image",
+              "string 市场营销色彩。"
+            ],
+            [
+              "complex_attributes",
+              "Array of objects 嵌套特征列表。"
+            ],
+            [
+              "depth",
+              "integer <int64> 深度。"
+            ],
+            [
+              "dimension_unit",
+              "string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。"
+            ],
+            [
+              "height",
+              "integer <int64> 包装高度。"
+            ],
+            [
+              "id",
+              "integer <int64> Ozon系统中商品的标识符 — product_id 。"
             ],
             [
               "images",
@@ -2051,7 +2371,7 @@
               "integer <int64> 包装宽度。"
             ]
           ],
-          "text": "attributes Array of objects 商品特性的数组。 attributes_with_defaults Array of integers <int64> 具有默认值的特征标识符列表。 barcode string 条形码。 barcodes array of strings 商品的所有条形码。 description_category_id integer <int64> 类目标识符。 请将其与以下方法结合使用：/v1/description-category/attribute 和 /v1/description-category/attribute/values。 color_image string 市场营销色彩。 complex_attributes Array of objects 嵌套特征列表。 depth integer <int64> 深度。 dimension_unit string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 height integer <int64> 包装高度。 id integer <int64> Ozon系统中商品的标识符 — product_id。 images array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 model_info object 型号信息。 name string <= 500 characters 商品名称。 offer_id string 卖家系统中的商品标识符 — 货号。 pdf_list Array of objects PDF文件列表。 primary_image string 商品主图链接。 sku string Ozon 系统中的商品标识符（SKU）。 type_id integer <int64> 商品类型的标识符。 weight integer <int64> 商品在包装中的重量。 weight_unit string 重量测量单位。 width integer <int64> 包装宽度。"
+          "text": "attributes Array of objects 商品特性的数组。 attributes_with_defaults Array of integers <int64> 具有默认值的特征标识符列表。 barcode string 条形码。 barcodes array of strings 商品的所有条形码。 description_category_id integer <int64> 类目标识符。\n请将其与以下方法结合使用： /v1/description-category/attribute 和 /v1/description-category/attribute/values 。 color_image string 市场营销色彩。 complex_attributes Array of objects 嵌套特征列表。 depth integer <int64> 深度。 dimension_unit string 尺寸的测量单位。 mm —— 毫米， cm —— 厘米， in —— 英寸。 height integer <int64> 包装高度。 id integer <int64> Ozon系统中商品的标识符 — product_id 。 images array of strings 商品图片链接数组。图片顺序与商品卡片中的顺序一致。 model_info object 型号信息。 name string <= 500 characters 商品名称。 offer_id string 卖家系统中的商品标识符 — 货号。 pdf_list Array of objects PDF文件列表。 primary_image string 商品主图链接。 sku string Ozon 系统中的商品标识符（SKU）。 type_id integer <int64> 商品类型的标识符。 weight integer <int64> 商品在包装中的重量。 weight_unit string 重量测量单位。 width integer <int64> 包装宽度。"
         }
       ],
       "title": "获取商品特征描述",
@@ -3206,11 +3526,11 @@
       "examples": [
         {
           "index": 0,
-          "text": "{\n\"cursor\": \"\",\n\"filter\": \n{\n\"offer_id\": \n[\n\"1233213232\"\n],\n\"product_id\": \n[\n\"313455276\"\n],\n\"visibility\": \"ALL\",\n\"with_quant\": \n{\n\"created\": true,\n\"exists\": true\n}\n},\n\"limit\": 100\n}"
+          "text": "{ \"cursor\" : \"\" , \"filter\" : { \"offer_id\" : [ \"1233213232\" ] , \"product_id\" : [ \"313455276\" ] , \"visibility\" : \"ALL\" , \"with_quant\" : { \"created\" : true , \"exists\" : true } } , \"limit\" : 100 }"
         },
         {
           "index": 1,
-          "text": "{\n\"items\": \n[\n{\n\"offer_id\": \"test-offer-123456\",\n\"product_id\": 1000123456,\n\"stocks\": \n[\n{\n\"sku\": 1000123456,\n\"type\": \"fbs\",\n\"present\": 150,\n\"reserved\": 25,\n\"shipment_type\": \"SHIPMENT_TYPE_GENERAL\"\n},\n{\n\"sku\": 1000123456,\n\"type\": \"fbo\",\n\"present\": 75,\n\"reserved\": 10,\n\"shipment_type\": \"SHIPMENT_TYPE_GENERAL\"\n}\n]\n},\n{\n\"offer_id\": \"test-offer-123457\",\n\"product_id\": 1000123457,\n\"stocks\": \n[\n{\n\"sku\": 1000123457,\n\"type\": \"fbs\",\n\"present\": 45,\n\"reserved\": 5,\n\"shipment_type\": \"SHIPMENT_TYPE_BOX\"\n}\n]\n}\n],\n\"cursor\": \"next-cursor-12345\",\n\"total\": 2\n}"
+          "text": "{ \"items\" : [ { \"offer_id\" : \"test-offer-123456\" , \"product_id\" : 1000123456 , \"stocks\" : [ { \"sku\" : 1000123456 , \"type\" : \"fbs\" , \"present\" : 150 , \"reserved\" : 25 , \"shipment_type\" : \"SHIPMENT_TYPE_GENERAL\" } , { \"sku\" : 1000123456 , \"type\" : \"fbo\" , \"present\" : 75 , \"reserved\" : 10 , \"shipment_type\" : \"SHIPMENT_TYPE_GENERAL\" } ] } , { \"offer_id\" : \"test-offer-123457\" , \"product_id\" : 1000123457 , \"stocks\" : [ { \"sku\" : 1000123457 , \"type\" : \"fbs\" , \"present\" : 45 , \"reserved\" : 5 , \"shipment_type\" : \"SHIPMENT_TYPE_BOX\" } ] } ] , \"cursor\" : \"next-cursor-12345\" , \"total\" : 2 , \"total_items\" : 2 }"
         }
       ],
       "headings": [
@@ -3273,14 +3593,27 @@
             ],
             [
               "total",
-              "integer <int32> 显示库存信息的独特商品数量。"
+              "integer <int32> Deprecated 显示库存信息的独特商品数量。"
+            ],
+            [
+              "total_items",
+              "integer <int64> 显示库存信息的不重复商品数量。"
             ]
           ],
-          "text": "cursor string 后续数据的选择标志。 items Array of objects 商品信息。 total integer <int32> 显示库存信息的独特商品数量。"
+          "text": "cursor string 后续数据的选择标志。 items Array of objects 商品信息。 total integer <int32> Deprecated 显示库存信息的独特商品数量。 total_items integer <int64> 显示库存信息的不重复商品数量。"
         }
       ],
       "title": "关于商品数量的信息",
       "news_updates": [
+        {
+          "date": "2026-09-24",
+          "labels": [
+            "added_field",
+            "deprecated_field"
+          ],
+          "text": "/v4/product/info/stocks 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026924"
+        },
         {
           "date": "2026-05-05",
           "labels": [
@@ -3615,9 +3948,28 @@
             [
               "result",
               "Array of objects 搜索结果。"
+            ],
+            [
+              "Array () errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id 。 updated boolean 如果商品信息已被成功更新 — true 。"
+            ],
+            [
+              "errors",
+              "Array of objects 在搜索处理过程中发生的数组错误。"
+            ],
+            [
+              "offer_id",
+              "string 卖家系统中的商品编号是 — 商品代码。"
+            ],
+            [
+              "product_id",
+              "integer <int64> Ozon系统中商品的标识符 — product_id 。"
+            ],
+            [
+              "updated",
+              "boolean 如果商品信息已被成功更新 — true 。"
             ]
           ],
-          "text": "result Array of objects 搜索结果。 Array () errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id。 updated boolean 如果商品信息已被成功更新 — true。"
+          "text": "result Array of objects 搜索结果。 Array () errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id 。 updated boolean 如果商品信息已被成功更新 — true 。"
         },
         {
           "index": 3,
@@ -3632,18 +3984,34 @@
             ],
             [
               "product_id",
-              "integer <int64> Ozon系统中商品的标识符 — product_id。"
+              "integer <int64> Ozon系统中商品的标识符 — product_id 。"
             ],
             [
               "updated",
-              "boolean 如果商品信息已被成功更新 — true。"
+              "boolean 如果商品信息已被成功更新 — true 。"
             ]
           ],
-          "text": "errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id。 updated boolean 如果商品信息已被成功更新 — true。"
+          "text": "errors Array of objects 在搜索处理过程中发生的数组错误。 offer_id string 卖家系统中的商品编号是 — 商品代码。 product_id integer <int64> Ozon系统中商品的标识符 — product_id 。 updated boolean 如果商品信息已被成功更新 — true 。"
         }
       ],
       "title": "更新价格",
       "news_updates": [
+        {
+          "date": "2026-09-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import/prices 更新了方法请求中 prices.min_price 、 prices.min_price_for_auto_actions_enabled 、 prices.old_price 、 prices.price 和 prices.price_strategy_enabled 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+        },
+        {
+          "date": "2026-09-11",
+          "labels": [
+            "deprecated_field"
+          ],
+          "text": "/v1/product/import/prices 已将方法请求中的 prices.auto_action_enabled 和 prices.manage_elastic_boosting_through_price 参数标记为已弃用。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026911"
+        },
         {
           "date": "2026-05-12",
           "labels": [
@@ -3851,11 +4219,11 @@
       "examples": [
         {
           "index": 0,
-          "text": "{\n\"cursor\": \"\",\n\"filter\": \n{\n\"offer_id\": \n[\n\"356792\"\n],\n\"product_id\": \n[\n\"243686911\"\n],\n\"visibility\": \"ALL\"\n},\n\"limit\": 100\n}"
+          "text": "{ \"cursor\" : \"\" , \"filter\" : { \"offer_id\" : [ \"356792\" ] , \"product_id\" : [ \"243686911\" ] , \"visibility\" : \"ALL\" } , \"limit\" : 100 }"
         },
         {
           "index": 1,
-          "text": "{\n\"items\": \n[\n{\n\"product_id\": 1000123456,\n\"offer_id\": \"test-offer-123456\",\n\"price\": \n{\n\"price\": 2999.99,\n\"old_price\": 3499.99,\n\"min_price\": 2799.99,\n\"net_price\": 2000,\n\"currency_code\": \"RUB\",\n\"vat\": 0.2,\n\"auto_action_enabled\": true,\n\"auto_add_to_ozon_actions_list_enabled\": true\n},\n\"commissions\": \n{\n\"sales_percent_fbo\": 15,\n\"sales_percent_fbs\": 12,\n\"fbo_deliv_to_customer_amount\": 14.75,\n\"fbs_deliv_to_customer_amount\": 60,\n\"fbo_return_flow_amount\": 50,\n\"fbs_return_flow_amount\": 40\n},\n\"price_indexes\": \n{\n\"color_index\": \"GREEN\",\n\"ozon_index_data\": \n{\n\"min_price\": 2899.99,\n\"min_price_currency\": \"RUB\",\n\"price_index_value\": 0.95\n},\n\"external_index_data\": \n{\n\"min_price\": 2799.99,\n\"min_price_currency\": \"RUB\",\n\"price_index_value\": 0.93\n}\n},\n\"marketing_actions\": \n{\n\"ozon_actions_exist\": true,\n\"current_period_from\": \"2026-03-01T00:00:00Z\",\n\"current_period_to\": \"2026-03-31T23:59:59Z\",\n\"actions\": \n[\n{\n\"title\": \"电子产品15%折扣\",\n\"value\": 15,\n\"date_from\": \"2026-03-01T00:00:00Z\",\n\"date_to\": \"2026-03-31T23:59:59Z\"\n}\n]\n},\n\"acquiring\": 1.5,\n\"volume_weight\": 0.5\n},\n{\n\"product_id\": 1000123457,\n\"offer_id\": \"test-offer-123457\",\n\"price\": \n{\n\"price\": 5999.99,\n\"old_price\": 6999.99,\n\"min_price\": 5499.99,\n\"net_price\": 4000,\n\"currency_code\": \"RUB\",\n\"vat\": 0.2,\n\"auto_action_enabled\": false,\n\"auto_add_to_ozon_actions_list_enabled\": false\n},\n\"commissions\": \n{\n\"sales_percent_fbo\": 10,\n\"sales_percent_fbs\": 8,\n\"fbo_deliv_to_customer_amount\": 25.5,\n\"fbs_deliv_to_customer_amount\": 75,\n\"fbo_return_flow_amount\": 60,\n\"fbs_return_flow_amount\": 50\n},\n\"price_indexes\": \n{\n\"color_index\": \"YELLOW\",\n\"ozon_index_data\": \n{\n\"min_price\": 5899.99,\n\"min_price_currency\": \"RUB\",\n\"price_index_value\": 0.98\n}\n},\n\"marketing_actions\": \n{\n\"ozon_actions_exist\": false\n},\n\"acquiring\": 1.8,\n\"volume_weight\": 0.8\n}\n],\n\"cursor\": \"\",\n\"total\": 2\n}"
+          "text": "{ \"items\" : [ { \"product_id\" : 1000123456 , \"offer_id\" : \"test-offer-123456\" , \"price\" : { \"price\" : 2999.99 , \"old_price\" : 3499.99 , \"min_price\" : 2799.99 , \"net_price\" : 2000 , \"currency_code\" : \"RUB\" , \"vat\" : 0.2 , \"auto_action_enabled\" : true , \"auto_add_to_ozon_actions_list_enabled\" : true } , \"commissions\" : { \"sales_percent_fbo\" : 15 , \"sales_percent_fbs\" : 12 , \"fbo_deliv_to_customer_amount\" : 14.75 , \"fbs_deliv_to_customer_amount\" : 60 , \"fbo_return_flow_amount\" : 50 , \"fbs_return_flow_amount\" : 40 } , \"price_indexes\" : { \"color_index\" : \"GREEN\" , \"ozon_index_data\" : { \"min_price\" : 2899.99 , \"min_price_currency\" : \"RUB\" , \"price_index_value\" : 0.95 } , \"external_index_data\" : { \"min_price\" : 2799.99 , \"min_price_currency\" : \"RUB\" , \"price_index_value\" : 0.93 } } , \"marketing_actions\" : { \"ozon_actions_exist\" : true , \"current_period_from\" : \"2026-03-01T00:00:00Z\" , \"current_period_to\" : \"2026-03-31T23:59:59Z\" , \"actions\" : [ { \"title\" : \"电子产品15%折扣\" , \"value\" : 15 , \"date_from\" : \"2026-03-01T00:00:00Z\" , \"date_to\" : \"2026-03-31T23:59:59Z\" } ] } , \"acquiring\" : 1.5 , \"volume_weight\" : 0.5 } , { \"product_id\" : 1000123457 , \"offer_id\" : \"test-offer-123457\" , \"price\" : { \"price\" : 5999.99 , \"old_price\" : 6999.99 , \"min_price\" : 5499.99 , \"net_price\" : 4000 , \"currency_code\" : \"RUB\" , \"vat\" : 0.2 , \"auto_action_enabled\" : false , \"auto_add_to_ozon_actions_list_enabled\" : false } , \"commissions\" : { \"sales_percent_fbo\" : 10 , \"sales_percent_fbs\" : 8 , \"fbo_deliv_to_customer_amount\" : 25.5 , \"fbs_deliv_to_customer_amount\" : 75 , \"fbo_return_flow_amount\" : 60 , \"fbs_return_flow_amount\" : 50 } , \"price_indexes\" : { \"color_index\" : \"YELLOW\" , \"ozon_index_data\" : { \"min_price\" : 5899.99 , \"min_price_currency\" : \"RUB\" , \"price_index_value\" : 0.98 } } , \"marketing_actions\" : { \"ozon_actions_exist\" : false } , \"acquiring\" : 1.8 , \"volume_weight\" : 0.8 } ] , \"cursor\" : \"\" , \"total\" : 2 , \"total_items\" : 2 }"
         }
       ],
       "headings": [
@@ -3918,14 +4286,35 @@
             ],
             [
               "total",
-              "integer <int32> 商品列表中的商品数量。"
+              "integer <int32> Deprecated 商品列表中的商品数量。"
+            ],
+            [
+              "total_items",
+              "integer <int64> 列表中的商品数量。"
             ]
           ],
-          "text": "cursor string 用于选择数据的指针。 items Array of objects 商品列表。 total integer <int32> 商品列表中的商品数量。"
+          "text": "cursor string 用于选择数据的指针。 items Array of objects 商品列表。 total integer <int32> Deprecated 商品列表中的商品数量。 total_items integer <int64> 列表中的商品数量。"
         }
       ],
       "title": "获取商品价格信息",
       "news_updates": [
+        {
+          "date": "2026-09-24",
+          "labels": [
+            "added_field",
+            "deprecated_field"
+          ],
+          "text": "/v5/product/info/prices 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026924"
+        },
+        {
+          "date": "2026-09-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v5/product/info/prices 更新了方法响应中 items.price.marketing_seller_price 、 items.price.min_price 、 items.price.old_price 和 items.price.price 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+        },
         {
           "date": "2026-05-28",
           "labels": [
@@ -4342,7 +4731,7 @@
           "rows": [
             [
               "action_id",
-              "number <double> 活动识别号。可以使用方法 /v1/actions获取。"
+              "number <double> 活动识别号。可以使用方法 /v1/actions 获取。"
             ],
             [
               "limit",
@@ -4353,7 +4742,7 @@
               "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。"
             ]
           ],
-          "text": "action_id number <double> 活动识别号。可以使用方法 /v1/actions获取。 limit number <double> 每页的答复数量。在默认情况下 — 100。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。"
+          "text": "action_id number <double> 活动识别号。可以使用方法 /v1/actions 获取。 limit number <double> 每页的答复数量。在默认情况下 — 100。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。"
         },
         {
           "index": 1,
@@ -4361,9 +4750,24 @@
             [
               "result",
               "object 请求结果。"
+            ],
+            [
+              "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
+            ],
+            [
+              "products",
+              "Array of objects 商品清单。"
+            ],
+            [
+              "total",
+              "number <double> 可用于活动的商品总数。"
+            ],
+            [
+              "last_id",
+              "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ]
           ],
-          "text": "result object 请求结果。 products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+          "text": "result object 请求结果。 products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
         },
         {
           "index": 2,
@@ -4378,14 +4782,25 @@
             ],
             [
               "last_id",
-              "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+              "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ]
           ],
-          "text": "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+          "text": "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
         }
       ],
-      "title": "可用的促销商品清单",
+      "title": "可用的促销商品清单 Deprecated",
       "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/candidates 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/candidates"
+          ]
+        },
         {
           "date": "2025-12-23",
           "labels": [
@@ -4411,7 +4826,16 @@
           "text": "/v1/actions/candidates 我们已将 offset 参数标记为已弃用，并添加了 last_id分页参数。",
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025313"
         }
-      ]
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/candidates 。",
+        "replacement_paths": [
+          "/v2/actions/candidates"
+        ]
+      }
     },
     {
       "examples": [
@@ -4443,7 +4867,7 @@
           "rows": [
             [
               "action_id",
-              "number <double> 活动识别号。可以使用方法 /v1/actions获取。"
+              "number <double> 活动识别号。可以使用方法 /v1/actions 获取。"
             ],
             [
               "limit",
@@ -4454,7 +4878,7 @@
               "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。"
             ]
           ],
-          "text": "action_id number <double> 活动识别号。可以使用方法 /v1/actions获取。 limit number <double> 每页的答复数量。在默认情况下 — 100。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。"
+          "text": "action_id number <double> 活动识别号。可以使用方法 /v1/actions 获取。 limit number <double> 每页的答复数量。在默认情况下 — 100。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。"
         },
         {
           "index": 1,
@@ -4462,9 +4886,24 @@
             [
               "result",
               "object 请求结果。"
+            ],
+            [
+              "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
+            ],
+            [
+              "products",
+              "Array of objects 商品清单。"
+            ],
+            [
+              "total",
+              "number <double> 可用于活动的商品总数。"
+            ],
+            [
+              "last_id",
+              "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ]
           ],
-          "text": "result object 请求结果。 products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+          "text": "result object 请求结果。 products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
         },
         {
           "index": 2,
@@ -4479,14 +4918,25 @@
             ],
             [
               "last_id",
-              "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+              "number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
             ]
           ],
-          "text": "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。"
+          "text": "products Array of objects 商品清单。 total number <double> 可用于活动的商品总数。 last_id number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。"
         }
       ],
-      "title": "参与 活动的商品列表",
+      "title": "参与 活动的商品列表 Deprecated",
       "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/products 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/products"
+          ]
+        },
         {
           "date": "2025-12-23",
           "labels": [
@@ -4512,7 +4962,16 @@
           "text": "/v1/actions/products 我们已将 offset 参数标记为已弃用，并添加了 last_id分页参数。",
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2025313"
         }
-      ]
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/products 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products 。",
+        "replacement_paths": [
+          "/v2/actions/products"
+        ]
+      }
     },
     {
       "examples": [
@@ -4544,14 +5003,14 @@
           "rows": [
             [
               "action_id required",
-              "number <double> 活动识别号。可以使用方法 /v1/actions获取。"
+              "number <double> 活动识别号。可以使用方法 /v1/actions 获取。"
             ],
             [
               "products required",
               "Array of objects <= 1000 items 商品清单。"
             ]
           ],
-          "text": "action_id required number <double> 活动识别号。可以使用方法 /v1/actions获取。 products required Array of objects <= 1000 items 商品清单。"
+          "text": "action_id required number <double> 活动识别号。可以使用方法 /v1/actions 获取。 products required Array of objects <= 1000 items 商品清单。"
         },
         {
           "index": 1,
@@ -4559,6 +5018,17 @@
             [
               "result",
               "object 请求结果。"
+            ],
+            [
+              "product_ids Array of numbers <double> 已添加到促销活动中的商品ID列表。 rejected Array of objects 无法添加到促销活动中的商品列表。"
+            ],
+            [
+              "product_ids",
+              "Array of numbers <double> 已添加到促销活动中的商品ID列表。"
+            ],
+            [
+              "rejected",
+              "Array of objects 无法添加到促销活动中的商品列表。"
             ]
           ],
           "text": "result object 请求结果。 product_ids Array of numbers <double> 已添加到促销活动中的商品ID列表。 rejected Array of objects 无法添加到促销活动中的商品列表。"
@@ -4578,7 +5048,29 @@
           "text": "product_ids Array of numbers <double> 已添加到促销活动中的商品ID列表。 rejected Array of objects 无法添加到促销活动中的商品列表。"
         }
       ],
-      "title": "在促销活动中增加一个商品"
+      "title": "在促销活动中增加一个商品 Deprecated",
+      "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/products/activate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v1/actions/products/update 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v1/actions/products/update"
+          ]
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/products/activate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v1/actions/products/update 。",
+        "replacement_paths": [
+          "/v1/actions/products/update"
+        ]
+      }
     },
     {
       "examples": [
@@ -4610,14 +5102,14 @@
           "rows": [
             [
               "action_id required",
-              "number <double> 活动识别号。可以使用方法 /v1/actions获取。"
+              "number <double> 活动识别号。可以使用方法 /v1/actions 获取。"
             ],
             [
               "product_ids required",
               "Array of numbers <double> 活动识别号清单。"
             ]
           ],
-          "text": "action_id required number <double> 活动识别号。可以使用方法 /v1/actions获取。 product_ids required Array of numbers <double> 活动识别号清单。"
+          "text": "action_id required number <double> 活动识别号。可以使用方法 /v1/actions 获取。 product_ids required Array of numbers <double> 活动识别号清单。"
         },
         {
           "index": 1,
@@ -4625,6 +5117,17 @@
             [
               "result",
               "object 请求结果。"
+            ],
+            [
+              "product_ids Array of numbers <double> 已从促销活动中删除的商品ID列表。 rejected Array of objects 不能从促销活动中删除的商品清单。"
+            ],
+            [
+              "product_ids",
+              "Array of numbers <double> 已从促销活动中删除的商品ID列表。"
+            ],
+            [
+              "rejected",
+              "Array of objects 不能从促销活动中删除的商品清单。"
             ]
           ],
           "text": "result object 请求结果。 product_ids Array of numbers <double> 已从促销活动中删除的商品ID列表。 rejected Array of objects 不能从促销活动中删除的商品清单。"
@@ -4644,7 +5147,29 @@
           "text": "product_ids Array of numbers <double> 已从促销活动中删除的商品ID列表。 rejected Array of objects 不能从促销活动中删除的商品清单。"
         }
       ],
-      "title": "从活动中删除商品"
+      "title": "从活动中删除商品 Deprecated",
+      "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/products/deactivate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products/deactivate 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/products/deactivate"
+          ]
+        }
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/products/deactivate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products/deactivate 。",
+        "replacement_paths": [
+          "/v2/actions/products/deactivate"
+        ]
+      }
     },
     {
       "examples": [
@@ -13169,6 +13694,14 @@
       "title": "聊天清单",
       "news_updates": [
         {
+          "date": "2026-09-10",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v3/chat/list 更新了方法响应中参数 chats.chat.chat_type 的说明。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026910"
+        },
+        {
           "date": "2026-06-30",
           "labels": [
             "updated"
@@ -18976,11 +19509,11 @@
       "examples": [
         {
           "index": 0,
-          "text": "{\n\"action_id\": 0,\n\"products\": \n[\n{\n\"currency\": \"RUB\",\n\"discount_percent\": 0,\n\"sku\": 0\n}\n]\n}"
+          "text": "{ \"action_id\" : 0 , \"products\" : [ { } ] }"
         },
         {
           "index": 1,
-          "text": "{\n\"code\": 0,\n\"details\": \n[\n{\n\"typeUrl\": \"string\",\n\"value\": \"string\"\n}\n],\n\"message\": \"string\"\n}"
+          "text": "{ \"code\" : 0 , \"details\" : [ { \"typeUrl\" : \"string\" , \"value\" : \"string\" } ] , \"message\" : \"string\" }"
         }
       ],
       "headings": [
@@ -19016,18 +19549,26 @@
           "rows": [
             [
               "action_id required",
-              "integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。"
+              "integer <uint64> 促销活动标识符。请通过方法 /v1/seller-actions/list 获取该参数的值。"
             ],
             [
               "products required",
-              "Array of objects <= 100 items 商品信息。"
+              "Array of action_price (object) or discount_percent (object) <= 100 items 商品信息。"
             ]
           ],
-          "text": "action_id required integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 products required Array of objects <= 100 items 商品信息。"
+          "text": "action_id required integer <uint64> 促销活动标识符。请通过方法 /v1/seller-actions/list 获取该参数的值。 products required Array of action_price (object) or discount_percent (object) <= 100 items 商品信息。"
         }
       ],
       "title": "将商品添加到促销活动中",
       "news_updates": [
+        {
+          "date": "2026-09-28",
+          "labels": [
+            "added_field"
+          ],
+          "text": "/v1/seller-actions/products/add 在方式的请求中添加了 products.action_price 参数。 更新了方法请求中的 products.discount_percent 参数描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026928"
+        },
         {
           "date": "2026-03-24",
           "labels": [
@@ -19637,7 +20178,7 @@
             ],
             [
               "auto_add_date required",
-              "string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。"
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
             ],
             [
               "limit required",
@@ -19645,10 +20186,10 @@
             ],
             [
               "offset",
-              "integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果offset = 10，响应将从第11个找到的元素开始。"
+              "integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果 offset = 10 ，响应将从第11个找到的元素开始。"
             ]
           ],
-          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 limit required integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 offset integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果offset = 10，响应将从第11个找到的元素开始。"
+          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 limit required integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 offset integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果 offset = 10 ，响应将从第11个找到的元素开始。"
         },
         {
           "index": 2,
@@ -19665,8 +20206,19 @@
           "text": "products Array of objects 启用自动添加的商品列表。 total integer <uint64> 商品总数。"
         }
       ],
-      "title": "获取促销活动自动添加列表中的商品列表",
+      "title": "获取促销活动自动添加列表中的商品列表 Deprecated",
       "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/auto-add/products/list 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/list 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/auto-add/products/list"
+          ]
+        },
         {
           "date": "2026-05-12",
           "labels": [
@@ -19675,7 +20227,16 @@
           "text": "/v1/actions/auto-add/products/list 新增了用于处理商品自动添加到促销活动中的beta方法。",
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
         }
-      ]
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/auto-add/products/list 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/list 。",
+        "replacement_paths": [
+          "/v2/actions/auto-add/products/list"
+        ]
+      }
     },
     {
       "examples": [
@@ -19726,7 +20287,7 @@
             ],
             [
               "auto_add_date required",
-              "string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。"
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
             ],
             [
               "limit required",
@@ -19734,10 +20295,10 @@
             ],
             [
               "offset",
-              "integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果offset = 10，响应将从第11个找到的元素开始。"
+              "integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果 offset = 10 ，响应将从第11个找到的元素开始。"
             ]
           ],
-          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 limit required integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 offset integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果offset = 10，响应将从第11个找到的元素开始。"
+          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 limit required integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 offset integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果 offset = 10 ，响应将从第11个找到的元素开始。"
         },
         {
           "index": 2,
@@ -19754,8 +20315,19 @@
           "text": "products Array of objects 可用于自动添加到促销活动中的商品列表。 total integer <uint64> 商品总数。"
         }
       ],
-      "title": "获取可自动添加到促销活动中的商品列表",
+      "title": "获取可自动添加到促销活动中的商品列表 Deprecated",
       "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/auto-add/products/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/candidates 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/auto-add/products/candidates"
+          ]
+        },
         {
           "date": "2026-05-12",
           "labels": [
@@ -19764,7 +20336,16 @@
           "text": "/v1/actions/auto-add/products/candidates 新增了用于处理商品自动添加到促销活动中的beta方法。",
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
         }
-      ]
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/auto-add/products/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/candidates 。",
+        "replacement_paths": [
+          "/v2/actions/auto-add/products/candidates"
+        ]
+      }
     },
     {
       "examples": [
@@ -19815,14 +20396,14 @@
             ],
             [
               "auto_add_date",
-              "string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。"
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
             ],
             [
               "product_ids",
-              "Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即product_id。"
+              "Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即 product_id 。"
             ]
           ],
-          "text": "action_id integer <uint64> 促销活动标识符。 auto_add_date string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 product_ids Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即product_id。"
+          "text": "action_id integer <uint64> 促销活动标识符。 auto_add_date string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 product_ids Array of strings <uint64> [ 1 .. 1000 ] items Ozon系统中的商品标识符，即 product_id 。"
         },
         {
           "index": 2,
@@ -19835,8 +20416,19 @@
           "text": "product_ids Array of strings <uint64> 已从自动添加中删除的商品ID。"
         }
       ],
-      "title": "从促销活动自动添加列表中删除商品",
+      "title": "从促销活动自动添加列表中删除商品 Deprecated",
       "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/auto-add/products/delete 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/delete 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/auto-add/products/delete"
+          ]
+        },
         {
           "date": "2026-05-12",
           "labels": [
@@ -19845,7 +20437,16 @@
           "text": "/v1/actions/auto-add/products/delete 新增了用于处理商品自动添加到促销活动中的beta方法。",
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
         }
-      ]
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/auto-add/products/delete 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/delete 。",
+        "replacement_paths": [
+          "/v2/actions/auto-add/products/delete"
+        ]
+      }
     },
     {
       "examples": [
@@ -19896,14 +20497,14 @@
             ],
             [
               "auto_add_date",
-              "string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。"
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
             ],
             [
               "to_update",
               "Array of objects 需要添加到自动添加中或在自动添加中更新的商品列表。"
             ]
           ],
-          "text": "action_id integer <uint64> 促销活动标识符。 auto_add_date string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 to_update Array of objects 需要添加到自动添加中或在自动添加中更新的商品列表。"
+          "text": "action_id integer <uint64> 促销活动标识符。 auto_add_date string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 to_update Array of objects 需要添加到自动添加中或在自动添加中更新的商品列表。"
         },
         {
           "index": 2,
@@ -19932,8 +20533,19 @@
           "text": "below_min_price Array of objects 价格低于最低价格的商品列表。 extremely_low_price Array of objects 折扣幅度超过70%的商品列表。 failed_price Array of objects 未通过价格校验的商品列表。 rejected Array of objects 未能添加或更新的商品ID。 updated_ids Array of strings <uint64> 已成功添加或更新的商品ID。"
         }
       ],
-      "title": "在促销活动自动添加列表中添加或更新商品",
+      "title": "在促销活动自动添加列表中添加或更新商品 Deprecated",
       "news_updates": [
+        {
+          "date": "2026-09-23",
+          "labels": [
+            "deprecated_method"
+          ],
+          "text": "/v1/actions/auto-add/products/update 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/update 。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+          "replacement_paths": [
+            "/v2/actions/auto-add/products/update"
+          ]
+        },
         {
           "date": "2026-05-12",
           "labels": [
@@ -19942,7 +20554,16 @@
           "text": "/v1/actions/auto-add/products/update 新增了用于处理商品自动添加到促销活动中的beta方法。",
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026512"
         }
-      ]
+      ],
+      "lifecycle": {
+        "status": "deprecated",
+        "date": "2026-09-23",
+        "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026923",
+        "text": "/v1/actions/auto-add/products/update 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/auto-add/products/update 。",
+        "replacement_paths": [
+          "/v2/actions/auto-add/products/update"
+        ]
+      }
     },
     {
       "examples": [
@@ -24060,16 +24681,13 @@
             [
               "prices",
               "Array of objects 商品价格。"
-            ]
-          ],
-          "text": "prices Array of objects 商品价格。 Array () customer_price object 网站上的商品价格。 discount_percent number <float> Deprecated 由 Ozon 承担的折扣比例。 offer_id string 卖家系统中的商品标识符（商品货号）。 price object 商品价格（已包含促销活动或推广优惠）。 price_indexes Array of objects 价格指数。 sku integer <int64> Ozon 系统中的商品标识符——SKU。"
-        },
-        {
-          "index": 3,
-          "rows": [
+            ],
+            [
+              "Array () customer_price object 买家看到的价格。 discount_percent number <float> Deprecated 由 Ozon 承担的折扣比例。 offer_id string 卖家系统中的商品标识符（商品货号）。 price object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 price_indexes Array of objects 商品价格指数。 sku integer <int64> Ozon 系统中的商品标识符——SKU。"
+            ],
             [
               "customer_price",
-              "object 网站上的商品价格。"
+              "object 买家看到的价格。"
             ],
             [
               "discount_percent",
@@ -24081,22 +24699,60 @@
             ],
             [
               "price",
-              "object 商品价格（已包含促销活动或推广优惠）。"
+              "object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。"
             ],
             [
               "price_indexes",
-              "Array of objects 价格指数。"
+              "Array of objects 商品价格指数。"
             ],
             [
               "sku",
               "integer <int64> Ozon 系统中的商品标识符——SKU。"
             ]
           ],
-          "text": "customer_price object 网站上的商品价格。 discount_percent number <float> Deprecated 由 Ozon 承担的折扣比例。 offer_id string 卖家系统中的商品标识符（商品货号）。 price object 商品价格（已包含促销活动或推广优惠）。 price_indexes Array of objects 价格指数。 sku integer <int64> Ozon 系统中的商品标识符——SKU。"
+          "text": "prices Array of objects 商品价格。 Array () customer_price object 买家看到的价格。 discount_percent number <float> Deprecated 由 Ozon 承担的折扣比例。 offer_id string 卖家系统中的商品标识符（商品货号）。 price object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 price_indexes Array of objects 商品价格指数。 sku integer <int64> Ozon 系统中的商品标识符——SKU。"
+        },
+        {
+          "index": 3,
+          "rows": [
+            [
+              "customer_price",
+              "object 买家看到的价格。"
+            ],
+            [
+              "discount_percent",
+              "number <float> Deprecated 由 Ozon 承担的折扣比例。"
+            ],
+            [
+              "offer_id",
+              "string 卖家系统中的商品标识符（商品货号）。"
+            ],
+            [
+              "price",
+              "object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。"
+            ],
+            [
+              "price_indexes",
+              "Array of objects 商品价格指数。"
+            ],
+            [
+              "sku",
+              "integer <int64> Ozon 系统中的商品标识符——SKU。"
+            ]
+          ],
+          "text": "customer_price object 买家看到的价格。 discount_percent number <float> Deprecated 由 Ozon 承担的折扣比例。 offer_id string 卖家系统中的商品标识符（商品货号）。 price object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 price_indexes Array of objects 商品价格指数。 sku integer <int64> Ozon 系统中的商品标识符——SKU。"
         }
       ],
       "title": "获取商品价格的详细信息",
       "news_updates": [
+        {
+          "date": "2026-09-14",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/prices/details 更新了方法响应中 prices.customer_price 、 prices.price 和 prices.price_indexes 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026914"
+        },
         {
           "date": "2026-05-19",
           "labels": [
@@ -24115,19 +24771,1015 @@
           "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/202634"
         }
       ]
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 258568 , \"last_id\" : \"80698\" , \"limit\" : 100 }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"products\" : [ { \"id\" : 8888888 , \"price\" : { \"amount\" : \"1827\" , \"currency\" : \"RUB\" } , \"action_price\" : { \"amount\" : \"1800\" , \"currency\" : \"RUB\" } , \"max_action_price\" : { \"amount\" : \"62\" , \"currency\" : \"RUB\" } , \"min_stock\" : 1 , \"recommended_stock\" : 2 , \"marketplace_seller_price\" : { \"amount\" : \"70\" , \"currency\" : \"RUB\" } , \"alert_max_action_price_failed\" : false , \"alert_max_action_price\" : { \"amount\" : \"30\" , \"currency\" : \"RUB\" } , \"current_boost\" : 15 , \"price_min_elastic\" : { \"amount\" : \"62\" , \"currency\" : \"RUB\" } , \"price_max_elastic\" : { \"amount\" : \"53\" , \"currency\" : \"RUB\" } , \"min_boost\" : 15 , \"max_boost\" : 55 , \"website_prices\" : { \"price\" : { \"amount\" : \"54\" , \"currency\" : \"RUB\" } , \"prices_by_schema\" : { } } , \"min_seller_price\" : { \"amount\" : \"1\" , \"currency\" : \"RUB\" } , \"is_quarantined\" : false } ] , \"total\" : 219176 , \"last_id\" : \"81881\" }"
+        }
+      ],
+      "headings": [
+        "可用的促销商品清单",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsCandidates",
+      "path": "/v2/actions/candidates",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsCandidates",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id",
+              "integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。"
+            ],
+            [
+              "last_id",
+              "string 页面上最后一个商品的标识符。如果是首次请求，请将该字段留空。"
+            ],
+            [
+              "limit",
+              "integer <uint64> <= 100 每页显示的数量。"
+            ]
+          ],
+          "text": "action_id integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。 last_id string 页面上最后一个商品的标识符。如果是首次请求，请将该字段留空。 limit integer <uint64> <= 100 每页显示的数量。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "last_id",
+              "string 页面上最后一个商品的标识符。要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。"
+            ],
+            [
+              "products",
+              "Array of objects 商品列表。"
+            ],
+            [
+              "total",
+              "integer <uint64> 可用于该促销活动的商品总数。"
+            ]
+          ],
+          "text": "last_id string 页面上最后一个商品的标识符。要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。 products Array of objects 商品列表。 total integer <uint64> 可用于该促销活动的商品总数。"
+        }
+      ],
+      "title": "可用的促销商品清单"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 213139 , \"last_id\" : \"3262247282\" , \"limit\" : 100 }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"products\" : [ { \"id\" : 99999 , \"price\" : { \"amount\" : \"4000\" , \"currency\" : \"RUB\" } , \"action_price\" : { \"amount\" : \"4000\" , \"currency\" : \"RUB\" } , \"max_action_price\" : { \"amount\" : \"3560\" , \"currency\" : \"RUB\" } , \"add_mode\" : \"SELLER\" , \"stock\" : 2 , \"min_stock\" : 1 , \"recommended_stock\" : 10 , \"marketplace_seller_price\" : { \"amount\" : \"500\" , \"currency\" : \"RUB\" } , \"alert_max_action_price_failed\" : false , \"alert_max_action_price\" : { \"amount\" : \"4000\" , \"currency\" : \"RUB\" } , \"current_boost\" : 12 , \"price_min_elastic\" : { \"amount\" : \"3560\" , \"currency\" : \"RUB\" } , \"price_max_elastic\" : { \"amount\" : \"3560\" , \"currency\" : \"RUB\" } , \"min_boost\" : 1 , \"max_boost\" : 12 , \"website_prices\" : { \"price\" : { \"amount\" : \"382\" , \"currency\" : \"RUB\" } , \"prices_by_schema\" : { } } , \"min_seller_price\" : { \"amount\" : \"4000\" , \"currency\" : \"RUB\" } , \"is_quarantined\" : true } ] , \"total\" : 44 , \"last_id\" : \"28743\" }"
+        }
+      ],
+      "headings": [
+        "获取参与活动的商品列表",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsProducts",
+      "path": "/v2/actions/products",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProducts",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。"
+            ],
+            [
+              "last_id",
+              "string 页面上最后一个商品的标识符。如果是首次请求，请将该字段留空。"
+            ],
+            [
+              "limit required",
+              "integer <uint64> <= 100 К每页显示的数量。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。 last_id string 页面上最后一个商品的标识符。如果是首次请求，请将该字段留空。 limit required integer <uint64> <= 100 К每页显示的数量。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "last_id",
+              "string 页面上最后一个商品的标识符。要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。"
+            ],
+            [
+              "products",
+              "Array of objects 商品列表。"
+            ],
+            [
+              "total",
+              "integer <uint64> 促销活动中的商品数量。"
+            ]
+          ],
+          "text": "last_id string 页面上最后一个商品的标识符。要获取下一个批次的数据，请在下一个请求的 last_id 参数中传递上次获取的值。 products Array of objects 商品列表。 total integer <uint64> 促销活动中的商品数量。"
+        }
+      ],
+      "title": "获取参与活动的商品列表"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 258568 , \"products\" : [ { \"action_price\" : { \"amount\" : \"88\" , \"currency\" : \"RUB\" } , \"product_id\" : 88888 , \"stock\" : \"8\" } ] }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"active_product_ids\" : [ 88888 ] , \"deactivated_product_ids\" : [ ] , \"rejected\" : [ ] , \"warnings\" : [ ] }"
+        }
+      ],
+      "headings": [
+        "将商品加入促销活动或更新商品",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsProductsUpdate",
+      "path": "/v1/actions/products/update",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsUpdate",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。"
+            ],
+            [
+              "products required",
+              "Array of objects <= 1000 items 商品列表。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。 products required Array of objects <= 1000 items 商品列表。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "active_product_ids",
+              "Array of strings <uint64> 已加入促销活动的商品ID列表。"
+            ],
+            [
+              "deactivated_product_ids",
+              "Array of strings <uint64> 已移出促销活动的商品ID列表。"
+            ],
+            [
+              "rejected",
+              "Array of objects 未能加入促销活动的商品列表。"
+            ],
+            [
+              "warnings",
+              "Array of objects 关于商品被移出促销活动的原因信息。"
+            ]
+          ],
+          "text": "active_product_ids Array of strings <uint64> 已加入促销活动的商品ID列表。 deactivated_product_ids Array of strings <uint64> 已移出促销活动的商品ID列表。 rejected Array of objects 未能加入促销活动的商品列表。 warnings Array of objects 关于商品被移出促销活动的原因信息。"
+        }
+      ],
+      "title": "将商品加入促销活动或更新商品"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 213139 , \"product_ids\" : [ 999999 ] }"
+        }
+      ],
+      "headings": [
+        "从活动中删除商品",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsProductsDeactivate",
+      "path": "/v2/actions/products/deactivate",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsDeactivate",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。"
+            ],
+            [
+              "product_ids required",
+              "Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。 product_ids required Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "product_ids",
+              "Array of strings <uint64> 已移出促销活动的商品ID列表。"
+            ]
+          ],
+          "text": "product_ids Array of strings <uint64> 已移出促销活动的商品ID列表。"
+        }
+      ],
+      "title": "从活动中删除商品"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 0 , \"auto_add_date\" : \"2025-01-01T00:00:00Z\" , \"offset\" : 0 , \"limit\" : 0 }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"products\" : [ { \"action_price_to_auto_add\" : { \"amount\" : \"1800\" , \"currency\" : \"RUB\" } , \"add_mode\" : true , \"base_price\" : { \"amount\" : \"1827\" , \"currency\" : \"RUB\" } , \"currency\" : \"RUB\" , \"has_expired_min_seller_price\" : true , \"marketplace_seller_price\" : { \"amount\" : \"70\" , \"currency\" : \"RUB\" } , \"max_discount_price\" : { \"amount\" : \"62\" , \"currency\" : \"RUB\" } , \"min_action_quantity\" : 1 , \"min_seller_price\" : { \"amount\" : \"1\" , \"currency\" : \"RUB\" } , \"name\" : \"Ароматизатор / Масло для бани / Эфирное масло \\\"Пихта\\\", 250 мл\" , \"offer_id\" : \"SR0000\" , \"price\" : { \"amount\" : \"1827\" , \"currency\" : \"RUB\" } , \"product_id\" : 8888888 , \"quantity_to_auto_add\" : 2 , \"sku\" : 8888888 , \"website_prices\" : { \"price\" : { \"amount\" : \"54\" , \"currency\" : \"RUB\" } , \"prices_by_schema\" : { \"additionalProp1\" : { \"black_price\" : { \"amount\" : \"111\" , \"currency\" : \"RUB\" } , \"green_price\" : { \"amount\" : \"222\" , \"currency\" : \"RUB\" } } , \"additionalProp2\" : { \"black_price\" : { \"amount\" : \"333\" , \"currency\" : \"RUB\" } , \"green_price\" : { \"amount\" : \"444\" , \"currency\" : \"RUB\" } } , \"additionalProp3\" : { \"black_price\" : { \"amount\" : \"555\" , \"currency\" : \"RUB\" } , \"green_price\" : { \"amount\" : \"666\" , \"currency\" : \"RUB\" } } } } , \"will_be_quarantined\" : false } ] , \"total\" : 219176 }"
+        }
+      ],
+      "headings": [
+        "获取促销活动自动添加列表中的商品列表",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsAutoAddProductsListV2",
+      "path": "/v2/actions/auto-add/products/list",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsListV2",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。"
+            ],
+            [
+              "auto_add_date required",
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
+            ],
+            [
+              "limit required",
+              "integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。"
+            ],
+            [
+              "offset",
+              "integer <uint64> Default: 0 在响应中将被跳过的项目数量。 例如，如果 offset = 10 ，响应将从第11个找到的元素开始。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 limit required integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 offset integer <uint64> Default: 0 在响应中将被跳过的项目数量。 例如，如果 offset = 10 ，响应将从第11个找到的元素开始。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "products",
+              "Array of objects 启用自动添加的商品列表。"
+            ],
+            [
+              "total",
+              "integer <uint64> 商品数量。"
+            ]
+          ],
+          "text": "products Array of objects 启用自动添加的商品列表。 total integer <uint64> 商品数量。"
+        },
+        {
+          "index": 3,
+          "rows": [
+            [
+              "products",
+              "Array of objects 启用自动添加的商品列表。"
+            ],
+            [
+              "action_price_to_auto_add",
+              "object 商品的促销价格。"
+            ],
+            [
+              "add_mode",
+              "boolean 如果商品是手动添加的，则为 true 。"
+            ],
+            [
+              "base_price",
+              "object 商品折扣前价格。"
+            ],
+            [
+              "currency",
+              "string 价格货币。"
+            ],
+            [
+              "has_expired_min_seller_price",
+              "boolean 如果促销活动的限制已到期，则为 true 。"
+            ],
+            [
+              "marketplace_seller_price",
+              "object 计入促销活动后的商品价格，不包括由Ozon承担费用的促销活动。"
+            ],
+            [
+              "max_discount_price",
+              "object 商品可自动添加到促销活动中的最高价格。"
+            ],
+            [
+              "min_action_quantity",
+              "integer <uint64> “库存折扣”促销活动类型中的最低商品数量。"
+            ],
+            [
+              "min_seller_price",
+              "object 应用促销活动后的商品最低价格。"
+            ],
+            [
+              "name",
+              "string 商品名称。"
+            ],
+            [
+              "offer_id",
+              "string 卖家系统中的商品标识符——货号。"
+            ],
+            [
+              "price",
+              "object 商品无折扣价格。"
+            ],
+            [
+              "product_id",
+              "integer <uint64> Ozon系统中的商品标识符—— product_id 。"
+            ],
+            [
+              "quantity_to_auto_add",
+              "integer <uint64> 促销活动中的商品数量。"
+            ],
+            [
+              "sku",
+              "integer <uint64> Ozon系统中的商品标识符——SKU。"
+            ],
+            [
+              "website_prices",
+              "object 网站上的商品价格。"
+            ],
+            [
+              "will_be_quarantined",
+              "boolean 如果商品在自动添加后进入价格冻结，则为 true 。"
+            ],
+            [
+              "total",
+              "integer <uint64> 商品数量。"
+            ]
+          ],
+          "text": "products Array of objects 启用自动添加的商品列表。 Array () action_price_to_auto_add object 商品的促销价格。 add_mode boolean 如果商品是手动添加的，则为 true 。 base_price object 商品折扣前价格。 currency string 价格货币。 has_expired_min_seller_price boolean 如果促销活动的限制已到期，则为 true 。 marketplace_seller_price object 计入促销活动后的商品价格，不包括由Ozon承担费用的促销活动。 max_discount_price object 商品可自动添加到促销活动中的最高价格。 min_action_quantity integer <uint64> “库存折扣”促销活动类型中的最低商品数量。 min_seller_price object 应用促销活动后的商品最低价格。 name string 商品名称。 offer_id string 卖家系统中的商品标识符——货号。 price object 商品无折扣价格。 product_id integer <uint64> Ozon系统中的商品标识符—— product_id 。 quantity_to_auto_add integer <uint64> 促销活动中的商品数量。 sku integer <uint64> Ozon系统中的商品标识符——SKU。 website_prices object 网站上的商品价格。 will_be_quarantined boolean 如果商品在自动添加后进入价格冻结，则为 true 。 total integer <uint64> 商品数量。"
+        }
+      ],
+      "title": "获取促销活动自动添加列表中的商品列表"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 250204 , \"auto_add_date\" : \"2025-01-01T00:00:00Z\" , \"offset\" : 5 , \"limit\" : 100 }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"products\" : [ { \"action_price_to_auto_add\" : { \"amount\" : \"1800\" , \"currency\" : \"RUB\" } , \"base_price\" : { \"amount\" : \"1827\" , \"currency\" : \"RUB\" } , \"currency\" : \"RUB\" , \"has_expired_min_seller_price\" : true , \"id\" : 8888888 , \"is_manually_added\" : true , \"marketplace_seller_price\" : { \"amount\" : \"70\" , \"currency\" : \"RUB\" } , \"max_discount_price\" : { \"amount\" : \"62\" , \"currency\" : \"RUB\" } , \"min_action_quantity\" : 1 , \"min_seller_price\" : { \"amount\" : \"1\" , \"currency\" : \"RUB\" } , \"name\" : \"Ароматизатор / Масло для бани / Эфирное масло \\\"Пихта\\\", 250 мл\" , \"offer_id\" : \"PS0000\" , \"price\" : { \"amount\" : \"1827\" , \"currency\" : \"RUB\" } , \"quantity_to_auto_add\" : 2 , \"sku\" : 8888888 , \"website_prices\" : { \"price\" : { \"amount\" : \"54\" , \"currency\" : \"RUB\" } , \"prices_by_schema\" : { \"additionalProp1\" : { \"black_price\" : { \"amount\" : \"1400\" , \"currency\" : \"RUB\" } , \"green_price\" : { \"amount\" : \"18888\" , \"currency\" : \"RUB\" } } , \"additionalProp2\" : { \"black_price\" : { \"amount\" : \"1500\" , \"currency\" : \"RUB\" } , \"green_price\" : { \"amount\" : \"1600\" , \"currency\" : \"RUB\" } } , \"additionalProp3\" : { \"black_price\" : { \"amount\" : \"1700\" , \"currency\" : \"RUB\" } , \"green_price\" : { \"amount\" : \"1800\" , \"currency\" : \"RUB\" } } } } , \"will_be_quarantined\" : false } ] , \"total\" : 219176 }"
+        }
+      ],
+      "headings": [
+        "获取可自动添加到促销活动中的商品列表",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsAutoAddProductsCandidatesV2",
+      "path": "/v2/actions/auto-add/products/candidates",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsCandidatesV2",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。"
+            ],
+            [
+              "auto_add_date required",
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
+            ],
+            [
+              "limit required",
+              "integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。"
+            ],
+            [
+              "offset",
+              "integer <uint64> Default: 0 在响应中将被跳过的项目数量。在响应中将被跳过的项目数量。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 limit required integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 offset integer <uint64> Default: 0 在响应中将被跳过的项目数量。在响应中将被跳过的项目数量。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "products",
+              "Array of objects 可用于自动添加到促销活动中的商品列表。"
+            ],
+            [
+              "total",
+              "integer <uint64> 商品数量。"
+            ]
+          ],
+          "text": "products Array of objects 可用于自动添加到促销活动中的商品列表。 total integer <uint64> 商品数量。"
+        }
+      ],
+      "title": "获取可自动添加到促销活动中的商品列表"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 250204 , \"product_ids\" : [ 88888 ] , \"auto_add_date\" : \"2025-01-01T00:00:00Z\" }"
+        }
+      ],
+      "headings": [
+        "从促销活动自动添加列表中删除商品",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsAutoAddProductsDeleteV2",
+      "path": "/v2/actions/auto-add/products/delete",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsDeleteV2",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。"
+            ],
+            [
+              "auto_add_date required",
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
+            ],
+            [
+              "product_ids required",
+              "Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 product_ids required Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "product_ids",
+              "Array of strings <uint64> 已从自动添加中删除的商品ID。"
+            ]
+          ],
+          "text": "product_ids Array of strings <uint64> 已从自动添加中删除的商品ID。"
+        }
+      ],
+      "title": "从促销活动自动添加列表中删除商品"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"action_id\" : 250204 , \"auto_add_date\" : \"2026-09-22T11:37:38.940Z\" , \"products\" : [ { \"action_price\" : { \"amount\" : \"1000\" , \"currency\" : \"RUB\" } , \"id\" : 88888 , \"stock\" : 10 } ] }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"product_ids\" : [ \"    88888  \" ] , \"deactivated_ids\" : [ 0 ] , \"rejected\" : [ { \"product_id\" : 0 , \"reason\" : \"\" } ] , \"warnings\" : [ { \"product_id\" : 0 , \"reason\" : \"\" } ] , \"below_min_price\" : { \"key\" : 0 , \"value\" : \"\" } , \"extremely_low_price\" : { \"key\" : 0 , \"value\" : \"\" } , \"failed_price\" : { \"key\" : 0 , \"value\" : \"\" } }"
+        }
+      ],
+      "headings": [
+        "在促销活动自动添加列表中添加或更新商品",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "ActionsAutoAddProductsUpdateV2",
+      "path": "/v2/actions/auto-add/products/update",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsAutoAddProductsUpdateV2",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "action_id required",
+              "integer <uint64> 促销活动标识符。"
+            ],
+            [
+              "auto_add_date required",
+              "string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。"
+            ],
+            [
+              "products required",
+              "Array of objects [ 1 .. 1000 ] items 需要添加到自动添加中或在自动添加中更新的商品列表。"
+            ]
+          ],
+          "text": "action_id required integer <uint64> 促销活动标识符。 auto_add_date required string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 products required Array of objects [ 1 .. 1000 ] items 需要添加到自动添加中或在自动添加中更新的商品列表。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "below_min_price",
+              "Array of objects 价格低于最低价格的商品列表。"
+            ],
+            [
+              "deactivated_ids",
+              "Array of strings <uint64> 已移出促销活动的商品ID。"
+            ],
+            [
+              "extremely_low_price",
+              "Array of objects 折扣幅度超过70%的商品列表。"
+            ],
+            [
+              "failed_price",
+              "Array of objects 未通过价格校验的商品列表。"
+            ],
+            [
+              "product_ids",
+              "Array of strings <uint64> 已成功添加或更新的商品ID。"
+            ],
+            [
+              "rejected",
+              "Array of objects 未能添加或更新的商品ID。"
+            ],
+            [
+              "warnings",
+              "Array of objects 商品警告列表。"
+            ]
+          ],
+          "text": "below_min_price Array of objects 价格低于最低价格的商品列表。 deactivated_ids Array of strings <uint64> 已移出促销活动的商品ID。 extremely_low_price Array of objects 折扣幅度超过70%的商品列表。 failed_price Array of objects 未通过价格校验的商品列表。 product_ids Array of strings <uint64> 已成功添加或更新的商品ID。 rejected Array of objects 未能添加或更新的商品ID。 warnings Array of objects 商品警告列表。"
+        }
+      ],
+      "title": "在促销活动自动添加列表中添加或更新商品"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"description_category_id\" : 234123 , \"type_id\" : 123123 }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"result\" : [ { \"child_attribute_id\" : 4812 , \"parent_attribute_id\" : 8229 } ] }"
+        }
+      ],
+      "headings": [
+        "获取依赖特征",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "DescriptionCategoryDependentAttributes",
+      "path": "/v1/description-category/dependent-attributes",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryDependentAttributes",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "description_category_id required",
+              "integer <int64> 类目标识符，来自 /v1/description-category/tree 方法。"
+            ],
+            [
+              "type_id",
+              "integer <int64> 商品类型标识符，来自 /v1/description-category/tree 方法。"
+            ]
+          ],
+          "text": "description_category_id required integer <int64> 类目标识符，来自 /v1/description-category/tree 方法。 type_id integer <int64> 商品类型标识符，来自 /v1/description-category/tree 方法。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "result",
+              "Array of objects 依赖特征的信息。"
+            ],
+            [
+              "Array () child_attribute_id integer <int64> 子特征的标识符。 parent_attribute_id integer <int64> 父特征的标识符。"
+            ],
+            [
+              "child_attribute_id",
+              "integer <int64> 子特征的标识符。"
+            ],
+            [
+              "parent_attribute_id",
+              "integer <int64> 父特征的标识符。"
+            ]
+          ],
+          "text": "result Array of objects 依赖特征的信息。 Array () child_attribute_id integer <int64> 子特征的标识符。 parent_attribute_id integer <int64> 父特征的标识符。"
+        },
+        {
+          "index": 3,
+          "rows": [
+            [
+              "child_attribute_id",
+              "integer <int64> 子特征的标识符。"
+            ],
+            [
+              "parent_attribute_id",
+              "integer <int64> 父特征的标识符。"
+            ]
+          ],
+          "text": "child_attribute_id integer <int64> 子特征的标识符。 parent_attribute_id integer <int64> 父特征的标识符。"
+        }
+      ],
+      "title": "获取依赖特征"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"parent_attribute_id\" : 8229 , \"child_attribute_id\" : 23348 , \"description_category_id\" : 234123 , \"type_id\" : 123123 , \"limit\" : 4 , \"cursor\" : \"\" }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"cursor\" : \"eyJwYXJlbnRfdmFsdWVfaWQiOjEwMDIsImNoaWxkX2luZGV4IjowfQ==\" , \"result\" : [ { \"parent_value_id\" : 1001 , \"parent_value\" : \"拉达\" , \"children\" : [ { \"child_value_id\" : 2001 , \"child_value\" : \"格兰塔\" } , { \"child_value_id\" : 2002 , \"child_value\" : \"普里奥拉\" } , { \"child_value_id\" : 2003 , \"child_value\" : \"维斯塔\" } ] } , { \"parent_value_id\" : 1002 , \"parent_value\" : \"丰田\" , \"children\" : [ { \"child_value_id\" : 2004 , \"child_value\" : \"卡罗拉\" } ] } ] }"
+        }
+      ],
+      "headings": [
+        "获取子特征的可能值",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "DescriptionCategoryDependentAttributesValues",
+      "path": "/v1/description-category/dependent-attributes/values",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/DescriptionCategoryDependentAttributesValues",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "child_attribute_id required",
+              "integer <int64> 子特征的标识符。"
+            ],
+            [
+              "cursor",
+              "string 用于选择下一批数据的指针。"
+            ],
+            [
+              "description_category_id",
+              "integer <int64> 类目标识符，来自 /v1/description-category/tree 方法。"
+            ],
+            [
+              "limit",
+              "integer <int64> [ 1 .. 1000 ] Default: 100 响应中的值数量。"
+            ],
+            [
+              "parent_attribute_id required",
+              "integer <int64> 父特征的标识符。"
+            ],
+            [
+              "type_id",
+              "integer <int64> 商品类型标识符，来自 /v1/description-category/tree 方法。"
+            ]
+          ],
+          "text": "child_attribute_id required integer <int64> 子特征的标识符。 cursor string 用于选择下一批数据的指针。 description_category_id integer <int64> 类目标识符，来自 /v1/description-category/tree 方法。 limit integer <int64> [ 1 .. 1000 ] Default: 100 响应中的值数量。 parent_attribute_id required integer <int64> 父特征的标识符。 type_id integer <int64> 商品类型标识符，来自 /v1/description-category/tree 方法。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "cursor",
+              "string 用于选择下一批数据的指针。"
+            ],
+            [
+              "result",
+              "Array of objects 依赖特征的信息。"
+            ],
+            [
+              "Array () children Array of objects 子特征的信息。 parent_value string 父特征的值。 parent_value_id integer <int64> 父特征值的标识符。"
+            ],
+            [
+              "children",
+              "Array of objects 子特征的信息。"
+            ],
+            [
+              "parent_value",
+              "string 父特征的值。"
+            ],
+            [
+              "parent_value_id",
+              "integer <int64> 父特征值的标识符。"
+            ]
+          ],
+          "text": "cursor string 用于选择下一批数据的指针。 result Array of objects 依赖特征的信息。 Array () children Array of objects 子特征的信息。 parent_value string 父特征的值。 parent_value_id integer <int64> 父特征值的标识符。"
+        },
+        {
+          "index": 3,
+          "rows": [
+            [
+              "children",
+              "Array of objects 子特征的信息。"
+            ],
+            [
+              "parent_value",
+              "string 父特征的值。"
+            ],
+            [
+              "parent_value_id",
+              "integer <int64> 父特征值的标识符。"
+            ]
+          ],
+          "text": "children Array of objects 子特征的信息。 parent_value string 父特征的值。 parent_value_id integer <int64> 父特征值的标识符。"
+        }
+      ],
+      "title": "获取子特征的可能值"
+    },
+    {
+      "examples": [
+        {
+          "index": 0,
+          "text": "{ \"row_version\" : 0 , \"supply_id\" : \"string\" , \"tracking_number\" : \"string\" , \"transport_company_name\" : \"string\" }"
+        },
+        {
+          "index": 1,
+          "text": "{ \"error\" : { \"order_errors\" : [ \"DELIVERY_DRIVER_NAME_LENGTH_MAXIMUM_REACHED\" ] } , \"is_error\" : true , \"row_version\" : 0 }"
+        }
+      ],
+      "headings": [
+        "更新第三方物流公司配送信息",
+        "header Parameters",
+        "Request Body schema: application/json",
+        "回复",
+        "Response Schema: application/json",
+        "请求范例",
+        "回复范例"
+      ],
+      "method": "post",
+      "operationId": "FbpOrderDirectTplDlvEdit",
+      "path": "/v1/fbp/order/direct/tpl-dlv/edit",
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#operation/FbpOrderDirectTplDlvEdit",
+      "tables": [
+        {
+          "index": 0,
+          "rows": [
+            [
+              "Client-Id required",
+              "string 用户识别号。"
+            ],
+            [
+              "Api-Key required",
+              "string API-密钥。"
+            ]
+          ],
+          "text": "Client-Id required string 用户识别号。 Api-Key required string API-密钥。"
+        },
+        {
+          "index": 1,
+          "rows": [
+            [
+              "row_version required",
+              "integer <int64> 草稿的当前版本标识符。"
+            ],
+            [
+              "supply_id required",
+              "string 交货申请标识符。"
+            ],
+            [
+              "tracking_number required",
+              "string 货件追踪号码。"
+            ],
+            [
+              "transport_company_name required",
+              "string 物流公司名称。"
+            ]
+          ],
+          "text": "row_version required integer <int64> 草稿的当前版本标识符。 supply_id required string 交货申请标识符。 tracking_number required string 货件追踪号码。 transport_company_name required string 物流公司名称。"
+        },
+        {
+          "index": 2,
+          "rows": [
+            [
+              "error",
+              "object 错误信息。"
+            ],
+            [
+              "is_error",
+              "boolean true ，前提是有错误。"
+            ],
+            [
+              "row_version",
+              "integer <int64> 草稿的当前版本标识符。"
+            ]
+          ],
+          "text": "error object 错误信息。 is_error boolean true ，前提是有错误。 row_version integer <int64> 草稿的当前版本标识符。"
+        }
+      ],
+      "title": "更新第三方物流公司配送信息",
+      "news_updates": [
+        {
+          "date": "2026-09-11",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/fbp/order/direct/tpl-dlv/edit 添加了用于更新第三方物流公司配送信息的Beta方法。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/2026911"
+        }
+      ]
     }
   ],
-  "news_entry_count": 163,
-  "news_captured_at": "2026-09-07T10:14:38.290Z",
+  "news_entry_count": 170,
+  "news_captured_at": "2026-09-29T09:24:00.918559+00:00",
   "news_label_counts": {
-    "added_field": 66,
-    "deprecated_field": 11,
-    "deprecated_method": 37,
+    "added_field": 70,
+    "deprecated_field": 16,
+    "deprecated_method": 45,
     "graduated": 59,
     "new_method": 74,
     "removed_field": 17,
     "removed_method": 40,
-    "updated": 182
+    "updated": 190
   },
   "news_removed_or_missing_methods": [
     {

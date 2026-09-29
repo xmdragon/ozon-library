@@ -1,6 +1,10 @@
-# 从活动中删除商品
+# 从活动中删除商品 Deprecated
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-09-23。替代方法：`/v2/actions/products/deactivate`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026923
+> News 原文摘要：/v1/actions/products/deactivate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products/deactivate 。
 
 ## 方法
 
@@ -8,6 +12,12 @@
 - Operation ID：`PromosProductsDeactivate`
 - 官方锚点：https://docs.ozon.ru/api/seller/zh/#operation/PromosProductsDeactivate
 - 分组：`actions`
+
+## News 更新标记
+
+| 日期 | 标记 | 摘要 | 来源 |
+| --- | --- | --- | --- |
+| 2026-09-23 | `deprecated_method` | /v1/actions/products/deactivate 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/products/deactivate 。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 
 ## 页面标题结构
 
@@ -24,7 +34,7 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `action_id` required | number <double> 活动识别号。可以使用方法 /v1/actions获取。 |
+| `action_id` required | number <double> 活动识别号。可以使用方法 /v1/actions 获取。 |
 | `product_ids` required | Array of numbers <double> 活动识别号清单。 |
 
 ### 表格 1
@@ -32,6 +42,8 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
+| `product_ids` | Array of numbers <double> 已从促销活动中删除的商品ID列表。 |
+| `rejected` | Array of objects 不能从促销活动中删除的商品清单。 |
 
 ### 表格 2
 

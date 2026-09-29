@@ -13,6 +13,8 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-24 | `added_field`, `deprecated_field` | /v5/product/info/prices 在各方法的响应中： 我们已将 total 参数标记为已弃用——将于2026年11月23日关闭该参数。请改用 total_items 。 新增了 total_items 参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026924) |
+| 2026-09-14 | `updated` | /v5/product/info/prices 更新了方法响应中 items.price.marketing_seller_price 、 items.price.min_price 、 items.price.old_price 和 items.price.price 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
 | 2026-05-28 | `updated` | /v5/product/info/prices 更新了方法响应中items.marketing_actions、items.marketing_actions.actions、items.marketing_actions.actions.date_from、items.marketing_actions.actions.date_to、items.marketing_actions.actions.title和items.marketing_actions.actions.value参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026528) |
 | 2026-05-12 | `new_method` | /v5/product/info/prices 已新增方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2026-05-05 | `updated` | /v5/product/info/prices 更新了方法请求中参数 filter.visibility 的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202655) |
@@ -56,7 +58,8 @@
 | --- | --- |
 | `cursor` | string 用于选择数据的指针。 |
 | `items` | Array of objects 商品列表。 |
-| `total` | integer <int32> 商品列表中的商品数量。 |
+| `total` | integer <int32> Deprecated 商品列表中的商品数量。 |
+| `total_items` | integer <int64> 列表中的商品数量。 |
 
 ## 示例
 
@@ -170,7 +173,8 @@
     }
   ],
   "cursor": "",
-  "total": 2
+  "total": 2,
+  "total_items": 2
 }
 ```
 

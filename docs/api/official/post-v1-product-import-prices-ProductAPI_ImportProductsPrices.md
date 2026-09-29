@@ -13,6 +13,8 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-14 | `updated` | /v1/product/import/prices 更新了方法请求中 prices.min_price 、 prices.min_price_for_auto_actions_enabled 、 prices.old_price 、 prices.price 和 prices.price_strategy_enabled 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
+| 2026-09-11 | `deprecated_field` | /v1/product/import/prices 已将方法请求中的 prices.auto_action_enabled 和 prices.manage_elastic_boosting_through_price 参数标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026911) |
 | 2026-05-12 | `updated` | /v1/product/import/prices 更新了该方法请求中参数prices.min_price的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2025-12-30 | `updated` | /v1/product/import/prices 更新了方法请求中的 prices.vat 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251230) |
 | 2025-10-22 | `added_field` | /v1/product/import/prices 已添加参数 prices.manage_elastic_boosting_through_price 到方法请求。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251022) |
@@ -50,6 +52,10 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 搜索结果。 |
+| `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
+| `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id 。 |
+| `updated` | boolean 如果商品信息已被成功更新 — true 。 |
 
 ### 表格 3
 
@@ -57,8 +63,8 @@
 | --- | --- |
 | `errors` | Array of objects 在搜索处理过程中发生的数组错误。 |
 | `offer_id` | string 卖家系统中的商品编号是 — 商品代码。 |
-| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id。 |
-| `updated` | boolean 如果商品信息已被成功更新 — true。 |
+| `product_id` | integer <int64> Ozon系统中商品的标识符 — product_id 。 |
+| `updated` | boolean 如果商品信息已被成功更新 — true 。 |
 
 ## 示例
 

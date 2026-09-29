@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-14 | `updated` | /v1/product/import-by-sku 更新了方法请求中 items.old_price 和 items.price 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
 | 2026-07-10 | `updated` | /v1/product/import-by-sku 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
 | 2026-05-12 | `updated` | /v1/product/import-by-sku 已更新方法说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |
 | 2026-02-12 | `updated` | /v1/product/import-by-sku 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026212) |
@@ -50,6 +51,8 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object |
+| `task_id` | integer <int64> 进口货物任务代码。 |
+| `unmatched_sku_list` | Array of integers <int64> 商品Id列表。 |
 
 ### 表格 3
 

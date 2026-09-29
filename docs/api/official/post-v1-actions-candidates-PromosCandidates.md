@@ -1,6 +1,10 @@
-# 可用的促销商品清单
+# 可用的促销商品清单 Deprecated
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-09-23。替代方法：`/v2/actions/candidates`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/2026923
+> News 原文摘要：/v1/actions/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/candidates 。
 
 ## 方法
 
@@ -13,6 +17,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-23 | `deprecated_method` | /v1/actions/candidates 该方法已弃用，将于2026年10月13日停用。 请切换至 /v2/actions/candidates 。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 | 2025-12-23 | `added_field` | /v1/actions/candidates 添加了参数 result.products.current_boost、result.products.price_min_elastic、result.products.price_max_elastic、result.products.min_boost 和 result.products.max_boost 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251223) |
 | 2025-05-15 | `added_field` | /v1/actions/candidates 添加了参数 result.products.alert_max_action_price_failed 和 result.products.alert_max_action_price 到方法的响应中。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025515) |
 | 2025-03-13 | `added_field`, `deprecated_field` | /v1/actions/candidates 我们已将 offset 参数标记为已弃用，并添加了 last_id分页参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025313) |
@@ -32,7 +37,7 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `action_id` | number <double> 活动识别号。可以使用方法 /v1/actions获取。 |
+| `action_id` | number <double> 活动识别号。可以使用方法 /v1/actions 获取。 |
 | `limit` | number <double> 每页的答复数量。在默认情况下 — 100。 |
 | `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 |
 
@@ -41,6 +46,9 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
+| `products` | Array of objects 商品清单。 |
+| `total` | number <double> 可用于活动的商品总数。 |
+| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
 
 ### 表格 2
 
@@ -48,7 +56,7 @@
 | --- | --- |
 | `products` | Array of objects 商品清单。 |
 | `total` | number <double> 可用于活动的商品总数。 |
-| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
+| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
 
 ## 示例
 

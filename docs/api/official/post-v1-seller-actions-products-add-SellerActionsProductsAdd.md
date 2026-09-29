@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-09-28 | `added_field` | /v1/seller-actions/products/add 在方式的请求中添加了 products.action_price 参数。 更新了方法请求中的 products.discount_percent 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026928) |
 | 2026-03-24 | `new_method` | /v1/seller-actions/products/add 新增了用于管理卖家促销活动的Beta方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
 
 ## 页面标题结构
@@ -37,8 +38,8 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `action_id` required | integer <uint64> 促销活动标识符。请通过方法/v1/seller-actions/list获取该参数的值。 |
-| `products` required | Array of objects <= 100 items 商品信息。 |
+| `action_id` required | integer <uint64> 促销活动标识符。请通过方法 /v1/seller-actions/list 获取该参数的值。 |
+| `products` required | Array of action_price (object) or discount_percent (object) <= 100 items 商品信息。 |
 
 ## 示例
 
@@ -48,11 +49,7 @@
 {
   "action_id": 0,
   "products": [
-    {
-      "currency": "RUB",
-      "discount_percent": 0,
-      "sku": 0
-    }
+    {}
   ]
 }
 ```
