@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-22 | `graduated` | /v5/fbs/posting/product/exemplar/status 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261022) |
 | 2025-12-25 | `updated` | /v5/fbs/posting/product/exemplar/status 已更新方法响应中参数 products.exemplars.marks.check_status 的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
 | 2025-12-16 | `updated` | /v5/fbs/posting/product/exemplar/status 更新了方法响应中的 status 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251216) |
 | 2025-09-29 | `updated` | /v5/fbs/posting/product/exemplar/status 更新了方法响应中products.exemplars.marks参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
@@ -57,7 +58,7 @@
 
 ```json
 {
-  "posting_number": "string"
+  "posting_number": "789456123-0002-3"
 }
 ```
 
@@ -65,40 +66,106 @@
 
 ```json
 {
-  "posting_number": "string",
+  "posting_number": "789456123-0002-3",
   "products": [
     {
       "exemplars": [
         {
-          "exemplar_id": 0,
-          "gtd": "string",
-          "gtd_check_status": "string",
+          "exemplar_id": 10001,
+          "gtd": "GTD100500700/2026/0215",
+          "gtd_check_status": "SUCCESS",
+          "gtd_error_codes": [],
+          "is_gtd_absent": false,
+          "is_rnpt_absent": false,
+          "marks": [
+            {
+              "check_status": "SUCCESS",
+              "error_codes": [],
+              "mark": "01046000123456789ABCDEF12345678",
+              "mark_type": "DATA_MATRIX"
+            },
+            {
+              "check_status": "WARNING",
+              "error_codes": [
+                "MARK_EXPIRED"
+              ],
+              "mark": "QR1234567890ABCDEF987654321",
+              "mark_type": "QR_CODE"
+            }
+          ],
+          "rnpt": "RNPT100200300400500",
+          "rnpt_check_status": "SUCCESS",
+          "rnpt_error_codes": [],
+          "weight": 1250,
+          "weight_check_status": "SUCCESS",
+          "weight_error_codes": []
+        },
+        {
+          "exemplar_id": 10002,
+          "gtd": "",
+          "gtd_check_status": "ERROR",
           "gtd_error_codes": [
-            "string"
+            "GTD_MISSING"
           ],
           "is_gtd_absent": true,
           "is_rnpt_absent": true,
           "marks": [
             {
-              "check_status": "string",
+              "check_status": "ERROR",
               "error_codes": [
-                "string"
+                "MARK_INVALID_FORMAT"
               ],
-              "mark": "string",
-              "mark_type": "string"
+              "mark": "INVALID_MARK_123",
+              "mark_type": "UNKNOWN"
             }
           ],
-          "rnpt": "string",
-          "rnpt_check_status": "string",
+          "rnpt": "",
+          "rnpt_check_status": "ERROR",
           "rnpt_error_codes": [
-            "string"
+            "RNPT_MISSING"
+          ],
+          "weight": 0,
+          "weight_check_status": "ERROR",
+          "weight_error_codes": [
+            "WEIGHT_ZERO"
           ]
         }
       ],
-      "product_id": 0
+      "product_id": 123456789
+    },
+    {
+      "exemplars": [
+        {
+          "exemplar_id": 20001,
+          "gtd": "GTD200300400/2026/0301",
+          "gtd_check_status": "WARNING",
+          "gtd_error_codes": [
+            "GTD_EXPIRED"
+          ],
+          "is_gtd_absent": false,
+          "is_rnpt_absent": false,
+          "marks": [
+            {
+              "check_status": "SUCCESS",
+              "error_codes": [],
+              "mark": "01046000987654321FEDCBA654321",
+              "mark_type": "DATA_MATRIX"
+            }
+          ],
+          "rnpt": "RNPT999888777666555",
+          "rnpt_check_status": "WARNING",
+          "rnpt_error_codes": [
+            "RNPT_PARTIALLY_VALID"
+          ],
+          "weight": 3200,
+          "weight_check_status": "SUCCESS",
+          "weight_error_codes": []
+        }
+      ],
+      "product_id": 987654321
     }
   ],
-  "status": "string"
+  "status": "PROCESSING_COMPLETED"
 }
 ```
 

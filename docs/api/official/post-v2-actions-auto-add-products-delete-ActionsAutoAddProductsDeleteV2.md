@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 从促销活动自动添加列表中删除商品
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -39,8 +39,8 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `action_id` required | integer <uint64> 促销活动标识符。 |
-| `auto_add_date` required | string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 |
-| `product_ids` required | Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。 |
+| `auto_add_date` required | string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 |
+| `product_ids` required | Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即product_id。 |
 
 ### 表格 2
 
@@ -59,6 +59,16 @@
     88888
   ],
   "auto_add_date": "2025-01-01T00:00:00Z"
+}
+```
+
+### 示例 1
+
+```json
+{
+  "product_ids": [
+    88888
+  ]
 }
 ```
 

@@ -21,7 +21,7 @@
 
 ## 页面标题结构
 
-- 从活动中删除商品
+- 从活动中删除商品 Deprecated
 - REQUEST BODY SCHEMA: application/json
 - 回复
 - RESPONSE SCHEMA: application/json
@@ -34,7 +34,7 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `action_id` required | number <double> 活动识别号。可以使用方法 /v1/actions 获取。 |
+| `action_id` required | number <double> 活动识别号。可以使用方法 /v1/actions获取。 |
 | `product_ids` required | Array of numbers <double> 活动识别号清单。 |
 
 ### 表格 1

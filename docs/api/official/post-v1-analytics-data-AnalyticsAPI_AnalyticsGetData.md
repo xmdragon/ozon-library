@@ -53,6 +53,8 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 查询结果。 |
+| `data` | Array of objects 数据组。 |
+| `totals` | Array of numbers <double> 指标总计和平均值。 |
 | `timestamp` | string 报告创建时间。 |
 
 ### 表格 3

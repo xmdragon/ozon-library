@@ -4,10 +4,10 @@
 
 ## 摘要
 
-- News 条目数：170
-- 当前方法页已标记废弃/移除：18
+- News 条目数：175
+- 当前方法页已标记废弃/移除：19
 - News 中提到但当前 operation 索引不存在的废弃/移除方法：48
-- 标签统计：`added_field`: 70, `deprecated_field`: 16, `deprecated_method`: 45, `graduated`: 59, `new_method`: 88, `removed_field`: 17, `removed_method`: 40, `updated`: 189
+- 标签统计：`added_field`: 72, `deprecated_field`: 17, `deprecated_method`: 46, `graduated`: 64, `new_method`: 91, `removed_field`: 18, `removed_method`: 40, `updated`: 189
 
 ## 已在当前方法页标记的方法
 
@@ -27,6 +27,7 @@
 | `/v1/product/pictures/import` | `deprecated` | 2026-09-03 | `/v2/product/pictures/import` | [来源](https://docs.ozon.ru/api/seller/zh/#section/202693) |
 | `/v1/review/list` | `deprecated` | 2026-06-11 | `/v2/review/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026611) |
 | `/v1/warehouse/list` | `deprecated` | 2026-03-24 | `/v2/warehouse/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026324) |
+| `/v2/posting/fbs/package-label` | `deprecated` | 2026-10-15 | `/v3/posting/fbs/package-label/create`, `/v2/posting/fbs/package-label/get` | [来源](https://docs.ozon.ru/api/seller/zh/#section/20261015) |
 | `/v3/finance/transaction/list` | `deprecated` | 2026-07-14 | `/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026714) |
 | `/v3/finance/transaction/totals` | `deprecated` | 2026-07-14 | `/v1/finance/accrual/postings`, `/v1/finance/accrual/types`, `/v1/finance/accrual/by-day` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026714) |
 | `/v3/posting/fbs/list` | `deprecated` | 2026-07-10 | `/v4/posting/fbs/list` | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
@@ -113,6 +114,7 @@
 | `/v1/product/import/prices` | 2024-12-24 | `added_field` | /v1/product/import/prices 在方法请求中添加了参数 prices.vat。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20241224) |
 | `/v1/product/info/stocks-by-warehouse/fbs` | 2025-10-23 | `added_field` | /v1/product/info/stocks-by-warehouse/fbs 在请求中添加了参数 offer_id，并在方法响应中添加了参数 results.offer_id。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251023) |
 | `/v1/product/pictures/import` | 2026-07-10 | `removed_field` | /v1/product/pictures/import 已从方法请求中删除了images360参数。<br>已从方法响应中删除了result.pictures.is_360参数。<br>更新了方法描述。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |
+| `/v1/product/prices/details` | 2026-10-06 | `added_field` | /v1/product/prices/details 在方法响应中新增了参数 prices.weight_index 。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026106) |
 | `/v1/product/prices/details` | 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：<br>新增了prices.price_indexes参数；<br>将prices.discount_percent参数标记为已弃用；<br>更新了prices.customer_price参数的说明。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | `/v1/question/answer/list` | 2026-05-19 | `added_field` | /v1/question/answer/list 在方法响应中新增了answers.status_publication参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | `/v1/question/list` | 2026-05-19 | `added_field` | /v1/question/list 在方法请求中新增了sort_dir和limit参数。<br>在方法响应中新增了has_next参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
@@ -120,6 +122,7 @@
 | `/v1/report/info` | 2025-11-18 | `added_field` | /v1/report/info 在方法的响应中新增参数result.expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
 | `/v1/report/list` | 2025-11-18 | `added_field` | /v1/report/list 在方法的响应中新增参数result.reports.expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251118) |
 | `/v1/report/postings/create` | 2025-09-29 | `added_field` | /v1/report/postings/create 已添加以下参数filter.warehouse_id、filter.delivery_method_id、filter.is_express、with.additional_data、with.analytics_data、with.customer_data 和 with.jewelry_codes 到方法请求。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
+| `/v1/returns/company/fbs/info` | 2025-05-14 | `added_field`, `removed_field` | /v1/returns/company/fbs/info 在方法响应中添加了参数 box_count 和 utc_offset 。已从方法响应中删除了 company_id 参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2025514) |
 | `/v1/returns/list` | 2025-12-12 | `removed_field` | /v1/returns/list 移除了方法请求中参数 filter.visual_status_name 的值 ReturnCompensated。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251212) |
 | `/v1/returns/list` | 2025-11-20 | `added_field` | /v1/returns/list 已添加参数 filter.compensation_status_id到方法请求。<br>在方法的响应中添加了参数 returns.compensation_status。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251120) |
 | `/v1/roles` | 2026-03-04 | `added_field` | /v1/roles 在方法的响应中新增了参数 expires_at。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202634) |
@@ -130,6 +133,7 @@
 | `/v1/warehouse/list` | 2025-12-18 | `added_field` | /v1/warehouse/list 在方法请求中添加了参数 limit 和 offset。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251218) |
 | `/v2/delivery-method/list` | 2026-05-22 | `added_field` | /v2/delivery-method/list 在方法响应中新增了参数delivery_methods.tpl_dropoff_point。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026522) |
 | `/v2/finance/realization` | 2025-12-25 | `removed_field` | /v2/finance/realization 已从方法响应中移除参数 result.header.doc_amount 和 result.header.vat_amount。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251225) |
+| `/v2/posting/fbs/act/get-postings` | 2026-10-13 | `deprecated_field` | /v2/posting/fbs/act/get-postings 已将方法请求中的 result.is_blr_traceable 和 result.scanit 参数标记为已弃用。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20261013) |
 | `/v2/posting/fbs/get-by-barcode` | 2025-10-16 | `removed_field` | /v2/posting/fbs/get-by-barcode 已从方法响应中移除参数 result.analytics_data 和 result.financial_data。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
 | `/v2/posting/fbs/get-by-barcode` | 2025-05-06 | `removed_field` | /v2/posting/fbs/get-by-barcode 已从方法响应中移除参数 result.financial_data.products.client_price，result.financial_data.products.picking 和 result.products.mandatory_mark。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/202556) |
 | `/v2/product/pictures/info` | 2026-07-10 | `removed_field` | /v2/product/pictures/info 已从方法响应中删除了items.photo_360参数。 | [来源](https://docs.ozon.ru/api/seller/zh/#section/2026710) |

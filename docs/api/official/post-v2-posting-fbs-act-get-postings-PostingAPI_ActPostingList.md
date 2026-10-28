@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-13 | `deprecated_field` | /v2/posting/fbs/act/get-postings 已将方法请求中的 result.is_blr_traceable 和 result.scanit 参数标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261013) |
 | 2026-06-03 | `new_method` | /v2/posting/fbs/act/get-postings 新增了用于获取单据中货件列表的方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202663) |
 
 ## 页面标题结构
@@ -45,14 +46,26 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | Array of objects 货件信息。 |
+| `id` | integer <int64> 单据标识符。 |
+| `is_blr_traceable` | boolean true，表示商品可追溯。 |
+| `multi_box_qty` | integer <int32> 商品包装所用箱数。 |
+| `posting_number` | string 货件编号。 |
+| `scanit` | string 标签上的ScanIt条形码。 |
+| `status` | string 货件状态。 |
+| `seller_error` | string 错误代码说明。 |
+| `updated_at` | string <date-time> 货件记录的更新日期和时间。 |
+| `created_at` | string <date-time> 货件记录的创建日期和时间。 |
+| `products` | Array of objects 货件中商品列表。 |
 
 ### 表格 3
 
 | 字段 | 类型/说明 |
 | --- | --- |
 | `id` | integer <int64> 单据标识符。 |
+| `is_blr_traceable` | boolean true，表示商品可追溯。 |
 | `multi_box_qty` | integer <int32> 商品包装所用箱数。 |
 | `posting_number` | string 货件编号。 |
+| `scanit` | string 标签上的ScanIt条形码。 |
 | `status` | string 货件状态。 |
 | `seller_error` | string 错误代码说明。 |
 | `updated_at` | string <date-time> 货件记录的更新日期和时间。 |
@@ -76,8 +89,10 @@
   "result": [
     {
       "id": 0,
+      "is_blr_traceable": true,
       "multi_box_qty": 0,
       "posting_number": "string",
+      "scanit": "string",
       "status": "string",
       "seller_error": "string",
       "updated_at": "2019-08-24T14:15:22Z",

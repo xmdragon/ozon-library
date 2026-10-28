@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-22 | `graduated` | /v6/fbs/posting/product/exemplar/set 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261022) |
 | 2025-10-16 | `updated` | /v6/fbs/posting/product/exemplar/set 更新了方法请求中的 products.exemplars.marks 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
 | 2025-09-29 | `updated` | /v6/fbs/posting/product/exemplar/set 更新了方法请求中products.exemplars.marks参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
 | 2025-02-17 | `new_method` | /v6/fbs/posting/product/exemplar/set 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
@@ -49,26 +50,27 @@
 
 ```json
 {
-  "multi_box_qty": 0,
-  "posting_number": "string",
+  "multi_box_qty": 1,
+  "posting_number": "AB-12345678",
   "products": [
     {
       "exemplars": [
         {
-          "exemplar_id": 0,
-          "gtd": "string",
-          "is_gtd_absent": true,
-          "is_rnpt_absent": true,
+          "exemplar_id": 1001,
+          "gtd": "10719040/123456/1234567",
+          "is_gtd_absent": false,
+          "is_rnpt_absent": false,
           "marks": [
             {
-              "mark": "string",
-              "mark_type": "string"
+              "mark": "0104630510533565216S96G2LpG8c",
+              "mark_type": "KIZ"
             }
           ],
-          "rnpt": "string"
+          "rnpt": "1234567890",
+          "weight": 1500
         }
       ],
-      "product_id": 0
+      "product_id": 987654
     }
   ]
 }

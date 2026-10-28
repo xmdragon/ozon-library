@@ -22,7 +22,7 @@
 
 ## 页面标题结构
 
-- 获取促销活动自动添加列表中的商品列表
+- 获取促销活动自动添加列表中的商品列表 Deprecated
 - HEADER PARAMETERS
 - REQUEST BODY SCHEMA: application/json
 - 回复
@@ -44,9 +44,9 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `action_id` required | integer <uint64> 促销活动标识符。 |
-| `auto_add_date` required | string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 |
+| `auto_add_date` required | string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 |
 | `limit` required | integer <uint64> [ 1 .. 100 ] 响应中返回的值数量。 |
-| `offset` | integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果 offset = 10 ，响应将从第11个找到的元素开始。 |
+| `offset` | integer <uint64> Default: 0 在响应中将被跳过的项目数量。例如，如果offset = 10，响应将从第11个找到的元素开始。 |
 
 ### 表格 2
 

@@ -60,6 +60,43 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 货件信息。 |
+| `additional_data` | Array of objects |
+| `addressee` | object 收件人联系方式。 |
+| `analytics_data` | object 分析数据。 |
+| `available_actions` | Array of strings 可用的操作和货件信息包括： arbitration — 提出争议； awaiting_delivery — 转为“等待发运”状态； can_create_chat — 与买家开启聊天； cancel — 取消货件； click_track_number — 在个人中心通过追踪号查看状态历史； customer_phone_available — 获取买家电话号码； has_weight_products — 货件中包含以重量结算； hide_region_and_city — 在报告中隐藏买家的地区和城市； invoice_get — 获取发票信息； invoice_send — 创建发票； invoice_update — 编辑发票； label_download_big — 下载大标签； label_download_small — 下载小标签； label_download — 下载标签； non_int_delivered — 转为“可能已收”状态； non_int_delivering — 转为“运输中”状态； non_int_last_mile — 转为“快递员派件中”状态； product_cancel — 取消部分货件中的商品； set_cutoff — 需要指定发货日期，请使用方法/v1/posting/cutoff/set； set_timeslot — 修改买家的送货时间； set_track_number — 指定或更改追踪号； ship_async_in_process — 货件备货中； ship_async_retry — 发生错误后重新发货； ship_async — 备货货件； ship_with_additional_info — 需要填写额外信息； ship — 备货货件; update_cis — 修改附加信息。 |
+| `barcodes` | object 货件条码。 |
+| `cancellation` | object 取消原因。 |
+| `courier` | object 快递员信息。 |
+| `customer` | object 买家信息。 |
+| `delivering_date` | string <date-time> 货件交付物流的时间。 |
+| `delivery_method` | object 快递方式。 |
+| `delivery_price` | string 物流价格。 |
+| `fact_delivery_date` | string <date-time> 货件实际转移配送的日期。 |
+| `financial_data` | object 有关商品成本、折扣幅度、付款和佣金的信息。 |
+| `in_process_at` | string <date-time> 开始处理货件的日期和时间。 |
+| `integration_type_flow` | string 货件处理流程： ozon——由Ozon配送； aggregator——外部配送服务，Ozon登记订单； non_integrated——卖家自行配送； 3pl_tracking——外部配送服务，卖家登记订单； hybrid——混合集成； hybrid_aggregator——混合集成，外部配送服务，Ozon登记订单； hybrid_non_integrated——混合集成，卖家自行配送； hybrid_3pl_tracking——混合集成，外部配送服务，卖家登记订单； click_and_collect——在合作伙伴门店预订。 |
+| `is_express` | boolean 如果使用了快速物流Ozon Express —— true。 |
+| `legal_info` | object 买方的法律信息。 |
+| `optional` | object 带有附加特征的商品列表。 |
+| `order_id` | integer <int64> 货件所属的订单ID。 |
+| `order_number` | string 货件所属的订单号。 |
+| `parent_posting_number` | string 母件编号，由该母件拆分出了该货件。 |
+| `posting_number` | string 货件号。 |
+| `product_exemplars` | object 有关产品及其副本的信息。 响应包含 product_exemplars字段, 如果在请求中传递标志 with.product_exemplars = true。 |
+| `products` | Array of objects 货物装运的数组。 |
+| `provider_status` | string 快递服务状态。 |
+| `related_postings` | object 相关货件。 |
+| `requirements` | object 需提供制造国、货运报关单号、商品批次登记号、“诚实标志”、其他标识或重量的商品列表，以便将货件状态更新至下一阶段。 |
+| `shipment_date` | string <date-time> 必须收取货件的日期和时间。 超出该时间后将适用新费率，相关信息请查看字段 tariffication。 |
+| `shipment_date_without_delay` | string <date-time> 不逾期发运日期和时间。 |
+| `sorting_center` | object 关于货件需要送达的分拣中心的信息。适用于integration_type_flow = hybrid_3pl_tracking。 如果值为null，则无法获取该信息。 |
+| `status` | string 货运状态: acceptance_in_progress —— 正在验收， arbitration —— 仲裁， awaiting_approve —— 等待确认， awaiting_deliver —— 等待装运， awaiting_packaging —— 等待包装， awaiting_registration —— 等待注册， awaiting_verification —— 已创建， cancelled —— 已取消， cancelled_from_split_pending——因货件拆分而取消， client_arbitration —— 快递客户仲裁， delivered —— 已送达， delivering —— 运输中， driver_pickup —— 司机处， not_accepted —— 分拣中心未接受， |
+| `substatus` | string 发货子状态： posting_acceptance_in_progress —— 正在验收， posting_in_arbitration —— 仲裁， posting_created —— 已创建， posting_in_carriage —— 在运输途中， posting_not_in_carriage —— 未在运输中， posting_registered —— 已登记， posting_transferring_to_delivery (status=awaiting_deliver) —— 移交给快递， posting_awaiting_passport_data —— 等待护照资料， posting_created —— 已创建， posting_awaiting_registration —— 等待注册， posting_registration_error —— 注册错误， posting_transferring_to_delivery (status=awaiting_registration) —— 交给快递员, posting_split_pending —— 已创建， posting_canceled —— 已取消， posting_in_client_arbitration —— 快递会员仲裁， posting_delivered —— 已送达， posting_received —— 已收到， posting_conditionally_delivered —— 暂时送到， posting_in_courier_service —— 快递员正在路上， posting_in_pickup_point —— 在取货点， posting_on_way_to_city —— 发往城市途中， posting_on_way_to_pickup_point —— 正发往取货点， posting_returned_to_warehouse —— 返回仓库， posting_transferred_to_courier_service —— 转交给快递员， posting_driver_pick_up —— 在司机那儿， posting_not_in_sort_center —— 集散中心未收到， ship_failed —— 备货失败。 |
+| `previous_substatus` | string 货件的前一个子状态。可能的取值： posting_acceptance_in_progress —— 正在验收， posting_in_arbitration —— 仲裁， posting_created —— 已创建， posting_in_carriage —— 在运输途中， posting_not_in_carriage —— 未在运输中， posting_registered —— 已登记， posting_transferring_to_delivery (status=awaiting_deliver) —— 移交给快递， posting_awaiting_passport_data —— 等待护照资料， posting_created —— 已创建， posting_awaiting_registration —— 等待注册， posting_registration_error —— 注册错误， posting_transferring_to_delivery (status=awaiting_registration) —— 交给快递员, posting_split_pending —— 已创建， posting_canceled —— 已取消， posting_in_client_arbitration —— 快递会员仲裁， posting_delivered —— 已送达， posting_received —— 已收到， posting_conditionally_delivered —— 暂时送到， posting_in_courier_service —— 快递员正在路上， posting_in_pickup_point —— 在取货点， posting_on_way_to_city —— 发往城市途中， posting_on_way_to_pickup_point —— 正发往取货点， posting_returned_to_warehouse —— 返回仓库， posting_transferred_to_courier_service —— 转交给快递员， posting_driver_pick_up —— 在司机那儿， posting_not_in_sort_center —— 集散中心未收到。 |
+| `tpl_integration_type` | string 快递服务集成类型： ozon —— 通过Ozon物流的快递。 aggregator —— 外部服务快递，Ozon注册订单。 3pl_tracking —— 外部服务快递，卖家注册订单。 non_integrated —— 卖家自行配送物流。 |
+| `tracking_number` | string 货件跟踪号。 |
+| `tariffication` | object 发运的计费信息。 |
+| `tariffication_steps` | Array of objects 计费阶段。 |
 
 ### 表格 3
 
@@ -79,7 +116,7 @@
 | `fact_delivery_date` | string <date-time> 货件实际转移配送的日期。 |
 | `financial_data` | object 有关商品成本、折扣幅度、付款和佣金的信息。 |
 | `in_process_at` | string <date-time> 开始处理货件的日期和时间。 |
-| `integration_type_flow` | string 货件处理流程： ozon——由Ozon配送； aggregator——外部配送服务，Ozon登记订单； non_integrated——卖家自行配送； 3pl_tracking——外部配送服务，卖家登记订单； hybrid——混合集成； hybrid_aggregator——混合集成，外部配送服务，Ozon登记订单； hybrid_non_integrated——混合集成，卖家自行配送； hybrid_3pl_tracking——混合集成，外部配送服务，卖家登记订单； click_and_collect——在合作伙伴门店预订； FBP——从Ozon合作伙伴仓库配送。 |
+| `integration_type_flow` | string 货件处理流程： ozon——由Ozon配送； aggregator——外部配送服务，Ozon登记订单； non_integrated——卖家自行配送； 3pl_tracking——外部配送服务，卖家登记订单； hybrid——混合集成； hybrid_aggregator——混合集成，外部配送服务，Ozon登记订单； hybrid_non_integrated——混合集成，卖家自行配送； hybrid_3pl_tracking——混合集成，外部配送服务，卖家登记订单； click_and_collect——在合作伙伴门店预订。 |
 | `is_express` | boolean 如果使用了快速物流Ozon Express —— true。 |
 | `legal_info` | object 买方的法律信息。 |
 | `optional` | object 带有附加特征的商品列表。 |

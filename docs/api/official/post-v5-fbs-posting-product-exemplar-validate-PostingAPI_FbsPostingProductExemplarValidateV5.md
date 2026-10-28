@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-22 | `graduated` | /v5/fbs/posting/product/exemplar/validate 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261022) |
 | 2025-10-16 | `updated` | /v5/fbs/posting/product/exemplar/validate 更新了方法响应中的 products.exemplars.marks 参数描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20251016) |
 | 2025-09-29 | `updated` | /v5/fbs/posting/product/exemplar/validate 已更新该方式的请求与响应中products.exemplars.marks参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
 | 2025-02-17 | `new_method` | /v5/fbs/posting/product/exemplar/validate 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
@@ -48,6 +49,10 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `products` | Array of objects 商品清单。 |
+| `error` | string 错误代码。 |
+| `exemplars` | Array of objects 副本信息。 |
+| `product_id` | integer <int64> Ozon系统中的商品ID — SKU。 |
+| `valid` | boolean 验证结果。如果所有样件的代码都符合要求，那么结果将为 true。 |
 
 ### 表格 3
 
@@ -64,22 +69,54 @@
 
 ```json
 {
-  "posting_number": "string",
+  "posting_number": "43210543-0123-4",
   "products": [
     {
       "exemplars": [
         {
-          "gtd": "string",
+          "gtd": "GTD-100500/2026/0215",
           "marks": [
             {
-              "mark": "string",
-              "mark_type": "string"
+              "mark": "01046000123456789ABCDEF12345678",
+              "mark_type": "DATA_MATRIX"
+            },
+            {
+              "mark": "QR-9876543210ABCDEF1234567890",
+              "mark_type": "QR_CODE"
             }
           ],
-          "rnpt": "string"
+          "rnpt": "RNPT-100200300400500",
+          "weight": 1500
+        },
+        {
+          "gtd": "GTD-200300/2026/0301",
+          "marks": [
+            {
+              "mark": "01046000987654321FEDCBA654321",
+              "mark_type": "DATA_MATRIX"
+            }
+          ],
+          "rnpt": "RNPT-999888777666555",
+          "weight": 2200
         }
       ],
-      "product_id": 0
+      "product_id": 123456789
+    },
+    {
+      "exemplars": [
+        {
+          "gtd": "",
+          "marks": [
+            {
+              "mark": "INVALID-MARK-1234567890",
+              "mark_type": "UNKNOWN"
+            }
+          ],
+          "rnpt": "",
+          "weight": 0
+        }
+      ],
+      "product_id": 987654321
     }
   ]
 }
@@ -91,28 +128,73 @@
 {
   "products": [
     {
-      "error": "string",
+      "error": "该产品包含无效实例",
       "exemplars": [
         {
           "errors": [
-            "string"
+            "未注明物品重量",
+            "商品批次登记号缺失"
           ],
-          "gtd": "string",
+          "gtd": "GTD-100500/2026/0215",
           "marks": [
             {
+              "errors": [],
+              "mark": "01046000123456789ABCDEF12345678",
+              "mark_type": "DATA_MATRIX",
+              "valid": true
+            },
+            {
               "errors": [
-                "string"
+                "标注格式无效"
               ],
-              "mark": "string",
-              "mark_type": "string",
+              "mark": "INVALID-MARK-123",
+              "mark_type": "UNKNOWN",
+              "valid": false
+            }
+          ],
+          "rnpt": "",
+          "valid": false,
+          "weight": 0
+        },
+        {
+          "errors": [],
+          "gtd": "GTD-200300/2026/0301",
+          "marks": [
+            {
+              "errors": [],
+              "mark": "01046000987654321FEDCBA654321",
+              "mark_type": "DATA_MATRIX",
               "valid": true
             }
           ],
-          "rnpt": "string",
-          "valid": true
+          "rnpt": "RNPT-999888777666555",
+          "valid": true,
+          "weight": 2200
         }
       ],
-      "product_id": 0,
+      "product_id": 123456789,
+      "valid": false
+    },
+    {
+      "error": "",
+      "exemplars": [
+        {
+          "errors": [],
+          "gtd": "GTD-300400/2026/0401",
+          "marks": [
+            {
+              "errors": [],
+              "mark": "QR-9876543210ABCDEF1234567890",
+              "mark_type": "QR_CODE",
+              "valid": true
+            }
+          ],
+          "rnpt": "RNPT-555444333222111",
+          "valid": true,
+          "weight": 1500
+        }
+      ],
+      "product_id": 987654321,
       "valid": true
     }
   ]

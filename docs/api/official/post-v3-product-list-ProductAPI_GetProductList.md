@@ -43,7 +43,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `filter` | object 商品过滤。 |
-| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `last_id` | string 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
 | `limit` | integer <int64> 答复的信息数量。默认设置为1。最大值是1000。 |
 
 ### 表格 2
@@ -52,7 +52,7 @@
 | --- | --- |
 | `result` | object 结果。 |
 | `items` | Array of objects 品列表的。 |
-| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
 | `total` | integer <int32> Deprecated 品牌总数。 |
 | `total_items` | integer <int64> 商品总数。 |
 
@@ -61,7 +61,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `items` | Array of objects 品列表的。 |
-| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `last_id` | string 页面上最后一个值的ID。 要检索以下数值，请从上一个查询的响应中指定 last_id。 |
 | `total` | integer <int32> Deprecated 品牌总数。 |
 | `total_items` | integer <int64> 商品总数。 |
 

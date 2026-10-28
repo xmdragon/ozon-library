@@ -51,6 +51,8 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `result` | object 请求结果。 |
+| `reports` | Array of objects 包含所有生成的报告的数组。 |
+| `total` | integer <int32> 累计报告数。 |
 
 ### 表格 3
 
@@ -88,7 +90,7 @@
         "status": "success",
         "error": "",
         "expires_at": "2025-11-12T19:55:28.249Z",
-        "file": "https://ir.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+        "file": "https://ir-20.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
         "report_type": "seller_products",
         "params": {
           "visibility": "3"
@@ -99,7 +101,7 @@
         "code": "REPORT_seller_products_924336_1720170405_a9ea2f27-a473-4b13-99f9-d0cfcb5b1a69",
         "status": "success",
         "error": "",
-        "file": "https://ir.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
+        "file": "https://ir-20.ozone.ru/s3/item-picture-6/f3/ce/f4ceae54b323213d3e61e59c323bd8e5.csv",
         "report_type": "seller_products",
         "params": {
           "visibility": "3"

@@ -14,6 +14,7 @@
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
 | 2025-06-20 | `updated` | /v1/returns/company/fbs/info 更新了请求示例。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025620) |
+| 2025-05-14 | `added_field`, `removed_field` | /v1/returns/company/fbs/info 在方法响应中添加了参数 box_count 和 utc_offset 。已从方法响应中删除了 company_id 参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025514) |
 
 ## 页面标题结构
 
