@@ -55,7 +55,7 @@
 ```json
 {
   "all_blr_traceable": true,
-  "delivery_method_id": 0,
+  "delivery_method_id": 323123321,
   "departure_date": "2019-08-24T14:15:22Z"
 }
 ```
@@ -64,7 +64,7 @@
 
 ```json
 {
-  "carriage_id": 0
+  "carriage_id": 32323
 }
 ```
 

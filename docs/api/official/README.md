@@ -6,7 +6,7 @@
 
 ## 生成信息
 
-- 方法页数量：273
+- 方法页数量：276
 - 来源：`indexes/official-seller-api.operations.json`
 - 生成器：`tools/generate_official_api_docs.py`
 - 重新生成：`python3 tools/generate_official_api_docs.py`
@@ -24,7 +24,7 @@
 - [同意折扣申请](post-v1-actions-discounts-task-approve-promos_task_approve.md) - `POST /v1/actions/discounts-task/approve` - `promos_task_approve`
 - [取消折扣申请](post-v1-actions-discounts-task-decline-promos_task_decline.md) - `POST /v1/actions/discounts-task/decline` - `promos_task_decline`
 - [申请折扣列表](post-v1-actions-discounts-task-list-promos_task_list.md) - `POST /v1/actions/discounts-task/list` - `promos_task_list` - **deprecated**
-- [参与 活动的商品列表 Deprecated](post-v1-actions-products-PromosProducts.md) - `POST /v1/actions/products` - `PromosProducts` - **deprecated**
+- [参与 活动的商品列表 Deprecated](post-v1-actions-products-PromosProducts.md) - `POST /v1/actions/products` - `PromosProducts` - **deprecated**
 - [在促销活动中增加一个商品 Deprecated](post-v1-actions-products-activate-PromosProductsActivate.md) - `POST /v1/actions/products/activate` - `PromosProductsActivate` - **deprecated**
 - [从活动中删除商品 Deprecated](post-v1-actions-products-deactivate-PromosProductsDeactivate.md) - `POST /v1/actions/products/deactivate` - `PromosProductsDeactivate` - **deprecated**
 - [将商品加入促销活动或更新商品](post-v1-actions-products-update-ActionsProductsUpdate.md) - `POST /v1/actions/products/update` - `ActionsProductsUpdate`
@@ -53,6 +53,7 @@
 ### barcode
 
 - [为商品绑定条形码](post-v1-barcode-add-add-barcode.md) - `POST /v1/barcode/add` - `add-barcode`
+- [将条形码与商品解除绑定](post-v1-barcode-delete-BarcodeDelete.md) - `POST /v1/barcode/delete` - `BarcodeDelete`
 - [创建商品条形码](post-v1-barcode-generate-generate-barcode.md) - `POST /v1/barcode/generate` - `generate-barcode`
 
 ### carriage
@@ -149,7 +150,7 @@
 
 ### fbs
 
-- [Обновить данные экземпляров](post-v1-fbs-posting-product-exemplar-update-PostingAPI_FbsPostingProductExemplarUpdate.md) - `POST /v1/fbs/posting/product/exemplar/update` - `PostingAPI_FbsPostingProductExemplarUpdate`
+- [更新样件数据](post-v1-fbs-posting-product-exemplar-update-PostingAPI_FbsPostingProductExemplarUpdate.md) - `POST /v1/fbs/posting/product/exemplar/update` - `PostingAPI_FbsPostingProductExemplarUpdate`
 - [将状态改成“已送达”](post-v2-fbs-posting-delivered-PostingAPI_FbsPostingDelivered.md) - `POST /v2/fbs/posting/delivered` - `PostingAPI_FbsPostingDelivered`
 - [将状态改成“运输中”](post-v2-fbs-posting-delivering-PostingAPI_FbsPostingDelivering.md) - `POST /v2/fbs/posting/delivering` - `PostingAPI_FbsPostingDelivering`
 - [状态改为“最后一英里”](post-v2-fbs-posting-last-mile-PostingAPI_FbsPostingLastMile.md) - `POST /v2/fbs/posting/last-mile` - `PostingAPI_FbsPostingLastMile`
@@ -197,12 +198,14 @@
 - [取消货运](post-v2-posting-fbs-cancel-PostingAPI_CancelFbsPosting.md) - `POST /v2/posting/fbs/cancel` - `PostingAPI_CancelFbsPosting`
 - [货件取消原因](post-v2-posting-fbs-cancel-reason-list-PostingAPI_GetPostingFbsCancelReasonList.md) - `POST /v2/posting/fbs/cancel-reason/list` - `PostingAPI_GetPostingFbsCancelReasonList`
 - [按条形码获取有关货件的信息](post-v2-posting-fbs-get-by-barcode-PostingAPI_GetFbsPostingByBarcode.md) - `POST /v2/posting/fbs/get-by-barcode` - `PostingAPI_GetFbsPostingByBarcode`
-- [打印标签](post-v2-posting-fbs-package-label-PostingAPI_PostingFBSPackageLabel.md) - `POST /v2/posting/fbs/package-label` - `PostingAPI_PostingFBSPackageLabel`
+- [打印标签 Deprecated](post-v2-posting-fbs-package-label-PostingAPI_PostingFBSPackageLabel.md) - `POST /v2/posting/fbs/package-label` - `PostingAPI_PostingFBSPackageLabel` - **deprecated**
+- [获取标签文件](post-v2-posting-fbs-package-label-get-PostingFbsPackageLabelGet.md) - `POST /v2/posting/fbs/package-label/get` - `PostingFbsPackageLabelGet`
 - [取消某些商品发货](post-v2-posting-fbs-product-cancel-PostingAPI_CancelFbsPostingProduct.md) - `POST /v2/posting/fbs/product/cancel` - `PostingAPI_CancelFbsPostingProduct`
 - [可用产地名单](post-v2-posting-fbs-product-country-list-PostingAPI_ListCountryProductFbsPostingV2.md) - `POST /v2/posting/fbs/product/country/list` - `PostingAPI_ListCountryProductFbsPostingV2`
 - [添加商品产地信息](post-v2-posting-fbs-product-country-set-PostingAPI_SetCountryProductFbsPostingV2.md) - `POST /v2/posting/fbs/product/country/set` - `PostingAPI_SetCountryProductFbsPostingV2`
 - [按照ID获取货件信息](post-v3-posting-fbs-get-PostingAPI_GetFbsPostingV3.md) - `POST /v3/posting/fbs/get` - `PostingAPI_GetFbsPostingV3`
 - [货件列表 Deprecated](post-v3-posting-fbs-list-PostingAPI_GetFbsPostingListV3.md) - `POST /v3/posting/fbs/list` - `PostingAPI_GetFbsPostingListV3` - **deprecated**
+- [创建标签生成任务](post-v3-posting-fbs-package-label-create-PostingFbsPackageLabelCreate.md) - `POST /v3/posting/fbs/package-label/create` - `PostingFbsPackageLabelCreate`
 - [未处理货件列表 Deprecated](post-v3-posting-fbs-unfulfilled-list-PostingAPI_GetFbsPostingUnfulfilledList.md) - `POST /v3/posting/fbs/unfulfilled/list` - `PostingAPI_GetFbsPostingUnfulfilledList` - **deprecated**
 - [获取货件列表](post-v4-posting-fbs-list-PostingFbsList.md) - `POST /v4/posting/fbs/list` - `PostingFbsList`
 - [搜集订单 (第4方案)](post-v4-posting-fbs-ship-PostingAPI_ShipFbsPostingV4.md) - `POST /v4/posting/fbs/ship` - `PostingAPI_ShipFbsPostingV4`

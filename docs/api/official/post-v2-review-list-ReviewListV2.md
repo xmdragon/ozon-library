@@ -62,8 +62,8 @@
     "sku": [
       0
     ],
-    "order_status": "NEW",
-    "status": "DELIVERED",
+    "order_status": "DELIVERED",
+    "status": "NEW",
     "published_from": "2026-03-10T14:08:00.257Z",
     "published_to": "2026-03-10T14:08:00.257Z"
   },
@@ -84,7 +84,7 @@
       "text": "string",
       "published_at": "2024-10-10T07:23:55.970Z",
       "rating": 2,
-      "status": "UNPROCESSED",
+      "status": "NEW",
       "comments_amount": 0,
       "photos_amount": 0,
       "videos_amount": 0,

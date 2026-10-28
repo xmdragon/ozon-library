@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-06 | `added_field` | /v1/product/prices/details 在方法响应中新增了参数 prices.weight_index 。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026106) |
 | 2026-09-14 | `updated` | /v1/product/prices/details 更新了方法响应中 prices.customer_price 、 prices.price 和 prices.price_indexes 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
 | 2026-05-19 | `added_field`, `deprecated_field` | /v1/product/prices/details 在方法响应中：<br>新增了prices.price_indexes参数；<br>将prices.discount_percent参数标记为已弃用；<br>更新了prices.customer_price参数的说明。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026519) |
 | 2026-03-04 | `graduated` | /v1/product/prices/details 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/202634) |
@@ -53,6 +54,7 @@
 | `price` | object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 |
 | `price_indexes` | Array of objects 商品价格指数。 |
 | `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
+| `weight_index` | Array of objects 加权平均价格指数。如果weight_index = null，则表示未能获取该指数。 |
 
 ### 表格 3
 
@@ -64,6 +66,7 @@
 | `price` | object 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 |
 | `price_indexes` | Array of objects 商品价格指数。 |
 | `sku` | integer <int64> Ozon 系统中的商品标识符——SKU。 |
+| `weight_index` | Array of objects 加权平均价格指数。如果weight_index = null，则表示未能获取该指数。 |
 
 ## 示例
 
@@ -113,7 +116,20 @@
           }
         }
       ],
-      "sku": 0
+      "sku": 0,
+      "weight_index": [
+        {
+          "self_wb_index": 0,
+          "self_wb_min_competitor_price": [
+            {
+              "amount": "string",
+              "currency": "string"
+            }
+          ],
+          "self_wb_url": "string",
+          "weight_percent": 0
+        }
+      ]
     }
   ]
 }

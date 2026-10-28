@@ -6,7 +6,7 @@
 
 ## AI 摘要
 
-官方推荐货件列表接口为 `POST /v4/posting/fbs/list`；News `section/2026430` 说明 `POST /v3/posting/fbs/list` 已于 2026-06-01 停用，只能作为历史兼容路径追溯。详情接口常用 `/v3/posting/fbs/get`，发货使用 `/v4/posting/fbs/ship`，标签使用 `/v2/posting/fbs/package-label`。请求通常需要 `Client-Id`、`Api-Key`，v4 列表接口使用 `filter`、`limit`、`cursor` 和按需开启的 `with` 字段。
+官方推荐货件列表接口为 `POST /v4/posting/fbs/list`；News `section/2026430` 说明 `POST /v3/posting/fbs/list` 已于 2026-06-01 停用，只能作为历史兼容路径追溯。详情接口常用 `/v3/posting/fbs/get`，发货使用 `/v4/posting/fbs/ship`。标签改为异步两步：先 `POST /v3/posting/fbs/package-label/create` 建任务，再用 `task_id` 轮询 `POST /v2/posting/fbs/package-label/get` 取 `file_url`；旧的同步 PDF 接口 `/v2/posting/fbs/package-label` 已弃用，2026-11-02 停用（News `section/20261015`）。请求通常需要 `Client-Id`、`Api-Key`，v4 列表接口使用 `filter`、`limit`、`cursor` 和按需开启的 `with` 字段。
 
 ## 关键接口
 
@@ -17,7 +17,19 @@
 | `POST /v3/posting/fbs/get` | `PostingAPI_GetFbsPostingV3` | 按 `posting_number` 获取详情 | `posting_number`、`with` |
 | `POST /v4/posting/fbs/ship` | `PostingAPI_ShipFbsPostingV4` | 组包/发货 | `posting_number`、`packages` |
 | `POST /v2/posting/fbs/cancel` | `PostingAPI_CancelFbsPosting` | 取消货件 | 取消原因 |
-| `POST /v2/posting/fbs/package-label` | `PostingAPI_PostingFBSPackageLabel` | 下载标签 | 可能返回二进制/PDF |
+| `POST /v3/posting/fbs/package-label/create` | `PostingFbsPackageLabelCreate` | 创建标签生成任务 | `posting_numbers`（1..1000）→ `tasks[].task_id`、`tasks[].task_type` |
+| `POST /v2/posting/fbs/package-label/get` | `PostingFbsPackageLabelGet` | 按任务取标签文件 | `task_id` → `status`、`file_url`、`error` |
+| `POST /v2/posting/fbs/package-label` | `PostingAPI_PostingFBSPackageLabel` | 旧版同步下载标签（返回 PDF），2026-11-02 停用 | 仅作历史兼容追溯 |
+| `POST /v2/posting/fbs/act/get-postings` | `PostingAPI_ActPostingList` | 发运单内货件列表 | `result.is_blr_traceable`、`result.scanit` 自 2026-10-13 标记弃用 |
+
+## 标签打印迁移（2026-10-15 News）
+
+- 只能为状态 `awaiting_deliver`（等待发运）的货件建任务；官方建议备货完成 45–60 秒后再请求标签。
+- `create` 一次最多 1000 个 `posting_numbers`，返回 `tasks[]`；每个任务有 `task_type`：`big_label` 为常规标签，`small_label` 为小标签。同一批货件可能拆出两类任务，调用方按原来打印的标签类型选任务，不要默认只有一个任务。
+- `get` 的响应不再是 PDF 二进制，而是 JSON：`status.code` 表示任务状态，`status.postings_count`、`status.printed_postings_count` 给出进度，`status.unprinted_postings[]` 列出打印失败的 `posting_number` 与 `message`；成功时从 `file_url` 下载 PDF，失败看 `error.code`、`error.message`。
+- 推荐封装：保持原调用方“传货件号、拿 PDF 字节”的契约，内部做 create → 有上限的退避轮询 get → 下载 `file_url`；轮询超时和 `unprinted_postings` 都要显式报错或回传，不能静默返回部分标签。
+- `status.code` 取值（2026-10-28 在 Chrome 展开官方页面确认）：`pending`、`in_progress`、`completed`、`error`。只有 `completed` 才去下载 `file_url`；`error` 读取 `error.code` / `error.message`。
+- `file_url` 的域名和是否需要 `Client-Id` / `Api-Key` 尚未用真实店铺验证；实现上只在与 Seller API 同主机时才附带凭证。
 
 ## 已确认当前实现
 

@@ -22,7 +22,7 @@
 
 ## 页面标题结构
 
-- 在促销活动自动添加列表中添加或更新商品
+- 在促销活动自动添加列表中添加或更新商品 Deprecated
 - HEADER PARAMETERS
 - REQUEST BODY SCHEMA: application/json
 - 回复
@@ -44,7 +44,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `action_id` | integer <uint64> 促销活动标识符。 |
-| `auto_add_date` | string <date-time> 方法 /v1/actions 响应中 result.auto_add_dates 参数里的商品自动添加到促销活动中的日期和时间。 |
+| `auto_add_date` | string <date-time> 方法/v1/actions响应中result.auto_add_dates参数里的商品自动添加到促销活动中的日期和时间。 |
 | `to_update` | Array of objects 需要添加到自动添加中或在自动添加中更新的商品列表。 |
 
 ### 表格 2

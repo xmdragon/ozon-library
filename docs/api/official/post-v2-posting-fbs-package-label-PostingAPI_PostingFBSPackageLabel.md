@@ -1,6 +1,10 @@
-# 打印标签
+# 打印标签 Deprecated
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
+
+> [!WARNING]
+> 官方 News 标记此方法为 `deprecated`，日期：2026-10-15。替代方法：`/v3/posting/fbs/package-label/create`, `/v2/posting/fbs/package-label/get`。 官方 News：https://docs.ozon.ru/api/seller/zh/#section/20261015
+> News 原文摘要：/v2/posting/fbs/package-label 该方法已弃用，将于2026年11月2日停用。请切换至 /v3/posting/fbs/package-label/create 和 /v2/posting/fbs/package-label/get
 
 ## 方法
 
@@ -13,12 +17,13 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-15 | `deprecated_method` | /v2/posting/fbs/package-label 该方法已弃用，将于2026年11月2日停用。请切换至 /v3/posting/fbs/package-label/create 和 /v2/posting/fbs/package-label/get | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261015) |
 | 2026-03-10 | `updated` | /v2/posting/fbs/package-label 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026310) |
 | 2025-09-24 | `updated` | /v2/posting/fbs/package-label 更新了方法描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025924) |
 
 ## 页面标题结构
 
-- 打印标签
+- 打印标签 Deprecated
 - HEADER PARAMETERS
 - REQUEST BODY SCHEMA: application/json
 - 回复

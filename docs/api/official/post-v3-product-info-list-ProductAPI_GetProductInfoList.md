@@ -47,7 +47,7 @@
 | 字段 | 类型/说明 |
 | --- | --- |
 | `offer_id` | Array of strings 商品在卖家系统中的标识符 — 货号。 |
-| `product_id` | Array of strings <int64> Ozon系统中商品的标识符 — product_id 。 |
+| `product_id` | Array of strings <int64> Ozon系统中商品的标识符 — product_id。 |
 | `sku` | Array of strings <int64> 商品在 Ozon 系统中的标识符 — SKU。 |
 
 ### 表格 2
@@ -61,23 +61,23 @@
 | `commissions` | Array of objects 佣金信息。 |
 | `created_at` | string <date-time> 商品的创建日期和时间。 |
 | `currency_code` | string 货币单位。 |
-| `description_category_id` | integer <int64> 类目标识符。<br>可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 |
+| `description_category_id` | integer <int64> 类目标识符。 可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 |
 | `discounted_fbo_stocks` | integer <int32> Ozon 仓库中减价商品的库存。 |
 | `errors` | Array of objects 创建或验证商品时的错误信息。 |
 | `has_discounted_fbo_item` | boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 |
 | `id` | integer <int64> 商品标识符。 |
 | `images` | Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 |
-| `is_archived` | boolean 如果商品是手动归档的，则为 true 。 |
-| `is_autoarchived` | boolean 如果商品是自动归档的，则为 true 。 |
-| `is_discounted` | boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。 |
-| `is_kgt` | boolean true ，表示商品为超大。仅适用于FBS模式。 |
-| `is_prepayment_allowed` | boolean Deprecated 如果支持预付款，则为 true 。 |
+| `is_archived` | boolean 如果商品是手动归档的，则为 true。 |
+| `is_autoarchived` | boolean 如果商品是自动归档的，则为 true。 |
+| `is_discounted` | boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true。 如果商品不是减价商品或是由Ozon减价的，则为 false。 |
+| `is_kgt` | boolean true，表示商品为超大。仅适用于FBS模式。 |
+| `is_prepayment_allowed` | boolean Deprecated 如果支持预付款，则为 true。 |
 | `is_super` | boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 |
 | `min_price` | string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。 |
 | `model_info` | object 商品型号信息。 |
 | `name` | string 名称。 |
 | `offer_id` | string 商品在卖家系统中的标识符 — 货号。 |
-| `old_price` | string 买家看到的划线价。必须大于 price 。 |
+| `old_price` | string 买家看到的划线价。必须大于price。 |
 | `price` | string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 |
 | `price_indexes` | object 商品价格指数。 |
 | `primary_image` | Array of strings 商品的主图。 |
@@ -102,23 +102,23 @@
 | `commissions` | Array of objects 佣金信息。 |
 | `created_at` | string <date-time> 商品的创建日期和时间。 |
 | `currency_code` | string 货币单位。 |
-| `description_category_id` | integer <int64> 类目标识符。<br>可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 |
+| `description_category_id` | integer <int64> 类目标识符。 可与 /v1/description-category/attribute 和 /v1/description-category/attribute/values 方法配合使用。 |
 | `discounted_fbo_stocks` | integer <int32> Ozon 仓库中减价商品的库存。 |
 | `errors` | Array of objects 创建或验证商品时的错误信息。 |
 | `has_discounted_fbo_item` | boolean 商品在 Ozon 仓库中是否有减价版的同款商品。 |
 | `id` | integer <int64> 商品标识符。 |
 | `images` | Array of strings 图片链接数组。 图片在数组中的顺序与网站上的展示顺序一致。 如果 primary_image 参数未指定，则数组中的第一张图片为商品主图。 |
-| `is_archived` | boolean 如果商品是手动归档的，则为 true 。 |
-| `is_autoarchived` | boolean 如果商品是自动归档的，则为 true 。 |
-| `is_discounted` | boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true 。 如果商品不是减价商品或是由Ozon减价的，则为 false 。 |
-| `is_kgt` | boolean true ，表示商品为超大。仅适用于FBS模式。 |
-| `is_prepayment_allowed` | boolean Deprecated 如果支持预付款，则为 true 。 |
+| `is_archived` | boolean 如果商品是手动归档的，则为 true。 |
+| `is_autoarchived` | boolean 如果商品是自动归档的，则为 true。 |
+| `is_discounted` | boolean 商品是否为减价商品： 如果商品是由卖家作为减价商品创建的，则为 true。 如果商品不是减价商品或是由Ozon减价的，则为 false。 |
+| `is_kgt` | boolean true，表示商品为超大。仅适用于FBS模式。 |
+| `is_prepayment_allowed` | boolean Deprecated 如果支持预付款，则为 true。 |
 | `is_super` | boolean 超级商品标识。 有关超级商品的详细信息，请参考卖家知识库 |
 | `min_price` | string 商品最高价格的下限。在自动应用促销活动、将商品自动添加到促销活动以及定价策略中生效。买家看不到该值。 |
 | `model_info` | object 商品型号信息。 |
 | `name` | string 名称。 |
 | `offer_id` | string 商品在卖家系统中的标识符 — 货号。 |
-| `old_price` | string 买家看到的划线价。必须大于 price 。 |
+| `old_price` | string 买家看到的划线价。必须大于price。 |
 | `price` | string 商品的非促销最高价格。我们不会将买家看到的价格提高到该值以上。 |
 | `price_indexes` | object 商品价格指数。 |
 | `primary_image` | Array of strings 商品的主图。 |

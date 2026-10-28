@@ -1,4 +1,4 @@
-# Обновить данные экземпляров
+# 更新样件数据
 
 > 此文件由 `tools/generate_official_api_docs.py` 从 Chrome 抽取索引生成。不要在这里写入真实账号、密钥、cookie 或 token。
 
@@ -13,11 +13,12 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-22 | `graduated` | /v1/fbs/posting/product/exemplar/update 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261022) |
 | 2025-02-17 | `new_method` | /v1/fbs/posting/product/exemplar/update 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
 
 ## 页面标题结构
 
-- Обновить данные экземпляров
+- 更新样件数据
 - HEADER PARAMETERS
 - REQUEST BODY SCHEMA: application/json
 - 回复
@@ -45,7 +46,7 @@
 
 ```json
 {
-  "posting_number": "string"
+  "posting_number": "789456123-0002-3"
 }
 ```
 

@@ -45,6 +45,10 @@
 | --- | --- |
 | `has_next` | boolean 该特征表示响应中只返回了部分特性值： true —— 请用新参数 last_value_id 再次请求以获取其它值； false —— 响应包含了所有特性值。 |
 | `result` | Array of objects 特性值。 |
+| `id` | integer <int64> 特性值ID。 |
+| `info` | string 附加描述。 |
+| `picture` | string 图片链接。 |
+| `value` | string 商品特性值。 |
 
 ### 表格 3
 
@@ -79,13 +83,13 @@
       "id": 5055881,
       "value": "Sunshine",
       "info": "美容与健康",
-      "picture": "https://ir.ozone.ru/s3/multimedia-i/6010930878.jpg"
+      "picture": "https://ir-20.ozone.ru/s3/multimedia-i/6010930878.jpg"
     },
     {
       "id": 5056737,
       "value": "Essence",
       "info": "美容与健康",
-      "picture": "https://ir.ozone.ru/s3/multimedia-v/6088253599.jpg"
+      "picture": "https://ir-20.ozone.ru/s3/multimedia-v/6088253599.jpg"
     }
   ],
   "has_next": true

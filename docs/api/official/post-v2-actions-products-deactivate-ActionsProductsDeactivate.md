@@ -18,10 +18,10 @@
 ## 页面标题结构
 
 - 从活动中删除商品
-- header Parameters
-- Request Body schema: application/json
+- HEADER PARAMETERS
+- REQUEST BODY SCHEMA: application/json
 - 回复
-- Response Schema: application/json
+- RESPONSE SCHEMA: application/json
 - 请求范例
 - 回复范例
 
@@ -38,8 +38,8 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `action_id` required | integer <uint64> 促销活动标识符。可通过方法 /v1/actions 获取。 |
-| `product_ids` required | Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即 product_id 。 |
+| `action_id` required | integer <uint64> 促销活动标识符。可通过方法/v1/actions获取。 |
+| `product_ids` required | Array of strings <uint64> <= 1000 items Ozon系统中的商品标识符，即product_id。 |
 
 ### 表格 2
 
@@ -54,6 +54,16 @@
 ```json
 {
   "action_id": 213139,
+  "product_ids": [
+    999999
+  ]
+}
+```
+
+### 示例 1
+
+```json
+{
   "product_ids": [
     999999
   ]

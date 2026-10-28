@@ -122,15 +122,15 @@
 {
   "additional_data": [
     {
-      "posting_number": "89491381-0072-1",
+      "posting_number": "899991111-0001-1",
       "products": [
         {
           "currency_code": "RUB",
           "mandatory_mark": [
             "123"
           ],
-          "name": "string",
-          "offer_id": "17125",
+          "name": "毛衣",
+          "offer_id": "1711125",
           "price": "2000",
           "quantity": 1,
           "sku": 149618972
@@ -139,7 +139,7 @@
     }
   ],
   "result": [
-    "89491381-0072-1"
+    "99991111-0001-1"
   ]
 }
 ```

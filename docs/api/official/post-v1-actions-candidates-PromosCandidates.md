@@ -24,7 +24,7 @@
 
 ## 页面标题结构
 
-- 可用的促销商品清单
+- 可用的促销商品清单 Deprecated
 - REQUEST BODY SCHEMA: application/json
 - 回复
 - RESPONSE SCHEMA: application/json
@@ -37,7 +37,7 @@
 
 | 字段 | 类型/说明 |
 | --- | --- |
-| `action_id` | number <double> 活动识别号。可以使用方法 /v1/actions 获取。 |
+| `action_id` | number <double> 活动识别号。可以使用方法 /v1/actions获取。 |
 | `limit` | number <double> 每页的答复数量。在默认情况下 — 100。 |
 | `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 |
 
@@ -48,7 +48,7 @@
 | `result` | object 请求结果。 |
 | `products` | Array of objects 商品清单。 |
 | `total` | number <double> 可用于活动的商品总数。 |
-| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
 
 ### 表格 2
 
@@ -56,7 +56,7 @@
 | --- | --- |
 | `products` | Array of objects 商品清单。 |
 | `total` | number <double> 可用于活动的商品总数。 |
-| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定 last_id 。 |
+| `last_id` | number <double> 页面上最后一个值的ID。运行第一个查询时，将此字段留空。 要检索以下数值，请从上一个查询的响应中指定last_id。 |
 
 ## 示例
 

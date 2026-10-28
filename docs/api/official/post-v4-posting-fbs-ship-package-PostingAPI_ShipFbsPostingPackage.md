@@ -53,14 +53,14 @@
 
 ```json
 {
-  "posting_number": "string",
+  "posting_number": "899991111-0001-1",
   "products": [
     {
       "exemplarsIds": [
-        "string"
+        "3213123213"
       ],
-      "product_id": 0,
-      "quantity": 0
+      "product_id": 149618972,
+      "quantity": 3
     }
   ]
 }
@@ -70,7 +70,7 @@
 
 ```json
 {
-  "result": "string"
+  "result": "899991111-0001"
 }
 ```
 

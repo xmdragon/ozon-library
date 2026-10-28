@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-22 | `graduated` | /v6/fbs/posting/product/exemplar/create-or-get 已将该方法从Beta版迁移至正式版。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261022) |
 | 2025-09-29 | `added_field` | /v6/fbs/posting/product/exemplar/create-or-get 已更新products.exemplars.marks参数的描述，并在方式响应中添加了products.has_imei参数。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025929) |
 | 2025-02-17 | `new_method` | /v6/fbs/posting/product/exemplar/create-or-get 新增 Beta 方法用于管理标志代码。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2025217) |
 
@@ -55,7 +56,7 @@
 
 ```json
 {
-  "posting_number": "string"
+  "posting_number": "200039812931"
 }
 ```
 
@@ -63,33 +64,79 @@
 
 ```json
 {
-  "multi_box_qty": 0,
-  "posting_number": "string",
+  "multi_box_qty": 2,
+  "posting_number": "200039812931",
   "products": [
     {
       "exemplars": [
         {
-          "exemplar_id": 0,
-          "gtd": "string",
-          "is_gtd_absent": true,
-          "is_rnpt_absent": true,
+          "exemplar_id": 1005001,
+          "gtd": "10702020/1234567/А0123456",
+          "is_gtd_absent": false,
+          "is_rnpt_absent": false,
           "marks": [
             {
-              "mark": "string",
-              "mark_type": "string"
+              "mark": "04612345678901!RU123456789ABC",
+              "mark_type": "CIS"
+            },
+            {
+              "mark": "01046123456789012121ABCDEFGHIJKLMNO",
+              "mark_type": "GTIN"
             }
           ],
-          "rnpt": "string"
+          "rnpt": "R0123456789",
+          "weight": 1500
+        },
+        {
+          "exemplar_id": 1005002,
+          "gtd": null,
+          "is_gtd_absent": true,
+          "is_rnpt_absent": false,
+          "marks": [
+            {
+              "mark": "04612345678902!RU987654321XYZ",
+              "mark_type": "CIS"
+            }
+          ],
+          "rnpt": "R9876543210",
+          "weight": 1500
         }
       ],
-      "has_imei": true,
-      "is_gtd_needed": true,
-      "is_jw_uin_needed": true,
+      "has_imei": false,
+      "is_gtd_needed": false,
+      "is_jw_uin_needed": false,
       "is_mandatory_mark_needed": true,
       "is_mandatory_mark_possible": true,
       "is_rnpt_needed": true,
-      "product_id": 0,
-      "quantity": 0
+      "product_id": 987654321,
+      "quantity": 2,
+      "is_weight_needed": true,
+      "weight_max": 2000,
+      "weight_min": 1000
+    },
+    {
+      "exemplars": [
+        {
+          "exemplar_id": 1005003,
+          "gtd": null,
+          "is_gtd_absent": true,
+          "is_rnpt_absent": true,
+          "marks": [],
+          "rnpt": null,
+          "weight": 0
+        }
+      ],
+      "has_imei": true,
+      "is_gtd_needed": false,
+      "is_jw_uin_needed": false,
+      "is_mandatory_mark_needed": false,
+      "is_mandatory_mark_possible": false,
+      "is_rnpt_needed": false,
+      "product_id": 987654322,
+      "quantity": 1,
+      "is_weight_needed": false,
+      "weight_max": 0,
+      "weight_min": 0
     }
   ]
 }
