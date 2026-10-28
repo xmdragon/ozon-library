@@ -28,7 +28,8 @@
 - `create` 一次最多 1000 个 `posting_numbers`，返回 `tasks[]`；每个任务有 `task_type`：`big_label` 为常规标签，`small_label` 为小标签。同一批货件可能拆出两类任务，调用方按原来打印的标签类型选任务，不要默认只有一个任务。
 - `get` 的响应不再是 PDF 二进制，而是 JSON：`status.code` 表示任务状态，`status.postings_count`、`status.printed_postings_count` 给出进度，`status.unprinted_postings[]` 列出打印失败的 `posting_number` 与 `message`；成功时从 `file_url` 下载 PDF，失败看 `error.code`、`error.message`。
 - 推荐封装：保持原调用方“传货件号、拿 PDF 字节”的契约，内部做 create → 有上限的退避轮询 get → 下载 `file_url`；轮询超时和 `unprinted_postings` 都要显式报错或回传，不能静默返回部分标签。
-- `status` 对象在 2026-10-28 的 Chrome 抽取中是折叠状态，`status.code` 取值未展开为枚举，实现前回到官方锚点 [PostingFbsPackageLabelGet](https://docs.ozon.ru/api/seller/zh/#operation/PostingFbsPackageLabelGet) 核对，不要凭字面猜测。
+- `status.code` 取值（2026-10-28 在 Chrome 展开官方页面确认）：`pending`、`in_progress`、`completed`、`error`。只有 `completed` 才去下载 `file_url`；`error` 读取 `error.code` / `error.message`。
+- `file_url` 的域名和是否需要 `Client-Id` / `Api-Key` 尚未用真实店铺验证；实现上只在与 Seller API 同主机时才附带凭证。
 
 ## 已确认当前实现
 

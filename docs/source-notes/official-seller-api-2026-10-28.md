@@ -23,4 +23,10 @@
 
 ## 代码影响
 
-AICollection 与 ZhiPin 的调用点迁移在各自仓库的 `claude/ozon-api-2026-10` 分支进行；结论合并后再回填到 `docs/source-notes/AICollection.md` 和 `docs/source-notes/ZhiPin.md`。
+两个项目里实际需要迁移的只有标签打印：
+
+- AICollection [PR #2309](https://github.com/xmdragon/AICollection/pull/2309)：`erp_fbs_package_labels` 改为 create（优先 `big_label`）→ 轮询 get（约 22 秒上限）→ 下载并校验 PDF，新逻辑在 `src-tauri/src/services/ozon_seller_api/package_label.rs`。调用方 `erp_order_labels.rs` 仍拿 PDF 字节，未就绪或超时返回 `NotReady`。Rust 编译和单测未在本轮运行。
+- ZhiPin [PR #555](https://github.com/xmdragon/ZhiPin/pull/555)：`plugins/ef/channels/ozon/api/client_mixins/orders.py` 的 `get_package_labels` 同样改为异步流程，每次请求都走本地与共享限流，新增 `PackageLabelTaskError`（`not_ready`、`unprinted_postings`）；`services/label_service.py` 返回 `label_not_ready` / `label_task_failed`。mock server 新增 create/get/下载端点，`/v3/product/list` 返回 `total_items`，exemplar status 改为 v5。
+- 无需改：ZhiPin 促销已使用 `/v2/actions/auto-add/products/*`，商品同步已读 `result.total_items`；两个项目都没有调用其他 `/v1/actions/*`、exemplar、`act/get-postings` 或 `/v1/product/prices/details`。
+
+以上两个 PR 在 2026-10-28 尚未合并；合并前需要用真实店铺试打一次标签，确认 `file_url` 的下载鉴权。
