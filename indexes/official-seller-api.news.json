@@ -1,9 +1,47 @@
 {
-  "captured_at": "2026-10-28T06:46:30.498+00:00",
+  "captured_at": "2026-11-01T08:40:00.000+00:00",
   "source_url": "https://docs.ozon.ru/api/seller/zh/#tag/News",
   "title": "Ozon Seller API 文件",
-  "entry_count": 175,
+  "entry_count": 176,
   "entries": [
+    {
+      "date": "2026-10-29",
+      "id": "section/20261029",
+      "text": "2026年10月29日 方法 变更 /v1/product/import/prices 我们更新了方法请求中 prices.price 参数的描述。 /v1/actions/products/update 我们更新了方法请求中 products.action_price 参数的描述。",
+      "paths": [
+        "/v1/product/import/prices",
+        "/v1/actions/products/update"
+      ],
+      "links": [
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#section/20261029",
+          "text": ""
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ProductAPI_ImportProductsPrices",
+          "text": "/v1/product/import/prices"
+        },
+        {
+          "href": "https://docs.ozon.ru/api/seller/zh/#operation/ActionsProductsUpdate",
+          "text": "/v1/actions/products/update"
+        }
+      ],
+      "rows": [
+        {
+          "methods": [
+            "/v1/product/import/prices"
+          ],
+          "description": "我们更新了方法请求中 prices.price 参数的描述。"
+        },
+        {
+          "methods": [
+            "/v1/actions/products/update"
+          ],
+          "description": "我们更新了方法请求中 products.action_price 参数的描述。"
+        }
+      ],
+      "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20261029"
+    },
     {
       "date": "2026-10-22",
       "id": "section/20261022",
