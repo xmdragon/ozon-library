@@ -4,10 +4,10 @@
 
 ## 摘要
 
-- News 条目数：175
+- News 条目数：176
 - 当前方法页已标记废弃/移除：19
 - News 中提到但当前 operation 索引不存在的废弃/移除方法：48
-- 标签统计：`added_field`: 72, `deprecated_field`: 17, `deprecated_method`: 46, `graduated`: 64, `new_method`: 91, `removed_field`: 18, `removed_method`: 40, `updated`: 189
+- 标签统计：`added_field`: 72, `deprecated_field`: 17, `deprecated_method`: 46, `graduated`: 64, `new_method`: 91, `removed_field`: 18, `removed_method`: 40, `updated`: 191
 
 ## 已在当前方法页标记的方法
 

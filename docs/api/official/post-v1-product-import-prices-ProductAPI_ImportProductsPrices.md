@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-29 | `updated` | /v1/product/import/prices 我们更新了方法请求中 prices.price 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261029) |
 | 2026-09-14 | `updated` | /v1/product/import/prices 更新了方法请求中 prices.min_price 、 prices.min_price_for_auto_actions_enabled 、 prices.old_price 、 prices.price 和 prices.price_strategy_enabled 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026914) |
 | 2026-09-11 | `deprecated_field` | /v1/product/import/prices 已将方法请求中的 prices.auto_action_enabled 和 prices.manage_elastic_boosting_through_price 参数标记为已弃用。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026911) |
 | 2026-05-12 | `updated` | /v1/product/import/prices 更新了该方法请求中参数prices.min_price的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026512) |

@@ -17,6 +17,7 @@
 | `POST /v2/product/info/stocks-by-warehouse/fbs` | `GetProductInfoStocksByWarehouseFbsV2` | 查询 FBS 仓库库存 | `sku` 或 `offer_id` |
 | `POST /v1/product/import/prices` | `ProductAPI_ImportProductsPrices` | 更新价格 | `prices[]` |
 | `POST /v5/product/info/prices` | `ProductAPI_GetProductInfoPrices` | 查询价格 | `filter`、`cursor`、`limit` |
+| `POST /v1/actions/products/update` | `ActionsProductsUpdate` | 加入或更新促销商品，同时可改最高价 | `action_id`、`products[].action_price`、`product_id`、`stock` |
 
 ## 流程
 
@@ -34,6 +35,20 @@
 3. 默认关闭自动动作或价格策略，避免覆盖手动价格。
 4. 检查 `result[].updated` 和 `errors`。
 
+## 统一价格语义（2026-10-29 News）
+
+官方 [2026-10-29 News](https://docs.ozon.ru/api/seller/zh/#section/20261029) 只改了字段描述，请求结构、必填项和示例都没变。两个方法写的是同一个“最高价格”：
+
+- `/v1/product/import/prices` 的 `prices.price`：商品的非促销最高价格，买家看到的价格不会高于该值。
+- `/v1/actions/products/update` 的 `products.action_price`（必填 object，示例为 `amount` + `currency`）：商品的最高价格。在“促销码”促销活动之外添加商品时，即使之前设过最高价，也会改商品卡片上的最高价。值小于或等于“弹性提升”/“最大提升”的限额时加入促销，大于限额时移出促销。
+- 两份描述都写明：通过这两个方法中的任意一个改最高价，商品卡片上的值都会跟着更新，详见卖家知识库“统一价格”（<https://global-help.ozon.com/zh/promotion/promotions/manage-products>）。
+
+调用方注意：
+
+1. 不要把 `action_price` 当成只在促销内生效的价格。2026-10-13 之后，用它加入或更新促销会覆盖 `/v1/product/import/prices` 设置的 `price`，反过来也一样。
+2. 同一商品如果同时由改价流程和促销流程维护，要以最后写入的值为准，避免两边互相覆盖。
+3. `products.stock` 只用于“促销码”促销，“弹性提升”和“最大提升”不要传。
+
 ## 异常与恢复
 
 | 情况 | 处理 |
@@ -45,6 +60,6 @@
 
 ## 来源引用
 
-- 官方 operation：`ProductAPI_ProductsStocksV2`、`ProductAPI_ImportProductsPrices`、`ProductAPI_GetProductInfoStocks`、`ProductAPI_GetProductInfoPrices`
+- 官方 operation：`ProductAPI_ProductsStocksV2`、`ProductAPI_ImportProductsPrices`、`ActionsProductsUpdate`、`ProductAPI_GetProductInfoStocks`、`ProductAPI_GetProductInfoPrices`
 - `/Users/eric/works/ZhiPin/plugins/ef/channels/ozon/api/client_mixins/products.py`
 - `/Users/eric/works/AICollection/src-tauri/crates/scraper/src/services/queue/`

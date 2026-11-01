@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-28T06:46:30.498+00:00",
+  "captured_at": "2026-11-01T08:40:00.000+00:00",
   "source_url": "https://docs.ozon.ru/api/seller/zh/#tag/News",
   "title": "Ozon Seller API 文件",
   "operation_count": 276,
@@ -4130,6 +4130,14 @@
       "title": "更新价格",
       "news_updates": [
         {
+          "date": "2026-10-29",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/product/import/prices 我们更新了方法请求中 prices.price 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20261029"
+        },
+        {
           "date": "2026-09-14",
           "labels": [
             "updated"
@@ -5462,6 +5470,14 @@
       "title": "将商品加入促销活动或更新商品",
       "raw_text": "将商品加入促销活动或更新商品\nPOST\n/v1/actions/products/update\n描述和范例控制台\n在2026年10月13日之前，该方法的工作方式与/v1/actions/products/activate类似，无法通过该方法更改商品卡片上的价格。\nHEADER PARAMETERS\nClient-Id\nrequired\n\t\nstring\n\n用户识别号。\n\n\nApi-Key\nrequired\n\t\nstring\n\nAPI-密钥。\n\nREQUEST BODY SCHEMA: application/json\naction_id\nrequired\n\t\ninteger <uint64>\n\n促销活动标识符。可通过方法/v1/actions获取。\n\n\nproducts\nrequired\n\t\nArray of objects <= 1000 items\n\n商品列表。\n\n回复\n200\n\n商品已加入或已更新\n\nRESPONSE SCHEMA: application/json\nactive_product_ids\t\nArray of strings <uint64>\n\n已加入促销活动的商品ID列表。\n\n\ndeactivated_product_ids\t\nArray of strings <uint64>\n\n已移出促销活动的商品ID列表。\n\n\nrejected\t\nArray of objects\n\n未能加入促销活动的商品列表。\n\n\nwarnings\t\nArray of objects\n\n关于商品被移出促销活动的原因信息。\n\n400\n\n参数不正确\n\n403\n\n拒绝访问\n\n404\n\n未找到答案\n\n409\n\n查询冲突\n\n500\n\n服务器内部冲突\n\n请求范例\nContent type\napplication/json\n{\n\"action_id\": 258568,\n\"products\": \n[\n{\n\"action_price\": \n{\n\"amount\": \"88\",\n\"currency\": \"RUB\"\n},\n\"product_id\": 88888,\n\"stock\": \"8\"\n}\n]\n}\n复制\n收回全部\n回复范例\n200400403404409500\nContent type\napplication/json\n{\n\"active_product_ids\": \n[\n88888\n],\n\"deactivated_product_ids\": [ ],\n\"rejected\": [ ],\n\"warnings\": [ ]\n}\n复制\n收回全部",
       "news_updates": [
+        {
+          "date": "2026-10-29",
+          "labels": [
+            "updated"
+          ],
+          "text": "/v1/actions/products/update 我们更新了方法请求中 products.action_price 参数的描述。",
+          "sourceUrl": "https://docs.ozon.ru/api/seller/zh/#section/20261029"
+        },
         {
           "date": "2026-09-23",
           "labels": [
@@ -26671,8 +26687,8 @@
       ]
     }
   ],
-  "news_entry_count": 175,
-  "news_captured_at": "2026-10-28T06:46:30.498+00:00",
+  "news_entry_count": 176,
+  "news_captured_at": "2026-11-01T08:40:00.000+00:00",
   "news_label_counts": {
     "added_field": 72,
     "deprecated_field": 17,
@@ -26681,7 +26697,7 @@
     "new_method": 91,
     "removed_field": 18,
     "removed_method": 40,
-    "updated": 189
+    "updated": 191
   },
   "news_removed_or_missing_methods": [
     {

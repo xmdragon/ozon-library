@@ -13,6 +13,7 @@
 
 | 日期 | 标记 | 摘要 | 来源 |
 | --- | --- | --- | --- |
+| 2026-10-29 | `updated` | /v1/actions/products/update 我们更新了方法请求中 products.action_price 参数的描述。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/20261029) |
 | 2026-09-23 | `new_method` | /v1/actions/products/update 新增了操作Ozon促销活动的新方法。 | [官方 News](https://docs.ozon.ru/api/seller/zh/#section/2026923) |
 
 ## 页面标题结构
